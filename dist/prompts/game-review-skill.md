@@ -1,14 +1,21 @@
 ---
-name: game-review
-description: Review a playable browser-game milestone after changes to controls, rules, camera, UI, or performance. Use for behavior and visual verification, not for unrelated documentation edits.
+name: signal-garden-round-review
+description: Check Signal Garden round-state regressions after changing beacon activation, damage, timers, pause, or restart.
 ---
 
-# Review a playable milestone
+# Signal Garden round review
 
-1. Read the game brief and the acceptance conditions affected by the change. Identify the exact revision and target browser.
-2. Run the documented build and the focused behavior checks. If a command or tool is missing, report it and continue with independent checks.
-3. Start the built game. Exercise the changed behavior through actual player input. Inspect screenshots and observable game state where tools are available.
-4. For changes to shared state, cover start, normal play, pause, resume, win, loss, and restart. For a visual-only change, inspect the relevant scenes and check that controls still respond.
-5. Record reproduction steps, expected behavior, observed behavior, and the evidence location for each failure. Separate gameplay judgment from deterministic correctness.
-6. Fix failures within the task scope and rerun the checks affected by the fix. Finish when those checks pass; do not repeatedly expand the test suite without a reason.
-7. Report what changed, what was actually verified, and what still needs human playtesting. Update the progress note. Never claim a screenshot proves an entire interaction sequence.
+Optional example: install only after the referenced game documents exist and these checks add value beyond available review tools. This is not a generic game-development skill.
+
+Use docs/acceptance.md as the authority for current rules and test commands. The cases below describe this book's initial design; update them when the game design changes.
+
+Relevant boundary cases:
+- If time expires or health reaches zero in the same simulation step as beacon activation, loss wins.
+- Activation requires a fresh E press within two units after all three cells have been collected.
+- Drone contact removes one health point, with a one-second damage cooldown.
+- Pause freezes both the round timer and simulation. Window blur clears held input and pauses an active round.
+- Restart resets cells, health, timer, robot position, drone progress, cooldowns, effects, and held input after either terminal state.
+
+Select the cases affected by the change. Use deterministic checks for timing boundaries and actual player controls for the affected journey when browser tools are available. Setup helpers may prepare a scene but cannot serve as proof that its controls work.
+
+Output: revision, affected case, reproduction steps, expected/observed result, and evidence. Mark unavailable checks as unrun. Fix in-scope failures and recheck what the fix affects; finish when those checks pass. Update docs/progress.md when this completes a milestone.

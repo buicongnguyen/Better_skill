@@ -24,7 +24,11 @@ for (const file of files) {
   body = body.replaceAll('<div class="table-wrap">', '<div class="table-wrap" tabindex="0" role="region" aria-label="Comparison table; scroll horizontally on small screens">');
   chapters.push({ id, title, body });
 }
-const refs = sources.map(s => `<li id="source-${s.id}"><span class="source-number">${s.id}</span><div><span class="source-type">${esc(s.type)}</span><h3><a href="${esc(s.url)}">${esc(s.title)} ↗</a></h3><p>${esc(s.note)}</p>${s.video ? `<p class="source-extra"><a href="${esc(s.video)}">Original YouTube video ↗</a> · Transcript mirror reviewed; caption errors are possible.</p>` : ''}</div></li>`).join('');
+const sourceNote = value => esc(value).replace(/\[(\d{2})\]/g, (_, id) => {
+  if (!sources.some(s => s.id === id)) throw new Error(`Unknown source cross-reference ${id}`);
+  return `<a href="#source-${id}">[${id}]</a>`;
+});
+const refs = sources.map(s => `<li id="source-${s.id}"><span class="source-number">${s.id}</span><div class="source-body"><span class="source-type">${esc(s.type)}</span><h3><a href="${esc(s.url)}">${esc(s.title)} ↗</a></h3><div class="source-meta"><span class="source-badge${s.freshness === 'Historical exception' ? ' historical' : ''}">${esc(s.freshness)}</span><span>${esc(s.date)}</span></div><h4 class="source-summary-label">Main items</h4><ul class="source-summary">${s.summary.map(item => `<li>${esc(item)}</li>`).join('')}</ul><p class="source-application"><strong>For this book:</strong> ${sourceNote(s.application)}</p><p class="source-limit"><strong>Limits / Astra relevance:</strong> ${sourceNote(s.limits)}</p>${s.video ? `<p class="source-extra"><a href="${esc(s.video)}">Original YouTube video ↗</a> · Linked transcript mirror reviewed.</p>` : ''}<p class="source-reviewed">Reviewed 14 September 2026</p></div></li>`).join('');
 const nav = chapters.map((c, i) => `<a href="#${c.id}"><span>${String(i + 1).padStart(2, '0')}</span>${c.title}</a>`).join('');
 let template = await read('site/template.html');
 template = template.replaceAll('{{chapterCount}}', String(chapters.length)).replace('{{nav}}', nav).replace('{{chapters}}', chapters.map((c, i) => `<section class="chapter" aria-labelledby="${c.id}"><div class="chapter-kicker">CHAPTER ${String(i + 1).padStart(2, '0')}</div>${c.body}</section>`).join('\n')).replace('{{sources}}', refs);

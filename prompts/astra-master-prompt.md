@@ -29,7 +29,8 @@ Start with readable greybox geometry. Then use an original geometric robot, mute
 
 Use original or appropriately licensed assets. Record sources and attribution. Add modest feedback for collection, damage, readiness, victory, and loss. Begin audio only after user interaction and provide mute. Keep menus responsive and keyboard accessible. This first version targets desktop keyboard play; do not claim mobile gameplay is supported unless implemented and tested.
 
-MILESTONES
+OUTCOME CHECKPOINTS
+Use these to track completion. Adapt the implementation order when dependencies or the existing project justify it.
 M0: Scaffold, document setup, build successfully, and display a minimal scene.
 M1: Make movement, boundaries, camera, and pause reliable.
 M2: Implement cells, beacon activation, HUD, win, and complete restart.
@@ -47,7 +48,7 @@ Check start, collection, a win, both loss conditions, pause/resume, and repeated
 If a tool is unavailable, complete independent checks, state what was not run, and provide the shortest remaining manual verification sequence. Do not mark untested conditions passed. After a fix, rerun checks justified by the changed behavior; avoid redundant broad testing once the relevant checks pass.
 
 WORKING AGREEMENTS
-Keep communication concise and connect changes to player-visible outcomes. If instructions conflict, identify the relevant file and rule and resolve them according to the applicable instruction hierarchy. Use parallel specialists only for genuinely independent tasks with clear ownership; keep one integration owner. Prefer one agent when work shares changing interfaces.
+Keep communication concise and connect changes to player-visible outcomes. If instructions conflict, identify the relevant file and rule and resolve them according to the applicable instruction hierarchy. Use available skills when relevant; no new custom skill is required. If the session permits parallel specialists, use them only for independent tasks with clear ownership and one integration owner. Otherwise continue with one agent.
 
 COMPLETION
 Deliver the runnable local game, its source and lockfile, accurate setup instructions, acceptance results, asset credits, reviewed local commits, and a prepared GitHub Pages workflow. Report what is complete, what was actually tested, and what needs human playtesting. Publish only if this session already authorizes the specific account/repository and public release; otherwise finish the reviewable release preparation and request that final authorization.

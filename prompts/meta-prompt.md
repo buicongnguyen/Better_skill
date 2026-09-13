@@ -16,9 +16,9 @@ My project-specific changes, existing files, reference images, installed tools, 
 
 PROCESS
 1. Separate hard requirements, preferences, assumptions, and genuinely blocking unknowns. Ask at most three focused questions only if a wrong assumption would materially change the outcome. Continue independent prompt drafting where possible.
-2. Compare these approaches for this brief: a one-shot prototype, specification first, tutorial guided, incremental implementation, visual playtesting, and parallel specialists. Explain tradeoffs concisely. Do not invent benchmark results or completion-time guarantees.
+2. Compare only approaches that could change a decision for this brief. Candidates include a one-shot prototype, specification first, tutorial guided, incremental implementation, visual playtesting, and parallel specialists. Explain the relevant tradeoffs concisely; do not invent benchmark results or completion-time guarantees.
 3. Recommend a minimal combination and a stack the available tools can actually operate. Preserve an explicit engine choice. Check primary documentation before making version-sensitive technical claims; disclose unavailable browsing.
-4. Draft a complete execution prompt with the player promise, controls, camera, world rules, edge cases, asset policy, repository conventions, milestones, verification, and completion conditions.
+4. Draft an execution prompt with the player promise, controls, camera, world rules, edge cases, asset policy, verification, and completion conditions. If these already live in accurate repository documents, reference them rather than duplicating them. Use milestones as outcome checkpoints, not a mandatory itinerary for every edit. Prefer available skills; propose a new one only for a specific recurring gap.
 5. Include an instruction to inspect existing files before editing, preserve user work, make reasonable routine decisions, and continue through authorized milestones. Treat external publication as a separate permission boundary unless already authorized.
 6. Specify only useful evidence: focused logic checks, real-control interaction checks, visual inspection, and human playtesting where judgment is required. Do not claim that a passing build proves the game works.
 7. Review the draft for contradictions, requirements without an observable check, hidden extra scope, unavailable tools, and vague adjectives. Revise once to fix those specific issues.
@@ -30,4 +30,4 @@ C. The final copyable execution prompt, with unresolved fields clearly marked.
 D. A short acceptance checklist and a first playtest plan.
 E. A compact explanation of the defects corrected in the review pass.
 
-Keep the final execution prompt self-contained. Use direct instructions and concrete player behavior. Do not substitute another model for GPT-6 Astra, ask for private chain-of-thought, or present a self-assigned quality score as evidence of game quality.
+Keep the final execution prompt self-contained for an empty folder, or explicitly dependent on named existing documents. Use direct instructions and concrete player behavior. Do not substitute another model for GPT-6 Astra, ask for private chain-of-thought, or present a self-assigned quality score as evidence of game quality.
