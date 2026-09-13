@@ -1,0 +1,49 @@
+<h2 id="github">Give the work a memory</h2>
+<p class="lead">The repository is the handoff between yesterday and tomorrow.</p>
+<p>Git records local history. GitHub holds a remote copy, review conversations, issues, and automation. GitHub Pages serves the published game or book. Keeping those roles separate makes debugging easier: a local commit is not a push, a push is not a successful deployment, and a deployment is not proof that the game is playable.</p>
+<h3>Step 1: establish a clean starting point</h3>
+<p>In a new empty game folder, initialize Git on <code>main</code>. If the folder is already a repository, inspect its status and preserve the current work instead. The following commands are an example for a <em>new</em> Signal Garden project; replace the account name before creating its remote.</p>
+<pre><code>git init -b main
+git status --short
+# Create the README, .gitignore, game brief, and project files.
+git add README.md .gitignore package.json package-lock.json src docs
+git diff --cached --stat
+git commit -m "chore: establish the Signal Garden baseline"
+gh repo create YOUR_ACCOUNT/signal-garden --public --source=. --remote=origin
+git push -u origin main</code></pre>
+<p>Stage paths that actually exist after scaffolding. Inspect the staged diff before committing. A public repository and public Pages site are publication choices; use them for files intended to be public. Keep credentials, local environment files, and unlicensed assets out of the commit.</p>
+<h3>Step 2: keep the important decisions in files</h3>
+<pre><code>signal-garden/
+  AGENTS.md                     # Short project instructions
+  .agents/skills/game-review/
+    SKILL.md                    # Repeatable review procedure
+  docs/
+    game-brief.md               # Player promise and constraints
+    acceptance.md               # Observable completion conditions
+    decisions.md                # Choices and reasons
+    progress.md                 # Current state and next step
+    playtests/                  # Human observations and evidence links
+  src/
+    game/                       # State, input, simulation
+    render/                     # Scene, camera, visual feedback
+    ui/                         # Instructions, HUD, result screens
+  public/assets/
+    credits.md                  # Asset provenance and license notes
+  tests/                        # Focused behavior checks
+  .github/workflows/pages.yml
+  package.json
+  package-lock.json</code></pre>
+<p>This structure is a starting proposal, not a demand to create empty abstractions. A tiny build can begin with fewer modules. Separate systems when their responsibilities become clear, especially if simulation logic is difficult to test because it is mixed with rendering code.</p>
+<h3>Step 3: make a checkpoint per meaningful change</h3>
+<p>A useful commit says what behavior now works: <code>feat: collect cells and power the beacon</code> is better than <code>update</code>. Save a known working baseline before trying an uncertain idea. A branch such as <code>experiment/camera-follow</code> makes the experiment visible and gives you a clean place to compare the result.</p>
+<pre><code>git switch -c experiment/camera-follow
+# Ask the agent for the bounded camera change, then playtest it.
+git diff
+git add src/render/camera.ts docs/playtests/camera-follow.md
+git commit -m "feat: soften camera follow while preserving beacon visibility"
+git push -u origin experiment/camera-follow
+gh pr create --title "Improve camera follow" --body-file docs/pr-camera.md</code></pre>
+<p>The PR description should state the player-visible problem, the change, and what was checked. For a solo experiment, a branch and reviewed commit may be enough. Use a PR when review or CI gates add value. Do not mark a change good only because the agent’s summary sounds confident.</p>
+<h3>Step 4: leave a short continuation note</h3>
+<p>At the end of a session, update <code>progress.md</code> with the current commit, working behavior, known failure, launch command, and one next milestone. Anthropic’s long-running-agent report uses progress artifacts and Git history to reduce the need for a new session to reconstruct previous work. {{cite:05}}</p>
+<p>When a bad change has already been shared, a reviewed <code>git revert</code> creates a new commit that undoes it while preserving history. Inspect dependencies between commits before reverting. For an uncommitted experiment, ask the agent to show its exact diff and restore only its own changes; unrelated work may be present.</p>

@@ -1,0 +1,15 @@
+<h2 id="skills">Turn a good habit into a skill</h2>
+<p class="lead">A prompt starts a task. A skill preserves a procedure.</p>
+<p>Use three layers of context. The <strong>task prompt</strong> describes the immediate outcome. <strong>AGENTS.md</strong> records stable repository conventions. A <strong>skill</strong> packages a procedure that is worth repeating across relevant tasks. Avoid copying the entire game brief into every layer; duplicated instructions are easy to contradict.</p>
+<p>Codex discovers repository instructions and scoped overrides through its instruction-file mechanism. Keep root instructions short and inspect any parent or nested rules that affect the working directory. The details of discovery belong to the official documentation. {{cite:07}}</p>
+<h3>A compact AGENTS.md for the example game</h3>
+{{prompt:agents-example.md}}
+<p>This is a downloadable sample for a separate game repository. Add it only after confirming that its commands and paths match your project. A file that says “run tests” is not useful if the test command does not exist.</p>
+<h3>A narrow skill: review a playable milestone</h3>
+<p>OpenAI documents skills as directories containing a <code>SKILL.md</code> with <code>name</code> and <code>description</code>, optionally with scripts and reference files. Repository skills can live under <code>.agents/skills</code>. A clear description helps the agent choose the procedure when it is relevant. {{cite:08}}</p>
+{{prompt:game-review-skill.md}}
+<p>Save this example as <code>.agents/skills/game-review/SKILL.md</code> in the game repository. Mention the skill in a task, or use the skill selector exposed by your agent host. Availability and invocation syntax can differ across the desktop app, CLI, and other hosts; confirm the skill is visible before relying on it.</p>
+<h3>Keep tools and procedures distinct</h3>
+<p>A review skill can say “inspect the running game,” but it does not install a browser, grant editor access, or make screenshots appear. Confirm that the agent has the necessary tools. If it lacks them, have it complete the checks it can run and give you the precise manual sequence for the rest.</p>
+<p>A useful skill contains a trigger, a short sequence, the expected evidence, and an exit condition. Add a script only when a repeated action is stable enough to automate. Do not install a large collection of skills merely to make the prompt look more powerful; start with the few procedures the project actually needs.</p>
+<div class="callout warm"><div class="callout-label">When a skill becomes the problem</div><p>If the agent pauses or changes direction because of a file, ask for the file path and the exact instruction responsible. Resolve the conflict explicitly. A skill should make the workflow easier to execute, and should remain subordinate to the applicable instruction hierarchy.</p></div>

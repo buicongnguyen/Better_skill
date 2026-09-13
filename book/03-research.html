@@ -1,0 +1,24 @@
+<h2 id="research">Learn from the evidence</h2>
+<p class="lead">A transcript becomes useful when it changes a decision.</p>
+<p>Searching for “best AI game prompt” produces demonstrations, tool promotions, speculative claims, and genuine engineering advice side by side. Read each source for a specific purpose. Use engine documentation to establish API behavior. Use a creator’s demonstration to learn a process. Use your own build to find out whether that process works under your constraints.</p>
+<h3>Transcript notebook: Software Is Changing (Again)</h3>
+<p>In his Y Combinator keynote, Andrej Karpathy discusses the loop between AI generation and human verification. He argues that concrete requests and auditable intermediate artifacts make that loop more useful, and notes that a huge code diff still leaves substantial review work. These are conceptual observations, not measured results for game production. {{cite:02}}</p>
+<p><strong>Our application:</strong> ask for one runnable game milestone with a short list of behaviors to inspect. Put the build link, relevant change, and evidence together. The person reviewing the game should be able to answer a question such as “Does losing all health always show a restart screen?” without first reconstructing the agent’s entire conversation.</p>
+<h3>Transcript notebook: How I use LLMs</h3>
+<p>Karpathy describes the context window as working memory and explains how search brings outside information into that context. The reviewed transcript passage contrasts information supplied during a conversation with what the model already learned. His 2025 tour also contains historical product details; those details are not a current setup guide. {{cite:03}}</p>
+<p><strong>Our application:</strong> attach the actual error, installed engine version, current scene structure, and a relevant documentation excerpt to a debugging request. “The player is broken” supplies almost no useful working information. “In Godot version X, this CharacterBody3D falls through the floor in this minimal scene” gives the agent an investigation it can carry out.</p>
+<div class="callout"><div class="callout-label">Transcript provenance</div><p>The two notebooks use transcript text from public mirrors, linked alongside the original videos in the source ledger. Automatic captions may contain errors. Stable passage timestamps were not available in the retrieved text, so the notes give searchable passage terms rather than invented timecodes.</p></div>
+<h3>A game tutorial is a separate kind of evidence</h3>
+<p>GDQuest’s written Godot 4 course and Godot’s own first-3D-game tutorial provide a sequence for learning game structure. Use them to reduce unfamiliarity with the engine. The GDQuest YouTube transcript could not be retrieved reliably during research, so only its accessible written course is used here. {{cite:09}} {{cite:10}}</p>
+<p>Do not carry an entire tutorial into a new design unchanged. Extract one concept, such as movement relative to the camera. Build a minimal reproduction with the installed engine version. Then explain how the concept maps to your game, including what must change. A successful exercise is evidence that you understand one part; it does not validate the whole game.</p>
+<h3>A repeatable research procedure</h3>
+<ol><li><strong>Start with a question.</strong> For example: “Can the chosen Godot export run on GitHub Pages without custom response headers?”</li><li><strong>Find the primary answer.</strong> Search official documentation for the installed version; open the page and read the constraints.</li><li><strong>Find an applied example.</strong> Prefer a creator’s video with an accessible transcript and companion repository.</li><li><strong>Record provenance.</strong> Save the URL, title, retrieval date, version, and a passage locator. Mark missing captions or an unavailable repository explicitly.</li><li><strong>Separate observation from inference.</strong> “The tutorial uses this node” is an observation. “This will simplify our camera system” is a hypothesis.</li><li><strong>Run one small experiment.</strong> Keep the result and the code commit that produced it.</li></ol>
+<pre><code>Question: Will the beacon remain visible behind the planter?
+Source: [official API link or creator's original tutorial]
+Version / date: [installed version] / [date reviewed]
+Observed idea: [brief paraphrase]
+Our hypothesis: [how it may help this game]
+Experiment: [small reproducible change]
+Outcome: [measured result, or NOT TESTED]
+Commit: [actual revision]</code></pre>
+<p>Two accounts of the same video are one underlying source. A successful edited demonstration does not reveal the unsuccessful runs, total effort, or hidden manual work. Keep the useful method, and test the outcome yourself.</p>

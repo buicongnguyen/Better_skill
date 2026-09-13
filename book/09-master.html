@@ -1,0 +1,12 @@
+<h2 id="master-prompt">The Astra master prompt</h2>
+<p class="lead">A complete starting instruction, with a finish line.</p>
+<p>This is an original worked execution prompt for the Signal Garden brief. It is a manually authored example of the output the previous chapter asks for, <strong>not a transcript of an experiment or a benchmarked best prompt</strong>. Use it in a coding-agent session with the intended game folder open and GPT-6 Astra selected.</p>
+<p>Before pasting, confirm the agent can edit the folder, run the package manager, and inspect a browser if you expect automated playtesting. The prompt allows reasonable local implementation choices and asks the agent to continue through the scoped milestones. Publication is handled separately in the deployment chapter so the destination can be explicit.</p>
+{{prompt:astra-master-prompt.md}}
+<h3>Why these parts are present</h3>
+<p>The player promise gives the work direction. The coordinate convention prevents integration mistakes. The terminal-state rules settle edge cases. The milestones make partial progress recoverable. The evidence requirements make completion reviewable. The exclusions keep the first game small enough to finish.</p>
+<p>The model-specific portion is short: state how much initiative is expected, how to handle instruction conflicts, when delegation helps, and what test scope is appropriate. Those concerns are reflected in OpenAI’s current Astra guidance. The game rules and target values are our design choices. {{cite:01}}</p>
+<h3>Steer the active task with evidence</h3>
+<p>Do not restart from scratch after every disappointing result. A focused correction should name the current revision, the observed problem, the desired behavior, and the acceptable scope of change. Keep the overall objective intact while correcting the specific failure.</p>
+{{prompt:repair-prompt.md}}
+<p>If the agent cannot reproduce the problem, ask it to inspect the simplest relevant scene or add a narrowly scoped observation point. If it proposes another broad rewrite, require an explanation of why a local change cannot solve the problem and a recovery point before proceeding.</p>

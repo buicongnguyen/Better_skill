@@ -1,0 +1,38 @@
+import { mkdir, readFile, writeFile, readdir, cp } from 'node:fs/promises';
+import { fileURLToPath } from 'node:url';
+import path from 'node:path';
+
+const root = fileURLToPath(new URL('../', import.meta.url));
+const read = file => readFile(path.join(root, file), 'utf8');
+const esc = text => text.replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;').replaceAll('"', '&quot;');
+const files = (await readdir(path.join(root, 'book'))).filter(f => f.endsWith('.html')).sort();
+const sources = JSON.parse(await read('book/sources.json'));
+const chapters = [];
+for (const file of files) {
+  let body = await read(`book/${file}`);
+  const [, id, title] = body.match(/<h2 id="([^"]+)">([^<]+)<\/h2>/) ?? [];
+  if (!id) throw new Error(`Missing chapter title: ${file}`);
+  for (const match of [...body.matchAll(/\{\{prompt:([^}]+)\}\}/g)]) {
+    const prompt = await read(`prompts/${match[1]}`);
+    body = body.replace(match[0], `<div class="prompt-block"><div class="prompt-bar"><span>READY TO USE · ${esc(match[1])}</span><button type="button" class="copy-button" aria-label="Copy ${esc(match[1])}">Copy prompt</button></div><pre tabindex="0"><code>${esc(prompt.trim())}</code></pre><a class="download-link" href="prompts/${esc(match[1])}" download>Download .md ↗</a></div>`);
+  }
+  body = body.replace(/\{\{cite:(\d+)\}\}/g, (_, number) => {
+    const source = sources.find(s => s.id === number);
+    if (!source) throw new Error(`Unknown citation ${number}`);
+    return `<a class="citation" href="#source-${number}" title="${esc(source.title)}" aria-label="Source ${number}: ${esc(source.title)}">[${number}]</a>`;
+  });
+  body = body.replaceAll('<div class="table-wrap">', '<div class="table-wrap" tabindex="0" role="region" aria-label="Comparison table; scroll horizontally on small screens">');
+  chapters.push({ id, title, body });
+}
+const refs = sources.map(s => `<li id="source-${s.id}"><span class="source-number">${s.id}</span><div><span class="source-type">${esc(s.type)}</span><h3><a href="${esc(s.url)}">${esc(s.title)} ↗</a></h3><p>${esc(s.note)}</p>${s.video ? `<p class="source-extra"><a href="${esc(s.video)}">Original YouTube video ↗</a> · Transcript mirror reviewed; caption errors are possible.</p>` : ''}</div></li>`).join('');
+const nav = chapters.map((c, i) => `<a href="#${c.id}"><span>${String(i + 1).padStart(2, '0')}</span>${c.title}</a>`).join('');
+let template = await read('site/template.html');
+template = template.replaceAll('{{chapterCount}}', String(chapters.length)).replace('{{nav}}', nav).replace('{{chapters}}', chapters.map((c, i) => `<section class="chapter" aria-labelledby="${c.id}"><div class="chapter-kicker">CHAPTER ${String(i + 1).padStart(2, '0')}</div>${c.body}</section>`).join('\n')).replace('{{sources}}', refs);
+await mkdir(path.join(root, 'dist'), { recursive: true });
+await writeFile(path.join(root, 'dist/index.html'), template);
+await cp(path.join(root, 'site/styles.css'), path.join(root, 'dist/styles.css'));
+await cp(path.join(root, 'site/book.js'), path.join(root, 'dist/book.js'));
+await cp(path.join(root, 'site/favicon.svg'), path.join(root, 'dist/favicon.svg'));
+await cp(path.join(root, 'prompts'), path.join(root, 'dist/prompts'), { recursive: true });
+await writeFile(path.join(root, 'dist/.nojekyll'), '');
+console.log(`Built ${chapters.length} chapters and ${sources.length} sources into dist/`);

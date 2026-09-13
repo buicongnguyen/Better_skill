@@ -1,0 +1,502 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#172c30">
+  <title>How to do better — Building a 3D game with an AI agent</title>
+  <meta name="description" content="A practical, source-backed book on prompts, GitHub, skills, and building a 3D game with GPT-6 Astra. Compare approaches, use the prompt templates, and refine through playtesting.">
+  <link rel="canonical" href="https://buicongnguyen.github.io/Better_skill/">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" href="styles.css">
+  <script src="book.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#reading">Skip to book</a>
+  <header class="mobile-bar"><a href="#cover">How to do better<span> / FIELD BOOK 01</span></a><button id="menu-toggle" type="button" aria-expanded="false" aria-controls="contents">Contents <span aria-hidden="true">☰</span></button></header>
+  <aside class="sidebar" id="contents" aria-label="Book contents">
+    <a class="book-brand" href="#cover"><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M3 8h13c3 0 4 3 4 3s1-3 4-3h13v25H24c-3 0-4 3-4 3s-1-3-4-3H3zM20 11v25"/></svg><span>THE BETTER<br>FIELD NOTES</span></a>
+    <div class="sidebar-title">How to<br><em>do better.</em></div>
+    <p class="sidebar-subtitle">Building a 3D game<br>with an AI agent</p>
+    <div class="contents-label">CONTENTS <span>13 CHAPTERS</span></div>
+    <nav class="chapter-nav" aria-label="Chapters"><a href="#better-loop"><span>01</span>The better loop</a><a href="#approaches"><span>02</span>Six ways to build</a><a href="#research"><span>03</span>Learn from the evidence</a><a href="#stack"><span>04</span>Choose the right workspace</a><a href="#github"><span>05</span>Give the work a memory</a><a href="#skills"><span>06</span>Turn a good habit into a skill</a><a href="#brief"><span>07</span>Design a game worth finishing</a><a href="#meta-prompt"><span>08</span>Make a prompt that makes a prompt</a><a href="#master-prompt"><span>09</span>The Astra master prompt</a><a href="#milestones"><span>10</span>From empty folder to game</a><a href="#verify"><span>11</span>Verify the game you can play</a><a href="#refine"><span>12</span>Refine the idea and the process</a><a href="#publish"><span>13</span>Publish and close the loop</a><a href="#sources"><span>↗</span>Sources & reading notes</a></nav>
+    <div class="sidebar-bottom"><p>READING PROGRESS <span id="progress-label">0%</span></p><div class="progress-track"><div id="progress-fill"></div></div><a href="https://github.com/buicongnguyen/Better_skill">View on GitHub ↗</a></div>
+  </aside>
+  <button class="menu-backdrop" aria-label="Close contents" tabindex="-1" hidden></button>
+  <main id="reading">
+    <div class="topline"><span>VOLUME 01 <i></i> AI-ASSISTED GAME DEVELOPMENT</span><button class="print-button" type="button">Print book <span aria-hidden="true">↗</span></button></div>
+    <article>
+      <header class="cover" id="cover">
+        <div class="cover-meta"><span class="edition">A PRACTICAL FIELD BOOK</span><span>RESEARCHED 14 SEP 2026</span></div>
+        <h1>How to<br>do <em>better.</em></h1>
+        <p class="cover-deck">From a rough idea to a playable 3D game.<br>A thoughtful way to work with AI.</p>
+        <div class="cover-bottom"><p>Prompts. GitHub. Skills.<br>Build, play, observe, improve.</p><a class="start-link" href="#better-loop">Begin reading <span aria-hidden="true">↘</span></a></div>
+        <figure class="cover-art" aria-label="An isometric sketch of the Signal Garden game arena, with three energy cells and a central beacon">
+          <svg viewBox="0 0 680 320" role="img" aria-labelledby="arena-title"><title id="arena-title">Signal Garden: a small world with a clear objective</title><defs><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#8da1a1" stroke-width=".5"/></pattern></defs><ellipse cx="357" cy="258" rx="237" ry="33" fill="#213b3a" opacity=".09"/><g transform="translate(339 74) scale(1 .48) rotate(45)"><rect width="290" height="290" fill="#c7d4c9" stroke="#637f76"/><rect width="290" height="290" fill="url(#grid)"/><path d="M0 290v22h290v-22M290 0h22v290h-22" fill="#95afa1" stroke="#637f76"/><rect x="42" y="57" width="52" height="125" fill="#708f85"/><rect x="186" y="145" width="55" height="95" fill="#708f85"/></g><g fill="none" stroke="#395d58" stroke-width="1.5"><path d="M130 175v-35l44-21 44 21v35l-44 21zM130 140l44 21 44-21M174 161v35"/><path d="M420 194v-37l42-20 42 20v37l-42 20zM420 157l42 20 42-20M462 177v37"/></g><g fill="#d87550" stroke="#8d4c38" stroke-width="1"><path d="M239 187l9-5 9 5v15l-9 5-9-5zM365 110l9-5 9 5v15l-9 5-9-5zM386 242l9-5 9 5v15l-9 5-9-5z"/></g><g transform="translate(328 172)"><ellipse rx="35" ry="16" fill="#e7e9d6" stroke="#54766b"/><path d="M-10 0v-47l10-6 10 6v47L0 6z" fill="#294e48"/><path d="M0-53v59M-10-47l10 6 10-6" stroke="#759987" fill="none"/><circle cy="-54" r="8" fill="#efbb72"/><circle cy="-54" r="19" fill="none" stroke="#c79250" opacity=".5"/></g><path d="M279 225l35-24m29-44 20-18" stroke="#e8eee6" stroke-width="3" stroke-dasharray="5 5"/><g font-family="monospace" font-size="9" fill="#4f6b62"><text x="61" y="275">FIG. 01 / SIGNAL GARDEN</text><path d="M358 77h73" stroke="#789188"/><text x="440" y="81">ONE ARENA. ONE LOOP.</text><text x="480" y="285">BUILD → PLAY → REFINE</text></g></svg>
+        </figure>
+      </header>
+      <div class="reader-note"><span>BEFORE YOU BEGIN</span><p>This is a book about making a game with GPT-6 Astra. <strong>Signal Garden</strong> is the worked design example; the prompts and milestones are original templates, not a claim that the game has already been built or benchmarked.</p></div>
+      <section class="chapter" aria-labelledby="better-loop"><div class="chapter-kicker">CHAPTER 01</div><h2 id="better-loop">The better loop</h2>
+<p class="lead">A better result begins with a smaller uncertainty.</p>
+<p>You ask an AI agent to make a beautiful 3D game. It creates a landscape, a character, a menu, and several hundred lines of code. The screenshot looks promising. Then you press a key: the camera points into a wall, the player slides through a collectible, and nothing explains how to win. The request was easy to begin and difficult to finish because “good” never became something you could observe.</p>
+<p>This book uses one original example, <strong>Signal Garden</strong>: guide a small maintenance robot around an abandoned rooftop garden, collect three energy cells, avoid a patrolling drone, and power a beacon before time runs out. The game is deliberately small. It gives us enough movement, collision, feedback, atmosphere, and state transitions to practice making a complete experience.</p>
+<div class="loop"><div><span>01 / INTENT</span><strong>Describe</strong><small>What should a player experience?</small></div><div><span>02 / ACTION</span><strong>Build</strong><small>Make one part playable.</small></div><div><span>03 / EVIDENCE</span><strong>Observe</strong><small>Play it. Capture what happens.</small></div><div><span>04 / LEARNING</span><strong>Refine</strong><small>Change the weakest part.</small></div></div>
+<h3>Give every iteration a question</h3>
+<p>“Can a new player find the beacon?” is a useful question. It suggests a route, a camera angle, a first playtest, and a way to judge the change. “Make the game more professional” leaves the agent to guess among textures, controls, menus, sound, or architecture. The next step is often easier to choose when the current problem is named precisely.</p>
+<p>For this book, <em>better</em> means increasing the quality of the player’s experience while keeping the cost of the next change manageable. The first half needs playtesting. The second needs understandable files, repeatable checks, and recoverable commits. A beautiful frame and a successful build each answer only part of the question.</p>
+<h3>A model, an agent, and a workflow</h3>
+<p><strong>GPT-6 Astra</strong> is the requested model. An <strong>agent</strong> is the surrounding software that gives that model access to files, a terminal, documentation, and possibly a browser or game editor. A <strong>workflow</strong> is your agreement about what to build, what evidence to collect, and when to continue. A pasted prompt cannot give an ordinary chat tools it does not have.</p>
+<p>OpenAI’s Astra guidance recommends making autonomy, instruction-file behavior, delegation, and test scope explicit. Use the model name shown by your agent host, and check that the tools needed for the task are available. The game recipe here does not depend on a particular subscription tier or an invented model capability. <a class="citation" href="#source-01" title="OpenAI · GPT-6 Astra prompting best practices" aria-label="Source 01: OpenAI · GPT-6 Astra prompting best practices">[01]</a></p>
+<div class="callout"><div class="callout-label">The working principle</div><p>Write the smallest instruction that carries the intent, constraints, and evidence needed for the next useful decision.</p></div>
+<h3>How to use this book</h3>
+<p>Read the approach comparison before choosing an engine. Set up the repository and a compact instruction file. Fill the game brief, then use the meta-prompt to generate a project-specific execution prompt. The master prompt is a worked example of that result. Build through the milestones, keep the evidence, and finish by improving the process that produced the game.</p>
+<div class="exercise"><h3>Try this before you prompt</h3><p>Write one sentence for the player’s objective, one action that should feel satisfying, and one observable condition that means the first version is done. If those sentences are unclear, work on the game idea first.</p></div>
+</section>
+<section class="chapter" aria-labelledby="approaches"><div class="chapter-kicker">CHAPTER 02</div><h2 id="approaches">Six ways to build</h2>
+<p class="lead">Choose an approach for the uncertainty you have.</p>
+<p>There is no single best prompting style for every stage of a game. A fast sketch helps you discover a direction. A specification helps you preserve a direction. A test helps you check a claim. Confusion begins when one of those activities is expected to do all three.</p>
+<p>The comparison below is an editorial assessment for a solo developer making a small browser game. It is <strong>not a measured ranking of models</strong>. Setup effort and review effort depend on the project and the tools the agent can actually use.</p>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Comparison table; scroll horizontally on small screens"><table><thead><tr><th>Approach</th><th>Best use</th><th>Main weakness</th><th>Refinement</th></tr></thead><tbody>
+<tr><td>1. One-shot prototype</td><td>Discover an attractive visual or a promising mechanic quickly.</td><td>A broad request can hide incomplete controls and game states.</td><td>Limit it to one arena and one loop. Treat it as a sketch until you play it.</td></tr>
+<tr><td>2. Specification first</td><td>Preserve a clear idea across many changes.</td><td>Documentation can grow before the game has proved enjoyable.</td><td>Write a one-page brief and a short acceptance list; validate with a playable slice.</td></tr>
+<tr><td>3. Tutorial guided</td><td>Learn an unfamiliar engine using a known example.</td><td>Old APIs, incompatible assets, or copied structure can mislead.</td><td>Match versions, reproduce the small lesson, then adapt one mechanic.</td></tr>
+<tr><td>4. Incremental agent loop</td><td>Build a complete game over several sessions.</td><td>Local improvements can drift from the whole experience.</td><td>Keep a runnable baseline, milestone evidence, and a short handoff note.</td></tr>
+<tr><td>5. Visual playtest loop</td><td>Improve camera, readability, animation, and feedback.</td><td>A good screenshot does not prove behavior over time.</td><td>Pair images with actual input sequences and state observations.</td></tr>
+<tr><td>6. Parallel specialists</td><td>Independent research, art exploration, or review of stable interfaces.</td><td>Conflicting edits and integration can consume the time saved.</td><td>Assign separate files or read-only work; one owner integrates and tests.</td></tr>
+</tbody></table></div>
+<h3>What the sources establish</h3>
+<p>GitHub’s Spec Kit separates specification, planning, tasks, and implementation. That is a useful model for keeping intent visible. It does not require a tiny game to adopt every template or tool in the kit. <a class="citation" href="#source-06" title="GitHub · Spec Kit" aria-label="Source 06: GitHub · Spec Kit">[06]</a></p>
+<p>Anthropic reports that long-running web-app agents benefited from incremental work, progress records, Git history, and browser verification. Its report does not establish that multiple agents always beat a single agent, or that its findings automatically transfer to every game. <a class="citation" href="#source-05" title="Anthropic · Effective harnesses for long-running agents" aria-label="Source 05: Anthropic · Effective harnesses for long-running agents">[05]</a></p>
+<p>OpenAI’s Astra game case study combines a player-experience brief, concept references, inspectable state, repeatable scenes, and tests using real controls. It provides an implementation example, rather than a controlled comparison of these six approaches. <a class="citation" href="#source-04" title="OpenAI · Building games with Astra" aria-label="Source 04: OpenAI · Building games with Astra">[04]</a></p>
+<h3>The recommended combination</h3>
+<p>For Signal Garden, begin with a small specification, use a tutorial only where engine knowledge is missing, and make the first complete loop with one agent. Add visual review immediately after movement works. Introduce parallel work only when there is a task that can be integrated without changing the game’s shared assumptions.</p>
+<p>A useful delegation might be: “Review the collision module without editing it, and report reproducible failures.” A poor split is: “One agent builds movement while another rewrites the camera and a third redesigns the coordinate system.” Those tasks depend on one another even if their file names differ.</p>
+<div class="callout warm"><div class="callout-label">Decision rule</div><p>If you do not know whether the idea is fun, prototype it. If you know what should happen but the agent keeps drifting, improve the specification. If you do not know whether it works, improve the evidence.</p></div>
+<div class="exercise"><h3>Choose a first experiment</h3><p>Write the biggest unknown in your game. Pick one row of the comparison to address it. Name the artifact that will let you decide what to do next: a playable build, a control test, a reference image, or a one-page decision.</p></div>
+</section>
+<section class="chapter" aria-labelledby="research"><div class="chapter-kicker">CHAPTER 03</div><h2 id="research">Learn from the evidence</h2>
+<p class="lead">A transcript becomes useful when it changes a decision.</p>
+<p>Searching for “best AI game prompt” produces demonstrations, tool promotions, speculative claims, and genuine engineering advice side by side. Read each source for a specific purpose. Use engine documentation to establish API behavior. Use a creator’s demonstration to learn a process. Use your own build to find out whether that process works under your constraints.</p>
+<h3>Transcript notebook: Software Is Changing (Again)</h3>
+<p>In his Y Combinator keynote, Andrej Karpathy discusses the loop between AI generation and human verification. He argues that concrete requests and auditable intermediate artifacts make that loop more useful, and notes that a huge code diff still leaves substantial review work. These are conceptual observations, not measured results for game production. <a class="citation" href="#source-02" title="Andrej Karpathy · Software Is Changing (Again)" aria-label="Source 02: Andrej Karpathy · Software Is Changing (Again)">[02]</a></p>
+<p><strong>Our application:</strong> ask for one runnable game milestone with a short list of behaviors to inspect. Put the build link, relevant change, and evidence together. The person reviewing the game should be able to answer a question such as “Does losing all health always show a restart screen?” without first reconstructing the agent’s entire conversation.</p>
+<h3>Transcript notebook: How I use LLMs</h3>
+<p>Karpathy describes the context window as working memory and explains how search brings outside information into that context. The reviewed transcript passage contrasts information supplied during a conversation with what the model already learned. His 2025 tour also contains historical product details; those details are not a current setup guide. <a class="citation" href="#source-03" title="Andrej Karpathy · How I use LLMs" aria-label="Source 03: Andrej Karpathy · How I use LLMs">[03]</a></p>
+<p><strong>Our application:</strong> attach the actual error, installed engine version, current scene structure, and a relevant documentation excerpt to a debugging request. “The player is broken” supplies almost no useful working information. “In Godot version X, this CharacterBody3D falls through the floor in this minimal scene” gives the agent an investigation it can carry out.</p>
+<div class="callout"><div class="callout-label">Transcript provenance</div><p>The two notebooks use transcript text from public mirrors, linked alongside the original videos in the source ledger. Automatic captions may contain errors. Stable passage timestamps were not available in the retrieved text, so the notes give searchable passage terms rather than invented timecodes.</p></div>
+<h3>A game tutorial is a separate kind of evidence</h3>
+<p>GDQuest’s written Godot 4 course and Godot’s own first-3D-game tutorial provide a sequence for learning game structure. Use them to reduce unfamiliarity with the engine. The GDQuest YouTube transcript could not be retrieved reliably during research, so only its accessible written course is used here. <a class="citation" href="#source-09" title="Godot · Your first 3D game" aria-label="Source 09: Godot · Your first 3D game">[09]</a> <a class="citation" href="#source-10" title="GDQuest · Your first 3D game with Godot 4" aria-label="Source 10: GDQuest · Your first 3D game with Godot 4">[10]</a></p>
+<p>Do not carry an entire tutorial into a new design unchanged. Extract one concept, such as movement relative to the camera. Build a minimal reproduction with the installed engine version. Then explain how the concept maps to your game, including what must change. A successful exercise is evidence that you understand one part; it does not validate the whole game.</p>
+<h3>A repeatable research procedure</h3>
+<ol><li><strong>Start with a question.</strong> For example: “Can the chosen Godot export run on GitHub Pages without custom response headers?”</li><li><strong>Find the primary answer.</strong> Search official documentation for the installed version; open the page and read the constraints.</li><li><strong>Find an applied example.</strong> Prefer a creator’s video with an accessible transcript and companion repository.</li><li><strong>Record provenance.</strong> Save the URL, title, retrieval date, version, and a passage locator. Mark missing captions or an unavailable repository explicitly.</li><li><strong>Separate observation from inference.</strong> “The tutorial uses this node” is an observation. “This will simplify our camera system” is a hypothesis.</li><li><strong>Run one small experiment.</strong> Keep the result and the code commit that produced it.</li></ol>
+<pre><code>Question: Will the beacon remain visible behind the planter?
+Source: [official API link or creator's original tutorial]
+Version / date: [installed version] / [date reviewed]
+Observed idea: [brief paraphrase]
+Our hypothesis: [how it may help this game]
+Experiment: [small reproducible change]
+Outcome: [measured result, or NOT TESTED]
+Commit: [actual revision]</code></pre>
+<p>Two accounts of the same video are one underlying source. A successful edited demonstration does not reveal the unsuccessful runs, total effort, or hidden manual work. Keep the useful method, and test the outcome yourself.</p>
+</section>
+<section class="chapter" aria-labelledby="stack"><div class="chapter-kicker">CHAPTER 04</div><h2 id="stack">Choose the right workspace</h2>
+<p class="lead">Pick the stack your agent can build and you can judge.</p>
+<p>The game’s delivery platform should influence the engine choice early. For a small game intended to live at a GitHub Pages URL, a browser-native stack offers a direct path from code changes to a playable link. For an existing Godot or Unity project, preserving the engine may be more useful than switching to match a fashionable workflow.</p>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Comparison table; scroll horizontally on small screens"><table><thead><tr><th>Stack</th><th>What you get</th><th>What you still own</th><th>Choose it when…</th></tr></thead><tbody>
+<tr><td>TypeScript + Vite + Three.js</td><td>A code-oriented 3D rendering workflow and a small static-site deployment path. <a class="citation" href="#source-12" title="Vite · Deploying a Static Site" aria-label="Source 12: Vite · Deploying a Static Site">[12]</a> <a class="citation" href="#source-14" title="Three.js · README" aria-label="Source 14: Three.js · README">[14]</a></td><td>Gameplay architecture, movement, collisions, input, UI, and asset management.</td><td>Your game is small, browser delivery matters, and your agent can edit and run code.</td></tr>
+<tr><td>Babylon.js</td><td>A browser 3D engine with a broad feature set, including physics integration and inspection tools. <a class="citation" href="#source-15" title="Babylon.js · Specifications" aria-label="Source 15: Babylon.js · Specifications">[15]</a></td><td>Game design, integration choices, compatibility checks, and performance tuning.</td><td>You want more engine facilities within a JavaScript workflow.</td></tr>
+<tr><td>Godot + GDScript</td><td>Scenes, nodes, a visual editor, and an established beginner learning path. <a class="citation" href="#source-09" title="Godot · Your first 3D game" aria-label="Source 09: Godot · Your first 3D game">[09]</a></td><td>Editor access or clear scene-file conventions; a tested web export configuration.</td><td>You prefer an engine workflow or plan native game releases too.</td></tr>
+<tr><td>Unity</td><td>An editor-centered game project that can target supported web browsers. <a class="citation" href="#source-16" title="Unity · Web browser compatibility" aria-label="Source 16: Unity · Web browser compatibility">[16]</a></td><td>The installed editor and modules, asset import workflow, and web-build testing.</td><td>You already know Unity or need an existing project and its assets.</td></tr>
+</tbody></table></div>
+<p>These are practical selection criteria, not benchmark results or a complete feature comparison. Test the cheapest risky part before committing to the stack. If the agent cannot reliably inspect the editor, begin with a tiny scene and an export test to discover that limitation immediately.</p>
+<h3>Our default: Three.js, TypeScript, and Vite</h3>
+<p>Signal Garden uses a fixed, slightly elevated camera, a flat arena, simple geometric obstacles, and a small number of moving objects. That scope makes a browser codebase a reasonable teaching choice. Start with simple collision shapes and a readable state machine. If the design later depends on slopes, rigid-body interactions, or complex character movement, evaluate an appropriate physics solution before improvising one.</p>
+<p>Use the stable package versions available when you start, commit the lockfile, and record the versions in the README. Avoid hard-coding a tutorial’s old version simply because an AI remembers its APIs. If the agent proposes a rendering technology with narrower browser support, ask it to name the target devices and demonstrate that the exported game runs there.</p>
+<h3>If you choose Godot instead</h3>
+<p>For a straightforward Pages release, begin by testing a GDScript project with Compatibility rendering and a single-thread web export. Godot’s documentation states that web exports use WebGL 2, that Godot 4 C# projects currently cannot export to web, and that threaded exports require cross-origin isolation. These are version-sensitive constraints. <a class="citation" href="#source-11" title="Godot · Exporting for the Web" aria-label="Source 11: Godot · Exporting for the Web">[11]</a></p>
+<p>Prove an empty scene’s exported build loads at the final project URL before building a full game. A successful editor run cannot prove that the browser export will work. Keep generated export files together and retain their expected names.</p>
+<div class="exercise"><h3>The 30-minute feasibility check</h3><p>As a timeboxed exercise, create a floor, one object, and a camera. Make the object move, build the output, and serve it under a repository subpath. Record what failed. The timebox is a planning suggestion, not a promised completion time.</p></div>
+</section>
+<section class="chapter" aria-labelledby="github"><div class="chapter-kicker">CHAPTER 05</div><h2 id="github">Give the work a memory</h2>
+<p class="lead">The repository is the handoff between yesterday and tomorrow.</p>
+<p>Git records local history. GitHub holds a remote copy, review conversations, issues, and automation. GitHub Pages serves the published game or book. Keeping those roles separate makes debugging easier: a local commit is not a push, a push is not a successful deployment, and a deployment is not proof that the game is playable.</p>
+<h3>Step 1: establish a clean starting point</h3>
+<p>In a new empty game folder, initialize Git on <code>main</code>. If the folder is already a repository, inspect its status and preserve the current work instead. The following commands are an example for a <em>new</em> Signal Garden project; replace the account name before creating its remote.</p>
+<pre><code>git init -b main
+git status --short
+# Create the README, .gitignore, game brief, and project files.
+git add README.md .gitignore package.json package-lock.json src docs
+git diff --cached --stat
+git commit -m "chore: establish the Signal Garden baseline"
+gh repo create YOUR_ACCOUNT/signal-garden --public --source=. --remote=origin
+git push -u origin main</code></pre>
+<p>Stage paths that actually exist after scaffolding. Inspect the staged diff before committing. A public repository and public Pages site are publication choices; use them for files intended to be public. Keep credentials, local environment files, and unlicensed assets out of the commit.</p>
+<h3>Step 2: keep the important decisions in files</h3>
+<pre><code>signal-garden/
+  AGENTS.md                     # Short project instructions
+  .agents/skills/game-review/
+    SKILL.md                    # Repeatable review procedure
+  docs/
+    game-brief.md               # Player promise and constraints
+    acceptance.md               # Observable completion conditions
+    decisions.md                # Choices and reasons
+    progress.md                 # Current state and next step
+    playtests/                  # Human observations and evidence links
+  src/
+    game/                       # State, input, simulation
+    render/                     # Scene, camera, visual feedback
+    ui/                         # Instructions, HUD, result screens
+  public/assets/
+    credits.md                  # Asset provenance and license notes
+  tests/                        # Focused behavior checks
+  .github/workflows/pages.yml
+  package.json
+  package-lock.json</code></pre>
+<p>This structure is a starting proposal, not a demand to create empty abstractions. A tiny build can begin with fewer modules. Separate systems when their responsibilities become clear, especially if simulation logic is difficult to test because it is mixed with rendering code.</p>
+<h3>Step 3: make a checkpoint per meaningful change</h3>
+<p>A useful commit says what behavior now works: <code>feat: collect cells and power the beacon</code> is better than <code>update</code>. Save a known working baseline before trying an uncertain idea. A branch such as <code>experiment/camera-follow</code> makes the experiment visible and gives you a clean place to compare the result.</p>
+<pre><code>git switch -c experiment/camera-follow
+# Ask the agent for the bounded camera change, then playtest it.
+git diff
+git add src/render/camera.ts docs/playtests/camera-follow.md
+git commit -m "feat: soften camera follow while preserving beacon visibility"
+git push -u origin experiment/camera-follow
+gh pr create --title "Improve camera follow" --body-file docs/pr-camera.md</code></pre>
+<p>The PR description should state the player-visible problem, the change, and what was checked. For a solo experiment, a branch and reviewed commit may be enough. Use a PR when review or CI gates add value. Do not mark a change good only because the agent’s summary sounds confident.</p>
+<h3>Step 4: leave a short continuation note</h3>
+<p>At the end of a session, update <code>progress.md</code> with the current commit, working behavior, known failure, launch command, and one next milestone. Anthropic’s long-running-agent report uses progress artifacts and Git history to reduce the need for a new session to reconstruct previous work. <a class="citation" href="#source-05" title="Anthropic · Effective harnesses for long-running agents" aria-label="Source 05: Anthropic · Effective harnesses for long-running agents">[05]</a></p>
+<p>When a bad change has already been shared, a reviewed <code>git revert</code> creates a new commit that undoes it while preserving history. Inspect dependencies between commits before reverting. For an uncommitted experiment, ask the agent to show its exact diff and restore only its own changes; unrelated work may be present.</p>
+</section>
+<section class="chapter" aria-labelledby="skills"><div class="chapter-kicker">CHAPTER 06</div><h2 id="skills">Turn a good habit into a skill</h2>
+<p class="lead">A prompt starts a task. A skill preserves a procedure.</p>
+<p>Use three layers of context. The <strong>task prompt</strong> describes the immediate outcome. <strong>AGENTS.md</strong> records stable repository conventions. A <strong>skill</strong> packages a procedure that is worth repeating across relevant tasks. Avoid copying the entire game brief into every layer; duplicated instructions are easy to contradict.</p>
+<p>Codex discovers repository instructions and scoped overrides through its instruction-file mechanism. Keep root instructions short and inspect any parent or nested rules that affect the working directory. The details of discovery belong to the official documentation. <a class="citation" href="#source-07" title="OpenAI · Custom instructions with AGENTS.md" aria-label="Source 07: OpenAI · Custom instructions with AGENTS.md">[07]</a></p>
+<h3>A compact AGENTS.md for the example game</h3>
+<div class="prompt-block"><div class="prompt-bar"><span>READY TO USE · agents-example.md</span><button type="button" class="copy-button" aria-label="Copy agents-example.md">Copy prompt</button></div><pre tabindex="0"><code># Signal Garden — project instructions
+
+Read docs/game-brief.md, docs/acceptance.md, and docs/progress.md before a substantial change. Inspect git status and preserve existing user work.
+
+Use TypeScript, Vite, and Three.js with the committed lockfile. Keep Y as up, movement on X/Z, and speed in world units per second. Prefer a small clear module over a new abstraction without a present need.
+
+Commands after scaffolding: npm run dev, npm run build, npm test. Keep these scripts accurate in package.json and the README.
+
+Keep simulation state separate from scene objects where that makes behavior easier to inspect. Put tunable gameplay constants in one named configuration module.
+
+Finish one playable milestone at a time. Verify changed behavior, inspect the running result when tools permit, and report any checks that were not run. Do not weaken acceptance conditions to hide a failure.
+
+Use original or appropriately licensed assets and record attribution in public/assets/credits.md. Do not commit credentials or local environment files.
+
+At each verified milestone, update docs/progress.md with the revision, evidence, known issues, and next step. Follow the user's existing authorization for commits, pushes, and publication; do not assume repository instructions grant new external permissions.</code></pre><a class="download-link" href="prompts/agents-example.md" download>Download .md ↗</a></div>
+<p>This is a downloadable sample for a separate game repository. Add it only after confirming that its commands and paths match your project. A file that says “run tests” is not useful if the test command does not exist.</p>
+<h3>A narrow skill: review a playable milestone</h3>
+<p>OpenAI documents skills as directories containing a <code>SKILL.md</code> with <code>name</code> and <code>description</code>, optionally with scripts and reference files. Repository skills can live under <code>.agents/skills</code>. A clear description helps the agent choose the procedure when it is relevant. <a class="citation" href="#source-08" title="OpenAI · Build skills" aria-label="Source 08: OpenAI · Build skills">[08]</a></p>
+<div class="prompt-block"><div class="prompt-bar"><span>READY TO USE · game-review-skill.md</span><button type="button" class="copy-button" aria-label="Copy game-review-skill.md">Copy prompt</button></div><pre tabindex="0"><code>---
+name: game-review
+description: Review a playable browser-game milestone after changes to controls, rules, camera, UI, or performance. Use for behavior and visual verification, not for unrelated documentation edits.
+---
+
+# Review a playable milestone
+
+1. Read the game brief and the acceptance conditions affected by the change. Identify the exact revision and target browser.
+2. Run the documented build and the focused behavior checks. If a command or tool is missing, report it and continue with independent checks.
+3. Start the built game. Exercise the changed behavior through actual player input. Inspect screenshots and observable game state where tools are available.
+4. For changes to shared state, cover start, normal play, pause, resume, win, loss, and restart. For a visual-only change, inspect the relevant scenes and check that controls still respond.
+5. Record reproduction steps, expected behavior, observed behavior, and the evidence location for each failure. Separate gameplay judgment from deterministic correctness.
+6. Fix failures within the task scope and rerun the checks affected by the fix. Finish when those checks pass; do not repeatedly expand the test suite without a reason.
+7. Report what changed, what was actually verified, and what still needs human playtesting. Update the progress note. Never claim a screenshot proves an entire interaction sequence.</code></pre><a class="download-link" href="prompts/game-review-skill.md" download>Download .md ↗</a></div>
+<p>Save this example as <code>.agents/skills/game-review/SKILL.md</code> in the game repository. Mention the skill in a task, or use the skill selector exposed by your agent host. Availability and invocation syntax can differ across the desktop app, CLI, and other hosts; confirm the skill is visible before relying on it.</p>
+<h3>Keep tools and procedures distinct</h3>
+<p>A review skill can say “inspect the running game,” but it does not install a browser, grant editor access, or make screenshots appear. Confirm that the agent has the necessary tools. If it lacks them, have it complete the checks it can run and give you the precise manual sequence for the rest.</p>
+<p>A useful skill contains a trigger, a short sequence, the expected evidence, and an exit condition. Add a script only when a repeated action is stable enough to automate. Do not install a large collection of skills merely to make the prompt look more powerful; start with the few procedures the project actually needs.</p>
+<div class="callout warm"><div class="callout-label">When a skill becomes the problem</div><p>If the agent pauses or changes direction because of a file, ask for the file path and the exact instruction responsible. Resolve the conflict explicitly. A skill should make the workflow easier to execute, and should remain subordinate to the applicable instruction hierarchy.</p></div>
+</section>
+<section class="chapter" aria-labelledby="brief"><div class="chapter-kicker">CHAPTER 07</div><h2 id="brief">Design a game worth finishing</h2>
+<p class="lead">A small world can still have a clear identity.</p>
+<p>Signal Garden is an original teaching design. You are a maintenance robot on a forgotten rooftop at dusk. Three dormant cells can bring a garden’s beacon back to life. A patrolling drone and a short countdown make the route a decision. The desired feeling is calm exploration interrupted by readable moments of pressure.</p>
+<p>The following values are <strong>initial design targets</strong>. They have not been measured in a completed game. They exist to make the brief concrete enough to build and then revise.</p>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Comparison table; scroll horizontally on small screens"><table><thead><tr><th>Design dimension</th><th>First-version decision</th><th>Observable check</th></tr></thead><tbody>
+<tr><td>Player objective</td><td>Collect three cells, return to the beacon, and activate it.</td><td>A first-time player can explain the objective after reading the start screen.</td></tr>
+<tr><td>World</td><td>One flat 24 × 24 unit arena, with 1 unit treated as 1 metre; simple planters form two routes.</td><td>All cells and the beacon are reachable without crossing a collider.</td></tr>
+<tr><td>Controls</td><td>WASD or arrows to move; E near the beacon; Escape to pause; a visible restart button.</td><td>Diagonal input is normalized; the restart resets all state.</td></tr>
+<tr><td>Camera</td><td>Fixed elevated view with a stable orientation; no pointer lock.</td><td>Player, hazards, and objective remain legible during a full run.</td></tr>
+<tr><td>Challenge</td><td>One drone follows a visible route. Contact removes one of three health points, with 1 second of invulnerability.</td><td>Standing in contact cannot remove all health in a single frame.</td></tr>
+<tr><td>Round</td><td>90-second timer. Win by activating the charged beacon; lose at zero health or time.</td><td>Win and loss cannot both occur. Pausing freezes simulation and timer.</td></tr>
+<tr><td>Visual language</td><td>Muted green stone, warm amber cells, a teal beacon, and a distinct drone silhouette.</td><td>Players can distinguish objects by shape and labels as well as color.</td></tr>
+<tr><td>First release</td><td>Desktop browser with keyboard input, responsive menus, static GitHub Pages hosting.</td><td>The production URL loads, plays, ends, and restarts. Touch gameplay is a later scope decision.</td></tr>
+</tbody></table></div>
+<h3>Define the core loop in verbs</h3>
+<p><strong>Observe → choose a route → move → collect → evade → return → activate.</strong> Each verb should have a visible consequence. A cell disappears once, the counter increases once, and the beacon’s appearance changes when it is ready. A hit has clear feedback and a short recovery period. Losing gives an immediate route back into play.</p>
+<h3>Decide the edge cases before they become bugs</h3>
+<p>For the first implementation, check loss conditions before allowing beacon activation in each simulation step. If the timer reaches zero in that step, the result is a loss. E should act on a fresh key press, and activation requires the player to be within two units of the beacon. After a terminal result, movement, collection, damage, and the timer stop until restart.</p>
+<p>Pick a single convention for coordinates and units. In the proposed Three.js game, use Y as up and move on the X/Z plane. Keep character speed in units per second. Decide these once in the brief so movement, camera, collision, and tests do not silently use different assumptions.</p>
+<h3>Give visual references a job</h3>
+<p>Collect or create references you have permission to use. Describe what each reference contributes: palette, camera height, silhouette, lighting, or UI density. Treat a reference as a design constraint, not an instruction to copy another game’s characters, brand, or proprietary assets.</p>
+<p>For Signal Garden, ask for a greybox image first, then a visual pass that keeps the same camera and geometry. Comparing like-for-like views makes the effect of lighting and material changes easier to judge. A more elaborate scene is not automatically a better scene.</p>
+<div class="exercise"><h3>Write the exclusions</h3><p>For the first release, exclude multiplayer, procedural worlds, inventory systems, dialogue trees, and multiple levels. Add one only when it strengthens a playtested core loop enough to justify the extra work.</p></div>
+</section>
+<section class="chapter" aria-labelledby="meta-prompt"><div class="chapter-kicker">CHAPTER 08</div><h2 id="meta-prompt">Make a prompt that makes a prompt</h2>
+<p class="lead">Ask for a better brief before asking for more code.</p>
+<p>A meta-prompt is an instruction for drafting another prompt. Its value is the design work it forces into the open: audience, controls, constraints, missing information, completion conditions, and tradeoffs. It cannot guarantee that the generated game will be good. You still need to review the resulting specification and play the implementation.</p>
+<h3>Build the input packet</h3>
+<p>Give the prompt designer the one-page game brief, your target platform, installed tools, available assets, and any existing repository instructions. If the folder is empty, say so. Include a simple reference image or sketch if it clarifies the camera or visual style. Label preferences as preferences and hard constraints as constraints.</p>
+<p>For Signal Garden, the important facts are a small desktop browser game, keyboard input, a fixed camera, one arena, three collectibles, one hazard, a complete win/loss/restart loop, and static hosting. “Make something amazing” adds less useful direction than any of those facts.</p>
+<h3>The prompt designer</h3>
+<div class="prompt-block"><div class="prompt-bar"><span>READY TO USE · meta-prompt.md</span><button type="button" class="copy-button" aria-label="Copy meta-prompt.md">Copy prompt</button></div><pre tabindex="0"><code># Design an execution prompt for GPT-6 Astra
+
+You are a game-design and coding-workflow editor. Produce a practical execution prompt for GPT-6 Astra running inside a coding agent. Your task in this conversation is prompt design, not game implementation.
+
+INPUT BRIEF
+Use the game brief below or the attached docs/game-brief.md. If details are missing, use the Signal Garden defaults and label them as assumptions:
+- Player: a maintenance robot restoring a rooftop beacon.
+- Loop: collect three energy cells, avoid one patrolling drone, return to the beacon, activate it.
+- Scope: one flat arena, desktop browser, keyboard controls, one complete round with win, loss, pause, and restart.
+- Stack preference: TypeScript, Vite, Three.js; GitHub Pages publication after the destination is explicitly authorized.
+- Art: original geometric assets, muted green stone, amber cells, teal beacon. Readable silhouettes and camera first.
+- Constraints: no backend, accounts, multiplayer, paid APIs, or unlicensed assets. Keep the first release small.
+
+My project-specific changes, existing files, reference images, installed tools, target hardware, and available budget:
+[Add these here, or retain the defaults and mark unknowns.]
+
+PROCESS
+1. Separate hard requirements, preferences, assumptions, and genuinely blocking unknowns. Ask at most three focused questions only if a wrong assumption would materially change the outcome. Continue independent prompt drafting where possible.
+2. Compare these approaches for this brief: a one-shot prototype, specification first, tutorial guided, incremental implementation, visual playtesting, and parallel specialists. Explain tradeoffs concisely. Do not invent benchmark results or completion-time guarantees.
+3. Recommend a minimal combination and a stack the available tools can actually operate. Preserve an explicit engine choice. Check primary documentation before making version-sensitive technical claims; disclose unavailable browsing.
+4. Draft a complete execution prompt with the player promise, controls, camera, world rules, edge cases, asset policy, repository conventions, milestones, verification, and completion conditions.
+5. Include an instruction to inspect existing files before editing, preserve user work, make reasonable routine decisions, and continue through authorized milestones. Treat external publication as a separate permission boundary unless already authorized.
+6. Specify only useful evidence: focused logic checks, real-control interaction checks, visual inspection, and human playtesting where judgment is required. Do not claim that a passing build proves the game works.
+7. Review the draft for contradictions, requirements without an observable check, hidden extra scope, unavailable tools, and vague adjectives. Revise once to fix those specific issues.
+
+RETURN
+A. Assumptions and any blocking questions.
+B. A concise comparison and recommendation.
+C. The final copyable execution prompt, with unresolved fields clearly marked.
+D. A short acceptance checklist and a first playtest plan.
+E. A compact explanation of the defects corrected in the review pass.
+
+Keep the final execution prompt self-contained. Use direct instructions and concrete player behavior. Do not substitute another model for GPT-6 Astra, ask for private chain-of-thought, or present a self-assigned quality score as evidence of game quality.</code></pre><a class="download-link" href="prompts/meta-prompt.md" download>Download .md ↗</a></div>
+<h3>Review the result before executing it</h3>
+<p>Check whether the generated prompt carries the game’s actual identity. If the output could describe any generic action game, the input probably needs a clearer player experience. Then check whether it introduces hidden scope: user accounts, online leaderboards, paid services, generated assets, multiplayer, or a large framework you did not request.</p>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Comparison table; scroll horizontally on small screens"><table><thead><tr><th>Question</th><th>Weak answer</th><th>Useful answer</th></tr></thead><tbody>
+<tr><td>What is the game?</td><td>A beautiful 3D adventure.</td><td>A robot restores a rooftop beacon by collecting three cells while avoiding a drone.</td></tr>
+<tr><td>What should the agent do now?</td><td>Plan carefully.</td><td>Inspect the workspace, record assumptions, then build and verify the first complete loop.</td></tr>
+<tr><td>How will we judge it?</td><td>Make it polished and bug-free.</td><td>Exercise start, movement, collection, pause, win, loss, and restart; inspect camera and readable feedback.</td></tr>
+<tr><td>When does it stop?</td><td>When it looks good.</td><td>When the scoped acceptance checks pass, known issues are stated, and the authorized deliverables exist.</td></tr>
+</tbody></table></div>
+<h3>Use one refinement pass with a purpose</h3>
+<p>Ask a reviewer to find contradictions, unavailable tools, requirements with no observable test, and unrequested complexity. Revise those specific defects. Repeatedly asking a model to “make this prompt even better” can produce a longer prompt without a better design.</p>
+<p>Version the input brief and the resulting prompt together. If you later change the controls or release platform, update the source brief first, then regenerate the affected parts. Keep a short change note so you can connect an implementation difference to an instruction difference.</p>
+<div class="exercise"><h3>A useful prompt review</h3><p>Underline every adjective in your generated prompt. For “smooth,” “clear,” “fast,” or “beautiful,” add either an example to compare against or a concrete observation to collect. Keep subjective judgments visible rather than pretending every quality can be reduced to a number.</p></div>
+</section>
+<section class="chapter" aria-labelledby="master-prompt"><div class="chapter-kicker">CHAPTER 09</div><h2 id="master-prompt">The Astra master prompt</h2>
+<p class="lead">A complete starting instruction, with a finish line.</p>
+<p>This is an original worked execution prompt for the Signal Garden brief. It is a manually authored example of the output the previous chapter asks for, <strong>not a transcript of an experiment or a benchmarked best prompt</strong>. Use it in a coding-agent session with the intended game folder open and GPT-6 Astra selected.</p>
+<p>Before pasting, confirm the agent can edit the folder, run the package manager, and inspect a browser if you expect automated playtesting. The prompt allows reasonable local implementation choices and asks the agent to continue through the scoped milestones. Publication is handled separately in the deployment chapter so the destination can be explicit.</p>
+<div class="prompt-block"><div class="prompt-bar"><span>READY TO USE · astra-master-prompt.md</span><button type="button" class="copy-button" aria-label="Copy astra-master-prompt.md">Copy prompt</button></div><pre tabindex="0"><code># Build Signal Garden from scratch with GPT-6 Astra
+
+Work in the current project folder as a game developer. Inspect the folder, Git status, applicable instructions, and available tools first. Preserve existing user work. If this is an empty folder, create the complete project described below.
+
+Deliver a small, coherent, playable desktop-browser 3D game. Implement it and run the appropriate checks; continue through the milestones instead of ending with a plan. Make reasonable routine implementation choices and record assumptions. Ask a focused question only if missing information would materially change the result or requires authorization that is not already present.
+
+PLAYER EXPERIENCE
+Signal Garden is a quiet rooftop at dusk. The player is a maintenance robot restoring a beacon. Collect three energy cells, avoid a patrolling drone, and return to activate the beacon before the round ends. The world should feel abandoned but recoverable, with clear routes and warm light from restored machinery.
+
+SCOPE AND RULES
+- One flat 24 by 24 unit arena. Treat one unit as one metre; Y is up, with movement on X/Z.
+- Use a fixed elevated camera with a stable orientation and no pointer lock. Keep the player and routes readable.
+- WASD or arrow keys move. Normalize diagonal input. E activates the beacon on a fresh press within two units, only after all three cells are collected. Escape pauses/resumes. Provide visible start, pause, resume, restart, and mute controls.
+- The player begins with three health points and 90 seconds. One drone follows a deterministic visible patrol. Contact causes one damage, followed by one second of invulnerability.
+- Each cell can be collected once. Display the cell count, health, remaining time, and beacon readiness.
+- Use title, playing, paused, won, and lost states. Pause freezes simulation and timer. Losing all health or time ends the round. Evaluate loss conditions before beacon activation within a simulation step so simultaneous expiry and activation result in loss.
+- After win or loss, freeze gameplay. Restart resets player position, cells, health, timer, drone route, cooldowns, effects, and input state. Window blur should release held inputs and pause an active round.
+- Exclude multiplayer, accounts, procedural worlds, inventory, dialogue, and extra levels from this release.
+
+TECHNICAL DIRECTION
+Prefer TypeScript, Vite, and Three.js unless the existing project explicitly selects another engine. Use available stable packages and commit the lockfile. Record the actual versions. Check official documentation for APIs that are uncertain or version-sensitive.
+
+Keep a small readable structure with separable input, simulation/state, rendering/camera, and UI responsibilities. Keep tunable values in one configuration module. Use simple collision shapes appropriate to a flat arena; explain a physics dependency if one becomes necessary. Use elapsed time correctly and prevent large resume-time steps.
+
+Create accurate npm scripts for dev, build, and focused tests. Create docs/game-brief.md, docs/acceptance.md, docs/progress.md, and a concise README with setup, controls, target platform, and limitations. Add appropriate ignore rules.
+
+VISUAL AND AUDIO DIRECTION
+Start with readable greybox geometry. Then use an original geometric robot, muted green stone and planters, amber energy cells, a teal beacon, and a drone with a distinct silhouette. Keep routes visible; avoid excessive bloom, particles, or camera shake. Shape and text should reinforce color-coded signals. Respect reduced-motion preferences for decorative motion and hit effects.
+
+Use original or appropriately licensed assets. Record sources and attribution. Add modest feedback for collection, damage, readiness, victory, and loss. Begin audio only after user interaction and provide mute. Keep menus responsive and keyboard accessible. This first version targets desktop keyboard play; do not claim mobile gameplay is supported unless implemented and tested.
+
+MILESTONES
+M0: Scaffold, document setup, build successfully, and display a minimal scene.
+M1: Make movement, boundaries, camera, and pause reliable.
+M2: Implement cells, beacon activation, HUD, win, and complete restart.
+M3: Implement drone, damage cooldown, timer loss, and health loss.
+M4: Apply coherent art and sound; inspect readability and feedback.
+M5: Test production output under /signal-garden/, fix important failures, and prepare the release workflow.
+
+At each milestone, keep the project runnable, update the progress note, and make a local commit after reviewing the diff and running the relevant checks. Local commits are authorized by this prompt. Treat a milestone as a checkpoint and continue to the next one without an unnecessary permission pause.
+
+VERIFICATION
+Run focused checks for single collection, normalized movement, damage cooldown, pause, terminal-state exclusivity, boundary timing, and complete restart. Use real controls in the running browser for the main interaction paths when browser tools are available. Inspect screenshots for camera and UI quality, and observable state for the rules. Deterministic setup helpers may prepare test scenes but must not substitute for journey tests through player input.
+
+Check start, collection, a win, both loss conditions, pause/resume, and repeated restart. Build and test the production output at its repository subpath. Check asset loads and runtime errors. Name the actual browser and device used. If measuring performance, record the device, viewport, scene, warmup, and sample duration; do not invent a frame-rate result.
+
+If a tool is unavailable, complete independent checks, state what was not run, and provide the shortest remaining manual verification sequence. Do not mark untested conditions passed. After a fix, rerun checks justified by the changed behavior; avoid redundant broad testing once the relevant checks pass.
+
+WORKING AGREEMENTS
+Keep communication concise and connect changes to player-visible outcomes. If instructions conflict, identify the relevant file and rule and resolve them according to the applicable instruction hierarchy. Use parallel specialists only for genuinely independent tasks with clear ownership; keep one integration owner. Prefer one agent when work shares changing interfaces.
+
+COMPLETION
+Deliver the runnable local game, its source and lockfile, accurate setup instructions, acceptance results, asset credits, reviewed local commits, and a prepared GitHub Pages workflow. Report what is complete, what was actually tested, and what needs human playtesting. Publish only if this session already authorizes the specific account/repository and public release; otherwise finish the reviewable release preparation and request that final authorization.</code></pre><a class="download-link" href="prompts/astra-master-prompt.md" download>Download .md ↗</a></div>
+<h3>Why these parts are present</h3>
+<p>The player promise gives the work direction. The coordinate convention prevents integration mistakes. The terminal-state rules settle edge cases. The milestones make partial progress recoverable. The evidence requirements make completion reviewable. The exclusions keep the first game small enough to finish.</p>
+<p>The model-specific portion is short: state how much initiative is expected, how to handle instruction conflicts, when delegation helps, and what test scope is appropriate. Those concerns are reflected in OpenAI’s current Astra guidance. The game rules and target values are our design choices. <a class="citation" href="#source-01" title="OpenAI · GPT-6 Astra prompting best practices" aria-label="Source 01: OpenAI · GPT-6 Astra prompting best practices">[01]</a></p>
+<h3>Steer the active task with evidence</h3>
+<p>Do not restart from scratch after every disappointing result. A focused correction should name the current revision, the observed problem, the desired behavior, and the acceptable scope of change. Keep the overall objective intact while correcting the specific failure.</p>
+<div class="prompt-block"><div class="prompt-bar"><span>READY TO USE · repair-prompt.md</span><button type="button" class="copy-button" aria-label="Copy repair-prompt.md">Copy prompt</button></div><pre tabindex="0"><code># Repair one observed game problem
+
+Continue the existing game and preserve the overall brief.
+
+Revision / build: [actual commit or build URL]
+Observed problem: [describe what happened]
+Reproduction: [starting state and exact input sequence]
+Expected behavior: [what the player should see or experience]
+Evidence: [screenshot, state snapshot, error, or playtest note]
+Allowed scope: [systems that may change and constraints to preserve]
+
+Reproduce the issue before changing code. Inspect the smallest relevant path, explain the likely cause briefly, and implement a targeted fix. Avoid unrelated features or rewrites. Verify the failing sequence and any affected neighboring behavior. Show the evidence for the result and identify checks that were not run. Update the progress note and follow this session's commit authorization.</code></pre><a class="download-link" href="prompts/repair-prompt.md" download>Download .md ↗</a></div>
+<p>If the agent cannot reproduce the problem, ask it to inspect the simplest relevant scene or add a narrowly scoped observation point. If it proposes another broad rewrite, require an explanation of why a local change cannot solve the problem and a recovery point before proceeding.</p>
+</section>
+<section class="chapter" aria-labelledby="milestones"><div class="chapter-kicker">CHAPTER 10</div><h2 id="milestones">From empty folder to game</h2>
+<p class="lead">Finish the loop before expanding the world.</p>
+<p>The following sequence is the book’s recommended implementation plan. Each milestone produces a runnable artifact and evidence. Passing a milestone is a checkpoint, not a request for another approval when the remaining work is already authorized.</p>
+<h3>M0 · Make the project reproducible</h3>
+<p>Inspect the folder and any instructions. Scaffold the minimal application, record the exact runtime and package versions, and establish the build command. Add the brief, acceptance list, and launch instructions. Start the application and verify the simplest scene loads. If package installation or browser access is blocked, report the precise limitation and complete independent work.</p>
+<p><strong>Evidence:</strong> a fresh setup can follow the README; the build exits successfully; a floor, camera, and player placeholder appear. Do not spend this milestone on a final title screen or an elaborate component library.</p>
+<h3>M1 · Make movement legible</h3>
+<p>Implement keyboard input, a flat arena, collision boundaries, and the fixed elevated camera. Normalize diagonal motion so two keys do not make the robot faster. Keep input separate from simulation updates and use an explicit policy for elapsed time after the tab has been inactive.</p>
+<p><strong>Evidence:</strong> real keyboard input moves the player in the intended directions; boundaries stop the player; diagonal speed matches straight-line speed; the camera shows the playable space. Pause or tab switching does not cause the player to teleport through geometry on return.</p>
+<h3>M2 · Close the game loop</h3>
+<p>Add the three cells, beacon activation, counter, timer, and win screen. Keep one authoritative game-state value, such as <code>title</code>, <code>playing</code>, <code>paused</code>, <code>won</code>, or <code>lost</code>. Centralize transitions so UI, audio, and simulation do not each invent a separate idea of whether the round has ended.</p>
+<p><strong>Evidence:</strong> each cell increments the counter once; the beacon requires all three; activation at the wrong distance does nothing; winning stops the timer and movement; restart restores every cell and the initial player position. At this point, the game is complete enough to play even with placeholder art.</p>
+<h3>M3 · Add one readable source of pressure</h3>
+<p>Add the patrolling drone, health, invulnerability window, and time-based loss. Show a readable route and a visible hit response. Begin with deterministic patrol behavior so a bug can be reproduced. Introduce randomness only if it benefits the design, and keep a seed for test runs if you do.</p>
+<p><strong>Evidence:</strong> collision causes the intended damage; sustained overlap respects the cooldown; zero health loses exactly once; zero time loses; pause freezes patrol and cooldown progression as defined; loss then restart produces a clean round.</p>
+<h3>M4 · Give the world its identity</h3>
+<p>Replace placeholders with a coherent robot silhouette, low geometric planters, a distinct drone, warm cell highlights, and a readable beacon. Add modest sound effects after a user interaction, with a mute control. Tune contrast and animation so feedback supports the next player decision. Inspect the same camera angle before and after changes.</p>
+<p><strong>Evidence:</strong> the robot is visible against the floor; the hazard is distinct from collectibles; the HUD remains legible at the target window sizes; sound and pause controls work; reduced-motion preferences avoid unnecessary shake and flashing. Recheck the core loop after asset changes.</p>
+<h3>M5 · Prove the release path</h3>
+<p>Build production output, serve it under <code>/signal-garden/</code>, and use the exported game for a complete run. Record a human playtest and fix the most consequential issue. Prepare the public repository and Pages workflow, then publish when the destination and publication are authorized.</p>
+<p><strong>Evidence:</strong> the final URL serves the expected revision, asset requests succeed, a win and a loss are possible, and restart works repeatedly. The README states controls, build instructions, asset credits, tested browsers, and remaining limitations.</p>
+<div class="callout"><div class="callout-label">When a milestone fails</div><p>Stop expanding the feature set. Reproduce the failure, identify the smallest causal change, fix it, and rerun the affected checks. Update the milestone status honestly, then continue.</p></div>
+</section>
+<section class="chapter" aria-labelledby="verify"><div class="chapter-kicker">CHAPTER 11</div><h2 id="verify">Verify the game you can play</h2>
+<p class="lead">A build log cannot tell you whether movement feels right.</p>
+<p>Use three layers of evidence. <strong>Logic checks</strong> cover rules that should be deterministic. <strong>Interaction checks</strong> exercise the game through its controls. <strong>Human playtests</strong> judge clarity, feel, challenge, and appeal. Each layer answers questions the others cannot.</p>
+<h3>Keep the critical acceptance list short</h3>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Comparison table; scroll horizontally on small screens"><table><thead><tr><th>Behavior</th><th>Test action</th><th>Expected evidence</th></tr></thead><tbody>
+<tr><td>Movement</td><td>Move straight, diagonally, and against each boundary.</td><td>Consistent speed and collision; no escape or camera obstruction.</td></tr>
+<tr><td>Collection</td><td>Enter and leave each cell trigger several times.</td><td>Exactly one count increment per cell.</td></tr>
+<tr><td>Damage</td><td>Touch the drone, remain in contact, then move away.</td><td>Damage observes the 1-second invulnerability policy.</td></tr>
+<tr><td>Pause</td><td>Pause while the drone is moving; resume after a wait.</td><td>Timer and simulation remain frozen, then continue without a jump.</td></tr>
+<tr><td>Win</td><td>Collect all cells; activate within range.</td><td>One win transition, frozen gameplay, working restart.</td></tr>
+<tr><td>Loss</td><td>Reach zero health; separately let time expire.</td><td>One loss transition in each case, then a clean restart.</td></tr>
+<tr><td>Boundary timing</td><td>Attempt activation on the step the timer reaches zero.</td><td>The brief’s loss-before-activation rule holds.</td></tr>
+<tr><td>Restart</td><td>Restart after win, after loss, and after pausing.</td><td>Player, cells, health, timer, patrol, cooldowns, and held-input state reset.</td></tr>
+<tr><td>Production</td><td>Open the deployed repository URL and play a round.</td><td>No missing assets or runtime errors; controls work in the published build.</td></tr>
+</tbody></table></div>
+<h3>Make invisible state inspectable</h3>
+<p>In a test-enabled build, expose a read-only state snapshot containing the round state, player position, remaining cells, timer, health, and drone position. Use deterministic scene fixtures to reproduce a boundary condition. Avoid a hidden test shortcut that marks a condition passed without exercising the gameplay rule.</p>
+<p>OpenAI’s Astra game case study distinguishes named scene setup from real-control journey tests. Both are useful: a fixture makes a failure cheap to reproduce, while an input sequence checks whether a player can actually reach that state. <a class="citation" href="#source-04" title="OpenAI · Building games with Astra" aria-label="Source 04: OpenAI · Building games with Astra">[04]</a></p>
+<pre><code>// Proposed shape of a read-only test snapshot, not shipped game code.
+{
+  phase: "playing",
+  player: { x: 2.0, z: -3.0, health: 3 },
+  cellsCollected: 1,
+  secondsRemaining: 62.4,
+  beaconReady: false,
+  drone: { x: -4.0, z: 1.0 }
+}</code></pre>
+<h3>Define a performance observation</h3>
+<p>Pick a named device, browser, window size, and quality setting. For an initial experiment, aim for a 95th-percentile frame time under 33 ms during a 60-second normal-play sample after warmup. This is a proposed target of roughly a 30-fps frame budget, not a measured result or a universal requirement. Record loading stalls separately; a smooth average can hide disruptive pauses.</p>
+<p>If performance misses the target, collect evidence before reducing visual quality. Compare draw calls, geometry, shadows, resolution, and update work. Change one likely bottleneck, then repeat the same sample. Do not claim an optimization worked because the code became shorter.</p>
+<h3>Run a small human playtest</h3>
+<p>Give someone the build and ask them to play without coaching. Observe whether they identify the objective, understand the controls, notice damage, and discover restart. Then ask where they felt uncertain and what they wanted to try next. A small playtest reveals specific problems; it does not establish a population-level success rate.</p>
+<pre><code>Build / commit:
+Device, browser, window size:
+New or returning player:
+Could explain the objective? [observation]
+First confusing moment: [what happened]
+Win/loss/restart observed: [which, with evidence]
+Control feel: [player's own description]
+Highest-impact issue:
+Next change and the observation it should improve:</code></pre>
+<p>Separate “I ran it” from “I tested it.” A credible report names the actions, the result, and the revision. If the agent cannot inspect the game, preserve that limitation in the report instead of turning an unrun check green.</p>
+</section>
+<section class="chapter" aria-labelledby="refine"><div class="chapter-kicker">CHAPTER 12</div><h2 id="refine">Refine the idea and the process</h2>
+<p class="lead">Improve the weakest link, then keep what you learned.</p>
+<p>When a first build disappoints, resist adding five new features. Decide what kind of failure you have. A wrong mechanic needs a clearer rule. A correctly implemented but dull mechanic needs a design experiment. A broken control needs a reproduction. A forgotten convention needs better repository context.</p>
+<h3>A worked prompt refinement</h3>
+<p>The examples below are illustrative revisions, not measured test results.</p>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Comparison table; scroll horizontally on small screens"><table><thead><tr><th>Version</th><th>Instruction</th><th>Why it improves the next decision</th></tr></thead><tbody>
+<tr><td>V0 · vague</td><td>Make a good 3D game with a robot.</td><td>Almost every design and completion criterion is unspecified.</td></tr>
+<tr><td>V1 · scoped</td><td>Make a browser game in one rooftop arena. A robot collects three cells and returns to a beacon.</td><td>Defines the world, objective, and minimum complete loop.</td></tr>
+<tr><td>V2 · testable</td><td>Use WASD/arrows, a fixed elevated camera, one drone, three health points, and a 90-second round. Verify win, loss, pause, and restart.</td><td>Provides concrete rules and visible acceptance conditions.</td></tr>
+<tr><td>V3 · situated</td><td>At this revision, the north planter hides the robot. Keep the current rules. Adjust camera or occlusion treatment and compare the same route before and after.</td><td>Uses evidence from the current build to bound the change.</td></tr>
+</tbody></table></div>
+<h3>Use a rubric to expose disagreements</h3>
+<p>Score each dimension from 0 to 2: <strong>0</strong> means missing or broken, <strong>1</strong> means present but inconsistent, and <strong>2</strong> means demonstrated under the stated test. Add a note and evidence for each score. The score is a conversation aid, not an objective measure of fun.</p>
+<ul><li><strong>Clarity:</strong> the player understands the goal and current state.</li><li><strong>Control:</strong> movement responds consistently and the camera supports it.</li><li><strong>Completion:</strong> the core loop includes win, loss, pause, and reliable restart.</li><li><strong>Feedback:</strong> collection, damage, and beacon readiness are perceivable.</li><li><strong>Challenge:</strong> the route and hazard produce a readable decision.</li><li><strong>Coherence:</strong> visuals, sound, and UI support the same mood.</li><li><strong>Reliability:</strong> the deployed build performs acceptably on the named target.</li><li><strong>Maintainability:</strong> a new session can reproduce the build and find the next change.</li></ul>
+<h3>Compare approaches with a fair experiment</h3>
+<p>If you want to know whether your meta-prompt helps, compare it against a direct prompt from the same clean starting revision. Keep the game brief, model, tools, target platform, and effort budget the same. Record which prompt was used and the actual cost, elapsed time, manual interventions, accepted milestones, and regressions.</p>
+<p>Judge the playable outputs without looking at which prompt produced them if possible. Repeat more than once before trusting a difference; agent runs can vary. Do not use a single lucky output to declare a universal winner. If one approach uses extra agents or a much larger budget, report that difference instead of attributing the result entirely to wording.</p>
+<h3>Promote stable improvements</h3>
+<p>Move a repeated project convention into AGENTS.md. Move a proven review sequence into a skill. Keep a one-off fix in the task’s notes. Update the game brief when playtesting changes the design. This keeps the next prompt short without losing the decisions that make it useful.</p>
+<p>For example, “always inspect restart after changing round state” can become part of the game review procedure. “Move this planter two units east” belongs in the current design change. Mixing these together makes reusable instructions noisy.</p>
+<div class="exercise"><h3>The retrospective</h3><p>After a release, write three sentences: which instruction helped most, which failure cost the most rework, and which single change to the workflow you will test next time. Connect each sentence to an actual observation.</p></div>
+</section>
+<section class="chapter" aria-labelledby="publish"><div class="chapter-kicker">CHAPTER 13</div><h2 id="publish">Publish and close the loop</h2>
+<p class="lead">A release is a working URL and a recoverable revision.</p>
+<p>For the proposed Vite game, GitHub Pages serves the built static files. It does not run a Node server or store private API keys. The example requires no backend: game logic executes in the browser, and the first release has no accounts or online service dependency.</p>
+<h3>1 · Configure the repository path</h3>
+<p>A project called <code>signal-garden</code> normally appears at <code>https://YOUR_ACCOUNT.github.io/signal-garden/</code>. In Vite, set the base path accordingly. A user site at the domain root uses a different base. The repository name’s case and asset filenames must be correct on the deployed host. <a class="citation" href="#source-12" title="Vite · Deploying a Static Site" aria-label="Source 12: Vite · Deploying a Static Site">[12]</a></p>
+<pre><code>// vite.config.ts — example for the game repository
+import { defineConfig } from 'vite';
+
+export default defineConfig({
+  base: '/signal-garden/',
+});</code></pre>
+<p>Test the production build under this subpath before publication. Prefer imported assets or base-aware URLs. A path that works at <code>localhost/</code> may fail when the application lives one directory below the domain root.</p>
+<h3>2 · Build, upload, deploy</h3>
+<p>In the repository’s Pages settings, choose GitHub Actions as the source. A Pages workflow builds the site, uploads its public artifact, and deploys it with the appropriate Pages and identity-token permissions. Use the <code>github-pages</code> environment and the URL returned by the deployment step. <a class="citation" href="#source-13" title="GitHub · Using custom workflows with GitHub Pages" aria-label="Source 13: GitHub · Using custom workflows with GitHub Pages">[13]</a></p>
+<p>This book’s <a href="https://github.com/buicongnguyen/Better_skill/blob/main/.github/workflows/pages.yml">actual workflow</a> is a small static-site example. A Vite game should install from its lockfile and run its own checks before uploading <code>dist</code>. Pin reviewed action versions or commit SHAs, and check current official examples when adapting the workflow.</p>
+<h3>3 · Make publication explicit</h3>
+<p>After the game works locally, replace the account and repository placeholders in this release prompt. Its publication permission applies only after you actually send it with the intended destination.</p>
+<div class="prompt-block"><div class="prompt-bar"><span>READY TO USE · release-prompt.md</span><button type="button" class="copy-button" aria-label="Copy release-prompt.md">Copy prompt</button></div><pre tabindex="0"><code># Publish the verified game to GitHub Pages
+
+Publish this project to the GitHub account and repository below. I authorize creating the public repository if it does not exist, committing the intended project files, pushing the reviewed commits, configuring GitHub Pages for this repository, and deploying the game publicly.
+
+Account: YOUR_ACCOUNT
+Repository: signal-garden
+Expected URL: https://YOUR_ACCOUNT.github.io/signal-garden/
+
+Replace YOUR_ACCOUNT with the actual intended account before executing. If it remains unresolved, ask for the account while completing independent release preparation. Do not guess the destination.
+
+Inspect the current repository, remotes, working tree, and applicable instructions. Preserve unrelated changes and do not overwrite an existing remote repository. Confirm the staged files are intended to be public and include the asset credits. Exclude credentials, local environment files, and unlicensed assets.
+
+Build and run the scoped acceptance checks. Configure the correct project base path. Commit a GitHub Actions workflow that builds and checks the project, uploads only its public production output, and deploys through GitHub Pages.
+
+Push to the intended branch, follow the workflow run for the actual commit, and fix actionable deployment failures within scope. Verify the public URL and production assets. Use real controls to exercise the core loop if browser tools are available; state any remaining manual checks.
+
+Finish with the live game URL, repository link, commit, deployment outcome, and concise verification summary. A queued deployment or a local preview is not the final published result.</code></pre><a class="download-link" href="prompts/release-prompt.md" download>Download .md ↗</a></div>
+<h3>4 · Verify the public result</h3>
+<ol><li>Confirm the push reached the intended remote and branch.</li><li>Inspect the workflow run for that commit. A queued run is not a successful deployment.</li><li>Open the deployment URL and check the production asset requests.</li><li>Play a win path and a loss path, then restart. Repeat a pause/resume check.</li><li>Record the deployed commit, controls, target browser, and any remaining limitations in the release note.</li></ol>
+<p>If deployment fails, inspect its logs and fix the specific cause. For a missing asset, check the base path and filename case. For a Godot export, check the renderer, exported filenames, and browser requirements. For a permissions error, inspect the Pages source, workflow permissions, and repository settings before changing unrelated code.</p>
+<h3>5 · Keep a path back</h3>
+<p>Record the last verified release revision. If a new release breaks the game, revert the responsible change in a new commit and allow the workflow to publish the repaired state. Check the resulting live URL again. A rollback command is only a step toward restoration.</p>
+<div class="callout"><div class="callout-label">The complete workflow</div><p>Choose a player experience → compare approaches → verify your sources → establish the repository → add a small skill → write the brief → generate and review the prompt → build playable milestones → test the real game → publish → turn the lesson into the next better instruction.</p></div>
+<p>The durable result is more than a game. It is a process that makes your next attempt easier to understand, easier to review, and easier to improve.</p>
+</section>
+      <section class="chapter sources-section" aria-labelledby="sources"><div class="chapter-kicker">THE RESEARCH SHELF</div><h2 id="sources">Sources & reading notes</h2><p class="lead">Follow the evidence. Keep the interpretation visible.</p><p>Sources were reviewed on 14 September 2026. Technical statements use primary documentation. Video observations use the speakers’ transcript text hosted by a third-party mirror. These notes paraphrase selected passages; full transcripts are not republished. Engine and model guidance can change, so recheck the linked documentation before starting a new project.</p><ol class="source-list"><li id="source-01"><span class="source-number">01</span><div><span class="source-type">Official model guidance</span><h3><a href="https://developers.openai.com/api/docs/guides/latest-model">OpenAI · GPT-6 Astra prompting best practices ↗</a></h3><p>Model-specific grounding: state autonomy expectations, audit instruction files, define delegation boundaries, and make verification proportional to the task. The book’s game prompts are original applications of those principles.</p></div></li><li id="source-02"><span class="source-number">02</span><div><span class="source-type">YouTube transcript · primary speech, mirrored</span><h3><a href="https://youtubetotranscript.com/transcript?current_language_code=en&amp;v=LCEmiRjPEtQ">Andrej Karpathy · Software Is Changing (Again) ↗</a></h3><p>Y Combinator keynote, 17 June 2025. Reviewed the discussion of generation and verification, concrete prompts, and auditable intermediate artifacts. This is a conceptual argument, not a controlled game-development benchmark. Locate the passage by searching the transcript for “verification”.</p><p class="source-extra"><a href="https://www.youtube.com/watch?v=LCEmiRjPEtQ">Original YouTube video ↗</a> · Transcript mirror reviewed; caption errors are possible.</p></div></li><li id="source-03"><span class="source-number">03</span><div><span class="source-type">YouTube transcript · primary speech, mirrored</span><h3><a href="https://pickscribe.com/v/EWvNQjAaOHw">Andrej Karpathy · How I use LLMs ↗</a></h3><p>Practical LLM walkthrough from 2025. Reviewed the passage explaining search results entering the context window as working memory. Locate it by searching for “working memory”. Historical tool names and account details are not treated as current instructions.</p><p class="source-extra"><a href="https://www.youtube.com/watch?v=EWvNQjAaOHw">Original YouTube video ↗</a> · Transcript mirror reviewed; caption errors are possible.</p></div></li><li id="source-04"><span class="source-number">04</span><div><span class="source-type">First-party game case study</span><h3><a href="https://developers.openai.com/blog/how-to-build-games-with-astra">OpenAI · Building games with Astra ↗</a></h3><p>The author describes experience-led prompts, visual references, a TypeScript/Vite/Three.js game, inspectable state, repeatable scenes, and real-control journey tests. Edited prompts and a successful showcase do not establish a general success rate.</p></div></li><li id="source-05"><span class="source-number">05</span><div><span class="source-type">First-party engineering report</span><h3><a href="https://www.anthropic.com/engineering/effective-harnesses-for-long-running-agents">Anthropic · Effective harnesses for long-running agents ↗</a></h3><p>Published 26 November 2025. Reports incremental feature work, progress artifacts, Git history, and end-to-end browser checks in a web-app agent harness. Applying that approach to games or Astra is this book’s synthesis, not a result tested in that report.</p></div></li><li id="source-06"><span class="source-number">06</span><div><span class="source-type">Official workflow documentation</span><h3><a href="https://github.github.com/spec-kit/">GitHub · Spec Kit ↗</a></h3><p>Documents a progression from specification through plan and tasks to implementation. The book borrows the separation of decisions while keeping its example lightweight; installing Spec Kit is optional.</p></div></li><li id="source-07"><span class="source-number">07</span><div><span class="source-type">Official agent documentation</span><h3><a href="https://learn.chatgpt.com/docs/agent-configuration/agents-md">OpenAI · Custom instructions with AGENTS.md ↗</a></h3><p>Repository instruction discovery and scope. The proposed game AGENTS.md is a sample project policy, not an instruction file active in this book repository.</p></div></li><li id="source-08"><span class="source-number">08</span><div><span class="source-type">Official skill documentation</span><h3><a href="https://learn.chatgpt.com/docs/build-skills">OpenAI · Build skills ↗</a></h3><p>A skill has a SKILL.md with name and description, and may include scripts, references, and assets. Repository skills can live in .agents/skills. The book provides an illustrative reusable game review procedure.</p></div></li><li id="source-09"><span class="source-number">09</span><div><span class="source-type">Official engine tutorial</span><h3><a href="https://docs.godotengine.org/en/stable/getting_started/first_3d_game/index.html">Godot · Your first 3D game ↗</a></h3><p>A complete beginner 3D game sequence. Used to ground the tutorial-guided alternative and the importance of learning scene structure and movement before adding systems.</p></div></li><li id="source-10"><span class="source-number">10</span><div><span class="source-type">Creator’s written tutorial + YouTube</span><h3><a href="https://www.gdquest.com/library/first_3d_game_godot4_arena_fps/">GDQuest · Your first 3D game with Godot 4 ↗</a></h3><p>The creator’s written Survivor Arena FPS course was accessible. Its associated YouTube video is NJJNWGD25rg, but a usable transcript was not retrieved, so this book does not attribute transcript findings or timestamps to that video.</p></div></li><li id="source-11"><span class="source-number">11</span><div><span class="source-type">Official export documentation</span><h3><a href="https://docs.godotengine.org/en/stable/tutorials/export/exporting_for_web.html">Godot · Exporting for the Web ↗</a></h3><p>WebGL 2 and Compatibility rendering, C# export limitations, single-thread versus threaded export, browser input and audio restrictions. Verify the stable page against the exact Godot version you install.</p></div></li><li id="source-12"><span class="source-number">12</span><div><span class="source-type">Official deployment documentation</span><h3><a href="https://vite.dev/guide/static-deploy.html#github-pages">Vite · Deploying a Static Site ↗</a></h3><p>GitHub Pages project sites require the appropriate base path; production output is normally dist. Used for the proposed Vite game workflow. This book itself uses a dependency-free static build.</p></div></li><li id="source-13"><span class="source-number">13</span><div><span class="source-type">Official hosting documentation</span><h3><a href="https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages">GitHub · Using custom workflows with GitHub Pages ↗</a></h3><p>Pages configuration, artifact upload, deployment permissions, and the github-pages environment. The repository workflow deploys only the generated public dist directory.</p></div></li><li id="source-14"><span class="source-number">14</span><div><span class="source-type">Official library repository</span><h3><a href="https://github.com/mrdoob/three.js">Three.js · README ↗</a></h3><p>Describes the JavaScript 3D library and its rendering facilities. Used to distinguish rendering support from the gameplay systems the example project must implement.</p></div></li><li id="source-15"><span class="source-number">15</span><div><span class="source-type">Official engine feature reference</span><h3><a href="https://www.babylonjs.com/specifications/">Babylon.js · Specifications ↗</a></h3><p>Feature reference for the browser-engine alternative, including engine tools and physics integration. The book does not benchmark Babylon.js against Three.js.</p></div></li><li id="source-16"><span class="source-number">16</span><div><span class="source-type">Official engine compatibility documentation</span><h3><a href="https://docs.unity3d.com/Manual/webgl-browsercompatibility.html">Unity · Web browser compatibility ↗</a></h3><p>Documents the requirements for supported web browsers. Validate the exact Unity version and target browser before committing to an export workflow.</p></div></li></ol><div class="endmark">✳</div><p class="end-note">Make something small.<br>Learn something real.<br>Make it better.</p></section>
+    </article>
+    <footer><a href="#cover">↑ Back to the beginning</a><span>HOW TO DO BETTER · FIELD BOOK 01</span></footer>
+  </main>
+  <div id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<h2 id="refine">Refine the idea and the process</h2>
+<p class="lead">Improve the weakest link, then keep what you learned.</p>
+<p>When a first build disappoints, resist adding five new features. Decide what kind of failure you have. A wrong mechanic needs a clearer rule. A correctly implemented but dull mechanic needs a design experiment. A broken control needs a reproduction. A forgotten convention needs better repository context.</p>
+<h3>A worked prompt refinement</h3>
+<p>The examples below are illustrative revisions, not measured test results.</p>
+<div class="table-wrap"><table><thead><tr><th>Version</th><th>Instruction</th><th>Why it improves the next decision</th></tr></thead><tbody>
+<tr><td>V0 · vague</td><td>Make a good 3D game with a robot.</td><td>Almost every design and completion criterion is unspecified.</td></tr>
+<tr><td>V1 · scoped</td><td>Make a browser game in one rooftop arena. A robot collects three cells and returns to a beacon.</td><td>Defines the world, objective, and minimum complete loop.</td></tr>
+<tr><td>V2 · testable</td><td>Use WASD/arrows, a fixed elevated camera, one drone, three health points, and a 90-second round. Verify win, loss, pause, and restart.</td><td>Provides concrete rules and visible acceptance conditions.</td></tr>
+<tr><td>V3 · situated</td><td>At this revision, the north planter hides the robot. Keep the current rules. Adjust camera or occlusion treatment and compare the same route before and after.</td><td>Uses evidence from the current build to bound the change.</td></tr>
+</tbody></table></div>
+<h3>Use a rubric to expose disagreements</h3>
+<p>Score each dimension from 0 to 2: <strong>0</strong> means missing or broken, <strong>1</strong> means present but inconsistent, and <strong>2</strong> means demonstrated under the stated test. Add a note and evidence for each score. The score is a conversation aid, not an objective measure of fun.</p>
+<ul><li><strong>Clarity:</strong> the player understands the goal and current state.</li><li><strong>Control:</strong> movement responds consistently and the camera supports it.</li><li><strong>Completion:</strong> the core loop includes win, loss, pause, and reliable restart.</li><li><strong>Feedback:</strong> collection, damage, and beacon readiness are perceivable.</li><li><strong>Challenge:</strong> the route and hazard produce a readable decision.</li><li><strong>Coherence:</strong> visuals, sound, and UI support the same mood.</li><li><strong>Reliability:</strong> the deployed build performs acceptably on the named target.</li><li><strong>Maintainability:</strong> a new session can reproduce the build and find the next change.</li></ul>
+<h3>Compare approaches with a fair experiment</h3>
+<p>If you want to know whether your meta-prompt helps, compare it against a direct prompt from the same clean starting revision. Keep the game brief, model, tools, target platform, and effort budget the same. Record which prompt was used and the actual cost, elapsed time, manual interventions, accepted milestones, and regressions.</p>
+<p>Judge the playable outputs without looking at which prompt produced them if possible. Repeat more than once before trusting a difference; agent runs can vary. Do not use a single lucky output to declare a universal winner. If one approach uses extra agents or a much larger budget, report that difference instead of attributing the result entirely to wording.</p>
+<h3>Promote stable improvements</h3>
+<p>Move a repeated project convention into AGENTS.md. Move a proven review sequence into a skill. Keep a one-off fix in the task’s notes. Update the game brief when playtesting changes the design. This keeps the next prompt short without losing the decisions that make it useful.</p>
+<p>For example, “always inspect restart after changing round state” can become part of the game review procedure. “Move this planter two units east” belongs in the current design change. Mixing these together makes reusable instructions noisy.</p>
+<div class="exercise"><h3>The retrospective</h3><p>After a release, write three sentences: which instruction helped most, which failure cost the most rework, and which single change to the workflow you will test next time. Connect each sentence to an actual observation.</p></div>

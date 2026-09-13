@@ -1,0 +1,23 @@
+<h2 id="brief">Design a game worth finishing</h2>
+<p class="lead">A small world can still have a clear identity.</p>
+<p>Signal Garden is an original teaching design. You are a maintenance robot on a forgotten rooftop at dusk. Three dormant cells can bring a garden’s beacon back to life. A patrolling drone and a short countdown make the route a decision. The desired feeling is calm exploration interrupted by readable moments of pressure.</p>
+<p>The following values are <strong>initial design targets</strong>. They have not been measured in a completed game. They exist to make the brief concrete enough to build and then revise.</p>
+<div class="table-wrap"><table><thead><tr><th>Design dimension</th><th>First-version decision</th><th>Observable check</th></tr></thead><tbody>
+<tr><td>Player objective</td><td>Collect three cells, return to the beacon, and activate it.</td><td>A first-time player can explain the objective after reading the start screen.</td></tr>
+<tr><td>World</td><td>One flat 24 × 24 unit arena, with 1 unit treated as 1 metre; simple planters form two routes.</td><td>All cells and the beacon are reachable without crossing a collider.</td></tr>
+<tr><td>Controls</td><td>WASD or arrows to move; E near the beacon; Escape to pause; a visible restart button.</td><td>Diagonal input is normalized; the restart resets all state.</td></tr>
+<tr><td>Camera</td><td>Fixed elevated view with a stable orientation; no pointer lock.</td><td>Player, hazards, and objective remain legible during a full run.</td></tr>
+<tr><td>Challenge</td><td>One drone follows a visible route. Contact removes one of three health points, with 1 second of invulnerability.</td><td>Standing in contact cannot remove all health in a single frame.</td></tr>
+<tr><td>Round</td><td>90-second timer. Win by activating the charged beacon; lose at zero health or time.</td><td>Win and loss cannot both occur. Pausing freezes simulation and timer.</td></tr>
+<tr><td>Visual language</td><td>Muted green stone, warm amber cells, a teal beacon, and a distinct drone silhouette.</td><td>Players can distinguish objects by shape and labels as well as color.</td></tr>
+<tr><td>First release</td><td>Desktop browser with keyboard input, responsive menus, static GitHub Pages hosting.</td><td>The production URL loads, plays, ends, and restarts. Touch gameplay is a later scope decision.</td></tr>
+</tbody></table></div>
+<h3>Define the core loop in verbs</h3>
+<p><strong>Observe → choose a route → move → collect → evade → return → activate.</strong> Each verb should have a visible consequence. A cell disappears once, the counter increases once, and the beacon’s appearance changes when it is ready. A hit has clear feedback and a short recovery period. Losing gives an immediate route back into play.</p>
+<h3>Decide the edge cases before they become bugs</h3>
+<p>For the first implementation, check loss conditions before allowing beacon activation in each simulation step. If the timer reaches zero in that step, the result is a loss. E should act on a fresh key press, and activation requires the player to be within two units of the beacon. After a terminal result, movement, collection, damage, and the timer stop until restart.</p>
+<p>Pick a single convention for coordinates and units. In the proposed Three.js game, use Y as up and move on the X/Z plane. Keep character speed in units per second. Decide these once in the brief so movement, camera, collision, and tests do not silently use different assumptions.</p>
+<h3>Give visual references a job</h3>
+<p>Collect or create references you have permission to use. Describe what each reference contributes: palette, camera height, silhouette, lighting, or UI density. Treat a reference as a design constraint, not an instruction to copy another game’s characters, brand, or proprietary assets.</p>
+<p>For Signal Garden, ask for a greybox image first, then a visual pass that keeps the same camera and geometry. Comparing like-for-like views makes the effect of lighting and material changes easier to judge. A more elaborate scene is not automatically a better scene.</p>
+<div class="exercise"><h3>Write the exclusions</h3><p>For the first release, exclude multiplayer, procedural worlds, inventory systems, dialogue trees, and multiple levels. Add one only when it strengthens a playtested core loop enough to justify the extra work.</p></div>

@@ -1,0 +1,20 @@
+<h2 id="meta-prompt">Make a prompt that makes a prompt</h2>
+<p class="lead">Ask for a better brief before asking for more code.</p>
+<p>A meta-prompt is an instruction for drafting another prompt. Its value is the design work it forces into the open: audience, controls, constraints, missing information, completion conditions, and tradeoffs. It cannot guarantee that the generated game will be good. You still need to review the resulting specification and play the implementation.</p>
+<h3>Build the input packet</h3>
+<p>Give the prompt designer the one-page game brief, your target platform, installed tools, available assets, and any existing repository instructions. If the folder is empty, say so. Include a simple reference image or sketch if it clarifies the camera or visual style. Label preferences as preferences and hard constraints as constraints.</p>
+<p>For Signal Garden, the important facts are a small desktop browser game, keyboard input, a fixed camera, one arena, three collectibles, one hazard, a complete win/loss/restart loop, and static hosting. “Make something amazing” adds less useful direction than any of those facts.</p>
+<h3>The prompt designer</h3>
+{{prompt:meta-prompt.md}}
+<h3>Review the result before executing it</h3>
+<p>Check whether the generated prompt carries the game’s actual identity. If the output could describe any generic action game, the input probably needs a clearer player experience. Then check whether it introduces hidden scope: user accounts, online leaderboards, paid services, generated assets, multiplayer, or a large framework you did not request.</p>
+<div class="table-wrap"><table><thead><tr><th>Question</th><th>Weak answer</th><th>Useful answer</th></tr></thead><tbody>
+<tr><td>What is the game?</td><td>A beautiful 3D adventure.</td><td>A robot restores a rooftop beacon by collecting three cells while avoiding a drone.</td></tr>
+<tr><td>What should the agent do now?</td><td>Plan carefully.</td><td>Inspect the workspace, record assumptions, then build and verify the first complete loop.</td></tr>
+<tr><td>How will we judge it?</td><td>Make it polished and bug-free.</td><td>Exercise start, movement, collection, pause, win, loss, and restart; inspect camera and readable feedback.</td></tr>
+<tr><td>When does it stop?</td><td>When it looks good.</td><td>When the scoped acceptance checks pass, known issues are stated, and the authorized deliverables exist.</td></tr>
+</tbody></table></div>
+<h3>Use one refinement pass with a purpose</h3>
+<p>Ask a reviewer to find contradictions, unavailable tools, requirements with no observable test, and unrequested complexity. Revise those specific defects. Repeatedly asking a model to “make this prompt even better” can produce a longer prompt without a better design.</p>
+<p>Version the input brief and the resulting prompt together. If you later change the controls or release platform, update the source brief first, then regenerate the affected parts. Keep a short change note so you can connect an implementation difference to an instruction difference.</p>
+<div class="exercise"><h3>A useful prompt review</h3><p>Underline every adjective in your generated prompt. For “smooth,” “clear,” “fast,” or “beautiful,” add either an example to compare against or a concrete observation to collect. Keep subjective judgments visible rather than pretending every quality can be reduced to a number.</p></div>

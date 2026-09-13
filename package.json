@@ -1,0 +1,13 @@
+{
+  "name": "how-to-do-better",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A practical field book for building a 3D game with AI agents.",
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "check": "node scripts/check.mjs",
+    "start": "node scripts/serve.mjs"
+  },
+  "engines": { "node": ">=22" }
+}

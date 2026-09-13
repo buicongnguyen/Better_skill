@@ -1,0 +1,116 @@
+[
+  {
+    "id": "01",
+    "type": "Official model guidance",
+    "title": "OpenAI · GPT-6 Astra prompting best practices",
+    "url": "https://developers.openai.com/api/docs/guides/latest-model",
+    "note": "Model-specific grounding: state autonomy expectations, audit instruction files, define delegation boundaries, and make verification proportional to the task. The book’s game prompts are original applications of those principles."
+  },
+  {
+    "id": "02",
+    "type": "YouTube transcript · primary speech, mirrored",
+    "title": "Andrej Karpathy · Software Is Changing (Again)",
+    "url": "https://youtubetotranscript.com/transcript?current_language_code=en&v=LCEmiRjPEtQ",
+    "video": "https://www.youtube.com/watch?v=LCEmiRjPEtQ",
+    "note": "Y Combinator keynote, 17 June 2025. Reviewed the discussion of generation and verification, concrete prompts, and auditable intermediate artifacts. This is a conceptual argument, not a controlled game-development benchmark. Locate the passage by searching the transcript for “verification”."
+  },
+  {
+    "id": "03",
+    "type": "YouTube transcript · primary speech, mirrored",
+    "title": "Andrej Karpathy · How I use LLMs",
+    "url": "https://pickscribe.com/v/EWvNQjAaOHw",
+    "video": "https://www.youtube.com/watch?v=EWvNQjAaOHw",
+    "note": "Practical LLM walkthrough from 2025. Reviewed the passage explaining search results entering the context window as working memory. Locate it by searching for “working memory”. Historical tool names and account details are not treated as current instructions."
+  },
+  {
+    "id": "04",
+    "type": "First-party game case study",
+    "title": "OpenAI · Building games with Astra",
+    "url": "https://developers.openai.com/blog/how-to-build-games-with-astra",
+    "note": "The author describes experience-led prompts, visual references, a TypeScript/Vite/Three.js game, inspectable state, repeatable scenes, and real-control journey tests. Edited prompts and a successful showcase do not establish a general success rate."
+  },
+  {
+    "id": "05",
+    "type": "First-party engineering report",
+    "title": "Anthropic · Effective harnesses for long-running agents",
+    "url": "https://www.anthropic.com/engineering/effective-harnesses-for-long-running-agents",
+    "note": "Published 26 November 2025. Reports incremental feature work, progress artifacts, Git history, and end-to-end browser checks in a web-app agent harness. Applying that approach to games or Astra is this book’s synthesis, not a result tested in that report."
+  },
+  {
+    "id": "06",
+    "type": "Official workflow documentation",
+    "title": "GitHub · Spec Kit",
+    "url": "https://github.github.com/spec-kit/",
+    "note": "Documents a progression from specification through plan and tasks to implementation. The book borrows the separation of decisions while keeping its example lightweight; installing Spec Kit is optional."
+  },
+  {
+    "id": "07",
+    "type": "Official agent documentation",
+    "title": "OpenAI · Custom instructions with AGENTS.md",
+    "url": "https://learn.chatgpt.com/docs/agent-configuration/agents-md",
+    "note": "Repository instruction discovery and scope. The proposed game AGENTS.md is a sample project policy, not an instruction file active in this book repository."
+  },
+  {
+    "id": "08",
+    "type": "Official skill documentation",
+    "title": "OpenAI · Build skills",
+    "url": "https://learn.chatgpt.com/docs/build-skills",
+    "note": "A skill has a SKILL.md with name and description, and may include scripts, references, and assets. Repository skills can live in .agents/skills. The book provides an illustrative reusable game review procedure."
+  },
+  {
+    "id": "09",
+    "type": "Official engine tutorial",
+    "title": "Godot · Your first 3D game",
+    "url": "https://docs.godotengine.org/en/stable/getting_started/first_3d_game/index.html",
+    "note": "A complete beginner 3D game sequence. Used to ground the tutorial-guided alternative and the importance of learning scene structure and movement before adding systems."
+  },
+  {
+    "id": "10",
+    "type": "Creator’s written tutorial + YouTube",
+    "title": "GDQuest · Your first 3D game with Godot 4",
+    "url": "https://www.gdquest.com/library/first_3d_game_godot4_arena_fps/",
+    "note": "The creator’s written Survivor Arena FPS course was accessible. Its associated YouTube video is NJJNWGD25rg, but a usable transcript was not retrieved, so this book does not attribute transcript findings or timestamps to that video."
+  },
+  {
+    "id": "11",
+    "type": "Official export documentation",
+    "title": "Godot · Exporting for the Web",
+    "url": "https://docs.godotengine.org/en/stable/tutorials/export/exporting_for_web.html",
+    "note": "WebGL 2 and Compatibility rendering, C# export limitations, single-thread versus threaded export, browser input and audio restrictions. Verify the stable page against the exact Godot version you install."
+  },
+  {
+    "id": "12",
+    "type": "Official deployment documentation",
+    "title": "Vite · Deploying a Static Site",
+    "url": "https://vite.dev/guide/static-deploy.html#github-pages",
+    "note": "GitHub Pages project sites require the appropriate base path; production output is normally dist. Used for the proposed Vite game workflow. This book itself uses a dependency-free static build."
+  },
+  {
+    "id": "13",
+    "type": "Official hosting documentation",
+    "title": "GitHub · Using custom workflows with GitHub Pages",
+    "url": "https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages",
+    "note": "Pages configuration, artifact upload, deployment permissions, and the github-pages environment. The repository workflow deploys only the generated public dist directory."
+  },
+  {
+    "id": "14",
+    "type": "Official library repository",
+    "title": "Three.js · README",
+    "url": "https://github.com/mrdoob/three.js",
+    "note": "Describes the JavaScript 3D library and its rendering facilities. Used to distinguish rendering support from the gameplay systems the example project must implement."
+  },
+  {
+    "id": "15",
+    "type": "Official engine feature reference",
+    "title": "Babylon.js · Specifications",
+    "url": "https://www.babylonjs.com/specifications/",
+    "note": "Feature reference for the browser-engine alternative, including engine tools and physics integration. The book does not benchmark Babylon.js against Three.js."
+  },
+  {
+    "id": "16",
+    "type": "Official engine compatibility documentation",
+    "title": "Unity · Web browser compatibility",
+    "url": "https://docs.unity3d.com/Manual/webgl-browsercompatibility.html",
+    "note": "Documents the requirements for supported web browsers. Validate the exact Unity version and target browser before committing to an export workflow."
+  }
+]

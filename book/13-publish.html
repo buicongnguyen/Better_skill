@@ -1,0 +1,25 @@
+<h2 id="publish">Publish and close the loop</h2>
+<p class="lead">A release is a working URL and a recoverable revision.</p>
+<p>For the proposed Vite game, GitHub Pages serves the built static files. It does not run a Node server or store private API keys. The example requires no backend: game logic executes in the browser, and the first release has no accounts or online service dependency.</p>
+<h3>1 · Configure the repository path</h3>
+<p>A project called <code>signal-garden</code> normally appears at <code>https://YOUR_ACCOUNT.github.io/signal-garden/</code>. In Vite, set the base path accordingly. A user site at the domain root uses a different base. The repository name’s case and asset filenames must be correct on the deployed host. {{cite:12}}</p>
+<pre><code>// vite.config.ts — example for the game repository
+import { defineConfig } from 'vite';
+
+export default defineConfig({
+  base: '/signal-garden/',
+});</code></pre>
+<p>Test the production build under this subpath before publication. Prefer imported assets or base-aware URLs. A path that works at <code>localhost/</code> may fail when the application lives one directory below the domain root.</p>
+<h3>2 · Build, upload, deploy</h3>
+<p>In the repository’s Pages settings, choose GitHub Actions as the source. A Pages workflow builds the site, uploads its public artifact, and deploys it with the appropriate Pages and identity-token permissions. Use the <code>github-pages</code> environment and the URL returned by the deployment step. {{cite:13}}</p>
+<p>This book’s <a href="https://github.com/buicongnguyen/Better_skill/blob/main/.github/workflows/pages.yml">actual workflow</a> is a small static-site example. A Vite game should install from its lockfile and run its own checks before uploading <code>dist</code>. Pin reviewed action versions or commit SHAs, and check current official examples when adapting the workflow.</p>
+<h3>3 · Make publication explicit</h3>
+<p>After the game works locally, replace the account and repository placeholders in this release prompt. Its publication permission applies only after you actually send it with the intended destination.</p>
+{{prompt:release-prompt.md}}
+<h3>4 · Verify the public result</h3>
+<ol><li>Confirm the push reached the intended remote and branch.</li><li>Inspect the workflow run for that commit. A queued run is not a successful deployment.</li><li>Open the deployment URL and check the production asset requests.</li><li>Play a win path and a loss path, then restart. Repeat a pause/resume check.</li><li>Record the deployed commit, controls, target browser, and any remaining limitations in the release note.</li></ol>
+<p>If deployment fails, inspect its logs and fix the specific cause. For a missing asset, check the base path and filename case. For a Godot export, check the renderer, exported filenames, and browser requirements. For a permissions error, inspect the Pages source, workflow permissions, and repository settings before changing unrelated code.</p>
+<h3>5 · Keep a path back</h3>
+<p>Record the last verified release revision. If a new release breaks the game, revert the responsible change in a new commit and allow the workflow to publish the repaired state. Check the resulting live URL again. A rollback command is only a step toward restoration.</p>
+<div class="callout"><div class="callout-label">The complete workflow</div><p>Choose a player experience → compare approaches → verify your sources → establish the repository → add a small skill → write the brief → generate and review the prompt → build playable milestones → test the real game → publish → turn the lesson into the next better instruction.</p></div>
+<p>The durable result is more than a game. It is a process that makes your next attempt easier to understand, easier to review, and easier to improve.</p>
