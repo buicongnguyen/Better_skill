@@ -1,0 +1,16 @@
+flowchart TD
+  accTitle: Improve through a controlled comparison
+  accDescr: Preserve a baseline, classify the failure, change the relevant part, compare the same scenario, and keep only demonstrated improvements.
+  A["Save the baseline and failing scenario"] --> B{"What failed?"}
+  B -->|Wrong intended behavior| C["Clarify one rule"]
+  B -->|Implementation bug| D["Repair the causal code"]
+  B -->|Dull or unclear experience| E["Test one design change"]
+  B -->|Repeated workflow mistake| F["Fix context, routing, or tooling"]
+  C --> G["Compare the same scenario"]
+  D --> G
+  E --> G
+  F --> G
+  G --> H{"Better without unacceptable regressions?"}
+  H -->|Yes| I["Keep the change and record evidence"]
+  H -->|No| J["Revise or restore the experiment"]
+  J --> A

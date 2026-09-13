@@ -1,0 +1,11 @@
+flowchart TD
+  accTitle: A simplified ComfyUI video graph
+  accDescr: Prompt conditioning, an optional reference image, and compatible model components feed generation. Decoding produces frames and audio which are saved as a video.
+  A["Prompt and scene action"] --> B["Text conditioning"]
+  C["Reference frame, when used"] --> E["Video generation stages"]
+  B --> E
+  D["Compatible model, encoder, and settings"] --> E
+  E --> F["Decode frames and supported audio"]
+  F --> G["Save video"]
+  G --> H["Inspect motion and continuity"]
+  H -.->|Change the relevant input| A

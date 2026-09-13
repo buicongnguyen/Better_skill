@@ -1,0 +1,14 @@
+flowchart TD
+  accTitle: Choose a video workflow by output and control needs
+  accDescr: Exact layout and text favor code-based composition. New visual footage uses a generation model. Repeatable orchestration can wrap either approach.
+  A{"What must the video show?"}
+  A -->|Exact UI, text, or gameplay| B["Capture real footage and compose with Remotion"]
+  A -->|New imagined footage| C{"How do you want to control generation?"}
+  C -->|Visual node graph| D["Use a ComfyUI template"]
+  C -->|Code and API requests| E["Use a video provider SDK"]
+  D --> F["Review clips and assemble a timeline"]
+  E --> F
+  B --> F
+  F --> G{"Does this repeat across many jobs?"}
+  G -->|Yes| H["Add n8n or a small orchestration service"]
+  G -->|No| I["Keep the manual or agent-driven loop"]

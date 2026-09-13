@@ -1,0 +1,14 @@
+flowchart TD
+  accTitle: A bounded asynchronous video job
+  accDescr: Submit one generation request, persist its task ID, wait and check status, then save a successful output. Failures and deadlines stop the loop without silently submitting another paid task.
+  A["Validated input and authorized budget"] --> B["Submit generation once"]
+  B --> C["Persist task ID and attempt record"]
+  C --> D["Wait with a bounded interval"]
+  D --> E["Retrieve status for this task ID"]
+  E --> F{"Status"}
+  F -->|Pending or running| G{"Deadline reached?"}
+  G -->|No| D
+  G -->|Yes| H["Record timeout; preserve task ID"]
+  F -->|Failed or canceled| I["Record failure for review"]
+  F -->|Succeeded| J["Retrieve and save output file"]
+  J --> K["Review before assembly or publication"]

@@ -1,0 +1,11 @@
+flowchart TD
+  accTitle: Information moving through an agent task
+  accDescr: A user brief and relevant repository files inform an agent. Optional skills guide it, tools act on artifacts, and evidence returns to the next decision.
+  A["User brief and constraints"] -->|Intent| D["Agent chooses an action"]
+  B["Relevant files and current docs"] -->|Facts and conventions| D
+  C["Available skill, when relevant"] -.->|Procedure| D
+  D -->|Arguments| E["Tool via CLI, API, or MCP"]
+  E -->|Changes| F["Code, game build, or video"]
+  F --> G["Tests and human review"]
+  G -->|Observed result| H["Evidence and decision log"]
+  H -->|Context for next change| D

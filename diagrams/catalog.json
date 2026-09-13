@@ -1,0 +1,11 @@
+[
+  {"id":"thinking-loop","title":"The thinking and decision loop","description":"Name the outcome, investigate the important unknown, build a small result, and judge it using evidence. Record the decision when the acceptance conditions are met."},
+  {"id":"context-data","title":"What information goes where","description":"The brief supplies intent; relevant files and documentation supply facts; an optional skill supplies a procedure. Tools change artifacts, and review returns evidence to the next decision."},
+  {"id":"choose-help","title":"Choose the help you actually need","description":"Clarify an unclear outcome, connect a missing tool, reuse existing procedural guidance, and consider a hook only for a repeatable event action."},
+  {"id":"improvement-loop","title":"Improve one cause at a time","description":"Preserve a baseline and failing scenario. Change the rule, code, design, or workflow responsible. Compare the same scenario and retain only improvements that survive review."},
+  {"id":"video-route","title":"Choose a video workflow","description":"Use composition and real captures for exact text and gameplay; use a generation model for imagined footage. Add orchestration when the process repeats across jobs."},
+  {"id":"video-data","title":"A trailer’s data flow","description":"A brief becomes a shot manifest. Captured or generated clips are reviewed, assembled with titles and sound, then exported. Job records connect source assets and parameters to the final file."},
+  {"id":"comfy-flow","title":"Inside a video node graph","description":"Conceptual stages only, not literal node names or an importable ComfyUI graph. Compatible model components, prompt conditioning, and optional reference frames feed generation and decoding before saving a video."},
+  {"id":"video-job","title":"Submit once, track the job, inspect the output","description":"An asynchronous generation returns a task ID. Keep that ID while waiting and checking status. Stop at failure or a deadline; retrieve and review successful output before using it."},
+  {"id":"hook-flow","title":"Use a hook for a narrow local check","description":"A relevant tool event can trigger a local validator. An irrelevant event exits immediately. This proposed pattern does not generate a video or publish anything by itself."}
+]

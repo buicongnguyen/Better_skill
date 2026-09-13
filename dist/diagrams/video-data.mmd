@@ -1,0 +1,16 @@
+flowchart TD
+  accTitle: From a game trailer brief to a reviewed video
+  accDescr: A brief becomes a shot manifest. Real footage or generated clips pass through review and editing. Job records preserve provenance and failed shots return for focused repair.
+  A["Video brief and approved references"] --> B["Shot manifest: IDs, timing, intent"]
+  B --> C{"Source for each shot"}
+  C -->|Show actual mechanics| D["Capture the playable game"]
+  C -->|Concept atmosphere| E["Generate a clip"]
+  E -->|Task ID and parameters| F["Job record and asset provenance"]
+  D --> G["Review the individual shot"]
+  E --> G
+  G --> H{"Usable and faithful to its purpose?"}
+  H -->|No| B
+  H -->|Yes| I["Compose clips, titles, captions, sound"]
+  I --> J["Watch the complete export"]
+  F --> J
+  J --> K["Store the final file and publish when authorized"]

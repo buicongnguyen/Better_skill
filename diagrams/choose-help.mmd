@@ -1,0 +1,14 @@
+flowchart TD
+  accTitle: Choose the missing capability before adding instructions
+  accDescr: Unclear outcomes need a brief; missing actions need tools; reusable knowledge may justify a skill; repeated event actions may justify hooks.
+  A{"What is missing?"}
+  A -->|Clear outcome| B["Improve the brief or acceptance list"]
+  A -->|Ability to act| C["Use an existing tool or connect an API"]
+  C --> D{"Agent needs a shared tool interface?"}
+  D -->|Yes| E["Consider an MCP connection"]
+  D -->|No| F["Use the CLI or API directly"]
+  A -->|Recurring knowledge| G["Check available skills and docs"]
+  G --> H{"A useful procedure is still absent?"}
+  H -->|Yes| I["Try one narrow custom skill"]
+  H -->|No| J["Reuse the existing guidance"]
+  A -->|Repeated event action| K["Consider a narrowly scoped hook"]

@@ -1,0 +1,11 @@
+flowchart TD
+  accTitle: A hook checks an artifact after a relevant event
+  accDescr: An agent lifecycle event passes a narrow filter, runs an existing local validator, and returns results. This is separate from an external provider webhook.
+  A["Agent tool finishes"] --> B["PostToolUse hook receives event"]
+  B --> C{"Did the relevant manifest change?"}
+  C -->|No| D["Exit without extra work"]
+  C -->|Yes| E["Run local manifest validator"]
+  E --> F{"Valid timing and asset references?"}
+  F -->|Yes| G["Record the check"]
+  F -->|No| H["Return actionable feedback"]
+  H --> I["Agent repairs the manifest"]

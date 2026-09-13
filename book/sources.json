@@ -1,5 +1,52 @@
 [
   {
+    "id": "25",
+    "type": "Official tutorial + companion video",
+    "title": "Remotion · Create videos with coding agents",
+    "url": "https://www.remotion.dev/docs/ai/coding-agents",
+    "date": "Updated 12 September 2026",
+    "freshness": "Updated since March 2026",
+    "summary": [
+      "Create a blank video project and install its dependencies.",
+      "Use a coding agent with relevant Remotion guidance to build the composition.",
+      "Preview the result and refine its timing and appearance."
+    ],
+    "application": "Start the trailer with real capture files and an exact, editable composition.",
+    "limits": "The written guide was reviewed. The five-minute companion video’s transcript was not retrieved; no video-only claims are used.",
+    "video": "https://www.youtube.com/watch?v=5NRAOnKc3c8",
+    "videoNote": "Written guide reviewed; companion video transcript not retrieved."
+  },
+  {
+    "id": "26",
+    "type": "Official skill documentation",
+    "title": "Remotion · Agent Skills",
+    "url": "https://www.remotion.dev/docs/ai/skills",
+    "date": "Updated 12 September 2026",
+    "freshness": "Updated since March 2026",
+    "summary": [
+      "Provides reusable guidance for coding agents working with Remotion.",
+      "The collection covers composition, documentation, preview, and rendering workflows.",
+      "Installation exposes that guidance to compatible agent setups."
+    ],
+    "application": "Check available skills before adding another copy of the same procedure.",
+    "limits": "Vendor workflow guidance; it does not prove a quality gain for every model or task, including Astra."
+  },
+  {
+    "id": "27",
+    "type": "Official deprecation notice",
+    "title": "Remotion · Documentation MCP deprecation",
+    "url": "https://www.remotion.dev/docs/ai/mcp",
+    "date": "Updated 12 September 2026",
+    "freshness": "Updated since March 2026",
+    "summary": [
+      "Deprecates the older Remotion documentation MCP.",
+      "Directs users toward agent skills, including documentation guidance.",
+      "Explains problems with duplicated or stale documentation and tool invocation."
+    ],
+    "application": "A concrete current example of replacing a redundant documentation integration.",
+    "limits": "The notice does not imply all MCP servers are obsolete. Its shutdown wording is not confirmation of a completed shutdown."
+  },
+  {
     "id": "17",
     "type": "First-party Astra guidance",
     "title": "OpenAI · Rethinking skills and prompts for GPT-6 Astra",
@@ -45,6 +92,21 @@
     "limits": "Preprint results do not show that casually generating a skill for any task will help."
   },
   {
+    "id": "23",
+    "type": "Protocol architecture",
+    "title": "MCP · Architecture, specification 2026-07-28",
+    "url": "https://modelcontextprotocol.io/docs/2026-07-28/learn/architecture",
+    "date": "Specification version 28 July 2026 · not a page publication date",
+    "freshness": "Version since March 2026",
+    "summary": [
+      "An application hosts clients that connect to MCP servers.",
+      "Servers expose tools, resources, and prompts through a common protocol.",
+      "The protocol exchanges context; it does not dictate the agent’s planning strategy."
+    ],
+    "application": "Separate a connection that enables actions from instructions that guide those actions.",
+    "limits": "A conceptual architecture, not a video generator or an Astra performance evaluation."
+  },
+  {
     "id": "18",
     "type": "Live benchmark · broad task collection",
     "title": "SkillsBench · Agent leaderboard, v1.1",
@@ -58,6 +120,21 @@
     ],
     "application": "Useful counterevidence to the claim that all skills are redundant.",
     "limits": "The reviewed leaderboard has no Astra entry. Different harnesses and task mixes limit transfer to game development."
+  },
+  {
+    "id": "32",
+    "type": "Official versioned API recipe",
+    "title": "Runway · Multi-shot video recipe, 2026-06",
+    "url": "https://docs.dev.runwayml.com/recipes/multi-shot-video/",
+    "date": "Recipe version 2026-06 · page publication date not stated",
+    "freshness": "Version since March 2026",
+    "summary": [
+      "Supports automatic story decomposition and custom shot lists.",
+      "The custom mode accepts a small set of shots with explicit timing.",
+      "Inputs must follow the recipe’s supported total duration and format."
+    ],
+    "application": "A candidate API route for the original three-shot teaser storyboard.",
+    "limits": "A recipe version is not a publication date or an assurance of consistent characters, exact gameplay, or Astra-specific gains."
   },
   {
     "id": "19",
@@ -268,6 +345,171 @@
     ],
     "application": "Test an export in the actual target browser before committing to this stack.",
     "limits": "Avoid applying older blanket claims about browser support to a newer Unity version."
+  },
+  {
+    "id": "24",
+    "type": "Official agent lifecycle documentation",
+    "title": "OpenAI · Codex hooks",
+    "url": "https://learn.chatgpt.com/docs/hooks",
+    "date": "Live documentation · publication date not stated",
+    "freshness": "Current documentation",
+    "summary": [
+      "Hooks run actions at supported lifecycle events such as PreToolUse and PostToolUse.",
+      "Configuration, event matching, and trust rules govern when they execute.",
+      "PostToolUse follows a completed action; it cannot reverse that action."
+    ],
+    "application": "Consider a narrowly filtered local manifest check after proving the validator works directly.",
+    "limits": "The illustrated hook is a proposed design, not installed configuration. An agent hook differs from an HTTP webhook."
+  },
+  {
+    "id": "28",
+    "type": "Official model workflow tutorial",
+    "title": "ComfyUI · LTX-2.5 video workflows",
+    "url": "https://docs.comfy.org/tutorials/video/ltx/ltx-2-5",
+    "date": "Live documentation · publication date not stated",
+    "freshness": "Current documentation",
+    "summary": [
+      "Covers text-to-video, image-to-video, and first/last-frame workflows.",
+      "Describes supported audio and multi-shot capabilities.",
+      "Explains model access and compatible component requirements."
+    ],
+    "application": "Use an available supported template and inspect one short output before expanding the pipeline.",
+    "limits": "Gated model access and compute requirements apply. The page is current documentation, not evidence of its publication date or an Astra benchmark."
+  },
+  {
+    "id": "29",
+    "type": "Official interface tutorial",
+    "title": "ComfyUI · Workflow Templates",
+    "url": "https://docs.comfy.org/interface/features/template",
+    "date": "Live documentation · publication date not stated",
+    "freshness": "Current documentation",
+    "summary": [
+      "Browse example workflows from the application’s template interface.",
+      "Templates provide starting graphs for different media tasks.",
+      "Inspect and satisfy the selected workflow’s model requirements before running it."
+    ],
+    "application": "Start from a runnable official template instead of treating the book’s conceptual Mermaid diagram as executable JSON.",
+    "limits": "Availability depends on the installation and template. A tutorial does not guarantee compatibility with every version."
+  },
+  {
+    "id": "37",
+    "type": "Official public-beta agent integration",
+    "title": "Comfy · MCP server for local and cloud workflows",
+    "url": "https://docs.comfy.org/agent-tools/mcp",
+    "date": "Live documentation · publication date not stated",
+    "freshness": "Current documentation",
+    "summary": [
+      "Documents separate local and cloud connections.",
+      "Exposes template discovery, workflow execution, and job/output handling.",
+      "Includes Codex CLI connection instructions."
+    ],
+    "application": "Inspect a template schema, then submit a bounded authorized job.",
+    "limits": "Public beta; cloud execution has account requirements. Connection and generation were not exercised for this book."
+  },
+  {
+    "id": "38",
+    "type": "Official agent skill documentation",
+    "title": "Comfy · Skills for agents",
+    "url": "https://docs.comfy.org/agent-tools/skills",
+    "date": "Live documentation · publication date not stated",
+    "freshness": "Current documentation",
+    "summary": [
+      "Packages guidance about Comfy workflows and model use.",
+      "Links to the maintained Comfy skills collection.",
+      "Includes installation examples tied to particular agent hosts."
+    ],
+    "application": "Combine missing procedural knowledge with an existing action interface when it helps.",
+    "limits": "Host-specific plugin commands are not interchangeable. No controlled Astra skill comparison is provided."
+  },
+  {
+    "id": "30",
+    "type": "Official MCP integration guide",
+    "title": "Runway · Developer MCP server",
+    "url": "https://docs.dev.runwayml.com/guides/mcp/",
+    "date": "Live documentation · publication date not stated",
+    "freshness": "Current documentation",
+    "summary": [
+      "Documents the developer MCP endpoint at dev.runwayml.com/mcp.",
+      "Its tools support developer tasks and API documentation workflows.",
+      "Identifies mcp.runwayml.com as a separate media-generation integration."
+    ],
+    "application": "Choose the server by its exposed capability, then inspect the tools actually registered after connection.",
+    "limits": "The developer endpoint should not be presented as the media-generation server. Generation-server setup was not tested for this book."
+  },
+  {
+    "id": "31",
+    "type": "Official asynchronous API guide",
+    "title": "Runway · SDKs and task handling",
+    "url": "https://docs.dev.runwayml.com/api-details/sdks/",
+    "date": "Live documentation · publication date not stated",
+    "freshness": "Current documentation",
+    "summary": [
+      "Generation tasks are asynchronous and expose status for later retrieval.",
+      "SDK helpers can wait for task output.",
+      "Manual polling guidance includes a minimum interval, jitter, and backoff."
+    ],
+    "application": "Persist the task ID and distinguish a local wait timeout from a remote task failure.",
+    "limits": "Provider-specific semantics apply. A successful task still requires visual review; the book did not submit a paid request."
+  },
+  {
+    "id": "33",
+    "type": "Official output lifecycle guide",
+    "title": "Runway · Generated asset outputs",
+    "url": "https://docs.dev.runwayml.com/assets/outputs/",
+    "date": "Live documentation · publication date not stated",
+    "freshness": "Current documentation",
+    "summary": [
+      "Task results include URLs for generated assets.",
+      "Output delivery URLs are temporary, with a documented 24–48-hour expiry window after access.",
+      "Applications should download and store the files they need."
+    ],
+    "application": "Keep a durable saved asset and its task record before assembling or publishing the trailer.",
+    "limits": "These are Runway delivery semantics, not a universal retention rule for all video services."
+  },
+  {
+    "id": "34",
+    "type": "Official automation node documentation",
+    "title": "n8n · HTTP Request node",
+    "url": "https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/",
+    "date": "Live documentation · publication date not stated",
+    "freshness": "Current documentation",
+    "summary": [
+      "Makes HTTP calls with configurable methods, URLs, headers, and bodies.",
+      "Supports authentication through credential configurations.",
+      "Can be used as a regular workflow node or an agent tool."
+    ],
+    "application": "Translate one verified provider request into a workflow step before adding orchestration.",
+    "limits": "The node does not generate video itself or validate an arbitrary provider’s request schema for you."
+  },
+  {
+    "id": "35",
+    "type": "Official automation node documentation",
+    "title": "n8n · Wait node",
+    "url": "https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.wait/",
+    "date": "Live documentation · publication date not stated",
+    "freshness": "Current documentation",
+    "summary": [
+      "Pauses a workflow and resumes it after an interval or another supported condition.",
+      "Can resume on a webhook call with an execution-specific resume URL.",
+      "Webhook resume supports authentication settings."
+    ],
+    "application": "Wait between status requests, or use a documented provider callback when one exists.",
+    "limits": "The node’s webhook support does not establish callback support in a particular video API."
+  },
+  {
+    "id": "36",
+    "type": "Official diagram rendering documentation",
+    "title": "Mermaid · Usage",
+    "url": "https://mermaid.js.org/config/usage",
+    "date": "Live documentation · publication date not stated",
+    "freshness": "Current documentation",
+    "summary": [
+      "Renders text diagram definitions into SVG.",
+      "Supports initialization options and programmatic rendering.",
+      "Allows diagrams to be embedded in a web page."
+    ],
+    "application": "The book renders nine original diagrams and exposes their editable source and SVG downloads.",
+    "limits": "Mermaid depicts a flow; it does not execute a generation pipeline. The bundled renderer version is locked in package.json."
   },
   {
     "id": "05",
