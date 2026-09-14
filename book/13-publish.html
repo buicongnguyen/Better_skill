@@ -1,6 +1,6 @@
 <h2 id="publish">Publish and close the loop</h2>
 <p class="lead">A release is a working URL and a recoverable revision.</p>
-<p>For the proposed Vite game, GitHub Pages serves the built static files. It does not run a Node server or store private API keys. The example requires no backend: game logic executes in the browser, and the first release has no accounts or online service dependency.</p>
+<p>For the proposed Vite game, GitHub Pages serves built static files. It provides no private server runtime for this game’s API calls. A key placed in published JavaScript is delivered to visitors, so keep service credentials in a separate backend or local tool when needed. Signal Garden’s first release needs neither accounts nor an online service. {{cite:46}}</p>
 <h3>1 · Configure the repository path</h3>
 <p>A project called <code>signal-garden</code> normally appears at <code>https://YOUR_ACCOUNT.github.io/signal-garden/</code>. In Vite, set the base path accordingly. A user site at the domain root uses a different base. The repository name’s case and asset filenames must be correct on the deployed host. {{cite:12}}</p>
 <pre><code>// vite.config.ts — example for the game repository

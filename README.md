@@ -6,7 +6,9 @@ A practical, researched book about making a 3D game with an AI agent: prompts, G
 
 ## Contents
 
-15 chapters compare game workflows and engine choices, synthesize findings from 38 sources (including two historical YouTube transcript readings), and develop the original Signal Garden design into an implementation plan. Each source includes main-item summaries, date information, an application, and limitations.
+15 chapters compare game workflows and engine choices, draw on 48 source records, and develop the original Signal Garden design into an implementation plan. Every introduction and subsection has a source check record with direct links and a statement of what the evidence supports. Original proposals are labeled separately from documented behavior and research findings.
+
+47 entries have checked source content; one historical video remains a reading lead because its transcript was unavailable in this review. Its earlier passage summary was withdrawn. Verified reading notes include main items, date information, application, limits, and passage locators. See the [content review](research/review-2026-09-14.md).
 
 Eight copyable and downloadable templates cover repository instructions, an optional game review skill, a prompt-generating prompt, compact and bootstrap Astra prompts, targeted repair, release, and a video workflow brief.
 
@@ -33,6 +35,8 @@ Open http://127.0.0.1:4173/Better_skill/ . The server deliberately supports the 
 
 - `book/*.html`: chapter manuscripts, ordered by filename. Each needs an `h2` with a unique ID.
 - `book/sources.json`: source URLs, types, dates, three main items, applications, and evidence limits. IDs remain stable while reading order prioritizes recent research.
+- `book/evidence.json`: coverage of every chapter introduction and subsection, with source IDs, basis, and scope of support. Section 0 is the introduction; subsequent numbers follow the chapter's `h3` order.
+- `research/`: downloadable content-review record and disclosed retrieval limits.
 - `prompts/*.md`: source templates, embedded at build time and copied as downloads.
 - `diagrams/*.mmd` and `diagrams/catalog.json`: original flow definitions and plain-language descriptions.
 - `site/`: page shell, stylesheet, accessible reading interactions, and original SVG favicon.

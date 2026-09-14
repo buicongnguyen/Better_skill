@@ -23,3 +23,18 @@
 .diagram-canvas{max-height:680px}.diagram-canvas::after{content:'';display:block;height:1px}.diagram-description::after{content:' Scroll within the graph; use Fit diagram for an overview.';color:#66735c}
 @media(max-width:800px){.diagram-canvas{max-height:540px}}
 @media print{.diagram-canvas{max-height:none}.diagram-description::after{content:none}}
+/* Chapter-level traceability complements the complete reading notes. */
+.chapter-evidence{margin-top:38px;border:1px solid #c6d1bd;background:#eef1e7;padding:17px 20px;scroll-margin-top:90px}
+.chapter-evidence>summary{font-size:13px;font-weight:600;cursor:pointer;color:#365644}
+.chapter-evidence>summary:focus-visible{outline:2px solid var(--accent);outline-offset:5px}
+.chapter-evidence>p,.chapter-evidence .evidence-records p{font-size:12px;line-height:1.8;margin:9px 0}
+.chapter-evidence .evidence-records{padding:0;list-style:none;margin:20px 0}
+.chapter-evidence .evidence-records>li{border-top:1px solid #d2dbc9;padding:17px 0 8px;margin:0}
+.evidence-basis{font-size:9px;letter-spacing:1px;text-transform:uppercase;color:#647154}
+.chapter-evidence h4{font-size:14px;margin:5px 0 9px}.evidence-covers{color:#647154}.evidence-covers a{color:inherit}
+.evidence-links a{overflow-wrap:anywhere}.evidence-note-link{white-space:nowrap;font-size:10px}.evidence-method{font-size:11px}
+.source-verification{margin:16px 0 12px;padding:12px 15px;background:#edf0e5;border-left:2px solid #92aa86}
+.source-list .source-verification p{font-size:11px;line-height:1.8;margin:5px 0}.source-verification a{overflow-wrap:anywhere}
+.review-section{background:linear-gradient(180deg,transparent,#edf0e680);padding-bottom:45px}h3[id]{scroll-margin-top:90px}
+@media(max-width:450px){.chapter-evidence{padding:15px}.chapter-evidence>p,.chapter-evidence .evidence-records p{font-size:13px}.source-list .source-verification p{font-size:12px}}
+@media print{.chapter-evidence{background:white;border-color:#bbb}.chapter-evidence .evidence-records p{font-size:9pt}.chapter-evidence>summary{font-size:11pt}.source-verification{background:#f5f5f5}.source-list .source-verification p{font-size:9pt}.evidence-records>li{break-inside:avoid}}

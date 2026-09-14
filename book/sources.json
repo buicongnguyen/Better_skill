@@ -14,7 +14,13 @@
     "application": "Start the trailer with real capture files and an exact, editable composition.",
     "limits": "The written guide was reviewed. The five-minute companion video’s transcript was not retrieved; no video-only claims are used.",
     "video": "https://www.youtube.com/watch?v=5NRAOnKc3c8",
-    "videoNote": "Written guide reviewed; companion video transcript not retrieved."
+    "videoNote": "Written guide reviewed; companion video transcript not retrieved.",
+    "verification": {
+      "checked": "2026-09-14",
+      "status": "Content checked",
+      "locator": "Prerequisites, Start a new project, Start the preview, Start your coding agent",
+      "note": "Written guide and commands checked; companion video transcript not retrieved."
+    }
   },
   {
     "id": "26",
@@ -29,7 +35,13 @@
       "Installation exposes that guidance to compatible agent setups."
     ],
     "application": "Check available skills before adding another copy of the same procedure.",
-    "limits": "Vendor workflow guidance; it does not prove a quality gain for every model or task, including Astra."
+    "limits": "Vendor workflow guidance; it does not prove a quality gain for every model or task, including Astra.",
+    "verification": {
+      "checked": "2026-09-14",
+      "status": "Content checked",
+      "locator": "Available skills: best practices, studio, render, and docs",
+      "note": "Confirms procedures available in the collection; no measured Astra benefit."
+    }
   },
   {
     "id": "27",
@@ -44,7 +56,13 @@
       "Explains problems with duplicated or stale documentation and tool invocation."
     ],
     "application": "A concrete current example of replacing a redundant documentation integration.",
-    "limits": "The notice does not imply all MCP servers are obsolete. Its shutdown wording is not confirmation of a completed shutdown."
+    "limits": "The notice does not imply all MCP servers are obsolete. Its shutdown wording is not confirmation of a completed shutdown.",
+    "verification": {
+      "checked": "2026-09-14",
+      "status": "Content checked",
+      "locator": "Deprecation notice, reasons, and migration to /remotion-docs",
+      "note": "No-earlier-than shutdown date does not prove that shutdown already happened."
+    }
   },
   {
     "id": "17",
@@ -59,7 +77,33 @@
       "Replace blanket document-reading and repeated-testing demands with context-sensitive guidance."
     ],
     "application": "Audit existing instructions before adding another skill.",
-    "limits": "Practical guidance from Eric Provencher, not a controlled measurement of skill gains on Astra."
+    "limits": "Practical guidance from Eric Provencher, not a controlled measurement of skill gains on Astra.",
+    "verification": {
+      "checked": "2026-09-14",
+      "status": "Content checked",
+      "locator": "Instruction audit, overlapping skill triggers, task-relevant context, and targeted checks",
+      "note": "First-party Astra advice, not an independent controlled skill-gain benchmark."
+    }
+  },
+  {
+    "id": "44",
+    "type": "Official technical reference",
+    "title": "MDN · Autoplay guide for media and Web Audio APIs",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/Media/Guides/Autoplay",
+    "date": "Updated 10 September 2026",
+    "freshness": "Updated since March 2026",
+    "summary": [
+      "Audible media and Web Audio may be blocked from starting automatically.",
+      "User interaction is a common condition for permitting playback; browser policies vary.",
+      "Handle blocked playback instead of assuming a play request always succeeds."
+    ],
+    "application": "Start or resume game audio from a player action and keep a working mute control.",
+    "limits": "A user gesture is not an unconditional guarantee under every browser preference or embedding policy.",
+    "verification": {
+      "checked": "2026-09-14",
+      "status": "Content checked",
+      "locator": "Autoplay availability; autoplay using the Web Audio API; handling play failures"
+    }
   },
   {
     "id": "04",
@@ -74,7 +118,13 @@
       "Separate repeatable scene setup from tests that actually operate the controls."
     ],
     "application": "Ground the game brief and verification plan in a current Astra example.",
-    "limits": "Thomas Ricouard’s showcase is an implementation account; it does not establish typical success rates."
+    "limits": "Thomas Ricouard’s showcase is an implementation account; it does not establish typical success rates.",
+    "verification": {
+      "checked": "2026-09-14",
+      "status": "Content checked",
+      "locator": "TypeScript/Vite/Three.js setup and inspectable state / scene fixture / journey-test discussion",
+      "note": "Confirms the implementation example, not a typical success rate."
+    }
   },
   {
     "id": "20",
@@ -89,7 +139,55 @@
       "Evaluations include GPT-5.5, Opus 4.8, and DeepSeek V4 configurations; none is Astra."
     ],
     "application": "Treat evidence-led skill generation as a candidate worth testing.",
-    "limits": "Preprint results do not show that casually generating a skill for any task will help."
+    "limits": "Preprint results do not show that casually generating a skill for any task will help.",
+    "verification": {
+      "checked": "2026-09-14",
+      "status": "Content checked",
+      "locator": "v1 full text: sections 4.1 Experimental Setup and 4.2 Main Results",
+      "note": "Tested configurations include GPT-5.5, Opus 4.8, and DeepSeek V4; none is Astra.",
+      "url": "https://arxiv.org/html/2608.23417v1"
+    }
+  },
+  {
+    "id": "06",
+    "type": "Official workflow documentation",
+    "title": "GitHub · Spec Kit",
+    "url": "https://github.github.com/spec-kit/",
+    "date": "Updated 21 August 2026",
+    "freshness": "Updated since March 2026",
+    "summary": [
+      "Organizes work around specification, planning, tasks, and implementation.",
+      "Makes requirements and technical decisions explicit before they spread through code.",
+      "Provides tooling and templates for a specification-driven workflow."
+    ],
+    "application": "Borrow the separation of decisions; one page can be enough for Signal Garden.",
+    "limits": "Workflow documentation is not evidence that installing the toolkit improves every small project or Astra run.",
+    "verification": {
+      "checked": "2026-09-14",
+      "status": "Content checked",
+      "locator": "Specification → plan → tasks → implementation workflow; update date",
+      "note": "Confirms workflow structure; using a one-page subset is our recommendation."
+    }
+  },
+  {
+    "id": "43",
+    "type": "Official technical reference",
+    "title": "MDN · requestAnimationFrame",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/requestAnimationFrame",
+    "date": "Updated 21 August 2026",
+    "freshness": "Updated since March 2026",
+    "summary": [
+      "Requests an animation callback before the next repaint.",
+      "Callbacks generally follow display refresh and are paused in most background tabs.",
+      "Use the timestamp to advance animation by elapsed time rather than by callback count."
+    ],
+    "application": "Define resume behavior and label callback-interval measurements accurately.",
+    "limits": "The book’s 33 ms / 60-second observation is an original target. Callback cadence is not a GPU execution-time measurement.",
+    "verification": {
+      "checked": "2026-09-14",
+      "status": "Content checked",
+      "locator": "Opening behavior description, high-refresh warning, and timestamp parameter"
+    }
   },
   {
     "id": "23",
@@ -104,7 +202,13 @@
       "The protocol exchanges context; it does not dictate the agent’s planning strategy."
     ],
     "application": "Separate a connection that enables actions from instructions that guide those actions.",
-    "limits": "A conceptual architecture, not a video generator or an Astra performance evaluation."
+    "limits": "A conceptual architecture, not a video generator or an Astra performance evaluation.",
+    "verification": {
+      "checked": "2026-09-14",
+      "status": "Content checked",
+      "locator": "Architecture overview: host, client, server, and scope of context exchange",
+      "note": "The protocol does not dictate the application’s planning strategy."
+    }
   },
   {
     "id": "18",
@@ -119,7 +223,33 @@
       "Curated skills often help, but the size of the benefit varies across configurations."
     ],
     "application": "Useful counterevidence to the claim that all skills are redundant.",
-    "limits": "The reviewed leaderboard has no Astra entry. Different harnesses and task mixes limit transfer to game development."
+    "limits": "The reviewed leaderboard has no Astra entry. Different harnesses and task mixes limit transfer to game development.",
+    "verification": {
+      "checked": "2026-09-14",
+      "status": "Content checked",
+      "locator": "Leaderboard methodology and v1.1 July 16 recomputation note",
+      "note": "87 tasks, 24 paired configurations plus one skill-only run; no Astra results."
+    }
+  },
+  {
+    "id": "45",
+    "type": "Official technical reference",
+    "title": "MDN · prefers-reduced-motion",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion",
+    "date": "Updated 10 June 2026",
+    "freshness": "Updated since March 2026",
+    "summary": [
+      "The media feature exposes a user preference to reduce non-essential motion.",
+      "The reduce value selects reduced-motion styling.",
+      "The examples show replacing or minimizing animation when that preference is active."
+    ],
+    "application": "Reduce decorative UI motion and connect the preference to game animation settings.",
+    "limits": "CSS does not automatically change movement implemented inside a WebGL simulation; that integration is our implementation recommendation.",
+    "verification": {
+      "checked": "2026-09-14",
+      "status": "Content checked",
+      "locator": "Opening definition, reduce value, and Examples"
+    }
   },
   {
     "id": "32",
@@ -133,8 +263,14 @@
       "The custom mode accepts a small set of shots with explicit timing.",
       "Inputs must follow the recipe’s supported total duration and format."
     ],
-    "application": "A candidate API route for the original three-shot teaser storyboard.",
-    "limits": "A recipe version is not a publication date or an assurance of consistent characters, exact gameplay, or Astra-specific gains."
+    "application": "A possible all-generated concept variant. The mixed-source trailer instead needs composition with real gameplay captures.",
+    "limits": "A recipe version is not a publication date or an assurance of consistent characters, exact gameplay, or Astra-specific gains.",
+    "verification": {
+      "checked": "2026-09-14",
+      "status": "Content checked",
+      "locator": "How it works, Inputs, custom shot example, and version 2026-06",
+      "note": "Recipe generates shots; mixed captured/generated assembly is a separate composition task."
+    }
   },
   {
     "id": "19",
@@ -149,7 +285,14 @@
       "Reports improvements on three benchmarks using Qwen-based agents."
     ],
     "application": "Evaluate which skill was selected as well as the final output.",
-    "limits": "A proposed research method, not a feature claimed for Codex. The tested agents are not Astra."
+    "limits": "A proposed research method, not a feature claimed for Codex. The tested agents are not Astra.",
+    "verification": {
+      "checked": "2026-09-14",
+      "status": "Content checked",
+      "locator": "v1 full text: experimental setup, adaptive budget analysis, and Limitations",
+      "note": "Qwen-family evaluation; does not establish gains on closed models such as Astra.",
+      "url": "https://arxiv.org/html/2605.29794v1"
+    }
   },
   {
     "id": "21",
@@ -164,7 +307,13 @@
       "Simplifies intermediate scaffolding with Opus 4.6 while retaining useful planning and evaluation roles."
     ],
     "application": "Reassess the older long-running-agent recipe instead of copying it unchanged.",
-    "limits": "Claude application experiments do not determine the best number of agents or milestones for an Astra game."
+    "limits": "Claude application experiments do not determine the best number of agents or milestones for an Astra game.",
+    "verification": {
+      "checked": "2026-09-14",
+      "status": "Content checked",
+      "locator": "Transition from the Opus 4.5 workflow to the simplified Opus 4.6 workflow",
+      "note": "Removing sprint structure is a model/task-specific observation, not a universal prescription."
+    }
   },
   {
     "id": "22",
@@ -179,7 +328,14 @@
       "Finds overhead and some regressions, including mismatches between advice and repository versions."
     ],
     "application": "Keep a no-added-skill baseline and examine regressions, not just aggregate wins.",
-    "limits": "Explicitly preliminary; uses Claude Code with Haiku 4.5, not Astra. Its setup differs from SkillsBench and Codex skill routing."
+    "limits": "Explicitly preliminary; uses Claude Code with Haiku 4.5, not Astra. Its setup differs from SkillsBench and Codex skill routing.",
+    "verification": {
+      "checked": "2026-09-14",
+      "status": "Content checked",
+      "locator": "v1 full text: sections 3.4 Task Formulation, 4.1 Experimental Setup, and 4.3 Results",
+      "note": "49 skills, 565 tasks, Claude Code with Haiku 4.5; discovery setup is not identical to Codex.",
+      "url": "https://arxiv.org/html/2603.15401v1"
+    }
   },
   {
     "id": "01",
@@ -194,7 +350,13 @@
       "Recommends verification proportionate to the task."
     ],
     "application": "Inform the agent’s working agreement; keep game mechanics as separate design decisions.",
-    "limits": "A moving documentation URL may later describe another model. Confirm its heading before reusing the advice."
+    "limits": "A moving documentation URL may later describe another model. Confirm its heading before reusing the advice.",
+    "verification": {
+      "checked": "2026-09-14",
+      "status": "Content checked",
+      "locator": "GPT-6 Astra prompting best practices: initiative, instructions, delegation, and verification",
+      "note": "Model guidance supports the working agreements; game rules remain original."
+    }
   },
   {
     "id": "08",
@@ -205,11 +367,17 @@
     "freshness": "Current reference",
     "summary": [
       "A skill packages SKILL.md metadata and instructions, with optional scripts, references, and assets.",
-      "Supports explicit selection and implicit matching to the task through its description.",
+      "Supports explicit selection and implicit matching when the skill is eligible for automatic invocation.",
       "The initial catalog is budgeted; selected skills then supply their full instructions."
     ],
     "application": "Check available skills before authoring a duplicate. Repository skills can live in .agents/skills.",
-    "limits": "Availability is required. Automatic matching is not a guarantee of correct selection or internet-wide skill discovery."
+    "limits": "allow_implicit_invocation: false disables automatic invocation. A budgeted catalog can shorten or omit entries. Availability and matching do not guarantee correct selection or internet-wide discovery.",
+    "verification": {
+      "checked": "2026-09-14",
+      "status": "Content checked",
+      "locator": "Skill discovery and progressive disclosure; explicit/implicit invocation; allow_implicit_invocation",
+      "note": "Checked routing eligibility and catalog-budget caveats, not automatic selection accuracy."
+    }
   },
   {
     "id": "07",
@@ -224,22 +392,13 @@
       "Repository guidance supplies persistent conventions across sessions."
     ],
     "application": "Record commands and local conventions in a short, accurate instruction file.",
-    "limits": "This mechanism is distinct from selecting a skill. Our downloadable example is not active in this book repository."
-  },
-  {
-    "id": "06",
-    "type": "Official workflow documentation",
-    "title": "GitHub · Spec Kit",
-    "url": "https://github.github.com/spec-kit/",
-    "date": "Live documentation · publication/update date not stated",
-    "freshness": "Current reference",
-    "summary": [
-      "Organizes work around specification, planning, tasks, and implementation.",
-      "Makes requirements and technical decisions explicit before they spread through code.",
-      "Provides tooling and templates for a specification-driven workflow."
-    ],
-    "application": "Borrow the separation of decisions; one page can be enough for Signal Garden.",
-    "limits": "Workflow documentation is not evidence that installing the toolkit improves every small project or Astra run."
+    "limits": "This mechanism is distinct from selecting a skill. Our downloadable example is not active in this book repository.",
+    "verification": {
+      "checked": "2026-09-14",
+      "status": "Content checked",
+      "locator": "How Codex discovers guidance: global and project directory instructions",
+      "note": "Confirms scoped repository guidance; the example file is optional project content."
+    }
   },
   {
     "id": "09",
@@ -254,7 +413,13 @@
       "Shows how individual engine concepts combine into a playable result."
     ],
     "application": "Use a focused lesson when an engine concept blocks progress.",
-    "limits": "Match the documentation to the installed Godot version. A tutorial does not evaluate an AI workflow."
+    "limits": "Match the documentation to the installed Godot version. A tutorial does not evaluate an AI workflow.",
+    "verification": {
+      "checked": "2026-09-14",
+      "status": "Content checked",
+      "locator": "Tutorial overview and lesson sequence through UI and retry",
+      "note": "Supports the beginner learning route; it does not implement Signal Garden."
+    }
   },
   {
     "id": "11",
@@ -269,7 +434,13 @@
       "Browser input, audio, and hosting behavior require explicit attention."
     ],
     "application": "Try a tiny export on the intended host before building the full game.",
-    "limits": "Check the exact engine release. A model upgrade does not remove browser or hosting restrictions."
+    "limits": "Check the exact engine release. A model upgrade does not remove browser or hosting restrictions.",
+    "verification": {
+      "checked": "2026-09-14",
+      "status": "Content checked",
+      "locator": "Web export requirements, export file names, thread support, and PWA workaround",
+      "note": "Checked C#, WebGL 2, single-thread choice, and the HTML naming exception."
+    }
   },
   {
     "id": "12",
@@ -284,7 +455,13 @@
       "The guide provides a GitHub Actions deployment example."
     ],
     "application": "Build and test the game at its eventual repository subpath.",
-    "limits": "Applies to the proposed Vite game. This book uses its own dependency-free static builder."
+    "limits": "Applies to the proposed Vite game. This book uses a custom static builder and a locally bundled Mermaid dependency.",
+    "verification": {
+      "checked": "2026-09-14",
+      "status": "Content checked",
+      "locator": "GitHub Pages section: base and workflow; production dist output",
+      "note": "Applies to the proposed Vite game, not the book’s build implementation."
+    }
   },
   {
     "id": "13",
@@ -299,7 +476,13 @@
       "Requires the deployment job to receive the appropriate artifact and authorization."
     ],
     "application": "Publish only the generated dist output and inspect the completed deployment.",
-    "limits": "A successful workflow does not prove correct asset paths or playable browser behavior."
+    "limits": "A successful workflow does not prove correct asset paths or playable browser behavior.",
+    "verification": {
+      "checked": "2026-09-14",
+      "status": "Content checked",
+      "locator": "Configuring upload/deploy steps, required permissions, and environment",
+      "note": "Checked the deployment pattern; current project workflow is a separate local artifact."
+    }
   },
   {
     "id": "14",
@@ -314,7 +497,13 @@
       "Its rendering focus leaves game rules and application structure to the developer."
     ],
     "application": "A suitable starting library for a small browser game with custom mechanics.",
-    "limits": "The README is a capability reference, not a performance comparison with other engines. Pin the installed version."
+    "limits": "The README is a capability reference, not a performance comparison with other engines. Pin the installed version.",
+    "verification": {
+      "checked": "2026-09-14",
+      "status": "Content checked",
+      "locator": "Repository README: JavaScript 3D library and renderers",
+      "note": "Gameplay responsibilities are our assessment of the proposed stack."
+    }
   },
   {
     "id": "15",
@@ -329,7 +518,13 @@
       "Provides a feature checklist for assessing an engine-oriented browser stack."
     ],
     "application": "Consider Babylon.js when its existing systems match the game’s needs.",
-    "limits": "Feature availability does not establish usability or speed on your project; this book ran no engine benchmark."
+    "limits": "Feature availability does not establish usability or speed on your project; this book ran no engine benchmark.",
+    "verification": {
+      "checked": "2026-09-14",
+      "status": "Content checked",
+      "locator": "Specifications: physics, character controllers, and Inspector",
+      "note": "Confirms available facilities, not performance against other engines."
+    }
   },
   {
     "id": "16",
@@ -344,7 +539,13 @@
       "Compatibility must be assessed against the Unity release and target device."
     ],
     "application": "Test an export in the actual target browser before committing to this stack.",
-    "limits": "Avoid applying older blanket claims about browser support to a newer Unity version."
+    "limits": "Avoid applying older blanket claims about browser support to a newer Unity version.",
+    "verification": {
+      "checked": "2026-09-14",
+      "status": "Content checked",
+      "locator": "Current Unity web browser requirements and compatibility table",
+      "note": "Check against the installed editor; page build date is not treated as article publication."
+    }
   },
   {
     "id": "24",
@@ -359,7 +560,13 @@
       "PostToolUse follows a completed action; it cannot reverse that action."
     ],
     "application": "Consider a narrowly filtered local manifest check after proving the validator works directly.",
-    "limits": "The illustrated hook is a proposed design, not installed configuration. An agent hook differs from an HTTP webhook."
+    "limits": "The illustrated hook is a proposed design, not installed configuration. An agent hook differs from an HTTP webhook.",
+    "verification": {
+      "checked": "2026-09-14",
+      "status": "Content checked",
+      "locator": "Config shape, tool coverage, and PostToolUse lifecycle semantics",
+      "note": "An after-tool event cannot undo the completed tool action; proposed hook not installed here."
+    }
   },
   {
     "id": "28",
@@ -374,7 +581,13 @@
       "Explains model access and compatible component requirements."
     ],
     "application": "Use an available supported template and inspect one short output before expanding the pipeline.",
-    "limits": "Gated model access and compute requirements apply. The page is current documentation, not evidence of its publication date or an Astra benchmark."
+    "limits": "Gated model access and compute requirements apply. The page is current documentation, not evidence of its publication date or an Astra benchmark.",
+    "verification": {
+      "checked": "2026-09-14",
+      "status": "Content checked",
+      "locator": "Workflow examples, model downloads/access, and text/image/first-last frame routes",
+      "note": "Inspect compatible template and account requirements before attempting generation."
+    }
   },
   {
     "id": "29",
@@ -389,7 +602,13 @@
       "Inspect and satisfy the selected workflow’s model requirements before running it."
     ],
     "application": "Start from a runnable official template instead of treating the book’s conceptual Mermaid diagram as executable JSON.",
-    "limits": "Availability depends on the installation and template. A tutorial does not guarantee compatibility with every version."
+    "limits": "Availability depends on the installation and template. A tutorial does not guarantee compatibility with every version.",
+    "verification": {
+      "checked": "2026-09-14",
+      "status": "Content checked",
+      "locator": "Built-in Workflow Templates and handling required model downloads",
+      "note": "A template is an executable starting graph only with compatible requirements."
+    }
   },
   {
     "id": "37",
@@ -401,10 +620,16 @@
     "summary": [
       "Documents separate local and cloud connections.",
       "Exposes template discovery, workflow execution, and job/output handling.",
-      "Includes Codex CLI connection instructions."
+      "get_output returns download instructions; the agent must save and verify the file separately."
     ],
     "application": "Inspect a template schema, then submit a bounded authorized job.",
-    "limits": "Public beta; cloud execution has account requirements. Connection and generation were not exercised for this book."
+    "limits": "Public beta; cloud execution has account requirements. Connection and generation were not exercised for this book.",
+    "verification": {
+      "checked": "2026-09-14",
+      "status": "Content checked",
+      "locator": "Codex cloud setup; template discovery/schema; job tools; get_output download behavior",
+      "note": "Public beta; setup was read, not executed. Cloud availability must be checked for the account."
+    }
   },
   {
     "id": "38",
@@ -419,7 +644,13 @@
       "Includes installation examples tied to particular agent hosts."
     ],
     "application": "Combine missing procedural knowledge with an existing action interface when it helps.",
-    "limits": "Host-specific plugin commands are not interchangeable. No controlled Astra skill comparison is provided."
+    "limits": "Host-specific plugin commands are not interchangeable. No controlled Astra skill comparison is provided.",
+    "verification": {
+      "checked": "2026-09-14",
+      "status": "Content checked",
+      "locator": "Skill purpose and host-specific installation examples",
+      "note": "Vendor guidance is not evidence that a custom skill improves every agent or task."
+    }
   },
   {
     "id": "30",
@@ -434,7 +665,13 @@
       "Identifies mcp.runwayml.com as a separate media-generation integration."
     ],
     "application": "Choose the server by its exposed capability, then inspect the tools actually registered after connection.",
-    "limits": "The developer endpoint should not be presented as the media-generation server. Generation-server setup was not tested for this book."
+    "limits": "The developer endpoint should not be presented as the media-generation server. Generation-server setup was not tested for this book.",
+    "verification": {
+      "checked": "2026-09-14",
+      "status": "Content checked",
+      "locator": "Connection endpoints and After you connect",
+      "note": "Developer documentation MCP is distinct from the linked generation integration."
+    }
   },
   {
     "id": "31",
@@ -449,7 +686,13 @@
       "Manual polling guidance includes a minimum interval, jitter, and backoff."
     ],
     "application": "Persist the task ID and distinguish a local wait timeout from a remote task failure.",
-    "limits": "Provider-specific semantics apply. A successful task still requires visual review; the book did not submit a paid request."
+    "limits": "Provider-specific semantics apply. A successful task still requires visual review; the book did not submit a paid request.",
+    "verification": {
+      "checked": "2026-09-14",
+      "status": "Content checked",
+      "locator": "Built-in task polling, manual polling, and timeout/cancellation behavior",
+      "note": "Checked terminal states and local timeout semantics; no paid generation run performed."
+    }
   },
   {
     "id": "33",
@@ -464,7 +707,13 @@
       "Applications should download and store the files they need."
     ],
     "application": "Keep a durable saved asset and its task record before assembling or publishing the trailer.",
-    "limits": "These are Runway delivery semantics, not a universal retention rule for all video services."
+    "limits": "These are Runway delivery semantics, not a universal retention rule for all video services.",
+    "verification": {
+      "checked": "2026-09-14",
+      "status": "Content checked",
+      "locator": "Generated output delivery URLs and expiration guidance",
+      "note": "Save outputs to owned storage; no file was generated or downloaded for this book."
+    }
   },
   {
     "id": "34",
@@ -479,7 +728,13 @@
       "Can be used as a regular workflow node or an agent tool."
     ],
     "application": "Translate one verified provider request into a workflow step before adding orchestration.",
-    "limits": "The node does not generate video itself or validate an arbitrary provider’s request schema for you."
+    "limits": "The node does not generate video itself or validate an arbitrary provider’s request schema for you.",
+    "verification": {
+      "checked": "2026-09-14",
+      "status": "Content checked",
+      "locator": "Method, URL, Authentication, and Send Body node parameters",
+      "note": "Confirms HTTP request configuration; provider API performs generation."
+    }
   },
   {
     "id": "35",
@@ -494,7 +749,13 @@
       "Webhook resume supports authentication settings."
     ],
     "application": "Wait between status requests, or use a documented provider callback when one exists.",
-    "limits": "The node’s webhook support does not establish callback support in a particular video API."
+    "limits": "The node’s webhook support does not establish callback support in a particular video API.",
+    "verification": {
+      "checked": "2026-09-14",
+      "status": "Content checked",
+      "locator": "After Time Interval, On Webhook Call, and webhook authentication",
+      "note": "Short waits under 65 seconds do not offload execution data to the database."
+    }
   },
   {
     "id": "36",
@@ -509,7 +770,171 @@
       "Allows diagrams to be embedded in a web page."
     ],
     "application": "The book renders nine original diagrams and exposes their editable source and SVG downloads.",
-    "limits": "Mermaid depicts a flow; it does not execute a generation pipeline. The bundled renderer version is locked in package.json."
+    "limits": "Mermaid depicts a flow; it does not execute a generation pipeline. The bundled renderer version is locked in package.json.",
+    "verification": {
+      "checked": "2026-09-14",
+      "status": "Content checked",
+      "locator": "Installing and hosting Mermaid, rendering definitions, and securityLevel",
+      "note": "Confirms rendering capability; the book’s diagrams are original process proposals."
+    }
+  },
+  {
+    "id": "39",
+    "type": "Official technical reference",
+    "title": "Git · Staging, differences, branches, and reverting",
+    "url": "https://git-scm.com/docs/git-add",
+    "date": "Live documentation · publication/update date not stated",
+    "freshness": "Current reference",
+    "summary": [
+      "git add stages a snapshot of selected changes; --all includes additions, modifications, and removals within its scope.",
+      "git diff --cached shows the staged changes to be committed; --stat is only a summary.",
+      "The companion references document init -b, switch -c, and revert, which records an undo in a new commit."
+    ],
+    "application": "Stage the complete new scaffold, review the staged content, and preserve unrelated work in an existing project.",
+    "limits": "Commands describe Git behavior; the proposed branch names, file layout, and commit cadence are our choices.",
+    "verification": {
+      "checked": "2026-09-14",
+      "status": "Content checked",
+      "locator": "git-add Description and --all; git-diff --cached; git-init --initial-branch; git-switch -c; git-revert Description"
+    },
+    "related": [
+      {
+        "title": "git diff — staged content",
+        "url": "https://git-scm.com/docs/git-diff"
+      },
+      {
+        "title": "git init — initial branch",
+        "url": "https://git-scm.com/docs/git-init"
+      },
+      {
+        "title": "git switch — create a branch",
+        "url": "https://git-scm.com/docs/git-switch"
+      },
+      {
+        "title": "git revert — record an undo",
+        "url": "https://git-scm.com/docs/git-revert"
+      }
+    ]
+  },
+  {
+    "id": "40",
+    "type": "Official technical reference",
+    "title": "GitHub CLI · gh repo create",
+    "url": "https://cli.github.com/manual/gh_repo_create",
+    "date": "Live documentation · publication/update date not stated",
+    "freshness": "Current reference",
+    "summary": [
+      "Creates a repository with explicit visibility and an optional owner/name.",
+      "Use --source to attach an existing local project and --remote to name its remote.",
+      "The --push option is optional; a later git push can publish the committed branch."
+    ],
+    "application": "Create the intended public game repository after preparing and reviewing its files.",
+    "limits": "Requires an installed, authenticated GitHub CLI and account permissions. The book example does not create a game repository itself.",
+    "verification": {
+      "checked": "2026-09-14",
+      "status": "Content checked",
+      "locator": "Description, Examples, and --source / --remote / --public / --push options"
+    }
+  },
+  {
+    "id": "41",
+    "type": "Official technical reference",
+    "title": "GitHub CLI · gh pr create",
+    "url": "https://cli.github.com/manual/gh_pr_create",
+    "date": "Live documentation · publication/update date not stated",
+    "freshness": "Current reference",
+    "summary": [
+      "--base selects the target branch and --head selects the source branch.",
+      "--body-file reads the pull request description from an existing file.",
+      "--title supplies the pull request title; flags support a reproducible CLI request."
+    ],
+    "application": "Write the review description before invoking the example PR command.",
+    "limits": "The command cannot verify gameplay quality. The camera example is a proposed change, not a PR created by this book.",
+    "verification": {
+      "checked": "2026-09-14",
+      "status": "Content checked",
+      "locator": "Options: --base, --head, --body-file, and --title"
+    }
+  },
+  {
+    "id": "42",
+    "type": "Official technical reference",
+    "title": "npm · npm ci",
+    "url": "https://docs.npmjs.com/cli/v11/commands/npm-ci",
+    "date": "Live documentation · publication/update date not stated",
+    "freshness": "Current reference",
+    "summary": [
+      "Requires an existing package-lock.json or npm-shrinkwrap.json.",
+      "Fails when package.json and the lockfile disagree instead of updating the lock.",
+      "Performs a clean dependency install without rewriting package manifests or lockfiles."
+    ],
+    "application": "Use the committed dependency graph in CI and document any project flags needed to reproduce it.",
+    "limits": "A lockfile improves dependency repeatability; it does not prove browser compatibility, game correctness, or a secure dependency set.",
+    "verification": {
+      "checked": "2026-09-14",
+      "status": "Content checked",
+      "locator": "Description: differences from npm install and the note about matching install flags"
+    }
+  },
+  {
+    "id": "46",
+    "type": "Official technical reference",
+    "title": "GitHub · What is GitHub Pages?",
+    "url": "https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages",
+    "date": "Live documentation · publication/update date not stated",
+    "freshness": "Current reference",
+    "summary": [
+      "Pages publishes static HTML, CSS, and JavaScript, with an optional build process.",
+      "Project sites normally use a repository path below the account domain.",
+      "User or organization sites and project sites have different repository and URL conventions."
+    ],
+    "application": "Publish built game/book files; run secret-bearing media jobs in a separate local tool or backend.",
+    "limits": "Static hosting is not a private API worker. Media files remain subject to GitHub’s hosting limits; the book does not benchmark media delivery.",
+    "verification": {
+      "checked": "2026-09-14",
+      "status": "Content checked",
+      "locator": "About GitHub Pages and the user/organization versus project-site table"
+    }
+  },
+  {
+    "id": "47",
+    "type": "Official technical reference",
+    "title": "Runway · Usage tiers and throttled tasks",
+    "url": "https://docs.dev.runwayml.com/usage/tiers",
+    "date": "Live documentation · publication/update date not stated",
+    "freshness": "Current reference",
+    "summary": [
+      "Concurrency limits constrain how many generation tasks can run at once.",
+      "A THROTTLED task is accepted and stored while waiting to enter processing.",
+      "Task throttling is a task state, distinct from an HTTP rate-limit response."
+    ],
+    "application": "Continue bounded status polling for an existing throttled task instead of submitting a duplicate.",
+    "limits": "Limits depend on the account and service. The book deliberately does not hard-code a tier’s prices or concurrency allowance.",
+    "verification": {
+      "checked": "2026-09-14",
+      "status": "Content checked",
+      "locator": "Concurrency limits and THROTTLED task status"
+    }
+  },
+  {
+    "id": "48",
+    "type": "Official technical reference",
+    "title": "Runway · API errors",
+    "url": "https://docs.dev.runwayml.com/errors/errors",
+    "date": "Live documentation · publication/update date not stated",
+    "freshness": "Current reference",
+    "summary": [
+      "The error table distinguishes non-retryable input or authentication failures from retryable conditions.",
+      "Rate limiting and transient service failures can require retries.",
+      "Exponential backoff with jitter reduces repeated synchronized requests."
+    ],
+    "application": "Bound retries of status requests and reconcile uncertain generation submissions.",
+    "limits": "Retry advice does not make generation submission exactly-once. Our stop-and-reconcile policy is a proposed application design.",
+    "verification": {
+      "checked": "2026-09-14",
+      "status": "Content checked",
+      "locator": "HTTP error table, retry guidance, and exponential backoff with jitter"
+    }
   },
   {
     "id": "05",
@@ -524,7 +949,13 @@
       "Emphasizes browser checks for end-to-end behavior."
     ],
     "application": "Retain recoverable progress and observable completion; reassess the amount of scaffolding.",
-    "limits": "Read with the March 2026 follow-up [21]. Its earlier agent setup is not an Astra prescription."
+    "limits": "Read with the March 2026 follow-up [21]. Its earlier agent setup is not an Astra prescription.",
+    "verification": {
+      "checked": "2026-09-14",
+      "status": "Content checked",
+      "locator": "Initializer agent, coding agent, progress files, Git checkpoints, and browser testing",
+      "note": "Historical long-running-app study; reconsider scaffolding using the March follow-up."
+    }
   },
   {
     "id": "02",
@@ -540,30 +971,43 @@
     ],
     "application": "Keep observable game checks; current Astra game guidance [04] provides a newer practical example.",
     "limits": "Selected transcript passage, not a full talk synopsis or benchmark. No stable timecodes were available; captions can contain errors.",
-    "video": "https://www.youtube.com/watch?v=LCEmiRjPEtQ"
+    "video": "https://www.youtube.com/watch?v=LCEmiRjPEtQ",
+    "verification": {
+      "checked": "2026-09-14",
+      "status": "Content checked",
+      "locator": "Transcript passage containing “verification” and discussion of large diffs",
+      "note": "Selected speech passage checked through a third-party mirror; no stable timecodes."
+    }
   },
   {
     "id": "03",
-    "type": "YouTube transcript · primary speech, mirrored",
+    "type": "Historical video lead · transcript unavailable in this review",
     "title": "Andrej Karpathy · How I use LLMs",
-    "url": "https://pickscribe.com/v/EWvNQjAaOHw",
+    "url": "https://www.youtube.com/watch?v=EWvNQjAaOHw",
     "date": "Video published February 2025",
     "freshness": "Historical exception",
     "summary": [
-      "Explains the context window using a working-memory analogy.",
-      "Search supplies outside information to the current conversation.",
-      "Distinguishes supplied context from knowledge learned during training; locate “working memory” in the transcript."
+      "The earlier edition included a selected transcript note about context; its passage summary is withdrawn pending fresh verification.",
+      "The original Pickscribe mirror timed out, and an alternative transcript page exposed no speech text.",
+      "Use this as a historical viewing lead. No current technical recommendation depends on its unavailable transcript."
     ],
-    "application": "Supply relevant current evidence. Astra-specific guidance [17] updates how much context to require.",
-    "limits": "Selected passage only. Historical product names and account details are excluded from current setup advice.",
-    "video": "https://www.youtube.com/watch?v=EWvNQjAaOHw"
+    "application": "For current context-loading advice, read the verified Astra guidance [17].",
+    "limits": "The spoken content was not reverified on 14 September 2026. A reachable landing page did not establish transcript access.",
+    "video": "https://www.youtube.com/watch?v=EWvNQjAaOHw",
+    "videoNote": "Transcript unavailable in this review; no fresh speech-content claim is made.",
+    "verification": {
+      "checked": "2026-09-14",
+      "status": "Transcript unavailable",
+      "locator": "Original video linked; Pickscribe and alternative transcript retrieval attempted",
+      "note": "Unavailable speech text is excluded from this revision’s verified recommendations."
+    }
   },
   {
     "id": "10",
     "type": "Creator’s written tutorial · associated YouTube video",
     "title": "GDQuest · Your first 3D game with Godot 4",
     "url": "https://www.gdquest.com/library/first_3d_game_godot4_arena_fps/",
-    "date": "2025 course · exact publication day not used",
+    "date": "Published 3 March 2025",
     "freshness": "Historical exception",
     "summary": [
       "The accessible written course builds a Survivor Arena FPS in Godot 4.",
@@ -571,6 +1015,12 @@
       "Connects lessons to a playable project that can be examined and adapted."
     ],
     "application": "Use as a learning exercise alongside current Godot documentation [09] and export constraints [11].",
-    "limits": "Video NJJNWGD25rg had no usable transcript retrieved. These notes summarize the written course, not unseen video content."
+    "limits": "Video NJJNWGD25rg had no usable transcript retrieved. These notes summarize the written course, not unseen video content.",
+    "verification": {
+      "checked": "2026-09-14",
+      "status": "Content checked",
+      "locator": "Written Survivor Arena FPS introduction and course sequence; date 2025/03/03",
+      "note": "Written course checked. Associated YouTube transcript remains unavailable."
+    }
   }
 ]

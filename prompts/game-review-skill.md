@@ -13,8 +13,8 @@ Relevant boundary cases:
 - If time expires or health reaches zero in the same simulation step as beacon activation, loss wins.
 - Activation requires a fresh E press within two units after all three cells have been collected.
 - Drone contact removes one health point, with a one-second damage cooldown.
-- Pause freezes both the round timer and simulation. Window blur clears held input and pauses an active round.
-- Restart resets cells, health, timer, robot position, drone progress, cooldowns, effects, and held input after either terminal state.
+- Pause freezes both the round timer and simulation. Window blur clears held input and pauses an active round; returning focus requires explicit Resume.
+- Restart from paused, won, or lost resets cells, health, timer, robot position, drone progress, cooldowns, effects, and held input, then enters playing for a fresh round.
 
 Select the cases affected by the change. Use deterministic checks for timing boundaries and actual player controls for the affected journey when browser tools are available. Setup helpers may prepare a scene but cannot serve as proof that its controls work.
 

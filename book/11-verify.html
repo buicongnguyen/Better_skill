@@ -10,7 +10,7 @@
 <tr><td>Win</td><td>Collect all cells; activate within range.</td><td>One win transition, frozen gameplay, working restart.</td></tr>
 <tr><td>Loss</td><td>Reach zero health; separately let time expire.</td><td>One loss transition in each case, then a clean restart.</td></tr>
 <tr><td>Boundary timing</td><td>Attempt activation on the step the timer reaches zero.</td><td>The brief’s loss-before-activation rule holds.</td></tr>
-<tr><td>Restart</td><td>Restart after win, after loss, and after pausing.</td><td>Player, cells, health, timer, patrol, cooldowns, and held-input state reset.</td></tr>
+<tr><td>Restart</td><td>Restart after win, after loss, and after pausing.</td><td>Player, cells, health, timer, patrol, cooldowns, effects, and held input reset; phase becomes playing.</td></tr>
 <tr><td>Production</td><td>Open the deployed repository URL and play a round.</td><td>No missing assets or runtime errors; controls work in the published build.</td></tr>
 </tbody></table></div>
 <h3>Make invisible state inspectable</h3>
@@ -27,6 +27,7 @@
 }</code></pre>
 <h3>Define a performance observation</h3>
 <p>Pick a named device, browser, window size, and quality setting. For an initial experiment, aim for a 95th-percentile frame time under 33 ms during a 60-second normal-play sample after warmup. This is a proposed target of roughly a 30-fps frame budget, not a measured result or a universal requirement. Record loading stalls separately; a smooth average can hide disruptive pauses.</p>
+<p>State what the measurement means. Intervals between <code>requestAnimationFrame</code> callbacks describe observed presentation cadence; they are not a GPU render-time measurement. Keep the tab foregrounded, record the sampling method, and treat background pauses separately. This distinction matters when comparing two runs. {{cite:43}}</p>
 <p>If performance misses the target, collect evidence before reducing visual quality. Compare draw calls, geometry, shadows, resolution, and update work. Change one likely bottleneck, then repeat the same sample. Do not claim an optimization worked because the code became shorter.</p>
 <h3>Run a small human playtest</h3>
 <p>Give someone the build and ask them to play without coaching. Observe whether they identify the objective, understand the controls, notice damage, and discover restart. Then ask where they felt uncertain and what they wanted to try next. A small playtest reveals specific problems; it does not establish a population-level success rate.</p>

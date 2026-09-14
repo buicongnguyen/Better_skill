@@ -60,3 +60,13 @@ function updateReading() {
 addEventListener('scroll', () => { if (!scheduled) { requestAnimationFrame(updateReading); scheduled = true; } }, { passive: true });
 addEventListener('resize', updateReading);
 updateReading();
+document.querySelectorAll('.chapter-evidence').forEach(panel => panel.addEventListener('toggle', updateReading));
+let printEvidenceState = [];
+addEventListener('beforeprint', () => {
+  printEvidenceState = [...document.querySelectorAll('.chapter-evidence')].map(panel => [panel, panel.open]);
+  printEvidenceState.forEach(([panel]) => { panel.open = true; });
+});
+addEventListener('afterprint', () => {
+  printEvidenceState.forEach(([panel, wasOpen]) => { panel.open = wasOpen; });
+  updateReading();
+});

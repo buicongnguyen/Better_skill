@@ -8,11 +8,24 @@ const esc = text => text.replaceAll('&', '&amp;').replaceAll('<', '&lt;').replac
 const files = (await readdir(path.join(root, 'book'))).filter(f => f.endsWith('.html')).sort();
 const sources = JSON.parse(await read('book/sources.json'));
 const diagrams = JSON.parse(await read('diagrams/catalog.json'));
+const evidence = JSON.parse(await read('book/evidence.json'));
+const sourceLinks = numbers => numbers.map(number => {
+  const source = sources.find(s => s.id === number);
+  if (!source) throw new Error(`Unknown evidence source ${number}`);
+  return `<a href="${esc(source.verification.url || source.url)}">${esc(source.title)} ↗</a> <a class="evidence-note-link" href="#source-${number}">[${number}: reading note]</a>`;
+}).join('<br>');
 const chapters = [];
 for (const file of files) {
   let body = await read(`book/${file}`);
   const [, id, title] = body.match(/<h2 id="([^"]+)">([^<]+)<\/h2>/) ?? [];
   if (!id) throw new Error(`Missing chapter title: ${file}`);
+  const sectionTitles = ['Introduction'];
+  body = body.replace(/<h3>([^<]+)<\/h3>/g, (_, heading) => {
+    sectionTitles.push(heading);
+    return `<h3 id="${id}-part-${sectionTitles.length - 1}">${heading}</h3>`;
+  });
+  const chapterEvidence = evidence.find(e => e.chapter === id);
+  if (!chapterEvidence) throw new Error(`Missing chapter evidence: ${id}`);
   for (const match of [...body.matchAll(/\{\{diagram:([a-z-]+)\}\}/g)]) {
     const diagram = diagrams.find(d => d.id === match[1]);
     if (!diagram) throw new Error(`Unknown diagram ${match[1]}`);
@@ -29,13 +42,21 @@ for (const file of files) {
     return `<a class="citation" href="#source-${number}" title="${esc(source.title)}" aria-label="Source ${number}: ${esc(source.title)}">[${number}]</a>`;
   });
   body = body.replaceAll('<div class="table-wrap">', '<div class="table-wrap" tabindex="0" role="region" aria-label="Comparison table; scroll horizontally on small screens">');
+  const coverage = chapterEvidence.records.map(record => {
+    const sections = record.sections.map(n => {
+      if (!sectionTitles[n]) throw new Error(`Invalid section ${n} in ${id}`);
+      return `<a href="#${n === 0 ? id : `${id}-part-${n}`}">${esc(sectionTitles[n])}</a>`;
+    }).join(' · ');
+    return `<li><span class="evidence-basis">${esc(record.basis)}</span><h4>${esc(record.label)}</h4><p class="evidence-covers"><strong>Covers:</strong> ${sections}</p><p>${esc(record.note)}</p><p class="evidence-links">${record.sources.length ? sourceLinks(record.sources) : 'Original design: no external source establishes these targets. Evaluate them in the proposed game.'}</p></li>`;
+  }).join('');
+  body += `\n<details class="chapter-evidence" id="evidence-${id}"><summary>Source check · what supports this chapter?</summary><p>Checked 14 September 2026. Direct links below support the stated scope; original proposals are distinguished from documented or measured findings.</p><ul class="evidence-records">${coverage}</ul><a class="evidence-method" href="#review-notes">Read the review method and corrections ↗</a></details>`;
   chapters.push({ id, title, body });
 }
 const sourceNote = value => esc(value).replace(/\[(\d{2})\]/g, (_, id) => {
   if (!sources.some(s => s.id === id)) throw new Error(`Unknown source cross-reference ${id}`);
   return `<a href="#source-${id}">[${id}]</a>`;
 });
-const refs = sources.map(s => `<li id="source-${s.id}"><span class="source-number">${s.id}</span><div class="source-body"><span class="source-type">${esc(s.type)}</span><h3><a href="${esc(s.url)}">${esc(s.title)} ↗</a></h3><div class="source-meta"><span class="source-badge${s.freshness === 'Historical exception' ? ' historical' : ''}">${esc(s.freshness)}</span><span>${esc(s.date)}</span></div><h4 class="source-summary-label">Main items</h4><ul class="source-summary">${s.summary.map(item => `<li>${esc(item)}</li>`).join('')}</ul><p class="source-application"><strong>For this book:</strong> ${sourceNote(s.application)}</p><p class="source-limit"><strong>Limits / Astra relevance:</strong> ${sourceNote(s.limits)}</p>${s.video ? `<p class="source-extra"><a href="${esc(s.video)}">Companion YouTube video ↗</a> · ${esc(s.videoNote || 'Linked transcript mirror reviewed.')}</p>` : ''}<p class="source-reviewed">Reviewed 14 September 2026</p></div></li>`).join('');
+const refs = sources.map(s => `<li id="source-${s.id}"><span class="source-number">${s.id}</span><div class="source-body"><span class="source-type">${esc(s.type)}</span><h3><a href="${esc(s.url)}">${esc(s.title)} ↗</a></h3><div class="source-meta"><span class="source-badge${s.freshness === 'Historical exception' ? ' historical' : ''}">${esc(s.freshness)}</span><span>${esc(s.date)}</span></div><h4 class="source-summary-label">${s.verification.status === 'Transcript unavailable' ? 'Reading status' : 'Main items'}</h4><ul class="source-summary">${s.summary.map(item => `<li>${esc(item)}</li>`).join('')}</ul><p class="source-application"><strong>For this book:</strong> ${sourceNote(s.application)}</p><p class="source-limit"><strong>Limits / Astra relevance:</strong> ${sourceNote(s.limits)}</p><div class="source-verification"><p><strong>${esc(s.verification.status)} · ${esc(s.verification.checked)}</strong></p><p><strong>Passage locator:</strong> <a href="${esc(s.verification.url || s.url)}">${esc(s.verification.locator)} ↗</a></p>${s.verification.note ? `<p>${esc(s.verification.note)}</p>` : ''}${s.related ? `<p><strong>Companion references:</strong><br>${s.related.map(r => `<a href="${esc(r.url)}">${esc(r.title)} ↗</a>`).join('<br>')}</p>` : ''}</div>${s.video ? `<p class="source-extra"><a href="${esc(s.video)}">Original / companion YouTube video ↗</a> · ${esc(s.videoNote || 'Selected transcript passage checked through a mirror.')}</p>` : ''}</div></li>`).join('');
 const nav = chapters.map((c, i) => `<a href="#${c.id}"><span>${String(i + 1).padStart(2, '0')}</span>${c.title}</a>`).join('');
 let template = await read('site/template.html');
 template = template.replaceAll('{{chapterCount}}', String(chapters.length)).replace('{{nav}}', nav).replace('{{chapters}}', chapters.map((c, i) => `<section class="chapter" aria-labelledby="${c.id}"><div class="chapter-kicker">CHAPTER ${String(i + 1).padStart(2, '0')}</div>${c.body}</section>`).join('\n')).replace('{{sources}}', refs);
@@ -50,5 +71,6 @@ await cp(path.join(root, 'node_modules/mermaid/LICENSE'), path.join(root, 'dist/
 await cp(path.join(root, 'diagrams'), path.join(root, 'dist/diagrams'), { recursive: true });
 await cp(path.join(root, 'site/favicon.svg'), path.join(root, 'dist/favicon.svg'));
 await cp(path.join(root, 'prompts'), path.join(root, 'dist/prompts'), { recursive: true });
+await cp(path.join(root, 'research'), path.join(root, 'dist/research'), { recursive: true });
 await writeFile(path.join(root, 'dist/.nojekyll'), '');
 console.log(`Built ${chapters.length} chapters and ${sources.length} sources into dist/`);

@@ -1,14 +1,16 @@
 flowchart TD
   accTitle: The observable thinking and decision loop
-  accDescr: Define the outcome, resolve the most important unknown, build a small result, inspect evidence, and choose whether to revise or finish.
+  accDescr: Define the outcome, resolve the most important unknown, build a small result, inspect evidence, and revise or finish. If effort is exhausted or progress needs unavailable input, record the partial result and blocker.
   A["Name the desired outcome"] --> B["List constraints and unknowns"]
   B --> C{"Enough evidence to choose?"}
   C -->|No| D["Research or run one small experiment"]
-  D --> B
+  D --> K{"Effort left and next action possible?"}
+  K -->|Yes| B
+  K -->|No| L["Record partial result, blocker, and next needed input"]
   C -->|Yes| E["Choose the next useful action"]
   E --> F["Build a reviewable result"]
   F --> G["Inspect behavior and evidence"]
   G --> H{"Acceptance conditions met?"}
   H -->|No| I["Classify the failure"]
-  I --> B
+  I --> K
   H -->|Yes| J["Record the decision and finish"]

@@ -1,14 +1,20 @@
 flowchart TD
   accTitle: A bounded asynchronous video job
-  accDescr: Submit one generation request, persist its task ID, wait and check status, then save a successful output. Failures and deadlines stop the loop without silently submitting another paid task.
+  accDescr: Submit once per attempt and persist the ID. Reconcile uncertain submissions. Poll pending, running, or throttled tasks within a deadline; retry only transient status errors with bounded backoff. Save successful output. A local timeout does not cancel the remote task.
   A["Validated input and authorized budget"] --> B["Submit generation once"]
-  B --> C["Persist task ID and attempt record"]
-  C --> D["Wait with a bounded interval"]
+  B --> L{"Task ID received?"}
+  L -->|Yes| C["Persist task ID and attempt record"]
+  L -->|No or uncertain| M["Record response; reconcile before a new attempt"]
+  C --> G{"Deadline reached?"}
+  G -->|No| D["Wait with bounded interval and backoff"]
+  G -->|Yes| H["Stop local wait; preserve ID; remote job may continue"]
   D --> E["Retrieve status for this task ID"]
   E --> F{"Status"}
-  F -->|Pending or running| G{"Deadline reached?"}
-  G -->|No| D
-  G -->|Yes| H["Record timeout; preserve task ID"]
+  F -->|Pending, running, or throttled| G
+  E -->|Retryable HTTP error| G
+  E -->|Fatal HTTP error| N["Stop and preserve record for review"]
+  F -->|Unknown| N
   F -->|Failed or canceled| I["Record failure for review"]
   F -->|Succeeded| J["Retrieve and save output file"]
+  J -->|Download fails| N
   J --> K["Review before assembly or publication"]

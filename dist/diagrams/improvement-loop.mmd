@@ -1,6 +1,6 @@
 flowchart TD
   accTitle: Improve through a controlled comparison
-  accDescr: Preserve a baseline, classify the failure, change the relevant part, compare the same scenario, and keep only demonstrated improvements.
+  accDescr: Preserve a baseline, classify the failure, change the relevant part, compare the same scenario, and keep demonstrated improvements. Stop at the effort limit or unavailable input and record the unresolved issue with the best verified baseline.
   A["Save the baseline and failing scenario"] --> B{"What failed?"}
   B -->|Wrong intended behavior| C["Clarify one rule"]
   B -->|Implementation bug| D["Repair the causal code"]
@@ -13,4 +13,6 @@ flowchart TD
   G --> H{"Better without unacceptable regressions?"}
   H -->|Yes| I["Keep the change and record evidence"]
   H -->|No| J["Revise or restore the experiment"]
-  J --> A
+  J --> K{"Effort left and next action possible?"}
+  K -->|Yes| A
+  K -->|No| L["Keep best verified baseline; record unresolved issue"]

@@ -19,6 +19,9 @@ job coordination justifies it. Explain the choice briefly using the target resul
 Prepare a shot manifest with stable IDs, intent, duration, source type, inputs,
 output path, and review status. Show actual mechanics with gameplay capture.
 Label generated concept footage. Compose exact titles in the edit.
+An all-generated multi-shot recipe is a concept variant; it must not replace
+shots that claim to demonstrate implemented mechanics. Verify cloud template
+availability separately from a local model guide.
 
 Use existing relevant skills where helpful. Do not create a custom skill or hook
 unless a missing recurring procedure or useful event action justifies it.
@@ -31,8 +34,13 @@ If no paid-generation budget is supplied, prepare the request but do not submit 
 For authorized generation: validate the provider's actual schema; submit once;
 persist task ID, shot ID, model/version, inputs, and attempt number. Wait and poll
 within a deadline using provider guidance. Preserve the ID after a timeout and
-check the existing job before retrying. Save outputs to durable local/project
-storage and record actual cost when available. Keep credentials out of GitHub.
+check the existing job before retrying. Handle all documented nonterminal states
+(including THROTTLED on Runway), retryable status-request errors with bounded
+backoff, and unknown/fatal outcomes. A local timeout does not cancel a remote job.
+If submission is uncertain and no ID was returned, reconcile before resubmitting.
+Save outputs to durable local/project storage; receiving download instructions
+is not proof a file was saved. Verify the file and record actual cost when
+available. Keep credentials out of GitHub.
 
 Inspect each clip, then watch the full rendered export for timing, continuity,
 legible titles, audio, and faithful gameplay. Repair the relevant shot or layer

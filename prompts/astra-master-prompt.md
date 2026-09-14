@@ -14,7 +14,7 @@ SCOPE AND RULES
 - The player begins with three health points and 90 seconds. One drone follows a deterministic visible patrol. Contact causes one damage, followed by one second of invulnerability.
 - Each cell can be collected once. Display the cell count, health, remaining time, and beacon readiness.
 - Use title, playing, paused, won, and lost states. Pause freezes simulation and timer. Losing all health or time ends the round. Evaluate loss conditions before beacon activation within a simulation step so simultaneous expiry and activation result in loss.
-- After win or loss, freeze gameplay. Restart resets player position, cells, health, timer, drone route, cooldowns, effects, and input state. Window blur should release held inputs and pause an active round.
+- After win or loss, freeze gameplay. Restart is available from paused, won, and lost: reset player position, cells, health, timer, drone route, cooldowns, effects, and input state, then enter playing for a fresh round. Window blur releases held inputs and pauses an active round; returning focus requires explicit Resume.
 - Exclude multiplayer, accounts, procedural worlds, inventory, dialogue, and extra levels from this release.
 
 TECHNICAL DIRECTION
@@ -33,7 +33,7 @@ OUTCOME CHECKPOINTS
 Use these to track completion. Adapt the implementation order when dependencies or the existing project justify it.
 M0: Scaffold, document setup, build successfully, and display a minimal scene.
 M1: Make movement, boundaries, camera, and pause reliable.
-M2: Implement cells, beacon activation, HUD, win, and complete restart.
+M2: Implement cells, beacon activation, HUD, timer display, win, and complete restart from pause or win. Loss remains for M3.
 M3: Implement drone, damage cooldown, timer loss, and health loss.
 M4: Apply coherent art and sound; inspect readability and feedback.
 M5: Test production output under /signal-garden/, fix important failures, and prepare the release workflow.

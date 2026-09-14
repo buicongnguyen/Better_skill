@@ -2,16 +2,19 @@
 <p class="lead">The repository is the handoff between yesterday and tomorrow.</p>
 <p>Git records local history. GitHub holds a remote copy, review conversations, issues, and automation. GitHub Pages serves the published game or book. Keeping those roles separate makes debugging easier: a local commit is not a push, a push is not a successful deployment, and a deployment is not proof that the game is playable.</p>
 <h3>Step 1: establish a clean starting point</h3>
-<p>In a new empty game folder, initialize Git on <code>main</code>. If the folder is already a repository, inspect its status and preserve the current work instead. The following commands are an example for a <em>new</em> Signal Garden project; replace the account name before creating its remote.</p>
+<p>In a new empty game folder, initialize Git on <code>main</code>. If the folder is already a repository, inspect its status and preserve the current work instead. Install Git and GitHub CLI, and authenticate GitHub CLI before creating a remote. The following commands are an example for a <em>new</em> Signal Garden project; replace the account name first. {{cite:39}} {{cite:40}}</p>
 <pre><code>git init -b main
 git status --short
 # Create the README, .gitignore, game brief, and project files.
-git add README.md .gitignore package.json package-lock.json src docs
+# Review ignore rules and all scaffolded files before staging.
+git status --short
+git add --all
 git diff --cached --stat
+git diff --cached
 git commit -m "chore: establish the Signal Garden baseline"
 gh repo create YOUR_ACCOUNT/signal-garden --public --source=. --remote=origin
 git push -u origin main</code></pre>
-<p>Stage paths that actually exist after scaffolding. Inspect the staged diff before committing. A public repository and public Pages site are publication choices; use them for files intended to be public. Keep credentials, local environment files, and unlicensed assets out of the commit.</p>
+<p>In this new project, stage the complete scaffold, including <code>index.html</code>, configuration files, and required assets. The two diff commands show its file summary and actual staged content. Set ignore rules for dependencies, local environment files, and build output as appropriate before staging. In an existing repository, stage only the intended paths so unrelated work stays separate. A public repository and Pages site publish the selected files; keep credentials and unlicensed assets out of the commit. {{cite:39}}</p>
 <h3>Step 2: keep the important decisions in files</h3>
 <pre><code>signal-garden/
   AGENTS.md                     # Optional short project conventions
@@ -35,15 +38,17 @@ git push -u origin main</code></pre>
   package-lock.json</code></pre>
 <p>This structure is a starting proposal, not a demand to create empty abstractions. A tiny build can begin with fewer modules. Separate systems when their responsibilities become clear, especially if simulation logic is difficult to test because it is mixed with rendering code.</p>
 <h3>Step 3: make a checkpoint per meaningful change</h3>
-<p>A useful commit says what behavior now works: <code>feat: collect cells and power the beacon</code> is better than <code>update</code>. Save a known working baseline before trying an uncertain idea. A branch such as <code>experiment/camera-follow</code> makes the experiment visible and gives you a clean place to compare the result.</p>
-<pre><code>git switch -c experiment/camera-follow
-# Ask the agent for the bounded camera change, then playtest it.
+<p>A useful commit says what behavior now works: <code>feat: collect cells and power the beacon</code> is better than <code>update</code>. Save a known working baseline before trying an uncertain idea. This example improves readability while preserving Signal Garden’s fixed camera. <a href="https://git-scm.com/docs/git-switch">The switch reference</a> documents creating its branch. Create the named playtest file with your observations, and adapt the paths to the actual project. {{cite:39}}</p>
+<pre><code>git switch -c experiment/camera-readability
+# Adjust the fixed camera framing, then playtest the obstructed route.
 git diff
-git add src/render/camera.ts docs/playtests/camera-follow.md
-git commit -m "feat: soften camera follow while preserving beacon visibility"
-git push -u origin experiment/camera-follow
-gh pr create --title "Improve camera follow" --body-file docs/pr-camera.md</code></pre>
-<p>The PR description should state the player-visible problem, the change, and what was checked. For a solo experiment, a branch and reviewed commit may be enough. Use a PR when review or CI gates add value. Do not mark a change good only because the agent’s summary sounds confident.</p>
+git add src/render/camera.ts docs/playtests/camera-readability.md
+git diff --cached
+git commit -m "fix: keep the robot visible behind the north planter"
+git push -u origin experiment/camera-readability
+# Write docs/pr-camera.md with the problem, change, and checks first.
+gh pr create --base main --head experiment/camera-readability --title "Improve fixed camera readability" --body-file docs/pr-camera.md</code></pre>
+<p>The <code>--body-file</code> option reads an existing file; it does not create the description for you. The PR should state the player-visible problem, change, and checks. For a solo experiment, a branch and reviewed commit may be enough. Use a PR when review or CI gates add value. {{cite:41}}</p>
 <h3>Step 4: leave a short continuation note</h3>
 <p>At the end of a session, update <code>progress.md</code> with the current commit, working behavior, known failure, launch command, and one next milestone. Anthropic’s long-running-agent report uses progress artifacts and Git history to reduce the need for a new session to reconstruct previous work. {{cite:05}}</p>
-<p>When a bad change has already been shared, a reviewed <code>git revert</code> creates a new commit that undoes it while preserving history. Inspect dependencies between commits before reverting. For an uncommitted experiment, ask the agent to show its exact diff and restore only its own changes; unrelated work may be present.</p>
+<p>When a bad change has already been shared, <a href="https://git-scm.com/docs/git-revert">git revert</a> creates a new commit that undoes it while preserving history. Inspect dependencies between commits and resolve any conflicts before completing the revert. For an uncommitted experiment, show the exact diff and restore only the intended changes; unrelated work may be present. {{cite:39}}</p>
