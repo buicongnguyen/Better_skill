@@ -1,0 +1,50 @@
+<h2 id="cookbook">Copy-and-paste cookbook</h2>
+<p class="lead">One worked prompt for every step in the <a href="#summary">Quick summary</a>.</p><p>Start with <a href="#environment">environment setup</a>. These original examples follow Signal Garden’s <a href="#brief">game rules</a>. Paste <strong>one prompt at a time</strong> into the chat attached to your game folder, inspect the result, then continue. Keep your own agreed requirements when adapting the example. The recipes are proposed workflows, not a benchmark or a promise that one prompt produces a finished game.</p><p>A chatbot without repository and execution tools can help draft a brief or prompt; it cannot inspect your local code, run checks or publish it. For those steps use a coding agent with the selected folder and relevant tools. In Claude Code, use an available Claude model; writing “Astra” in a prompt does not change the model. Existing project files are the continuing source of truth. {{cite:56}} {{cite:57}}</p>
+<h3>1 · Define the game</h3>
+<p>Use this first, with an empty game folder or an existing brief.</p>
+{{prompt:cookbook-01-brief.md}}
+<p><strong>Expected output:</strong> A short brief and acceptance checklist with consistent rules.</p><p>Full reading: <a href="#brief">Design a game worth finishing</a> · <a href="#better-loop">The better loop</a>. {{cite:17}}</p>
+<h3>2 · Choose the approach</h3>
+<p>Use after defining scope. A spike answers one risky technical question.</p>
+{{prompt:cookbook-02-approach.md}}
+<p><strong>Expected output:</strong> A recorded engine choice and export evidence if an experiment was needed.</p><p>Full reading: <a href="#approaches">Six ways to build</a> · <a href="#stack">Choose the right workspace</a>. {{cite:09}} {{cite:11}} {{cite:12}}</p>
+<h3>3 · Check current evidence</h3>
+<p>Use before applying advice about versions, models or skills. Requires browsing for fresh verification.</p>
+{{prompt:cookbook-03-evidence.md}}
+<p><strong>Expected output:</strong> Source notes that distinguish checked facts from hypotheses.</p><p>Full reading: <a href="#research">Learn from the evidence</a>. {{cite:17}} {{cite:52}}</p>
+<h3>4 · Save project memory</h3>
+<p>Use once the brief and approach agree. Git author identity must be configured before a commit.</p>
+{{prompt:cookbook-04-memory.md}}
+<p><strong>Expected output:</strong> Reviewed project documents and a local baseline commit; nothing published.</p><p>Full reading: <a href="#github">Give the work a memory</a>. {{cite:07}} {{cite:39}} {{cite:58}}</p>
+<h3>5 · Choose useful skills</h3>
+<p>Use for the next concrete task, not as a request to install every popular skill.</p>
+{{prompt:cookbook-05-skills.md}}
+<p><strong>Expected output:</strong> A justified choice: existing tools, available skill, or a specific missing capability.</p><p>Full reading: <a href="#skills">Decide whether a skill adds value</a> · <a href="#thinking-flows">Think, decide, improve</a>. {{cite:08}} {{cite:17}}</p>
+<h3>6 · Start a focused build</h3>
+<p>Send to the coding agent after steps 1–5. Select GPT-6 Astra in Codex if your account offers it.</p>
+{{prompt:cookbook-06-start.md}}
+<p><strong>Expected output:</strong> A runnable movement slice and honest verification record. The longer bootstrap is linked below.</p><p>Full reading: <a href="#master-prompt">The Astra master prompt</a> · <a href="#meta-prompt">Make a prompt that makes a prompt</a>. {{cite:04}} {{cite:17}}</p>
+<h3>7 · Continue one milestone</h3>
+<p>Repeat this after inspecting each checkpoint. Read the progress file again in a new session.</p>
+{{prompt:cookbook-07-next.md}}
+<p><strong>Expected output:</strong> One additional playable milestone, its checks and a reviewed commit.</p><p>Full reading: <a href="#milestones">From empty folder to game</a>. {{cite:04}} {{cite:05}}</p>
+<h3>8 · Verify actual play</h3>
+<p>Use on a production build. The human observation task is for you or another player.</p>
+{{prompt:cookbook-08-playtest.md}}
+<p><strong>Expected output:</strong> Reproducible failures and an explicit list of checks still pending.</p><p>Full reading: <a href="#verify">Verify the game you can play</a>. {{cite:43}} {{cite:44}} {{cite:45}}</p>
+<h3>9 · Repair and improve the next prompt</h3>
+<p>Use with real failure evidence. Save outcomes with the prompts; do not paste the whole chat into the next instruction.</p>
+{{prompt:cookbook-09-refine.md}}
+<p><strong>Expected output:</strong> A tested repair and a compact candidate prompt, with a fair comparison plan.</p><p>Full reading: <a href="#refine">Refine the idea and the process</a>. {{cite:39}} {{cite:52}}</p>
+<h3>10 · Publish to one destination</h3>
+<p>Choose one prompt below and replace the account fields. These prompts explicitly authorize publication of this game’s source and build. Check the destination before sending.</p>
+<h4>GitHub Pages · public static game</h4>
+{{prompt:cookbook-10-pages.md}}
+<h4>Vercel Hobby · personal, non-commercial game</h4>
+{{prompt:cookbook-10-vercel.md}}
+<p><strong>Expected output:</strong> A commit, a successful deployment of that revision, a public game URL and recorded gameplay checks.</p><p>Full reading: <a href="#environment">Set up your environment</a> · <a href="#publish">Publish and close the loop</a>. {{cite:12}} {{cite:13}} {{cite:40}} {{cite:46}} {{cite:63}} {{cite:64}}</p>
+<h3>11 · Optional: introduce the game</h3>
+<p>Use after real gameplay exists. A capture plan is the right output when footage or recording tools are missing.</p>
+{{prompt:cookbook-11-trailer.md}}
+<p><strong>Expected output:</strong> A 20-second shot plan, verified media list and, when feasible, a reviewed video draft.</p><p>Full reading: <a href="#video-workflows">Make a video with an agent</a>. {{cite:26}} {{cite:27}} {{cite:47}}</p>
+<p><a href="#summary">Back to concise steps →</a></p>

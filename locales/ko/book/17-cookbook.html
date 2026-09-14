@@ -1,0 +1,50 @@
+<h2 id="cookbook">복사해서 쓰는 프롬프트</h2>
+<p class="lead"><a href="#summary">빠른 요약</a>의 각 단계에 대응하는 예제 프롬프트입니다.</p><p><a href="#environment">환경 설정</a>부터 시작하세요. 이 독창적 예제는 <a href="#brief">Signal Garden 규칙</a>을 따릅니다. 게임 폴더에 연결된 채팅에 <strong>한 번에 하나씩</strong> 붙여 넣고 결과를 확인한 다음 진행하세요. 예제를 바꿀 때는 합의한 자신의 요구 사항을 유지하세요. 제안된 절차이며 벤치마크나 한 프롬프트로 완성된 게임을 얻는다는 보장은 아닙니다.</p><p>저장소·실행 도구가 없는 챗봇은 명세나 프롬프트 작성을 돕지만 로컬 코드 검사, 테스트, 공개는 할 수 없습니다. 해당 단계에는 폴더와 필요한 도구에 접근하는 코딩 에이전트를 사용하세요. Claude Code에서는 제공되는 Claude 모델을 사용합니다. 프롬프트에 “Astra”라고 적어도 모델이 바뀌지 않습니다. 프로젝트 파일을 지속적인 기준으로 유지하세요. {{cite:56}} {{cite:57}}</p>
+<h3>1 · 게임 정의</h3>
+<p>빈 게임 폴더나 기존 명세에서 먼저 사용합니다.</p>
+{{prompt:cookbook-01-brief.md}}
+<p><strong>예상 결과:</strong> 일관된 규칙을 담은 짧은 명세와 수용 검사 목록.</p><p>전체 설명: <a href="#brief">완성할 가치가 있는 게임 설계</a> · <a href="#better-loop">더 나아지는 반복 과정</a>. {{cite:17}}</p>
+<h3>2 · 접근법 선택</h3>
+<p>범위를 정한 다음 사용합니다. 스파이크는 위험한 기술 질문 하나에 답합니다.</p>
+{{prompt:cookbook-02-approach.md}}
+<p><strong>예상 결과:</strong> 엔진 선택 기록과 실험이 필요했던 경우 내보내기 근거.</p><p>전체 설명: <a href="#approaches">게임을 만드는 여섯 가지 방식</a> · <a href="#stack">적합한 작업 환경 고르기</a>. {{cite:09}} {{cite:11}} {{cite:12}}</p>
+<h3>3 · 최신 근거 확인</h3>
+<p>버전, 모델, 스킬 조언을 적용하기 전에 사용합니다. 새 검증에는 웹 접근이 필요합니다.</p>
+{{prompt:cookbook-03-evidence.md}}
+<p><strong>예상 결과:</strong> 확인된 사실과 가설을 구분한 출처 노트.</p><p>전체 설명: <a href="#research">근거에서 배우기</a>. {{cite:17}} {{cite:52}}</p>
+<h3>4 · 프로젝트 기억 저장</h3>
+<p>명세와 접근법이 일치한 뒤 사용합니다. 커밋 전에 Git 작성자 정보를 설정해야 합니다.</p>
+{{prompt:cookbook-04-memory.md}}
+<p><strong>예상 결과:</strong> 검토한 문서와 로컬 기준 커밋. 아직 공개하지 않습니다.</p><p>전체 설명: <a href="#github">작업에 기억을 남기기</a>. {{cite:07}} {{cite:39}} {{cite:58}}</p>
+<h3>5 · 유용한 스킬 선택</h3>
+<p>다음 구체적 작업에 사용합니다. 인기 스킬 전부를 설치하라는 요청이 아닙니다.</p>
+{{prompt:cookbook-05-skills.md}}
+<p><strong>예상 결과:</strong> 기존 도구, 사용 가능한 스킬, 구체적인 기능 공백 중 근거 있는 선택.</p><p>전체 설명: <a href="#skills">스킬이 가치를 더하는지 판단하기</a> · <a href="#thinking-flows">생각하고 결정하고 개선하기</a>. {{cite:08}} {{cite:17}}</p>
+<h3>6 · 집중된 구현 시작</h3>
+<p>1–5단계 후 코딩 에이전트에 보냅니다. 계정에서 제공하면 Codex의 GPT-6 Astra를 선택합니다.</p>
+{{prompt:cookbook-06-start.md}}
+<p><strong>예상 결과:</strong> 실행 가능한 이동 구간과 정직한 검증 기록. 더 긴 초기 프롬프트는 아래에 연결했습니다.</p><p>전체 설명: <a href="#master-prompt">Astra 실행 프롬프트</a> · <a href="#meta-prompt">프롬프트를 만드는 프롬프트</a>. {{cite:04}} {{cite:17}}</p>
+<h3>7 · 마일스톤 하나 진행</h3>
+<p>체크포인트를 확인한 후 반복합니다. 새 세션에서는 진행 파일을 다시 읽습니다.</p>
+{{prompt:cookbook-07-next.md}}
+<p><strong>예상 결과:</strong> 추가로 완성한 플레이 마일스톤 하나, 관련 검사, 검토한 커밋.</p><p>전체 설명: <a href="#milestones">빈 폴더에서 게임까지</a>. {{cite:04}} {{cite:05}}</p>
+<h3>8 · 실제 플레이 검증</h3>
+<p>프로덕션 빌드에서 사용합니다. 사람의 관찰은 본인이나 다른 플레이어가 수행합니다.</p>
+{{prompt:cookbook-08-playtest.md}}
+<p><strong>예상 결과:</strong> 재현 가능한 실패와 아직 수행하지 않은 검사의 명시적 목록.</p><p>전체 설명: <a href="#verify">직접 플레이할 게임 검증하기</a>. {{cite:43}} {{cite:44}} {{cite:45}}</p>
+<h3>9 · 수정하고 다음 프롬프트 개선</h3>
+<p>실제 실패 근거와 함께 사용합니다. 프롬프트와 결과를 함께 저장하고 전체 대화를 다음 지침에 붙이지 마세요.</p>
+{{prompt:cookbook-09-refine.md}}
+<p><strong>예상 결과:</strong> 검사한 수정과 간결한 후보 프롬프트, 공정한 비교 계획.</p><p>전체 설명: <a href="#refine">아이디어와 과정을 다듬기</a>. {{cite:39}} {{cite:52}}</p>
+<h3>10 · 한 곳에 공개</h3>
+<p>아래 프롬프트 하나를 선택하고 계정 필드를 채우세요. 게임 소스와 빌드의 공개를 명시적으로 승인하는 문구이므로 보내기 전에 대상을 확인하세요.</p>
+<h4>GitHub Pages · 공개 정적 게임</h4>
+{{prompt:cookbook-10-pages.md}}
+<h4>Vercel Hobby · 개인·비상업적 게임</h4>
+{{prompt:cookbook-10-vercel.md}}
+<p><strong>예상 결과:</strong> 커밋, 해당 리비전의 성공한 배포, 공개 게임 URL, 플레이 검증 기록.</p><p>전체 설명: <a href="#environment">개발 환경 설정</a> · <a href="#publish">출시하고 학습 루프 마무리하기</a>. {{cite:12}} {{cite:13}} {{cite:40}} {{cite:46}} {{cite:63}} {{cite:64}}</p>
+<h3>11 · 선택: 게임 소개</h3>
+<p>실제 게임플레이가 생긴 뒤 사용합니다. 영상이나 녹화 도구가 없다면 촬영 계획을 결과로 받습니다.</p>
+{{prompt:cookbook-11-trailer.md}}
+<p><strong>예상 결과:</strong> 20초 샷 계획, 확인한 미디어 목록, 가능할 때 검토한 영상 초안.</p><p>전체 설명: <a href="#video-workflows">에이전트와 영상 만들기</a>. {{cite:26}} {{cite:27}} {{cite:47}}</p>
+<p><a href="#summary">간결한 단계로 돌아가기 →</a></p>

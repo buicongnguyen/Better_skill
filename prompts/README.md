@@ -5,3 +5,6 @@ Original templates from How to do better. Read the corresponding book chapter be
 Use astra-compact-prompt.md when the repository already contains an accurate game brief and acceptance document. Use astra-master-prompt.md to bootstrap an empty folder. The meta-prompt is optional design assistance. The game-review-skill.md sample is optional and should only be installed when its project-specific checks add value beyond available tools and documents.
 
 video-workflow-prompt.md prepares a bounded game-trailer project. Fill in actual media paths, tool access, generation budget, and publication permission. It supplies a workflow brief, not an executable video API request or a preinstalled hook.
+
+
+The cookbook adds setup-preflight.md and cookbook-01 through cookbook-11. Step 10 has separate Pages and Vercel prompts: choose one, replace account fields, and check the publication authorization before sending. Use one recipe at a time in the game folder. The files are examples, not commands to execute while building this book.

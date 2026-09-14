@@ -266,5 +266,35 @@
         "note": "PostToolUse xảy ra sau công cụ, không thể đảo ngược hành động. Trình kiểm tra, lời nhắc và bài tập đánh giá là nội dung riêng. Pages phục vụ kết quả tĩnh; sách chưa chạy hook, tác vụ trả phí hay dây chuyền video."
       }
     ]
+  },
+  {
+    "chapter": "environment",
+    "records": [
+      {
+        "label": "Phạm vi và công cụ",
+        "note": "Công cụ có vai trò riêng; đây là trình tự nhập môn đề xuất theo các trang cài chính thức."
+      },
+      {
+        "label": "Truy cập tác nhân cục bộ",
+        "note": "Đã xác minh cài ứng dụng và chọn thư mục; một tác nhân mỗi checkout là lời khuyên thực hành, không phải giới hạn sản phẩm."
+      },
+      {
+        "label": "Danh tính, xác thực, kiểm tra trước",
+        "note": "Tài liệu hỗ trợ cơ chế tài khoản, HTTPS và SSH. Kiểm tra chỉ đọc và cách chuyển bước danh tính là prompt gốc."
+      },
+      {
+        "label": "Lộ trình hosting",
+        "note": "Đã kiểm tra đầu ra tĩnh, đường dẫn con Pages, dashboard/CLI Vercel và hạn chế Hobby. Chương này chưa thực hiện triển khai game."
+      }
+    ]
+  },
+  {
+    "chapter": "cookbook",
+    "records": [
+      {
+        "label": "Công thức gốc có ranh giới theo tài liệu",
+        "note": "Mười một bước, mặc định và đầu ra là prompt minh họa gốc, không phải kết quả đo. Trích dẫn từng phần hỗ trợ cơ chế; nguồn thiết lập mới hỗ trợ truy cập cục bộ và xuất bản. Công cụ, chơi thử của người và trường đích đều được nêu rõ."
+      }
+    ]
   }
 ]

@@ -12,7 +12,11 @@
         "sources": [
           "04",
           "17",
-          "08"
+          "08",
+          "56",
+          "61",
+          "63",
+          "64"
         ]
       },
       {
@@ -742,6 +746,123 @@
           "46"
         ],
         "note": "PostToolUse happens after the tool and cannot reverse its action. The validator, prompt, and review exercise are original. Pages serves static results; no hook, paid job, or video pipeline was run for this book."
+      }
+    ]
+  },
+  {
+    "chapter": "environment",
+    "records": [
+      {
+        "sections": [
+          0,
+          1
+        ],
+        "basis": "Synthesis",
+        "sources": [
+          "56",
+          "58",
+          "59",
+          "61"
+        ],
+        "label": "Setup scope and tools",
+        "note": "Tools have distinct roles; this is a proposed beginner sequence using the linked official installation pages."
+      },
+      {
+        "sections": [
+          2,
+          3
+        ],
+        "basis": "Synthesis",
+        "sources": [
+          "56",
+          "57",
+          "07"
+        ],
+        "label": "Local agent access",
+        "note": "Verified app setup and local folder selection; the one-agent-per-checkout rule is practical advice, not a product restriction."
+      },
+      {
+        "sections": [
+          4,
+          5,
+          6
+        ],
+        "basis": "Synthesis",
+        "sources": [
+          "58",
+          "60",
+          "61",
+          "62",
+          "39"
+        ],
+        "label": "Identity, authentication and preflight",
+        "note": "The guides support account, HTTPS and SSH mechanics. The read-only preflight and staged identity handoff are original prompts."
+      },
+      {
+        "sections": [
+          7,
+          8
+        ],
+        "basis": "Synthesis",
+        "sources": [
+          "12",
+          "13",
+          "46",
+          "63",
+          "64"
+        ],
+        "label": "Hosting routes",
+        "note": "Checked static output, Pages subpath, Vercel dashboard/CLI routes and Hobby restrictions. No game deployment was performed for this chapter."
+      }
+    ]
+  },
+  {
+    "chapter": "cookbook",
+    "records": [
+      {
+        "sections": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "basis": "Synthesis",
+        "sources": [
+          "17",
+          "04",
+          "05",
+          "07",
+          "08",
+          "09",
+          "11",
+          "12",
+          "13",
+          "26",
+          "27",
+          "39",
+          "40",
+          "43",
+          "44",
+          "45",
+          "46",
+          "47",
+          "52",
+          "56",
+          "57",
+          "58",
+          "63",
+          "64"
+        ],
+        "label": "Original recipes with documented boundaries",
+        "note": "The eleven steps, defaults and expected outputs are original worked prompts, not measured results. Section citations point to supporting mechanics; current setup sources cover local access and publishing. Tool availability, human playtesting and destination fields remain explicit."
       }
     ]
   }

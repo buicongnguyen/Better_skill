@@ -796,5 +796,140 @@
     "verification": {
       "note": "Đã kiểm tra khóa học viết; bản chép lời YouTube liên quan vẫn không truy xuất được."
     }
+  },
+  {
+    "id": "56",
+    "type": "Tài liệu chính thức",
+    "date": "Tài liệu trực tiếp · kiểm tra 14/9/2026; trang không nêu ngày",
+    "summary": [
+      "Desktop làm việc với thư mục cục bộ được chọn.",
+      "Đăng nhập rồi chọn Codex để lập trình.",
+      "Windows hỗ trợ PowerShell gốc hoặc WSL."
+    ],
+    "application": "Nối thư mục game trước khi dùng cẩm nang.",
+    "limits": "Model được cấp và quyền môi trường có thể khác nhau.",
+    "verification": {
+      "note": "Đã đọc đoạn liên kết; đây là hướng dẫn, chưa thực hiện cài đặt hay triển khai game."
+    }
+  },
+  {
+    "id": "57",
+    "type": "Tài liệu chính thức",
+    "date": "Tài liệu trực tiếp · kiểm tra 14/9/2026; trang không nêu ngày",
+    "summary": [
+      "Code truy cập dự án cục bộ.",
+      "Desktop tích hợp Claude Code; cài CLI là việc riêng.",
+      "Code cần gói đủ điều kiện; Git hỗ trợ cách ly worktree."
+    ],
+    "application": "Dùng Code → Local với thư mục game.",
+    "limits": "Chat, Code cục bộ và môi trường cloud khác nhau.",
+    "verification": {
+      "note": "Đã đọc đoạn liên kết; đây là hướng dẫn, chưa thực hiện cài đặt hay triển khai game."
+    }
+  },
+  {
+    "id": "58",
+    "type": "Tài liệu chính thức",
+    "date": "Tài liệu trực tiếp · kiểm tra 14/9/2026; trang không nêu ngày",
+    "summary": [
+      "Git có cách cài theo hệ điều hành.",
+      "Cấu hình tên tác giả và email commit.",
+      "Xác thực GitHub dùng HTTPS hoặc SSH riêng."
+    ],
+    "application": "Kiểm tra Git trước commit mốc.",
+    "limits": "Danh tính tác giả không phải đăng nhập tài khoản.",
+    "verification": {
+      "note": "Đã đọc đoạn liên kết; đây là hướng dẫn, chưa thực hiện cài đặt hay triển khai game."
+    }
+  },
+  {
+    "id": "59",
+    "type": "Tài liệu chính thức",
+    "date": "Tài liệu trực tiếp · kiểm tra 14/9/2026; trang không nêu ngày",
+    "summary": [
+      "Bộ chọn tải phân biệt LTS và Current.",
+      "Chọn bản cài đúng hệ điều hành và kiến trúc.",
+      "Trang liên kết trạng thái phát hành và cách xác minh."
+    ],
+    "application": "Dùng LTS còn hỗ trợ, hợp bộ công cụ game.",
+    "limits": "Kiểm tra yêu cầu thật của dự án; số phiên bản không tự chứng minh tương thích.",
+    "verification": {
+      "note": "Đã đọc đoạn liên kết; đây là hướng dẫn, chưa thực hiện cài đặt hay triển khai game."
+    }
+  },
+  {
+    "id": "60",
+    "type": "Tài liệu chính thức",
+    "date": "Tài liệu trực tiếp · kiểm tra 14/9/2026; trang không nêu ngày",
+    "summary": [
+      "Tạo tài khoản cá nhân qua trang đăng ký.",
+      "Xác minh email để dùng thao tác repo cơ bản.",
+      "GitHub khuyên dùng xác thực hai yếu tố."
+    ],
+    "application": "Tự hoàn tất tài khoản trước khi tác nhân xuất bản.",
+    "limits": "Tài khoản doanh nghiệp quản lý có quy trình khác.",
+    "verification": {
+      "note": "Đã đọc đoạn liên kết; đây là hướng dẫn, chưa thực hiện cài đặt hay triển khai game."
+    }
+  },
+  {
+    "id": "61",
+    "type": "Tài liệu chính thức",
+    "date": "Tài liệu trực tiếp · kiểm tra 14/9/2026; trang không nêu ngày",
+    "summary": [
+      "Đăng nhập hỗ trợ trình duyệt và chọn HTTPS hoặc SSH.",
+      "Đăng nhập HTTPS cũng có thể xác thực Git.",
+      "Thông tin đăng nhập có thể được lưu dự phòng bằng văn bản thuần."
+    ],
+    "application": "Dùng đăng nhập trình duyệt rồi kiểm tra trạng thái trong môi trường tác nhân thật.",
+    "limits": "GitHub CLI, truyền Git và đăng nhập Codex là các phần khác nhau.",
+    "verification": {
+      "note": "Đã đọc đoạn liên kết; đây là hướng dẫn, chưa thực hiện cài đặt hay triển khai game."
+    }
+  },
+  {
+    "id": "62",
+    "type": "Tài liệu chính thức",
+    "date": "Tài liệu trực tiếp · kiểm tra 14/9/2026; trang không nêu ngày",
+    "summary": [
+      "Kiểm tra khóa có sẵn trước khi tạo thêm.",
+      "Thêm khóa công khai vào GitHub, bảo vệ khóa riêng.",
+      "Xác minh dấu vân tay máy chủ và tài khoản đã xác thực."
+    ],
+    "application": "Dùng SSH như cách truyền Git thay thế.",
+    "limits": "Thiết lập ssh-agent tùy hệ điều hành; kiểm tra thành công có thể trả mã 1.",
+    "verification": {
+      "note": "Đã đọc đoạn liên kết; đây là hướng dẫn, chưa thực hiện cài đặt hay triển khai game."
+    }
+  },
+  {
+    "id": "63",
+    "type": "Tài liệu chính thức",
+    "date": "Trang bắt đầu cập nhật 11/8/2026",
+    "summary": [
+      "Triển khai qua CLI hoặc nhập Git trên dashboard.",
+      "Thay đổi Git đã nối có thể kích hoạt triển khai.",
+      "Dự án Vite có thể build đầu ra production tĩnh."
+    ],
+    "application": "Kiểm tra phạm vi, thư mục gốc, đầu ra và URL production công khai.",
+    "limits": "Dashboard không cần skill thêm; framework và quyền tài khoản vẫn quan trọng.",
+    "verification": {
+      "note": "Đã đọc đoạn liên kết; đây là hướng dẫn, chưa thực hiện cài đặt hay triển khai game."
+    }
+  },
+  {
+    "id": "64",
+    "type": "Tài liệu chính thức",
+    "date": "Cập nhật 31/8/2026",
+    "summary": [
+      "Hobby là gói miễn phí.",
+      "Chỉ dành cho cá nhân, phi thương mại.",
+      "Có hạn mức, có thể tạm dừng tính năng."
+    ],
+    "application": "Kiểm tra điều kiện trước khi xuất bản ví dụ lên Hobby.",
+    "limits": "Không hứa hosting vô hạn hoặc được dùng thương mại.",
+    "verification": {
+      "note": "Đã đọc đoạn liên kết; đây là hướng dẫn, chưa thực hiện cài đặt hay triển khai game."
+    }
   }
 ]

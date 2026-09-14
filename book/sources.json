@@ -1169,5 +1169,250 @@
       "locator": "Written Survivor Arena FPS introduction and course sequence; date 2025/03/03",
       "note": "Written course checked. Associated YouTube transcript remains unavailable."
     }
+  },
+  {
+    "id": "56",
+    "type": "Official documentation",
+    "date": "Live documentation · checked 14 September 2026; page date not stated",
+    "summary": [
+      "Desktop can work with a selected local folder.",
+      "Sign in, then select Codex for development.",
+      "Windows supports native PowerShell or WSL."
+    ],
+    "application": "Connect the game folder before using the cookbook.",
+    "limits": "Model access and environment permissions vary.",
+    "verification": {
+      "note": "Linked passages checked; this is setup guidance, not an executed installation or game deployment.",
+      "checked": "2026-09-14",
+      "status": "Content checked",
+      "locator": "Setup: install, sign in, select folder, choose Codex"
+    },
+    "title": "OpenAI · Desktop quickstart and Windows setup",
+    "url": "https://learn.chatgpt.com/docs/quickstart",
+    "freshness": "Current documentation",
+    "related": [
+      {
+        "title": "Windows installation and environment",
+        "url": "https://learn.chatgpt.com/docs/windows/windows-app"
+      },
+      {
+        "title": "Desktop overview",
+        "url": "https://learn.chatgpt.com/docs/app"
+      }
+    ]
+  },
+  {
+    "id": "57",
+    "type": "Official documentation",
+    "date": "Live documentation · checked 14 September 2026; page date not stated",
+    "summary": [
+      "Code has local project access.",
+      "Desktop includes Claude Code; CLI installation is separate.",
+      "Code requires eligible subscription access; Git supports worktree isolation."
+    ],
+    "application": "Use Code → Local with the game folder.",
+    "limits": "Chat, local Code and cloud environments differ.",
+    "verification": {
+      "note": "Linked passages checked; this is setup guidance, not an executed installation or game deployment.",
+      "checked": "2026-09-14",
+      "status": "Content checked",
+      "locator": "Install; Start your first session; desktop reference: Git and Git LFS errors"
+    },
+    "title": "Anthropic · Claude Code desktop quickstart",
+    "url": "https://code.claude.com/docs/en/desktop-quickstart",
+    "freshness": "Current documentation",
+    "related": [
+      {
+        "title": "Desktop environment and troubleshooting",
+        "url": "https://code.claude.com/docs/en/desktop"
+      }
+    ]
+  },
+  {
+    "id": "58",
+    "type": "Official documentation",
+    "date": "Live documentation · checked 14 September 2026; page date not stated",
+    "summary": [
+      "Git offers OS-specific installation routes.",
+      "Configure the author name and commit email.",
+      "GitHub authentication uses HTTPS or SSH separately."
+    ],
+    "application": "Check Git before making the baseline commit.",
+    "limits": "Author identity is not an account login.",
+    "verification": {
+      "note": "Linked passages checked; this is setup guidance, not an executed installation or game deployment.",
+      "checked": "2026-09-14",
+      "status": "Content checked",
+      "locator": "Git for Windows downloads; Set up Git; Setting your commit email address"
+    },
+    "title": "Git and GitHub · Installation and commit identity",
+    "url": "https://git-scm.com/install/windows",
+    "freshness": "Current documentation",
+    "related": [
+      {
+        "title": "Set up Git",
+        "url": "https://docs.github.com/en/get-started/git-basics/set-up-git"
+      },
+      {
+        "title": "Commit email and no-reply address",
+        "url": "https://docs.github.com/en/account-and-profile/how-tos/email-preferences/setting-your-commit-email-address"
+      }
+    ]
+  },
+  {
+    "id": "59",
+    "type": "Official documentation",
+    "date": "Live documentation · checked 14 September 2026; page date not stated",
+    "summary": [
+      "The download selector distinguishes LTS and Current.",
+      "Choose the installer for your OS and architecture.",
+      "The page also links release status and verification."
+    ],
+    "application": "Use a supported LTS compatible with the game toolchain.",
+    "limits": "Check actual project requirements; a version number alone is not proof of compatibility.",
+    "verification": {
+      "note": "Linked passages checked; this is setup guidance, not an executed installation or game deployment.",
+      "checked": "2026-09-14",
+      "status": "Content checked",
+      "locator": "LTS selector; operating system and npm options"
+    },
+    "title": "Node.js · Downloads",
+    "url": "https://nodejs.org/en/download",
+    "freshness": "Current documentation"
+  },
+  {
+    "id": "60",
+    "type": "Official documentation",
+    "date": "Live documentation · checked 14 September 2026; page date not stated",
+    "summary": [
+      "Create a personal account through signup.",
+      "Verify the email to enable basic repository tasks.",
+      "GitHub recommends two-factor authentication."
+    ],
+    "application": "Complete the account steps personally before agent publication.",
+    "limits": "Enterprise-managed accounts follow different setup rules.",
+    "verification": {
+      "note": "Linked passages checked; this is setup guidance, not an executed installation or game deployment.",
+      "checked": "2026-09-14",
+      "status": "Content checked",
+      "locator": "Signing up for a new personal account; Next steps"
+    },
+    "title": "GitHub · Creating an account",
+    "url": "https://docs.github.com/en/account-and-profile/how-tos/account-management/creating-an-account-on-github",
+    "freshness": "Current documentation"
+  },
+  {
+    "id": "61",
+    "type": "Official documentation",
+    "date": "Live documentation · checked 14 September 2026; page date not stated",
+    "summary": [
+      "Login supports a browser flow and HTTPS or SSH selection.",
+      "HTTPS login can also authenticate Git.",
+      "Credential storage can fall back to a plain-text file."
+    ],
+    "application": "Use the browser flow, then check auth status in the actual agent environment.",
+    "limits": "GitHub CLI, Git transport and Codex sign-in are distinct.",
+    "verification": {
+      "note": "Linked passages checked; this is setup guidance, not an executed installation or game deployment.",
+      "checked": "2026-09-14",
+      "status": "Content checked",
+      "locator": "gh auth login; GitHub CLI quickstart: Prerequisites"
+    },
+    "title": "GitHub CLI · Browser login and Git authentication",
+    "url": "https://cli.github.com/manual/gh_auth_login",
+    "freshness": "Current documentation",
+    "related": [
+      {
+        "title": "GitHub CLI installation",
+        "url": "https://cli.github.com/"
+      },
+      {
+        "title": "GitHub CLI quickstart",
+        "url": "https://docs.github.com/en/github-cli/github-cli/quickstart"
+      }
+    ]
+  },
+  {
+    "id": "62",
+    "type": "Official documentation",
+    "date": "Live documentation · checked 14 September 2026; page date not stated",
+    "summary": [
+      "Check existing keys before generating another.",
+      "Add the public key to GitHub; protect the private key.",
+      "Verify the host fingerprint and the authenticated username."
+    ],
+    "application": "Use SSH as an alternative Git transport.",
+    "limits": "Agent setup is OS-specific; the successful test can exit with code 1.",
+    "verification": {
+      "note": "Linked passages checked; this is setup guidance, not an executed installation or game deployment.",
+      "checked": "2026-09-14",
+      "status": "Content checked",
+      "locator": "Generating a new SSH key; Adding a key; Testing your SSH connection"
+    },
+    "title": "GitHub · SSH key setup and connection test",
+    "url": "https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent",
+    "freshness": "Current documentation",
+    "related": [
+      {
+        "title": "Add the public key",
+        "url": "https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account"
+      },
+      {
+        "title": "Test connection and follow the official fingerprint link",
+        "url": "https://docs.github.com/en/authentication/connecting-to-github-with-ssh/testing-your-ssh-connection"
+      }
+    ]
+  },
+  {
+    "id": "63",
+    "type": "Official documentation",
+    "date": "Getting-started page updated 11 August 2026",
+    "summary": [
+      "Deployment can use the CLI or dashboard Git import.",
+      "Connected Git changes can trigger deployments.",
+      "Vite projects can build static production output."
+    ],
+    "application": "Check scope, root, build output and public production URL.",
+    "limits": "Dashboard use does not require an extra skill; framework and account access still matter.",
+    "verification": {
+      "note": "Linked passages checked; this is setup guidance, not an executed installation or game deployment.",
+      "checked": "2026-09-14",
+      "status": "Content checked",
+      "locator": "Deploy from the dashboard; CLI login and production deploy; Vite: Getting started"
+    },
+    "title": "Vercel · Getting started, Git import and Vite",
+    "url": "https://vercel.com/docs/getting-started-with-vercel",
+    "freshness": "Current documentation",
+    "related": [
+      {
+        "title": "Vite on Vercel",
+        "url": "https://vercel.com/docs/frameworks/frontend/vite"
+      },
+      {
+        "title": "Vercel for GitHub",
+        "url": "https://vercel.com/docs/git/vercel-for-github"
+      }
+    ]
+  },
+  {
+    "id": "64",
+    "type": "Official documentation",
+    "date": "Updated 31 August 2026",
+    "summary": [
+      "Hobby is a free plan.",
+      "It is restricted to personal, non-commercial use.",
+      "Usage limits apply and can temporarily stop features."
+    ],
+    "application": "Check eligibility before publishing the example on Hobby.",
+    "limits": "Do not promise unlimited hosting or commercial eligibility.",
+    "verification": {
+      "note": "Linked passages checked; this is setup guidance, not an executed installation or game deployment.",
+      "checked": "2026-09-14",
+      "status": "Content checked",
+      "locator": "Hobby billing cycle; Comparing Hobby and Pro plans"
+    },
+    "title": "Vercel · Hobby plan",
+    "url": "https://vercel.com/docs/plans/hobby",
+    "freshness": "Current documentation"
   }
 ]

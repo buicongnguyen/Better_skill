@@ -1,7 +1,7 @@
 # Full book PDF exports
 
 The site links to a complete PDF in its selected language. Each contains the
-quick summary, 15 chapters, prompt templates, diagrams, evidence panels,
+quick summary, 17 chapters, prompt templates, diagrams, evidence panels,
 review notes, source summaries, links, contents page, and PDF bookmarks.
 Downloads are committed rather than rebuilding Blender and Chromium on Pages CI.
 Most pages are A4; wide diagrams use landscape pages and long diagrams use

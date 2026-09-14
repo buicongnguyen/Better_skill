@@ -15,11 +15,11 @@ for (const [, raw] of html.matchAll(/(?:href|src)="([^"]+)"/g)) {
   }
 }
 const promptFiles = (await readdir(path.join(root, 'prompts'))).filter(f => f.endsWith('.md') && f !== 'README.md');
-assert.equal(promptFiles.length, 8, 'The eight promised prompt downloads must exist');
-assert.equal((html.match(/class="chapter"/g) || []).length, 16, 'The book must have a quick summary and 15 full chapters');
-assert.equal((html.match(/class="copy-button"/g) || []).length, 8, 'Each template needs a copy control');
+assert.equal(promptFiles.length, 21, 'The 21 promised prompt downloads must exist');
+assert.equal((html.match(/class="chapter"/g) || []).length, 18, 'The book must have a quick summary and 17 full chapters');
+assert.equal((html.match(/class="copy-button"/g) || []).length, 21, 'Each template needs a copy control');
 const sources = JSON.parse(await readFile(path.resolve(root, '../book/sources.json'), 'utf8'));
-assert.equal(sources.length, 55, 'The 55 reviewed source records must be present');
+assert.equal(sources.length, 64, 'The 64 reviewed source records must be present');
 assert.equal(new Set(sources.map(s => s.id)).size, sources.length, 'Duplicate source IDs');
 assert.equal((html.match(/class="source-summary"/g) || []).length, sources.length, 'Every source needs a rendered summary');
 for (const source of sources) {
@@ -78,7 +78,7 @@ for (const lang of ['en','vi','ko']) {
   assert(!/\{\{[a-zA-Z]|\bundefined\b/.test(edition),`Unresolved content: ${lang}`);
   assert.equal((edition.match(/class="chapter-evidence"/g)||[]).length,chapterFiles.length);
   assert.equal((edition.match(/class="source-summary"/g)||[]).length,sources.length);
-  assert.equal((edition.match(/class="copy-button"/g)||[]).length,8);
+  assert.equal((edition.match(/class="copy-button"/g)||[]).length,21);
   assert.equal((edition.match(/class="diagram"/g)||[]).length,diagrams.length);
   for (const [,raw] of edition.matchAll(/(?:href|src)="([^"]+)"/g)) {
     const href=raw.replaceAll('&amp;','&');
@@ -98,6 +98,9 @@ for (const lang of ['en','vi','ko']) {
     assert(summary.includes(`href="#${id}"`),`Summary omits full reading link: ${lang}/${id}`);
     assert(edition.includes(`aria-labelledby="${id}"><div class="chapter-kicker">${ui[lang].chapter} ${file.slice(0,2)}</div>`),`Existing chapter number changed: ${lang}/${id}`);
   }
+  for(let step=1;step<=11;step++) assert(summary.includes(`href="#cookbook-part-${step}"`),`Summary recipe missing: ${lang}/${step}`);
+  const cookbook=edition.match(/<section class="chapter" aria-labelledby="cookbook">([\s\S]*?)<\/section>/)?.[1];
+  assert.equal((cookbook?.match(/class="copy-button"/g)||[]).length,12,`Eleven recipes and two release alternatives: ${lang}`);
   if(lang==='en')continue;
   const localeRoot=path.resolve(root,`../locales/${lang}`);
   for(const file of chapterFiles) {
@@ -136,5 +139,5 @@ for (const lang of ['en','vi','ko']) {
     assert.equal(await readFile(path.join(root,'diagrams',lang,`${diagram.id}.mmd`),'utf8'),text);
   }
 }
-console.log('Passed: English, Vietnamese and Korean edition/anchor parity, translated summaries and evidence, 24 prompt copies, 30 diagrams with identical graph logic, and all local links/assets.');
-console.log(`Passed: unique anchors, local links/assets, quick summary linking all 15 full chapters with stable numbers, ${coveredSections} introductions/subsections with evidence coverage, 8 prompts, 10 diagram sources, 55 source records with verification metadata (${manuscript.split(' ').length} words including templates and sources). Browser rendering is checked separately.`);
+console.log('Passed: English, Vietnamese and Korean edition/anchor parity, translated summaries and evidence, 63 prompt copies, 30 diagrams with identical graph logic, and all local links/assets.');
+console.log(`Passed: unique anchors, local links/assets, quick summary linking all 17 full chapters with stable numbers, ${coveredSections} introductions/subsections with evidence coverage, 21 prompts, 10 diagram sources, 64 source records with verification metadata (${manuscript.split(' ').length} words including templates and sources). Browser rendering is checked separately.`);

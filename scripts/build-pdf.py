@@ -172,7 +172,7 @@ def build(lang,ui):
         for child in node.children:walk(child)
 
     story.extend([Anchor('cover'),Spacer(1,24),para('FIELD BOOK 01 · 2026 / '+lang.upper(),'kicker'),para(html.escape(ui['bookTitle']),'h2'),para(inline(soup.select_one('.cover-deck')),'lead'),Spacer(1,16),add_image(ROOT/'illustrations/signal-garden-concept.png',CONTENT,355),Spacer(1,16),para(html.escape(ui['coverImage']),'small'),para('14 September 2026 · '+html.escape(ui['language']),'small'),para(f'<link href="{BASE}{ui["file"]}">Web edition</link> · <link href="https://github.com/buicongnguyen/Better_skill">GitHub</link>','small'),PageBreak()])
-    story.append(para(ui['menu'],'h2'));toc=TableOfContents();toc.levelStyles=[ParagraphStyle('toc',fontName=bodyfont,fontSize=10.5,leading=19,textColor=INK,spaceBefore=4)];story.append(toc)
+    story.append(para(ui['menu'],'h2'));toc=TableOfContents();toc.levelStyles=[ParagraphStyle('toc',fontName=bodyfont,fontSize=10.5,leading=16,textColor=INK,spaceBefore=3)];story.append(toc)
     article=soup.article
     for node in article.children:
         if isinstance(node,Tag) and not ('cover' in node.get('class',[])):walk(node)
