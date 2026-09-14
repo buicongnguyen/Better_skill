@@ -1,0 +1,11 @@
+flowchart TD
+  accTitle: Bên trong đồ thị nút video
+  accDescr: Chỉ là các giai đoạn khái niệm, không phải tên nút thực hay đồ thị ComfyUI nhập được. Thành phần mô hình tương thích, điều kiện văn bản và khung tham khảo tùy chọn đi vào tạo và giải mã trước khi lưu video.
+  A["Lời nhắc và hành động cảnh"] --> B["Điều kiện văn bản"]
+  C["Khung tham khảo, nếu dùng"] --> E["Các bước tạo video"]
+  B --> E
+  D["Mô hình, bộ mã hóa và thiết lập tương thích"] --> E
+  E --> F["Giải mã khung hình và âm thanh hỗ trợ"]
+  F --> G["Lưu video"]
+  G --> H["Kiểm tra chuyển động và tính liên tục"]
+  H -.->|Đổi đầu vào liên quan| A

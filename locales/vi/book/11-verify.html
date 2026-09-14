@@ -1,0 +1,43 @@
+<h2 id="verify">Kiểm tra game thực sự chơi được</h2>
+<p class="lead">Nhật ký build không cho biết điều khiển có dễ chịu không.</p>
+<p>Dùng ba lớp bằng chứng: <strong>kiểm tra logic</strong> cho luật xác định; <strong>kiểm tra tương tác</strong> qua điều khiển game; <strong>chơi thử với người thật</strong> để đánh giá sự rõ ràng, cảm giác, thử thách và sức hấp dẫn. Mỗi lớp trả lời những câu hỏi lớp khác không trả lời được.</p>
+<h3>Giữ danh sách nghiệm thu trọng yếu ngắn</h3>
+<div class="table-wrap"><table><thead><tr><th>Hành vi</th><th>Thao tác thử</th><th>Bằng chứng mong đợi</th></tr></thead><tbody>
+<tr><td>Di chuyển</td><td>Đi thẳng, chéo và vào từng biên.</td><td>Tốc độ, va chạm nhất quán; không thoát biên hoặc bị che bởi camera.</td></tr>
+<tr><td>Thu thập</td><td>Vào, ra vùng kích hoạt mỗi pin nhiều lần.</td><td>Mỗi pin chỉ tăng bộ đếm một lần.</td></tr>
+<tr><td>Sát thương</td><td>Chạm drone, giữ tiếp xúc rồi rời ra.</td><td>Tuân thủ khoảng bất tử 1 giây.</td></tr>
+<tr><td>Tạm dừng</td><td>Dừng khi drone đang đi; đợi rồi tiếp tục.</td><td>Giờ và mô phỏng đóng băng, tiếp tục không nhảy bước.</td></tr>
+<tr><td>Thắng</td><td>Thu đủ pin và kích hoạt trong tầm.</td><td>Một lần chuyển thắng, gameplay dừng, chơi lại được.</td></tr>
+<tr><td>Thua</td><td>Hết máu; thử riêng hết giờ.</td><td>Mỗi tình huống thua một lần rồi chơi lại sạch.</td></tr>
+<tr><td>Thời điểm biên</td><td>Kích hoạt đúng bước đồng hồ về không.</td><td>Luật thua trước kích hoạt được giữ.</td></tr>
+<tr><td>Chơi lại</td><td>Sau thắng, thua và tạm dừng.</td><td>Đặt lại nhân vật, pin, máu, giờ, tuần tra, hồi chiêu, hiệu ứng, phím giữ; trạng thái thành playing.</td></tr>
+<tr><td>Production</td><td>Mở URL công khai và chơi một lượt.</td><td>Không thiếu tài nguyên hoặc lỗi runtime; điều khiển chạy trong bản xuất bản.</td></tr>
+</tbody></table></div>
+<h3>Làm trạng thái ẩn có thể kiểm tra</h3>
+<p>Trong bản bật kiểm tra, cung cấp ảnh chụp trạng thái chỉ đọc: pha chơi, vị trí, pin còn lại, giờ, máu và drone. Dùng cảnh chuẩn bị xác định để tái hiện biên. Không dùng lối tắt kiểm thử bí mật đánh dấu đạt mà chưa chạy luật gameplay.</p>
+<p>Ví dụ game Astra phân biệt thiết lập cảnh có tên với hành trình dùng điều khiển thật. Cả hai có ích: fixture làm lỗi dễ tái hiện, chuỗi đầu vào xác nhận người chơi thực sự đạt được trạng thái đó. {{cite:04}}</p>
+<pre><code>// Cấu trúc trạng thái chỉ đọc được đề xuất, chưa phải mã game phát hành.
+{
+  phase: "playing",
+  player: { x: 2.0, z: -3.0, health: 3 },
+  cellsCollected: 1,
+  secondsRemaining: 62.4,
+  beaconReady: false,
+  drone: { x: -4.0, z: 1.0 }
+}</code></pre>
+<h3>Xác định cách quan sát hiệu năng</h3>
+<p>Nêu thiết bị, trình duyệt, cỡ cửa sổ và mức chất lượng. Thử nghiệm đầu có thể nhắm thời gian khung hình ở phân vị 95 dưới 33 ms trong mẫu chơi bình thường 60 giây sau làm nóng. Đây là mục tiêu đề xuất gần ngân sách 30 fps, không phải kết quả đã đo hay yêu cầu phổ quát. Ghi riêng khựng lúc tải; trung bình mượt có thể che những lần ngắt khó chịu.</p>
+<p>Nêu phép đo thực sự đo gì. Khoảng cách giữa callback <code>requestAnimationFrame</code> mô tả nhịp trình bày quan sát được, không phải thời gian GPU dựng hình. Giữ tab ở tiền cảnh, ghi phương pháp lấy mẫu và tách thời gian dừng ở nền. Điều này quan trọng khi so hai lượt. {{cite:43}}</p>
+<p>Nếu chưa đạt, thu bằng chứng trước khi giảm chất lượng hình. So draw call, hình học, bóng, độ phân giải và công việc cập nhật. Đổi một nút thắt có khả năng cao rồi lấy lại cùng mẫu. Mã ngắn hơn chưa chứng minh tối ưu hiệu quả.</p>
+<h3>Chơi thử nhỏ với người thật</h3>
+<p>Đưa bản build cho một người chơi mà không hướng dẫn thêm. Quan sát họ có hiểu mục tiêu, điều khiển, sát thương và nút chơi lại không. Hỏi lúc nào họ không chắc và muốn thử gì tiếp. Buổi nhỏ giúp tìm vấn đề cụ thể, không xác lập tỷ lệ thành công của cả quần thể.</p>
+<pre><code>Build / commit:
+Thiết bị, trình duyệt, cỡ cửa sổ:
+Người chơi mới hay quay lại:
+Giải thích được mục tiêu? [quan sát]
+Khoảnh khắc khó hiểu đầu tiên: [diễn biến]
+Đã thấy thắng/thua/chơi lại: [trường hợp và bằng chứng]
+Cảm giác điều khiển: [lời người chơi]
+Vấn đề ảnh hưởng lớn nhất:
+Thay đổi tiếp theo và quan sát cần cải thiện:</code></pre>
+<p>Phân biệt “đã chạy” và “đã kiểm tra”. Báo cáo đáng tin nêu thao tác, kết quả và commit. Nếu tác nhân không xem được game, giữ giới hạn đó trong báo cáo thay vì đánh dấu xanh việc chưa làm.</p>

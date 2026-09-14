@@ -1,0 +1,26 @@
+<h2 id="publish">출시하고 학습 루프 마무리하기</h2>
+<p class="lead">출시는 작동하는 URL과 복구 가능한 리비전입니다.</p>
+<p>GitHub Pages는 제안한 Vite 게임의 정적 빌드 파일을 제공합니다. 게임 API를 위한 비공개 서버 런타임은 없습니다. 공개 JavaScript에 넣은 키는 방문자에게 전달되므로 서비스 키는 별도 백엔드나 로컬 도구에 보관하세요. Signal Garden 첫 버전에는 계정이나 온라인 서비스가 필요 없습니다. {{cite:46}}</p>
+<h3>1 · 저장소 경로 설정</h3>
+<p><code>signal-garden</code> 프로젝트의 일반적인 주소는 <code>https://YOUR_ACCOUNT.github.io/signal-garden/</code>입니다. Vite base를 맞추세요. 도메인 루트의 사용자 사이트는 다른 base를 사용합니다. 저장소 이름과 에셋 파일의 대소문자가 배포 호스트와 일치해야 합니다. {{cite:12}}</p>
+<pre><code>// vite.config.ts — 게임 저장소 예제
+import { defineConfig } from 'vite';
+
+export default defineConfig({
+  base: '/signal-garden/',
+});</code></pre>
+<p>공개 전에 이 하위 경로에서 프로덕션을 시험하세요. import한 에셋이나 base를 반영하는 URL을 우선합니다. <code>localhost/</code>에서는 되던 경로가 도메인 아래 한 디렉터리에서는 실패할 수 있습니다.</p>
+<h3>2 · 빌드, 업로드, 배포</h3>
+<p>저장소 Pages 설정에서 GitHub Actions를 소스로 고르세요. 워크플로는 빌드 후 공개 아티팩트를 업로드하고 필요한 Pages 및 identity-token 권한으로 배포합니다. <code>github-pages</code> 환경과 배포 단계가 반환한 URL을 사용하세요. {{cite:13}}</p>
+<p>이 책의 <a href="https://github.com/buicongnguyen/Better_skill/blob/main/.github/workflows/pages.yml">실제 워크플로</a>는 작은 정적 사이트 예제입니다. Vite 게임은 lockfile 설치와 자체 검사를 마친 뒤 <code>dist</code>를 업로드해야 합니다. 검토한 액션 버전이나 커밋 SHA를 고정하고 수정할 때 현재 공식 예시를 확인하세요.</p>
+<h3>3 · 공개 의도 명확히 하기</h3>
+<p>로컬 게임이 작동하면 아래 출시 프롬프트의 계정과 저장소를 바꾸세요. 실제 대상으로 채워서 직접 보내야 그 공개 권한이 적용됩니다.</p>
+{{prompt:release-prompt.md}}
+<h3>4 · 공개 결과 검증</h3>
+<ol><li>의도한 원격과 브랜치에 푸시됐는지 확인.</li><li>해당 커밋의 워크플로 확인. 대기 중은 성공한 배포가 아님.</li><li>배포 URL을 열고 프로덕션 에셋 요청 확인.</li><li>승리·패배 경로와 재시작을 플레이하고 정지·재개도 반복.</li><li>배포 커밋, 조작, 목표 브라우저와 한계를 출시 기록에 남기기.</li></ol>
+<p>배포가 실패하면 로그에서 구체적인 원인을 고치세요. 에셋 누락은 base와 대소문자, Godot 내보내기는 렌더러·파일명·브라우저 요구를 확인합니다. 권한 오류는 관계없는 코드를 바꾸기 전에 Pages 소스, 워크플로 권한과 저장소 설정을 확인하세요.</p>
+<h3>5 · 돌아갈 경로 유지</h3>
+<p>마지막으로 검증한 출시 리비전을 기록하세요. 새 버전이 게임을 깨뜨리면 원인 변경을 새 커밋으로 되돌리고 워크플로가 수정 상태를 공개하게 합니다. 실제 URL을 다시 확인하세요. 롤백 명령은 복구 과정의 한 단계일 뿐입니다.</p>
+<div class="callout"><div class="callout-label">전체 과정</div><p>플레이 경험 선택 → 관련 방식 비교 → 현재 출처 검증 → 저장소와 기획 준비 → 적합한 기존 스킬 사용 → 짧은 프롬프트 또는 초기화 프롬프트 선택 → 플레이 가능한 단계 구현 → 실제 게임 검사 → 공개 → 도움이 되는 작업 방식만 유지.</p></div>
+<p>오래 남는 결과는 게임뿐 아니라 다음 시도를 이해하고 검토하고 개선하기 쉽게 만드는 과정입니다.</p>
+<p>다음 두 장에서는 <a href="#thinking-flows">편집 가능한 결정·데이터 흐름</a>을 그리고 <a href="#video-workflows">짧은 게임 예고편</a>에 적용합니다.</p>

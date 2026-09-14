@@ -1,14 +1,19 @@
 <!doctype html>
-<html lang="en">
+<html lang="{{lang}}">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#172c30">
   <title>How to do better — Building a 3D game with an AI agent</title>
   <meta name="description" content="A practical, source-backed book on prompts, GitHub, skills, and building a 3D game with GPT-6 Astra. Compare approaches, use the prompt templates, and refine through playtesting.">
-  <link rel="canonical" href="https://buicongnguyen.github.io/Better_skill/">
+  <link rel="canonical" href="https://buicongnguyen.github.io/Better_skill/{{localeUrl}}">
+  <link rel="alternate" hreflang="en" href="https://buicongnguyen.github.io/Better_skill/">
+  <link rel="alternate" hreflang="vi" href="https://buicongnguyen.github.io/Better_skill/vi.html">
+  <link rel="alternate" hreflang="ko" href="https://buicongnguyen.github.io/Better_skill/ko.html">
+  <script src="preferences.js"></script>
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="stylesheet" href="styles.css">
+  <script id="reader-messages" type="application/json">{{readerMessages}}</script>
   <script src="book.js" defer></script>
   <script src="vendor/mermaid.min.js" defer></script>
   <script src="diagrams.js" defer></script>
@@ -26,6 +31,7 @@
   </aside>
   <button class="menu-backdrop" aria-label="Close contents" tabindex="-1" hidden></button>
   <main id="reading">
+    {{readingControls}}
     <div class="topline"><span>VOLUME 01 <i></i> AI-ASSISTED GAME DEVELOPMENT</span><button class="print-button" type="button">Print book <span aria-hidden="true">↗</span></button></div>
     <article>
       <header class="cover" id="cover">

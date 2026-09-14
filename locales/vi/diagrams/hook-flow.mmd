@@ -1,0 +1,11 @@
+flowchart TD
+  accTitle: Dùng hook cho kiểm tra cục bộ hẹp
+  accDescr: Sự kiện công cụ liên quan có thể kích hoạt trình kiểm tra cục bộ. Sự kiện không liên quan thoát ngay. Mẫu đề xuất không tự tạo video hoặc xuất bản.
+  A["Công cụ tác tử hoàn tất"] --> B["Hook PostToolUse nhận sự kiện"]
+  B --> C{"Manifest liên quan đã thay đổi?"}
+  C -->|Không| D["Thoát, không làm thêm"]
+  C -->|Có| E["Chạy trình kiểm tra manifest cục bộ"]
+  E --> F{"Thời gian và tham chiếu tài sản hợp lệ?"}
+  F -->|Có| G["Ghi kết quả kiểm tra"]
+  F -->|Không| H["Trả phản hồi có thể hành động"]
+  H --> I["Tác tử sửa manifest"]

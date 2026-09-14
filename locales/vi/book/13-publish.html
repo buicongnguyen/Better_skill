@@ -1,0 +1,26 @@
+<h2 id="publish">Phát hành và khép vòng học hỏi</h2>
+<p class="lead">Một bản phát hành là URL hoạt động và commit có thể khôi phục.</p>
+<p>GitHub Pages phục vụ tệp tĩnh đã build cho game Vite. Nó không cung cấp runtime máy chủ riêng cho API của game. Khóa trong JavaScript công khai được gửi đến người xem, nên giữ khóa dịch vụ trong backend riêng hoặc công cụ cục bộ khi cần. Bản đầu Signal Garden không cần tài khoản hay dịch vụ online. {{cite:46}}</p>
+<h3>1 · Cấu hình đường dẫn kho mã</h3>
+<p>Dự án <code>signal-garden</code> thường ở <code>https://YOUR_ACCOUNT.github.io/signal-garden/</code>. Đặt base của Vite tương ứng. Trang cá nhân ở gốc tên miền dùng base khác. Tên kho và chữ hoa/thường của tài nguyên phải đúng trên host. {{cite:12}}</p>
+<pre><code>// vite.config.ts — ví dụ cho kho game
+import { defineConfig } from 'vite';
+
+export default defineConfig({
+  base: '/signal-garden/',
+});</code></pre>
+<p>Thử bản production dưới đường dẫn con này trước khi công bố. Ưu tiên tài nguyên import hoặc URL theo base. Đường dẫn hoạt động ở <code>localhost/</code> có thể lỗi khi ứng dụng nằm dưới một thư mục của tên miền.</p>
+<h3>2 · Build, tải artifact, triển khai</h3>
+<p>Trong Pages của kho, chọn GitHub Actions làm nguồn. Workflow build, tải artifact công khai và triển khai với quyền Pages cùng identity-token phù hợp. Dùng environment <code>github-pages</code> và URL bước triển khai trả về. {{cite:13}}</p>
+<p><a href="https://github.com/buicongnguyen/Better_skill/blob/main/.github/workflows/pages.yml">Workflow thật của sách</a> là ví dụ web tĩnh nhỏ. Game Vite nên cài theo lockfile và chạy kiểm tra riêng trước khi tải <code>dist</code>. Ghim phiên bản action đã rà soát hoặc SHA commit; tra ví dụ chính thức hiện hành khi điều chỉnh.</p>
+<h3>3 · Nêu rõ việc công bố</h3>
+<p>Sau khi game chạy cục bộ, thay tài khoản và kho trong prompt sau. Quyền công bố chỉ có hiệu lực khi bạn thực sự gửi nó với đích mong muốn.</p>
+{{prompt:release-prompt.md}}
+<h3>4 · Kiểm tra kết quả công khai</h3>
+<ol><li>Xác nhận push tới đúng remote và nhánh.</li><li>Xem workflow cho đúng commit. Đang xếp hàng chưa phải triển khai thành công.</li><li>Mở URL và kiểm tra yêu cầu tài nguyên production.</li><li>Chơi tuyến thắng và thua, chơi lại, lặp kiểm tra tạm dừng/tiếp tục.</li><li>Ghi commit đã triển khai, điều khiển, trình duyệt mục tiêu và giới hạn vào ghi chú phát hành.</li></ol>
+<p>Nếu lỗi, đọc log và sửa đúng nguyên nhân. Thiếu tài nguyên: xem base và hoa/thường tên tệp. Godot: xem renderer, tên tệp xuất và yêu cầu trình duyệt. Lỗi quyền: xem nguồn Pages, quyền workflow và cấu hình kho trước khi sửa mã không liên quan.</p>
+<h3>5 · Giữ đường quay lại</h3>
+<p>Ghi commit phát hành tốt gần nhất. Nếu bản mới hỏng, revert thay đổi gây lỗi bằng commit mới và để workflow công bố trạng thái đã sửa. Kiểm tra URL lần nữa. Lệnh rollback chỉ là một bước khôi phục.</p>
+<div class="callout"><div class="callout-label">Quy trình đầy đủ</div><p>Chọn trải nghiệm → so cách làm → xác minh nguồn hiện hành → lập kho và mô tả → dùng skill sẵn có phù hợp → chọn prompt ngắn hoặc khởi tạo → xây từng mốc chơi được → kiểm tra game thật → phát hành → chỉ giữ thay đổi quy trình có ích.</p></div>
+<p>Kết quả bền vững không chỉ là game, mà còn là cách làm khiến lần sau dễ hiểu, dễ rà soát và dễ cải thiện.</p>
+<p>Hai chương tiếp theo vẽ <a href="#thinking-flows">luồng quyết định và dữ liệu có thể sửa</a>, rồi áp dụng để <a href="#video-workflows">làm trailer game ngắn</a>.</p>

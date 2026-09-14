@@ -1,0 +1,14 @@
+flowchart TD
+  accTitle: Chọn quy trình video
+  accDescr: Dùng dựng cảnh và quay thật cho chữ và gameplay chính xác; dùng mô hình tạo cho cảnh tưởng tượng. Thêm điều phối khi quy trình lặp qua nhiều tác vụ.
+  A{"Video cần thể hiện gì?"}
+  A -->|UI, chữ hoặc gameplay chính xác| B["Quay thật và dựng bằng Remotion"]
+  A -->|Cảnh tưởng tượng mới| C{"Muốn điều khiển tạo video bằng cách nào?"}
+  C -->|Đồ thị nút trực quan| D["Dùng mẫu ComfyUI"]
+  C -->|Mã và yêu cầu API| E["Dùng SDK nhà cung cấp video"]
+  D --> F["Kiểm tra clip rồi ghép dòng thời gian"]
+  E --> F
+  B --> F
+  F --> G{"Có lặp qua nhiều tác vụ không?"}
+  G -->|Có| H["Thêm n8n hoặc dịch vụ điều phối nhỏ"]
+  G -->|Không| I["Giữ vòng thủ công hoặc do tác tử thực hiện"]

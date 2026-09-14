@@ -1,0 +1,695 @@
+[
+  {
+    "id": "25",
+    "type": "Hướng dẫn chính thức + video đi kèm",
+    "date": "Cập nhật 12/9/2026",
+    "summary": [
+      "Tạo dự án video trống và cài các gói phụ thuộc.",
+      "Dùng tác tử lập trình cùng hướng dẫn Remotion phù hợp để xây dựng bản dựng.",
+      "Xem trước rồi chỉnh thời gian và hình thức."
+    ],
+    "application": "Bắt đầu trailer bằng tệp quay thật và một bản dựng chính xác, có thể chỉnh sửa.",
+    "limits": "Đã đọc hướng dẫn viết. Không lấy được bản chép lời video đi kèm dài năm phút; không dùng nhận định chỉ có trong video.",
+    "verification": {
+      "note": "Đã kiểm tra hướng dẫn và lệnh; chưa lấy được bản chép lời video."
+    },
+    "videoNote": "Đã kiểm tra hướng dẫn và lệnh; chưa lấy được bản chép lời video."
+  },
+  {
+    "id": "26",
+    "type": "Tài liệu kỹ năng chính thức",
+    "date": "Cập nhật 12/9/2026",
+    "summary": [
+      "Cung cấp hướng dẫn tái sử dụng cho tác tử lập trình làm việc với Remotion.",
+      "Bộ hướng dẫn bao gồm bố cục, tài liệu, xem trước và kết xuất.",
+      "Cài đặt giúp các môi trường tác tử tương thích sử dụng hướng dẫn này."
+    ],
+    "application": "Kiểm tra kỹ năng sẵn có trước khi thêm bản sao của cùng một quy trình.",
+    "limits": "Hướng dẫn của nhà cung cấp không chứng minh chất lượng tăng với mọi mô hình hoặc tác vụ, kể cả Astra.",
+    "verification": {
+      "note": "Xác nhận các quy trình trong bộ kỹ năng; không có phép đo lợi ích trên Astra."
+    }
+  },
+  {
+    "id": "27",
+    "type": "Thông báo ngừng hỗ trợ chính thức",
+    "date": "Cập nhật 12/9/2026",
+    "summary": [
+      "Thông báo ngừng hỗ trợ MCP tài liệu Remotion cũ.",
+      "Hướng người dùng sang kỹ năng tác tử, bao gồm hướng dẫn tra cứu tài liệu.",
+      "Giải thích vấn đề tài liệu trùng lặp, lỗi thời và cách gọi công cụ."
+    ],
+    "application": "Ví dụ hiện tại về việc thay thế một tích hợp tài liệu dư thừa.",
+    "limits": "Không có nghĩa mọi máy chủ MCP đều lỗi thời. Cách diễn đạt ngày ngừng dịch vụ không xác nhận dịch vụ đã dừng.",
+    "verification": {
+      "note": "Mốc “không sớm hơn” không chứng minh việc ngừng dịch vụ đã xảy ra."
+    }
+  },
+  {
+    "id": "17",
+    "type": "Hướng dẫn Astra từ nhà phát triển",
+    "date": "Xuất bản 11/9/2026",
+    "summary": [
+      "Đánh giá lại chỉ dẫn tích lũy khi chuyển sang Astra; quy trình quá chi tiết có thể bó buộc mô hình mạnh hơn.",
+      "Viết điều kiện kích hoạt kỹ năng chính xác và chỉ nạp tài liệu hỗ trợ khi liên quan.",
+      "Thay yêu cầu đọc mọi tài liệu hoặc kiểm thử lặp lại bằng hướng dẫn tùy ngữ cảnh."
+    ],
+    "application": "Rà soát chỉ dẫn hiện có trước khi thêm kỹ năng.",
+    "limits": "Đây là hướng dẫn thực hành của Eric Provencher, không phải phép đo có đối chứng về lợi ích của kỹ năng trên Astra.",
+    "verification": {
+      "note": "Hướng dẫn Astra từ bên phát triển, không phải kiểm chuẩn độc lập có đối chứng."
+    }
+  },
+  {
+    "id": "44",
+    "type": "Tài liệu kỹ thuật chính thức",
+    "date": "Cập nhật 10/9/2026",
+    "summary": [
+      "Trình duyệt có thể chặn tự động phát nội dung có âm thanh và Web Audio.",
+      "Tương tác của người dùng thường là điều kiện cho phép phát; chính sách khác nhau giữa trình duyệt.",
+      "Xử lý trường hợp phát bị chặn thay vì giả định yêu cầu luôn thành công."
+    ],
+    "application": "Khởi động hoặc tiếp tục âm thanh từ thao tác của người chơi và giữ nút tắt tiếng hoạt động.",
+    "limits": "Cử chỉ người dùng không bảo đảm tuyệt đối khi tùy chọn trình duyệt hoặc chính sách nhúng khác nhau."
+  },
+  {
+    "id": "04",
+    "type": "Nghiên cứu tình huống trò chơi từ nhà phát triển",
+    "date": "Xuất bản 4/9/2026",
+    "summary": [
+      "Bắt đầu từ trải nghiệm mong muốn của người chơi và hình ảnh tham khảo.",
+      "Ví dụ sử dụng TypeScript, Vite và Three.js với trạng thái trò chơi có thể kiểm tra.",
+      "Tách thiết lập cảnh lặp lại được khỏi kiểm thử thực sự thao tác các nút điều khiển."
+    ],
+    "application": "Dùng ví dụ Astra hiện tại làm căn cứ cho bản mô tả trò chơi và kế hoạch xác minh.",
+    "limits": "Bài trình diễn của Thomas Ricouard kể lại một lần triển khai; không xác lập tỷ lệ thành công điển hình.",
+    "verification": {
+      "note": "Xác nhận ví dụ triển khai, không phải tỷ lệ thành công phổ biến."
+    }
+  },
+  {
+    "id": "20",
+    "type": "Bản thảo nghiên cứu · tạo kỹ năng",
+    "date": "Nộp 24/8/2026 · đã đọc v1",
+    "summary": [
+      "Tìm yêu cầu tác vụ và bằng chứng bên ngoài trước khi biên soạn kỹ năng tái sử dụng.",
+      "Báo cáo cải thiện so với không dùng kỹ năng và các cách tạo tự động trên 87 tác vụ SkillsBench v1.1.",
+      "Thử nghiệm gồm GPT-5.5, Opus 4.8 và DeepSeek V4; không có Astra."
+    ],
+    "application": "Xem cách tạo kỹ năng dựa trên bằng chứng là một phương án đáng thử.",
+    "limits": "Kết quả bản thảo chưa chứng minh rằng tùy ý tạo kỹ năng cho bất kỳ tác vụ nào cũng hữu ích.",
+    "verification": {
+      "note": "Các cấu hình thử nghiệm không bao gồm Astra."
+    }
+  },
+  {
+    "id": "06",
+    "type": "Tài liệu quy trình chính thức",
+    "date": "Cập nhật 21/8/2026",
+    "summary": [
+      "Tổ chức công việc theo đặc tả, kế hoạch, tác vụ và triển khai.",
+      "Làm rõ yêu cầu và quyết định kỹ thuật trước khi chúng lan vào mã nguồn.",
+      "Cung cấp công cụ và mẫu cho quy trình dựa trên đặc tả."
+    ],
+    "application": "Mượn cách tách các quyết định; một trang có thể đủ cho Signal Garden.",
+    "limits": "Tài liệu quy trình không chứng minh cài bộ công cụ sẽ cải thiện mọi dự án nhỏ hay lượt chạy Astra.",
+    "verification": {
+      "note": "Xác nhận cấu trúc quy trình; dùng một trang rút gọn là khuyến nghị của sách."
+    }
+  },
+  {
+    "id": "43",
+    "type": "Tài liệu kỹ thuật chính thức",
+    "date": "Cập nhật 21/8/2026",
+    "summary": [
+      "Yêu cầu gọi hàm hoạt ảnh trước lần vẽ lại kế tiếp.",
+      "Nhịp gọi thường theo tần số màn hình và tạm dừng ở phần lớn thẻ nền.",
+      "Dùng dấu thời gian để cập nhật theo thời gian đã trôi qua, thay vì số lần gọi."
+    ],
+    "application": "Quy định hành vi khi quay lại và đặt tên phép đo khoảng cách giữa các lần gọi cho chính xác.",
+    "limits": "Mốc 33 ms trong 60 giây là mục tiêu do sách đề xuất. Nhịp gọi không phải thời gian GPU thực thi."
+  },
+  {
+    "id": "23",
+    "type": "Kiến trúc giao thức",
+    "date": "Phiên bản đặc tả 28/7/2026 · không phải ngày xuất bản trang",
+    "summary": [
+      "Ứng dụng chủ chứa các máy khách kết nối tới máy chủ MCP.",
+      "Máy chủ cung cấp công cụ, tài nguyên và mẫu lời nhắc qua một giao thức chung.",
+      "Giao thức trao đổi ngữ cảnh, không quy định chiến lược lập kế hoạch của tác tử."
+    ],
+    "application": "Tách kết nối cho phép hành động khỏi chỉ dẫn hướng dẫn hành động.",
+    "limits": "Đây là kiến trúc khái niệm, không phải trình tạo video hay đánh giá hiệu suất Astra.",
+    "verification": {
+      "note": "Giao thức không quyết định chiến lược lập kế hoạch của ứng dụng."
+    }
+  },
+  {
+    "id": "18",
+    "type": "Kiểm chuẩn đang cập nhật · tác vụ đa dạng",
+    "date": "Tính lại xếp hạng 16/7/2026 · dự án bắt đầu trước tháng 3",
+    "summary": [
+      "So sánh điều kiện có và không có kỹ năng trên bộ 87 tác vụ đa dạng.",
+      "Bảng đã kiểm tra gồm 24 cấu hình tác tử–mô hình có cặp đối chứng và một kết quả chỉ có kỹ năng.",
+      "Kỹ năng được tuyển chọn thường hữu ích, nhưng mức lợi ích thay đổi giữa các cấu hình."
+    ],
+    "application": "Bằng chứng phản bác nhận định rằng mọi kỹ năng đều dư thừa.",
+    "limits": "Bảng xếp hạng đã kiểm tra không có Astra. Môi trường thực thi và tập tác vụ khác nhau hạn chế khả năng suy rộng sang làm trò chơi.",
+    "verification": {
+      "note": "87 tác vụ, 24 cặp cấu hình và một lượt chỉ có kỹ năng; không có kết quả Astra."
+    }
+  },
+  {
+    "id": "45",
+    "type": "Tài liệu kỹ thuật chính thức",
+    "date": "Cập nhật 10/6/2026",
+    "summary": [
+      "Tính năng truy vấn phương tiện cho biết người dùng muốn giảm chuyển động không thiết yếu.",
+      "Giá trị reduce chọn kiểu hiển thị giảm chuyển động.",
+      "Ví dụ cho thấy cách thay thế hoặc giảm hoạt ảnh khi tùy chọn này bật."
+    ],
+    "application": "Giảm chuyển động trang trí của giao diện và nối tùy chọn này với thiết lập hoạt ảnh trò chơi.",
+    "limits": "CSS không tự thay đổi chuyển động trong mô phỏng WebGL; việc nối tùy chọn là khuyến nghị triển khai của sách."
+  },
+  {
+    "id": "32",
+    "type": "Công thức API chính thức có phiên bản",
+    "date": "Phiên bản công thức 2026-06 · không ghi ngày xuất bản trang",
+    "summary": [
+      "Hỗ trợ tự phân chia câu chuyện và danh sách cảnh tùy chỉnh.",
+      "Chế độ tùy chỉnh nhận một nhóm cảnh nhỏ có thời gian rõ ràng.",
+      "Đầu vào phải tuân thủ tổng thời lượng và định dạng mà công thức hỗ trợ."
+    ],
+    "application": "Một lựa chọn cho video ý tưởng hoàn toàn được tạo. Trailer kết hợp cần ghép thêm cảnh quay trò chơi thật.",
+    "limits": "Phiên bản công thức không phải ngày xuất bản hay bảo đảm nhân vật nhất quán, cơ chế trò chơi chính xác hoặc lợi ích riêng cho Astra.",
+    "verification": {
+      "note": "Công thức tạo các cảnh; ghép cảnh quay thật và cảnh tạo là tác vụ dựng riêng."
+    }
+  },
+  {
+    "id": "19",
+    "type": "Bản thảo nghiên cứu · chọn kỹ năng",
+    "date": "Nộp 28/5/2026 · đã đọc v1",
+    "summary": [
+      "Chọn kỹ năng cho tác vụ hiện tại và điều chỉnh lượng ngữ cảnh kỹ năng đưa vào.",
+      "Nghiên cứu tương tác giữa mô tả, ngân sách ngữ cảnh và lựa chọn; thêm nhiều kỹ năng không luôn tốt hơn.",
+      "Báo cáo cải thiện trên ba bộ kiểm chuẩn với tác tử dựa trên Qwen."
+    ],
+    "application": "Đánh giá kỹ năng đã được chọn bên cạnh kết quả cuối.",
+    "limits": "Đây là phương pháp nghiên cứu đề xuất, không phải tính năng được khẳng định của Codex. Tác tử thử nghiệm không dùng Astra.",
+    "verification": {
+      "note": "Thử nghiệm trên họ Qwen không xác lập lợi ích với mô hình đóng như Astra."
+    }
+  },
+  {
+    "id": "21",
+    "type": "Báo cáo kỹ thuật từ nhà phát triển · quy trình cập nhật",
+    "date": "Xuất bản 24/3/2026",
+    "summary": [
+      "Dùng tiêu chí chất lượng rõ ràng và vòng tạo/đánh giá cho công việc ứng dụng.",
+      "Xem lại quy trình bao quanh khi năng lực mô hình tăng.",
+      "Đơn giản hóa cấu trúc trung gian với Opus 4.6, đồng thời giữ các vai trò lập kế hoạch và đánh giá hữu ích."
+    ],
+    "application": "Đánh giá lại công thức tác tử chạy dài cũ thay vì sao chép nguyên trạng.",
+    "limits": "Thử nghiệm ứng dụng Claude không quyết định số tác tử hoặc cột mốc tối ưu cho trò chơi dùng Astra.",
+    "verification": {
+      "note": "Bỏ cấu trúc sprint là quan sát theo mô hình/tác vụ, không phải chỉ dẫn phổ quát."
+    }
+  },
+  {
+    "id": "22",
+    "type": "Bản thảo sơ bộ · tác vụ phần mềm",
+    "date": "Nộp 16/3/2026 · đã đọc v1",
+    "summary": [
+      "Đánh giá 49 kỹ năng kỹ nghệ phần mềm công khai trên khoảng 565 tác vụ có kiểm tra nghiệm thu thực thi được.",
+      "Báo cáo 39/49 kỹ năng không tăng kết quả và mức cải thiện trung bình nhỏ, khoảng 1,2 điểm phần trăm.",
+      "Phát hiện chi phí phụ và một số suy giảm, gồm chỉ dẫn không khớp phiên bản kho mã."
+    ],
+    "application": "Giữ phương án nền không thêm kỹ năng và xem cả suy giảm, không chỉ tổng số lần cải thiện.",
+    "limits": "Nghiên cứu sơ bộ dùng Claude Code với Haiku 4.5, không phải Astra. Thiết lập khác SkillsBench và cách Codex chọn kỹ năng.",
+    "verification": {
+      "note": "49 kỹ năng, 565 tác vụ, Claude Code với Haiku 4.5; cơ chế khám phá khác Codex."
+    }
+  },
+  {
+    "id": "01",
+    "type": "Hướng dẫn mô hình chính thức",
+    "date": "Tài liệu hiện hành · không ghi ngày xuất bản/cập nhật",
+    "summary": [
+      "Đưa ra khuyến nghị viết lời nhắc riêng cho Astra.",
+      "Làm rõ tính tự chủ, hành vi của tệp chỉ dẫn và ranh giới công việc ủy nhiệm.",
+      "Khuyến nghị mức xác minh tương xứng với tác vụ."
+    ],
+    "application": "Định hình thỏa thuận làm việc của tác tử; giữ cơ chế trò chơi thành quyết định thiết kế riêng.",
+    "limits": "Đường dẫn tài liệu luôn cập nhật có thể về sau mô tả mô hình khác. Kiểm tra tiêu đề trước khi tái sử dụng.",
+    "verification": {
+      "note": "Hướng dẫn mô hình hỗ trợ thỏa thuận làm việc; luật trò chơi vẫn do sách đề xuất."
+    }
+  },
+  {
+    "id": "08",
+    "type": "Tài liệu kỹ năng chính thức",
+    "date": "Tài liệu hiện hành · không ghi ngày xuất bản/cập nhật",
+    "summary": [
+      "Kỹ năng đóng gói siêu dữ liệu và chỉ dẫn SKILL.md, có thể kèm mã lệnh, tài liệu và tài sản.",
+      "Hỗ trợ chọn tường minh và khớp ngầm khi kỹ năng đủ điều kiện tự gọi.",
+      "Danh mục ban đầu có ngân sách; kỹ năng được chọn mới cung cấp chỉ dẫn đầy đủ."
+    ],
+    "application": "Kiểm tra kỹ năng sẵn có trước khi tạo bản trùng. Kỹ năng trong kho có thể nằm ở .agents/skills.",
+    "limits": "allow_implicit_invocation: false tắt gọi tự động. Danh mục có giới hạn có thể rút ngắn hoặc bỏ mục. Có sẵn và khớp không bảo đảm chọn đúng hay tìm kiếm toàn Internet.",
+    "verification": {
+      "note": "Đã kiểm tra điều kiện định tuyến và giới hạn danh mục, không đo độ chính xác của chọn tự động."
+    }
+  },
+  {
+    "id": "07",
+    "type": "Tài liệu tác tử chính thức",
+    "date": "Tài liệu hiện hành · không ghi ngày xuất bản/cập nhật",
+    "summary": [
+      "Giải thích cách khám phá và áp dụng phạm vi của chỉ dẫn trong kho mã.",
+      "Chỉ dẫn thư mục cha và chỉ dẫn gần hơn đều có thể ảnh hưởng tác vụ.",
+      "Hướng dẫn trong kho giữ quy ước bền vững qua các phiên."
+    ],
+    "application": "Ghi lệnh và quy ước địa phương trong tệp chỉ dẫn ngắn, chính xác.",
+    "limits": "Cơ chế này khác chọn kỹ năng. Ví dụ tải xuống không phải chỉ dẫn đang hoạt động trong kho sách.",
+    "verification": {
+      "note": "Xác nhận chỉ dẫn có phạm vi; tệp ví dụ là nội dung dự án tùy chọn."
+    }
+  },
+  {
+    "id": "09",
+    "type": "Hướng dẫn engine chính thức",
+    "date": "Tài liệu bản ổn định · không ghi ngày xuất bản/cập nhật",
+    "summary": [
+      "Xây dựng trò chơi 3D nhỏ qua chuỗi bài học thực hành.",
+      "Giới thiệu tổ chức cảnh, di chuyển, kẻ địch, va chạm và giao diện.",
+      "Cho thấy các khái niệm engine kết hợp thành kết quả chơi được."
+    ],
+    "application": "Dùng bài học tập trung khi một khái niệm engine cản trở tiến độ.",
+    "limits": "Khớp tài liệu với phiên bản Godot đã cài. Hướng dẫn không đánh giá quy trình AI.",
+    "verification": {
+      "note": "Hỗ trợ lộ trình học cơ bản; không triển khai Signal Garden."
+    }
+  },
+  {
+    "id": "11",
+    "type": "Tài liệu xuất bản chính thức",
+    "date": "Tài liệu bản ổn định · không ghi ngày xuất bản/cập nhật",
+    "summary": [
+      "Xuất web dùng WebGL 2 và bộ kết xuất Compatibility; hướng dẫn đã đọc vẫn chưa hỗ trợ Godot 4 C# xuất web.",
+      "Bản đa luồng cần điều kiện cách ly trên máy chủ; bản đơn luồng có ràng buộc khác.",
+      "Cần chú ý rõ hành vi đầu vào, âm thanh và lưu trữ trên trình duyệt."
+    ],
+    "application": "Thử bản xuất rất nhỏ trên máy chủ đích trước khi xây cả trò chơi.",
+    "limits": "Kiểm tra đúng bản engine. Nâng cấp mô hình không loại bỏ giới hạn trình duyệt hoặc máy chủ.",
+    "verification": {
+      "note": "Đã kiểm tra C#, WebGL 2, lựa chọn đơn luồng và ngoại lệ tên tệp HTML."
+    }
+  },
+  {
+    "id": "12",
+    "type": "Tài liệu triển khai chính thức",
+    "date": "Tài liệu hiện hành · không ghi ngày xuất bản/cập nhật",
+    "summary": [
+      "Bản dựng sản xuất thường tạo thư mục dist.",
+      "Trang dự án GitHub Pages cần đường dẫn gốc khớp tên kho.",
+      "Hướng dẫn có ví dụ triển khai bằng GitHub Actions."
+    ],
+    "application": "Dựng và thử trò chơi tại đường dẫn con sẽ dùng khi xuất bản.",
+    "limits": "Áp dụng cho trò chơi Vite đề xuất. Sách này dùng bộ dựng tĩnh riêng và gói Mermaid cục bộ.",
+    "verification": {
+      "note": "Áp dụng cho trò chơi Vite, không phải cách dựng của sách."
+    }
+  },
+  {
+    "id": "13",
+    "type": "Tài liệu lưu trữ chính thức",
+    "date": "Tài liệu hiện hành · không ghi ngày xuất bản/cập nhật",
+    "summary": [
+      "Tách sản phẩm bản dựng khỏi công việc triển khai.",
+      "Mô tả thiết lập Pages, tải sản phẩm, quyền triển khai và môi trường github-pages.",
+      "Công việc triển khai phải nhận đúng sản phẩm và quyền."
+    ],
+    "application": "Chỉ xuất bản đầu ra dist đã tạo rồi kiểm tra triển khai hoàn tất.",
+    "limits": "Quy trình thành công không chứng minh đường dẫn tài sản đúng hay trò chơi chạy tốt trong trình duyệt.",
+    "verification": {
+      "note": "Đã kiểm tra mẫu triển khai; quy trình thực tế của dự án là một tệp riêng."
+    }
+  },
+  {
+    "id": "14",
+    "type": "Kho thư viện chính thức",
+    "date": "Kho đang cập nhật · không dùng một ngày xuất bản chung",
+    "summary": [
+      "Cung cấp thư viện JavaScript để hiển thị nội dung 3D tương tác.",
+      "Liên kết hướng dẫn cài đặt, tài liệu, ví dụ và khả năng kết xuất.",
+      "Tập trung vào kết xuất; nhà phát triển chịu trách nhiệm luật trò chơi và cấu trúc ứng dụng."
+    ],
+    "application": "Thư viện khởi đầu phù hợp cho trò chơi trình duyệt nhỏ có cơ chế riêng.",
+    "limits": "README là tài liệu khả năng, không phải so sánh hiệu suất engine. Khóa phiên bản đã cài.",
+    "verification": {
+      "note": "Phân công trách nhiệm gameplay là đánh giá của sách về bộ công nghệ đề xuất."
+    }
+  },
+  {
+    "id": "15",
+    "type": "Tài liệu tính năng engine chính thức",
+    "date": "Tài liệu tính năng hiện hành · không ghi ngày xuất bản/cập nhật",
+    "summary": [
+      "Liệt kê khả năng kết xuất và cảnh của engine trình duyệt.",
+      "Bao gồm công cụ tích hợp và hỗ trợ liên quan vật lý.",
+      "Cung cấp danh sách tính năng để đánh giá bộ công nghệ thiên về engine."
+    ],
+    "application": "Cân nhắc Babylon.js khi các hệ thống sẵn có phù hợp nhu cầu trò chơi.",
+    "limits": "Có tính năng không chứng minh dễ dùng hoặc nhanh trong dự án; sách chưa chạy kiểm chuẩn engine.",
+    "verification": {
+      "note": "Xác nhận công cụ sẵn có, không so sánh hiệu suất giữa engine."
+    }
+  },
+  {
+    "id": "16",
+    "type": "Tài liệu tương thích engine chính thức",
+    "date": "Sổ tay hiện hành · đã đọc trang Unity 6.6; không ghi ngày xuất bản/cập nhật",
+    "summary": [
+      "Quy định yêu cầu trình duyệt hỗ trợ nội dung Unity trên web.",
+      "WebGL 2, WebAssembly và tương thích nền tảng/trình duyệt ảnh hưởng triển khai.",
+      "Phải đánh giá tương thích theo phiên bản Unity và thiết bị đích."
+    ],
+    "application": "Thử bản xuất trên trình duyệt thực tế trước khi chọn bộ công nghệ.",
+    "limits": "Tránh áp dụng nhận định bao quát cũ về hỗ trợ trình duyệt cho phiên bản Unity mới.",
+    "verification": {
+      "note": "Đối chiếu với editor đã cài; ngày dựng trang không được xem là ngày xuất bản bài."
+    }
+  },
+  {
+    "id": "24",
+    "type": "Tài liệu vòng đời tác tử chính thức",
+    "date": "Tài liệu hiện hành · không ghi ngày xuất bản",
+    "summary": [
+      "Hook chạy hành động tại sự kiện vòng đời được hỗ trợ như PreToolUse và PostToolUse.",
+      "Cấu hình, khớp sự kiện và quy tắc tin cậy quyết định thời điểm thực thi.",
+      "PostToolUse xảy ra sau hành động đã hoàn tất; không thể đảo ngược hành động đó."
+    ],
+    "application": "Cân nhắc kiểm tra manifest cục bộ có bộ lọc hẹp sau khi trình kiểm tra chạy trực tiếp tốt.",
+    "limits": "Hook minh họa là thiết kế đề xuất, chưa cài. Hook tác tử khác webhook HTTP.",
+    "verification": {
+      "note": "Sự kiện sau công cụ không thể hoàn tác hành động đã xong; hook chưa được cài ở đây."
+    }
+  },
+  {
+    "id": "28",
+    "type": "Hướng dẫn quy trình mô hình chính thức",
+    "date": "Tài liệu hiện hành · không ghi ngày xuất bản",
+    "summary": [
+      "Bao gồm tạo video từ văn bản, từ ảnh và từ khung đầu/cuối.",
+      "Mô tả khả năng âm thanh và nhiều cảnh được hỗ trợ.",
+      "Giải thích quyền truy cập mô hình và yêu cầu thành phần tương thích."
+    ],
+    "application": "Dùng mẫu được hỗ trợ và xem một kết quả ngắn trước khi mở rộng quy trình.",
+    "limits": "Có yêu cầu quyền truy cập mô hình và tài nguyên tính toán. Tài liệu hiện hành không chứng minh ngày xuất bản hoặc hiệu quả Astra.",
+    "verification": {
+      "note": "Kiểm tra mẫu tương thích và điều kiện tài khoản trước khi tạo."
+    }
+  },
+  {
+    "id": "29",
+    "type": "Hướng dẫn giao diện chính thức",
+    "date": "Tài liệu hiện hành · không ghi ngày xuất bản",
+    "summary": [
+      "Duyệt quy trình ví dụ từ giao diện mẫu của ứng dụng.",
+      "Mẫu cung cấp đồ thị khởi đầu cho nhiều tác vụ phương tiện.",
+      "Kiểm tra và đáp ứng yêu cầu mô hình của quy trình đã chọn trước khi chạy."
+    ],
+    "application": "Bắt đầu bằng mẫu chính thức chạy được; sơ đồ Mermaid khái niệm của sách không phải JSON thực thi.",
+    "limits": "Khả dụng phụ thuộc bản cài và mẫu. Hướng dẫn không bảo đảm tương thích mọi phiên bản.",
+    "verification": {
+      "note": "Mẫu chỉ là đồ thị khởi đầu thực thi được khi đáp ứng các yêu cầu tương thích."
+    }
+  },
+  {
+    "id": "37",
+    "type": "Tích hợp tác tử beta công khai chính thức",
+    "date": "Tài liệu hiện hành · không ghi ngày xuất bản",
+    "summary": [
+      "Mô tả kết nối cục bộ và đám mây riêng biệt.",
+      "Cung cấp tìm mẫu, thực thi quy trình và xử lý tác vụ/đầu ra.",
+      "get_output trả hướng dẫn tải xuống; tác tử phải lưu và xác minh tệp riêng."
+    ],
+    "application": "Kiểm tra schema của mẫu rồi gửi tác vụ giới hạn trong phạm vi được phép.",
+    "limits": "Đang beta công khai; chạy đám mây có yêu cầu tài khoản. Sách chưa thực hành kết nối hay tạo video.",
+    "verification": {
+      "note": "Đã đọc thiết lập beta công khai, chưa chạy; cần kiểm tra khả dụng cho tài khoản."
+    }
+  },
+  {
+    "id": "38",
+    "type": "Tài liệu kỹ năng tác tử chính thức",
+    "date": "Tài liệu hiện hành · không ghi ngày xuất bản",
+    "summary": [
+      "Đóng gói hướng dẫn về quy trình Comfy và sử dụng mô hình.",
+      "Liên kết bộ kỹ năng Comfy đang được duy trì.",
+      "Có ví dụ cài đặt gắn với môi trường tác tử cụ thể."
+    ],
+    "application": "Kết hợp kiến thức quy trình còn thiếu với giao diện hành động sẵn có khi hữu ích.",
+    "limits": "Lệnh plugin theo môi trường không thay thế lẫn nhau. Không có so sánh kỹ năng Astra có đối chứng.",
+    "verification": {
+      "note": "Hướng dẫn nhà cung cấp không chứng minh kỹ năng riêng cải thiện mọi tác tử và tác vụ."
+    }
+  },
+  {
+    "id": "30",
+    "type": "Hướng dẫn tích hợp MCP chính thức",
+    "date": "Tài liệu hiện hành · không ghi ngày xuất bản",
+    "summary": [
+      "Mô tả endpoint MCP cho nhà phát triển tại dev.runwayml.com/mcp.",
+      "Công cụ hỗ trợ công việc nhà phát triển và tra cứu tài liệu API.",
+      "Xác định mcp.runwayml.com là tích hợp tạo phương tiện riêng."
+    ],
+    "application": "Chọn máy chủ theo khả năng, rồi kiểm tra công cụ thực sự đăng ký sau kết nối.",
+    "limits": "Không trình bày endpoint nhà phát triển như máy chủ tạo phương tiện. Sách chưa thử thiết lập máy chủ tạo.",
+    "verification": {
+      "note": "MCP tài liệu nhà phát triển khác tích hợp tạo phương tiện được liên kết."
+    }
+  },
+  {
+    "id": "31",
+    "type": "Hướng dẫn API bất đồng bộ chính thức",
+    "date": "Tài liệu hiện hành · không ghi ngày xuất bản",
+    "summary": [
+      "Tác vụ tạo chạy bất đồng bộ và có trạng thái để truy xuất sau.",
+      "Hàm hỗ trợ SDK có thể chờ đầu ra tác vụ.",
+      "Hướng dẫn thăm dò thủ công gồm khoảng chờ tối thiểu, độ lệch ngẫu nhiên và lùi nhịp."
+    ],
+    "application": "Lưu ID tác vụ và phân biệt hết thời gian chờ cục bộ với lỗi tác vụ từ xa.",
+    "limits": "Ngữ nghĩa phụ thuộc nhà cung cấp. Tác vụ thành công vẫn cần xem hình ảnh; sách chưa gửi yêu cầu trả phí.",
+    "verification": {
+      "note": "Đã kiểm tra trạng thái kết thúc và thời gian chờ cục bộ; chưa chạy tác vụ trả phí."
+    }
+  },
+  {
+    "id": "33",
+    "type": "Hướng dẫn vòng đời đầu ra chính thức",
+    "date": "Tài liệu hiện hành · không ghi ngày xuất bản",
+    "summary": [
+      "Kết quả tác vụ có URL tài sản đã tạo.",
+      "URL tải đầu ra là tạm thời, có cửa sổ hết hạn 24–48 giờ sau truy cập theo tài liệu.",
+      "Ứng dụng nên tải và lưu các tệp cần dùng."
+    ],
+    "application": "Giữ tài sản đã lưu bền vững và hồ sơ tác vụ trước khi dựng hoặc xuất bản trailer.",
+    "limits": "Đây là quy tắc phân phối Runway, không phải quy tắc lưu giữ chung của mọi dịch vụ video.",
+    "verification": {
+      "note": "Lưu đầu ra vào nơi bạn quản lý; sách chưa tạo hay tải tệp video nào."
+    }
+  },
+  {
+    "id": "34",
+    "type": "Tài liệu nút tự động hóa chính thức",
+    "date": "Tài liệu hiện hành · không ghi ngày xuất bản",
+    "summary": [
+      "Gọi HTTP với phương thức, URL, header và nội dung có thể cấu hình.",
+      "Hỗ trợ xác thực qua cấu hình thông tin đăng nhập.",
+      "Có thể dùng như nút quy trình thông thường hoặc công cụ tác tử."
+    ],
+    "application": "Chuyển một yêu cầu nhà cung cấp đã xác minh thành bước quy trình trước khi thêm điều phối.",
+    "limits": "Nút này không tự tạo video hay xác minh schema yêu cầu tùy ý của nhà cung cấp.",
+    "verification": {
+      "note": "Xác nhận cấu hình yêu cầu HTTP; API nhà cung cấp thực hiện tạo video."
+    }
+  },
+  {
+    "id": "35",
+    "type": "Tài liệu nút tự động hóa chính thức",
+    "date": "Tài liệu hiện hành · không ghi ngày xuất bản",
+    "summary": [
+      "Tạm dừng quy trình rồi tiếp tục sau khoảng thời gian hoặc điều kiện được hỗ trợ.",
+      "Có thể tiếp tục khi webhook được gọi qua URL riêng của lượt thực thi.",
+      "Tiếp tục qua webhook hỗ trợ thiết lập xác thực."
+    ],
+    "application": "Chờ giữa các lần hỏi trạng thái hoặc dùng callback đã được nhà cung cấp hỗ trợ trong tài liệu.",
+    "limits": "Nút hỗ trợ webhook không có nghĩa API video cụ thể hỗ trợ callback.",
+    "verification": {
+      "note": "Khoảng chờ dưới 65 giây không chuyển dữ liệu thực thi sang cơ sở dữ liệu."
+    }
+  },
+  {
+    "id": "36",
+    "type": "Tài liệu kết xuất sơ đồ chính thức",
+    "date": "Tài liệu hiện hành · không ghi ngày xuất bản",
+    "summary": [
+      "Kết xuất định nghĩa sơ đồ văn bản thành SVG.",
+      "Hỗ trợ tùy chọn khởi tạo và kết xuất bằng mã.",
+      "Cho phép nhúng sơ đồ vào trang web."
+    ],
+    "application": "Sách kết xuất chín sơ đồ tự thiết kế, cung cấp mã nguồn chỉnh sửa được và bản tải SVG.",
+    "limits": "Mermaid mô tả luồng, không thực thi dây chuyền tạo video. Phiên bản bộ kết xuất được khóa trong package.json.",
+    "verification": {
+      "note": "Xác nhận khả năng kết xuất; sơ đồ trong sách là đề xuất quy trình riêng."
+    }
+  },
+  {
+    "id": "39",
+    "type": "Tài liệu kỹ thuật chính thức",
+    "date": "Tài liệu hiện hành · không ghi ngày xuất bản/cập nhật",
+    "summary": [
+      "git add đưa ảnh chụp thay đổi được chọn vào vùng chờ; --all gồm thêm, sửa và xóa trong phạm vi.",
+      "git diff --cached hiển thị thay đổi sẽ commit; --stat chỉ là tóm tắt.",
+      "Các tài liệu kèm theo mô tả init -b, switch -c và revert, lệnh ghi thao tác hoàn tác thành commit mới."
+    ],
+    "application": "Đưa đầy đủ khung dự án mới vào vùng chờ, xem nội dung và giữ công việc không liên quan trong dự án hiện có.",
+    "limits": "Lệnh mô tả hành vi Git; tên nhánh, cấu trúc tệp và nhịp commit là lựa chọn của sách."
+  },
+  {
+    "id": "40",
+    "type": "Tài liệu kỹ thuật chính thức",
+    "date": "Tài liệu hiện hành · không ghi ngày xuất bản/cập nhật",
+    "summary": [
+      "Tạo kho với mức hiển thị rõ ràng và chủ sở hữu/tên tùy chọn.",
+      "Dùng --source để nối dự án cục bộ và --remote để đặt tên remote.",
+      "--push là tùy chọn; có thể dùng git push sau để xuất bản nhánh đã commit."
+    ],
+    "application": "Tạo đúng kho trò chơi công khai sau khi chuẩn bị và kiểm tra tệp.",
+    "limits": "Cần GitHub CLI đã cài, xác thực và đủ quyền. Ví dụ sách không tự tạo kho trò chơi."
+  },
+  {
+    "id": "41",
+    "type": "Tài liệu kỹ thuật chính thức",
+    "date": "Tài liệu hiện hành · không ghi ngày xuất bản/cập nhật",
+    "summary": [
+      "--base chọn nhánh đích, --head chọn nhánh nguồn.",
+      "--body-file đọc mô tả pull request từ tệp đã có.",
+      "--title cung cấp tiêu đề; các cờ giúp tái lập yêu cầu bằng CLI."
+    ],
+    "application": "Viết mô tả kiểm tra trước khi gọi lệnh PR ví dụ.",
+    "limits": "Lệnh không xác minh chất lượng gameplay. Ví dụ camera là thay đổi đề xuất, không phải PR do sách tạo."
+  },
+  {
+    "id": "42",
+    "type": "Tài liệu kỹ thuật chính thức",
+    "date": "Tài liệu hiện hành · không ghi ngày xuất bản/cập nhật",
+    "summary": [
+      "Cần package-lock.json hoặc npm-shrinkwrap.json đã tồn tại.",
+      "Báo lỗi nếu package.json và tệp khóa không khớp, thay vì cập nhật tệp khóa.",
+      "Cài sạch phụ thuộc mà không viết lại manifest hoặc tệp khóa."
+    ],
+    "application": "Dùng đồ thị phụ thuộc đã commit trong CI và ghi lại cờ dự án cần để tái lập.",
+    "limits": "Tệp khóa tăng khả năng lặp lại, không chứng minh tương thích trình duyệt, đúng luật trò chơi hay an toàn mọi phụ thuộc."
+  },
+  {
+    "id": "46",
+    "type": "Tài liệu kỹ thuật chính thức",
+    "date": "Tài liệu hiện hành · không ghi ngày xuất bản/cập nhật",
+    "summary": [
+      "Pages xuất bản HTML, CSS và JavaScript tĩnh, có thể qua bước dựng.",
+      "Trang dự án thường nằm dưới đường dẫn tên kho trên miền tài khoản.",
+      "Trang người dùng/tổ chức và trang dự án có quy ước kho và URL khác nhau."
+    ],
+    "application": "Xuất bản tệp trò chơi/sách đã dựng; chạy tác vụ phương tiện có bí mật trong công cụ cục bộ hoặc máy chủ riêng.",
+    "limits": "Lưu trữ tĩnh không phải trình xử lý API riêng tư. Tệp phương tiện chịu giới hạn GitHub; sách chưa đo hiệu năng phân phối."
+  },
+  {
+    "id": "47",
+    "type": "Tài liệu kỹ thuật chính thức",
+    "date": "Tài liệu hiện hành · không ghi ngày xuất bản/cập nhật",
+    "summary": [
+      "Giới hạn đồng thời ràng buộc số tác vụ tạo đang chạy.",
+      "Tác vụ THROTTLED đã được nhận và lưu, đang chờ vào xử lý.",
+      "Trạng thái bị điều tiết của tác vụ khác phản hồi HTTP giới hạn tốc độ."
+    ],
+    "application": "Tiếp tục thăm dò có giới hạn cho tác vụ đã có thay vì gửi bản trùng.",
+    "limits": "Giới hạn tùy tài khoản và dịch vụ. Sách không cố định giá hoặc mức đồng thời của một gói."
+  },
+  {
+    "id": "48",
+    "type": "Tài liệu kỹ thuật chính thức",
+    "date": "Tài liệu hiện hành · không ghi ngày xuất bản/cập nhật",
+    "summary": [
+      "Bảng lỗi phân biệt lỗi đầu vào/xác thực không nên thử lại và tình huống có thể thử lại.",
+      "Giới hạn tốc độ và lỗi dịch vụ tạm thời có thể cần thử lại.",
+      "Lùi nhịp theo hàm mũ kèm độ lệch ngẫu nhiên giảm yêu cầu lặp đồng bộ."
+    ],
+    "application": "Giới hạn thử lại truy vấn trạng thái và đối soát các lần gửi tạo chưa rõ kết quả.",
+    "limits": "Khuyến nghị thử lại không bảo đảm gửi tạo đúng một lần. Chính sách dừng và đối soát là thiết kế ứng dụng do sách đề xuất."
+  },
+  {
+    "id": "05",
+    "type": "Báo cáo kỹ thuật lịch sử từ nhà phát triển",
+    "date": "Xuất bản 26/11/2025",
+    "summary": [
+      "Tách thiết lập dự án ban đầu khỏi công việc bổ sung tính năng từng bước.",
+      "Dùng ghi chép tiến độ và lịch sử Git để phiên sau tiếp tục.",
+      "Nhấn mạnh kiểm tra trình duyệt cho hành vi đầu cuối."
+    ],
+    "application": "Giữ tiến độ khôi phục được và tiêu chí hoàn thành quan sát được; đánh giá lại lượng cấu trúc hỗ trợ.",
+    "limits": "Đọc cùng bài tiếp nối tháng 3/2026 [21]. Thiết lập tác tử cũ không phải chỉ dẫn cho Astra.",
+    "verification": {
+      "note": "Nghiên cứu ứng dụng chạy dài trong quá khứ; xem lại cấu trúc hỗ trợ qua bài tháng 3."
+    }
+  },
+  {
+    "id": "02",
+    "type": "Chép lời YouTube · bài nói gốc qua bản sao",
+    "date": "Bài nói xuất bản 17/6/2025",
+    "summary": [
+      "Nội dung AI tạo ra kéo theo khối lượng xác minh của con người.",
+      "Yêu cầu cụ thể và sản phẩm trung gian kiểm tra được có thể giúp đánh giá dễ hơn.",
+      "Bản thay đổi lớn vẫn cần xem kỹ; tìm từ “verification” trong bản chép lời."
+    ],
+    "application": "Giữ kiểm tra trò chơi quan sát được; hướng dẫn Astra [04] cung cấp ví dụ thực hành mới hơn.",
+    "limits": "Chỉ tóm tắt đoạn chép lời được chọn, không phải toàn bài nói hay kiểm chuẩn. Không có mốc thời gian ổn định; phụ đề có thể sai.",
+    "verification": {
+      "note": "Kiểm tra đoạn nói qua bản sao bên thứ ba; không có mốc thời gian ổn định."
+    },
+    "videoNote": "Kiểm tra đoạn nói qua bản sao bên thứ ba; không có mốc thời gian ổn định."
+  },
+  {
+    "id": "03",
+    "type": "Gợi ý video lịch sử · chưa lấy được bản chép lời",
+    "date": "Video xuất bản tháng 2/2025",
+    "summary": [
+      "Bản trước có ghi chú đoạn nói về ngữ cảnh; phần tóm tắt đó được rút lại để chờ xác minh mới.",
+      "Bản sao Pickscribe ban đầu hết thời gian truy cập; trang thay thế không hiển thị lời nói.",
+      "Chỉ dùng làm gợi ý xem tư liệu lịch sử. Không khuyến nghị kỹ thuật hiện tại nào phụ thuộc bản chép lời thiếu này."
+    ],
+    "application": "Để biết hướng dẫn nạp ngữ cảnh hiện tại, đọc nguồn Astra đã xác minh [17].",
+    "limits": "Chưa xác minh lại nội dung nói ngày 14/9/2026. Trang đích truy cập được không chứng minh có bản chép lời.",
+    "verification": {
+      "note": "Loại nội dung nói không truy xuất được khỏi các khuyến nghị đã xác minh của bản này."
+    },
+    "videoNote": "Loại nội dung nói không truy xuất được khỏi các khuyến nghị đã xác minh của bản này."
+  },
+  {
+    "id": "10",
+    "type": "Hướng dẫn viết của tác giả · có video YouTube",
+    "date": "Xuất bản 3/3/2025",
+    "summary": [
+      "Khóa học dạng viết truy cập được xây dựng Survivor Arena FPS trong Godot 4.",
+      "Dùng trò chơi nhỏ cụ thể để giới thiệu khái niệm phát triển 3D.",
+      "Kết nối bài học với dự án chơi được, có thể kiểm tra và điều chỉnh."
+    ],
+    "application": "Dùng làm bài tập cùng tài liệu Godot hiện hành [09] và ràng buộc xuất bản [11].",
+    "limits": "Không lấy được bản chép lời dùng được của video NJJNWGD25rg. Ghi chú tóm tắt khóa học viết, không phải nội dung video chưa xem.",
+    "verification": {
+      "note": "Đã kiểm tra khóa học viết; bản chép lời YouTube liên quan vẫn không truy xuất được."
+    }
+  }
+]

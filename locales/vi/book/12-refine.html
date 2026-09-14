@@ -1,0 +1,22 @@
+<h2 id="refine">Cải thiện ý tưởng và cách làm</h2>
+<p class="lead">Sửa mắt xích yếu nhất rồi giữ lại điều đã học.</p>
+<p>Dùng <a href="#diagram-improvement-loop">vòng cải thiện Mermaid</a> và <a href="#thinking-flows">ghi chú quyết định</a> để làm rõ nguyên nhân, thử nghiệm và kết quả.</p>
+<p>Khi bản đầu chưa tốt, đừng vội thêm năm tính năng. Xác định loại vấn đề: luật sai cần làm rõ; cơ chế triển khai đúng nhưng nhạt cần thử thiết kế; điều khiển hỏng cần tái hiện; quy ước bị quên cần ngữ cảnh kho mã tốt hơn.</p>
+<h3>Ví dụ cải thiện prompt</h3>
+<p>Các bản dưới là minh họa chỉnh sửa, không phải kết quả thử nghiệm đo lường.</p>
+<div class="table-wrap"><table><thead><tr><th>Phiên bản</th><th>Chỉ dẫn</th><th>Vì sao giúp quyết định tiếp</th></tr></thead><tbody>
+<tr><td>V0 · mơ hồ</td><td>Làm game 3D hay có robot.</td><td>Hầu hết thiết kế và tiêu chí xong chưa được xác định.</td></tr>
+<tr><td>V1 · có phạm vi</td><td>Game web trong một sân mái nhà; robot nhặt ba pin rồi về đèn hiệu.</td><td>Định nghĩa thế giới, mục tiêu và vòng tối thiểu.</td></tr>
+<tr><td>V2 · kiểm tra được</td><td>WASD/mũi tên, camera cao cố định, một drone, ba máu, 90 giây. Kiểm tra thắng, thua, tạm dừng, chơi lại.</td><td>Luật cụ thể và nghiệm thu nhìn thấy được.</td></tr>
+<tr><td>V3 · theo tình huống</td><td>Ở commit này bồn cây phía bắc che robot. Giữ luật, đổi camera hoặc xử lý che khuất và so cùng tuyến trước/sau.</td><td>Bằng chứng hiện tại giới hạn đúng thay đổi.</td></tr>
+</tbody></table></div>
+<h3>Dùng thang đánh giá để làm rõ bất đồng</h3>
+<p>Chấm mỗi mặt từ 0 đến 2: <strong>0</strong> thiếu hoặc hỏng, <strong>1</strong> có nhưng không nhất quán, <strong>2</strong> đã thể hiện trong phép thử đã nêu. Kèm ghi chú và bằng chứng. Điểm hỗ trợ trao đổi, không đo khách quan mức vui.</p>
+<ul><li><strong>Rõ ràng:</strong> hiểu mục tiêu và trạng thái.</li><li><strong>Điều khiển:</strong> phản hồi nhất quán, camera hỗ trợ.</li><li><strong>Hoàn chỉnh:</strong> có thắng, thua, tạm dừng, chơi lại đáng tin.</li><li><strong>Phản hồi:</strong> nhận biết thu thập, sát thương, đèn sẵn sàng.</li><li><strong>Thử thách:</strong> tuyến đi và nguy hiểm tạo quyết định dễ hiểu.</li><li><strong>Nhất quán:</strong> hình, âm và UI cùng không khí.</li><li><strong>Đáng tin:</strong> bản triển khai chạy chấp nhận được trên mục tiêu đã nêu.</li><li><strong>Dễ bảo trì:</strong> phiên mới tái lập build và tìm việc tiếp được.</li></ul>
+<h3>So sánh bằng thử nghiệm công bằng</h3>
+<p>Muốn biết meta-prompt có ích không, so với yêu cầu trực tiếp từ cùng commit sạch. Giữ nguyên mô tả, mô hình, công cụ, nền tảng và ngân sách công sức. Ghi prompt đã dùng, chi phí thật, thời gian, can thiệp tay, mốc đạt và hồi quy.</p>
+<p>Nếu được, đánh giá bản chơi mà không biết prompt tạo ra nó. Lặp nhiều hơn một lần trước khi tin khác biệt, vì kết quả tác nhân có thể biến động. Đừng chọn một lần may mắn làm người thắng phổ quát. Nếu cách nào dùng thêm tác nhân hoặc ngân sách lớn hơn, báo khác biệt đó thay vì quy hết cho câu chữ.</p>
+<h3>Chỉ giữ cải tiến còn hữu ích</h3>
+<p>Quy ước lặp lại có thể thuộc AGENTS.md. Quy trình lặp lại có thể cần skill nếu công cụ và tài liệu sẵn có chưa bao phủ. Sửa một lần để trong ghi chú nhiệm vụ. Cập nhật mô tả khi chơi thử làm đổi thiết kế. Không mặc định chép cùng luật vào nhiều lớp.</p>
+<p>Ví dụ, thua trước kích hoạt trong cùng bước thuộc tài liệu nghiệm thu chính. Skill rà soát có thể trỏ đến nếu tác nhân hay quên. “Dời bồn cây hai đơn vị về đông” thuộc thay đổi hiện tại. Đánh giá lại chỉ dẫn tùy chọn khi đổi mô hình: cách khắc phục hữu ích hôm qua có thể không còn cần hôm nay.</p>
+<div class="exercise"><h3>Nhìn lại sau phát hành</h3><p>Viết ba câu: chỉ dẫn giúp nhất, lỗi tốn công sửa lại nhất và một thay đổi quy trình sẽ thử lần tới. Nối mỗi câu với quan sát thật.</p></div>

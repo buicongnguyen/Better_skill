@@ -7,14 +7,14 @@
       const code = figure.querySelector('.diagram-source code');
       try {
         await navigator.clipboard.writeText(code.textContent);
-        button.textContent = 'Copied ✓';
-        notify('Mermaid source copied');
-        setTimeout(() => { button.textContent = 'Copy Mermaid'; }, 2200);
+        button.textContent = readerMessages.copied;
+        notify(readerMessages.mermaidCopied);
+        setTimeout(() => { button.textContent = readerMessages.copyMermaid; }, 2200);
       } catch {
         figure.querySelector('details').open = true;
         const range = document.createRange(); range.selectNodeContents(code);
         const selection = getSelection(); selection.removeAllRanges(); selection.addRange(range);
-        notify('Source selected — press Ctrl+C or ⌘C to copy');
+        notify(readerMessages.sourceFallback);
       }
     });
   }
@@ -38,12 +38,12 @@
       vector.style.setProperty('--diagram-width', `${vector.viewBox.baseVal.width}px`);
       canvas.classList.add('diagram-readable');
       const sizeButton = document.createElement('button');
-      sizeButton.type = 'button'; sizeButton.textContent = 'Fit diagram';
+      sizeButton.type = 'button'; sizeButton.textContent = readerMessages.fit;
       sizeButton.setAttribute('aria-pressed', 'true');
       sizeButton.addEventListener('click', () => {
         const expanded = canvas.classList.toggle('diagram-readable');
         sizeButton.setAttribute('aria-pressed', String(expanded));
-        sizeButton.textContent = expanded ? 'Fit diagram' : 'Readable size';
+        sizeButton.textContent = expanded ? readerMessages.fit : readerMessages.readable;
       });
       const actions = figure.querySelector('.diagram-actions');
       actions.prepend(sizeButton);
@@ -56,7 +56,7 @@
       download.hidden = false;
     } catch (error) {
       figure.dataset.rendered = 'false';
-      figure.querySelector('.diagram-status').textContent = 'The graph could not render. Its description and editable source remain available.';
+      figure.querySelector('.diagram-status').textContent = readerMessages.renderError;
       figure.querySelector('details').open = true;
       console.error(`Could not render ${figure.id}`, error);
     }

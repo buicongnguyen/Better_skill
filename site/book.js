@@ -1,3 +1,41 @@
+const readerMessages = JSON.parse(document.querySelector('#reader-messages').textContent);
+const themeButton = document.querySelector('.theme-toggle');
+const systemTheme = matchMedia('(prefers-color-scheme: dark)');
+function syncTheme() { themeButton.setAttribute('aria-pressed', String(document.documentElement.dataset.theme === 'dark')); }
+themeButton.addEventListener('click', () => {
+  const theme = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+  document.documentElement.dataset.theme = theme;
+  try { localStorage.setItem('better-book-theme', theme); } catch {}
+  syncTheme();
+});
+systemTheme.addEventListener('change', event => {
+  let saved;
+  try { saved = localStorage.getItem('better-book-theme'); } catch {}
+  if (!saved) { document.documentElement.dataset.theme = event.matches ? 'dark' : 'light'; syncTheme(); }
+});
+syncTheme();
+document.querySelectorAll('[data-language]').forEach(link => link.addEventListener('click', event => {
+  if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+  event.preventDefault();
+  const language = link.dataset.language;
+  if (language === document.documentElement.lang) return;
+  let anchor = location.hash;
+  const linkedSection = document.getElementById(location.hash.slice(1));
+  const linkedTop = linkedSection?.getBoundingClientRect().top;
+  // Focusing a sticky control can scroll the viewport. Keep a still-visible
+  // explicit destination; otherwise follow the reader's current subsection.
+  if (linkedTop === undefined || linkedTop < -120 || linkedTop > innerHeight) {
+    for (const heading of document.querySelectorAll('#cover, article h2[id], article h3[id], .source-list > li[id]')) {
+      if (heading.getBoundingClientRect().top <= innerHeight * .3) anchor = `#${heading.id}`;
+    }
+  }
+  try { localStorage.setItem('better-book-language', language); } catch {}
+  const url = new URL(link.getAttribute('href'), location.href);
+  // Explicit English remains reachable even when persistent storage is unavailable.
+  url.searchParams.set('lang', language);
+  url.hash = anchor;
+  location.assign(url.href);
+}));
 const menu = document.querySelector('#menu-toggle');
 const sidebar = document.querySelector('.sidebar');
 const backdrop = document.querySelector('.menu-backdrop');
@@ -43,8 +81,8 @@ let toastTimer;
 function notify(message) { const toast = document.querySelector('#toast'); toast.textContent = message; toast.classList.add('visible'); clearTimeout(toastTimer); toastTimer = setTimeout(() => toast.classList.remove('visible'), 2600); }
 document.querySelectorAll('.copy-button').forEach(button => button.addEventListener('click', async () => {
   const text = button.closest('.prompt-block').querySelector('code').textContent;
-  try { await navigator.clipboard.writeText(text); button.textContent = 'Copied ✓'; notify('Prompt copied to clipboard'); setTimeout(() => { button.textContent = 'Copy prompt'; }, 2200); }
-  catch { const range = document.createRange(); range.selectNodeContents(button.closest('.prompt-block').querySelector('code')); const selection = getSelection(); selection.removeAllRanges(); selection.addRange(range); notify('Text selected — press Ctrl+C or ⌘C to copy'); }
+  try { await navigator.clipboard.writeText(text); button.textContent = readerMessages.copied; notify(readerMessages.promptCopied); setTimeout(() => { button.textContent = readerMessages.copy; }, 2200); }
+  catch { const range = document.createRange(); range.selectNodeContents(button.closest('.prompt-block').querySelector('code')); const selection = getSelection(); selection.removeAllRanges(); selection.addRange(range); notify(readerMessages.copyFallback); }
 }));
 let scheduled = false;
 function updateReading() {

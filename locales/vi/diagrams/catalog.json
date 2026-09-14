@@ -1,0 +1,47 @@
+[
+  {
+    "id": "thinking-loop",
+    "title": "Vòng suy xét và quyết định",
+    "description": "Nêu kết quả, tìm hiểu điều chưa biết quan trọng, làm một phần nhỏ và đánh giá bằng bằng chứng. Ghi quyết định khi đạt nghiệm thu. Nếu hết ngân sách hoặc thiếu đầu vào, ghi kết quả một phần và trở ngại."
+  },
+  {
+    "id": "context-data",
+    "title": "Thông tin đi đâu",
+    "description": "Bản mô tả cung cấp ý định; tệp và tài liệu liên quan cung cấp sự thật; kỹ năng tùy chọn cung cấp quy trình. Công cụ thay đổi sản phẩm và đánh giá trả bằng chứng cho quyết định tiếp theo."
+  },
+  {
+    "id": "choose-help",
+    "title": "Chọn đúng trợ giúp cần thiết",
+    "description": "Làm rõ kết quả mơ hồ, kết nối công cụ còn thiếu, tái sử dụng hướng dẫn quy trình và chỉ cân nhắc hook cho hành động lặp theo sự kiện."
+  },
+  {
+    "id": "improvement-loop",
+    "title": "Cải thiện từng nguyên nhân",
+    "description": "Giữ phương án nền và tình huống lỗi. Sửa đúng luật, mã, thiết kế hoặc quy trình. So sánh cùng tình huống và chỉ giữ cải thiện qua được kiểm tra. Dừng khi hết ngân sách, giữ phương án tốt nhất đã xác minh."
+  },
+  {
+    "id": "video-route",
+    "title": "Chọn quy trình video",
+    "description": "Dùng dựng cảnh và quay thật cho chữ và gameplay chính xác; dùng mô hình tạo cho cảnh tưởng tượng. Thêm điều phối khi quy trình lặp qua nhiều tác vụ."
+  },
+  {
+    "id": "video-data",
+    "title": "Luồng dữ liệu của trailer",
+    "description": "Bản mô tả thành manifest cảnh. Clip quay hoặc tạo được đánh giá, ghép với chữ và âm thanh rồi xuất. Hồ sơ tác vụ nối nguồn và tham số với tệp cuối."
+  },
+  {
+    "id": "comfy-flow",
+    "title": "Bên trong đồ thị nút video",
+    "description": "Chỉ là các giai đoạn khái niệm, không phải tên nút thực hay đồ thị ComfyUI nhập được. Thành phần mô hình tương thích, điều kiện văn bản và khung tham khảo tùy chọn đi vào tạo và giải mã trước khi lưu video."
+  },
+  {
+    "id": "video-job",
+    "title": "Gửi một lần, theo dõi tác vụ, kiểm tra đầu ra",
+    "description": "Giữ ID qua trạng thái chờ, chạy và bị điều tiết. Thử lại lỗi truy vấn tạm thời trong thời hạn; đối soát lần gửi chưa rõ. Hết thời gian chờ cục bộ không hủy tác vụ từ xa. Lưu và xem đầu ra thành công."
+  },
+  {
+    "id": "hook-flow",
+    "title": "Dùng hook cho kiểm tra cục bộ hẹp",
+    "description": "Sự kiện công cụ liên quan có thể kích hoạt trình kiểm tra cục bộ. Sự kiện không liên quan thoát ngay. Mẫu đề xuất không tự tạo video hoặc xuất bản."
+  }
+]

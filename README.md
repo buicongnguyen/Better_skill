@@ -4,6 +4,10 @@ A practical, researched book about making a 3D game with an AI agent: prompts, G
 
 **Read the book:** https://buicongnguyen.github.io/Better_skill/
 
+Use the reading toolbar to choose **English**, **Tiếng Việt**, or **한국어**, and toggle **Dark mode**. Each edition includes all 15 chapters, 48 reading notes, evidence panels, eight prompt downloads, and nine translated diagrams. Source titles and passage-search terms retain their original English; the separate audit-record download is labeled as English.
+
+Language switching keeps the nearest chapter or subsection. The site remembers language and theme locally in the browser, with system light/dark preference as the initial default. Explicit language links override the saved language. No translation service or account is required. Without JavaScript, the three editions and their language links remain readable.
+
 ## Contents
 
 15 chapters compare game workflows and engine choices, draw on 48 source records, and develop the original Signal Garden design into an implementation plan. Every introduction and subsection has a source check record with direct links and a statement of what the evidence supports. Original proposals are labeled separately from documented behavior and research findings.
@@ -39,14 +43,18 @@ Open http://127.0.0.1:4173/Better_skill/ . The server deliberately supports the 
 - `research/`: downloadable content-review record and disclosed retrieval limits.
 - `prompts/*.md`: source templates, embedded at build time and copied as downloads.
 - `diagrams/*.mmd` and `diagrams/catalog.json`: original flow definitions and plain-language descriptions.
+- `locales/vi/` and `locales/ko/`: complete translated chapters, prompts, diagram labels/descriptions, reading notes, evidence text, and page-shell strings. Preserve chapter IDs, subsection order, citations, and diagram connections when editing. Source URL and evidence metadata inherit from the English originals.
+- `locales/ui.json`: native reading controls, interaction messages, and evidence labels for each edition. `site/preferences.js` applies preferences before styling to avoid a light flash.
 - `site/`: page shell, stylesheet, accessible reading interactions, and original SVG favicon.
 - `scripts/build.mjs`: static generation, including the locally bundled Mermaid renderer and its license.
-- `scripts/check.mjs`: anchor, asset, source-summary, prompt, chapter, and diagram-source checks. Visual rendering is verified in a browser.
+- `scripts/check.mjs`: all three editions' anchors, assets, translated summaries/evidence, citation coverage, prompt downloads, and diagram topology parity. Visual rendering and saved preferences are verified in a browser.
 - `dist/`: generated, tracked public site. Deploy this directory only.
 
 `{{cite:01}}` creates a link to a source entry. `{{prompt:meta-prompt.md}}` embeds an escaped copyable prompt and its download. `{{diagram:thinking-loop}}` embeds a described Mermaid figure. Tables and diagrams scroll within the reading column on smaller screens; Graphs begin at a readable native size; “Fit diagram” switches to an overview. The browser’s print action formats the full book without navigation and without truncating prompts.
 
 The design uses Google Fonts with local serif and system-font fallbacks. All chapters, diagram descriptions, and Mermaid definitions remain readable without JavaScript. Visual graphs render from trusted static definitions with Mermaid's strict security setting; no external diagram service or media API is called by the book. The renderer is pinned to 11.17.2 with a committed lockfile, and its license is included in `dist/vendor/`.
+
+Dark mode includes tables, source panels, code, and Mermaid diagrams. Print styles and standalone SVG downloads use a light background for legibility outside the website. The build produces `index.html`, `vi.html`, and `ko.html` with language-specific prompt and diagram download folders.
 
 ## Publication
 

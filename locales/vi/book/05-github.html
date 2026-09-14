@@ -1,0 +1,54 @@
+<h2 id="github">Cho công việc một bộ nhớ</h2>
+<p class="lead">Kho mã nối công việc hôm qua với ngày mai.</p>
+<p>Git lưu lịch sử cục bộ. GitHub giữ bản từ xa, thảo luận rà soát, issue và tự động hóa. GitHub Pages phục vụ game hoặc sách đã xuất bản. Phân biệt các vai trò giúp sửa lỗi: commit cục bộ chưa phải push; push chưa phải triển khai thành công; triển khai chưa chứng minh game chơi được.</p>
+<h3>Bước 1: tạo điểm xuất phát rõ ràng</h3>
+<p>Trong thư mục game mới và trống, khởi tạo Git trên <code>main</code>. Nếu đã có kho mã, xem trạng thái và giữ công việc hiện tại. Cài Git, GitHub CLI và đăng nhập CLI trước khi tạo kho từ xa. Các lệnh dưới chỉ là ví dụ cho dự án Signal Garden <em>mới</em>; thay tên tài khoản trước. {{cite:39}} {{cite:40}}</p>
+<pre><code>git init -b main
+git status --short
+# Tạo README, .gitignore, bản mô tả game và các tệp dự án.
+# Kiểm tra quy tắc bỏ qua và toàn bộ tệp trước khi stage.
+git status --short
+git add --all
+git diff --cached --stat
+git diff --cached
+git commit -m "chore: establish the Signal Garden baseline"
+gh repo create YOUR_ACCOUNT/signal-garden --public --source=. --remote=origin
+git push -u origin main</code></pre>
+<p>Với dự án mới này, stage toàn bộ khung dự án, gồm <code>index.html</code>, cấu hình và tài nguyên cần thiết. Hai lệnh diff cho biết danh sách tệp và nội dung thực tế đã stage. Thiết lập quy tắc bỏ qua dependency, tệp môi trường và đầu ra build phù hợp trước khi stage. Trong kho mã đã có, chỉ stage đường dẫn cần sửa để không gom công việc khác. Kho công khai và Pages sẽ công bố tệp đã chọn; không đưa thông tin xác thực hay tài nguyên thiếu giấy phép vào commit. {{cite:39}}</p>
+<h3>Bước 2: lưu quyết định quan trọng trong tệp</h3>
+<pre><code>signal-garden/
+  AGENTS.md                     # Quy ước dự án ngắn, tùy chọn
+  .agents/skills/signal-garden-round-review/
+    SKILL.md                    # Chỉ thêm khi có giá trị được chứng minh
+  docs/
+    game-brief.md               # Trải nghiệm và ràng buộc
+    acceptance.md               # Điều kiện hoàn thành quan sát được
+    decisions.md                # Lựa chọn và lý do
+    progress.md                 # Trạng thái và bước tiếp theo
+    playtests/                  # Quan sát và bằng chứng chơi thử
+  src/
+    game/                       # Trạng thái, đầu vào, mô phỏng
+    render/                     # Cảnh, camera, phản hồi hình ảnh
+    ui/                         # Hướng dẫn, HUD, màn hình kết quả
+  public/assets/
+    credits.md                  # Xuất xứ và giấy phép tài nguyên
+  tests/                        # Kiểm tra hành vi cần thiết
+  .github/workflows/pages.yml
+  package.json
+  package-lock.json</code></pre>
+<p>Đây là cấu trúc gợi ý, không phải yêu cầu tạo những lớp trừu tượng rỗng. Bản nhỏ có thể ít module hơn. Tách hệ thống khi trách nhiệm rõ ràng, nhất là khi logic mô phỏng khó kiểm tra vì lẫn với mã dựng hình.</p>
+<h3>Bước 3: tạo mốc lưu cho thay đổi có ý nghĩa</h3>
+<p>Commit hữu ích nói rõ hành vi nào đã chạy: <code>feat: collect cells and power the beacon</code> rõ hơn <code>update</code>. Lưu bản nền tốt trước khi thử ý tưởng chưa chắc chắn. Ví dụ này cải thiện khả năng nhìn thấy nhân vật mà giữ camera cố định. <a href="https://git-scm.com/docs/git-switch">Tài liệu switch</a> giải thích cách tạo nhánh. Tạo tệp ghi chú chơi thử được nêu và điều chỉnh đường dẫn theo dự án thật. {{cite:39}}</p>
+<pre><code>git switch -c experiment/camera-readability
+# Chỉnh khung nhìn cố định rồi chơi lại tuyến bị che khuất.
+git diff
+git add src/render/camera.ts docs/playtests/camera-readability.md
+git diff --cached
+git commit -m "fix: keep the robot visible behind the north planter"
+git push -u origin experiment/camera-readability
+# Viết docs/pr-camera.md: vấn đề, thay đổi và kiểm tra, trước khi chạy lệnh.
+gh pr create --base main --head experiment/camera-readability --title "Improve fixed camera readability" --body-file docs/pr-camera.md</code></pre>
+<p><code>--body-file</code> đọc tệp đã có, không tự viết nội dung mô tả. PR nên nói vấn đề người chơi thấy, thay đổi và kiểm tra đã làm. Với thử nghiệm cá nhân, nhánh và commit đã rà soát có thể đủ. Dùng PR khi việc rà soát hoặc điều kiện CI có ích. {{cite:41}}</p>
+<h3>Bước 4: để lại ghi chú tiếp tục ngắn</h3>
+<p>Cuối phiên, cập nhật <code>progress.md</code> với commit hiện tại, hành vi hoạt động, lỗi đã biết, lệnh chạy và một mốc tiếp theo. Báo cáo tác nhân dài hạn của Anthropic dùng ghi chú tiến độ cùng lịch sử Git để phiên mới không phải dựng lại mọi việc. {{cite:05}}</p>
+<p>Khi thay đổi xấu đã được chia sẻ, <a href="https://git-scm.com/docs/git-revert">git revert</a> tạo commit mới để đảo thay đổi mà giữ lịch sử. Xem phụ thuộc giữa các commit và giải quyết xung đột trước khi hoàn tất. Với thử nghiệm chưa commit, xem đúng diff và chỉ khôi phục phần dự định; có thể đang có công việc không liên quan. {{cite:39}}</p>

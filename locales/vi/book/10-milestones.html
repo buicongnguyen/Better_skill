@@ -1,0 +1,22 @@
+<h2 id="milestones">Từ thư mục trống đến trò chơi</h2>
+<p class="lead">Hoàn thiện vòng chơi trước khi mở rộng thế giới.</p>
+<p>Trình tự dưới là kế hoạch đề xuất. Mỗi mốc có kết quả chạy được và bằng chứng; điều chỉnh theo phụ thuộc hoặc dự án sẵn có. Đạt mốc là điểm kiểm tra, không phải yêu cầu xin phép lại khi phần còn lại đã được cho phép.</p>
+<h3>M0 · Làm dự án có thể tái lập</h3>
+<p>Xem thư mục và chỉ dẫn. Tạo ứng dụng tối thiểu, ghi chính xác runtime và phiên bản gói, thiết lập lệnh build. Thêm mô tả, nghiệm thu và cách chạy. Khởi động và xác nhận cảnh đơn giản tải được. Nếu bị chặn cài gói hoặc truy cập trình duyệt, báo rõ giới hạn và làm tiếp phần độc lập.</p>
+<p><strong>Bằng chứng:</strong> môi trường mới làm theo README được; build thành công; thấy sàn, camera và nhân vật tạm. Chưa cần đầu tư màn hình tiêu đề cuối hoặc thư viện component phức tạp.</p>
+<h3>M1 · Làm chuyển động dễ hiểu</h3>
+<p>Thêm bàn phím, đấu trường phẳng, biên va chạm và camera cao cố định. Chuẩn hóa hướng chéo. Callback hoạt ảnh trình duyệt thường theo tần số màn hình và dừng ở tab nền: dùng thời gian trôi qua, xóa phím giữ khi mất tiêu điểm, tạm dừng và yêu cầu tiếp tục rõ ràng để tránh bước thời gian lớn. {{cite:43}}</p>
+<p><strong>Bằng chứng:</strong> phím thật di chuyển đúng; biên chặn nhân vật; tốc độ chéo bằng thẳng; camera thấy khu chơi. Tạm dừng hoặc chuyển tab không làm nhân vật dịch xuyên vật thể khi trở lại.</p>
+<h3>M2 · Khép vòng thắng</h3>
+<p>Thêm ba pin, kích hoạt đèn, bộ đếm, đồng hồ và màn hình thắng. Giữ một giá trị trạng thái chính như <code>title</code>, <code>playing</code>, <code>paused</code>, <code>won</code>, <code>lost</code>. Tập trung chuyển trạng thái để UI, âm thanh và mô phỏng không tự hiểu khác nhau về kết thúc.</p>
+<p><strong>Bằng chứng:</strong> pin tăng đếm đúng một lần; đèn cần đủ ba; ngoài tầm thì không kích hoạt; thắng dừng giờ và chuyển động. Chơi lại từ tạm dừng hoặc thắng đặt lại vào <code>playing</code>. Đây là lát cắt thắng chơi được với hình tạm; thử thách và hai điều kiện thua còn ở M3.</p>
+<h3>M3 · Thêm một nguồn áp lực dễ nhận biết</h3>
+<p>Thêm drone tuần tra, máu, khoảng bất tử và thua do hết giờ. Cho thấy lộ trình và phản hồi trúng đòn. Bắt đầu bằng tuần tra xác định để tái hiện lỗi. Chỉ thêm ngẫu nhiên khi có ích; nếu có, giữ seed cho kiểm tra.</p>
+<p><strong>Bằng chứng:</strong> va chạm gây sát thương đúng; chồng lấn liên tục tôn trọng hồi chiêu; hết máu thua một lần; hết giờ thua; tạm dừng đóng băng tuần tra và hồi chiêu theo luật; thua rồi chơi lại tạo lượt sạch.</p>
+<h3>M4 · Tạo bản sắc cho thế giới</h3>
+<p>Thay hình tạm bằng robot nhất quán, bồn cây thấp, drone riêng biệt, pin ấm và đèn rõ. Khởi tạo hoặc tiếp tục âm thanh sau tương tác người dùng, xử lý khi bị chặn và có nút tắt tiếng. Dùng tùy chọn giảm chuyển động của thiết bị; cảnh WebGL phải áp dụng trong mã hoạt ảnh bên cạnh CSS giao diện. {{cite:44}} {{cite:45}}</p>
+<p><strong>Bằng chứng:</strong> robot nổi trên nền; nguy hiểm khác vật phẩm; HUD rõ ở kích thước mục tiêu; âm thanh và tạm dừng hoạt động; giảm chuyển động tránh rung và nháy không cần. Kiểm tra lại vòng chơi sau đổi tài nguyên.</p>
+<h3>M5 · Chứng minh đường phát hành</h3>
+<p>Build production, phục vụ dưới <code>/signal-garden/</code> và dùng bản xuất chơi trọn lượt. Ghi chơi thử của người thật và sửa vấn đề quan trọng nhất. Chuẩn bị kho công khai và Pages, rồi công bố khi đích và quyền công bố đã rõ.</p>
+<p><strong>Bằng chứng:</strong> URL cuối phục vụ đúng commit; tải tài nguyên thành công; thắng và thua được; chơi lại nhiều lần được. README có điều khiển, cách build, nguồn tài nguyên, trình duyệt đã thử và giới hạn còn lại.</p>
+<div class="callout"><div class="callout-label">Khi mốc chưa đạt</div><p>Dừng mở rộng tính năng. Tái hiện lỗi, tìm thay đổi nhân quả nhỏ nhất, sửa và chạy lại kiểm tra bị ảnh hưởng. Cập nhật trạng thái mốc trung thực rồi tiếp tục.</p></div>

@@ -1,0 +1,11 @@
+flowchart TD
+  accTitle: Thông tin đi đâu
+  accDescr: Bản mô tả cung cấp ý định; tệp và tài liệu liên quan cung cấp sự thật; kỹ năng tùy chọn cung cấp quy trình. Công cụ thay đổi sản phẩm và đánh giá trả bằng chứng cho quyết định tiếp theo.
+  A["Bản mô tả và ràng buộc của người dùng"] -->|Ý định| D["Tác tử chọn hành động"]
+  B["Tệp liên quan và tài liệu hiện tại"] -->|Sự thật và quy ước| D
+  C["Kỹ năng sẵn có, khi liên quan"] -.->|Quy trình| D
+  D -->|Tham số| E["Công cụ qua CLI, API hoặc MCP"]
+  E -->|Thay đổi| F["Mã, bản dựng trò chơi hoặc video"]
+  F --> G["Kiểm thử và người đánh giá"]
+  G -->|Kết quả quan sát| H["Nhật ký bằng chứng và quyết định"]
+  H -->|Ngữ cảnh cho sửa đổi tiếp| D

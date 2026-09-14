@@ -1,0 +1,18 @@
+flowchart TD
+  accTitle: Cải thiện từng nguyên nhân
+  accDescr: Giữ phương án nền và tình huống lỗi. Sửa đúng luật, mã, thiết kế hoặc quy trình. So sánh cùng tình huống và chỉ giữ cải thiện qua được kiểm tra. Dừng khi hết ngân sách, giữ phương án tốt nhất đã xác minh.
+  A["Lưu phương án nền và tình huống lỗi"] --> B{"Điều gì sai?"}
+  B -->|Sai hành vi mong muốn| C["Làm rõ một luật"]
+  B -->|Lỗi triển khai| D["Sửa mã gây lỗi"]
+  B -->|Trải nghiệm chán hoặc khó hiểu| E["Thử một thay đổi thiết kế"]
+  B -->|Lỗi quy trình lặp lại| F["Sửa ngữ cảnh, định tuyến hoặc công cụ"]
+  C --> G["So sánh cùng tình huống"]
+  D --> G
+  E --> G
+  F --> G
+  G --> H{"Tốt hơn và không suy giảm ngoài mức chấp nhận?"}
+  H -->|Có| I["Giữ thay đổi và ghi bằng chứng"]
+  H -->|Không| J["Sửa lại hoặc khôi phục thử nghiệm"]
+  J --> K{"Còn ngân sách và có thể hành động tiếp?"}
+  K -->|Có| A
+  K -->|Không| L["Giữ phương án tốt nhất đã xác minh; ghi vấn đề chưa giải quyết"]

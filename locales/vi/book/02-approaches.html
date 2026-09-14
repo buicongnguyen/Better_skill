@@ -1,0 +1,22 @@
+<h2 id="approaches">Sáu cách xây dựng</h2>
+<p class="lead">Chọn cách làm phù hợp với điều bạn chưa biết.</p>
+<p>Không có kiểu prompt tốt nhất cho mọi giai đoạn. Bản phác nhanh giúp tìm hướng đi. Đặc tả giúp giữ hướng đi. Kiểm tra giúp xác nhận một nhận định. Rắc rối xuất hiện khi ta mong một hoạt động làm cả ba việc.</p>
+<p>Bảng dưới là đánh giá của người viết cho một người phát triển game trình duyệt nhỏ, <strong>không phải bảng xếp hạng mô hình đã đo lường</strong>. Công sức thiết lập và rà soát phụ thuộc dự án cùng các công cụ tác nhân thực sự có.</p>
+<div class="table-wrap"><table><thead><tr><th>Cách làm</th><th>Phù hợp nhất</th><th>Điểm yếu chính</th><th>Cách cải thiện</th></tr></thead><tbody>
+<tr><td>1. Prototype từ một yêu cầu</td><td>Nhanh chóng tìm hình ảnh hấp dẫn hoặc cơ chế hứa hẹn.</td><td>Yêu cầu rộng dễ che giấu điều khiển và trạng thái chưa hoàn chỉnh.</td><td>Giới hạn một đấu trường và một vòng chơi. Chỉ coi là bản phác cho đến khi chơi thử.</td></tr>
+<tr><td>2. Đặc tả trước</td><td>Giữ ý tưởng rõ ràng qua nhiều lần sửa.</td><td>Tài liệu có thể phình to trước khi biết game có thú vị không.</td><td>Viết mô tả một trang và danh sách nghiệm thu ngắn; xác nhận bằng một lát cắt chơi được.</td></tr>
+<tr><td>3. Theo bài hướng dẫn</td><td>Học engine lạ từ ví dụ đã biết.</td><td>API cũ, tài nguyên không tương thích hoặc cấu trúc sao chép máy móc có thể gây sai hướng.</td><td>Khớp phiên bản, làm lại bài nhỏ rồi điều chỉnh một cơ chế.</td></tr>
+<tr><td>4. Tác nhân làm từng bước</td><td>Hoàn thành game qua nhiều phiên làm việc.</td><td>Cải thiện cục bộ có thể lệch khỏi trải nghiệm tổng thể.</td><td>Giữ bản nền chạy được, bằng chứng theo mốc và ghi chú bàn giao ngắn.</td></tr>
+<tr><td>5. Chơi thử và xem hình</td><td>Cải thiện camera, khả năng nhận biết, hoạt ảnh và phản hồi.</td><td>Ảnh đẹp không chứng minh hành vi theo thời gian.</td><td>Kết hợp ảnh với chuỗi thao tác thật và quan sát trạng thái.</td></tr>
+<tr><td>6. Chuyên gia làm song song</td><td>Nghiên cứu độc lập, thử phong cách hình ảnh hoặc rà soát giao diện đã ổn định.</td><td>Xung đột chỉnh sửa và tích hợp có thể tiêu hết thời gian tiết kiệm.</td><td>Giao tệp riêng hoặc việc chỉ đọc; một người chịu trách nhiệm tích hợp và kiểm tra.</td></tr>
+</tbody></table></div>
+<h3>Các nguồn thực sự xác lập điều gì?</h3>
+<p>Spec Kit của GitHub tách đặc tả, kế hoạch, nhiệm vụ và triển khai. Đó là mô hình hữu ích để giữ ý định rõ ràng, nhưng không có nghĩa game nhỏ phải dùng mọi mẫu hay công cụ trong bộ này. {{cite:06}}</p>
+<p>Anthropic ghi nhận tác nhân làm ứng dụng web dài hạn hưởng lợi từ công việc tăng dần, ghi chú tiến độ, lịch sử Git và kiểm tra trình duyệt. Báo cáo không xác lập rằng nhiều tác nhân luôn tốt hơn một tác nhân, hay kết quả tự động áp dụng cho mọi game. {{cite:05}}</p>
+<p>Bài tiếp theo tháng 3/2026 đánh giá lại quy trình bao quanh mô hình khi mô hình mạnh hơn. Hãy coi cấu trúc lập kế hoạch phức tạp là một thử nghiệm cần chứng minh giá trị. Danh sách mốc của sách nêu kết quả nhìn thấy được; không yêu cầu tác nhân riêng hoặc nghi thức lập kế hoạch cứng nhắc cho từng mốc. {{cite:21}}</p>
+<p>Ví dụ game Astra của OpenAI kết hợp mô tả trải nghiệm, hình tham khảo, trạng thái có thể kiểm tra, cảnh có thể tái tạo và kiểm tra qua điều khiển thật. Đây là ví dụ triển khai, không phải thử nghiệm đối chứng giữa sáu cách làm. {{cite:04}}</p>
+<h3>Cách kết hợp được đề xuất</h3>
+<p>Với Signal Garden, bắt đầu bằng đặc tả nhỏ, chỉ dùng tutorial khi thiếu kiến thức engine và để một tác nhân hoàn thành vòng chơi đầu tiên. Thêm kiểm tra hình ảnh ngay khi chuyển động hoạt động. Chỉ làm song song khi phần việc có thể tích hợp mà không đổi những giả định chung của game.</p>
+<p>Phân công hữu ích: “Rà soát module va chạm, không chỉnh sửa, rồi báo lỗi có thể tái hiện.” Phân chia kém: “Một tác nhân làm chuyển động, một tác nhân viết lại camera, tác nhân thứ ba đổi hệ tọa độ.” Các việc này phụ thuộc nhau dù tên tệp khác nhau.</p>
+<div class="callout warm"><div class="callout-label">Quy tắc lựa chọn</div><p>Chưa biết ý tưởng có vui không: làm prototype. Biết điều phải xảy ra nhưng tác nhân hay lệch hướng: làm rõ đặc tả. Chưa biết nó có hoạt động không: cải thiện bằng chứng.</p></div>
+<div class="exercise"><h3>Chọn thử nghiệm đầu tiên</h3><p>Viết điều chưa rõ lớn nhất của game. Chọn một hàng trong bảng để xử lý nó. Nêu sản phẩm giúp quyết định bước tiếp theo: bản chơi được, kiểm tra điều khiển, ảnh tham khảo hay ghi chú quyết định một trang.</p></div>

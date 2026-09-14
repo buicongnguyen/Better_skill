@@ -1,0 +1,241 @@
+[
+  {
+    "chapter": "better-loop",
+    "records": [
+      {
+        "label": "Ví dụ và phương pháp lặp",
+        "note": "Mở đầu về trò chơi bị lỗi là tình huống minh họa. Signal Garden, vòng bốn bước và bài tập là thiết kế giảng giải của sách. Nguồn khuyến khích kết quả kiểm tra được và hướng dẫn tập trung; không xác nhận trò chơi cụ thể này."
+      },
+      {
+        "label": "Mô hình, tác tử và thỏa thuận làm việc",
+        "note": "Hướng dẫn Astra đề cập chủ động, chỉ dẫn, ủy nhiệm và xác minh. Kiến trúc MCP phân biệt ứng dụng chủ với công cụ cung cấp; chỉ một lời nhắc không thể cấp quyền truy cập công cụ còn thiếu."
+      }
+    ]
+  },
+  {
+    "chapter": "approaches",
+    "records": [
+      {
+        "label": "So sánh và chọn hướng đi",
+        "note": "So sánh sáu hướng, lời khuyên tích hợp và cách kết hợp khuyến nghị là đánh giá biên soạn cho trò chơi nhỏ này. Đây không phải xếp hạng đo lường các cách viết lời nhắc hay một so với nhiều tác tử."
+      },
+      {
+        "label": "Các bài kể triển khai chứng minh điều gì",
+        "note": "Spec Kit mô tả quy trình. Bài trò chơi Astra và các bài Anthropic kể về triển khai. Bài tháng 3 đơn giản hóa quy trình cho mô hình mới hơn; không nguồn nào so sánh có đối chứng cả sáu hướng."
+      }
+    ]
+  },
+  {
+    "chapter": "research",
+    "records": [
+      {
+        "label": "Bằng chứng hiện tại và tài liệu cũ",
+        "note": "Ngày tháng và mô hình được thử quyết định mức liên quan. Kết quả mới trên mô hình khác Astra là lý do để thử nghiệm, không phải cơ sở khẳng định chất lượng trò chơi Astra. Trang tham khảo hiện hành được phân biệt với ấn phẩm có ngày."
+      },
+      {
+        "label": "Đoạn diễn thuyết đã xác minh",
+        "note": "Đoạn chép lời qua bản sao nói về khối lượng xác minh và đầu ra kiểm tra được. Áp dụng thành cột mốc chạy được là cách hiểu của sách, bổ sung bằng ví dụ trò chơi Astra hiện tại."
+      },
+      {
+        "label": "Bản chép lời thứ hai không truy xuất được",
+        "note": "Không thể xác minh lại đoạn chép lời cũ nên đã rút khỏi bằng chứng. Hướng dẫn ngữ cảnh hiện tại có căn cứ độc lập ở nguồn 17. Không bịa mốc thời gian hay nhận định chỉ có trong video."
+      },
+      {
+        "label": "Học Godot và ghi bằng chứng",
+        "note": "Hướng dẫn viết xác lập trình tự học; tài liệu xuất bản hiện tại xác lập ràng buộc triển khai. Phiếu nghiên cứu và quy trình thử nghiệm là công cụ riêng để kiểm tra khả năng áp dụng vào dự án của bạn."
+      }
+    ]
+  },
+  {
+    "chapter": "stack",
+    "records": [
+      {
+        "label": "Tính năng bộ công nghệ và lựa chọn giảng giải",
+        "note": "Nguồn chính thức xác lập hành vi kết xuất, engine, lưu trữ và tệp khóa. Chọn mã nguồn trình duyệt cùng va chạm đơn giản cho Signal Garden là quyết định phạm vi, không phải kiểm chuẩn hiệu suất."
+      },
+      {
+        "label": "Ràng buộc xuất bản Godot",
+        "note": "Đã kiểm tra WebGL 2 Compatibility, giới hạn Godot 4 C#, đa luồng/cách ly, cách xử lý bằng PWA và ngoại lệ tên tệp HTML. Hãy thử phiên bản đã cài và máy chủ thực tế."
+      },
+      {
+        "label": "Bài tập kiểm tra tính khả thi",
+        "note": "Bản xuất nhỏ kiểm tra các ràng buộc đã mô tả trong môi trường của bạn. Ba mươi phút là ngân sách tìm hiểu đề xuất, không phải ước tính hoàn thành có chứng cứ."
+      }
+    ]
+  },
+  {
+    "chapter": "github",
+    "records": [
+      {
+        "label": "Git, kho từ xa và thiết lập Pages",
+        "note": "Tài liệu Git hỗ trợ khởi tạo, đưa đủ thay đổi vào vùng chờ và xem nội dung. GitHub CLI mô tả tạo kho từ xa. Pages là bước xuất bản tĩnh riêng. Lệnh ví dụ cần tệp dự án thực và công cụ đã xác thực."
+      },
+      {
+        "label": "Cấu trúc kho và bàn giao",
+        "note": "Vị trí chỉ dẫn có phạm vi và khám phá kỹ năng có trong tài liệu; phần còn lại của cấu trúc là đề xuất. Ghi chép tiến độ bắt nguồn từ bài tác tử chạy dài. Revert ghi hoàn tác nhưng vẫn cần xem xung đột và thay đổi phụ thuộc."
+      },
+      {
+        "label": "Thử nghiệm camera cố định và PR",
+        "note": "Tùy chọn nhánh và PR có tài liệu. Đường dẫn và thay đổi camera là minh họa, phải khớp tệp thực. Cần viết tệp mô tả trước khi gh pr create đọc nó."
+      }
+    ]
+  },
+  {
+    "chapter": "skills",
+    "records": [
+      {
+        "label": "Khả dụng, gọi kỹ năng và chỉ dẫn trong kho",
+        "note": "Codex hỗ trợ khớp ngầm đủ điều kiện và chọn tường minh với danh mục có ngân sách. Quy ước kho và kỹ năng có vai trò khác nhau. Remotion thay tích hợp tài liệu; Comfy cung cấp công cụ hành động. Những điều này không chứng minh mọi kỹ năng đều dư thừa."
+      },
+      {
+        "label": "Bằng chứng về giá trị có điều kiện của kỹ năng",
+        "note": "Các kiểm chuẩn khác nhau về tác vụ, mô hình, cách tạo và tìm kỹ năng. Không thể gộp kết quả thành nhận định hiệu suất Astra. Rà soát chỉ dẫn Astra của OpenAI là hướng dẫn bên phát triển, không phải phép đo lợi ích độc lập."
+      },
+      {
+        "label": "Kỹ năng đánh giá tùy chọn và so sánh cục bộ",
+        "note": "Luật vòng chơi trong kỹ năng thuộc bản mô tả trò chơi do sách tạo. So sánh đề xuất kiểm tra giá trị của hướng dẫn trong môi trường thực tế của bạn; sách chưa chạy thử nghiệm này."
+      }
+    ]
+  },
+  {
+    "chapter": "brief",
+    "records": [
+      {
+        "label": "Trải nghiệm hứa hẹn, cơ chế và giới hạn",
+        "note": "Mọi giá trị, luật, ưu tiên thua, chuyển trạng thái tạm dừng/khởi động lại và phần loại trừ đều là mục tiêu thiết kế riêng. Không nguồn ngoài nào xác lập ba pin, 90 giây hay đấu trường này sẽ vui. Kiểm tra triển khai theo bản mô tả rồi đánh giá bằng chơi thử."
+      },
+      {
+        "label": "Dùng hình ảnh tham khảo",
+        "note": "Ví dụ Astra dùng trải nghiệm người chơi và hình ảnh tham khảo. Giao nhiệm vụ cụ thể cho mỗi ảnh và so sánh cùng góc camera là khuyến nghị thực hành của sách, không phải hiệu quả đã đo."
+      }
+    ]
+  },
+  {
+    "chapter": "meta-prompt",
+    "records": [
+      {
+        "label": "Gói đầu vào và người thiết kế lời nhắc",
+        "note": "Meta-prompt tải xuống được viết riêng cho Signal Garden. Hướng dẫn hiện tại khuyến khích ý định rõ và ngữ cảnh liên quan. Chưa có thử nghiệm được đọc nào chứng minh meta-prompt tốt hơn yêu cầu trực tiếp trên Astra."
+      },
+      {
+        "label": "Kiểm tra và cải thiện lời nhắc được tạo",
+        "note": "Câu hỏi kiểm tra, bài tập một lượt và cách quản lý phiên bản nhằm tránh mâu thuẫn và quy trình thừa. Các bài nguồn khuyến khích xem lại cấu trúc hỗ trợ; không quy định đúng danh sách này."
+      }
+    ]
+  },
+  {
+    "chapter": "master-prompt",
+    "records": [
+      {
+        "label": "Lời nhắc thực thi ngắn và khởi tạo",
+        "note": "Cả hai mẫu được viết thủ công, chưa kiểm chuẩn. Mẫu ngắn dựa vào tệp dự án sẵn có và chính xác; mẫu khởi tạo chứa luật trò chơi vì các tệp đó chưa tồn tại."
+      },
+      {
+        "label": "Thỏa thuận làm việc và sửa theo bằng chứng",
+        "note": "Tài liệu Astra hỗ trợ chủ động và kiểm thử tương xứng; ví dụ trò chơi hỗ trợ trạng thái quan sát được và điều khiển thật. Quy ước tọa độ, thứ tự cột mốc và mẫu sửa lỗi vẫn là lựa chọn dự án."
+      }
+    ]
+  },
+  {
+    "chapter": "milestones",
+    "records": [
+      {
+        "label": "Thiết lập tái lập được và chuyển động ổn định",
+        "note": "Hành vi của tệp khóa đã commit và hoạt ảnh theo thời gian có tài liệu. M0–M1 là các điểm kiểm tra đề xuất, gồm chính sách tạm dừng/tiếp tục rõ ràng khi chạy nền."
+      },
+      {
+        "label": "Lát cắt thắng chơi được, rồi hoàn thiện luật thua",
+        "note": "M2 cố ý chưa hoàn chỉnh: thiết lập vòng thắng, hiển thị thời gian và khởi động lại. M3 thêm drone, áp lực máu và hai điều kiện thua. Đối chiếu triển khai cuối với bộ luật duy nhất ở chương 7."
+      },
+      {
+        "label": "Hình ảnh, âm thanh, chuyển động và phát hành",
+        "note": "Tài liệu trình duyệt hỗ trợ xử lý tự phát và phát hiện giảm chuyển động; tài liệu Pages/Vite hỗ trợ đường triển khai. Mục tiêu hình ảnh, chơi thử với người và nghiệm thu cột mốc là khuyến nghị thiết kế của sách."
+      }
+    ]
+  },
+  {
+    "chapter": "verify",
+    "records": [
+      {
+        "label": "Luật, điều khiển thật và trạng thái thấy được",
+        "note": "Ví dụ Astra phân biệt thiết lập xác định với hành trình điều khiển thật. Bảng và ảnh chụp trạng thái là công cụ nghiệm thu riêng cho thiết kế chương 7, không phải bằng chứng trò chơi đã được kiểm thử."
+      },
+      {
+        "label": "Quan sát hiệu suất",
+        "note": "MDN xác lập thời gian gọi hàm và hành vi chạy nền. Phân vị 95, mốc 33 ms và mẫu 60 giây là lựa chọn đề xuất. Không báo khoảng cách giữa các lần gọi như thời gian GPU."
+      },
+      {
+        "label": "Phiếu chơi thử với người",
+        "note": "Phiếu yêu cầu trải nghiệm quan sát được và bằng chứng. Bài triển khai khuyến khích đánh giá, nhưng thử với nhóm nhỏ không xác lập tỷ lệ thành công toàn bộ người dùng hay điểm vui khách quan."
+      }
+    ]
+  },
+  {
+    "chapter": "refine",
+    "records": [
+      {
+        "label": "Phân loại lỗi, sửa lời nhắc và thang chấm",
+        "note": "Ví dụ và thang 0–2 là công cụ so sánh do sách viết. Cần giữ nhận định của con người rõ ràng; chuỗi V0–V3 không phải kết quả thực nghiệm đã đo."
+      },
+      {
+        "label": "So sánh công bằng và bỏ hướng dẫn dư thừa",
+        "note": "Kết quả khác nhau theo mô hình/tác vụ là lý do kiểm soát phiên bản khởi đầu, công cụ và ngân sách. Lặp lại và ghi can thiệp minh bạch giúp so sánh tốt hơn; sách không báo cáo kiểm chuẩn Astra mới."
+      }
+    ]
+  },
+  {
+    "chapter": "publish",
+    "records": [
+      {
+        "label": "Lưu trữ tĩnh, đường dẫn kho và quy trình",
+        "note": "Đã kiểm tra vai trò tĩnh của Pages, base Vite cho dự án, cài theo tệp khóa và yêu cầu sản phẩm/triển khai. Quy trình sách được liên kết là triển khai thực; đoạn trò chơi là ví dụ."
+      },
+      {
+        "label": "Xuất bản và xác minh trang công khai",
+        "note": "Lời nhắc phát hành và chuỗi chơi hết vòng là quy trình kiểm tra riêng. CI thành công chưa chứng minh gameplay; phải kiểm tra đúng phiên bản và tài sản ở URL công khai."
+      },
+      {
+        "label": "Khôi phục",
+        "note": "Git revert ghi một lần hoàn tác và quy trình xuất bản sản phẩm khác. Khôi phục vẫn cần triển khai thành công và kiểm tra kết quả đã sửa trên trang công khai."
+      }
+    ]
+  },
+  {
+    "chapter": "thinking-flows",
+    "records": [
+      {
+        "label": "Sơ đồ quy trình và quyết định có giới hạn",
+        "note": "Mermaid mô tả kết xuất văn bản thành SVG. Đồ thị thể hiện quyết định quan sát được, không phải suy nghĩ riêng của mô hình hay tự động hóa thực thi. Thành công, hết ngân sách và bị chặn đều có kết quả rõ ràng."
+      },
+      {
+        "label": "Thông tin đi qua các lớp",
+        "note": "Vai trò có tài liệu phân biệt quy ước, thủ tục tùy chọn, công cụ, MCP, hook vòng đời và nút quy trình. Đồ thị là mô hình dữ liệu đơn giản hóa, không khẳng định mọi môi trường đều có mọi tích hợp."
+      },
+      {
+        "label": "Chọn trợ giúp và sửa đúng nguyên nhân",
+        "note": "Câu hỏi định tuyến và phiếu quyết định là tổng hợp thực hành của sách. Ngừng MCP chỉ để đọc tài liệu khác với MCP có khả năng hành động. Chẩn đoán quyền truy cập, ngữ cảnh hoặc triển khai trước khi thêm quy trình."
+      }
+    ]
+  },
+  {
+    "chapter": "video-workflows",
+    "records": [
+      {
+        "label": "So sánh hướng đi và storyboard",
+        "note": "Không thể xác định chắc trang người dùng đã thấy. Khả năng sản phẩm có tài liệu; bảng so sánh, manifest cảnh và storyboard 3/3/4 giây là đề xuất riêng. Sách chưa tạo video nào."
+      },
+      {
+        "label": "Dựng bằng Remotion và tạo bằng Comfy",
+        "note": "Đã kiểm tra lệnh khởi tạo, kỹ năng, yêu cầu mẫu, MCP đám mây, JSON dạng API và hành vi tải đầu ra. Hình Comfy mang tính khái niệm; phải khám phá mẫu thực có trên đám mây. Chưa lấy được bản chép lời video Remotion."
+      },
+      {
+        "label": "Tác vụ Runway và điều phối n8n",
+        "note": "Đã kiểm tra vai trò endpoint, trạng thái bất đồng bộ, chỉ dẫn thăm dò/lỗi, thời hạn đầu ra và nút HTTP/Wait. Luồng phục hồi có giới hạn là đề xuất, không phải bản xuất n8n đã chạy. Tạo nhiều cảnh khác với ghép cảnh quay trò chơi thật."
+      },
+      {
+        "label": "Hook, lời nhắc thực thi và kiểm tra cuối",
+        "note": "PostToolUse xảy ra sau công cụ, không thể đảo ngược hành động. Trình kiểm tra, lời nhắc và bài tập đánh giá là nội dung riêng. Pages phục vụ kết quả tĩnh; sách chưa chạy hook, tác vụ trả phí hay dây chuyền video."
+      }
+    ]
+  }
+]

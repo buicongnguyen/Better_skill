@@ -1,0 +1,14 @@
+flowchart TD
+  accTitle: Chọn đúng trợ giúp cần thiết
+  accDescr: Làm rõ kết quả mơ hồ, kết nối công cụ còn thiếu, tái sử dụng hướng dẫn quy trình và chỉ cân nhắc hook cho hành động lặp theo sự kiện.
+  A{"Còn thiếu gì?"}
+  A -->|Kết quả rõ ràng| B["Cải thiện bản mô tả hoặc danh sách nghiệm thu"]
+  A -->|Khả năng hành động| C["Dùng công cụ sẵn có hoặc nối API"]
+  C --> D{"Tác tử cần giao diện công cụ chung?"}
+  D -->|Có| E["Cân nhắc kết nối MCP"]
+  D -->|Không| F["Dùng CLI hoặc API trực tiếp"]
+  A -->|Kiến thức lặp lại| G["Kiểm tra kỹ năng và tài liệu sẵn có"]
+  G --> H{"Vẫn thiếu quy trình hữu ích?"}
+  H -->|Có| I["Thử một kỹ năng riêng phạm vi hẹp"]
+  H -->|Không| J["Tái sử dụng hướng dẫn hiện có"]
+  A -->|Hành động lặp theo sự kiện| K["Cân nhắc hook có phạm vi hẹp"]

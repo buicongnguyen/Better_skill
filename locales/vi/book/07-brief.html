@@ -1,0 +1,24 @@
+<h2 id="brief">Thiết kế một game đáng hoàn thành</h2>
+<p class="lead">Một thế giới nhỏ vẫn có bản sắc rõ ràng.</p>
+<p>Signal Garden là thiết kế giảng giải của sách. Bạn là robot bảo trì trên mái nhà bị lãng quên lúc chạng vạng. Ba pin có thể thắp lại đèn hiệu khu vườn. Drone tuần tra và đồng hồ đếm ngược khiến lựa chọn đường đi có ý nghĩa. Cảm giác mong muốn là khám phá yên tĩnh xen những khoảnh khắc áp lực dễ nhận biết.</p>
+<p>Các giá trị dưới đây là <strong>mục tiêu thiết kế ban đầu</strong>, chưa đo trong game hoàn chỉnh. Chúng làm yêu cầu đủ cụ thể để xây dựng rồi điều chỉnh.</p>
+<div class="table-wrap"><table><thead><tr><th>Khía cạnh</th><th>Quyết định phiên bản đầu</th><th>Điều quan sát để kiểm tra</th></tr></thead><tbody>
+<tr><td>Mục tiêu</td><td>Thu thập ba pin, quay về đèn hiệu và kích hoạt.</td><td>Người mới giải thích được mục tiêu sau khi đọc màn hình bắt đầu.</td></tr>
+<tr><td>Thế giới</td><td>Đấu trường phẳng 24 × 24 đơn vị; 1 đơn vị xem là 1 mét. Bồn cây đơn giản tạo hai tuyến.</td><td>Đến được mọi pin và đèn hiệu mà không xuyên vật cản.</td></tr>
+<tr><td>Điều khiển</td><td>WASD hoặc mũi tên; E gần đèn hiệu; Escape tạm dừng; nút chơi lại rõ ràng.</td><td>Chuẩn hóa chuyển động chéo; chơi lại đặt lại toàn bộ trạng thái.</td></tr>
+<tr><td>Camera</td><td>Góc cao cố định, hướng ổn định, không khóa con trỏ.</td><td>Thấy rõ nhân vật, nguy hiểm và mục tiêu suốt lượt chơi.</td></tr>
+<tr><td>Thử thách</td><td>Một drone theo đường nhìn thấy được. Va chạm mất một trong ba máu, bất tử 1 giây sau đòn.</td><td>Đứng chạm drone không mất hết máu trong một khung hình.</td></tr>
+<tr><td>Vòng chơi</td><td>90 giây. Thắng khi kích hoạt đèn đủ pin; thua khi hết máu hoặc giờ.</td><td>Không thể vừa thắng vừa thua; tạm dừng đóng băng mô phỏng và giờ.</td></tr>
+<tr><td>Hình ảnh</td><td>Đá xanh dịu, pin hổ phách ấm, đèn xanh ngọc, drone có dáng riêng.</td><td>Phân biệt bằng hình dạng và nhãn, không chỉ màu.</td></tr>
+<tr><td>Phát hành đầu</td><td>Trình duyệt máy tính, bàn phím, menu thích ứng và GitHub Pages tĩnh.</td><td>URL thật tải được, chơi được, kết thúc và chơi lại được. Điều khiển cảm ứng để quyết định sau.</td></tr>
+</tbody></table></div>
+<h3>Viết vòng chơi bằng động từ</h3>
+<p><strong>Quan sát → chọn tuyến → di chuyển → thu thập → né tránh → quay lại → kích hoạt.</strong> Mỗi động từ cần hệ quả nhìn thấy: pin biến mất một lần, bộ đếm tăng một lần, đèn đổi hình khi sẵn sàng. Trúng đòn có phản hồi rõ và thời gian hồi ngắn. Thua cho phép quay lại chơi ngay.</p>
+<h3>Quyết định tình huống biên trước khi thành lỗi</h3>
+<p>Trong bản đầu, kiểm tra điều kiện thua trước khi cho kích hoạt đèn ở mỗi bước mô phỏng. Nếu giờ về không trong bước đó thì thua. E chỉ có hiệu lực ở lần nhấn mới, khi trong phạm vi hai đơn vị. Sau kết quả cuối, di chuyển, thu thập, sát thương và thời gian dừng đến khi chơi lại.</p>
+<p>Cho phép chơi lại từ <code>paused</code>, <code>won</code> và <code>lost</code>. Đặt lại nhân vật, pin, máu, giờ, tiến độ drone, hồi chiêu, hiệu ứng và phím đang giữ; vào <code>playing</code> để bắt đầu lượt mới. Mất tiêu điểm cửa sổ sẽ xóa đầu vào và tạm dừng lượt đang chạy; quay lại phải bấm Tiếp tục. Đây là luật sách chọn, dùng chung trong prompt và kiểm tra.</p>
+<p>Chọn một quy ước tọa độ và đơn vị. Với Three.js đề xuất, Y hướng lên và di chuyển trên X/Z; tốc độ tính bằng đơn vị mỗi giây. Quyết định một lần trong mô tả để chuyển động, camera, va chạm và kiểm tra không ngầm dùng giả định khác nhau.</p>
+<h3>Giao nhiệm vụ cho hình tham khảo</h3>
+<p>Thu thập hoặc tạo hình được phép sử dụng. Mô tả đóng góp của từng hình: bảng màu, độ cao camera, dáng vật thể, ánh sáng hay mật độ UI. Xem hình như ràng buộc thiết kế, không phải lệnh sao chép nhân vật, thương hiệu hoặc tài nguyên độc quyền của game khác.</p>
+<p>Với Signal Garden, yêu cầu ảnh khối thô trước, rồi cải thiện hình ảnh nhưng giữ góc nhìn và hình học. So cùng khung nhìn giúp thấy tác động của ánh sáng và vật liệu. Cảnh phức tạp hơn không tự động tốt hơn.</p>
+<div class="exercise"><h3>Viết rõ phần loại trừ</h3><p>Bản đầu không có nhiều người chơi, thế giới sinh tự động, túi đồ, cây hội thoại hoặc nhiều màn. Chỉ thêm khi nó cải thiện vòng chơi đã thử đủ nhiều để đáng công.</p></div>

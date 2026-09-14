@@ -1,0 +1,16 @@
+flowchart TD
+  accTitle: Vòng suy xét và quyết định
+  accDescr: Nêu kết quả, tìm hiểu điều chưa biết quan trọng, làm một phần nhỏ và đánh giá bằng bằng chứng. Ghi quyết định khi đạt nghiệm thu. Nếu hết ngân sách hoặc thiếu đầu vào, ghi kết quả một phần và trở ngại.
+  A["Nêu kết quả mong muốn"] --> B["Liệt kê ràng buộc và điều chưa biết"]
+  B --> C{"Đủ bằng chứng để chọn?"}
+  C -->|Không| D["Nghiên cứu hoặc thử nghiệm nhỏ"]
+  D --> K{"Còn ngân sách và có thể hành động tiếp?"}
+  K -->|Có| B
+  K -->|Không| L["Ghi kết quả một phần, trở ngại và đầu vào cần thêm"]
+  C -->|Có| E["Chọn hành động hữu ích tiếp theo"]
+  E --> F["Tạo kết quả có thể kiểm tra"]
+  F --> G["Xem hành vi và bằng chứng"]
+  G --> H{"Đạt điều kiện nghiệm thu?"}
+  H -->|Không| I["Phân loại lỗi"]
+  I --> K
+  H -->|Có| J["Ghi quyết định và hoàn tất"]

@@ -1,0 +1,20 @@
+flowchart TD
+  accTitle: Gửi một lần, theo dõi tác vụ, kiểm tra đầu ra
+  accDescr: Giữ ID qua trạng thái chờ, chạy và bị điều tiết. Thử lại lỗi truy vấn tạm thời trong thời hạn; đối soát lần gửi chưa rõ. Hết thời gian chờ cục bộ không hủy tác vụ từ xa. Lưu và xem đầu ra thành công.
+  A["Đầu vào hợp lệ và ngân sách được duyệt"] --> B["Gửi tạo một lần"]
+  B --> L{"Đã nhận ID tác vụ?"}
+  L -->|Có| C["Lưu ID và hồ sơ lần thử"]
+  L -->|Không hoặc chưa rõ| M["Ghi phản hồi; đối soát trước lần thử mới"]
+  C --> G{"Đến hạn chót?"}
+  G -->|Không| D["Chờ với khoảng giới hạn và lùi nhịp"]
+  G -->|Có| H["Dừng chờ cục bộ; giữ ID; tác vụ từ xa có thể tiếp tục"]
+  D --> E["Lấy trạng thái theo ID này"]
+  E --> F{"Trạng thái"}
+  F -->|Chờ, chạy hoặc bị điều tiết| G
+  E -->|Lỗi HTTP có thể thử lại| G
+  E -->|Lỗi HTTP không thể tiếp tục| N["Dừng và giữ hồ sơ để kiểm tra"]
+  F -->|Không rõ| N
+  F -->|Thất bại hoặc đã hủy| I["Ghi lỗi để kiểm tra"]
+  F -->|Thành công| J["Lấy và lưu tệp đầu ra"]
+  J -->|Tải xuống thất bại| N
+  J --> K["Kiểm tra trước khi ghép hoặc xuất bản"]

@@ -11,7 +11,7 @@ for (const [, raw] of html.matchAll(/(?:href|src)="([^"]+)"/g)) {
   if (href.startsWith('#')) assert(ids.includes(href.slice(1)), `Missing anchor ${href}`);
   else if (!/^(https?:|data:|mailto:)/.test(href)) {
     assert(!href.startsWith('/'), `Root-relative asset breaks project Pages URL: ${href}`);
-    assert((await stat(path.join(root, href))).isFile(), `Missing local asset ${href}`);
+    assert((await stat(path.join(root, href.split(/[?#]/)[0]))).isFile(), `Missing local asset ${href}`);
   }
 }
 const promptFiles = (await readdir(path.join(root, 'prompts'))).filter(f => f.endsWith('.md') && f !== 'README.md');
@@ -65,4 +65,67 @@ for (const diagram of diagrams) {
   assert(html.includes(source.trim().replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;').replaceAll('"', '&quot;')), `Diagram source mismatch for ${diagram.id}`);
 }
 const manuscript = html.slice(html.indexOf('<article>'), html.indexOf('</article>')).replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
+// Each translation must preserve the book's traceability and downloadable artifacts.
+const escapeHtml = value => value.replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;');
+const tokens = value => [...value.matchAll(/\{\{(?:cite|prompt|diagram):[^}]+\}\}/g)].map(m=>m[0]).sort();
+const topology = value => value.replace(/acc(?:Title|Descr):[^\r\n]*/g,'').replace(/"[^"]+"/g,'"label"').replace(/\|[^|]+\|/g,'|label|').replace(/\s+/g,' ').trim();
+const ui = JSON.parse(await readFile(path.resolve(root,'../locales/ui.json'),'utf8'));
+for (const lang of ['en','vi','ko']) {
+  const edition = await readFile(path.join(root,ui[lang].file),'utf8');
+  const editionIds = [...edition.matchAll(/\bid="([^"]+)"/g)].map(m=>m[1]);
+  assert(edition.includes(`<html lang="${lang}">`), `Wrong document language: ${lang}`);
+  assert.deepEqual(editionIds.slice().sort(),ids.slice().sort(),`Anchor parity: ${lang}`);
+  assert(!/\{\{[a-zA-Z]|\bundefined\b/.test(edition),`Unresolved content: ${lang}`);
+  assert.equal((edition.match(/class="chapter-evidence"/g)||[]).length,15);
+  assert.equal((edition.match(/class="source-summary"/g)||[]).length,48);
+  assert.equal((edition.match(/class="copy-button"/g)||[]).length,8);
+  assert.equal((edition.match(/class="diagram"/g)||[]).length,9);
+  for (const [,raw] of edition.matchAll(/(?:href|src)="([^"]+)"/g)) {
+    const href=raw.replaceAll('&amp;','&');
+    if(href.startsWith('#'))assert(editionIds.includes(href.slice(1)),`Broken ${lang} anchor: ${href}`);
+    else if(!/^(https?:|data:|mailto:)/.test(href)) {
+      assert(!href.startsWith('/'),`Root-relative ${lang} URL: ${href}`);
+      assert((await stat(path.join(root,href.split(/[?#]/)[0]))).isFile(),`Missing ${lang} asset: ${href}`);
+    }
+  }
+  for (const target of ['en','vi','ko']) assert(edition.includes(`href="${ui[target].file}?lang=${target}"`),`Explicit language link missing: ${lang}/${target}`);
+  if(lang==='en')continue;
+  const localeRoot=path.resolve(root,`../locales/${lang}`);
+  for(const file of chapterFiles) {
+    const enChapter=await readFile(path.resolve(root,'../book',file),'utf8');
+    const localChapter=await readFile(path.join(localeRoot,'book',file),'utf8');
+    assert.equal((localChapter.match(/<h3>/g)||[]).length,(enChapter.match(/<h3>/g)||[]).length,`Section parity: ${lang}/${file}`);
+    assert.deepEqual(tokens(localChapter),tokens(enChapter),`Citation/download parity: ${lang}/${file}`);
+  }
+  const notes=JSON.parse(await readFile(path.join(localeRoot,'sources.json'),'utf8'));
+  assert.deepEqual(notes.map(n=>n.id).sort(),sources.map(n=>n.id).sort(),`Source parity: ${lang}`);
+  for(const note of notes) {
+    const original=sources.find(s=>s.id===note.id);
+    for(const field of ['type','date','application','limits'])assert(note[field]?.trim()&&note[field]!==original[field],`Missing translated ${field}: ${lang}/${note.id}`);
+    assert.equal(note.summary.length,original.summary.length);
+    for(const item of note.summary)assert(edition.includes(escapeHtml(item)),`Missing translated summary: ${lang}/${note.id}`);
+    if(original.verification.note)assert(note.verification?.note?.trim(),`Missing translated verification: ${lang}/${note.id}`);
+    if(original.video)assert(note.videoNote?.trim(),`Missing translated video note: ${lang}/${note.id}`);
+  }
+  const localEvidence=JSON.parse(await readFile(path.join(localeRoot,'evidence.json'),'utf8'));
+  assert.equal(localEvidence.length,evidence.length);
+  for(const entry of evidence) {
+    const local=localEvidence.find(e=>e.chapter===entry.chapter);
+    assert.equal(local?.records.length,entry.records.length,`Evidence parity: ${lang}/${entry.chapter}`);
+    for(const record of local.records)assert(record.label?.trim()&&record.note?.trim()&&edition.includes(escapeHtml(record.note)),`Missing translated evidence: ${lang}/${entry.chapter}`);
+  }
+  for(const file of promptFiles) {
+    const text=await readFile(path.join(localeRoot,'prompts',file),'utf8');
+    assert(edition.includes(escapeHtml(text.trim())),`Prompt content mismatch: ${lang}/${file}`);
+    assert.equal(await readFile(path.join(root,'prompts',lang,file),'utf8'),text,`Prompt download mismatch: ${lang}/${file}`);
+  }
+  for(const diagram of diagrams) {
+    const text=await readFile(path.join(localeRoot,'diagrams',`${diagram.id}.mmd`),'utf8');
+    const original=await readFile(path.join(root,'diagrams',`${diagram.id}.mmd`),'utf8');
+    assert.equal(topology(text),topology(original),`Changed diagram logic: ${lang}/${diagram.id}`);
+    assert(edition.includes(escapeHtml(text.trim())),`Diagram content mismatch: ${lang}/${diagram.id}`);
+    assert.equal(await readFile(path.join(root,'diagrams',lang,`${diagram.id}.mmd`),'utf8'),text);
+  }
+}
+console.log('Passed: English, Vietnamese and Korean edition/anchor parity, translated summaries and evidence, 24 prompt copies, 27 diagrams with identical graph logic, and all local links/assets.');
 console.log(`Passed: unique anchors, local links/assets, 15 chapters, ${coveredSections} introductions/subsections with evidence coverage, 8 prompts, 9 diagram sources, 48 source records with verification metadata (${manuscript.split(' ').length} words including templates and sources). Browser rendering is checked separately.`);

@@ -1,0 +1,16 @@
+flowchart TD
+  accTitle: Luồng dữ liệu của trailer
+  accDescr: Bản mô tả thành manifest cảnh. Clip quay hoặc tạo được đánh giá, ghép với chữ và âm thanh rồi xuất. Hồ sơ tác vụ nối nguồn và tham số với tệp cuối.
+  A["Bản mô tả video và tham khảo đã duyệt"] --> B["Manifest cảnh: ID, thời gian, ý định"]
+  B --> C{"Nguồn cho từng cảnh"}
+  C -->|Thể hiện cơ chế thật| D["Quay trò chơi đang chạy"]
+  C -->|Không khí ý tưởng| E["Tạo một clip"]
+  E -->|ID tác vụ và tham số| F["Hồ sơ tác vụ và nguồn gốc tài sản"]
+  D --> G["Kiểm tra từng cảnh"]
+  E --> G
+  G --> H{"Dùng được và đúng mục đích?"}
+  H -->|Không| B
+  H -->|Có| I["Ghép clip, tiêu đề, phụ đề, âm thanh"]
+  I --> J["Xem toàn bộ bản xuất"]
+  F --> J
+  J --> K["Lưu tệp cuối và xuất bản khi được phép"]
