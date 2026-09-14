@@ -3,14 +3,24 @@
 <p>Luồng suy xét hữu ích cho thấy kết quả muốn đạt, điều chưa rõ, hành động và bằng chứng làm đổi kế hoạch. Đây là <strong>quyết định công việc quan sát được</strong>, không tái dựng suy luận riêng tư của mô hình. Các sơ đồ do sách đề xuất để thảo luận với Astra và rà soát công việc sau đó.</p>
 <h3>Đọc và tái sử dụng sơ đồ</h3>
 <p>Hình chữ nhật là hành động hoặc sản phẩm; hình thoi là quyết định; mũi tên có nhãn chỉ điều kiện hay thông tin chuyển việc sang bước tiếp. Vòng lặp nghĩa là bằng chứng mới có thể đổi hành động, không phải “lặp mãi”. Đặt điều kiện hoàn thành và giới hạn công sức cho thử nghiệm.</p>
-<p>Đây là sơ đồ <strong>Mermaid</strong> thật: định nghĩa văn bản được vẽ thành SVG. Mỗi sơ đồ có mô tả, nút sao chép, mã <code>.mmd</code> chỉnh được và SVG tải về sau khi vẽ. Cuộn ngang nếu rộng hoặc chọn <strong>Vừa khung</strong> để xem tổng thể. Sơ đồ giải thích quy trình, không thực thi quy trình. Tài liệu Mermaid hướng dẫn nhúng và vẽ. {{cite:36}}</p>
+<p>Đây là sơ đồ <strong>Mermaid</strong> thật: định nghĩa văn bản được vẽ thành SVG. Mỗi sơ đồ có mô tả, nút sao chép, mã <code>.mmd</code> chỉnh được và SVG tải về sau khi vẽ.</p>
+<p>Cuộn ngang nếu rộng hoặc chọn <strong>Vừa khung</strong> để xem tổng thể. Sơ đồ giải thích quy trình, không thực thi quy trình.</p>
+<p>Tài liệu Mermaid hướng dẫn nhúng và vẽ. {{cite:36}}</p>
 <h3>1 · Vòng suy xét và quyết định</h3>
 {{diagram:thinking-loop}}
-<p><strong>Ví dụ Signal Garden:</strong> “Người chơi không thấy robot sau bồn cây phía bắc” là quan sát có ích. Tái hiện tuyến đó trước. So chỉnh camera với xử lý che khuất nhỏ, rồi chọn thay đổi nhỏ nhất giữ robot rõ. Dừng khi tuyến đã nêu và các tuyến lân cận ổn; thêm kẻ địch không giải quyết điều chưa rõ này.</p>
+<p><strong>Ví dụ Signal Garden:</strong> “Người chơi không thấy robot sau bồn cây phía bắc” là quan sát có ích. Tái hiện tuyến đó trước.</p>
+<p>So chỉnh camera với xử lý che khuất nhỏ, rồi chọn thay đổi nhỏ nhất giữ robot rõ. Dừng khi tuyến đã nêu và các tuyến lân cận ổn; thêm kẻ địch không giải quyết điều chưa rõ này.</p>
 <p>Yêu cầu Astra ghi ngắn: <em>đã đổi gì, bằng chứng nào hỗ trợ, còn điều gì chưa rõ và bước tiếp theo là gì</em>. Giải thích dài không thay thế sản phẩm chơi được. Sửa nhỏ có thể nhẹ nhàng; quyết định ảnh hưởng toàn game nên rõ hơn.</p>
 <h3>2 · Luồng dữ liệu: prompt, ngữ cảnh, skill, công cụ</h3>
 {{diagram:context-data}}
-<p>Bản mô tả cho trải nghiệm mong muốn. Tệp kho mã cho luật và triển khai thật. Skill phù hợp có thể cho quy trình dùng lại. Công cụ thực hiện hành động. Kết quả quay lại thành bằng chứng cho quyết định tiếp. Phân biệt này giúp chẩn đoán: prompt tốt hơn không cấp quyền trình duyệt còn thiếu; kết nối API không giải quyết luật chơi mơ hồ.</p>
+<ul>
+<li>Bản mô tả cho trải nghiệm mong muốn.</li>
+<li>Tệp kho mã cho luật và triển khai thật.</li>
+<li>Skill phù hợp có thể cho quy trình dùng lại.</li>
+<li>Công cụ thực hiện hành động.</li>
+<li>Kết quả quay lại thành bằng chứng cho quyết định tiếp.</li>
+</ul>
+<p>Phân biệt này giúp chẩn đoán: prompt tốt hơn không cấp quyền trình duyệt còn thiếu; kết nối API không giải quyết luật chơi mơ hồ.</p>
 <div class="table-wrap"><table><thead><tr><th>Lớp</th><th>Đóng góp</th><th>Ví dụ</th></tr></thead><tbody>
 <tr><td>Prompt / mô tả</td><td>Ý định và điều kiện nghiệm thu</td><td>Nhặt ba pin rồi kích hoạt đèn.</td></tr>
 <tr><td>Ngữ cảnh kho mã</td><td>Sự thật hiện tại và quy ước</td><td>Máy trạng thái đã triển khai và tài liệu nghiệm thu.</td></tr>
@@ -27,6 +37,13 @@
 <p>Với video: skill Remotion dạy quy ước composition; công cụ MCP ComfyUI gửi workflow; hook kiểm tra tệp đã đổi. Chúng có thể phối hợp vì giải bài toán khác nhau; không cần cài cả ba để bắt đầu.</p>
 <h3>4 · Cải thiện nguyên nhân của lỗi</h3>
 {{diagram:improvement-loop}}
-<p>Giữ commit nền và cách tái hiện ngắn trước khi thử. Luật mong muốn sai thì sửa mô tả. Mã vi phạm luật hợp lý thì sửa mã. Trải nghiệm triển khai đúng nhưng nhạt thì thử giả thuyết thiết kế. Tác nhân hay bỏ sót quy trình thì kiểm tra ngữ cảnh và cách chọn trước khi thêm chỉ dẫn.</p>
+<p>Giữ commit nền và cách tái hiện ngắn trước khi thử.</p>
+<ul>
+<li>Luật mong muốn sai thì sửa mô tả.</li>
+<li>Mã vi phạm luật hợp lý thì sửa mã.</li>
+<li>Trải nghiệm triển khai đúng nhưng nhạt thì thử giả thuyết thiết kế.</li>
+<li>Tác nhân hay bỏ sót quy trình thì kiểm tra ngữ cảnh và cách chọn trước khi thêm chỉ dẫn.</li>
+</ul>
 <div class="exercise"><h3>Ghi chú quyết định tái sử dụng</h3><ul><li><strong>Kết quả:</strong> người chơi hoặc người xem nên trải nghiệm gì?</li><li><strong>Bằng chứng:</strong> tuyến, ảnh, clip hoặc phép thử nào bộc lộ vấn đề?</li><li><strong>Thay đổi:</strong> đang thử một nguyên nhân nào?</li><li><strong>So sánh:</strong> cùng kịch bản, điều gì tốt hơn và điều gì hồi quy?</li><li><strong>Quyết định:</strong> giữ, sửa tiếp hay khôi phục; liên kết sản phẩm và commit.</li></ul></div>
-<p>Ghi chú này cũng là đầu vào prompt tốt. Cho Astra vấn đề quan sát và điều kiện rà soát, rồi để nó chọn triển khai phù hợp. Chỉ lưu quy trình tái dùng khi bằng chứng lặp lại cho thấy có ích. Tiếp theo áp dụng vào <a href="#video-workflows">trailer game cùng AI</a>.</p>
+<p>Ghi chú này cũng là đầu vào prompt tốt. Cho Astra vấn đề quan sát và điều kiện rà soát, rồi để nó chọn triển khai phù hợp.</p>
+<p>Chỉ lưu quy trình tái dùng khi bằng chứng lặp lại cho thấy có ích. Tiếp theo áp dụng vào <a href="#video-workflows">trailer game cùng AI</a>.</p>

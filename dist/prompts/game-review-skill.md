@@ -5,9 +5,13 @@ description: Check Signal Garden round-state regressions after changing beacon a
 
 # Signal Garden round review
 
-Optional example: install only after the referenced game documents exist and these checks add value beyond available review tools. This is not a generic game-development skill.
+Optional example: install only after the referenced game documents exist and these checks add value beyond available review tools.
 
-Use docs/acceptance.md as the authority for current rules and test commands. The cases below describe this book's initial design; update them when the game design changes.
+This is not a generic game-development skill.
+
+Use docs/acceptance.md as the authority for current rules and test commands.
+
+The cases below describe this book's initial design; update them when the game design changes.
 
 Relevant boundary cases:
 - If time expires or health reaches zero in the same simulation step as beacon activation, loss wins.
@@ -16,6 +20,16 @@ Relevant boundary cases:
 - Pause freezes both the round timer and simulation. Window blur clears held input and pauses an active round; returning focus requires explicit Resume.
 - Restart from paused, won, or lost resets cells, health, timer, robot position, drone progress, cooldowns, effects, and held input, then enters playing for a fresh round.
 
-Select the cases affected by the change. Use deterministic checks for timing boundaries and actual player controls for the affected journey when browser tools are available. Setup helpers may prepare a scene but cannot serve as proof that its controls work.
+Select the cases affected by the change.
 
-Output: revision, affected case, reproduction steps, expected/observed result, and evidence. Mark unavailable checks as unrun. Fix in-scope failures and recheck what the fix affects; finish when those checks pass. Update docs/progress.md when this completes a milestone.
+Use deterministic checks for timing boundaries and actual player controls for the affected journey when browser tools are available.
+
+Setup helpers may prepare a scene but cannot serve as proof that its controls work.
+
+Output: revision, affected case, reproduction steps, expected/observed result, and evidence.
+
+Mark unavailable checks as unrun.
+
+Fix in-scope failures and recheck what the fix affects; finish when those checks pass.
+
+Update docs/progress.md when this completes a milestone.

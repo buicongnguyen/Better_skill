@@ -12,7 +12,7 @@
   <link rel="alternate" hreflang="ko" href="https://buicongnguyen.github.io/Better_skill/ko.html">
   <script src="preferences.js"></script>
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
-  <link rel="stylesheet" href="styles.css?v=ad66aeb96a8b">
+  <link rel="stylesheet" href="styles.css?v=3640445a630f">
   <script id="reader-messages" type="application/json">{"language":"한국어","file":"ko.html","bookTitle":"더 잘하는 방법","pageTitle":"더 잘하는 방법 — AI 에이전트와 3D 게임 만들기","description":"프롬프트, GitHub, 스킬을 활용해 GPT-6 Astra와 3D 게임을 만드는 방법을 출처와 함께 설명하는 실전 안내서입니다.","readingOptions":"읽기 설정","chooseLanguage":"책 언어","darkMode":"다크 모드","themeHint":"다크 모드 전환","print":"책 인쇄","menu":"목차","copy":"프롬프트 복사","copied":"복사됨 ✓","promptCopied":"프롬프트를 클립보드에 복사했습니다","copyFallback":"텍스트를 선택했습니다. Ctrl+C 또는 ⌘C로 복사하세요","copyMermaid":"Mermaid 복사","mermaidCopied":"Mermaid 소스를 복사했습니다","sourceFallback":"소스를 선택했습니다. Ctrl+C 또는 ⌘C로 복사하세요","fit":"화면에 맞춤","readable":"읽기 좋은 크기","renderError":"그래프를 표시하지 못했습니다. 설명과 편집 가능한 소스는 계속 볼 수 있습니다.","chapter":"장","chapters":"개 장","introduction":"들어가며","source":"출처","readingNote":"출처 노트","ready":"바로 사용하기","downloadPrompt":".md 다운로드 ↗","downloadMermaid":".mmd 다운로드 ↗","downloadSvg":"SVG 다운로드 ↗","mermaidLabel":"MERMAID · 편집 가능한 흐름도","scrollHint":"필요하면 가로로 스크롤하세요","tableHint":"비교표. 작은 화면에서는 가로로 스크롤하세요","diagramLoading":"도표를 불러오는 중입니다. 아래에서 설명과 Mermaid 소스를 볼 수 있습니다.","readMermaid":"Mermaid 소스 읽기 또는 편집","diagramNoJs":"도표를 그리려면 JavaScript가 필요합니다. 설명과 소스를 읽거나 소스 파일을 다운로드할 수 있습니다.","covers":"해당 내용:","originalDesign":"이 책의 설계 제안입니다. 이 목표를 입증하는 외부 출처는 없으며, 실제 게임에서 평가해야 합니다.","sourceCheck":"출처 확인 · 이 장의 근거는 무엇인가?","checkedIntro":"2026년 9월 14일 확인. 아래 링크는 명시된 범위를 뒷받침합니다. 이 책의 제안은 문서에 명시된 동작이나 측정 결과와 구분합니다.","reviewMethod":"검토 방법과 수정 사항 보기 ↗","readingStatus":"자료 상태","mainItems":"핵심 내용","application":"이 책에 적용:","limits":"한계 / Astra와의 관련성:","locator":"참고 구절 위치:","related":"관련 문서:","video":"원본 / 관련 YouTube 영상 ↗","transcriptNote":"공개 미러에서 선택한 대본 구절을 확인했습니다.","basis":{"Documented behavior":"문서에 명시된 동작","Research finding":"연구 결과","Synthesis":"종합 및 해석","Original proposal":"이 책의 제안","Retrieval limitation":"자료 접근 한계"},"status":{"Content checked":"내용 확인 완료","Transcript unavailable":"대본 접근 불가"},"freshness":{"Historical exception":"예외적으로 유지한 과거 자료","Current reference":"현재 참고 문서","Updated since March 2026":"2026년 3월 이후 갱신","Since March 2026":"2026년 3월 이후","Version since March 2026":"2026년 3월 이후 버전","Current documentation":"현재 문서"},"quickRead":"빠르게 읽기","pdfDownload":"책 PDF 다운로드","githubLink":"GitHub 소스","bookLinks":"오프라인으로 읽기 또는 소스 보기","coverImage":"Blender 콘셉트: 전지 세 개와 비콘 하나가 있는 24 곱하기 24 경기장"}</script>
   <script src="book.js" defer></script>
   <script src="vendor/mermaid.min.js" defer></script>
@@ -66,7 +66,9 @@
 <details class="chapter-evidence" id="evidence-summary"><summary>출처 확인 · 이 장의 근거는 무엇인가?</summary><p>2026년 9월 14일 확인. 아래 링크는 명시된 범위를 뒷받침합니다. 이 책의 제안은 문서에 명시된 동작이나 측정 결과와 구분합니다.</p><ul class="evidence-records"><li><span class="evidence-basis">종합 및 해석</span><h4>핵심과 범위</h4><p class="evidence-covers"><strong>해당 내용:</strong> <a href="#summary">들어가며</a></p><p>기존 책의 내용을 압축한 요약입니다. 작은 범위와 근거에 따른 반복은 Astra 게임 사례와 지침을 참고한 책의 제안입니다. 스킬 가용성은 선택 정확성이나 측정된 게임 개선을 입증하지 않습니다.</p><p class="evidence-links"><a href="https://developers.openai.com/blog/how-to-build-games-with-astra" lang="en">OpenAI · Building games with Astra ↗</a> <a class="evidence-note-link" href="#source-04">[04: 출처 노트]</a><br><a href="https://developers.openai.com/blog/rethinking-skills-and-prompts-for-gpt-6-astra" lang="en">OpenAI · Rethinking skills and prompts for GPT-6 Astra ↗</a> <a class="evidence-note-link" href="#source-17">[17: 출처 노트]</a><br><a href="https://learn.chatgpt.com/docs/build-skills" lang="en">OpenAI · Build skills ↗</a> <a class="evidence-note-link" href="#source-08">[08: 출처 노트]</a><br><a href="https://learn.chatgpt.com/docs/quickstart" lang="en">OpenAI · Desktop quickstart and Windows setup ↗</a> <a class="evidence-note-link" href="#source-56">[56: 출처 노트]</a><br><a href="https://cli.github.com/manual/gh_auth_login" lang="en">GitHub CLI · Browser login and Git authentication ↗</a> <a class="evidence-note-link" href="#source-61">[61: 출처 노트]</a><br><a href="https://vercel.com/docs/getting-started-with-vercel" lang="en">Vercel · Getting started, Git import and Vite ↗</a> <a class="evidence-note-link" href="#source-63">[63: 출처 노트]</a><br><a href="https://vercel.com/docs/plans/hobby" lang="en">Vercel · Hobby plan ↗</a> <a class="evidence-note-link" href="#source-64">[64: 출처 노트]</a></p></li><li><span class="evidence-basis">종합 및 해석</span><h4>전체 장으로 이어지는 짧은 경로</h4><p class="evidence-covers"><strong>해당 내용:</strong> <a href="#summary-part-1">간결한 실행 단계</a></p><p>각 단계는 상세 규칙, 절차, 근거 한계를 담은 장으로 연결됩니다. 순서, 게임, 선택적 예고편은 설명용 제안입니다. 문서는 인용한 기능과 배포 패턴을 뒷받침하며 이 요약에 새 실험이나 벤치마크 결과는 없습니다.</p><p class="evidence-links"><a href="https://developers.openai.com/blog/how-to-build-games-with-astra" lang="en">OpenAI · Building games with Astra ↗</a> <a class="evidence-note-link" href="#source-04">[04: 출처 노트]</a><br><a href="https://developers.openai.com/blog/rethinking-skills-and-prompts-for-gpt-6-astra" lang="en">OpenAI · Rethinking skills and prompts for GPT-6 Astra ↗</a> <a class="evidence-note-link" href="#source-17">[17: 출처 노트]</a><br><a href="https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages" lang="en">GitHub · Using custom workflows with GitHub Pages ↗</a> <a class="evidence-note-link" href="#source-13">[13: 출처 노트]</a><br><a href="https://www.remotion.dev/docs/ai/coding-agents" lang="en">Remotion · Create videos with coding agents ↗</a> <a class="evidence-note-link" href="#source-25">[25: 출처 노트]</a><br><a href="https://docs.comfy.org/tutorials/video/ltx/ltx-2-5" lang="en">ComfyUI · LTX-2.5 video workflows ↗</a> <a class="evidence-note-link" href="#source-28">[28: 출처 노트]</a><br><a href="https://developers.openai.com/api/docs/guides/evaluation-best-practices" lang="en">OpenAI · Evaluation best practices ↗</a> <a class="evidence-note-link" href="#source-52">[52: 출처 노트]</a></p></li></ul><a class="evidence-method" href="#review-notes">검토 방법과 수정 사항 보기 ↗</a></details></section>
 <section class="chapter" aria-labelledby="environment"><div class="chapter-kicker">장 01</div><h2 id="environment">개발 환경 설정</h2>
 <p class="lead">컴퓨터의 폴더에서 다른 사람이 열 수 있는 게임까지.</p>
-<p>이 입문 경로는 로컬 코딩 에이전트, Git, GitHub, 정적 TypeScript/Vite/Three.js 게임을 사용합니다. <a href="#cookbook">열한 단계 프롬프트</a> 전에 설정하세요. 이미 도구나 계정이 있다면 확인하고 재사용합니다. 이 장은 게임 프로젝트에서 할 일을 설명하며 읽는 것만으로 설치나 접근 허용이 이루어지지 않습니다. 설치와 계정 접근 안내는 2026년 9월 14일에 확인했습니다. <a class="citation" href="#source-56" title="OpenAI · Desktop quickstart and Windows setup" aria-label="출처 56: OpenAI · Desktop quickstart and Windows setup">[56]</a> <a class="citation" href="#source-58" title="Git and GitHub · Installation and commit identity" aria-label="출처 58: Git and GitHub · Installation and commit identity">[58]</a></p>
+<p>이 입문 경로는 로컬 코딩 에이전트, Git, GitHub, 정적 TypeScript/Vite/Three.js 게임을 사용합니다. <a href="#cookbook">열한 단계 프롬프트</a> 전에 설정하세요.</p>
+<p>이미 도구나 계정이 있다면 확인하고 재사용합니다. 이 장은 게임 프로젝트에서 할 일을 설명하며 읽는 것만으로 설치나 접근 허용이 이루어지지 않습니다.</p>
+<p>설치와 계정 접근 안내는 2026년 9월 14일에 확인했습니다. <a class="citation" href="#source-56" title="OpenAI · Desktop quickstart and Windows setup" aria-label="출처 56: OpenAI · Desktop quickstart and Windows setup">[56]</a> <a class="citation" href="#source-58" title="Git and GitHub · Installation and commit identity" aria-label="출처 58: Git and GitHub · Installation and commit identity">[58]</a></p>
 <h3 id="environment-part-1">1 · 개발 도구 설치</h3>
 <ol><li><a href="https://git-scm.com/install/windows">Windows용 Git</a>을 설치하세요. 같은 사이트에서 macOS와 Linux 안내도 제공합니다. Git은 로컬 이력을 저장합니다. <a class="citation" href="#source-58" title="Git and GitHub · Installation and commit identity" aria-label="출처 58: Git and GitHub · Installation and commit identity">[58]</a></li><li>선택한 Vite 버전과 호환되는 지원 중인 <a href="https://nodejs.org/en/download">Node.js LTS와 npm</a>을 설치하세요. 게임 빌드를 위한 도구이며 데스크톱 에이전트 설치 요건은 아닙니다. <a class="citation" href="#source-59" title="Node.js · Downloads" aria-label="출처 59: Node.js · Downloads">[59]</a></li><li>계정·저장소 작업을 위해 <a href="https://cli.github.com/">GitHub CLI</a>를 설치하세요. Git과 별개 프로그램입니다. 설치 후 터미널과 에이전트를 다시 열어 바뀐 경로를 반영하세요. <a class="citation" href="#source-61" title="GitHub CLI · Browser login and Git authentication" aria-label="출처 61: GitHub CLI · Browser login and Git authentication">[61]</a></li></ol>
 <p>Windows의 PowerShell 또는 macOS/Linux 터미널에서 도구를 확인하세요. 각 명령은 버전을 출력해야 합니다. 명령을 찾지 못하면 설치나 PATH를 점검하세요.</p>
@@ -78,26 +80,63 @@ npm --version</code></pre>
 <ol><li>파일 관리자에서 <code>Documents/signal-garden</code> 같은 독립 폴더를 만드세요. 이 책의 저장소 안에 새 게임을 넣지 마세요.</li><li><a href="https://learn.chatgpt.com/docs/quickstart">공식 데스크톱 빠른 시작</a>과 <a href="https://learn.chatgpt.com/docs/windows/windows-app">Windows 다운로드 안내</a>를 따르세요. 현재 문서는 앱을 ChatGPT 데스크톱 앱으로 부릅니다. 소프트웨어 개발에는 <strong>Codex</strong>를 선택하세요. 이미 설치된 Codex 앱에서는 해당 프로젝트·폴더 기능을 사용하면 됩니다.</li><li>ChatGPT 계정으로 로그인하고 게임 폴더를 프로젝트로 열어 그곳에서 로컬 코딩 작업을 시작하세요. 수정 전에 절대 작업 경로를 확인하세요. 모델 선택기에 있으면 GPT-6 Astra를 선택합니다. 계정 접근과 모델 선택지는 다를 수 있습니다.</li></ol>
 <p>선택한 로컬 환경에 1단계 도구가 있어야 합니다. WSL이나 원격 세션은 별도 환경이므로 도구와 인증도 별도로 필요할 수 있습니다. 앱의 권한 경계를 유지하고 필요한 작업에는 구체적인 권한을 허용하세요. <a class="citation" href="#source-56" title="OpenAI · Desktop quickstart and Windows setup" aria-label="출처 56: OpenAI · Desktop quickstart and Windows setup">[56]</a></p>
 <h3 id="environment-part-3">3 · 선택: 데스크톱 앱의 Claude Code</h3>
-<p><a href="https://code.claude.com/docs/en/desktop-quickstart">Claude 데스크톱 빠른 시작</a>에 따라 로그인하고 <strong>Code → Local → Select folder</strong>에서 게임 폴더를 선택하세요. Code 탭은 적격 구독이 필요하며 무료 채팅 계정만으로는 이 경로를 사용할 수 없습니다. 워크트리 격리와 이 책의 버전 관리 과정에는 Git이 필요합니다. 이전 Windows 앱은 모든 로컬 세션 시작 전에 Git을 요구했습니다. 데스크톱에 Claude Code가 포함되어 있으며 터미널에서 <code>claude</code>를 실행할 때만 CLI를 별도로 설치합니다. <a class="citation" href="#source-57" title="Anthropic · Claude Code desktop quickstart" aria-label="출처 57: Anthropic · Claude Code desktop quickstart">[57]</a></p>
-<p>같은 체크아웃에서는 한 번에 한 에이전트를 사용하세요. 에이전트 비교에는 동일한 기준과 평가 과제를 갖춘 별도 브랜치·워크트리를 사용합니다. 프롬프트는 프로젝트 문서를 공유할 수 있지만 모델 선택과 지침 파일 검색은 앱마다 다릅니다. 다른 에이전트의 설정을 모두 자동으로 읽는다고 가정하지 마세요. <a href="#skills">도구와 스킬 선택을 참고하세요</a>.</p>
+<p><a href="https://code.claude.com/docs/en/desktop-quickstart">Claude 데스크톱 빠른 시작</a>에 따라 로그인하고 <strong>Code → Local → Select folder</strong>에서 게임 폴더를 선택하세요. Code 탭은 적격 구독이 필요하며 무료 채팅 계정만으로는 이 경로를 사용할 수 없습니다.</p>
+<p>워크트리 격리와 이 책의 버전 관리 과정에는 Git이 필요합니다. 이전 Windows 앱은 모든 로컬 세션 시작 전에 Git을 요구했습니다.</p>
+<p>데스크톱에 Claude Code가 포함되어 있으며 터미널에서 <code>claude</code>를 실행할 때만 CLI를 별도로 설치합니다. <a class="citation" href="#source-57" title="Anthropic · Claude Code desktop quickstart" aria-label="출처 57: Anthropic · Claude Code desktop quickstart">[57]</a></p>
+<p>같은 체크아웃에서는 한 번에 한 에이전트를 사용하세요. 에이전트 비교에는 동일한 기준과 평가 과제를 갖춘 별도 브랜치·워크트리를 사용합니다.</p>
+<p>프롬프트는 프로젝트 문서를 공유할 수 있지만 모델 선택과 지침 파일 검색은 앱마다 다릅니다. 다른 에이전트의 설정을 모두 자동으로 읽는다고 가정하지 마세요.</p>
+<p><a href="#skills">도구와 스킬 선택을 참고하세요</a>.</p>
 <h3 id="environment-part-4">4 · HTTPS로 GitHub 접근 설정</h3>
 <ol><li><a href="https://github.com/signup">GitHub 계정을 생성</a>하고 이메일 확인과 계정 보호를 설정하세요. 기존 계정이 있으면 생략합니다. <a class="citation" href="#source-60" title="GitHub · Creating an account" aria-label="출처 60: GitHub · Creating an account">[60]</a></li><li>로컬 터미널에서 아래 로그인 명령을 실행하고 브라우저 인증을 직접 완료하세요. GitHub 자격 증명으로 Git도 인증할지 물으면 Yes를 선택합니다. <a class="citation" href="#source-61" title="GitHub CLI · Browser login and Git authentication" aria-label="출처 61: GitHub CLI · Browser login and Git authentication">[61]</a></li></ol>
 <pre><code>gh auth login --hostname github.com --git-protocol https --web
 gh auth status</code></pre>
-<p>에이전트 환경에서도 상태를 확인하세요. Codex 로그인과 GitHub 로그인은 별개입니다. GitHub CLI 인증으로 Git HTTPS 자격 증명도 설정할 수 있으므로 <strong>SSH는 선택 사항</strong>입니다. 비밀번호, 토큰, 개인 키는 채팅이나 커밋에 넣지 마세요. GitHub CLI는 보통 OS 자격 증명 저장소를 사용하지만 작동하는 저장소가 없으면 일반 텍스트 파일에 저장하는 대체 동작이 문서화되어 있습니다. <a class="citation" href="#source-61" title="GitHub CLI · Browser login and Git authentication" aria-label="출처 61: GitHub CLI · Browser login and Git authentication">[61]</a></p>
+<p>에이전트 환경에서도 상태를 확인하세요. Codex 로그인과 GitHub 로그인은 별개입니다.</p>
+<p>GitHub CLI 인증으로 Git HTTPS 자격 증명도 설정할 수 있으므로 <strong>SSH는 선택 사항</strong>입니다. 비밀번호, 토큰, 개인 키는 채팅이나 커밋에 넣지 마세요.</p>
+<p>GitHub CLI는 보통 OS 자격 증명 저장소를 사용하지만 작동하는 저장소가 없으면 일반 텍스트 파일에 저장하는 대체 동작이 문서화되어 있습니다. <a class="citation" href="#source-61" title="GitHub CLI · Browser login and Git authentication" aria-label="출처 61: GitHub CLI · Browser login and Git authentication">[61]</a></p>
 <h3 id="environment-part-5">5 · 선택: SSH 사용</h3>
-<p>SSH를 선호하면 OS별 <a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent">키 및 ssh-agent 안내</a>를 따르세요. 기존 키부터 확인하고 실수로 덮어쓰지 마세요. 이메일 라벨을 바꾼 뒤 아래 명령으로 새 키를 만들 수 있습니다. 암호를 설정하고 OS별 절차를 진행하세요. <a class="citation" href="#source-62" title="GitHub · SSH key setup and connection test" aria-label="출처 62: GitHub · SSH key setup and connection test">[62]</a></p>
+<p>SSH를 선호하면 OS별 <a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent">키 및 ssh-agent 안내</a>를 따르세요. 기존 키부터 확인하고 실수로 덮어쓰지 마세요.</p>
+<p>이메일 라벨을 바꾼 뒤 아래 명령으로 새 키를 만들 수 있습니다. 암호를 설정하고 OS별 절차를 진행하세요. <a class="citation" href="#source-62" title="GitHub · SSH key setup and connection test" aria-label="출처 62: GitHub · SSH key setup and connection test">[62]</a></p>
 <pre><code>ssh-keygen -t ed25519 -C "your_email@example.com"
 # 공개 키를 GitHub에 추가한 다음:
 ssh -T git@github.com</code></pre>
-<p>GitHub Settings → SSH and GPG keys에는 <code>.pub</code> 키만 추가하세요. 새 호스트를 수락하기 전에 GitHub가 연결한 공식 지문과 대조하세요. 테스트에서 자신의 사용자 이름이 보여야 합니다. GitHub는 대화형 셸을 제공하지 않아 성공해도 종료 코드 1을 반환할 수 있습니다. <code>git@github.com:YOUR_ACCOUNT/signal-garden.git</code> 같은 SSH 원격 주소를 사용하세요. 저장소 생성 등 API 작업을 하려면 GitHub CLI도 별도로 로그인해야 합니다. <a class="citation" href="#source-62" title="GitHub · SSH key setup and connection test" aria-label="출처 62: GitHub · SSH key setup and connection test">[62]</a> <a class="citation" href="#source-61" title="GitHub CLI · Browser login and Git authentication" aria-label="출처 61: GitHub CLI · Browser login and Git authentication">[61]</a></p>
+<p>GitHub Settings → SSH and GPG keys에는 <code>.pub</code> 키만 추가하세요. 새 호스트를 수락하기 전에 GitHub가 연결한 공식 지문과 대조하세요.</p>
+<p>테스트에서 자신의 사용자 이름이 보여야 합니다. GitHub는 대화형 셸을 제공하지 않아 성공해도 종료 코드 1을 반환할 수 있습니다.</p>
+<p><code>git@github.com:YOUR_ACCOUNT/signal-garden.git</code> 같은 SSH 원격 주소를 사용하세요. 저장소 생성 등 API 작업을 하려면 GitHub CLI도 별도로 로그인해야 합니다. <a class="citation" href="#source-62" title="GitHub · SSH key setup and connection test" aria-label="출처 62: GitHub · SSH key setup and connection test">[62]</a> <a class="citation" href="#source-61" title="GitHub CLI · Browser login and Git authentication" aria-label="출처 61: GitHub CLI · Browser login and Git authentication">[61]</a></p>
 <h3 id="environment-part-6">6 · 프로젝트 점검과 커밋 작성자 설정</h3>
 <p>선택한 프로젝트 채팅에 이 읽기 전용 프롬프트를 붙여 넣으세요. 프롬프트 모음으로 파일을 만들기 전에 준비 상태를 확인합니다.</p>
-<div class="prompt-block"><div class="prompt-bar"><span>바로 사용하기 · setup-preflight.md</span><button type="button" class="copy-button" aria-label="프롬프트 복사: setup-preflight.md">프롬프트 복사</button></div><pre tabindex="0"><code>선택한 프로젝트 폴더를 수정 없이 점검하세요. 절대 경로, 기존 파일, Git 루트/브랜치/상태, 민감 정보를 제거한 원격 URL, Git·GitHub CLI·Node.js·npm 사용 가능 여부를 보고하세요. 런타임을 프로젝트 요구 사항과 대조하세요. 토큰, 개인 키, 환경 변수 값을 표시하지 않고 GitHub 인증 상태를 확인하세요. 도구 누락, 로그인 누락, 권한 오류를 구분하세요. 빈 폴더라면 명시하고 package 스크립트를 지어내지 마세요. 로컬 TypeScript/Vite/Three.js 게임 개발을 준비하는 가장 짧은 OS별 절차를 제시하세요. 이번 점검에서는 설치, Git 초기화, 커밋, 푸시, 배포를 하지 마세요.</code></pre><a class="download-link" href="prompts/ko/setup-preflight.md" download>.md 다운로드 ↗</a></div>
+<div class="prompt-block"><div class="prompt-bar"><span>바로 사용하기 · setup-preflight.md</span><button type="button" class="copy-button" aria-label="프롬프트 복사: setup-preflight.md">프롬프트 복사</button></div><pre tabindex="0"><code>## 먼저 수정할 매개변수
+PROJECT_FOLDER: 현재 선택한 게임 폴더
+AGENT: Codex
+MODEL: GPT-6 Astra
+ENGINE: AUTO
+OS: AUTO (Windows / macOS / Linux)
+SHELL: AUTO (PowerShell / bash / zsh)
+
+## 선택지와 일관성
+- AGENT: Codex 또는 Claude Code를 선택하세요. 전송 전에 해당 앱에서 MODEL을 선택하고 Claude Code에는 사용 가능한 Claude 모델을 쓰세요. 이 줄은 실제 모델을 바꾸거나 도구 권한을 부여하지 않습니다.
+- PROJECT_FOLDER에서만 작업하세요. 실제 도구와 관련 프로젝트 지침을 확인하고 중요한 불일치는 의존 작업 전에 해결하세요.
+- ENGINE: AUTO는 기존 엔진을 유지하고, 없으면 THREE(TypeScript/Vite/Three.js)와 GODOT(Godot/GDScript 웹 내보내기) 선택지를 보고합니다. 하나만 선택하세요. 값 변경이 기존 프로젝트 이식을 승인하지는 않습니다.
+
+## 목표
+선택한 프로젝트 폴더를 수정 없이 점검하세요.
+
+## 작업과 제약
+- ENGINE=THREE이면 Node.js/npm을, GODOT이면 편집기와 웹 내보내기 템플릿을 확인하세요. AUTO는 기존 엔진이나 사용 가능한 선택지를 보고하며 설치하지 않습니다. OS/SHELL이 AUTO이면 실제 환경을 사용하고 모든 설정 단계는 선택한 엔진에 맞추세요.
+- 절대 경로, 기존 파일, Git 루트/브랜치/상태, 민감 정보를 제거한 원격 URL, Git·GitHub CLI·Node.js·npm 사용 가능 여부를 보고하세요.
+- 런타임을 프로젝트 요구 사항과 대조하세요.
+- 토큰, 개인 키, 환경 변수 값을 표시하지 않고 GitHub 인증 상태를 확인하세요.
+- 도구 누락, 로그인 누락, 권한 오류를 구분하세요.
+- 빈 폴더라면 명시하고 package 스크립트를 지어내지 마세요.
+- 선택한 엔진으로 로컬 게임 개발을 준비하는 가장 짧은 OS별 절차를 제시하세요.
+- 이번 점검에서는 설치, Git 초기화, 커밋, 푸시, 배포를 하지 마세요.
+
+## 완료 조건
+정확한 환경 보고와 남은 최소 설정 단계이며 파일이나 계정 설정은 바뀌지 않습니다.</code></pre><a class="download-link" href="prompts/ko/setup-preflight.md" download>.md 다운로드 ↗</a></div>
 <p><a href="#cookbook-part-4">프롬프트 4단계</a>에서 프로젝트 Git을 초기화한 다음 작성자 이름·이메일이 없으면 아래 두 값을 바꿔 로컬로 설정하고 커밋을 계속하세요. 이메일 공개를 원하지 않으면 GitHub 이메일 설정의 no-reply 주소를 사용하세요. <code>user.name</code>과 <code>user.email</code>은 커밋 작성자 표기이며 GitHub 로그인 기능이 아닙니다. <a class="citation" href="#source-58" title="Git and GitHub · Installation and commit identity" aria-label="출처 58: Git and GitHub · Installation and commit identity">[58]</a></p>
 <pre><code>git config --local user.name "Your Name"
 git config --local user.email "YOUR_VERIFIED_OR_GITHUB_NOREPLY_EMAIL"</code></pre>
-<p>파일 저장, 커밋, 푸시, 배포는 네 가지 서로 다른 결과입니다. 기존 코드를 이해하려면 파일 참조와 Git 이력을 통해 입력 → 상태 → 렌더링을 추적해 달라고 요청하세요. <a href="#cookbook-part-9">수정 프롬프트</a>를 참고하세요. 커밋만으로 게임 작동을 입증할 수는 없습니다.</p>
+<p>파일 저장, 커밋, 푸시, 배포는 네 가지 서로 다른 결과입니다. 기존 코드를 이해하려면 파일 참조와 Git 이력을 통해 입력 → 상태 → 렌더링을 추적해 달라고 요청하세요.</p>
+<p><a href="#cookbook-part-9">수정 프롬프트</a>를 참고하세요. 커밋만으로 게임 작동을 입증할 수는 없습니다.</p>
 <h3 id="environment-part-7">7 · GitHub Pages로 공개</h3>
 <p>먼저 게임을 로컬에서 완성하고 시험하세요. 이 입문용 GitHub Free 경로는 공개 저장소를 사용하며 공개할 내용만 올립니다. GitHub Pages는 정적 파일을 제공하고 Vite 개발 서버나 멀티플레이 백엔드를 실행하지 않습니다. <a class="citation" href="#source-46" title="GitHub · What is GitHub Pages?" aria-label="출처 46: GitHub · What is GitHub Pages?">[46]</a></p>
 <ol><li>정확한 계정과 저장소를 넣어 <a href="#cookbook-part-10">Pages 출시 프롬프트</a>를 사용하세요.</li><li>프로젝트 URL이 <code>https://YOUR_ACCOUNT.github.io/signal-garden/</code>이면 Vite <code>base</code>를 <code>/signal-garden/</code>으로 설정하세요. 빌드 출력을 로컬에서 미리 확인합니다.</li><li>GitHub 저장소에서 Settings → Pages → Source: GitHub Actions를 선택하세요. 에이전트가 빌드·배포 워크플로를 준비하고 의도한 파일을 커밋·푸시합니다. <a href="#publish">전체 Pages 안내</a>를 참고하세요.</li><li>예상한 커밋의 워크플로를 기다린 다음 공개 URL, 에셋, 승리, 패배, 재시작을 확인하세요. 푸시 성공만으로 배포된 게임이 되지는 않습니다.</li></ol>
@@ -110,71 +149,421 @@ git config --local user.email "YOUR_VERIFIED_OR_GITHUB_NOREPLY_EMAIL"</code></pr
 
 <details class="chapter-evidence" id="evidence-environment"><summary>출처 확인 · 이 장의 근거는 무엇인가?</summary><p>2026년 9월 14일 확인. 아래 링크는 명시된 범위를 뒷받침합니다. 이 책의 제안은 문서에 명시된 동작이나 측정 결과와 구분합니다.</p><ul class="evidence-records"><li><span class="evidence-basis">종합 및 해석</span><h4>설정 범위와 도구</h4><p class="evidence-covers"><strong>해당 내용:</strong> <a href="#environment">들어가며</a> · <a href="#environment-part-1">1 · 개발 도구 설치</a></p><p>도구의 역할을 구분한 입문 순서 제안이며 공식 설치 페이지에 근거합니다.</p><p class="evidence-links"><a href="https://learn.chatgpt.com/docs/quickstart" lang="en">OpenAI · Desktop quickstart and Windows setup ↗</a> <a class="evidence-note-link" href="#source-56">[56: 출처 노트]</a><br><a href="https://git-scm.com/install/windows" lang="en">Git and GitHub · Installation and commit identity ↗</a> <a class="evidence-note-link" href="#source-58">[58: 출처 노트]</a><br><a href="https://nodejs.org/en/download" lang="en">Node.js · Downloads ↗</a> <a class="evidence-note-link" href="#source-59">[59: 출처 노트]</a><br><a href="https://cli.github.com/manual/gh_auth_login" lang="en">GitHub CLI · Browser login and Git authentication ↗</a> <a class="evidence-note-link" href="#source-61">[61: 출처 노트]</a></p></li><li><span class="evidence-basis">종합 및 해석</span><h4>로컬 에이전트 접근</h4><p class="evidence-covers"><strong>해당 내용:</strong> <a href="#environment-part-2">2 · 폴더를 만들고 Codex로 열기</a> · <a href="#environment-part-3">3 · 선택: 데스크톱 앱의 Claude Code</a></p><p>앱 설정과 로컬 폴더 선택을 확인했습니다. 체크아웃당 한 에이전트는 실무 조언이며 제품 제약은 아닙니다.</p><p class="evidence-links"><a href="https://learn.chatgpt.com/docs/quickstart" lang="en">OpenAI · Desktop quickstart and Windows setup ↗</a> <a class="evidence-note-link" href="#source-56">[56: 출처 노트]</a><br><a href="https://code.claude.com/docs/en/desktop-quickstart" lang="en">Anthropic · Claude Code desktop quickstart ↗</a> <a class="evidence-note-link" href="#source-57">[57: 출처 노트]</a><br><a href="https://learn.chatgpt.com/docs/agent-configuration/agents-md" lang="en">OpenAI · Custom instructions with AGENTS.md ↗</a> <a class="evidence-note-link" href="#source-07">[07: 출처 노트]</a></p></li><li><span class="evidence-basis">종합 및 해석</span><h4>작성자, 인증, 사전 점검</h4><p class="evidence-covers"><strong>해당 내용:</strong> <a href="#environment-part-4">4 · HTTPS로 GitHub 접근 설정</a> · <a href="#environment-part-5">5 · 선택: SSH 사용</a> · <a href="#environment-part-6">6 · 프로젝트 점검과 커밋 작성자 설정</a></p><p>문서는 계정·HTTPS·SSH 동작의 근거입니다. 읽기 전용 점검과 작성자 설정 연결은 독창적 프롬프트입니다.</p><p class="evidence-links"><a href="https://git-scm.com/install/windows" lang="en">Git and GitHub · Installation and commit identity ↗</a> <a class="evidence-note-link" href="#source-58">[58: 출처 노트]</a><br><a href="https://docs.github.com/en/account-and-profile/how-tos/account-management/creating-an-account-on-github" lang="en">GitHub · Creating an account ↗</a> <a class="evidence-note-link" href="#source-60">[60: 출처 노트]</a><br><a href="https://cli.github.com/manual/gh_auth_login" lang="en">GitHub CLI · Browser login and Git authentication ↗</a> <a class="evidence-note-link" href="#source-61">[61: 출처 노트]</a><br><a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent" lang="en">GitHub · SSH key setup and connection test ↗</a> <a class="evidence-note-link" href="#source-62">[62: 출처 노트]</a><br><a href="https://git-scm.com/docs/git-add" lang="en">Git · Staging, differences, branches, and reverting ↗</a> <a class="evidence-note-link" href="#source-39">[39: 출처 노트]</a></p></li><li><span class="evidence-basis">종합 및 해석</span><h4>호스팅 경로</h4><p class="evidence-covers"><strong>해당 내용:</strong> <a href="#environment-part-7">7 · GitHub Pages로 공개</a> · <a href="#environment-part-8">8 · 또는 Vercel Hobby로 공개</a></p><p>정적 출력, Pages 하위 경로, Vercel 대시보드·CLI, Hobby 제한을 확인했습니다. 이 장에서 게임을 배포하지 않았습니다.</p><p class="evidence-links"><a href="https://vite.dev/guide/static-deploy.html#github-pages" lang="en">Vite · Deploying a Static Site ↗</a> <a class="evidence-note-link" href="#source-12">[12: 출처 노트]</a><br><a href="https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages" lang="en">GitHub · Using custom workflows with GitHub Pages ↗</a> <a class="evidence-note-link" href="#source-13">[13: 출처 노트]</a><br><a href="https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages" lang="en">GitHub · What is GitHub Pages? ↗</a> <a class="evidence-note-link" href="#source-46">[46: 출처 노트]</a><br><a href="https://vercel.com/docs/getting-started-with-vercel" lang="en">Vercel · Getting started, Git import and Vite ↗</a> <a class="evidence-note-link" href="#source-63">[63: 출처 노트]</a><br><a href="https://vercel.com/docs/plans/hobby" lang="en">Vercel · Hobby plan ↗</a> <a class="evidence-note-link" href="#source-64">[64: 출처 노트]</a></p></li></ul><a class="evidence-method" href="#review-notes">검토 방법과 수정 사항 보기 ↗</a></details></section>
 <section class="chapter" aria-labelledby="cookbook"><div class="chapter-kicker">장 02</div><h2 id="cookbook">복사해서 쓰는 프롬프트</h2>
-<p class="lead"><a href="#summary">빠른 요약</a>의 각 단계에 대응하는 예제 프롬프트입니다.</p><p><a href="#environment">환경 설정</a>부터 시작하세요. 이 독창적 예제는 <a href="#brief">Signal Garden 규칙</a>을 따릅니다. 게임 폴더에 연결된 채팅에 <strong>한 번에 하나씩</strong> 붙여 넣고 결과를 확인한 다음 진행하세요. 예제를 바꿀 때는 합의한 자신의 요구 사항을 유지하세요. 제안된 절차이며 벤치마크나 한 프롬프트로 완성된 게임을 얻는다는 보장은 아닙니다.</p><p>저장소·실행 도구가 없는 챗봇은 명세나 프롬프트 작성을 돕지만 로컬 코드 검사, 테스트, 공개는 할 수 없습니다. 해당 단계에는 폴더와 필요한 도구에 접근하는 코딩 에이전트를 사용하세요. Claude Code에서는 제공되는 Claude 모델을 사용합니다. 프롬프트에 “Astra”라고 적어도 모델이 바뀌지 않습니다. 프로젝트 파일을 지속적인 기준으로 유지하세요. <a class="citation" href="#source-56" title="OpenAI · Desktop quickstart and Windows setup" aria-label="출처 56: OpenAI · Desktop quickstart and Windows setup">[56]</a> <a class="citation" href="#source-57" title="Anthropic · Claude Code desktop quickstart" aria-label="출처 57: Anthropic · Claude Code desktop quickstart">[57]</a></p>
+<p class="lead"><a href="#summary">빠른 요약</a>의 각 단계에 대응하는 예제 프롬프트입니다.</p>
+<p><a href="#environment">환경 설정</a>부터 시작하세요. 이 독창적 예제는 <a href="#brief">Signal Garden 규칙</a>을 따릅니다.</p>
+<p>게임 폴더에 연결된 채팅에 <strong>한 번에 하나씩</strong> 붙여 넣고 결과를 확인한 다음 진행하세요. 예제를 바꿀 때는 합의한 자신의 요구 사항을 유지하세요.</p>
+<p>제안된 절차이며 벤치마크나 한 프롬프트로 완성된 게임을 얻는다는 보장은 아닙니다.</p>
+<p>저장소·실행 도구가 없는 챗봇은 명세나 프롬프트 작성을 돕지만 로컬 코드 검사, 테스트, 공개는 할 수 없습니다. 해당 단계에는 폴더와 필요한 도구에 접근하는 코딩 에이전트를 사용하세요.</p>
+<p>Claude Code에서는 제공되는 Claude 모델을 사용합니다. 프롬프트에 “Astra”라고 적어도 모델이 바뀌지 않습니다.</p>
+<p>프로젝트 파일을 지속적인 기준으로 유지하세요. <a class="citation" href="#source-56" title="OpenAI · Desktop quickstart and Windows setup" aria-label="출처 56: OpenAI · Desktop quickstart and Windows setup">[56]</a> <a class="citation" href="#source-57" title="Anthropic · Claude Code desktop quickstart" aria-label="출처 57: Anthropic · Claude Code desktop quickstart">[57]</a></p>
+<h4>처음의 짧은 블록만 바꾸고 상세 지침은 유지하기</h4>
+<ol>
+<li>전체 프롬프트를 아직 보내지 않은 채팅 초안에 복사하세요. 그다음 시작 블록을 수정하고 제목과 줄바꿈을 유지하세요.</li>
+<li><strong>시작 매개변수를 수정하세요.</strong> 에이전트 하나와 선택지가 있는 경우 엔진 또는 영상 도구 하나를 고르세요. 프로젝트에 맞는 나머지 기본값은 유지합니다.</li>
+<li><strong>실제 환경과 맞추세요.</strong> 앱에서 모델을 선택하고 올바른 폴더를 여세요. 모델이나 도구 이름을 입력해도 자동으로 활성화되지 않습니다.</li>
+<li><strong>하나의 기준 규칙을 유지하세요.</strong> 명세 작성 때 설계 변경을 <code>RULE_CHANGES</code>에 적고 이후 단계는 합의한 문서를 사용하세요. 엔진을 바꾸려면 기존 작업과 먼저 조정해야 합니다.</li>
+<li><strong>확인한 다음 계속하세요.</strong> 결과를 완료 조건과 비교합니다. 출시 프롬프트의 <code>PUBLISH: YES</code>는 명시한 대상 공개를 승인하며 <code>NO</code>는 로컬 준비만 뜻합니다.</li>
+</ol>
+<h4>RTS 계획 예제에서 배운 점</h4>
+<p>제공된 RTS 계획은 범위, 작업 묶음, 조정값, 완료 검사를 분리합니다. 이 책은 <strong>매개변수 → 목표 → 작업과 제약 → 완료 조건</strong> 구조를 적용합니다.</p>
+<p>전체 게임 명세는 프로젝트 문서에 둡니다. 후속 프롬프트는 다음 유용한 결과를 요청하고 해당 문서를 참조하세요. 필수 게임 규칙은 명확히 하되 일상적인 구현 세부 사항은 에이전트가 선택하게 합니다. 항목이 많아진 것만으로 더 좋은 게임이 입증되지는 않습니다. <a class="citation" href="#source-17" title="OpenAI · Rethinking skills and prompts for GPT-6 Astra" aria-label="출처 17: OpenAI · Rethinking skills and prompts for GPT-6 Astra">[17]</a></p>
 <h3 id="cookbook-part-1">1 · 게임 정의</h3>
 <p>빈 게임 폴더나 기존 명세에서 먼저 사용합니다.</p>
-<div class="prompt-block"><div class="prompt-bar"><span>바로 사용하기 · cookbook-01-brief.md</span><button type="button" class="copy-button" aria-label="프롬프트 복사: cookbook-01-brief.md">프롬프트 복사</button></div><pre tabindex="0"><code>이 게임 프로젝트의 기존 지침과 문서부터 읽으세요. Signal Garden의 docs/game-brief.md와 docs/acceptance.md를 작성하거나 일치시키세요. 24 x 24미터 옥상 하나, 고정된 높은 카메라, 키보드 이동, 에너지 셀 3개와 비콘을 사용합니다. 한 판은 90초, 체력은 3, 순찰 드론은 1대, 피격 후 무적 시간은 1초입니다. 모든 셀을 모은 뒤 지면 기준 비콘 중심에서 2단위 이내일 때 E로 활성화합니다. 같은 스텝에서 시간이나 체력이 0이 되면 패배를 우선합니다. 일시 정지는 시뮬레이션을 멈추고, 포커스 상실 시 정지와 입력 초기화, 명시적 재개, 재시작 시 전체 상태 초기화를 적용합니다. 멀티플레이, 백엔드, 계정, 유료 에셋은 제외합니다. 요구 사항과 설계 가정을 구분하고 기존 사용자 선택과 충돌하면 먼저 해결하세요. 아직 게임플레이는 구현하지 말고 명세와 관찰 가능한 검사 항목을 반환하세요.</code></pre><a class="download-link" href="prompts/ko/cookbook-01-brief.md" download>.md 다운로드 ↗</a></div>
-<p><strong>예상 결과:</strong> 일관된 규칙을 담은 짧은 명세와 수용 검사 목록.</p><p>전체 설명: <a href="#brief">완성할 가치가 있는 게임 설계</a> · <a href="#better-loop">더 나아지는 반복 과정</a>. <a class="citation" href="#source-17" title="OpenAI · Rethinking skills and prompts for GPT-6 Astra" aria-label="출처 17: OpenAI · Rethinking skills and prompts for GPT-6 Astra">[17]</a></p>
+<div class="prompt-block"><div class="prompt-bar"><span>바로 사용하기 · cookbook-01-brief.md</span><button type="button" class="copy-button" aria-label="프롬프트 복사: cookbook-01-brief.md">프롬프트 복사</button></div><pre tabindex="0"><code>## 먼저 수정할 매개변수
+PROJECT_FOLDER: 현재 선택한 게임 폴더
+AGENT: Codex
+MODEL: GPT-6 Astra
+ENGINE: AUTO
+PROJECT_NAME: Signal Garden
+ASSET_TOOL: PRIMITIVES
+RULE_CHANGES: 없음
+
+## 선택지와 일관성
+- AGENT: Codex 또는 Claude Code를 선택하세요. 전송 전에 해당 앱에서 MODEL을 선택하고 Claude Code에는 사용 가능한 Claude 모델을 쓰세요. 이 줄은 실제 모델을 바꾸거나 도구 권한을 부여하지 않습니다.
+- PROJECT_FOLDER에서만 작업하세요. 실제 도구와 관련 프로젝트 지침을 확인하고 중요한 불일치는 의존 작업 전에 해결하세요.
+- ENGINE: AUTO는 기존 엔진을 유지하고, 없으면 THREE(TypeScript/Vite/Three.js)와 GODOT(Godot/GDScript 웹 내보내기)를 비교합니다. 하나만 선택하세요. 값 변경이 기존 프로젝트 이식을 승인하지는 않습니다. KEEP은 기록된 프로젝트 선택을 사용합니다.
+- ASSET_TOOL: PRIMITIVES는 엔진 도형을, BLENDER는 작은 가져오기 검사 후 사용 가능한 Blender 작업 흐름을 씁니다. 어느 쪽이든 임시 도형부터 시작하고 이름이 적혔다고 도구를 설치하지 마세요.
+- PROJECT_NAME은 예제 이름입니다. RULE_CHANGES에 아래 기본 규칙에서 바꿀 내용을 적으세요. 수정 전에 합의한 기존 문서와 조정하고 하나의 기준 규칙을 저장하세요.
+
+## 목표
+게임 명세와 관찰 가능한 수용 검사를 작성하거나 일치시키세요.
+
+## 작업과 제약
+- 이 게임 프로젝트의 기존 지침과 문서부터 읽으세요.
+- PROJECT_NAME의 docs/game-brief.md와 docs/acceptance.md를 작성하거나 일치시키세요. 24 x 24미터 옥상 하나, 고정된 높은 카메라, 키보드 이동, 에너지 셀 3개와 비콘을 사용합니다.
+- 한 판은 90초, 체력은 3, 순찰 드론은 1대, 피격 후 무적 시간은 1초입니다.
+- 모든 셀을 모은 뒤 지면 기준 비콘 중심에서 2단위 이내일 때 E로 활성화합니다.
+- 같은 스텝에서 시간이나 체력이 0이 되면 패배를 우선합니다.
+- 일시 정지는 시뮬레이션을 멈추고, 포커스 상실 시 정지와 입력 초기화, 명시적 재개, 재시작 시 전체 상태 초기화를 적용합니다.
+- 멀티플레이, 백엔드, 계정, 유료 에셋은 제외합니다.
+- 요구 사항과 설계 가정을 구분하고 기존 사용자 선택과 충돌하면 먼저 해결하세요.
+- 아직 게임플레이는 구현하지 말고 명세와 관찰 가능한 검사 항목을 반환하세요.
+
+## 완료 조건
+일관된 규칙을 담은 짧은 명세와 수용 검사 목록.</code></pre><a class="download-link" href="prompts/ko/cookbook-01-brief.md" download>.md 다운로드 ↗</a></div>
+<p><strong>예상 결과:</strong> 일관된 규칙을 담은 짧은 명세와 수용 검사 목록.</p>
+<p>전체 설명: <a href="#brief">완성할 가치가 있는 게임 설계</a> · <a href="#better-loop">더 나아지는 반복 과정</a>. <a class="citation" href="#source-17" title="OpenAI · Rethinking skills and prompts for GPT-6 Astra" aria-label="출처 17: OpenAI · Rethinking skills and prompts for GPT-6 Astra">[17]</a></p>
 <h3 id="cookbook-part-2">2 · 접근법 선택</h3>
 <p>범위를 정한 다음 사용합니다. 스파이크는 위험한 기술 질문 하나에 답합니다.</p>
-<div class="prompt-block"><div class="prompt-bar"><span>바로 사용하기 · cookbook-02-approach.md</span><button type="button" class="copy-button" aria-label="프롬프트 복사: cookbook-02-approach.md">프롬프트 복사</button></div><pre tabindex="0"><code>게임 명세와 사용 가능한 도구를 확인하세요. 작은 키보드 브라우저 게임에 대해 TypeScript/Vite/Three.js와 Godot 웹 내보내기를 비교하세요. 반복 속도, 에셋 작업, 브라우저 제약, 디버깅, 배포를 다룹니다. 명시적으로 선택한 엔진은 유지하세요. 선택이 없다면 가장 작은 실행 가능한 경로를 추천하고 이 예제의 기본값은 TypeScript/Vite/Three.js로 둡니다. 버전에 민감한 주장은 공식 문서로 확인하고 모르는 점을 명시하세요. docs/decisions.md에 결정 근거를 기록하세요. 브라우저 내보내기의 불확실성이 결정을 무효화할 수 있다면 이름이 명확한 spike 폴더에 최소 장면만 만들고 프로덕션 출력을 시험하세요. 명령과 관찰된 실패를 기록하며 실행하지 않은 검사를 통과했다고 말하지 마세요.</code></pre><a class="download-link" href="prompts/ko/cookbook-02-approach.md" download>.md 다운로드 ↗</a></div>
-<p><strong>예상 결과:</strong> 엔진 선택 기록과 실험이 필요했던 경우 내보내기 근거.</p><p>전체 설명: <a href="#approaches">게임을 만드는 여섯 가지 방식</a> · <a href="#stack">적합한 작업 환경 고르기</a>. <a class="citation" href="#source-09" title="Godot · Your first 3D game" aria-label="출처 09: Godot · Your first 3D game">[09]</a> <a class="citation" href="#source-11" title="Godot · Exporting for the Web" aria-label="출처 11: Godot · Exporting for the Web">[11]</a> <a class="citation" href="#source-12" title="Vite · Deploying a Static Site" aria-label="출처 12: Vite · Deploying a Static Site">[12]</a></p>
+<div class="prompt-block"><div class="prompt-bar"><span>바로 사용하기 · cookbook-02-approach.md</span><button type="button" class="copy-button" aria-label="프롬프트 복사: cookbook-02-approach.md">프롬프트 복사</button></div><pre tabindex="0"><code>## 먼저 수정할 매개변수
+PROJECT_FOLDER: 현재 선택한 게임 폴더
+AGENT: Codex
+MODEL: GPT-6 Astra
+ENGINE: AUTO
+
+## 선택지와 일관성
+- AGENT: Codex 또는 Claude Code를 선택하세요. 전송 전에 해당 앱에서 MODEL을 선택하고 Claude Code에는 사용 가능한 Claude 모델을 쓰세요. 이 줄은 실제 모델을 바꾸거나 도구 권한을 부여하지 않습니다.
+- PROJECT_FOLDER에서만 작업하세요. 실제 도구와 관련 프로젝트 지침을 확인하고 중요한 불일치는 의존 작업 전에 해결하세요.
+- ENGINE: AUTO는 기존 엔진을 유지하고, 없으면 THREE(TypeScript/Vite/Three.js)와 GODOT(Godot/GDScript 웹 내보내기)를 비교합니다. 하나만 선택하세요. 값 변경이 기존 프로젝트 이식을 승인하지는 않습니다. KEEP은 기록된 프로젝트 선택을 사용합니다.
+- ENGINE이 명시되면 다른 엔진을 권하기보다 그 경로가 명세에 맞는지 평가하세요.
+
+## 목표
+작동 가능한 엔진 하나를 선택하고 그 근거를 기록하세요.
+
+## 작업과 제약
+- 게임 명세와 사용 가능한 도구를 확인하세요.
+- 작은 키보드 브라우저 게임에 대해 TypeScript/Vite/Three.js와 Godot 웹 내보내기를 비교하세요.
+- 반복 속도, 에셋 작업, 브라우저 제약, 디버깅, 배포를 다룹니다.
+- 명시적으로 선택한 엔진은 유지하세요.
+- 선택이 없다면 가장 작은 실행 가능한 경로를 추천하고 이 예제의 기본값은 TypeScript/Vite/Three.js로 둡니다.
+- 버전에 민감한 주장은 공식 문서로 확인하고 모르는 점을 명시하세요. docs/decisions.md에 결정 근거를 기록하세요.
+- 브라우저 내보내기의 불확실성이 결정을 무효화할 수 있다면 이름이 명확한 spike 폴더에 최소 장면만 만들고 프로덕션 출력을 시험하세요.
+- 명령과 관찰된 실패를 기록하며 실행하지 않은 검사를 통과했다고 말하지 마세요.
+
+## 완료 조건
+엔진 선택 기록과 실험이 필요했던 경우 내보내기 근거.</code></pre><a class="download-link" href="prompts/ko/cookbook-02-approach.md" download>.md 다운로드 ↗</a></div>
+<p><strong>예상 결과:</strong> 엔진 선택 기록과 실험이 필요했던 경우 내보내기 근거.</p>
+<p>전체 설명: <a href="#approaches">게임을 만드는 여섯 가지 방식</a> · <a href="#stack">적합한 작업 환경 고르기</a>. <a class="citation" href="#source-09" title="Godot · Your first 3D game" aria-label="출처 09: Godot · Your first 3D game">[09]</a> <a class="citation" href="#source-11" title="Godot · Exporting for the Web" aria-label="출처 11: Godot · Exporting for the Web">[11]</a> <a class="citation" href="#source-12" title="Vite · Deploying a Static Site" aria-label="출처 12: Vite · Deploying a Static Site">[12]</a></p>
 <h3 id="cookbook-part-3">3 · 최신 근거 확인</h3>
 <p>버전, 모델, 스킬 조언을 적용하기 전에 사용합니다. 새 검증에는 웹 접근이 필요합니다.</p>
-<div class="prompt-block"><div class="prompt-bar"><span>바로 사용하기 · cookbook-03-evidence.md</span><button type="button" class="copy-button" aria-label="프롬프트 복사: cookbook-03-evidence.md">프롬프트 복사</button></div><pre tabindex="0"><code>이 게임에 적용하려는 조언을 검토하세요. 2026년 3월 이후 발표·갱신된 1차 자료를 우선하되 필요한 최신 문서는 확인 날짜와 함께 유지하세요. 중요한 결정마다 URL, 관련 절 제목, 요점, 설치 버전과의 일치 여부, 한계를 docs/research.md에 기록하세요. 자동 스킬 선택과 GPT-6 Astra 관련 주장은 별도로 확인하세요. 문서화된 기능, 다른 모델의 연구, 우리가 제안한 절차를 구분하세요. 다른 모델의 벤치마크로 Astra의 개선을 추론하지 마세요. YouTube 대본을 얻지 못하면 표시하고 확인한 서면 자료를 사용하세요. 근거가 정당화하는 변경만 제시하세요.</code></pre><a class="download-link" href="prompts/ko/cookbook-03-evidence.md" download>.md 다운로드 ↗</a></div>
-<p><strong>예상 결과:</strong> 확인된 사실과 가설을 구분한 출처 노트.</p><p>전체 설명: <a href="#research">근거에서 배우기</a>. <a class="citation" href="#source-17" title="OpenAI · Rethinking skills and prompts for GPT-6 Astra" aria-label="출처 17: OpenAI · Rethinking skills and prompts for GPT-6 Astra">[17]</a> <a class="citation" href="#source-52" title="OpenAI · Evaluation best practices" aria-label="출처 52: OpenAI · Evaluation best practices">[52]</a></p>
+<div class="prompt-block"><div class="prompt-bar"><span>바로 사용하기 · cookbook-03-evidence.md</span><button type="button" class="copy-button" aria-label="프롬프트 복사: cookbook-03-evidence.md">프롬프트 복사</button></div><pre tabindex="0"><code>## 먼저 수정할 매개변수
+PROJECT_FOLDER: 현재 선택한 게임 폴더
+AGENT: Codex
+MODEL: GPT-6 Astra
+
+## 선택지와 일관성
+- AGENT: Codex 또는 Claude Code를 선택하세요. 전송 전에 해당 앱에서 MODEL을 선택하고 Claude Code에는 사용 가능한 Claude 모델을 쓰세요. 이 줄은 실제 모델을 바꾸거나 도구 권한을 부여하지 않습니다.
+- PROJECT_FOLDER에서만 작업하세요. 실제 도구와 관련 프로젝트 지침을 확인하고 중요한 불일치는 의존 작업 전에 해결하세요.
+
+## 목표
+게임 프로젝트에 적용할 조언을 검증하세요.
+
+## 작업과 제약
+- 이 게임에 적용하려는 조언을 검토하세요.
+- 2026년 3월 이후 발표·갱신된 1차 자료를 우선하되 필요한 최신 문서는 확인 날짜와 함께 유지하세요.
+- 중요한 결정마다 URL, 관련 절 제목, 요점, 설치 버전과의 일치 여부, 한계를 docs/research.md에 기록하세요.
+- 자동 스킬 선택과 GPT-6 Astra 관련 주장은 별도로 확인하세요.
+- 문서화된 기능, 다른 모델의 연구, 우리가 제안한 절차를 구분하세요.
+- 다른 모델의 벤치마크로 Astra의 개선을 추론하지 마세요.
+- YouTube 대본을 얻지 못하면 표시하고 확인한 서면 자료를 사용하세요.
+- 근거가 정당화하는 변경만 제시하세요.
+
+## 완료 조건
+확인된 사실과 가설을 구분한 출처 노트.</code></pre><a class="download-link" href="prompts/ko/cookbook-03-evidence.md" download>.md 다운로드 ↗</a></div>
+<p><strong>예상 결과:</strong> 확인된 사실과 가설을 구분한 출처 노트.</p>
+<p>전체 설명: <a href="#research">근거에서 배우기</a>. <a class="citation" href="#source-17" title="OpenAI · Rethinking skills and prompts for GPT-6 Astra" aria-label="출처 17: OpenAI · Rethinking skills and prompts for GPT-6 Astra">[17]</a> <a class="citation" href="#source-52" title="OpenAI · Evaluation best practices" aria-label="출처 52: OpenAI · Evaluation best practices">[52]</a></p>
 <h3 id="cookbook-part-4">4 · 프로젝트 기억 저장</h3>
 <p>명세와 접근법이 일치한 뒤 사용합니다. 커밋 전에 Git 작성자 정보를 설정해야 합니다.</p>
-<div class="prompt-block"><div class="prompt-bar"><span>바로 사용하기 · cookbook-04-memory.md</span><button type="button" class="copy-button" aria-label="프롬프트 복사: cookbook-04-memory.md">프롬프트 복사</button></div><pre tabindex="0"><code>게임 프로젝트의 작업 기억을 준비하세요. 먼저 Git 루트와 현재 작업을 확인하고 중첩 저장소를 실수로 만들지 마세요. 새로운 독립 폴더라면 main으로 Git을 초기화하세요. 기존 이력과 무관한 파일은 보존하세요. 명세, 수용 검사, 결정, docs/progress.md를 일치시키고 AGENTS.md에는 유용한 프로젝트 규칙만 짧게 적으세요. 스테이징 전에 .gitignore로 비밀, 로컬 자격 증명, 의존성, 생성 출력을 제외하고 소스와 잠금 파일은 유지하세요. diff를 읽고 의도한 파일만 스테이징한 뒤 설정된 작성자 정보가 올바를 때 로컬 기준 커밋을 만드세요. 작성자 정보가 없으면 만들어내지 말고 물어보세요. 커밋과 다음 마일스톤을 보고하세요. 이 단계에서는 원격 저장소 생성이나 공개를 하지 마세요.</code></pre><a class="download-link" href="prompts/ko/cookbook-04-memory.md" download>.md 다운로드 ↗</a></div>
-<p><strong>예상 결과:</strong> 검토한 문서와 로컬 기준 커밋. 아직 공개하지 않습니다.</p><p>전체 설명: <a href="#github">작업에 기억을 남기기</a>. <a class="citation" href="#source-07" title="OpenAI · Custom instructions with AGENTS.md" aria-label="출처 07: OpenAI · Custom instructions with AGENTS.md">[07]</a> <a class="citation" href="#source-39" title="Git · Staging, differences, branches, and reverting" aria-label="출처 39: Git · Staging, differences, branches, and reverting">[39]</a> <a class="citation" href="#source-58" title="Git and GitHub · Installation and commit identity" aria-label="출처 58: Git and GitHub · Installation and commit identity">[58]</a></p>
+<div class="prompt-block"><div class="prompt-bar"><span>바로 사용하기 · cookbook-04-memory.md</span><button type="button" class="copy-button" aria-label="프롬프트 복사: cookbook-04-memory.md">프롬프트 복사</button></div><pre tabindex="0"><code>## 먼저 수정할 매개변수
+PROJECT_FOLDER: 현재 선택한 게임 폴더
+AGENT: Codex
+MODEL: GPT-6 Astra
+
+## 선택지와 일관성
+- AGENT: Codex 또는 Claude Code를 선택하세요. 전송 전에 해당 앱에서 MODEL을 선택하고 Claude Code에는 사용 가능한 Claude 모델을 쓰세요. 이 줄은 실제 모델을 바꾸거나 도구 권한을 부여하지 않습니다.
+- PROJECT_FOLDER에서만 작업하세요. 실제 도구와 관련 프로젝트 지침을 확인하고 중요한 불일치는 의존 작업 전에 해결하세요.
+
+## 목표
+정확한 프로젝트 기억과 검토한 로컬 기준 커밋을 만드세요.
+
+## 작업과 제약
+- 게임 프로젝트의 작업 기억을 준비하세요.
+- 먼저 Git 루트와 현재 작업을 확인하고 중첩 저장소를 실수로 만들지 마세요.
+- 새로운 독립 폴더라면 main으로 Git을 초기화하세요.
+- 기존 이력과 무관한 파일은 보존하세요.
+- 명세, 수용 검사, 결정, docs/progress.md를 일치시키고 AGENTS.md에는 유용한 프로젝트 규칙만 짧게 적으세요.
+- 스테이징 전에 .gitignore로 비밀, 로컬 자격 증명, 의존성, 생성 출력을 제외하고 소스와 잠금 파일은 유지하세요. diff를 읽고 의도한 파일만 스테이징한 뒤 설정된 작성자 정보가 올바를 때 로컬 기준 커밋을 만드세요.
+- 작성자 정보가 없으면 만들어내지 말고 물어보세요.
+- 커밋과 다음 마일스톤을 보고하세요.
+- 이 단계에서는 원격 저장소 생성이나 공개를 하지 마세요.
+
+## 완료 조건
+검토한 문서와 로컬 기준 커밋. 아직 공개하지 않습니다.</code></pre><a class="download-link" href="prompts/ko/cookbook-04-memory.md" download>.md 다운로드 ↗</a></div>
+<p><strong>예상 결과:</strong> 검토한 문서와 로컬 기준 커밋. 아직 공개하지 않습니다.</p>
+<p>전체 설명: <a href="#github">작업에 기억을 남기기</a>. <a class="citation" href="#source-07" title="OpenAI · Custom instructions with AGENTS.md" aria-label="출처 07: OpenAI · Custom instructions with AGENTS.md">[07]</a> <a class="citation" href="#source-39" title="Git · Staging, differences, branches, and reverting" aria-label="출처 39: Git · Staging, differences, branches, and reverting">[39]</a> <a class="citation" href="#source-58" title="Git and GitHub · Installation and commit identity" aria-label="출처 58: Git and GitHub · Installation and commit identity">[58]</a></p>
 <h3 id="cookbook-part-5">5 · 유용한 스킬 선택</h3>
 <p>다음 구체적 작업에 사용합니다. 인기 스킬 전부를 설치하라는 요청이 아닙니다.</p>
-<div class="prompt-block"><div class="prompt-bar"><span>바로 사용하기 · cookbook-05-skills.md</span><button type="button" class="copy-button" aria-label="프롬프트 복사: cookbook-05-skills.md">프롬프트 복사</button></div><pre tabindex="0"><code>현재 세션에서 실제로 사용할 수 있는 도구와 스킬 목록을 확인하세요. 다음 게임 마일스톤에서 기존 명세와 도구를 넘어 관련 검사나 기능을 더하는 스킬이 있는지 판단하세요. 구체적인 공백이 없다면 추가 설치를 하지 않는 쪽을 우선하세요. GitHub 스킬을 제안할 때는 정확한 경로, 지침, 스크립트, 의존성, 라이선스, 리비전을 읽으세요. 선택을 바꿀 만한 경우에만 동일한 작은 과제로 스킬 없음, 자동 선택, 명시적 호출을 비교하세요. 실제 선택, 결과, 추가 비용을 기록하세요. 인기가 많다는 이유로 묶음을 설치하거나 사용 가능성이 호출을 보장한다고 주장하지 마세요. 결정과 미검증 가설을 docs/decisions.md에 저장하세요.</code></pre><a class="download-link" href="prompts/ko/cookbook-05-skills.md" download>.md 다운로드 ↗</a></div>
-<p><strong>예상 결과:</strong> 기존 도구, 사용 가능한 스킬, 구체적인 기능 공백 중 근거 있는 선택.</p><p>전체 설명: <a href="#skills">스킬이 가치를 더하는지 판단하기</a> · <a href="#thinking-flows">생각하고 결정하고 개선하기</a>. <a class="citation" href="#source-08" title="OpenAI · Build skills" aria-label="출처 08: OpenAI · Build skills">[08]</a> <a class="citation" href="#source-17" title="OpenAI · Rethinking skills and prompts for GPT-6 Astra" aria-label="출처 17: OpenAI · Rethinking skills and prompts for GPT-6 Astra">[17]</a></p>
+<div class="prompt-block"><div class="prompt-bar"><span>바로 사용하기 · cookbook-05-skills.md</span><button type="button" class="copy-button" aria-label="프롬프트 복사: cookbook-05-skills.md">프롬프트 복사</button></div><pre tabindex="0"><code>## 먼저 수정할 매개변수
+PROJECT_FOLDER: 현재 선택한 게임 폴더
+AGENT: Codex
+MODEL: GPT-6 Astra
+
+## 선택지와 일관성
+- AGENT: Codex 또는 Claude Code를 선택하세요. 전송 전에 해당 앱에서 MODEL을 선택하고 Claude Code에는 사용 가능한 Claude 모델을 쓰세요. 이 줄은 실제 모델을 바꾸거나 도구 권한을 부여하지 않습니다.
+- PROJECT_FOLDER에서만 작업하세요. 실제 도구와 관련 프로젝트 지침을 확인하고 중요한 불일치는 의존 작업 전에 해결하세요.
+
+## 목표
+다음 구체적 작업에 스킬이 가치를 더하는지 판단하세요.
+
+## 작업과 제약
+- 현재 세션에서 실제로 사용할 수 있는 도구와 스킬 목록을 확인하세요.
+- 다음 게임 마일스톤에서 기존 명세와 도구를 넘어 관련 검사나 기능을 더하는 스킬이 있는지 판단하세요.
+- 구체적인 공백이 없다면 추가 설치를 하지 않는 쪽을 우선하세요.
+- GitHub 스킬을 제안할 때는 정확한 경로, 지침, 스크립트, 의존성, 라이선스, 리비전을 읽으세요.
+- 선택을 바꿀 만한 경우에만 동일한 작은 과제로 스킬 없음, 자동 선택, 명시적 호출을 비교하세요.
+- 실제 선택, 결과, 추가 비용을 기록하세요.
+- 인기가 많다는 이유로 묶음을 설치하거나 사용 가능성이 호출을 보장한다고 주장하지 마세요.
+- 결정과 미검증 가설을 docs/decisions.md에 저장하세요.
+
+## 완료 조건
+기존 도구, 사용 가능한 스킬, 구체적인 기능 공백 중 근거 있는 선택.</code></pre><a class="download-link" href="prompts/ko/cookbook-05-skills.md" download>.md 다운로드 ↗</a></div>
+<p><strong>예상 결과:</strong> 기존 도구, 사용 가능한 스킬, 구체적인 기능 공백 중 근거 있는 선택.</p>
+<p>전체 설명: <a href="#skills">스킬이 가치를 더하는지 판단하기</a> · <a href="#thinking-flows">생각하고 결정하고 개선하기</a>. <a class="citation" href="#source-08" title="OpenAI · Build skills" aria-label="출처 08: OpenAI · Build skills">[08]</a> <a class="citation" href="#source-17" title="OpenAI · Rethinking skills and prompts for GPT-6 Astra" aria-label="출처 17: OpenAI · Rethinking skills and prompts for GPT-6 Astra">[17]</a></p>
 <h3 id="cookbook-part-6">6 · 집중된 구현 시작</h3>
 <p>1–5단계 후 코딩 에이전트에 보냅니다. 계정에서 제공하면 Codex의 GPT-6 Astra를 선택합니다.</p>
-<div class="prompt-block"><div class="prompt-bar"><span>바로 사용하기 · cookbook-06-start.md</span><button type="button" class="copy-button" aria-label="프롬프트 복사: cookbook-06-start.md">프롬프트 복사</button></div><pre tabindex="0"><code>합의한 docs/game-brief.md, docs/acceptance.md, docs/decisions.md를 사용해 선택한 폴더에서 Signal Garden의 첫 이동 플레이 구간을 구현하세요. 기존 코드를 먼저 읽고 선택한 스택을 유지하세요. 바닥, 임시 로봇, 고정된 높은 카메라, 키보드 이동, 충돌 경계를 만드세요. 단위를 통일하고 0이 아닌 디지털 대각선 입력을 정규화하세요. 일시 정지, 포커스 상실, 명시적 재개 때 키가 고정되거나 큰 시간 스텝이 발생하지 않게 하세요. 설치·개발·빌드 명령을 마련하세요. 도구가 허용하면 빌드와 실제 키보드 상호작용을 확인하고 실행하지 못한 검사를 보고하세요. docs/progress.md에 작동 상태와 다음 마일스톤을 기록하세요. 제가 확인할 수 있도록 이동 체크포인트에서 멈추고 무관한 기능 추가나 공개는 하지 마세요.</code></pre><a class="download-link" href="prompts/ko/cookbook-06-start.md" download>.md 다운로드 ↗</a></div>
-<p><strong>예상 결과:</strong> 실행 가능한 이동 구간과 정직한 검증 기록. 더 긴 초기 프롬프트는 아래에 연결했습니다.</p><p>전체 설명: <a href="#master-prompt">Astra 실행 프롬프트</a> · <a href="#meta-prompt">프롬프트를 만드는 프롬프트</a>. <a class="citation" href="#source-04" title="OpenAI · Building games with Astra" aria-label="출처 04: OpenAI · Building games with Astra">[04]</a> <a class="citation" href="#source-17" title="OpenAI · Rethinking skills and prompts for GPT-6 Astra" aria-label="출처 17: OpenAI · Rethinking skills and prompts for GPT-6 Astra">[17]</a></p>
+<div class="prompt-block"><div class="prompt-bar"><span>바로 사용하기 · cookbook-06-start.md</span><button type="button" class="copy-button" aria-label="프롬프트 복사: cookbook-06-start.md">프롬프트 복사</button></div><pre tabindex="0"><code>## 먼저 수정할 매개변수
+PROJECT_FOLDER: 현재 선택한 게임 폴더
+AGENT: Codex
+MODEL: GPT-6 Astra
+ASSET_TOOL: PRIMITIVES
+
+## 선택지와 일관성
+- AGENT: Codex 또는 Claude Code를 선택하세요. 전송 전에 해당 앱에서 MODEL을 선택하고 Claude Code에는 사용 가능한 Claude 모델을 쓰세요. 이 줄은 실제 모델을 바꾸거나 도구 권한을 부여하지 않습니다.
+- PROJECT_FOLDER에서만 작업하세요. 실제 도구와 관련 프로젝트 지침을 확인하고 중요한 불일치는 의존 작업 전에 해결하세요.
+- ASSET_TOOL: PRIMITIVES는 엔진 도형을, BLENDER는 작은 가져오기 검사 후 사용 가능한 Blender 작업 흐름을 씁니다. 어느 쪽이든 임시 도형부터 시작하고 이름이 적혔다고 도구를 설치하지 마세요.
+
+## 목표
+첫 이동 플레이 체크포인트를 구현하고 검증하세요.
+
+## 작업과 제약
+- 합의한 docs/game-brief.md, docs/acceptance.md, docs/decisions.md를 사용해 선택한 폴더에서 게임의 첫 이동 플레이 구간을 구현하세요.
+- 기존 코드를 먼저 읽고 선택한 스택을 유지하세요.
+- 바닥, 임시 로봇, 고정된 높은 카메라, 키보드 이동, 충돌 경계를 만드세요.
+- 단위를 통일하고 0이 아닌 디지털 대각선 입력을 정규화하세요.
+- 일시 정지, 포커스 상실, 명시적 재개 때 키가 고정되거나 큰 시간 스텝이 발생하지 않게 하세요.
+- 설치·개발·빌드 명령을 마련하세요.
+- 도구가 허용하면 빌드와 실제 키보드 상호작용을 확인하고 실행하지 못한 검사를 보고하세요. docs/progress.md에 작동 상태와 다음 마일스톤을 기록하세요.
+- 제가 확인할 수 있도록 이동 체크포인트에서 멈추고 무관한 기능 추가나 공개는 하지 마세요.
+
+## 완료 조건
+실행 가능한 이동 구간과 정직한 검증 기록. 더 긴 초기 프롬프트는 아래에 연결했습니다.</code></pre><a class="download-link" href="prompts/ko/cookbook-06-start.md" download>.md 다운로드 ↗</a></div>
+<p><strong>예상 결과:</strong> 실행 가능한 이동 구간과 정직한 검증 기록. 더 긴 초기 프롬프트는 아래에 연결했습니다.</p>
+<p>전체 설명: <a href="#master-prompt">Astra 실행 프롬프트</a> · <a href="#meta-prompt">프롬프트를 만드는 프롬프트</a>. <a class="citation" href="#source-04" title="OpenAI · Building games with Astra" aria-label="출처 04: OpenAI · Building games with Astra">[04]</a> <a class="citation" href="#source-17" title="OpenAI · Rethinking skills and prompts for GPT-6 Astra" aria-label="출처 17: OpenAI · Rethinking skills and prompts for GPT-6 Astra">[17]</a></p>
 <h3 id="cookbook-part-7">7 · 마일스톤 하나 진행</h3>
 <p>체크포인트를 확인한 후 반복합니다. 새 세션에서는 진행 파일을 다시 읽습니다.</p>
-<div class="prompt-block"><div class="prompt-bar"><span>바로 사용하기 · cookbook-07-next.md</span><button type="button" class="copy-button" aria-label="프롬프트 복사: cookbook-07-next.md">프롬프트 복사</button></div><pre tabindex="0"><code>실제 현재 상태에서 Signal Garden을 이어가세요. docs/progress.md, 수용 검사, 관련 코드를 읽고 기록을 믿기 전에 이전 체크포인트를 검증하세요. 미완료 마일스톤 하나를 진행하세요. 승리 루프, 드론·체력·시간 패배, 시각적 다듬기, 출시 준비 순서입니다. 이번 실행에서는 한 마일스톤과 영향을 받은 검사를 마치세요. 활성화보다 패배 우선, 셀 한 번만 수집, 무적 시간, 완전한 재시작 등 합의한 규칙을 보존하세요. 메커니즘이 통과할 때까지 임시 에셋을 사용하세요. 명령, 관찰 결과, 남은 실패, 다음 단계를 기록하세요. 검사 통과 후 diff를 검토하고 해당 마일스톤의 변경만 커밋하세요. 공개는 출시 단계에서 합니다.</code></pre><a class="download-link" href="prompts/ko/cookbook-07-next.md" download>.md 다운로드 ↗</a></div>
-<p><strong>예상 결과:</strong> 추가로 완성한 플레이 마일스톤 하나, 관련 검사, 검토한 커밋.</p><p>전체 설명: <a href="#milestones">빈 폴더에서 게임까지</a>. <a class="citation" href="#source-04" title="OpenAI · Building games with Astra" aria-label="출처 04: OpenAI · Building games with Astra">[04]</a> <a class="citation" href="#source-05" title="Anthropic · Effective harnesses for long-running agents" aria-label="출처 05: Anthropic · Effective harnesses for long-running agents">[05]</a></p>
+<div class="prompt-block"><div class="prompt-bar"><span>바로 사용하기 · cookbook-07-next.md</span><button type="button" class="copy-button" aria-label="프롬프트 복사: cookbook-07-next.md">프롬프트 복사</button></div><pre tabindex="0"><code>## 먼저 수정할 매개변수
+PROJECT_FOLDER: 현재 선택한 게임 폴더
+AGENT: Codex
+MODEL: GPT-6 Astra
+
+## 선택지와 일관성
+- AGENT: Codex 또는 Claude Code를 선택하세요. 전송 전에 해당 앱에서 MODEL을 선택하고 Claude Code에는 사용 가능한 Claude 모델을 쓰세요. 이 줄은 실제 모델을 바꾸거나 도구 권한을 부여하지 않습니다.
+- PROJECT_FOLDER에서만 작업하세요. 실제 도구와 관련 프로젝트 지침을 확인하고 중요한 불일치는 의존 작업 전에 해결하세요.
+
+## 목표
+현재 상태에서 다음 플레이 마일스톤 하나를 완료하세요.
+
+## 작업과 제약
+- 실제 현재 상태에서 게임을 이어가세요. docs/progress.md, 수용 검사, 관련 코드를 읽고 기록을 믿기 전에 이전 체크포인트를 검증하세요.
+- 미완료 마일스톤 하나를 진행하세요.
+- 승리 루프, 드론·체력·시간 패배, 시각적 다듬기, 출시 준비 순서입니다.
+- 이번 실행에서는 한 마일스톤과 영향을 받은 검사를 마치세요.
+- 활성화보다 패배 우선, 셀 한 번만 수집, 무적 시간, 완전한 재시작 등 합의한 규칙을 보존하세요.
+- 메커니즘이 통과할 때까지 임시 에셋을 사용하세요.
+- 명령, 관찰 결과, 남은 실패, 다음 단계를 기록하세요.
+- 검사 통과 후 diff를 검토하고 해당 마일스톤의 변경만 커밋하세요.
+- 공개는 출시 단계에서 합니다.
+
+## 완료 조건
+추가로 완성한 플레이 마일스톤 하나, 관련 검사, 검토한 커밋.</code></pre><a class="download-link" href="prompts/ko/cookbook-07-next.md" download>.md 다운로드 ↗</a></div>
+<p><strong>예상 결과:</strong> 추가로 완성한 플레이 마일스톤 하나, 관련 검사, 검토한 커밋.</p>
+<p>전체 설명: <a href="#milestones">빈 폴더에서 게임까지</a>. <a class="citation" href="#source-04" title="OpenAI · Building games with Astra" aria-label="출처 04: OpenAI · Building games with Astra">[04]</a> <a class="citation" href="#source-05" title="Anthropic · Effective harnesses for long-running agents" aria-label="출처 05: Anthropic · Effective harnesses for long-running agents">[05]</a></p>
 <h3 id="cookbook-part-8">8 · 실제 플레이 검증</h3>
 <p>프로덕션 빌드에서 사용합니다. 사람의 관찰은 본인이나 다른 플레이어가 수행합니다.</p>
-<div class="prompt-block"><div class="prompt-bar"><span>바로 사용하기 · cookbook-08-playtest.md</span><button type="button" class="copy-button" aria-label="프롬프트 복사: cookbook-08-playtest.md">프롬프트 복사</button></div><pre tabindex="0"><code>프로덕션 빌드에서 docs/acceptance.md에 따라 게임을 검증하세요. 이동, 경계, 대각선 속도, 셀 중복 수집, 비콘 범위, 무적 시간, 정지, 포커스 상실·재개, 두 패배 원인, 승리, 반복 재시작을 확인하세요. 로직 테스트, 실제 브라우저 입력, 시각 검사를 구분하세요. 브라우저, 뷰포트, 리비전, 절차, 예상·실제 결과를 docs/playtests/의 새 기록에 남기세요. 빌드 통과만으로 플레이 가능성을 판단하지 마세요. 신규 플레이어용 짧은 과제도 주세요. 목표 찾기, 한 판 시도, 재시작, 혼란스러운 순간 설명입니다. 제가 제공하기 전까지 사람의 관찰은 미수행으로 표시하세요. 구체적인 실패의 우선순위를 정하고 다음 최소 수정을 제안하세요.</code></pre><a class="download-link" href="prompts/ko/cookbook-08-playtest.md" download>.md 다운로드 ↗</a></div>
-<p><strong>예상 결과:</strong> 재현 가능한 실패와 아직 수행하지 않은 검사의 명시적 목록.</p><p>전체 설명: <a href="#verify">직접 플레이할 게임 검증하기</a>. <a class="citation" href="#source-43" title="MDN · requestAnimationFrame" aria-label="출처 43: MDN · requestAnimationFrame">[43]</a> <a class="citation" href="#source-44" title="MDN · Autoplay guide for media and Web Audio APIs" aria-label="출처 44: MDN · Autoplay guide for media and Web Audio APIs">[44]</a> <a class="citation" href="#source-45" title="MDN · prefers-reduced-motion" aria-label="출처 45: MDN · prefers-reduced-motion">[45]</a></p>
+<div class="prompt-block"><div class="prompt-bar"><span>바로 사용하기 · cookbook-08-playtest.md</span><button type="button" class="copy-button" aria-label="프롬프트 복사: cookbook-08-playtest.md">프롬프트 복사</button></div><pre tabindex="0"><code>## 먼저 수정할 매개변수
+PROJECT_FOLDER: 현재 선택한 게임 폴더
+AGENT: Codex
+MODEL: GPT-6 Astra
+
+## 선택지와 일관성
+- AGENT: Codex 또는 Claude Code를 선택하세요. 전송 전에 해당 앱에서 MODEL을 선택하고 Claude Code에는 사용 가능한 Claude 모델을 쓰세요. 이 줄은 실제 모델을 바꾸거나 도구 권한을 부여하지 않습니다.
+- PROJECT_FOLDER에서만 작업하세요. 실제 도구와 관련 프로젝트 지침을 확인하고 중요한 불일치는 의존 작업 전에 해결하세요.
+
+## 목표
+규칙, 실제 조작, 사람의 관찰로 프로덕션 게임을 검증하세요.
+
+## 작업과 제약
+- 프로덕션 빌드에서 docs/acceptance.md에 따라 게임을 검증하세요.
+- 이동, 경계, 대각선 속도, 셀 중복 수집, 비콘 범위, 무적 시간, 정지, 포커스 상실·재개, 두 패배 원인, 승리, 반복 재시작을 확인하세요.
+- 로직 테스트, 실제 브라우저 입력, 시각 검사를 구분하세요.
+- 브라우저, 뷰포트, 리비전, 절차, 예상·실제 결과를 docs/playtests/의 새 기록에 남기세요.
+- 빌드 통과만으로 플레이 가능성을 판단하지 마세요.
+- 신규 플레이어용 짧은 과제도 주세요.
+- 목표 찾기, 한 판 시도, 재시작, 혼란스러운 순간 설명입니다.
+- 제가 제공하기 전까지 사람의 관찰은 미수행으로 표시하세요.
+- 구체적인 실패의 우선순위를 정하고 다음 최소 수정을 제안하세요.
+
+## 완료 조건
+재현 가능한 실패와 아직 수행하지 않은 검사의 명시적 목록.</code></pre><a class="download-link" href="prompts/ko/cookbook-08-playtest.md" download>.md 다운로드 ↗</a></div>
+<p><strong>예상 결과:</strong> 재현 가능한 실패와 아직 수행하지 않은 검사의 명시적 목록.</p>
+<p>전체 설명: <a href="#verify">직접 플레이할 게임 검증하기</a>. <a class="citation" href="#source-43" title="MDN · requestAnimationFrame" aria-label="출처 43: MDN · requestAnimationFrame">[43]</a> <a class="citation" href="#source-44" title="MDN · Autoplay guide for media and Web Audio APIs" aria-label="출처 44: MDN · Autoplay guide for media and Web Audio APIs">[44]</a> <a class="citation" href="#source-45" title="MDN · prefers-reduced-motion" aria-label="출처 45: MDN · prefers-reduced-motion">[45]</a></p>
 <h3 id="cookbook-part-9">9 · 수정하고 다음 프롬프트 개선</h3>
 <p>실제 실패 근거와 함께 사용합니다. 프롬프트와 결과를 함께 저장하고 전체 대화를 다음 지침에 붙이지 마세요.</p>
-<div class="prompt-block"><div class="prompt-bar"><span>바로 사용하기 · cookbook-09-refine.md</span><button type="button" class="copy-button" aria-label="프롬프트 복사: cookbook-09-refine.md">프롬프트 복사</button></div><pre tabindex="0"><code>최신 플레이테스트 근거를 읽고 영향이 가장 큰 실패를 재현하세요. 입력에서 상태 변화와 렌더링까지 실제 파일과 관련 Git 이력으로 추적하세요. 적절한 최소 변경으로 원인을 수정하고 영향을 받은 검사를 다시 실행한 뒤 검토한 정상 체크포인트를 보존하세요. 관련 프롬프트, 모델·설정, 기준 커밋, 결과, 근거 링크를 docs/prompt-log.md에 저장하되 자격 증명이나 불필요한 대화는 복사하지 마세요. 확인된 교훈을 명세, 검사 또는 간결한 후보 프롬프트 P2로 정리하세요. P1과 게임 버전을 별도로 식별하세요. 게임 V2의 수정이 더 나은 프롬프트를 입증하지는 않음을 설명하세요. 동일한 깨끗한 기준, 도구 접근, 예산에서 반복 실험과 미사용 과제로 P1/P2를 비교하는 방법을 제안하고 합의한 평가 범위에서만 실행하세요.</code></pre><a class="download-link" href="prompts/ko/cookbook-09-refine.md" download>.md 다운로드 ↗</a></div>
-<p><strong>예상 결과:</strong> 검사한 수정과 간결한 후보 프롬프트, 공정한 비교 계획.</p><p>전체 설명: <a href="#refine">아이디어와 과정을 다듬기</a>. <a class="citation" href="#source-39" title="Git · Staging, differences, branches, and reverting" aria-label="출처 39: Git · Staging, differences, branches, and reverting">[39]</a> <a class="citation" href="#source-52" title="OpenAI · Evaluation best practices" aria-label="출처 52: OpenAI · Evaluation best practices">[52]</a></p>
+<div class="prompt-block"><div class="prompt-bar"><span>바로 사용하기 · cookbook-09-refine.md</span><button type="button" class="copy-button" aria-label="프롬프트 복사: cookbook-09-refine.md">프롬프트 복사</button></div><pre tabindex="0"><code>## 먼저 수정할 매개변수
+PROJECT_FOLDER: 현재 선택한 게임 폴더
+AGENT: Codex
+MODEL: GPT-6 Astra
+
+## 선택지와 일관성
+- AGENT: Codex 또는 Claude Code를 선택하세요. 전송 전에 해당 앱에서 MODEL을 선택하고 Claude Code에는 사용 가능한 Claude 모델을 쓰세요. 이 줄은 실제 모델을 바꾸거나 도구 권한을 부여하지 않습니다.
+- PROJECT_FOLDER에서만 작업하세요. 실제 도구와 관련 프로젝트 지침을 확인하고 중요한 불일치는 의존 작업 전에 해결하세요.
+
+## 목표
+근거가 있는 실패 하나를 고치고 정직하게 평가할 프롬프트 개정을 준비하세요.
+
+## 작업과 제약
+- 최신 플레이테스트 근거를 읽고 영향이 가장 큰 실패를 재현하세요.
+- 입력에서 상태 변화와 렌더링까지 실제 파일과 관련 Git 이력으로 추적하세요.
+- 적절한 최소 변경으로 원인을 수정하고 영향을 받은 검사를 다시 실행한 뒤 검토한 정상 체크포인트를 보존하세요.
+- 관련 프롬프트, 모델·설정, 기준 커밋, 결과, 근거 링크를 docs/prompt-log.md에 저장하되 자격 증명이나 불필요한 대화는 복사하지 마세요.
+- 확인된 교훈을 명세, 검사 또는 간결한 후보 프롬프트 P2로 정리하세요.
+- P1과 게임 버전을 별도로 식별하세요.
+- 게임 V2의 수정이 더 나은 프롬프트를 입증하지는 않음을 설명하세요.
+- 동일한 깨끗한 기준, 도구 접근, 예산에서 반복 실험과 미사용 과제로 P1/P2를 비교하는 방법을 제안하고 합의한 평가 범위에서만 실행하세요.
+
+## 완료 조건
+검사한 수정과 간결한 후보 프롬프트, 공정한 비교 계획.</code></pre><a class="download-link" href="prompts/ko/cookbook-09-refine.md" download>.md 다운로드 ↗</a></div>
+<p><strong>예상 결과:</strong> 검사한 수정과 간결한 후보 프롬프트, 공정한 비교 계획.</p>
+<p>전체 설명: <a href="#refine">아이디어와 과정을 다듬기</a>. <a class="citation" href="#source-39" title="Git · Staging, differences, branches, and reverting" aria-label="출처 39: Git · Staging, differences, branches, and reverting">[39]</a> <a class="citation" href="#source-52" title="OpenAI · Evaluation best practices" aria-label="출처 52: OpenAI · Evaluation best practices">[52]</a></p>
 <h3 id="cookbook-part-10">10 · 한 곳에 공개</h3>
 <p>아래 프롬프트 하나를 선택하고 계정 필드를 채우세요. 게임 소스와 빌드의 공개를 명시적으로 승인하는 문구이므로 보내기 전에 대상을 확인하세요.</p>
 <h4>GitHub Pages · 공개 정적 게임</h4>
-<div class="prompt-block"><div class="prompt-bar"><span>바로 사용하기 · cookbook-10-pages.md</span><button type="button" class="copy-button" aria-label="프롬프트 복사: cookbook-10-pages.md">프롬프트 복사</button></div><pre tabindex="0"><code>이 게임을 GitHub Pages로 출시하세요. GitHub 소유자: [YOUR_ACCOUNT]. 저장소: signal-garden. 소유자가 아직 자리표시자면 로컬 준비를 마치고 공개 전에 정확한 계정을 물어보세요. 해당 공개 저장소가 없으면 생성하고 검토한 게임 소스를 푸시하며 https://[YOUR_ACCOUNT].github.io/signal-garden/ 에 정적 빌드를 공개하도록 승인합니다. 기존 원격과 브랜치를 먼저 확인하고 충돌하는 원격을 교체하거나 강제 푸시하지 마세요. diff, 에셋 라이선스, 비밀 제외를 확인하세요. Vite base /signal-garden/ 으로 빌드·검사하세요. 필요한 Pages 권한으로 dist를 빌드·배포하는 Pages Actions 워크플로를 준비하세요. 의도한 파일을 커밋·푸시하고 권한이 있으면 GitHub Actions를 Pages 소스로 설정하세요. 해당 리비전의 배포를 기다린 뒤 공개 URL에서 에셋 요청과 전체 한 판을 확인하세요. 커밋, 배포, 실제 검증을 보고하고 막히면 남은 정확한 단계를 제시하세요.</code></pre><a class="download-link" href="prompts/ko/cookbook-10-pages.md" download>.md 다운로드 ↗</a></div>
+<div class="prompt-block"><div class="prompt-bar"><span>바로 사용하기 · cookbook-10-pages.md</span><button type="button" class="copy-button" aria-label="프롬프트 복사: cookbook-10-pages.md">프롬프트 복사</button></div><pre tabindex="0"><code>## 먼저 수정할 매개변수
+PROJECT_FOLDER: 현재 선택한 게임 폴더
+AGENT: Codex
+MODEL: GPT-6 Astra
+GITHUB_OWNER: [YOUR_ACCOUNT]
+REPOSITORY: signal-garden
+PUBLISH: YES
+
+## 선택지와 일관성
+- AGENT: Codex 또는 Claude Code를 선택하세요. 전송 전에 해당 앱에서 MODEL을 선택하고 Claude Code에는 사용 가능한 Claude 모델을 쓰세요. 이 줄은 실제 모델을 바꾸거나 도구 권한을 부여하지 않습니다.
+- PROJECT_FOLDER에서만 작업하세요. 실제 도구와 관련 프로젝트 지침을 확인하고 중요한 불일치는 의존 작업 전에 해결하세요.
+- PUBLISH: YES는 아래 설명한 공개 저장소/소스와 배포를 승인하고, NO는 로컬 출시 준비만 뜻합니다. 공개 전에 모든 대상 자리표시자를 해결하세요. GITHUB_OWNER와 REPOSITORY로 URL과 기준 경로를 계산하세요.
+
+## 목표
+PUBLISH에 따라 이 게임을 GitHub Pages 출시용으로 준비하거나 공개하세요.
+
+## 작업과 제약
+- 위 GITHUB_OWNER와 REPOSITORY 값을 사용하고 외부 공개 전에 자리표시자를 해결하세요.
+- 실제 저장소, 브랜치, 원격, 의도한 diff, 비밀 제외, 에셋 라이선스를 확인하세요. 무관한 작업을 보존하고 충돌하는 원격을 교체하거나 강제 푸시하지 마세요.
+- 기존 엔진을 유지하세요. Vite/Three.js는 설치·빌드 명령과 dist 출력을 확인하세요. Godot는 설치 버전, 웹 내보내기 지원, 실제 출력 디렉터리를 확인하고 생성된 파일명을 유지하세요. 공개 전에 정적 빌드가 작동하는지 검증하세요.
+- 프로젝트 사이트 URL은 실제 값으로 https://GITHUB_OWNER.github.io/REPOSITORY/ 를 계산하세요. Vite에서는 base를 /REPOSITORY/ 로 설정하고, 다른 엔진은 해당 경로에서 내보낸 에셋을 검증하세요.
+- 필요한 Pages 권한으로 프로젝트를 빌드하고 검증된 정적 출력 디렉터리만 업로드하는 GitHub Pages Actions 워크플로를 준비하세요.
+- PUBLISH가 YES이면 명시한 공개 GitHub 저장소가 없을 때 생성하고, 검토한 게임의 의도한 파일을 커밋·푸시하며 선택한 호스트에 공개 배포하도록 승인합니다. PUBLISH가 NO이면 로컬 준비 후 멈추고 남은 출시 단계를 보고하세요.
+- YES이면 권한이 허용할 때 GitHub Actions를 Pages 소스로 설정하고 정확히 푸시한 커밋의 워크플로를 확인하세요.
+- 공개 URL을 열고 에셋 및 실제 조작으로 전체 한 판을 도구가 허용할 때 검증하며 실행하지 못한 검사를 명시하세요.
+
+## 완료 조건
+PUBLISH=NO: 검증한 로컬 출시 패키지와 남은 단계. PUBLISH=YES: 검토한 커밋, 일치하는 성공 배포, 공개 URL, 실제 검증 기록. 완료할 수 없으면 구체적인 차단 요인을 보고하세요.</code></pre><a class="download-link" href="prompts/ko/cookbook-10-pages.md" download>.md 다운로드 ↗</a></div>
 <h4>Vercel Hobby · 개인·비상업적 게임</h4>
-<div class="prompt-block"><div class="prompt-bar"><span>바로 사용하기 · cookbook-10-vercel.md</span><button type="button" class="copy-button" aria-label="프롬프트 복사: cookbook-10-vercel.md">프롬프트 복사</button></div><pre tabindex="0"><code>개인적·비상업적 용도의 이 게임을 Vercel Hobby로 출시하세요. GitHub 소유자: [YOUR_ACCOUNT]. 저장소: signal-garden. Vercel 계정/팀: [YOUR_VERCEL_SCOPE]. 외부 공개 전에 미완성 대상 필드를 채우세요. 이 공개 GitHub 저장소가 없으면 생성하고 검토한 게임 소스를 푸시하며 지정한 Vercel 범위의 할당된 vercel.app URL에 공개하도록 승인합니다. 기존 원격과 프로젝트 연결을 확인하고 다른 곳을 가리키면 보존한 채 충돌을 보고하세요. Hobby 자격과 현재 한도를 확인하고 업그레이드나 서비스 구매는 하지 마세요. 정적 Vite 프로젝트에 base /를 사용하고 빌드 명령과 dist 출력을 확인한 뒤 프로덕션 빌드를 시험하세요. 의도한 파일을 커밋·푸시하세요. 인증된 Vercel CLI나 Git 가져오기를 사용하고 필요하면 브라우저 로그인이나 저장소 접근 절차를 안내하되 채팅으로 비밀을 요구하지 마세요. 배포 리비전과 비로그인 공개 플레이를 검증하고 URL과 미수행 검사를 보고하세요.</code></pre><a class="download-link" href="prompts/ko/cookbook-10-vercel.md" download>.md 다운로드 ↗</a></div>
-<p><strong>예상 결과:</strong> 커밋, 해당 리비전의 성공한 배포, 공개 게임 URL, 플레이 검증 기록.</p><p>전체 설명: <a href="#environment">개발 환경 설정</a> · <a href="#publish">출시하고 학습 루프 마무리하기</a>. <a class="citation" href="#source-12" title="Vite · Deploying a Static Site" aria-label="출처 12: Vite · Deploying a Static Site">[12]</a> <a class="citation" href="#source-13" title="GitHub · Using custom workflows with GitHub Pages" aria-label="출처 13: GitHub · Using custom workflows with GitHub Pages">[13]</a> <a class="citation" href="#source-40" title="GitHub CLI · gh repo create" aria-label="출처 40: GitHub CLI · gh repo create">[40]</a> <a class="citation" href="#source-46" title="GitHub · What is GitHub Pages?" aria-label="출처 46: GitHub · What is GitHub Pages?">[46]</a> <a class="citation" href="#source-63" title="Vercel · Getting started, Git import and Vite" aria-label="출처 63: Vercel · Getting started, Git import and Vite">[63]</a> <a class="citation" href="#source-64" title="Vercel · Hobby plan" aria-label="출처 64: Vercel · Hobby plan">[64]</a></p>
+<div class="prompt-block"><div class="prompt-bar"><span>바로 사용하기 · cookbook-10-vercel.md</span><button type="button" class="copy-button" aria-label="프롬프트 복사: cookbook-10-vercel.md">프롬프트 복사</button></div><pre tabindex="0"><code>## 먼저 수정할 매개변수
+PROJECT_FOLDER: 현재 선택한 게임 폴더
+AGENT: Codex
+MODEL: GPT-6 Astra
+GITHUB_OWNER: [YOUR_ACCOUNT]
+REPOSITORY: signal-garden
+PUBLISH: YES
+VERCEL_SCOPE: [YOUR_VERCEL_SCOPE]
+
+## 선택지와 일관성
+- AGENT: Codex 또는 Claude Code를 선택하세요. 전송 전에 해당 앱에서 MODEL을 선택하고 Claude Code에는 사용 가능한 Claude 모델을 쓰세요. 이 줄은 실제 모델을 바꾸거나 도구 권한을 부여하지 않습니다.
+- PROJECT_FOLDER에서만 작업하세요. 실제 도구와 관련 프로젝트 지침을 확인하고 중요한 불일치는 의존 작업 전에 해결하세요.
+- PUBLISH: YES는 아래 설명한 공개 저장소/소스와 배포를 승인하고, NO는 로컬 출시 준비만 뜻합니다. 공개 전에 모든 대상 자리표시자를 해결하세요. GITHUB_OWNER와 REPOSITORY로 URL과 기준 경로를 계산하세요.
+
+## 목표
+PUBLISH에 따라 이 게임을 Vercel Hobby 출시용으로 준비하거나 공개하세요.
+
+## 작업과 제약
+- 위 GITHUB_OWNER와 REPOSITORY 값을 사용하고 외부 공개 전에 자리표시자를 해결하세요.
+- 실제 저장소, 브랜치, 원격, 의도한 diff, 비밀 제외, 에셋 라이선스를 확인하세요. 무관한 작업을 보존하고 충돌하는 원격을 교체하거나 강제 푸시하지 마세요.
+- 기존 엔진을 유지하세요. Vite/Three.js는 설치·빌드 명령과 dist 출력을 확인하세요. Godot는 설치 버전, 웹 내보내기 지원, 실제 출력 디렉터리를 확인하고 생성된 파일명을 유지하세요. 공개 전에 정적 빌드가 작동하는지 검증하세요.
+- 프로젝트 연결 전에 VERCEL_SCOPE를 해결하세요. 기존 Vercel 연결을 확인하고 대상 충돌은 덮어쓰지 말고 보고하세요.
+- 이 개인·비상업 게임이 현재 제한에서 Hobby에 적합한지 확인하고 서비스 구매나 업그레이드는 하지 마세요.
+- 도메인 루트의 Vite 배포에는 base / 를 쓰세요. 선택한 엔진의 실제 빌드 명령과 출력 디렉터리를 확인하고 모든 엔진이 dist를 쓴다고 가정하지 마세요. Vercel 구성을 준비하세요.
+- PUBLISH가 YES이면 명시한 공개 GitHub 저장소가 없을 때 생성하고, 검토한 게임의 의도한 파일을 커밋·푸시하며 선택한 호스트에 공개 배포하도록 승인합니다. PUBLISH가 NO이면 로컬 준비 후 멈추고 남은 출시 단계를 보고하세요.
+- YES이면 VERCEL_SCOPE에서 인증된 Vercel CLI 또는 Git 가져오기를 쓰세요. 필요하면 브라우저 로그인이나 저장소 접근을 안내하되 채팅으로 비밀을 요청하지 마세요.
+- 배포 리비전과 로그인 없는 공개 플레이를 확인하세요. 실제 할당된 프로덕션 URL과 실행하지 못한 검사를 보고하세요.
+
+## 완료 조건
+PUBLISH=NO: 검증한 로컬 출시 패키지와 남은 단계. PUBLISH=YES: 검토한 커밋, 일치하는 성공 배포, 공개 URL, 실제 검증 기록. 완료할 수 없으면 구체적인 차단 요인을 보고하세요.</code></pre><a class="download-link" href="prompts/ko/cookbook-10-vercel.md" download>.md 다운로드 ↗</a></div>
+<p><strong>예상 결과:</strong> 커밋, 해당 리비전의 성공한 배포, 공개 게임 URL, 플레이 검증 기록.</p>
+<p>전체 설명: <a href="#environment">개발 환경 설정</a> · <a href="#publish">출시하고 학습 루프 마무리하기</a>. <a class="citation" href="#source-12" title="Vite · Deploying a Static Site" aria-label="출처 12: Vite · Deploying a Static Site">[12]</a> <a class="citation" href="#source-13" title="GitHub · Using custom workflows with GitHub Pages" aria-label="출처 13: GitHub · Using custom workflows with GitHub Pages">[13]</a> <a class="citation" href="#source-40" title="GitHub CLI · gh repo create" aria-label="출처 40: GitHub CLI · gh repo create">[40]</a> <a class="citation" href="#source-46" title="GitHub · What is GitHub Pages?" aria-label="출처 46: GitHub · What is GitHub Pages?">[46]</a> <a class="citation" href="#source-63" title="Vercel · Getting started, Git import and Vite" aria-label="출처 63: Vercel · Getting started, Git import and Vite">[63]</a> <a class="citation" href="#source-64" title="Vercel · Hobby plan" aria-label="출처 64: Vercel · Hobby plan">[64]</a></p>
 <h3 id="cookbook-part-11">11 · 선택: 게임 소개</h3>
 <p>실제 게임플레이가 생긴 뒤 사용합니다. 영상이나 녹화 도구가 없다면 촬영 계획을 결과로 받습니다.</p>
-<div class="prompt-block"><div class="prompt-bar"><span>바로 사용하기 · cookbook-11-trailer.md</span><button type="button" class="copy-button" aria-label="프롬프트 복사: cookbook-11-trailer.md">프롬프트 복사</button></div><pre tabindex="0"><code>현재 Signal Garden 빌드를 소개하는 20초 영상을 준비하세요. 실제 빌드와 사용 가능한 녹화·편집 도구를 먼저 확인하세요. 제목과 목표, 실제 이동·수집 영상, 드론 도전, 비콘 성공, 플레이 URL 순서로 구성하세요. 샷 목록, 자막, 파일 경로·사용 권리·빌드 리비전을 포함한 에셋 명세를 저장하세요. 영상이 없으면 구체적인 촬영 계획을 제시하고 해당 샷을 대기 상태로 표시하며 게임플레이를 지어내지 마세요. 설치된 Remotion 작업처럼 재현 가능한 편집 도구를 우선하세요. 생성 자료는 명확하게 표시한 콘셉트 이미지로만 사용하세요. 별도 승인 전 생성 비용은 0입니다. 필요한 미디어와 도구가 있을 때만 초안을 렌더링하고 문구, 흐름, 오디오, 최종 URL을 검토하세요. 출력 파일과 남은 작업을 보고하세요. 트레일러 공개는 별도 행동입니다.</code></pre><a class="download-link" href="prompts/ko/cookbook-11-trailer.md" download>.md 다운로드 ↗</a></div>
-<p><strong>예상 결과:</strong> 20초 샷 계획, 확인한 미디어 목록, 가능할 때 검토한 영상 초안.</p><p>전체 설명: <a href="#video-workflows">에이전트와 영상 만들기</a>. <a class="citation" href="#source-26" title="Remotion · Agent Skills" aria-label="출처 26: Remotion · Agent Skills">[26]</a> <a class="citation" href="#source-27" title="Remotion · Documentation MCP deprecation" aria-label="출처 27: Remotion · Documentation MCP deprecation">[27]</a> <a class="citation" href="#source-47" title="Runway · Usage tiers and throttled tasks" aria-label="출처 47: Runway · Usage tiers and throttled tasks">[47]</a></p>
+<div class="prompt-block"><div class="prompt-bar"><span>바로 사용하기 · cookbook-11-trailer.md</span><button type="button" class="copy-button" aria-label="프롬프트 복사: cookbook-11-trailer.md">프롬프트 복사</button></div><pre tabindex="0"><code>## 먼저 수정할 매개변수
+PROJECT_FOLDER: 현재 선택한 게임 폴더
+AGENT: Codex
+MODEL: GPT-6 Astra
+VIDEO_TOOL: AUTO
+DURATION_SECONDS: 20
+PAID_BUDGET: 0
+
+## 선택지와 일관성
+- AGENT: Codex 또는 Claude Code를 선택하세요. 전송 전에 해당 앱에서 MODEL을 선택하고 Claude Code에는 사용 가능한 Claude 모델을 쓰세요. 이 줄은 실제 모델을 바꾸거나 도구 권한을 부여하지 않습니다.
+- PROJECT_FOLDER에서만 작업하세요. 실제 도구와 관련 프로젝트 지침을 확인하고 중요한 불일치는 의존 작업 전에 해결하세요.
+- VIDEO_TOOL: AUTO는 설치된 적합한 편집기를 고르고 REMOTION은 사용 가능한 Remotion 작업 흐름을 요청합니다. 없으면 누락을 보고하고 샷 계획을 준비하세요. DURATION_SECONDS는 총 길이이며 PAID_BUDGET은 별도로 승인된 생성 비용 상한입니다.
+
+## 목표
+현재 게임 빌드를 소개하는 DURATION_SECONDS초 영상을 준비하세요.
+
+## 작업과 제약
+- 실제 빌드와 사용 가능한 녹화·편집 도구를 먼저 확인하세요.
+- 제목과 목표, 실제 이동·수집 영상, 드론 도전, 비콘 성공, 플레이 URL 순서로 구성하세요.
+- 샷 목록, 자막, 파일 경로·사용 권리·빌드 리비전을 포함한 에셋 명세를 저장하세요.
+- 영상이 없으면 구체적인 촬영 계획을 제시하고 해당 샷을 대기 상태로 표시하며 게임플레이를 지어내지 마세요.
+- 설치된 Remotion 작업처럼 재현 가능한 편집 도구를 우선하세요.
+- 생성 자료는 명확하게 표시한 콘셉트 이미지로만 사용하세요.
+- 별도 승인 전 생성 비용은 0입니다.
+- 필요한 미디어와 도구가 있을 때만 초안을 렌더링하고 문구, 흐름, 오디오, 최종 URL을 검토하세요.
+- 출력 파일과 남은 작업을 보고하세요.
+- 트레일러 공개는 별도 행동입니다.
+
+## 완료 조건
+DURATION_SECONDS초 샷 계획, 확인한 미디어 목록, 가능할 때 검토한 영상 초안.</code></pre><a class="download-link" href="prompts/ko/cookbook-11-trailer.md" download>.md 다운로드 ↗</a></div>
+<p><strong>예상 결과:</strong> 20초 샷 계획, 확인한 미디어 목록, 가능할 때 검토한 영상 초안.</p>
+<p>전체 설명: <a href="#video-workflows">에이전트와 영상 만들기</a>. <a class="citation" href="#source-26" title="Remotion · Agent Skills" aria-label="출처 26: Remotion · Agent Skills">[26]</a> <a class="citation" href="#source-27" title="Remotion · Documentation MCP deprecation" aria-label="출처 27: Remotion · Documentation MCP deprecation">[27]</a> <a class="citation" href="#source-47" title="Runway · Usage tiers and throttled tasks" aria-label="출처 47: Runway · Usage tiers and throttled tasks">[47]</a></p>
 <p><a href="#summary">간결한 단계로 돌아가기 →</a></p>
 
 <details class="chapter-evidence" id="evidence-cookbook"><summary>출처 확인 · 이 장의 근거는 무엇인가?</summary><p>2026년 9월 14일 확인. 아래 링크는 명시된 범위를 뒷받침합니다. 이 책의 제안은 문서에 명시된 동작이나 측정 결과와 구분합니다.</p><ul class="evidence-records"><li><span class="evidence-basis">종합 및 해석</span><h4>문서화된 경계를 둔 독창적 예제</h4><p class="evidence-covers"><strong>해당 내용:</strong> <a href="#cookbook">들어가며</a> · <a href="#cookbook-part-1">1 · 게임 정의</a> · <a href="#cookbook-part-2">2 · 접근법 선택</a> · <a href="#cookbook-part-3">3 · 최신 근거 확인</a> · <a href="#cookbook-part-4">4 · 프로젝트 기억 저장</a> · <a href="#cookbook-part-5">5 · 유용한 스킬 선택</a> · <a href="#cookbook-part-6">6 · 집중된 구현 시작</a> · <a href="#cookbook-part-7">7 · 마일스톤 하나 진행</a> · <a href="#cookbook-part-8">8 · 실제 플레이 검증</a> · <a href="#cookbook-part-9">9 · 수정하고 다음 프롬프트 개선</a> · <a href="#cookbook-part-10">10 · 한 곳에 공개</a> · <a href="#cookbook-part-11">11 · 선택: 게임 소개</a></p><p>열한 단계, 기본값, 예상 결과는 측정 결과가 아닌 독창적 예제 프롬프트입니다. 절별 인용은 동작 근거를, 설정 출처는 로컬 접근과 공개 근거를 제공합니다. 도구, 사람의 플레이테스트, 대상 필드는 명시되어 있습니다.</p><p class="evidence-links"><a href="https://developers.openai.com/blog/rethinking-skills-and-prompts-for-gpt-6-astra" lang="en">OpenAI · Rethinking skills and prompts for GPT-6 Astra ↗</a> <a class="evidence-note-link" href="#source-17">[17: 출처 노트]</a><br><a href="https://developers.openai.com/blog/how-to-build-games-with-astra" lang="en">OpenAI · Building games with Astra ↗</a> <a class="evidence-note-link" href="#source-04">[04: 출처 노트]</a><br><a href="https://www.anthropic.com/engineering/effective-harnesses-for-long-running-agents" lang="en">Anthropic · Effective harnesses for long-running agents ↗</a> <a class="evidence-note-link" href="#source-05">[05: 출처 노트]</a><br><a href="https://learn.chatgpt.com/docs/agent-configuration/agents-md" lang="en">OpenAI · Custom instructions with AGENTS.md ↗</a> <a class="evidence-note-link" href="#source-07">[07: 출처 노트]</a><br><a href="https://learn.chatgpt.com/docs/build-skills" lang="en">OpenAI · Build skills ↗</a> <a class="evidence-note-link" href="#source-08">[08: 출처 노트]</a><br><a href="https://docs.godotengine.org/en/stable/getting_started/first_3d_game/index.html" lang="en">Godot · Your first 3D game ↗</a> <a class="evidence-note-link" href="#source-09">[09: 출처 노트]</a><br><a href="https://docs.godotengine.org/en/stable/tutorials/export/exporting_for_web.html" lang="en">Godot · Exporting for the Web ↗</a> <a class="evidence-note-link" href="#source-11">[11: 출처 노트]</a><br><a href="https://vite.dev/guide/static-deploy.html#github-pages" lang="en">Vite · Deploying a Static Site ↗</a> <a class="evidence-note-link" href="#source-12">[12: 출처 노트]</a><br><a href="https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages" lang="en">GitHub · Using custom workflows with GitHub Pages ↗</a> <a class="evidence-note-link" href="#source-13">[13: 출처 노트]</a><br><a href="https://www.remotion.dev/docs/ai/skills" lang="en">Remotion · Agent Skills ↗</a> <a class="evidence-note-link" href="#source-26">[26: 출처 노트]</a><br><a href="https://www.remotion.dev/docs/ai/mcp" lang="en">Remotion · Documentation MCP deprecation ↗</a> <a class="evidence-note-link" href="#source-27">[27: 출처 노트]</a><br><a href="https://git-scm.com/docs/git-add" lang="en">Git · Staging, differences, branches, and reverting ↗</a> <a class="evidence-note-link" href="#source-39">[39: 출처 노트]</a><br><a href="https://cli.github.com/manual/gh_repo_create" lang="en">GitHub CLI · gh repo create ↗</a> <a class="evidence-note-link" href="#source-40">[40: 출처 노트]</a><br><a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/requestAnimationFrame" lang="en">MDN · requestAnimationFrame ↗</a> <a class="evidence-note-link" href="#source-43">[43: 출처 노트]</a><br><a href="https://developer.mozilla.org/en-US/docs/Web/Media/Guides/Autoplay" lang="en">MDN · Autoplay guide for media and Web Audio APIs ↗</a> <a class="evidence-note-link" href="#source-44">[44: 출처 노트]</a><br><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion" lang="en">MDN · prefers-reduced-motion ↗</a> <a class="evidence-note-link" href="#source-45">[45: 출처 노트]</a><br><a href="https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages" lang="en">GitHub · What is GitHub Pages? ↗</a> <a class="evidence-note-link" href="#source-46">[46: 출처 노트]</a><br><a href="https://docs.dev.runwayml.com/usage/tiers" lang="en">Runway · Usage tiers and throttled tasks ↗</a> <a class="evidence-note-link" href="#source-47">[47: 출처 노트]</a><br><a href="https://developers.openai.com/api/docs/guides/evaluation-best-practices" lang="en">OpenAI · Evaluation best practices ↗</a> <a class="evidence-note-link" href="#source-52">[52: 출처 노트]</a><br><a href="https://learn.chatgpt.com/docs/quickstart" lang="en">OpenAI · Desktop quickstart and Windows setup ↗</a> <a class="evidence-note-link" href="#source-56">[56: 출처 노트]</a><br><a href="https://code.claude.com/docs/en/desktop-quickstart" lang="en">Anthropic · Claude Code desktop quickstart ↗</a> <a class="evidence-note-link" href="#source-57">[57: 출처 노트]</a><br><a href="https://git-scm.com/install/windows" lang="en">Git and GitHub · Installation and commit identity ↗</a> <a class="evidence-note-link" href="#source-58">[58: 출처 노트]</a><br><a href="https://vercel.com/docs/getting-started-with-vercel" lang="en">Vercel · Getting started, Git import and Vite ↗</a> <a class="evidence-note-link" href="#source-63">[63: 출처 노트]</a><br><a href="https://vercel.com/docs/plans/hobby" lang="en">Vercel · Hobby plan ↗</a> <a class="evidence-note-link" href="#source-64">[64: 출처 노트]</a></p></li></ul><a class="evidence-method" href="#review-notes">검토 방법과 수정 사항 보기 ↗</a></details></section>
 <section class="chapter" aria-labelledby="better-loop"><div class="chapter-kicker">장 03</div><h2 id="better-loop">더 나아지는 반복 과정</h2>
 <p class="lead">더 좋은 결과는 불확실성을 작게 나누는 데서 시작합니다.</p>
-<p>AI 에이전트에게 멋진 3D 게임을 만들어 달라고 합니다. 풍경, 캐릭터, 메뉴와 수백 줄의 코드가 만들어집니다. 스크린샷은 좋아 보입니다. 하지만 키를 누르자 카메라가 벽을 향하고, 캐릭터는 아이템을 통과하며, 이기는 방법은 어디에도 없습니다. “좋은 게임”이 관찰 가능한 조건으로 정리되지 않았기 때문에 시작은 쉽지만 완성은 어렵습니다.</p>
+<p>AI 에이전트에게 멋진 3D 게임을 만들어 달라고 합니다. 풍경, 캐릭터, 메뉴와 수백 줄의 코드가 만들어집니다.</p>
+<p>스크린샷은 좋아 보입니다. 하지만 키를 누르자 카메라가 벽을 향하고, 캐릭터는 아이템을 통과하며, 이기는 방법은 어디에도 없습니다.</p>
+<p>“좋은 게임”이 관찰 가능한 조건으로 정리되지 않았기 때문에 시작은 쉽지만 완성은 어렵습니다.</p>
 <p>이 책은 직접 설계한 예제 <strong>Signal Garden</strong>을 사용합니다. 버려진 옥상 정원에서 작은 정비 로봇을 움직여 에너지 셀 세 개를 모으고, 순찰 드론을 피하며, 시간이 끝나기 전에 비콘에 전력을 공급합니다. 게임은 의도적으로 작지만 이동, 충돌, 피드백, 분위기와 상태 전환을 다루며 하나의 완성된 경험을 만드는 연습에는 충분합니다.</p>
 <div class="loop"><div><span>01 / 의도</span><strong>설명하기</strong><small>플레이어가 무엇을 경험해야 할까요?</small></div><div><span>02 / 실행</span><strong>만들기</strong><small>한 부분을 플레이할 수 있게 만듭니다.</small></div><div><span>03 / 근거</span><strong>관찰하기</strong><small>직접 플레이하고 결과를 기록합니다.</small></div><div><span>04 / 학습</span><strong>개선하기</strong><small>가장 약한 부분을 바꿉니다.</small></div></div>
 <h3 id="better-loop-part-1">반복할 때마다 질문을 정하세요</h3>
-<p>“처음 하는 사람이 비콘을 찾을 수 있는가?”는 유용한 질문입니다. 이동 경로, 카메라 각도, 첫 플레이테스트와 변경 평가 방법이 떠오릅니다. “더 전문적으로 만들어 줘”라고 하면 텍스처, 조작, 메뉴, 사운드, 구조 중 무엇을 바꿀지 에이전트가 추측해야 합니다. 현재 문제를 정확히 이름 붙이면 다음 행동을 고르기 쉽습니다.</p>
+<p>“처음 하는 사람이 비콘을 찾을 수 있는가?”는 유용한 질문입니다. 이동 경로, 카메라 각도, 첫 플레이테스트와 변경 평가 방법이 떠오릅니다.</p>
+<p>“더 전문적으로 만들어 줘”라고 하면 텍스처, 조작, 메뉴, 사운드, 구조 중 무엇을 바꿀지 에이전트가 추측해야 합니다. 현재 문제를 정확히 이름 붙이면 다음 행동을 고르기 쉽습니다.</p>
 <p>이 책에서 <em>더 낫다</em>는 것은 다음 변경의 비용을 관리하면서 플레이 경험의 질을 높인다는 뜻입니다. 전자는 이해하기 쉬운 파일, 반복 가능한 검사와 복구 가능한 커밋이 필요하고, 경험의 질은 플레이테스트가 필요합니다. 아름다운 한 장면이나 성공한 빌드만으로는 모두 알 수 없습니다.</p>
 <h3 id="better-loop-part-2">모델, 에이전트, 작업 방식</h3>
-<p><strong>GPT-6 Astra</strong>는 선택한 모델입니다. <strong>에이전트</strong>는 파일, 터미널, 문서, 경우에 따라 브라우저나 게임 에디터 접근을 제공하는 주변 소프트웨어입니다. <strong>작업 방식</strong>은 무엇을 만들고, 어떤 증거를 수집하며, 언제 계속할지에 대한 약속입니다. 프롬프트를 붙여 넣는 것만으로 일반 채팅에 없는 도구를 추가할 수는 없습니다.</p>
+<ul>
+<li><strong>GPT-6 Astra</strong>는 선택한 모델입니다.</li>
+<li><strong>에이전트</strong>는 파일, 터미널, 문서, 경우에 따라 브라우저나 게임 에디터 접근을 제공하는 주변 소프트웨어입니다.</li>
+<li><strong>작업 방식</strong>은 무엇을 만들고, 어떤 증거를 수집하며, 언제 계속할지에 대한 약속입니다.</li>
+</ul>
+<p>프롬프트를 붙여 넣는 것만으로 일반 채팅에 없는 도구를 추가할 수는 없습니다.</p>
 <p>OpenAI의 Astra 안내는 자율성, 지침 파일 처리, 작업 위임과 테스트 범위를 명확히 하도록 권합니다. 에이전트 호스트에 표시된 모델 이름을 사용하고 필요한 도구가 실제로 제공되는지 확인하세요. 이 책의 예제는 특정 구독 등급이나 임의로 가정한 모델 능력에 의존하지 않습니다. <a class="citation" href="#source-01" title="OpenAI · GPT-6 Astra prompting best practices" aria-label="출처 01: OpenAI · GPT-6 Astra prompting best practices">[01]</a></p>
 <div class="callout"><div class="callout-label">작업 원칙</div><p>다음 유용한 결정을 내리는 데 필요한 의도, 제약과 증거를 담는 가장 짧은 지침을 쓰세요.</p></div>
 <h3 id="better-loop-part-3">이 책을 읽는 방법</h3>
-<p>엔진을 선택하기 전에 접근 방식 비교를 읽으세요. 저장소를 준비하고 게임 기획서를 작성합니다. 기획이 명확하면 짧은 실행 프롬프트를, 설계 결정이 빠져 있으면 선택적으로 메타 프롬프트를 사용합니다. 프로젝트 지침을 추가하기 전에 기존 스킬을 확인하세요. 유용한 단계마다 실행 가능한 결과와 증거를 남기고, 모델이나 작업이 달라지면 방식을 조정합니다.</p>
+<ol>
+<li>엔진을 선택하기 전에 접근 방식 비교를 읽으세요.</li>
+<li>저장소를 준비하고 게임 기획서를 작성합니다.</li>
+<li>기획이 명확하면 짧은 실행 프롬프트를, 설계 결정이 빠져 있으면 선택적으로 메타 프롬프트를 사용합니다.</li>
+<li>프로젝트 지침을 추가하기 전에 기존 스킬을 확인하세요.</li>
+<li>유용한 단계마다 실행 가능한 결과와 증거를 남기고, 모델이나 작업이 달라지면 방식을 조정합니다.</li>
+</ol>
 <p>2026년 9월 개정판은 현재 Astra 안내와 3월 이후 연구를 대조합니다. <a href="#sources">출처 노트</a>에 요약, 날짜와 한계가 있습니다. 오래된 영상은 배경 자료로 표시했습니다.</p>
 <p><a href="#thinking-flows">사고 과정, 의사결정과 개선 흐름도</a>로 전체를 살펴보세요. <a href="#video-workflows">영상 제작 안내</a>는 같은 방법을 게임 예고편에 적용하며 노드 워크플로, MCP, 스킬과 훅의 관계를 설명합니다.</p>
 <div class="exercise"><h3 id="better-loop-part-4">프롬프트를 쓰기 전에 해볼 일</h3><p>플레이어의 목표, 만족스러워야 할 행동, 첫 버전이 완성됐음을 보여 주는 조건을 각각 한 문장으로 쓰세요. 명확하게 쓰기 어렵다면 게임 아이디어부터 다듬으세요.</p></div>
@@ -208,7 +597,9 @@ git config --local user.email "YOUR_VERIFIED_OR_GITHUB_NOREPLY_EMAIL"</code></pr
 <p class="lead">대본은 결정을 바꿀 때 유용해집니다.</p>
 <p>“최고의 AI 게임 프롬프트”를 검색하면 시연, 도구 홍보, 추측과 실제 엔지니어링 조언이 함께 나옵니다. 출처마다 읽는 목적을 정하세요. 엔진 문서는 API 동작을 확인하고, 제작자의 시연은 작업 과정을 배우며, 자신의 빌드는 그 과정이 현재 제약에서도 통하는지 확인하는 데 씁니다.</p>
 <h3 id="research-part-1">현재의 근거부터 확인하세요</h3>
-<p>이번 판은 <strong>2026년 3월 1일부터 9월 14일</strong> 사이에 발행되거나 갱신된 자료를 우선합니다. 9월 OpenAI 글 두 편은 Astra를 직접 다룹니다. 새로운 스킬 연구는 다른 모델을 시험하므로 Astra 성능 주장보다 가설에 활용합니다. 발행일이 없는 현재 공식 문서도 유지합니다. 오늘 확인한 페이지가 오늘 작성된 글은 아닙니다.</p>
+<p>이번 판은 <strong>2026년 3월 1일부터 9월 14일</strong> 사이에 발행되거나 갱신된 자료를 우선합니다. 9월 OpenAI 글 두 편은 Astra를 직접 다룹니다.</p>
+<p>새로운 스킬 연구는 다른 모델을 시험하므로 Astra 성능 주장보다 가설에 활용합니다. 발행일이 없는 현재 공식 문서도 유지합니다.</p>
+<p>오늘 확인한 페이지가 오늘 작성된 글은 아닙니다.</p>
 <p>스킬 문제는 <a href="#source-17">Astra 지침 점검 글</a>부터 읽고, <a href="#source-22">SWE-Skills-Bench</a>와 <a href="#source-18">SkillsBench의 7월 갱신</a>을 비교하세요. 선택 문제는 <a href="#source-19">SkillsInjector</a>, 근거 기반 생성은 <a href="#source-20">SkillAlchemy</a>를 참고하세요. 각 노트에 핵심 요약과 시험한 모델의 한계가 있습니다.</p>
 <div class="table-wrap" tabindex="0" role="region" aria-label="비교표. 작은 화면에서는 가로로 스크롤하세요"><table><thead><tr><th>기존 생각</th><th>2026년 9월 평가</th><th>책에서 바뀐 점</th></tr></thead><tbody>
 <tr><td>긴 작업을 복구 가능한 조각으로 나누기.</td><td>여전히 유용하지만 모델 발전에 따라 외부 구조의 양을 재평가해야 함. <a class="citation" href="#source-21" title="Anthropic · Harness design for long-running application development" aria-label="출처 21: Anthropic · Harness design for long-running application development">[21]</a></td><td>결과 중심의 단계를 쓰고 의존성에 따라 순서 조정.</td></tr>
@@ -219,18 +610,25 @@ git config --local user.email "YOUR_VERIFIED_OR_GITHUB_NOREPLY_EMAIL"</code></pr
 <tr><td>튜토리얼의 내보내기 지침 따르기.</td><td>모델이 좋아져도 버전과 호스팅 제약은 남아 있음. <a class="citation" href="#source-11" title="Godot · Exporting for the Web" aria-label="출처 11: Godot · Exporting for the Web">[11]</a> <a class="citation" href="#source-12" title="Vite · Deploying a Static Site" aria-label="출처 12: Vite · Deploying a Static Site">[12]</a></td><td>현재 엔진 문서와 실제 배포 경로에서 확인.</td></tr>
 </tbody></table></div>
 <h3 id="research-part-2">오래된 영상도 남겨 두는 이유</h3>
-<p>2025년 영상은 <strong>예외적으로 유지한 과거 자료</strong>입니다. <em>Software Is Changing (Again)</em>의 검증 관련 구절은 다시 확인했지만, 다른 대본은 이번 검토에서 가져오지 못했습니다. 둘 다 현재 제품 문서나 Astra 벤치마크가 아닙니다. 최근 영상 검색에서도 이 노트를 대체할 적절한 검증 대본을 찾지 못했습니다.</p>
+<p>2025년 영상은 <strong>예외적으로 유지한 과거 자료</strong>입니다. <em>Software Is Changing (Again)</em>의 검증 관련 구절은 다시 확인했지만, 다른 대본은 이번 검토에서 가져오지 못했습니다.</p>
+<p>둘 다 현재 제품 문서나 Astra 벤치마크가 아닙니다. 최근 영상 검색에서도 이 노트를 대체할 적절한 검증 대본을 찾지 못했습니다.</p>
 <h3 id="research-part-3">대본 노트: Software Is Changing (Again)</h3>
 <p>Y Combinator 기조연설에서 Andrej Karpathy는 AI 생성과 인간 검증의 반복을 설명합니다. 구체적인 요청과 점검 가능한 중간 결과가 검토를 돕지만, 거대한 코드 diff는 여전히 많은 확인 작업을 남깁니다. 게임 제작에 대한 측정 결과가 아닌 개념적 관찰입니다. <a class="citation" href="#source-02" title="Andrej Karpathy · Software Is Changing (Again)" aria-label="출처 02: Andrej Karpathy · Software Is Changing (Again)">[02]</a></p>
 <p><strong>적용:</strong> 실행 가능한 게임 단계 하나와 짧은 행동 검사 목록을 요청하세요. 빌드 링크, 관련 변경과 증거를 함께 둡니다. 검토자는 전체 대화를 재구성하지 않고 “체력이 다 떨어지면 항상 재시작 화면이 나오는가?”에 답할 수 있어야 합니다.</p>
 <h3 id="research-part-4">대본 노트: How I use LLMs</h3>
-<p><strong>접근 한계:</strong> 이전 판은 공개 대본 미러를 참고했습니다. 이번에는 해당 페이지가 시간 초과됐고 대체 페이지도 영상 안내만 보여 주며 대본을 제공하지 않았습니다. 따라서 이전 구절 요약을 검증된 근거에서 철회했습니다. 원본 영상은 과거 자료를 찾아볼 때의 참고 링크로만 남깁니다. <a class="citation" href="#source-03" title="Andrej Karpathy · How I use LLMs" aria-label="출처 03: Andrej Karpathy · How I use LLMs">[03]</a></p>
+<p><strong>접근 한계:</strong> 이전 판은 공개 대본 미러를 참고했습니다. 이번에는 해당 페이지가 시간 초과됐고 대체 페이지도 영상 안내만 보여 주며 대본을 제공하지 않았습니다.</p>
+<p>따라서 이전 구절 요약을 검증된 근거에서 철회했습니다. 원본 영상은 과거 자료를 찾아볼 때의 참고 링크로만 남깁니다. <a class="citation" href="#source-03" title="Andrej Karpathy · How I use LLMs" aria-label="출처 03: Andrej Karpathy · How I use LLMs">[03]</a></p>
 <p><strong>적용:</strong> 실제 오류, 설치된 엔진 버전, 현재 장면 구조와 관련 문서 구절을 디버깅 요청에 제공하세요. “플레이어가 망가졌어”는 정보가 거의 없습니다. “Godot X 버전의 이 최소 장면에서 CharacterBody3D가 바닥을 통과한다”는 조사할 수 있는 문제입니다.</p>
 <p>작업에 맞는 최신 증거를 제공하라는 권고는 현재 Astra의 맥락 안내가 별도로 뒷받침합니다. 접근하지 못한 대본에 의존하지 않습니다. <a class="citation" href="#source-17" title="OpenAI · Rethinking skills and prompts for GPT-6 Astra" aria-label="출처 17: OpenAI · Rethinking skills and prompts for GPT-6 Astra">[17]</a></p>
-<div class="callout"><div class="callout-label">대본 출처</div><p>출처 02는 원본 연설의 공개 대본 미러를 사용하며 자동 자막에는 오류가 있을 수 있습니다. 안정적인 타임코드가 없어 검색어를 제공합니다. 출처 03은 대본 근거에 접근하지 못한 과거 영상 링크입니다. 열리는 페이지나 영상 제목만으로 발언 내용이 검증되지는 않습니다.</p></div>
+<div class="callout"><div class="callout-label">대본 출처</div><p>출처 02는 원본 연설의 공개 대본 미러를 사용하며 자동 자막에는 오류가 있을 수 있습니다. 안정적인 타임코드가 없어 검색어를 제공합니다.</p>
+<p>출처 03은 대본 근거에 접근하지 못한 과거 영상 링크입니다. 열리는 페이지나 영상 제목만으로 발언 내용이 검증되지는 않습니다.</p></div>
 <h3 id="research-part-5">게임 튜토리얼은 다른 종류의 근거입니다</h3>
 <p>GDQuest의 Godot 4 글 강좌와 Godot의 첫 3D 게임 튜토리얼은 게임 구조를 익히는 순서를 제공합니다. 엔진에 익숙해지는 용도로 사용하세요. GDQuest 영상 대본은 안정적으로 가져오지 못해 접근 가능한 글 강좌만 사용했습니다. <a class="citation" href="#source-09" title="Godot · Your first 3D game" aria-label="출처 09: Godot · Your first 3D game">[09]</a> <a class="citation" href="#source-10" title="GDQuest · Your first 3D game with Godot 4" aria-label="출처 10: GDQuest · Your first 3D game with Godot 4">[10]</a></p>
-<p>튜토리얼 전체를 새 설계에 그대로 옮기지 마세요. 카메라 기준 이동처럼 개념 하나를 골라 설치한 버전에서 최소 예제를 만든 뒤, 무엇을 바꿔 자신의 게임에 적용할지 설명하세요. 실습 성공은 한 부분을 이해했다는 근거이지 전체 게임 검증은 아닙니다.</p>
+<ol>
+<li>튜토리얼 전체를 새 설계에 그대로 옮기지 마세요.</li>
+<li>카메라 기준 이동처럼 개념 하나를 골라 설치한 버전에서 최소 예제를 만든 뒤, 무엇을 바꿔 자신의 게임에 적용할지 설명하세요.</li>
+</ol>
+<p>실습 성공은 한 부분을 이해했다는 근거이지 전체 게임 검증은 아닙니다.</p>
 <h3 id="research-part-6">반복 가능한 조사 절차</h3>
 <ol><li><strong>질문부터 정하기.</strong> 예: “이 Godot 내보내기는 맞춤 응답 헤더 없이 GitHub Pages에서 실행되는가?”</li><li><strong>1차 답변 찾기.</strong> 설치 버전의 공식 문서를 열고 제약을 읽습니다.</li><li><strong>적용 사례 찾기.</strong> 대본과 관련 저장소를 볼 수 있는 제작자 영상을 우선합니다.</li><li><strong>출처 기록하기.</strong> URL, 제목, 확인 날짜, 버전과 구절 위치를 남기며 없는 자막이나 저장소를 명시합니다.</li><li><strong>관찰과 추론 나누기.</strong> “이 노드를 사용한다”는 관찰, “우리 카메라가 단순해질 것이다”는 가설입니다.</li><li><strong>작은 실험 하나 실행하기.</strong> 결과와 그 결과를 만든 커밋을 보관합니다.</li></ol>
 <pre><code>질문: 화단 뒤에서도 비콘이 보이는가?
@@ -255,20 +653,31 @@ git config --local user.email "YOUR_VERIFIED_OR_GITHUB_NOREPLY_EMAIL"</code></pr
 </tbody></table></div>
 <p>실용적인 선택 기준이며 벤치마크나 모든 기능의 비교는 아닙니다. 확정하기 전에 적은 비용으로 가장 위험한 부분을 시험하세요. 에이전트가 에디터를 안정적으로 확인하지 못한다면 작은 장면과 내보내기부터 시험해 제약을 발견합니다.</p>
 <h3 id="stack-part-1">기본 선택: Three.js, TypeScript, Vite</h3>
-<p>Signal Garden에는 약간 높은 고정 카메라, 평평한 공간, 단순한 기하 장애물과 소수의 움직이는 물체가 있습니다. 이 범위는 브라우저 코드 예제로 적합합니다. 단순한 충돌 형태와 읽기 쉬운 상태 머신으로 시작하세요. 경사, 강체 상호작용이나 복잡한 캐릭터 이동이 필요해지면 임의 구현보다 적합한 물리 솔루션을 먼저 평가하세요.</p>
+<p>Signal Garden에는 약간 높은 고정 카메라, 평평한 공간, 단순한 기하 장애물과 소수의 움직이는 물체가 있습니다. 이 범위는 브라우저 코드 예제로 적합합니다.</p>
+<p>단순한 충돌 형태와 읽기 쉬운 상태 머신으로 시작하세요. 경사, 강체 상호작용이나 복잡한 캐릭터 이동이 필요해지면 임의 구현보다 적합한 물리 솔루션을 먼저 평가하세요.</p>
 <p>시작 시점에 호환되는 안정 버전을 선택하고 lockfile을 커밋하며 README에 버전을 기록하세요. <code>npm ci</code>는 일치하는 커밋된 lockfile에서 깨끗하게 설치합니다. package와 lockfile이 어긋나면 자동 갱신 대신 실패합니다. 오래된 튜토리얼 버전을 그대로 복사하지 말고, 선택한 렌더러가 목표 브라우저에서 동작하는지 보여 주세요. <a class="citation" href="#source-42" title="npm · npm ci" aria-label="출처 42: npm · npm ci">[42]</a></p>
 <h3 id="stack-part-2">Godot를 선택한다면</h3>
 <p>간단한 Pages 출시는 GDScript, Compatibility 렌더링과 단일 스레드 웹 내보내기로 먼저 시험하세요. Godot 문서는 웹 내보내기에 WebGL 2를 사용하고, Godot 4 C# 프로젝트는 현재 웹 내보내기가 불가능하며, 스레드 사용에는 교차 출처 격리가 필요하다고 설명합니다. 버전에 민감한 제약입니다. <a class="citation" href="#source-11" title="Godot · Exporting for the Web" aria-label="출처 11: Godot · Exporting for the Web">[11]</a></p>
-<p>전체 게임을 만들기 전에 빈 장면의 내보내기가 최종 URL에서 열리는지 확인하세요. 생성 파일은 함께 둡니다. HTML 진입 파일은 <code>index.html</code>로 정할 수 있지만 나머지 생성 파일 이름은 유지해야 합니다. Godot는 PWA 서비스 워커를 이용한 격리 우회 방법도 문서화합니다. 단일 스레드는 간단한 출발점이지 모든 스레드 기반 Pages 배포가 불가능하다는 주장이 아닙니다. <a class="citation" href="#source-11" title="Godot · Exporting for the Web" aria-label="출처 11: Godot · Exporting for the Web">[11]</a></p>
+<p>전체 게임을 만들기 전에 빈 장면의 내보내기가 최종 URL에서 열리는지 확인하세요. 생성 파일은 함께 둡니다.</p>
+<p>HTML 진입 파일은 <code>index.html</code>로 정할 수 있지만 나머지 생성 파일 이름은 유지해야 합니다. Godot는 PWA 서비스 워커를 이용한 격리 우회 방법도 문서화합니다.</p>
+<p>단일 스레드는 간단한 출발점이지 모든 스레드 기반 Pages 배포가 불가능하다는 주장이 아닙니다. <a class="citation" href="#source-11" title="Godot · Exporting for the Web" aria-label="출처 11: Godot · Exporting for the Web">[11]</a></p>
 <p><strong>내보내기 이름:</strong> 내보내기 대화상자에서 <code>index.html</code>을 지정하세요. 생성 뒤 HTML이나 관련 파일의 이름을 바꾸지 마세요. 참조가 최초 내보내기 이름에 의존합니다. <a class="citation" href="#source-11" title="Godot · Exporting for the Web" aria-label="출처 11: Godot · Exporting for the Web">[11]</a></p>
-<div class="exercise"><h3 id="stack-part-3">30분 가능성 점검</h3><p>시간을 정하고 바닥, 물체 하나와 카메라를 만듭니다. 물체를 움직이고 빌드한 뒤 저장소 하위 경로에서 실행하세요. 실패한 부분을 기록합니다. 30분은 조사 시간 제안이며 완성 보장이 아닙니다.</p></div>
+<div class="exercise"><h3 id="stack-part-3">30분 가능성 점검</h3><p>시간을 정하고 바닥, 물체 하나와 카메라를 만듭니다. 물체를 움직이고 빌드한 뒤 저장소 하위 경로에서 실행하세요.</p>
+<p>실패한 부분을 기록합니다. 30분은 조사 시간 제안이며 완성 보장이 아닙니다.</p></div>
 
 <details class="chapter-evidence" id="evidence-stack"><summary>출처 확인 · 이 장의 근거는 무엇인가?</summary><p>2026년 9월 14일 확인. 아래 링크는 명시된 범위를 뒷받침합니다. 이 책의 제안은 문서에 명시된 동작이나 측정 결과와 구분합니다.</p><ul class="evidence-records"><li><span class="evidence-basis">종합 및 해석</span><h4>기술 구성의 기능과 교육용 선택</h4><p class="evidence-covers"><strong>해당 내용:</strong> <a href="#stack">들어가며</a> · <a href="#stack-part-1">기본 선택: Three.js, TypeScript, Vite</a></p><p>공식 자료는 렌더링, 엔진, 호스팅, 잠금 파일의 동작을 설명한다. Signal Garden에 브라우저 코드와 단순 충돌을 택한 것은 범위 결정이며 성능 벤치마크가 아니다.</p><p class="evidence-links"><a href="https://developers.openai.com/blog/how-to-build-games-with-astra" lang="en">OpenAI · Building games with Astra ↗</a> <a class="evidence-note-link" href="#source-04">[04: 출처 노트]</a><br><a href="https://vite.dev/guide/static-deploy.html#github-pages" lang="en">Vite · Deploying a Static Site ↗</a> <a class="evidence-note-link" href="#source-12">[12: 출처 노트]</a><br><a href="https://github.com/mrdoob/three.js" lang="en">Three.js · README ↗</a> <a class="evidence-note-link" href="#source-14">[14: 출처 노트]</a><br><a href="https://www.babylonjs.com/specifications/" lang="en">Babylon.js · Specifications ↗</a> <a class="evidence-note-link" href="#source-15">[15: 출처 노트]</a><br><a href="https://docs.unity3d.com/Manual/webgl-browsercompatibility.html" lang="en">Unity · Web browser compatibility ↗</a> <a class="evidence-note-link" href="#source-16">[16: 출처 노트]</a><br><a href="https://docs.npmjs.com/cli/v11/commands/npm-ci" lang="en">npm · npm ci ↗</a> <a class="evidence-note-link" href="#source-42">[42: 출처 노트]</a></p></li><li><span class="evidence-basis">문서에 명시된 동작</span><h4>Godot 내보내기 제약</h4><p class="evidence-covers"><strong>해당 내용:</strong> <a href="#stack-part-2">Godot를 선택한다면</a></p><p>WebGL 2 Compatibility 렌더링, Godot 4 C# 제한, 스레드/격리, PWA 우회 방법, HTML 진입 파일명 예외를 확인했다. 설치 버전과 실제 호스트에서 시험한다.</p><p class="evidence-links"><a href="https://docs.godotengine.org/en/stable/tutorials/export/exporting_for_web.html" lang="en">Godot · Exporting for the Web ↗</a> <a class="evidence-note-link" href="#source-11">[11: 출처 노트]</a></p></li><li><span class="evidence-basis">이 책의 제안</span><h4>실현 가능성 연습</h4><p class="evidence-covers"><strong>해당 내용:</strong> <a href="#stack-part-3">30분 가능성 점검</a></p><p>작은 내보내기로 문서의 배포 제약을 자기 환경에서 확인한다. 30분은 제안한 조사 예산이며 근거 있는 완료 시간 추정이 아니다.</p><p class="evidence-links"><a href="https://docs.godotengine.org/en/stable/tutorials/export/exporting_for_web.html" lang="en">Godot · Exporting for the Web ↗</a> <a class="evidence-note-link" href="#source-11">[11: 출처 노트]</a><br><a href="https://vite.dev/guide/static-deploy.html#github-pages" lang="en">Vite · Deploying a Static Site ↗</a> <a class="evidence-note-link" href="#source-12">[12: 출처 노트]</a></p></li></ul><a class="evidence-method" href="#review-notes">검토 방법과 수정 사항 보기 ↗</a></details></section>
 <section class="chapter" aria-labelledby="github"><div class="chapter-kicker">장 07</div><h2 id="github">작업에 기억을 남기기</h2>
 <p class="lead">저장소는 어제의 작업을 내일로 넘기는 연결점입니다.</p>
-<p>Git은 로컬 이력을 기록하고 GitHub는 원격 복사본, 검토 대화, 이슈와 자동화를 관리합니다. GitHub Pages는 출판된 게임이나 책을 제공합니다. 로컬 커밋은 푸시가 아니고, 푸시는 성공한 배포가 아니며, 배포는 플레이 가능성의 증명이 아닙니다. 역할을 구분하면 오류를 찾기 쉽습니다.</p>
+<ul>
+<li>Git은 로컬 이력을 기록하고 GitHub는 원격 복사본, 검토 대화, 이슈와 자동화를 관리합니다.</li>
+<li>GitHub Pages는 출판된 게임이나 책을 제공합니다.</li>
+<li>로컬 커밋은 푸시가 아니고, 푸시는 성공한 배포가 아니며, 배포는 플레이 가능성의 증명이 아닙니다.</li>
+</ul>
+<p>역할을 구분하면 오류를 찾기 쉽습니다.</p>
 <h3 id="github-part-1">1단계: 깨끗한 출발점 만들기</h3>
-<p>새 빈 게임 폴더에서는 <code>main</code>으로 Git을 초기화합니다. 기존 저장소라면 상태를 확인하고 현재 작업을 보존하세요. Git과 GitHub CLI를 설치하고 CLI에 로그인한 뒤 원격 저장소를 만듭니다. 아래는 <em>새로운</em> Signal Garden 프로젝트 예제입니다. 계정 이름부터 바꾸세요. <a class="citation" href="#source-39" title="Git · Staging, differences, branches, and reverting" aria-label="출처 39: Git · Staging, differences, branches, and reverting">[39]</a> <a class="citation" href="#source-40" title="GitHub CLI · gh repo create" aria-label="출처 40: GitHub CLI · gh repo create">[40]</a></p>
+<p>새 빈 게임 폴더에서는 <code>main</code>으로 Git을 초기화합니다. 기존 저장소라면 상태를 확인하고 현재 작업을 보존하세요.</p>
+<p>Git과 GitHub CLI를 설치하고 CLI에 로그인한 뒤 원격 저장소를 만듭니다. 아래는 <em>새로운</em> Signal Garden 프로젝트 예제입니다.</p>
+<p>계정 이름부터 바꾸세요. <a class="citation" href="#source-39" title="Git · Staging, differences, branches, and reverting" aria-label="출처 39: Git · Staging, differences, branches, and reverting">[39]</a> <a class="citation" href="#source-40" title="GitHub CLI · gh repo create" aria-label="출처 40: GitHub CLI · gh repo create">[40]</a></p>
 <pre><code>git init -b main
 git status --short
 # README, .gitignore, 게임 기획서와 프로젝트 파일을 만듭니다.
@@ -280,7 +689,9 @@ git diff --cached
 git commit -m "chore: establish the Signal Garden baseline"
 gh repo create YOUR_ACCOUNT/signal-garden --public --source=. --remote=origin
 git push -u origin main</code></pre>
-<p>새 프로젝트에서는 <code>index.html</code>, 설정과 필요한 에셋을 포함한 전체 뼈대를 스테이징하세요. 두 diff 명령은 파일 요약과 실제 스테이징 내용을 보여 줍니다. 의존성, 로컬 환경 파일, 빌드 출력의 제외 규칙을 먼저 정합니다. 기존 저장소에서는 의도한 경로만 선택해 관계없는 작업을 분리하세요. 공개 저장소와 Pages에 비밀 인증정보나 허가 없는 에셋을 올리지 마세요. <a class="citation" href="#source-39" title="Git · Staging, differences, branches, and reverting" aria-label="출처 39: Git · Staging, differences, branches, and reverting">[39]</a></p>
+<p>새 프로젝트에서는 <code>index.html</code>, 설정과 필요한 에셋을 포함한 전체 뼈대를 스테이징하세요. 두 diff 명령은 파일 요약과 실제 스테이징 내용을 보여 줍니다.</p>
+<p>의존성, 로컬 환경 파일, 빌드 출력의 제외 규칙을 먼저 정합니다. 기존 저장소에서는 의도한 경로만 선택해 관계없는 작업을 분리하세요.</p>
+<p>공개 저장소와 Pages에 비밀 인증정보나 허가 없는 에셋을 올리지 마세요. <a class="citation" href="#source-39" title="Git · Staging, differences, branches, and reverting" aria-label="출처 39: Git · Staging, differences, branches, and reverting">[39]</a></p>
 <h3 id="github-part-2">2단계: 중요한 결정을 파일에 남기기</h3>
 <pre><code>signal-garden/
   AGENTS.md                     # 선택적인 짧은 프로젝트 규칙
@@ -304,7 +715,9 @@ git push -u origin main</code></pre>
   package-lock.json</code></pre>
 <p>시작을 위한 제안이지 빈 추상화를 모두 만들라는 요구가 아닙니다. 작은 버전은 모듈이 더 적어도 됩니다. 책임이 분명해질 때, 특히 렌더링과 섞여 시뮬레이션을 검사하기 어려울 때 시스템을 분리하세요.</p>
 <h3 id="github-part-3">3단계: 의미 있는 변경마다 기준점 남기기</h3>
-<p><code>update</code>보다 <code>feat: collect cells and power the beacon</code>처럼 어떤 동작이 되는지 말하는 커밋이 유용합니다. 불확실한 시도 전에는 작동하는 기준 버전을 남기세요. 아래 예제는 고정 카메라를 유지하며 가독성을 개선합니다. <a href="https://git-scm.com/docs/git-switch">switch 문서</a>에서 브랜치 생성 동작을 확인할 수 있습니다. 실제 프로젝트에 맞는 파일 경로를 쓰고 플레이테스트 기록을 먼저 만드세요. <a class="citation" href="#source-39" title="Git · Staging, differences, branches, and reverting" aria-label="출처 39: Git · Staging, differences, branches, and reverting">[39]</a></p>
+<p><code>update</code>보다 <code>feat: collect cells and power the beacon</code>처럼 어떤 동작이 되는지 말하는 커밋이 유용합니다. 불확실한 시도 전에는 작동하는 기준 버전을 남기세요.</p>
+<p>아래 예제는 고정 카메라를 유지하며 가독성을 개선합니다. <a href="https://git-scm.com/docs/git-switch">switch 문서</a>에서 브랜치 생성 동작을 확인할 수 있습니다.</p>
+<p>실제 프로젝트에 맞는 파일 경로를 쓰고 플레이테스트 기록을 먼저 만드세요. <a class="citation" href="#source-39" title="Git · Staging, differences, branches, and reverting" aria-label="출처 39: Git · Staging, differences, branches, and reverting">[39]</a></p>
 <pre><code>git switch -c experiment/camera-readability
 # 고정 카메라 구도를 조정한 후 가려지는 경로를 플레이테스트합니다.
 git diff
@@ -314,21 +727,25 @@ git commit -m "fix: keep the robot visible behind the north planter"
 git push -u origin experiment/camera-readability
 # 문제, 변경, 검사 내용을 docs/pr-camera.md에 먼저 씁니다.
 gh pr create --base main --head experiment/camera-readability --title "Improve fixed camera readability" --body-file docs/pr-camera.md</code></pre>
-<p><code>--body-file</code>은 이미 있는 파일을 읽으며 설명을 대신 작성하지 않습니다. PR에는 플레이어가 겪는 문제, 변경과 확인 내용을 적습니다. 개인 실험은 브랜치와 검토된 커밋으로 충분할 수 있습니다. 리뷰나 CI 기준이 도움이 될 때 PR을 사용하세요. <a class="citation" href="#source-41" title="GitHub CLI · gh pr create" aria-label="출처 41: GitHub CLI · gh pr create">[41]</a></p>
+<p><code>--body-file</code>은 이미 있는 파일을 읽으며 설명을 대신 작성하지 않습니다. PR에는 플레이어가 겪는 문제, 변경과 확인 내용을 적습니다.</p>
+<p>개인 실험은 브랜치와 검토된 커밋으로 충분할 수 있습니다. 리뷰나 CI 기준이 도움이 될 때 PR을 사용하세요. <a class="citation" href="#source-41" title="GitHub CLI · gh pr create" aria-label="출처 41: GitHub CLI · gh pr create">[41]</a></p>
 <h3 id="github-part-4">4단계: 짧은 이어가기 기록 남기기</h3>
 <p>세션이 끝나면 <code>progress.md</code>에 현재 커밋, 동작하는 기능, 알려진 오류, 실행 명령과 다음 목표 하나를 적습니다. Anthropic의 장시간 에이전트 보고서는 진행 자료와 Git 이력으로 새 세션의 재구성 부담을 줄입니다. <a class="citation" href="#source-05" title="Anthropic · Effective harnesses for long-running agents" aria-label="출처 05: Anthropic · Effective harnesses for long-running agents">[05]</a></p>
-<p>이미 공유한 잘못된 변경은 <a href="https://git-scm.com/docs/git-revert">git revert</a>로 되돌리는 새 커밋을 만들어 이력을 보존할 수 있습니다. 커밋 사이의 의존성과 충돌을 검토한 뒤 완료하세요. 커밋 전 실험은 정확한 diff를 보고 의도한 변경만 복원해야 합니다. 다른 작업이 함께 있을 수 있습니다. <a class="citation" href="#source-39" title="Git · Staging, differences, branches, and reverting" aria-label="출처 39: Git · Staging, differences, branches, and reverting">[39]</a></p>
+<p>이미 공유한 잘못된 변경은 <a href="https://git-scm.com/docs/git-revert">git revert</a>로 되돌리는 새 커밋을 만들어 이력을 보존할 수 있습니다. 커밋 사이의 의존성과 충돌을 검토한 뒤 완료하세요.</p>
+<p>커밋 전 실험은 정확한 diff를 보고 의도한 변경만 복원해야 합니다. 다른 작업이 함께 있을 수 있습니다. <a class="citation" href="#source-39" title="Git · Staging, differences, branches, and reverting" aria-label="출처 39: Git · Staging, differences, branches, and reverting">[39]</a></p>
 
 <details class="chapter-evidence" id="evidence-github"><summary>출처 확인 · 이 장의 근거는 무엇인가?</summary><p>2026년 9월 14일 확인. 아래 링크는 명시된 범위를 뒷받침합니다. 이 책의 제안은 문서에 명시된 동작이나 측정 결과와 구분합니다.</p><ul class="evidence-records"><li><span class="evidence-basis">문서에 명시된 동작</span><h4>Git, 원격 저장소, Pages 설정</h4><p class="evidence-covers"><strong>해당 내용:</strong> <a href="#github">들어가며</a> · <a href="#github-part-1">1단계: 깨끗한 출발점 만들기</a></p><p>Git 문서는 초기화, 전체 스테이징, 스테이징 내용 검토를 뒷받침한다. GitHub CLI는 원격 생성을 설명한다. Pages는 별도의 정적 게시 단계다. 예제 명령에는 실제 프로젝트 파일과 인증된 도구가 필요하다.</p><p class="evidence-links"><a href="https://git-scm.com/docs/git-add" lang="en">Git · Staging, differences, branches, and reverting ↗</a> <a class="evidence-note-link" href="#source-39">[39: 출처 노트]</a><br><a href="https://cli.github.com/manual/gh_repo_create" lang="en">GitHub CLI · gh repo create ↗</a> <a class="evidence-note-link" href="#source-40">[40: 출처 노트]</a><br><a href="https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages" lang="en">GitHub · What is GitHub Pages? ↗</a> <a class="evidence-note-link" href="#source-46">[46: 출처 노트]</a></p></li><li><span class="evidence-basis">종합 및 해석</span><h4>저장소 구성과 인계</h4><p class="evidence-covers"><strong>해당 내용:</strong> <a href="#github-part-2">2단계: 중요한 결정을 파일에 남기기</a> · <a href="#github-part-4">4단계: 짧은 이어가기 기록 남기기</a></p><p>범위별 지침과 스킬 탐색 위치는 문서에 근거하며 나머지 디렉터리 구성은 제안이다. 진행 기록은 장기 실행 에이전트 사례에서 참고했다. Revert는 취소를 기록하지만 충돌과 종속 변경은 검토해야 한다.</p><p class="evidence-links"><a href="https://www.anthropic.com/engineering/effective-harnesses-for-long-running-agents" lang="en">Anthropic · Effective harnesses for long-running agents ↗</a> <a class="evidence-note-link" href="#source-05">[05: 출처 노트]</a><br><a href="https://learn.chatgpt.com/docs/agent-configuration/agents-md" lang="en">OpenAI · Custom instructions with AGENTS.md ↗</a> <a class="evidence-note-link" href="#source-07">[07: 출처 노트]</a><br><a href="https://learn.chatgpt.com/docs/build-skills" lang="en">OpenAI · Build skills ↗</a> <a class="evidence-note-link" href="#source-08">[08: 출처 노트]</a><br><a href="https://git-scm.com/docs/git-add" lang="en">Git · Staging, differences, branches, and reverting ↗</a> <a class="evidence-note-link" href="#source-39">[39: 출처 노트]</a></p></li><li><span class="evidence-basis">종합 및 해석</span><h4>고정 카메라 실험과 PR</h4><p class="evidence-covers"><strong>해당 내용:</strong> <a href="#github-part-3">3단계: 의미 있는 변경마다 기준점 남기기</a></p><p>브랜치와 PR 옵션은 문서에 있다. 경로와 카메라 변경은 예시이며 실제 파일과 맞아야 한다. gh pr create가 읽기 전에 설명 파일을 작성해야 한다.</p><p class="evidence-links"><a href="https://git-scm.com/docs/git-add" lang="en">Git · Staging, differences, branches, and reverting ↗</a> <a class="evidence-note-link" href="#source-39">[39: 출처 노트]</a><br><a href="https://cli.github.com/manual/gh_pr_create" lang="en">GitHub CLI · gh pr create ↗</a> <a class="evidence-note-link" href="#source-41">[41: 출처 노트]</a></p></li></ul><a class="evidence-method" href="#review-notes">검토 방법과 수정 사항 보기 ↗</a></details></section>
 <section class="chapter" aria-labelledby="skills"><div class="chapter-kicker">장 08</div><h2 id="skills">스킬이 가치를 더하는지 판단하기</h2>
 <p class="lead">에이전트가 이미 가진 것부터 확인하고, 부족한 것을 더하세요.</p>
 <p>프로젝트 스킬이 불필요할 수 있다는 주장은 <strong>부분적으로 뒷받침됩니다</strong>. 일반적인 코딩 조언을 반복하는 스킬은 도움이 적을 수 있지만, 전문적인 절차는 모델에 없는 지식을 제공할 수 있습니다. 자동 선택은 활용하고 평가할 기능이지, 언제나 올바른 선택이나 더 좋은 게임을 보장하는 증거는 아닙니다.</p>
 <p><a href="#diagram-choose-help">도구·스킬·훅 선택 흐름도</a>를 참고하세요. <a href="#video-workflows">영상 장</a>에서는 문서 MCP 대신 스킬을 권하는 Remotion과 미디어 작업을 실행하는 MCP 도구를 제공하는 Comfy를 비교합니다. <a class="citation" href="#source-27" title="Remotion · Documentation MCP deprecation" aria-label="출처 27: Remotion · Documentation MCP deprecation">[27]</a> <a class="citation" href="#source-37" title="Comfy · MCP server for local and cloud workflows" aria-label="출처 37: Comfy · MCP server for local and cloud workflows">[37]</a></p>
-<div class="callout"><div class="callout-label">Astra 업데이트 · 2026년 9월 11일</div><p>OpenAI는 Astra에 쌓여 있는 지침을 다시 평가하도록 권합니다. 지나치게 세부적인 절차와 중복 스킬 설명은 작업을 방해할 수 있습니다. 따라서 맞춤 스킬은 구체적인 존재 이유가 있을 때 선택적으로 추가합니다. 측정된 Astra 스킬 벤치마크가 아닌 안내입니다. <a class="citation" href="#source-17" title="OpenAI · Rethinking skills and prompts for GPT-6 Astra" aria-label="출처 17: OpenAI · Rethinking skills and prompts for GPT-6 Astra">[17]</a></p></div>
+<div class="callout"><div class="callout-label">Astra 업데이트 · 2026년 9월 11일</div><p>OpenAI는 Astra에 쌓여 있는 지침을 다시 평가하도록 권합니다. 지나치게 세부적인 절차와 중복 스킬 설명은 작업을 방해할 수 있습니다.</p>
+<p>따라서 맞춤 스킬은 구체적인 존재 이유가 있을 때 선택적으로 추가합니다. 측정된 Astra 스킬 벤치마크가 아닌 안내입니다. <a class="citation" href="#source-17" title="OpenAI · Rethinking skills and prompts for GPT-6 Astra" aria-label="출처 17: OpenAI · Rethinking skills and prompts for GPT-6 Astra">[17]</a></p></div>
 <h3 id="skills-part-1">“스킬 추가”라고 부르는 서로 다른 네 가지</h3>
 <ol><li><strong>사용 가능하게 만들기.</strong> 에이전트 호스트에 설치하거나 노출합니다. 인터넷 어딘가의 파일이 자동으로 사용 가능해지지는 않습니다.</li><li><strong>에이전트가 선택하게 하기.</strong> Codex는 작업과 사용 가능한 스킬 설명을 암시적으로 매칭하며 명시적 선택도 지원합니다. <a class="citation" href="#source-08" title="OpenAI · Build skills" aria-label="출처 08: OpenAI · Build skills">[08]</a></li><li><strong>새 스킬 작성하기.</strong> 반복해서 쓸 누락된 절차, 자료나 스크립트를 묶습니다. 기존 스킬 호출과는 다른 결정입니다.</li><li><strong>저장소 지침 작성하기.</strong> AGENTS.md는 범위별 규칙을 제공하며 필요할 때 호출하는 스킬 선택기가 아닙니다. <a class="citation" href="#source-07" title="OpenAI · Custom instructions with AGENTS.md" aria-label="출처 07: OpenAI · Custom instructions with AGENTS.md">[07]</a></li></ol>
 <h3 id="skills-part-2">주장을 하나씩 확인하기</h3>
-<p>암시적 선택은 호스트 설정에도 영향을 받습니다. Codex의 <code>allow_implicit_invocation: false</code>는 해당 스킬의 자동 호출을 끕니다. 초기 목록이 많으면 맥락 예산 때문에 설명이 줄거나 항목이 빠질 수 있습니다. 결과를 스킬 품질 탓으로 돌리기 전에 가용성, 호출 자격과 실제 사용 여부를 확인하세요. <a class="citation" href="#source-08" title="OpenAI · Build skills" aria-label="출처 08: OpenAI · Build skills">[08]</a></p>
+<p>암시적 선택은 호스트 설정에도 영향을 받습니다. Codex의 <code>allow_implicit_invocation: false</code>는 해당 스킬의 자동 호출을 끕니다.</p>
+<p>초기 목록이 많으면 맥락 예산 때문에 설명이 줄거나 항목이 빠질 수 있습니다. 결과를 스킬 품질 탓으로 돌리기 전에 가용성, 호출 자격과 실제 사용 여부를 확인하세요. <a class="citation" href="#source-08" title="OpenAI · Build skills" aria-label="출처 08: OpenAI · Build skills">[08]</a></p>
 <div class="table-wrap" tabindex="0" role="region" aria-label="비교표. 작은 화면에서는 가로로 스크롤하세요"><table><thead><tr><th>주장</th><th>근거에 따른 판단</th><th>Signal Garden의 선택</th></tr></thead><tbody>
 <tr><td>모든 프로젝트에 맞춤 스킬이 필요하다.</td><td>입증되지 않음. 시험한 소프트웨어 스킬 중 다수가 이득을 주지 않음. <a class="citation" href="#source-22" title="SWE-Skills-Bench · Do Agent Skills Actually Help in Real-World Software Engineering?" aria-label="출처 22: SWE-Skills-Bench · Do Agent Skills Actually Help in Real-World Software Engineering?">[22]</a></td><td>기획, 작동하는 도구와 기존 스킬로 시작.</td></tr>
 <tr><td>에이전트가 올바른 스킬을 스스로 부른다.</td><td>암시적 선택은 문서화됐지만 모든 작업에서의 정확성은 보장되지 않음. <a class="citation" href="#source-08" title="OpenAI · Build skills" aria-label="출처 08: OpenAI · Build skills">[08]</a></td><td>실패 시 관련 스킬의 가용성과 실제 사용 확인.</td></tr>
@@ -338,10 +755,20 @@ gh pr create --base main --head experiment/camera-readability --title "Improve f
 <tr><td>AI가 만든 스킬은 전혀 도움이 안 된다.</td><td>지나친 일반화. SkillAlchemy는 다른 모델에서 근거 기반 생성의 이득을 보고. <a class="citation" href="#source-20" title="SkillAlchemy · Open-World Agent Skill Creation" aria-label="출처 20: SkillAlchemy · Open-World Agent Skill Creation">[20]</a></td><td>도입 전에 절차를 검증하고 Astra 개선을 가정하지 않음.</td></tr>
 </tbody></table></div>
 <h3 id="skills-part-3">연구가 서로 다른 결론처럼 보이는 이유</h3>
-<p><strong>SWE-Skills-Bench</strong>는 Haiku 4.5에서 공개 소프트웨어 스킬의 평균 이득이 작다고 보고했습니다. <strong>SkillsBench</strong>는 더 다양한 작업과 선별한 스킬에서 큰 이득을 보고합니다. 개입, 작업과 에이전트 설정이 달라 두 결과는 함께 성립할 수 있습니다. 이 게임 검토 스킬이 Astra를 돕는지는 어느 쪽도 답하지 않습니다. <a class="citation" href="#source-22" title="SWE-Skills-Bench · Do Agent Skills Actually Help in Real-World Software Engineering?" aria-label="출처 22: SWE-Skills-Bench · Do Agent Skills Actually Help in Real-World Software Engineering?">[22]</a> <a class="citation" href="#source-18" title="SkillsBench · Agent leaderboard, v1.1" aria-label="출처 18: SkillsBench · Agent leaderboard, v1.1">[18]</a></p>
-<p><strong>권고:</strong> 튜토리얼에 있다는 이유만으로 스킬을 만들지 마세요. 우선 현재 정보로 범위가 정해진 일을 Astra에 맡깁니다. 기존 절차를 놓치면 선택 과정을, 반복되는 프로젝트 지식이 없으면 내용을 보완합니다. 프롬프트 수정, 문서 갱신이나 작은 스크립트로 충분할 수 있습니다.</p>
+<p><strong>SWE-Skills-Bench</strong>는 Haiku 4.5에서 공개 소프트웨어 스킬의 평균 이득이 작다고 보고했습니다. <strong>SkillsBench</strong>는 더 다양한 작업과 선별한 스킬에서 큰 이득을 보고합니다.</p>
+<p>개입, 작업과 에이전트 설정이 달라 두 결과는 함께 성립할 수 있습니다. 이 게임 검토 스킬이 Astra를 돕는지는 어느 쪽도 답하지 않습니다. <a class="citation" href="#source-22" title="SWE-Skills-Bench · Do Agent Skills Actually Help in Real-World Software Engineering?" aria-label="출처 22: SWE-Skills-Bench · Do Agent Skills Actually Help in Real-World Software Engineering?">[22]</a> <a class="citation" href="#source-18" title="SkillsBench · Agent leaderboard, v1.1" aria-label="출처 18: SkillsBench · Agent leaderboard, v1.1">[18]</a></p>
+<p><strong>권고:</strong> 튜토리얼에 있다는 이유만으로 스킬을 만들지 마세요.</p>
+<ol>
+<li>우선 현재 정보로 범위가 정해진 일을 Astra에 맡깁니다.</li>
+<li>기존 절차를 놓치면 선택 과정을, 반복되는 프로젝트 지식이 없으면 내용을 보완합니다.</li>
+</ol>
+<p>프롬프트 수정, 문서 갱신이나 작은 스크립트로 충분할 수 있습니다.</p>
 <h3 id="skills-part-4">예제 게임을 위한 짧은 AGENTS.md</h3>
-<p>작업 프롬프트는 당장의 결과를, 게임 기획서는 규칙을 정합니다. AGENTS.md는 반복되는 결정을 관련 문서와 명령에 연결할 수 있습니다. 사실을 한 곳에 유지하면 나중에 바꾸기 쉽습니다.</p>
+<ul>
+<li>작업 프롬프트는 당장의 결과를, 게임 기획서는 규칙을 정합니다.</li>
+<li>AGENTS.md는 반복되는 결정을 관련 문서와 명령에 연결할 수 있습니다.</li>
+</ul>
+<p>사실을 한 곳에 유지하면 나중에 바꾸기 쉽습니다.</p>
 <div class="prompt-block"><div class="prompt-bar"><span>바로 사용하기 · agents-example.md</span><button type="button" class="copy-button" aria-label="프롬프트 복사: agents-example.md">프롬프트 복사</button></div><pre tabindex="0"><code># Signal Garden — 프로젝트 지침
 
 docs/game-brief.md는 메커니즘과 범위, docs/acceptance.md는 관찰 가능한 행동, docs/progress.md는 현재 단계와 알려진 문제의 기준입니다. 작업에 관련된 문서를 읽고 기존 사용자 작업을 보존하세요.
@@ -385,7 +812,8 @@ description: 비콘 활성화, 피해, 시간, 정지 또는 재시작 변경 �
 <h3 id="skills-part-6">내 Astra 환경에서 해볼 작은 실험</h3>
 <p><strong>이 책에서 측정한 결과가 아닌 실험 제안</strong>입니다. 시작 리비전, Astra 설정, 도구, 기획, 검사와 노력 예산을 동일하게 유지하고 필수 정책을 지키세요. 각각 깨끗한 실행에서 비교합니다.</p>
 <ol><li><strong>기준 조건:</strong> 현재 스킬만 사용하고 프로젝트 스킬을 추가하거나 선택을 강제하지 않음.</li><li><strong>선택 확인:</strong> 관련 기존 스킬을 명시적으로 골라 라우팅이 문제였는지 확인.</li><li><strong>내용 확인:</strong> 같은 기존 스킬을 선택한 채 좁은 맞춤 스킬 하나도 명시적으로 추가. 이전 조건과 비교해 추가 정보의 이득 평가.</li></ol>
-<p>관찰할 수 있다면 스킬 가용성과 호출, 통과한 행동, 회귀, 수동 개입, 경과 시간과 토큰 비용을 기록하세요. 가능하면 조건을 모르는 상태에서 같은 플레이 경로를 평가합니다. 여러 번 반복하고 관찰된 이득이 비용을 정당화할 때만 지침을 유지하세요. 내용의 이득을 확인한 뒤 설명이 안정적인 암시적 선택을 돕는지는 따로 시험합니다.</p>
+<p>관찰할 수 있다면 스킬 가용성과 호출, 통과한 행동, 회귀, 수동 개입, 경과 시간과 토큰 비용을 기록하세요. 가능하면 조건을 모르는 상태에서 같은 플레이 경로를 평가합니다.</p>
+<p>여러 번 반복하고 관찰된 이득이 비용을 정당화할 때만 지침을 유지하세요. 내용의 이득을 확인한 뒤 설명이 안정적인 암시적 선택을 돕는지는 따로 시험합니다.</p>
 <div class="callout warm"><div class="callout-label">지침 점검</div><p>선택 지침마다 어떤 관찰된 실패를 막고, 어떤 사실을 더하며, 근거가 어디 있는지 물으세요. 답이 사라지면 줄이거나 갱신하거나 제거합니다. 중단이나 충돌을 일으키면 바꾸기 전에 정확한 파일과 규칙을 찾으세요.</p></div>
 <h3 id="skills-part-7">GitHub 예제: 활동에 맞춰 고르기</h3>
 <p>아래는 <strong>소스를 검토한 후보</strong>이며 설치하거나 성능을 입증한 승자가 아닙니다. 범위, 의존성, 지침, 실제 결과를 보세요. 별 수는 적합성 지표가 아닙니다.</p>
@@ -395,13 +823,23 @@ description: 비콘 활성화, 피해, 시간, 정지 또는 재시작 변경 �
 <tr><td>불명확한 영상 이야기: 커뮤니티 Video Director <a class="citation" href="#source-51" title="Community example · Remotion Video Director" aria-label="출처 51: Community example · Remotion Video Director">[51]</a></td><td>시청자와 창작 방향.</td><td>선택 사항입니다. 필수 인터뷰가 충분한 기획서를 방해할 수 있습니다.</td></tr>
 <tr><td>생성 영상: Comfy-Org/comfy-skills <a class="citation" href="#source-55" title="Comfy-Org · Current skill and plugin repository" aria-label="출처 55: Comfy-Org · Current skill and plugin repository">[55]</a></td><td>클라우드 명령, 현재 템플릿 탐색.</td><td>클라우드 플러그인은 Claude Code용입니다. 옛 skills 폴더는 동결되었으므로 복사 대신 문서의 Codex MCP 설정을 사용하세요.</td></tr>
 </tbody></table></div>
-<p><strong>실제 시험:</strong> 저장소 리비전을 기록하고 스킬과 의존성을 읽은 뒤 올바른 게임 또는 영상 프로젝트에서 지원되는 설치 프로그램을 사용하세요. Remotion은 <code>npx skills add remotion-dev/skills</code>를 안내합니다. 설치할 호스트, 범위, 스킬을 확인하세요. 호스트에 표시되는지 확인한 뒤 한정된 작업에 관련 항목 하나를 호출하고 로드한 내용과 결과를 기록합니다. 도움이 있을 때 유지하세요. <code>../../references/</code>를 참조하면 그 폴더 구조가 필요합니다. Markdown 하나만 복사해서는 불완전합니다.</p>
-<p>첫 예고편 요청은 간결해도 됩니다. “사용 가능한 Remotion 구성 지침으로 승인된 녹화 세 개를 10초 스토리보드에 맞춰 편집하고 읽기 쉬운 자막을 추가해 미리보기와 렌더링을 수행한 뒤 부족한 입력을 알려주세요.” <a href="#video-workflows">전체 영상 절차</a>를 참고하세요. 책을 위해 이 예제들을 실행하지는 않았습니다.</p>
+<ol>
+<li><strong>실제 시험:</strong> 저장소 리비전을 기록하고 스킬과 의존성을 읽은 뒤 올바른 게임 또는 영상 프로젝트에서 지원되는 설치 프로그램을 사용하세요.</li>
+<li>Remotion은 <code>npx skills add remotion-dev/skills</code>를 안내합니다.</li>
+<li>설치할 호스트, 범위, 스킬을 확인하세요.</li>
+<li>호스트에 표시되는지 확인한 뒤 한정된 작업에 관련 항목 하나를 호출하고 로드한 내용과 결과를 기록합니다.</li>
+<li>도움이 있을 때 유지하세요.</li>
+<li><code>../../references/</code>를 참조하면 그 폴더 구조가 필요합니다.</li>
+</ol>
+<p>Markdown 하나만 복사해서는 불완전합니다.</p>
+<p>첫 예고편 요청은 간결해도 됩니다. “사용 가능한 Remotion 구성 지침으로 승인된 녹화 세 개를 10초 스토리보드에 맞춰 편집하고 읽기 쉬운 자막을 추가해 미리보기와 렌더링을 수행한 뒤 부족한 입력을 알려주세요.”</p>
+<p><a href="#video-workflows">전체 영상 절차</a>를 참고하세요. 책을 위해 이 예제들을 실행하지는 않았습니다.</p>
 
 <details class="chapter-evidence" id="evidence-skills"><summary>출처 확인 · 이 장의 근거는 무엇인가?</summary><p>2026년 9월 14일 확인. 아래 링크는 명시된 범위를 뒷받침합니다. 이 책의 제안은 문서에 명시된 동작이나 측정 결과와 구분합니다.</p><ul class="evidence-records"><li><span class="evidence-basis">문서에 명시된 동작</span><h4>가용성, 호출, 저장소 지침</h4><p class="evidence-covers"><strong>해당 내용:</strong> <a href="#skills">들어가며</a> · <a href="#skills-part-1">“스킬 추가”라고 부르는 서로 다른 네 가지</a> · <a href="#skills-part-4">예제 게임을 위한 짧은 AGENTS.md</a></p><p>Codex는 예산이 있는 목록에서 자격을 갖춘 암묵적 매칭과 명시적 선택을 지원한다. 저장소 규칙과 스킬은 역할이 다르다. Remotion은 문서 연동을 교체하고 Comfy는 행동 도구를 제공한다. 이 사실이 보편적인 불필요함을 입증하지는 않는다.</p><p class="evidence-links"><a href="https://learn.chatgpt.com/docs/agent-configuration/agents-md" lang="en">OpenAI · Custom instructions with AGENTS.md ↗</a> <a class="evidence-note-link" href="#source-07">[07: 출처 노트]</a><br><a href="https://learn.chatgpt.com/docs/build-skills" lang="en">OpenAI · Build skills ↗</a> <a class="evidence-note-link" href="#source-08">[08: 출처 노트]</a><br><a href="https://developers.openai.com/blog/rethinking-skills-and-prompts-for-gpt-6-astra" lang="en">OpenAI · Rethinking skills and prompts for GPT-6 Astra ↗</a> <a class="evidence-note-link" href="#source-17">[17: 출처 노트]</a><br><a href="https://www.remotion.dev/docs/ai/mcp" lang="en">Remotion · Documentation MCP deprecation ↗</a> <a class="evidence-note-link" href="#source-27">[27: 출처 노트]</a><br><a href="https://docs.comfy.org/agent-tools/mcp" lang="en">Comfy · MCP server for local and cloud workflows ↗</a> <a class="evidence-note-link" href="#source-37">[37: 출처 노트]</a></p></li><li><span class="evidence-basis">연구 결과</span><h4>스킬의 조건부 가치에 대한 근거</h4><p class="evidence-covers"><strong>해당 내용:</strong> <a href="#skills-part-2">주장을 하나씩 확인하기</a> · <a href="#skills-part-3">연구가 서로 다른 결론처럼 보이는 이유</a></p><p>벤치마크마다 작업, 모델, 스킬 구성, 탐색이 다르다. 결과를 합쳐 Astra 성능을 주장할 수 없다. OpenAI의 Astra 지침 점검은 개발사 조언이며 독립적인 개선 측정이 아니다.</p><p class="evidence-links"><a href="https://developers.openai.com/blog/rethinking-skills-and-prompts-for-gpt-6-astra" lang="en">OpenAI · Rethinking skills and prompts for GPT-6 Astra ↗</a> <a class="evidence-note-link" href="#source-17">[17: 출처 노트]</a><br><a href="https://www.skillsbench.ai/" lang="en">SkillsBench · Agent leaderboard, v1.1 ↗</a> <a class="evidence-note-link" href="#source-18">[18: 출처 노트]</a><br><a href="https://arxiv.org/html/2605.29794v1" lang="en">SkillsInjector · Dynamic Skill Context Construction for LLM Agents ↗</a> <a class="evidence-note-link" href="#source-19">[19: 출처 노트]</a><br><a href="https://arxiv.org/html/2608.23417v1" lang="en">SkillAlchemy · Open-World Agent Skill Creation ↗</a> <a class="evidence-note-link" href="#source-20">[20: 출처 노트]</a><br><a href="https://www.anthropic.com/engineering/harness-design-long-running-apps" lang="en">Anthropic · Harness design for long-running application development ↗</a> <a class="evidence-note-link" href="#source-21">[21: 출처 노트]</a><br><a href="https://arxiv.org/html/2603.15401v1" lang="en">SWE-Skills-Bench · Do Agent Skills Actually Help in Real-World Software Engineering? ↗</a> <a class="evidence-note-link" href="#source-22">[22: 출처 노트]</a></p></li><li><span class="evidence-basis">이 책의 제안</span><h4>선택적 게임 검토 스킬과 로컬 비교</h4><p class="evidence-covers"><strong>해당 내용:</strong> <a href="#skills-part-5">프로젝트 지식을 담는 선택적 스킬</a> · <a href="#skills-part-6">내 Astra 환경에서 해볼 작은 실험</a></p><p>스킬의 라운드 규칙은 책의 독자적인 게임 기획에 속한다. 제안한 비교는 실제 환경에서 지침의 가치를 시험하며 이 책에서는 실행하지 않았다.</p><p class="evidence-links"><a href="https://learn.chatgpt.com/docs/build-skills" lang="en">OpenAI · Build skills ↗</a> <a class="evidence-note-link" href="#source-08">[08: 출처 노트]</a><br><a href="https://developers.openai.com/blog/rethinking-skills-and-prompts-for-gpt-6-astra" lang="en">OpenAI · Rethinking skills and prompts for GPT-6 Astra ↗</a> <a class="evidence-note-link" href="#source-17">[17: 출처 노트]</a><br><a href="https://www.skillsbench.ai/" lang="en">SkillsBench · Agent leaderboard, v1.1 ↗</a> <a class="evidence-note-link" href="#source-18">[18: 출처 노트]</a><br><a href="https://arxiv.org/html/2603.15401v1" lang="en">SWE-Skills-Bench · Do Agent Skills Actually Help in Real-World Software Engineering? ↗</a> <a class="evidence-note-link" href="#source-22">[22: 출처 노트]</a></p></li><li><span class="evidence-basis">종합 및 해석</span><h4>검토한 GitHub 후보</h4><p class="evidence-covers"><strong>해당 내용:</strong> <a href="#skills-part-7">GitHub 예제: 활동에 맞춰 고르기</a></p><p>링크의 지침과 저장소 구조를 검토했습니다. 적합성은 편집 판단이며 실행한 벤치마크나 설치 결과가 아닙니다.</p><p class="evidence-links"><a href="https://github.com/openai/plugins/blob/main/plugins/game-studio/skills/web-game-foundations/SKILL.md" lang="en">OpenAI · Web game foundations skill ↗</a> <a class="evidence-note-link" href="#source-49">[49: 출처 노트]</a><br><a href="https://github.com/remotion-dev/skills" lang="en">Remotion · Maintained GitHub skill collection ↗</a> <a class="evidence-note-link" href="#source-50">[50: 출처 노트]</a><br><a href="https://github.com/BayramAnnakov/remotion-video-director/blob/main/SKILL.md" lang="en">Community example · Remotion Video Director ↗</a> <a class="evidence-note-link" href="#source-51">[51: 출처 노트]</a><br><a href="https://github.com/Comfy-Org/comfy-skills" lang="en">Comfy-Org · Current skill and plugin repository ↗</a> <a class="evidence-note-link" href="#source-55">[55: 출처 노트]</a></p></li></ul><a class="evidence-method" href="#review-notes">검토 방법과 수정 사항 보기 ↗</a></details></section>
 <section class="chapter" aria-labelledby="brief"><div class="chapter-kicker">장 09</div><h2 id="brief">완성할 가치가 있는 게임 설계</h2>
 <p class="lead">작은 세계에도 분명한 정체성을 담을 수 있습니다.</p>
-<p>Signal Garden은 이 책의 학습용 설계입니다. 해 질 무렵 잊힌 옥상에서 정비 로봇이 세 개의 에너지 셀로 정원 비콘을 되살립니다. 순찰 드론과 짧은 제한 시간이 경로 선택에 의미를 줍니다. 차분한 탐색 사이에 읽기 쉬운 긴장 순간이 들어오는 느낌을 목표로 합니다.</p>
+<p>Signal Garden은 이 책의 학습용 설계입니다. 해 질 무렵 잊힌 옥상에서 정비 로봇이 세 개의 에너지 셀로 정원 비콘을 되살립니다.</p>
+<p>순찰 드론과 짧은 제한 시간이 경로 선택에 의미를 줍니다. 차분한 탐색 사이에 읽기 쉬운 긴장 순간이 들어오는 느낌을 목표로 합니다.</p>
 <p>다음 값은 <strong>초기 설계 목표</strong>이며 완성된 게임에서 측정되지 않았습니다. 구현하고 조정할 수 있을 만큼 기획을 구체화하기 위한 값입니다.</p>
 <div class="table-wrap" tabindex="0" role="region" aria-label="비교표. 작은 화면에서는 가로로 스크롤하세요"><table><thead><tr><th>설계 요소</th><th>첫 버전의 결정</th><th>확인할 행동</th></tr></thead><tbody>
 <tr><td>플레이어 목표</td><td>셀 세 개를 모아 비콘으로 돌아와 활성화.</td><td>시작 화면을 읽은 신규 플레이어가 목표를 설명.</td></tr>
@@ -416,34 +854,60 @@ description: 비콘 활성화, 피해, 시간, 정지 또는 재시작 변경 �
 <h3 id="brief-part-1">핵심 루프를 동사로 정의하기</h3>
 <p><strong>관찰 → 경로 선택 → 이동 → 수집 → 회피 → 복귀 → 활성화.</strong> 각 행동에는 보이는 결과가 있어야 합니다. 셀은 한 번 사라지고 카운터는 한 번 증가하며 비콘은 준비됐을 때 모습이 바뀝니다. 피격에는 명확한 피드백과 짧은 회복 시간이 있고 패배 후 바로 다시 도전할 수 있습니다.</p>
 <h3 id="brief-part-2">경계 상황을 버그가 되기 전에 정하기</h3>
-<p>첫 구현에서는 각 시뮬레이션 단계에서 비콘 활성화보다 패배 조건을 먼저 평가합니다. 그 단계에서 시간이 0이 되면 패배합니다. E는 새로 누른 입력에만 반응하며 비콘과의 거리가 2단위 이내여야 합니다. 최종 결과 뒤에는 이동, 수집, 피해와 시간이 재시작까지 멈춥니다.</p>
-<p><code>paused</code>, <code>won</code>, <code>lost</code>에서 재시작할 수 있습니다. 플레이어, 셀, 체력, 시간, 드론 진행, 쿨다운, 효과와 누른 입력을 초기화하고 새 <code>playing</code> 라운드로 들어갑니다. 창 포커스를 잃으면 입력을 지우고 진행 중인 라운드를 정지합니다. 돌아와도 명시적으로 재개해야 합니다. 프롬프트와 수용 검사에 공통으로 적용할 설계 규칙입니다.</p>
+<ul>
+<li>첫 구현에서는 각 시뮬레이션 단계에서 비콘 활성화보다 패배 조건을 먼저 평가합니다.</li>
+<li>그 단계에서 시간이 0이 되면 패배합니다.</li>
+<li>E는 새로 누른 입력에만 반응하며 비콘과의 거리가 2단위 이내여야 합니다.</li>
+<li>최종 결과 뒤에는 이동, 수집, 피해와 시간이 재시작까지 멈춥니다.</li>
+</ul>
+<ul>
+<li><code>paused</code>, <code>won</code>, <code>lost</code>에서 재시작할 수 있습니다.</li>
+<li>플레이어, 셀, 체력, 시간, 드론 진행, 쿨다운, 효과와 누른 입력을 초기화하고 새 <code>playing</code> 라운드로 들어갑니다.</li>
+<li>창 포커스를 잃으면 입력을 지우고 진행 중인 라운드를 정지합니다.</li>
+<li>돌아와도 명시적으로 재개해야 합니다.</li>
+</ul>
+<p>프롬프트와 수용 검사에 공통으로 적용할 설계 규칙입니다.</p>
 <p>좌표와 단위 규칙은 하나만 선택하세요. 제안한 Three.js 게임은 Y가 위이고 X/Z 평면에서 이동하며 속도는 초당 월드 단위입니다. 기획서에서 한 번 정해 이동, 카메라, 충돌과 테스트의 가정이 어긋나지 않게 합니다.</p>
 <h3 id="brief-part-3">참고 이미지의 역할 정하기</h3>
 <p>사용 권한이 있는 이미지를 모으거나 만드세요. 각 자료가 팔레트, 카메라 높이, 실루엣, 조명이나 UI 밀도 중 무엇에 기여하는지 설명합니다. 다른 게임의 캐릭터, 브랜드나 독점 에셋을 복사하라는 지시가 아닌 설계 참고로 씁니다.</p>
 <p>Signal Garden은 먼저 회색 블록 이미지를 요청하고 동일한 카메라와 구조를 유지하며 시각 개선을 합니다. 같은 구도를 비교하면 조명과 재질의 효과를 판단하기 쉽습니다. 더 복잡한 장면이 자동으로 더 좋은 장면은 아닙니다.</p>
 <div class="exercise"><h3 id="brief-part-4">제외 범위 쓰기</h3><p>첫 출시에는 멀티플레이, 절차 생성 세계, 인벤토리, 대화 트리와 여러 레벨을 제외합니다. 플레이테스트한 핵심 루프를 충분히 개선해 추가 비용을 정당화할 때만 넣으세요.</p></div>
 <h3 id="brief-part-5">규칙의 수학 확인하기</h3>
-<p>키보드 입력 <code>(x,z)</code>의 각 성분은 -1, 0, 1입니다. 길이는 <code>sqrt(x*x + z*z)</code>입니다. 대각선 <code>(1,1)</code>의 길이는 <code>sqrt(2)</code>이므로 정규화하지 않으면 약 41% 빨라집니다. 0이 아닌 벡터를 길이로 나눈 뒤 초당 미터 단위 속도와 초 단위 시뮬레이션 시간을 곱하세요. 0 입력은 그대로 0이어야 합니다. 이는 기본 수학 유도이며 벤치마크가 아닙니다.</p>
+<p>키보드 입력 <code>(x,z)</code>의 각 성분은 -1, 0, 1입니다. 길이는 <code>sqrt(x*x + z*z)</code>입니다.</p>
+<p>대각선 <code>(1,1)</code>의 길이는 <code>sqrt(2)</code>이므로 정규화하지 않으면 약 41% 빨라집니다. 0이 아닌 벡터를 길이로 나눈 뒤 초당 미터 단위 속도와 초 단위 시뮬레이션 시간을 곱하세요.</p>
+<p>0 입력은 그대로 0이어야 합니다. 이는 기본 수학 유도이며 벤치마크가 아닙니다.</p>
 <pre><code>n = Math.hypot(x, z)
 dx = n === 0 ? 0 : (x / n) * speed * dtSeconds
 dz = n === 0 ? 0 : (z / n) * speed * dtSeconds
 // 4 m/s로 0.25 s 이동하면 총 변위는 1 m.
 // 대각선 각 성분은 약 0.7071 m.</code></pre>
-<p>디지털 키보드용 공식입니다. 나중에 아날로그 스틱을 지원하면 부분 기울기를 보존해야 합니다. 보통 데드존 적용 뒤 길이를 최대 1로 제한하며 모든 비영 입력을 정규화하지 않습니다. 충돌 처리는 별개입니다. 큰 변위는 얇은 장애물을 통과할 수 있습니다. 적절히 제한된 시뮬레이션 간격이나 이동 경로 충돌 검사를 사용하고 해당 속도를 시험하세요. 경과 시간에 비례시킨다고 관통이 사라지지는 않습니다.</p>
-<p>이 설계의 “두 단위 이내”는 지면에서 <strong>중심 사이 거리 ≤ 2</strong>이며 <code>dx*dx + dz*dz &lt;= 4</code>와 같습니다. 피해 대기 시간과 라운드 타이머 모두 시뮬레이션 시간을 써서 일시정지 시 함께 멈춥니다. 피해와 시간을 반영하고 패배를 결정한 뒤 여전히 playing일 때만 활성화를 허용합니다. 단일 phase와 중앙 전이 검사로 모순된 종료 화면을 방지합니다. 이는 책의 독창적 설계에 대한 명시적인 구현 규칙입니다.</p>
+<p>디지털 키보드용 공식입니다. 나중에 아날로그 스틱을 지원하면 부분 기울기를 보존해야 합니다.</p>
+<p>보통 데드존 적용 뒤 길이를 최대 1로 제한하며 모든 비영 입력을 정규화하지 않습니다. 충돌 처리는 별개입니다.</p>
+<p>큰 변위는 얇은 장애물을 통과할 수 있습니다. 적절히 제한된 시뮬레이션 간격이나 이동 경로 충돌 검사를 사용하고 해당 속도를 시험하세요.</p>
+<p>경과 시간에 비례시킨다고 관통이 사라지지는 않습니다.</p>
+<ol>
+<li>이 설계의 “두 단위 이내”는 지면에서 <strong>중심 사이 거리 ≤ 2</strong>이며 <code>dx*dx + dz*dz &lt;= 4</code>와 같습니다.</li>
+<li>피해 대기 시간과 라운드 타이머 모두 시뮬레이션 시간을 써서 일시정지 시 함께 멈춥니다.</li>
+<li>피해와 시간을 반영하고 패배를 결정한 뒤 여전히 playing일 때만 활성화를 허용합니다.</li>
+<li>단일 phase와 중앙 전이 검사로 모순된 종료 화면을 방지합니다.</li>
+</ol>
+<p>이는 책의 독창적 설계에 대한 명시적인 구현 규칙입니다.</p>
 <h3 id="brief-part-6">Blender 예제: 같은 장면 비교하기</h3>
 <div class="figure-pair"><figure class="book-illustration"><img src="illustrations/signal-garden-greybox.png" width="1500" height="1100" loading="lazy" alt="24 곱하기 24 경기장과 로봇, 전지 세 개, 드론, 중앙 비콘의 회색 모델"><figcaption><strong>A · 먼저 형상.</strong> 경로, 크기, 실루엣을 확인합니다.</figcaption></figure><figure class="book-illustration"><img src="illustrations/signal-garden-concept.png" width="1500" height="1100" loading="lazy" alt="같은 장면에 녹색 화단, 호박색 전지, 청록 비콘, 적갈색 드론을 적용한 모습"><figcaption><strong>B · 재질 연구.</strong> 카메라, 형상, 조명은 같고 물체 재질만 다릅니다.</figcaption></figure></div>
-<p>이 독창적인 정지 이미지는 이웃 <code>3d_astra</code> 프로젝트의 공유 Blender 4.5.3 LTS로 렌더링했습니다. 완성된 게임 화면이 아닌 <strong>콘셉트 그림</strong>입니다. 중립 조명으로 재질을 비교하며 최종 황혼 조명은 별도 실험입니다. 바닥의 짙은 점선은 순찰 안내 예시이며 구현된 경로가 아닙니다.</p>
-<p><code>node scripts/render-illustrations.mjs --blender PATH_TO_BLENDER</code>로 재현하세요. 스크립트는 게임 좌표 <code>(x,y,z)</code>를 Blender의 <code>(x,-z,y)</code>로 바꿔 게임의 Y-up 규칙을 유지합니다. <a href="illustrations/signal-garden.blend" download>편집 가능한 Blender 장면</a>을 받거나 <a href="https://github.com/buicongnguyen/Better_skill/blob/main/scripts/render-illustrations.py">생성 스크립트</a>를 읽어보세요. Blender 문서는 백그라운드 렌더링과 인수 순서를 설명합니다. <a class="citation" href="#source-54" title="Blender · Command line rendering, 4.5 manual" aria-label="출처 54: Blender · Command line rendering, 4.5 manual">[54]</a></p>
+<p>이 독창적인 정지 이미지는 이웃 <code>3d_astra</code> 프로젝트의 공유 Blender 4.5.3 LTS로 렌더링했습니다. 완성된 게임 화면이 아닌 <strong>콘셉트 그림</strong>입니다.</p>
+<p>중립 조명으로 재질을 비교하며 최종 황혼 조명은 별도 실험입니다. 바닥의 짙은 점선은 순찰 안내 예시이며 구현된 경로가 아닙니다.</p>
+<p><code>node scripts/render-illustrations.mjs --blender PATH_TO_BLENDER</code>로 재현하세요. 스크립트는 게임 좌표 <code>(x,y,z)</code>를 Blender의 <code>(x,-z,y)</code>로 바꿔 게임의 Y-up 규칙을 유지합니다.</p>
+<p><a href="illustrations/signal-garden.blend" download>편집 가능한 Blender 장면</a>을 받거나 <a href="https://github.com/buicongnguyen/Better_skill/blob/main/scripts/render-illustrations.py">생성 스크립트</a>를 읽어보세요. Blender 문서는 백그라운드 렌더링과 인수 순서를 설명합니다. <a class="citation" href="#source-54" title="Blender · Command line rendering, 4.5 manual" aria-label="출처 54: Blender · Command line rendering, 4.5 manual">[54]</a></p>
 
 <details class="chapter-evidence" id="evidence-brief"><summary>출처 확인 · 이 장의 근거는 무엇인가?</summary><p>2026년 9월 14일 확인. 아래 링크는 명시된 범위를 뒷받침합니다. 이 책의 제안은 문서에 명시된 동작이나 측정 결과와 구분합니다.</p><ul class="evidence-records"><li><span class="evidence-basis">이 책의 제안</span><h4>플레이어 약속, 규칙, 경계</h4><p class="evidence-covers"><strong>해당 내용:</strong> <a href="#brief">들어가며</a> · <a href="#brief-part-1">핵심 루프를 동사로 정의하기</a> · <a href="#brief-part-2">경계 상황을 버그가 되기 전에 정하기</a> · <a href="#brief-part-4">제외 범위 쓰기</a></p><p>모든 수치, 규칙, 패배 우선순위, 일시정지/재시작 전이, 제외 항목은 직접 정한 설계 목표다. 셀 세 개, 90초, 이 경기장이 재미있다는 외부 근거는 없다. 구현을 기획서와 대조한 뒤 플레이테스트로 평가한다.</p><p class="evidence-links">이 책의 설계 제안입니다. 이 목표를 입증하는 외부 출처는 없으며, 실제 게임에서 평가해야 합니다.</p></li><li><span class="evidence-basis">종합 및 해석</span><h4>시각적 참고 자료 사용</h4><p class="evidence-covers"><strong>해당 내용:</strong> <a href="#brief-part-3">참고 이미지의 역할 정하기</a></p><p>Astra 사례는 플레이어 경험과 시각 자료를 활용한다. 참고 자료마다 역할을 정하고 같은 카메라 시점으로 비교하는 것은 책의 실무 권고이며 측정된 효과가 아니다.</p><p class="evidence-links"><a href="https://developers.openai.com/blog/how-to-build-games-with-astra" lang="en">OpenAI · Building games with Astra ↗</a> <a class="evidence-note-link" href="#source-04">[04: 출처 노트]</a></p></li><li><span class="evidence-basis">이 책의 제안</span><h4>단위, 거리, 전이의 수학</h4><p class="evidence-covers"><strong>해당 내용:</strong> <a href="#brief-part-5">규칙의 수학 확인하기</a></p><p>기초 벡터 유도와 설계 규칙입니다. 수치 검사는 예시를 확인하며 완성된 게임을 검증하지 않습니다.</p><p class="evidence-links">이 책의 설계 제안입니다. 이 목표를 입증하는 외부 출처는 없으며, 실제 게임에서 평가해야 합니다.</p></li><li><span class="evidence-basis">이 책의 제안</span><h4>재현 가능한 Blender 그림</h4><p class="evidence-covers"><strong>해당 내용:</strong> <a href="#brief-part-6">Blender 예제: 같은 장면 비교하기</a></p><p>두 실제 렌더는 형상, 카메라, 조명이 같습니다. 스크립트와 편집 장면을 제공하며 이미지는 게임플레이 구현이 아닙니다.</p><p class="evidence-links"><a href="https://docs.blender.org/manual/en/4.5/advanced/command_line/render.html" lang="en">Blender · Command line rendering, 4.5 manual ↗</a> <a class="evidence-note-link" href="#source-54">[54: 출처 노트]</a></p></li></ul><a class="evidence-method" href="#review-notes">검토 방법과 수정 사항 보기 ↗</a></details></section>
 <section class="chapter" aria-labelledby="meta-prompt"><div class="chapter-kicker">장 10</div><h2 id="meta-prompt">프롬프트를 만드는 프롬프트</h2>
 <p class="lead">코드를 더 요청하기 전에 기획을 더 명확하게 만드세요.</p>
-<p>메타 프롬프트는 다른 프롬프트를 작성하는 지시입니다. 대상 사용자, 조작, 제약, 누락 정보, 완료 조건과 절충을 드러내는 설계 작업에 가치가 있습니다. 만들어질 게임의 품질을 보장하지는 않습니다. 결과 명세를 검토하고 구현을 직접 플레이해야 합니다.</p>
+<p>메타 프롬프트는 다른 프롬프트를 작성하는 지시입니다. 대상 사용자, 조작, 제약, 누락 정보, 완료 조건과 절충을 드러내는 설계 작업에 가치가 있습니다.</p>
+<p>만들어질 게임의 품질을 보장하지는 않습니다. 결과 명세를 검토하고 구현을 직접 플레이해야 합니다.</p>
 <p><strong>선택적인 단계입니다.</strong> 기획이 이미 명확하다면 <a href="#master-prompt">짧은 실행 프롬프트</a>로 가세요. 메커니즘 충돌이나 적합하지 않은 내보내기 대상처럼 실제 미지수를 해결할 때 사용합니다. 프롬프트 하나를 더 만드는 행위 자체가 개선의 증거는 아닙니다.</p>
 <h3 id="meta-prompt-part-1">입력 자료 준비하기</h3>
-<p>한 페이지 기획, 목표 플랫폼, 설치된 도구, 사용 가능한 에셋과 기존 저장소 지침을 주세요. 빈 폴더라면 명시합니다. 카메라나 스타일을 설명하는 간단한 참고 이미지도 좋습니다. 선호 사항과 필수 제약은 구분하세요.</p>
+<p>한 페이지 기획, 목표 플랫폼, 설치된 도구, 사용 가능한 에셋과 기존 저장소 지침을 주세요. 빈 폴더라면 명시합니다.</p>
+<p>카메라나 스타일을 설명하는 간단한 참고 이미지도 좋습니다. 선호 사항과 필수 제약은 구분하세요.</p>
 <p>Signal Garden의 핵심은 작은 데스크톱 웹 게임, 키보드, 고정 카메라, 공간 하나, 수집물 세 개, 위험 요소 하나, 완전한 승패·재시작 루프와 정적 호스팅입니다. “놀랍게 만들어 줘”보다 각각의 사실이 더 유용한 방향을 제공합니다.</p>
 <h3 id="meta-prompt-part-2">프롬프트 설계자</h3>
 <div class="prompt-block"><div class="prompt-bar"><span>바로 사용하기 · meta-prompt.md</span><button type="button" class="copy-button" aria-label="프롬프트 복사: meta-prompt.md">프롬프트 복사</button></div><pre tabindex="0"><code># GPT-6 Astra 실행 프롬프트 설계
@@ -466,7 +930,11 @@ dz = n === 0 ? 0 : (z / n) * speed * dtSeconds
 1. 필수 조건, 선호, 가정과 실제 진행을 막는 미지수를 나누세요. 잘못된 가정이 결과를 크게 바꿀 때만 최대 세 개의 집중된 질문을 하고 독립적인 초안 작성은 계속합니다.
 2. 이 기획의 결정을 바꿀 수 있는 방식만 비교하세요. 한 번의 프로토타입, 명세 우선, 튜토리얼, 점진 구현, 시각 플레이테스트와 병렬 전문가를 고려할 수 있습니다. 절충을 간결하게 설명하고 벤치마크나 완료 시간 보장은 만들지 마세요.
 3. 실제 도구가 다룰 수 있는 최소 조합과 기술을 권하세요. 명시된 엔진 선택은 유지합니다. 버전 민감한 주장 전에 1차 문서를 확인하고 웹 접근이 없으면 밝힙니다.
-4. 플레이 경험, 조작, 카메라, 세계 규칙, 경계 조건, 에셋 정책, 검증과 완료 조건이 있는 실행 프롬프트를 쓰세요. 정확한 저장소 문서에 이미 있으면 중복하지 말고 참조합니다. 단계는 결과 확인점이지 매 수정의 필수 일정이 아닙니다. 기존 스킬을 우선하고 구체적으로 반복되는 공백에만 새 스킬을 제안합니다.
+4.
+   플레이 경험, 조작, 카메라, 세계 규칙, 경계 조건, 에셋 정책, 검증과 완료 조건이 있는 실행 프롬프트를 쓰세요.
+   정확한 저장소 문서에 이미 있으면 중복하지 말고 참조합니다.
+   단계는 결과 확인점이지 매 수정의 필수 일정이 아닙니다.
+   기존 스킬을 우선하고 구체적으로 반복되는 공백에만 새 스킬을 제안합니다.
 5. 편집 전 기존 파일 확인, 사용자 작업 보존, 합리적인 일상 선택과 승인 범위 지속을 명시하세요. 이미 승인되지 않은 외부 공개는 별도 권한 경계입니다.
 6. 필요한 증거만 요구하세요. 집중 논리 검사, 실제 조작, 시각 확인과 판단이 필요한 사람 플레이테스트입니다. 빌드 성공이 게임 작동을 증명한다고 하지 마세요.
 7. 모순, 관찰 검사 없는 요구, 숨은 범위 추가, 없는 도구와 모호한 형용사를 검토하고 그 결함을 한 번 수정하세요.
@@ -478,7 +946,9 @@ C. 미해결 필드를 표시한 최종 복사 가능한 실행 프롬프트.
 D. 짧은 수용 목록과 첫 플레이테스트 계획.
 E. 검토에서 수정한 결함의 짧은 설명.
 
-빈 폴더에서는 독립적으로 쓸 수 있게, 기존 문서가 필요하면 이름을 명시하세요. 직접적인 지시와 구체적인 플레이 행동을 사용합니다. GPT-6 Astra를 다른 모델로 바꾸거나 비공개 추론을 요청하거나 자체 품질 점수를 게임 품질의 증거로 제시하지 마세요.</code></pre><a class="download-link" href="prompts/ko/meta-prompt.md" download>.md 다운로드 ↗</a></div>
+빈 폴더에서는 독립적으로 쓸 수 있게, 기존 문서가 필요하면 이름을 명시하세요. 직접적인 지시와 구체적인 플레이 행동을 사용합니다. GPT-6 Astra를 다른 모델로 바꾸거나 비공개 추론을 요청하거나 자체 품질 점수를 게임 품질의 증거로 제시하지 마세요.
+
+최종 프롬프트는 수정할 매개변수 블록, 목표, 작업/제약 묶음, 관찰 가능한 완료 검사 순서로 작성하세요. 엔진/도구 대안은 선택지로 나열하고 하나만 선택하며 상세 지침이 그 선택을 따르게 하세요. 조정값과 요구 사항을 분리하고 매개변수 변경 후 본문에 충돌하는 고정값이 남지 않는지 확인하세요.</code></pre><a class="download-link" href="prompts/ko/meta-prompt.md" download>.md 다운로드 ↗</a></div>
 <h3 id="meta-prompt-part-3">실행 전에 결과 검토하기</h3>
 <p>생성 프롬프트가 게임의 실제 정체성을 담는지 확인하세요. 어떤 일반 액션 게임에도 적용된다면 플레이 경험 설명이 더 필요할 수 있습니다. 계정, 온라인 순위표, 유료 서비스, 생성 에셋, 멀티플레이나 요청하지 않은 거대한 프레임워크가 숨어 들어왔는지도 확인합니다.</p>
 <div class="table-wrap" tabindex="0" role="region" aria-label="비교표. 작은 화면에서는 가로로 스크롤하세요"><table><thead><tr><th>질문</th><th>약한 답변</th><th>유용한 답변</th></tr></thead><tbody>
@@ -499,9 +969,20 @@ E. 검토에서 수정한 결함의 짧은 설명.
 <p>폴더 편집, 패키지 관리자 실행, 자동 플레이테스트를 위한 브라우저 검사가 가능한지 확인하세요. 일상적인 구현 선택을 허용하고 범위 내 단계를 계속하도록 요청합니다. 공개 대상이 명확하도록 출판은 배포 장에서 별도로 다룹니다.</p>
 <h3 id="master-prompt-part-1">선택 A · 기획서가 이미 있을 때</h3>
 <p><code>docs/game-brief.md</code>와 <code>docs/acceptance.md</code>가 게임을 정확히 설명할 때 기본으로 시도합니다. 파일 참조로 요청을 짧게 유지합니다. 긴 버전과 벤치마크하지 않았으므로 <a href="#refine">개선 실험</a>으로 비교하세요.</p>
-<div class="prompt-block"><div class="prompt-bar"><span>바로 사용하기 · astra-compact-prompt.md</span><button type="button" class="copy-button" aria-label="프롬프트 복사: astra-compact-prompt.md">프롬프트 복사</button></div><pre tabindex="0"><code># 저장소 기획으로 Signal Garden 구현
+<div class="prompt-block"><div class="prompt-bar"><span>바로 사용하기 · astra-compact-prompt.md</span><button type="button" class="copy-button" aria-label="프롬프트 복사: astra-compact-prompt.md">프롬프트 복사</button></div><pre tabindex="0"><code>## 먼저 수정할 매개변수
+BRIEF_PATH: docs/game-brief.md
+ACCEPTANCE_PATH: docs/acceptance.md
+PROGRESS_PATH: docs/progress.md
 
-이 게임 저장소에서 GPT-6 Astra를 사용하세요. docs/game-brief.md의 데스크톱 웹 게임을 만들고 docs/acceptance.md를 충족합니다. 기획서는 메커니즘의 기준이며 docs/progress.md는 완료 작업과 남은 문제를 기록합니다. 필수 문서가 없으면 대체 설계를 만들기 전에 밝히세요.
+이 요청 전체에서 매개변수 블록의 문서 경로를 사용하세요.
+
+# 저장소 기획으로 Signal Garden 구현
+
+이 게임 저장소에서 GPT-6 Astra를 사용하세요. BRIEF_PATH의 데스크톱 웹 게임을 만들고 ACCEPTANCE_PATH를 충족합니다.
+
+기획서는 메커니즘의 기준이며 PROGRESS_PATH는 완료 작업과 남은 문제를 기록합니다.
+
+필수 문서가 없으면 대체 설계를 만들기 전에 밝히세요.
 
 현재 구현을 확인하고 사용자 작업을 보존하세요. 기획 안에서 일상 기술 결정을 내리며 승인된 범위를 계속 진행합니다. 관련 기존 스킬을 사용하되 시작만을 위해 맞춤 스킬을 만들거나 설치하지 마세요. 중요한 모호함이나 없는 권한에만 질문을 제한합니다.
 
@@ -510,14 +991,29 @@ E. 검토에서 수정한 결함의 짧은 설명.
 작동하는 게임, 재현 가능한 빌드, 짧은 진행 기록과 출시 안내를 전달합니다. 로컬 커밋은 허용됩니다. 기존 푸시·공개 권한을 따르며 없다면 대상을 명시해 검토할 출시 준비를 끝내세요. 리비전, 검사 결과와 한계를 보고합니다.</code></pre><a class="download-link" href="prompts/ko/astra-compact-prompt.md" download>.md 다운로드 ↗</a></div>
 <h3 id="master-prompt-part-2">선택 B · 빈 폴더에서 시작할 때</h3>
 <p>아래 긴 초기화 프롬프트는 아직 프로젝트 기획이 없어서 규칙을 포함합니다. 길이 대부분은 게임 명세입니다. 에이전트가 규칙을 파일에 기록한 뒤에는 전체를 반복해서 붙이기보다 집중된 요청을 사용하세요.</p>
-<div class="prompt-block"><div class="prompt-bar"><span>바로 사용하기 · astra-master-prompt.md</span><button type="button" class="copy-button" aria-label="프롬프트 복사: astra-master-prompt.md">프롬프트 복사</button></div><pre tabindex="0"><code># GPT-6 Astra로 Signal Garden 처음부터 만들기
+<div class="prompt-block"><div class="prompt-bar"><span>바로 사용하기 · astra-master-prompt.md</span><button type="button" class="copy-button" aria-label="프롬프트 복사: astra-master-prompt.md">프롬프트 복사</button></div><pre tabindex="0"><code>## 먼저 수정할 매개변수
+PROJECT_FOLDER: 현재 선택한 게임 폴더
+PROJECT_NAME: Signal Garden
+RULE_CHANGES: 없음
+
+PROJECT_NAME을 게임 이름으로, RULE_CHANGES를 아래 기본값의 변경 제안으로 사용하세요.
+
+수정 전에 합의한 기존 요구 사항과 조정하세요.
+
+PROJECT_FOLDER에서 작업하고 기존 엔진과 사용 가능한 도구를 유지하세요.
+
+아래 Three.js 전용 명령은 Three.js 경로에만 적용됩니다.
+
+다른 엔진에 합의했다면 문서를 참조하는 짧은 실행 프롬프트를 사용하세요.
+
+# GPT-6 Astra로 PROJECT_NAME 처음부터 만들기
 
 현재 폴더에서 게임 개발자로 작업하세요. 먼저 폴더, Git 상태, 적용 지침과 도구를 확인하고 기존 사용자 작업을 보존합니다. 빈 폴더라면 아래 완전한 프로젝트를 만드세요.
 
 작고 일관되며 플레이 가능한 데스크톱 브라우저 3D 게임을 전달하세요. 구현하고 필요한 검사를 실행하며 계획만 제시하고 끝내지 마세요. 일상적인 구현 선택은 합리적으로 결정하고 가정을 기록합니다. 결과를 크게 바꿀 누락 정보나 아직 없는 권한에만 집중된 질문을 하세요.
 
 플레이 경험
-Signal Garden은 해 질 무렵의 조용한 옥상입니다. 정비 로봇이 에너지 셀 세 개를 모아 순찰 드론을 피하고 시간 안에 비콘을 활성화합니다. 버려졌지만 복구할 수 있는 세계, 명확한 경로와 되살아난 기계의 따뜻한 빛을 표현하세요.
+PROJECT_NAME은 해 질 무렵의 조용한 옥상입니다. 정비 로봇이 에너지 셀 세 개를 모아 순찰 드론을 피하고 시간 안에 비콘을 활성화합니다. 버려졌지만 복구할 수 있는 세계, 명확한 경로와 되살아난 기계의 따뜻한 빛을 표현하세요.
 
 범위와 규칙
 - 24 × 24 단위의 평면 공간. 1단위는 1미터, Y는 위, 이동은 X/Z.
@@ -539,7 +1035,15 @@ dev, build, 필요한 테스트의 정확한 npm 스크립트를 만드세요. d
 화면과 소리
 읽기 쉬운 회색 블록으로 시작한 뒤 원본 기하 로봇, 차분한 녹색 돌과 화단, 호박색 셀, 청록 비콘과 구분되는 드론을 만듭니다. 경로를 보이게 하고 과한 bloom, 입자와 카메라 흔들림은 피하세요. 형태와 글자는 색 신호를 보완하며 장식과 피격 효과에 모션 감소 설정을 반영합니다.
 
-직접 만들거나 적절히 허가된 에셋을 사용하고 출처를 기록하세요. 수집, 피해, 준비, 승리와 패배에 적당한 피드백을 제공합니다. 사용자 상호작용 뒤에만 소리를 시작하고 음소거를 넣으세요. 메뉴는 반응형이며 키보드 접근이 가능해야 합니다. 첫 버전은 데스크톱 키보드 대상이며 구현·검사하지 않은 모바일 플레이를 지원한다고 주장하지 마세요.
+직접 만들거나 적절히 허가된 에셋을 사용하고 출처를 기록하세요.
+
+수집, 피해, 준비, 승리와 패배에 적당한 피드백을 제공합니다.
+
+사용자 상호작용 뒤에만 소리를 시작하고 음소거를 넣으세요.
+
+메뉴는 반응형이며 키보드 접근이 가능해야 합니다.
+
+첫 버전은 데스크톱 키보드 대상이며 구현·검사하지 않은 모바일 플레이를 지원한다고 주장하지 마세요.
 
 완료 확인점
 의존성과 기존 프로젝트에 따라 구현 순서는 조정할 수 있습니다.
@@ -553,20 +1057,40 @@ M5: /signal-garden/ 프로덕션 검사, 중요한 실패 수정과 출시 워�
 각 단계에서 실행 가능한 상태와 진행 기록을 유지하고 diff 검토와 관련 검사 뒤 로컬 커밋을 하세요. 이 프롬프트는 로컬 커밋을 허용합니다. 단계를 확인점으로 보고 불필요한 재승인 없이 다음으로 진행하세요.
 
 검증
-단일 수집, 이동 정규화, 피해 쿨다운, 정지, 승패 배타성, 경계 시간과 전체 재시작을 필요한 범위에서 검사합니다. 브라우저 도구가 있으면 주요 경로에 실제 입력을 사용하세요. 스크린샷은 카메라/UI를, 상태는 규칙을 확인합니다. 장면 준비 도우미는 실제 입력 여정을 대신할 수 없습니다.
+단일 수집, 이동 정규화, 피해 쿨다운, 정지, 승패 배타성, 경계 시간과 전체 재시작을 필요한 범위에서 검사합니다.
+
+브라우저 도구가 있으면 주요 경로에 실제 입력을 사용하세요.
+
+스크린샷은 카메라/UI를, 상태는 규칙을 확인합니다.
+
+장면 준비 도우미는 실제 입력 여정을 대신할 수 없습니다.
 
 시작, 수집, 승리, 두 패배, 정지/재개와 반복 재시작을 확인하세요. 저장소 하위 경로에서 프로덕션을 빌드하고 시험하며 에셋과 런타임 오류를 봅니다. 실제 브라우저와 기기를 명시합니다. 성능 측정은 기기, 뷰포트, 장면, 워밍업과 표본 시간을 기록하고 프레임률을 지어내지 마세요.
 
 도구가 없으면 독립 검사를 수행하고 미실행 항목과 가장 짧은 수동 확인 절차를 남깁니다. 시험하지 않은 조건을 통과로 표시하지 마세요. 수정 뒤에는 변경된 행동에 필요한 검사를 다시 하고 통과한 뒤 불필요한 광범위 반복은 피합니다.
 
 작업 약속
-짧게 소통하고 변경을 플레이어가 보는 결과에 연결하세요. 지침이 충돌하면 파일과 규칙을 밝히고 적용되는 우선순위로 해결합니다. 관련 기존 스킬을 사용하며 새 스킬은 필수가 아닙니다. 세션이 병렬 전문가를 허용하면 독립 작업, 명확한 소유와 통합 담당 하나가 있을 때만 사용하고 그렇지 않으면 단일 에이전트로 진행하세요.
+짧게 소통하고 변경을 플레이어가 보는 결과에 연결하세요.
+
+지침이 충돌하면 파일과 규칙을 밝히고 적용되는 우선순위로 해결합니다.
+
+관련 기존 스킬을 사용하며 새 스킬은 필수가 아닙니다.
+
+세션이 병렬 전문가를 허용하면 독립 작업, 명확한 소유와 통합 담당 하나가 있을 때만 사용하고 그렇지 않으면 단일 에이전트로 진행하세요.
 
 완료
-로컬 실행 게임, 소스와 lockfile, 정확한 설정, 수용 결과, 에셋 크레딧, 검토한 커밋과 준비된 Pages 워크플로를 전달합니다. 완료한 것, 실제 검사와 사람 플레이테스트가 필요한 부분을 보고하세요. 계정/저장소와 공개 출시가 이미 승인된 경우에만 배포하며, 아니라면 검토할 준비를 모두 마친 뒤 최종 권한을 요청합니다.</code></pre><a class="download-link" href="prompts/ko/astra-master-prompt.md" download>.md 다운로드 ↗</a></div>
+로컬 실행 게임, 소스와 lockfile, 정확한 설정, 수용 결과, 에셋 크레딧, 검토한 커밋과 준비된 Pages 워크플로를 전달합니다.
+
+완료한 것, 실제 검사와 사람 플레이테스트가 필요한 부분을 보고하세요.
+
+계정/저장소와 공개 출시가 이미 승인된 경우에만 배포하며, 아니라면 검토할 준비를 모두 마친 뒤 최종 권한을 요청합니다.</code></pre><a class="download-link" href="prompts/ko/astra-master-prompt.md" download>.md 다운로드 ↗</a></div>
 <h3 id="master-prompt-part-3">각 부분이 필요한 이유</h3>
-<p>플레이 경험은 방향을 정하고, 좌표 규칙은 통합 오류를 막으며, 종료 규칙은 경계 상황을 해결합니다. 단계는 부분 진행을 복구 가능하게 하고, 증거 요구는 완료를 검토 가능하게 하며, 제외 범위는 첫 게임을 완성할 만큼 작게 유지합니다.</p>
-<p>모델에 특화된 부분은 짧습니다. 주도성, 지침 충돌 처리, 위임이 도움이 될 때와 적절한 테스트 범위를 정합니다. 현재 Astra 안내가 이 문제를 다룹니다. 게임 규칙과 목표 수치는 이 책의 설계 선택입니다. <a class="citation" href="#source-01" title="OpenAI · GPT-6 Astra prompting best practices" aria-label="출처 01: OpenAI · GPT-6 Astra prompting best practices">[01]</a></p>
+<ul>
+<li>플레이 경험은 방향을 정하고, 좌표 규칙은 통합 오류를 막으며, 종료 규칙은 경계 상황을 해결합니다.</li>
+<li>단계는 부분 진행을 복구 가능하게 하고, 증거 요구는 완료를 검토 가능하게 하며, 제외 범위는 첫 게임을 완성할 만큼 작게 유지합니다.</li>
+</ul>
+<p>모델에 특화된 부분은 짧습니다. 주도성, 지침 충돌 처리, 위임이 도움이 될 때와 적절한 테스트 범위를 정합니다.</p>
+<p>현재 Astra 안내가 이 문제를 다룹니다. 게임 규칙과 목표 수치는 이 책의 설계 선택입니다. <a class="citation" href="#source-01" title="OpenAI · GPT-6 Astra prompting best practices" aria-label="출처 01: OpenAI · GPT-6 Astra prompting best practices">[01]</a></p>
 <h3 id="master-prompt-part-4">증거로 진행 중인 작업 조정하기</h3>
 <p>결과가 아쉽다고 매번 처음부터 다시 시작하지 마세요. 현재 리비전, 관찰된 문제, 기대 행동과 허용된 변경 범위를 명시해 수정합니다. 구체적인 실패를 고치는 동안 전체 목표는 유지하세요.</p>
 <div class="prompt-block"><div class="prompt-bar"><span>바로 사용하기 · repair-prompt.md</span><button type="button" class="copy-button" aria-label="프롬프트 복사: repair-prompt.md">프롬프트 복사</button></div><pre tabindex="0"><code># 관찰된 게임 문제 하나 수정
@@ -588,14 +1112,17 @@ M5: /signal-garden/ 프로덕션 검사, 중요한 실패 수정과 출시 워�
 <p class="lead">세계를 넓히기 전에 플레이 루프를 완성하세요.</p>
 <p>아래 순서는 구현 제안입니다. 단계마다 실행 가능한 결과와 증거를 정하고, 의존성이나 기존 프로젝트에 따라 순서를 조정합니다. 단계 통과는 확인 지점이며 이미 승인된 나머지 작업을 위해 다시 허락을 받으라는 뜻은 아닙니다.</p>
 <h3 id="milestones-part-1">M0 · 재현 가능한 프로젝트</h3>
-<p>폴더와 지침을 확인하고 최소 앱을 구성합니다. 정확한 런타임과 패키지 버전, 빌드 명령을 기록하고 기획, 수용 기준과 실행 안내를 더합니다. 실행해서 가장 단순한 장면을 확인하세요. 설치나 브라우저 접근이 막히면 한계를 정확히 밝히고 독립적인 작업을 계속합니다.</p>
+<p>폴더와 지침을 확인하고 최소 앱을 구성합니다. 정확한 런타임과 패키지 버전, 빌드 명령을 기록하고 기획, 수용 기준과 실행 안내를 더합니다.</p>
+<p>실행해서 가장 단순한 장면을 확인하세요. 설치나 브라우저 접근이 막히면 한계를 정확히 밝히고 독립적인 작업을 계속합니다.</p>
 <p><strong>증거:</strong> 새 환경에서 README를 따라 설정할 수 있고 빌드가 성공하며 바닥, 카메라와 플레이어 임시 형태가 보입니다. 최종 타이틀 화면이나 거대한 컴포넌트 라이브러리에 시간을 쓰지 마세요.</p>
 <h3 id="milestones-part-2">M1 · 이해하기 쉬운 이동</h3>
-<p>키보드 입력, 평면 공간, 충돌 경계와 높은 고정 카메라를 만듭니다. 대각 이동을 정규화하세요. 브라우저 애니메이션 콜백은 대체로 화면 갱신을 따르며 배경 탭에서는 멈춥니다. 경과 시간을 사용하고 포커스 상실 때 입력을 지우며 정지한 뒤, 큰 시간 점프 없이 명시적으로 재개합니다. <a class="citation" href="#source-43" title="MDN · requestAnimationFrame" aria-label="출처 43: MDN · requestAnimationFrame">[43]</a></p>
+<p>키보드 입력, 평면 공간, 충돌 경계와 높은 고정 카메라를 만듭니다. 대각 이동을 정규화하세요.</p>
+<p>브라우저 애니메이션 콜백은 대체로 화면 갱신을 따르며 배경 탭에서는 멈춥니다. 경과 시간을 사용하고 포커스 상실 때 입력을 지우며 정지한 뒤, 큰 시간 점프 없이 명시적으로 재개합니다. <a class="citation" href="#source-43" title="MDN · requestAnimationFrame" aria-label="출처 43: MDN · requestAnimationFrame">[43]</a></p>
 <p><strong>증거:</strong> 실제 키로 올바르게 움직이고 경계가 막으며 대각·직선 속도가 같습니다. 카메라에 플레이 공간이 보입니다. 정지나 탭 전환 후 돌아왔을 때 구조물을 통과하며 순간 이동하지 않습니다.</p>
 <h3 id="milestones-part-3">M2 · 승리 루프 연결하기</h3>
 <p>셀 세 개, 비콘 활성화, 카운터, 시간과 승리 화면을 추가합니다. <code>title</code>, <code>playing</code>, <code>paused</code>, <code>won</code>, <code>lost</code>처럼 단일 기준 상태를 유지하세요. 전환을 모아서 UI, 오디오와 시뮬레이션이 종료 여부를 다르게 해석하지 않도록 합니다.</p>
-<p><strong>증거:</strong> 셀마다 한 번만 카운트되고 비콘에는 세 개가 모두 필요하며 범위 밖에서는 활성화되지 않습니다. 승리하면 시간과 이동이 멈춥니다. 정지나 승리 상태의 재시작은 초기화 후 <code>playing</code>으로 갑니다. 임시 아트로 플레이 가능한 승리 부분이며 도전 요소와 두 패배 조건은 M3에 남아 있습니다.</p>
+<p><strong>증거:</strong> 셀마다 한 번만 카운트되고 비콘에는 세 개가 모두 필요하며 범위 밖에서는 활성화되지 않습니다. 승리하면 시간과 이동이 멈춥니다.</p>
+<p>정지나 승리 상태의 재시작은 초기화 후 <code>playing</code>으로 갑니다. 임시 아트로 플레이 가능한 승리 부분이며 도전 요소와 두 패배 조건은 M3에 남아 있습니다.</p>
 <h3 id="milestones-part-4">M3 · 읽을 수 있는 압박 하나</h3>
 <p>순찰 드론, 체력, 무적 시간과 시간 초과 패배를 추가합니다. 경로와 피격 반응을 보여 주세요. 오류 재현을 위해 결정적인 순찰부터 만들고, 설계에 이득이 있을 때만 무작위성을 추가하며 테스트용 시드를 유지합니다.</p>
 <p><strong>증거:</strong> 접촉 피해가 맞고 지속 접촉은 쿨다운을 지킵니다. 체력 0과 시간 0이 각각 한 번의 패배를 만듭니다. 정지는 규칙대로 순찰과 쿨다운을 동결하고 패배 후 재시작은 깨끗한 라운드를 만듭니다.</p>
@@ -610,7 +1137,12 @@ M5: /signal-garden/ 프로덕션 검사, 중요한 실패 수정과 출시 워�
 <details class="chapter-evidence" id="evidence-milestones"><summary>출처 확인 · 이 장의 근거는 무엇인가?</summary><p>2026년 9월 14일 확인. 아래 링크는 명시된 범위를 뒷받침합니다. 이 책의 제안은 문서에 명시된 동작이나 측정 결과와 구분합니다.</p><ul class="evidence-records"><li><span class="evidence-basis">종합 및 해석</span><h4>재현 가능한 설정과 안정적인 이동</h4><p class="evidence-covers"><strong>해당 내용:</strong> <a href="#milestones">들어가며</a> · <a href="#milestones-part-1">M0 · 재현 가능한 프로젝트</a> · <a href="#milestones-part-2">M1 · 이해하기 쉬운 이동</a></p><p>커밋한 잠금 파일과 경과 시간 기반 애니메이션은 문서화된 동작이다. M0–M1은 백그라운드 시간에 대한 명시적 정지/재개 정책을 포함한 제안된 점검 지점이다.</p><p class="evidence-links"><a href="https://developers.openai.com/blog/how-to-build-games-with-astra" lang="en">OpenAI · Building games with Astra ↗</a> <a class="evidence-note-link" href="#source-04">[04: 출처 노트]</a><br><a href="https://docs.npmjs.com/cli/v11/commands/npm-ci" lang="en">npm · npm ci ↗</a> <a class="evidence-note-link" href="#source-42">[42: 출처 노트]</a><br><a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/requestAnimationFrame" lang="en">MDN · requestAnimationFrame ↗</a> <a class="evidence-note-link" href="#source-43">[43: 출처 노트]</a></p></li><li><span class="evidence-basis">이 책의 제안</span><h4>승리 가능한 작은 구현 후 패배 규칙 완성</h4><p class="evidence-covers"><strong>해당 내용:</strong> <a href="#milestones-part-3">M2 · 승리 루프 연결하기</a> · <a href="#milestones-part-4">M3 · 읽을 수 있는 압박 하나</a></p><p>M2는 의도적으로 미완성이다. 승리 반복, 타이머 표시, 재시작을 먼저 만든다. M3에서 드론/체력 압박과 두 패배 조건을 추가한다. 최종 구현은 게임 설계서의 단일 기준 규칙과 비교한다.</p><p class="evidence-links">이 책의 설계 제안입니다. 이 목표를 입증하는 외부 출처는 없으며, 실제 게임에서 평가해야 합니다.</p></li><li><span class="evidence-basis">종합 및 해석</span><h4>미술, 오디오, 움직임, 출시</h4><p class="evidence-covers"><strong>해당 내용:</strong> <a href="#milestones-part-5">M4 · 세계의 정체성 만들기</a> · <a href="#milestones-part-6">M5 · 출시 경로 입증하기</a></p><p>브라우저 문서는 자동 재생 처리와 동작 줄이기 감지를, Pages/Vite 문서는 배포 경로를 뒷받침한다. 시각 목표, 사람의 플레이테스트, 마일스톤 승인 조건은 책의 설계 제안이다.</p><p class="evidence-links"><a href="https://developers.openai.com/blog/how-to-build-games-with-astra" lang="en">OpenAI · Building games with Astra ↗</a> <a class="evidence-note-link" href="#source-04">[04: 출처 노트]</a><br><a href="https://developer.mozilla.org/en-US/docs/Web/Media/Guides/Autoplay" lang="en">MDN · Autoplay guide for media and Web Audio APIs ↗</a> <a class="evidence-note-link" href="#source-44">[44: 출처 노트]</a><br><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion" lang="en">MDN · prefers-reduced-motion ↗</a> <a class="evidence-note-link" href="#source-45">[45: 출처 노트]</a><br><a href="https://vite.dev/guide/static-deploy.html#github-pages" lang="en">Vite · Deploying a Static Site ↗</a> <a class="evidence-note-link" href="#source-12">[12: 출처 노트]</a><br><a href="https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages" lang="en">GitHub · Using custom workflows with GitHub Pages ↗</a> <a class="evidence-note-link" href="#source-13">[13: 출처 노트]</a></p></li></ul><a class="evidence-method" href="#review-notes">검토 방법과 수정 사항 보기 ↗</a></details></section>
 <section class="chapter" aria-labelledby="verify"><div class="chapter-kicker">장 13</div><h2 id="verify">직접 플레이할 게임 검증하기</h2>
 <p class="lead">빌드 로그는 이동 감각이 좋은지 알려 주지 않습니다.</p>
-<p>세 층의 증거를 사용하세요. <strong>논리 검사</strong>는 결정적인 규칙을, <strong>상호작용 검사</strong>는 실제 조작을 확인합니다. <strong>사람의 플레이테스트</strong>는 명확성, 감각, 도전과 매력을 판단합니다. 각 층은 다른 층이 답하지 못하는 질문을 다룹니다.</p>
+<p>세 층의 증거를 사용하세요.</p>
+<ul>
+<li><strong>논리 검사</strong>는 결정적인 규칙을, <strong>상호작용 검사</strong>는 실제 조작을 확인합니다.</li>
+<li><strong>사람의 플레이테스트</strong>는 명확성, 감각, 도전과 매력을 판단합니다.</li>
+</ul>
+<p>각 층은 다른 층이 답하지 못하는 질문을 다룹니다.</p>
 <h3 id="verify-part-1">핵심 수용 기준은 짧게</h3>
 <div class="table-wrap" tabindex="0" role="region" aria-label="비교표. 작은 화면에서는 가로로 스크롤하세요"><table><thead><tr><th>동작</th><th>검사 행동</th><th>기대 증거</th></tr></thead><tbody>
 <tr><td>이동</td><td>직선, 대각선, 각 경계로 이동.</td><td>일관된 속도와 충돌, 이탈이나 카메라 가림 없음.</td></tr>
@@ -636,7 +1168,8 @@ M5: /signal-garden/ 프로덕션 검사, 중요한 실패 수정과 출시 워�
   drone: { x: -4.0, z: 1.0 }
 }</code></pre>
 <h3 id="verify-part-3">성능 관찰 정의하기</h3>
-<p>기기, 브라우저, 창 크기와 품질 설정을 명시하세요. 초기 실험은 워밍업 후 정상 플레이 60초 동안 프레임 시간 95백분위가 33ms 미만인 것을 목표로 할 수 있습니다. 약 30fps 예산에 해당하는 제안이며 측정 결과나 보편적 요구는 아닙니다. 평균에 가려지는 로딩 끊김은 별도로 기록하세요.</p>
+<p>기기, 브라우저, 창 크기와 품질 설정을 명시하세요. 초기 실험은 워밍업 후 정상 플레이 60초 동안 프레임 시간 95백분위가 33ms 미만인 것을 목표로 할 수 있습니다.</p>
+<p>약 30fps 예산에 해당하는 제안이며 측정 결과나 보편적 요구는 아닙니다. 평균에 가려지는 로딩 끊김은 별도로 기록하세요.</p>
 <p>무엇을 측정했는지 설명하세요. <code>requestAnimationFrame</code> 콜백 사이 간격은 메인 스레드의 콜백 주기이며 GPU 렌더링 시간이 아닙니다. 탭을 전경에 두고 표본 수집 방법을 기록하며 배경 정지는 따로 취급해야 비교가 의미 있습니다. <a class="citation" href="#source-43" title="MDN · requestAnimationFrame" aria-label="출처 43: MDN · requestAnimationFrame">[43]</a></p>
 <p>목표에 못 미치면 화질을 낮추기 전에 증거를 모으세요. 드로 콜, 기하, 그림자, 해상도와 업데이트 작업을 비교하고 가능성 높은 병목 하나를 바꿔 같은 표본을 다시 측정합니다. 코드가 짧아졌다는 이유로 최적화 성공을 주장하지 마세요.</p>
 <p><strong>측정 한계:</strong> 콜백 간격은 메인 스레드의 콜백 주기를 측정하며 모든 렌더링 프레임이 표시되었다고 입증하지 않습니다. 백분위 추정 방식(예: 정렬된 표본의 인덱스 ceil(0.95 × N) − 1), 표본 수, 긴 지연도 보고하세요. 이는 책에서 제안하는 보고 규칙입니다.</p>
@@ -667,19 +1200,30 @@ M5: /signal-garden/ 프로덕션 검사, 중요한 실패 수정과 출시 워�
 <tr><td>P3 · 현재 상황 반영</td><td>이 리비전에서 북쪽 화단이 로봇을 가린다. 규칙을 유지하고 카메라나 가림 처리를 조정해 같은 경로 비교.</td><td>현재 빌드의 증거로 변경을 제한.</td></tr>
 </tbody></table></div><p>P0–P2는 명세를 보완하지만 P3는 기존 리비전의 별도 수정 작업이며 항상 더 좋은 초기 프롬프트가 아닙니다.</p>
 <h3 id="refine-part-2">평가표로 의견 차이 드러내기</h3>
-<p>각 항목을 0–2로 평가합니다. <strong>0</strong>은 없거나 고장, <strong>1</strong>은 있지만 불안정, <strong>2</strong>는 명시된 시험에서 확인됨입니다. 점수마다 메모와 증거를 붙이세요. 점수는 대화를 돕는 수단이며 재미의 객관적 척도가 아닙니다.</p>
+<p>각 항목을 0–2로 평가합니다. <strong>0</strong>은 없거나 고장, <strong>1</strong>은 있지만 불안정, <strong>2</strong>는 명시된 시험에서 확인됨입니다.</p>
+<p>점수마다 메모와 증거를 붙이세요. 점수는 대화를 돕는 수단이며 재미의 객관적 척도가 아닙니다.</p>
 <ul><li><strong>명확성:</strong> 목표와 현재 상태를 이해함.</li><li><strong>조작:</strong> 일관된 이동 반응과 이를 돕는 카메라.</li><li><strong>완결성:</strong> 승패, 정지와 안정적인 재시작.</li><li><strong>피드백:</strong> 수집, 피해와 비콘 준비를 인지함.</li><li><strong>도전:</strong> 경로와 위험이 읽기 쉬운 결정을 만듦.</li><li><strong>일관성:</strong> 화면, 소리와 UI가 같은 분위기를 지원.</li><li><strong>신뢰성:</strong> 지정한 기기에서 공개 빌드가 적절히 실행.</li><li><strong>유지보수성:</strong> 새 세션이 빌드를 재현하고 다음 변경을 찾음.</li></ul>
 <h3 id="refine-part-3">공정한 실험으로 비교하기</h3>
 <p>메타 프롬프트의 효과는 같은 깨끗한 시작 리비전에서 직접 요청과 비교하세요. 기획, 모델, 도구, 플랫폼과 노력 예산을 동일하게 유지합니다. 사용한 프롬프트, 실제 비용, 시간, 수동 개입, 통과한 단계와 회귀를 기록하세요.</p>
-<p>가능하면 어떤 프롬프트가 만들었는지 모르는 상태에서 플레이 결과를 평가합니다. 에이전트 실행은 달라질 수 있으므로 한 번 이상 반복하세요. 운 좋은 한 결과로 보편적 승자를 선언하지 마세요. 추가 에이전트나 더 큰 예산을 썼다면 문구의 효과와 구분해 보고합니다.</p>
+<p>가능하면 어떤 프롬프트가 만들었는지 모르는 상태에서 플레이 결과를 평가합니다. 에이전트 실행은 달라질 수 있으므로 한 번 이상 반복하세요.</p>
+<p>운 좋은 한 결과로 보편적 승자를 선언하지 마세요. 추가 에이전트나 더 큰 예산을 썼다면 문구의 효과와 구분해 보고합니다.</p>
 <h3 id="refine-part-4">계속 도움이 되는 개선만 유지하기</h3>
-<p>반복되는 규칙은 AGENTS.md에, 기존 도구와 문서에 없는 반복 절차는 스킬에 적합할 수 있습니다. 일회성 수정은 작업 기록에 남기세요. 플레이테스트로 설계가 바뀌면 기획을 갱신하고 같은 규칙을 여러 층에 기본적으로 복제하지 마세요.</p>
-<p>같은 단계에서 활성화보다 패배를 먼저 처리하는 규칙은 기준 수용 문서에 속합니다. 반복해서 놓친다면 검토 스킬이 그 문서를 가리킬 수 있습니다. “화단을 동쪽으로 두 단위 이동”은 현재 설계 변경에 속합니다. 모델을 바꿨다면 어제 필요했던 우회 지침이 오늘도 필요한지 다시 평가하세요.</p>
+<ul>
+<li>반복되는 규칙은 AGENTS.md에, 기존 도구와 문서에 없는 반복 절차는 스킬에 적합할 수 있습니다.</li>
+<li>일회성 수정은 작업 기록에 남기세요.</li>
+<li>플레이테스트로 설계가 바뀌면 기획을 갱신하고 같은 규칙을 여러 층에 기본적으로 복제하지 마세요.</li>
+</ul>
+<p>같은 단계에서 활성화보다 패배를 먼저 처리하는 규칙은 기준 수용 문서에 속합니다. 반복해서 놓친다면 검토 스킬이 그 문서를 가리킬 수 있습니다.</p>
+<p>“화단을 동쪽으로 두 단위 이동”은 현재 설계 변경에 속합니다. 모델을 바꿨다면 어제 필요했던 우회 지침이 오늘도 필요한지 다시 평가하세요.</p>
 <div class="exercise"><h3 id="refine-part-5">회고</h3><p>출시 뒤 가장 도움 된 지침, 가장 많은 재작업을 만든 실패, 다음에 시험할 작업 방식 변경 하나를 세 문장으로 쓰세요. 각 문장을 실제 관찰에 연결합니다.</p></div>
 <h3 id="refine-part-6">게임 버전과 프롬프트 버전을 따로 개선하기</h3>
-<p>제안한 반복은 유용합니다. V1을 만들고 수정한 뒤 프롬프트에서 배워 V2를 만듭니다. 다만 대화를 이어 붙이지 말고 <strong>프롬프트와 관찰된 결과</strong>를 함께 남기세요. V2는 개선된 코드, 자산, 사람의 판단도 물려받습니다. V2의 개선만으로 P2가 P1보다 좋다고 입증할 수 없습니다. 프롬프트 수정은 입력 지침을 바꾸며 Astra의 모델 가중치를 갱신하지 않습니다.</p>
+<p>제안한 반복은 유용합니다. V1을 만들고 수정한 뒤 프롬프트에서 배워 V2를 만듭니다.</p>
+<p>다만 대화를 이어 붙이지 말고 <strong>프롬프트와 관찰된 결과</strong>를 함께 남기세요. V2는 개선된 코드, 자산, 사람의 판단도 물려받습니다.</p>
+<p>V2의 개선만으로 P2가 P1보다 좋다고 입증할 수 없습니다. 프롬프트 수정은 입력 지침을 바꾸며 Astra의 모델 가중치를 갱신하지 않습니다.</p>
 <ol><li><strong>기준선을 저장합니다.</strong> 커밋, 프롬프트 버전, 모델 설정, 도구, 스킬, 완료 조건을 기록합니다.</li><li><strong>만들고 진단합니다.</strong> 실패, 검증된 수정, 근거, 개입 횟수를 남깁니다.</li><li><strong>확인된 교훈을 추립니다.</strong> 사실과 추측을 구분하고 실패한 조언과 낡은 요구를 버립니다.</li><li><strong>교훈을 한 곳에 저장합니다.</strong> 규칙은 기획서, 회귀는 테스트, 관례는 AGENTS.md에 둡니다. 반복해서 유용한 절차는 스킬이 될 수 있습니다.</li><li><strong>P2를 작성합니다.</strong> 파일을 참조하고 다음 결과를 명시합니다. 더 짧은 프롬프트가 더 좋을 수도 있습니다.</li><li><strong>필요할 때 비교합니다.</strong> 같은 커밋, 문서, 모델, 도구, 예산에서 P1과 P2를 별도로 실행합니다. 유망한 비교는 반복하고 P2 수정에 쓰지 않은 상황도 포함합니다. 실제 게임은 계속 점진적으로 개발합니다.</li></ol>
-<p>예를 들어 재시작 실패는 회귀 검사와 완료 규칙으로 남깁니다. P2는 “다음 이정표를 구현하고 완료 규칙을 유지하세요”라고 참조할 수 있습니다. P2만 수정된 문서를 받았다면 문구만이 아니라 개선된 <em>지침 묶음</em>을 시험한 것입니다. 실행 전에 무엇을 비교할지 정하세요. 이는 작업별 평가 지침을 참고한 책의 실험 설계입니다. <a class="citation" href="#source-52" title="OpenAI · Evaluation best practices" aria-label="출처 52: OpenAI · Evaluation best practices">[52]</a></p>
+<p>예를 들어 재시작 실패는 회귀 검사와 완료 규칙으로 남깁니다. P2는 “다음 이정표를 구현하고 완료 규칙을 유지하세요”라고 참조할 수 있습니다.</p>
+<p>P2만 수정된 문서를 받았다면 문구만이 아니라 개선된 <em>지침 묶음</em>을 시험한 것입니다. 실행 전에 무엇을 비교할지 정하세요.</p>
+<p>이는 작업별 평가 지침을 참고한 책의 실험 설계입니다. <a class="citation" href="#source-52" title="OpenAI · Evaluation best practices" aria-label="출처 52: OpenAI · Evaluation best practices">[52]</a></p>
 <figure class="diagram" id="diagram-prompt-learning"><figcaption><span class="diagram-label">MERMAID · 편집 가능한 흐름도</span><strong>연결된 두 개선 반복</strong></figcaption><p class="diagram-description">게임 개발은 계속하고 프롬프트는 같은 기준선에서 별도로 비교합니다.</p><div class="diagram-canvas" tabindex="0" role="region" aria-label="연결된 두 개선 반복; 필요하면 가로로 스크롤하세요"><p class="diagram-status">도표를 불러오는 중입니다. 아래에서 설명과 Mermaid 소스를 볼 수 있습니다.</p></div><div class="diagram-actions"><button type="button" class="diagram-copy">Mermaid 복사</button><a href="diagrams/ko/prompt-learning.mmd" download>.mmd 다운로드 ↗</a><a class="diagram-svg" hidden>SVG 다운로드 ↗</a></div><details class="diagram-source"><summary>Mermaid 소스 읽기 또는 편집</summary><pre tabindex="0"><code>flowchart TD
   accTitle: 연결된 두 개선 반복
   accDescr: 게임 개발은 계속하고 프롬프트는 같은 기준선에서 별도로 비교합니다.
@@ -700,9 +1244,11 @@ M5: /signal-garden/ 프로덕션 검사, 중요한 실패 수정과 출시 워�
 <details class="chapter-evidence" id="evidence-refine"><summary>출처 확인 · 이 장의 근거는 무엇인가?</summary><p>2026년 9월 14일 확인. 아래 링크는 명시된 범위를 뒷받침합니다. 이 책의 제안은 문서에 명시된 동작이나 측정 결과와 구분합니다.</p><ul class="evidence-records"><li><span class="evidence-basis">이 책의 제안</span><h4>실패 분류, 프롬프트 수정, 평가표</h4><p class="evidence-covers"><strong>해당 내용:</strong> <a href="#refine">들어가며</a> · <a href="#refine-part-1">프롬프트를 개선하는 예</a> · <a href="#refine-part-2">평가표로 의견 차이 드러내기</a></p><p>예제와 0–2점 평가표는 직접 작성한 비교 도구다. 사람의 판단을 드러내야 한다. P0–P3 순서는 측정 실험의 결과가 아니다.</p><p class="evidence-links"><a href="https://developers.openai.com/blog/how-to-build-games-with-astra" lang="en">OpenAI · Building games with Astra ↗</a> <a class="evidence-note-link" href="#source-04">[04: 출처 노트]</a><br><a href="https://www.anthropic.com/engineering/harness-design-long-running-apps" lang="en">Anthropic · Harness design for long-running application development ↗</a> <a class="evidence-note-link" href="#source-21">[21: 출처 노트]</a></p></li><li><span class="evidence-basis">종합 및 해석</span><h4>공정한 비교와 불필요한 지침 제거</h4><p class="evidence-covers"><strong>해당 내용:</strong> <a href="#refine-part-3">공정한 실험으로 비교하기</a> · <a href="#refine-part-4">계속 도움이 되는 개선만 유지하기</a> · <a href="#refine-part-5">회고</a></p><p>모델과 작업마다 다른 결과는 시작 리비전, 도구, 예산을 통제할 이유가 된다. 반복과 투명한 개입 기록이 비교를 개선한다. 책은 새 Astra 벤치마크를 보고하지 않는다.</p><p class="evidence-links"><a href="https://developers.openai.com/blog/rethinking-skills-and-prompts-for-gpt-6-astra" lang="en">OpenAI · Rethinking skills and prompts for GPT-6 Astra ↗</a> <a class="evidence-note-link" href="#source-17">[17: 출처 노트]</a><br><a href="https://www.skillsbench.ai/" lang="en">SkillsBench · Agent leaderboard, v1.1 ↗</a> <a class="evidence-note-link" href="#source-18">[18: 출처 노트]</a><br><a href="https://arxiv.org/html/2605.29794v1" lang="en">SkillsInjector · Dynamic Skill Context Construction for LLM Agents ↗</a> <a class="evidence-note-link" href="#source-19">[19: 출처 노트]</a><br><a href="https://arxiv.org/html/2608.23417v1" lang="en">SkillAlchemy · Open-World Agent Skill Creation ↗</a> <a class="evidence-note-link" href="#source-20">[20: 출처 노트]</a><br><a href="https://www.anthropic.com/engineering/harness-design-long-running-apps" lang="en">Anthropic · Harness design for long-running application development ↗</a> <a class="evidence-note-link" href="#source-21">[21: 출처 노트]</a><br><a href="https://arxiv.org/html/2603.15401v1" lang="en">SWE-Skills-Bench · Do Agent Skills Actually Help in Real-World Software Engineering? ↗</a> <a class="evidence-note-link" href="#source-22">[22: 출처 노트]</a></p></li><li><span class="evidence-basis">종합 및 해석</span><h4>프롬프트 학습과 게임 개선</h4><p class="evidence-covers"><strong>해당 내용:</strong> <a href="#refine-part-6">게임 버전과 프롬프트 버전을 따로 개선하기</a></p><p>게임 진행의 혼란 변수를 프롬프트 비교와 분리합니다. 수치와 백분율은 예시이며 실험을 실행하지 않았습니다. 종료 안내는 해당 제품에 한정됩니다.</p><p class="evidence-links"><a href="https://developers.openai.com/api/docs/guides/evaluation-best-practices" lang="en">OpenAI · Evaluation best practices ↗</a> <a class="evidence-note-link" href="#source-52">[52: 출처 노트]</a><br><a href="https://developers.openai.com/api/docs/guides/prompt-optimizer" lang="en">OpenAI · Prompt optimizer and retirement notice ↗</a> <a class="evidence-note-link" href="#source-53">[53: 출처 노트]</a></p></li></ul><a class="evidence-method" href="#review-notes">검토 방법과 수정 사항 보기 ↗</a></details></section>
 <section class="chapter" aria-labelledby="publish"><div class="chapter-kicker">장 15</div><h2 id="publish">출시하고 학습 루프 마무리하기</h2>
 <p class="lead">출시는 작동하는 URL과 복구 가능한 리비전입니다.</p>
-<p>GitHub Pages는 제안한 Vite 게임의 정적 빌드 파일을 제공합니다. 게임 API를 위한 비공개 서버 런타임은 없습니다. 공개 JavaScript에 넣은 키는 방문자에게 전달되므로 서비스 키는 별도 백엔드나 로컬 도구에 보관하세요. Signal Garden 첫 버전에는 계정이나 온라인 서비스가 필요 없습니다. <a class="citation" href="#source-46" title="GitHub · What is GitHub Pages?" aria-label="출처 46: GitHub · What is GitHub Pages?">[46]</a></p>
+<p>GitHub Pages는 제안한 Vite 게임의 정적 빌드 파일을 제공합니다. 게임 API를 위한 비공개 서버 런타임은 없습니다.</p>
+<p>공개 JavaScript에 넣은 키는 방문자에게 전달되므로 서비스 키는 별도 백엔드나 로컬 도구에 보관하세요. Signal Garden 첫 버전에는 계정이나 온라인 서비스가 필요 없습니다. <a class="citation" href="#source-46" title="GitHub · What is GitHub Pages?" aria-label="출처 46: GitHub · What is GitHub Pages?">[46]</a></p>
 <h3 id="publish-part-1">1 · 저장소 경로 설정</h3>
-<p><code>signal-garden</code> 프로젝트의 일반적인 주소는 <code>https://YOUR_ACCOUNT.github.io/signal-garden/</code>입니다. Vite base를 맞추세요. 도메인 루트의 사용자 사이트는 다른 base를 사용합니다. 저장소 이름과 에셋 파일의 대소문자가 배포 호스트와 일치해야 합니다. <a class="citation" href="#source-12" title="Vite · Deploying a Static Site" aria-label="출처 12: Vite · Deploying a Static Site">[12]</a></p>
+<p><code>signal-garden</code> 프로젝트의 일반적인 주소는 <code>https://YOUR_ACCOUNT.github.io/signal-garden/</code>입니다. Vite base를 맞추세요.</p>
+<p>도메인 루트의 사용자 사이트는 다른 base를 사용합니다. 저장소 이름과 에셋 파일의 대소문자가 배포 호스트와 일치해야 합니다. <a class="citation" href="#source-12" title="Vite · Deploying a Static Site" aria-label="출처 12: Vite · Deploying a Static Site">[12]</a></p>
 <pre><code>// vite.config.ts — 게임 저장소 예제
 import { defineConfig } from 'vite';
 
@@ -715,28 +1261,40 @@ export default defineConfig({
 <p>이 책의 <a href="https://github.com/buicongnguyen/Better_skill/blob/main/.github/workflows/pages.yml">실제 워크플로</a>는 작은 정적 사이트 예제입니다. Vite 게임은 lockfile 설치와 자체 검사를 마친 뒤 <code>dist</code>를 업로드해야 합니다. 검토한 액션 버전이나 커밋 SHA를 고정하고 수정할 때 현재 공식 예시를 확인하세요.</p>
 <h3 id="publish-part-3">3 · 공개 의도 명확히 하기</h3>
 <p>로컬 게임이 작동하면 아래 출시 프롬프트의 계정과 저장소를 바꾸세요. 실제 대상으로 채워서 직접 보내야 그 공개 권한이 적용됩니다.</p>
-<div class="prompt-block"><div class="prompt-bar"><span>바로 사용하기 · release-prompt.md</span><button type="button" class="copy-button" aria-label="프롬프트 복사: release-prompt.md">프롬프트 복사</button></div><pre tabindex="0"><code># 검증한 게임을 GitHub Pages에 공개
+<div class="prompt-block"><div class="prompt-bar"><span>바로 사용하기 · release-prompt.md</span><button type="button" class="copy-button" aria-label="프롬프트 복사: release-prompt.md">프롬프트 복사</button></div><pre tabindex="0"><code>## 먼저 수정할 매개변수
+PROJECT_FOLDER: 현재 선택한 게임 폴더
+AGENT: Codex
+MODEL: GPT-6 Astra
+GITHUB_OWNER: [YOUR_ACCOUNT]
+REPOSITORY: signal-garden
+PUBLISH: YES
 
-아래 GitHub 계정과 저장소에 프로젝트를 공개하세요. 저장소가 없으면 공개 저장소 생성, 의도한 파일 커밋, 검토한 커밋 푸시, 이 저장소의 Pages 설정과 공개 배포를 허용합니다.
+## 선택지와 일관성
+- AGENT: Codex 또는 Claude Code를 선택하세요. 전송 전에 해당 앱에서 MODEL을 선택하고 Claude Code에는 사용 가능한 Claude 모델을 쓰세요. 이 줄은 실제 모델을 바꾸거나 도구 권한을 부여하지 않습니다.
+- PROJECT_FOLDER에서만 작업하세요. 실제 도구와 관련 프로젝트 지침을 확인하고 중요한 불일치는 의존 작업 전에 해결하세요.
+- PUBLISH: YES는 아래 설명한 공개 저장소/소스와 배포를 승인하고, NO는 로컬 출시 준비만 뜻합니다. 공개 전에 모든 대상 자리표시자를 해결하세요. GITHUB_OWNER와 REPOSITORY로 URL과 기준 경로를 계산하세요.
 
-Account: YOUR_ACCOUNT
-Repository: signal-garden
-Expected URL: https://YOUR_ACCOUNT.github.io/signal-garden/
+## 목표
+PUBLISH에 따라 이 게임을 GitHub Pages 출시용으로 준비하거나 공개하세요.
 
-실행 전 YOUR_ACCOUNT를 실제 대상 계정으로 바꾸세요. 미정이면 독립적인 출시 준비를 진행하면서 계정을 물어보고 추측하지 마세요.
+## 작업과 제약
+- 위 GITHUB_OWNER와 REPOSITORY 값을 사용하고 외부 공개 전에 자리표시자를 해결하세요.
+- 실제 저장소, 브랜치, 원격, 의도한 diff, 비밀 제외, 에셋 라이선스를 확인하세요. 무관한 작업을 보존하고 충돌하는 원격을 교체하거나 강제 푸시하지 마세요.
+- 기존 엔진을 유지하세요. Vite/Three.js는 설치·빌드 명령과 dist 출력을 확인하세요. Godot는 설치 버전, 웹 내보내기 지원, 실제 출력 디렉터리를 확인하고 생성된 파일명을 유지하세요. 공개 전에 정적 빌드가 작동하는지 검증하세요.
+- 프로젝트 사이트 URL은 실제 값으로 https://GITHUB_OWNER.github.io/REPOSITORY/ 를 계산하세요. Vite에서는 base를 /REPOSITORY/ 로 설정하고, 다른 엔진은 해당 경로에서 내보낸 에셋을 검증하세요.
+- 필요한 Pages 권한으로 프로젝트를 빌드하고 검증된 정적 출력 디렉터리만 업로드하는 GitHub Pages Actions 워크플로를 준비하세요.
+- PUBLISH가 YES이면 명시한 공개 GitHub 저장소가 없을 때 생성하고, 검토한 게임의 의도한 파일을 커밋·푸시하며 선택한 호스트에 공개 배포하도록 승인합니다. PUBLISH가 NO이면 로컬 준비 후 멈추고 남은 출시 단계를 보고하세요.
+- YES이면 권한이 허용할 때 GitHub Actions를 Pages 소스로 설정하고 정확히 푸시한 커밋의 워크플로를 확인하세요.
+- 공개 URL을 열고 에셋 및 실제 조작으로 전체 한 판을 도구가 허용할 때 검증하며 실행하지 못한 검사를 명시하세요.
 
-저장소, 원격, 작업 트리와 적용 지침을 확인합니다. 관계없는 변경을 보존하고 기존 원격 저장소를 덮어쓰지 마세요. 스테이징된 파일이 공개 대상이며 에셋 크레딧을 포함하는지 확인합니다. 인증정보, 로컬 환경과 허가 없는 에셋은 제외하세요.
-
-빌드와 범위 내 수용 검사를 실행하고 올바른 base를 설정합니다. 빌드·검사 후 공개 프로덕션 출력만 업로드하고 Pages에 배포하는 GitHub Actions 워크플로를 커밋하세요.
-
-의도한 브랜치에 푸시하고 실제 커밋의 실행을 확인해 범위 내 배포 실패를 고치세요. 공개 URL과 에셋을 확인합니다. 브라우저 도구가 있으면 실제 조작으로 핵심 루프를 실행하고 남은 수동 검사를 적으세요.
-
-최종 게임 URL, 저장소 링크, 커밋, 배포 결과와 짧은 검증 요약을 전달합니다. 대기 중 배포나 로컬 미리보기는 최종 공개 결과가 아닙니다.</code></pre><a class="download-link" href="prompts/ko/release-prompt.md" download>.md 다운로드 ↗</a></div>
+## 완료 조건
+PUBLISH=NO: 검증한 로컬 출시 패키지와 남은 단계. PUBLISH=YES: 검토한 커밋, 일치하는 성공 배포, 공개 URL, 실제 검증 기록. 완료할 수 없으면 구체적인 차단 요인을 보고하세요.</code></pre><a class="download-link" href="prompts/ko/release-prompt.md" download>.md 다운로드 ↗</a></div>
 <h3 id="publish-part-4">4 · 공개 결과 검증</h3>
 <ol><li>의도한 원격과 브랜치에 푸시됐는지 확인.</li><li>해당 커밋의 워크플로 확인. 대기 중은 성공한 배포가 아님.</li><li>배포 URL을 열고 프로덕션 에셋 요청 확인.</li><li>승리·패배 경로와 재시작을 플레이하고 정지·재개도 반복.</li><li>배포 커밋, 조작, 목표 브라우저와 한계를 출시 기록에 남기기.</li></ol>
 <p>배포가 실패하면 로그에서 구체적인 원인을 고치세요. 에셋 누락은 base와 대소문자, Godot 내보내기는 렌더러·파일명·브라우저 요구를 확인합니다. 권한 오류는 관계없는 코드를 바꾸기 전에 Pages 소스, 워크플로 권한과 저장소 설정을 확인하세요.</p>
 <h3 id="publish-part-5">5 · 돌아갈 경로 유지</h3>
-<p>마지막으로 검증한 출시 리비전을 기록하세요. 새 버전이 게임을 깨뜨리면 원인 변경을 새 커밋으로 되돌리고 워크플로가 수정 상태를 공개하게 합니다. 실제 URL을 다시 확인하세요. 롤백 명령은 복구 과정의 한 단계일 뿐입니다.</p>
+<p>마지막으로 검증한 출시 리비전을 기록하세요. 새 버전이 게임을 깨뜨리면 원인 변경을 새 커밋으로 되돌리고 워크플로가 수정 상태를 공개하게 합니다.</p>
+<p>실제 URL을 다시 확인하세요. 롤백 명령은 복구 과정의 한 단계일 뿐입니다.</p>
 <div class="callout"><div class="callout-label">전체 과정</div><p>플레이 경험 선택 → 관련 방식 비교 → 현재 출처 검증 → 저장소와 기획 준비 → 적합한 기존 스킬 사용 → 짧은 프롬프트 또는 초기화 프롬프트 선택 → 플레이 가능한 단계 구현 → 실제 게임 검사 → 공개 → 도움이 되는 작업 방식만 유지.</p></div>
 <p>오래 남는 결과는 게임뿐 아니라 다음 시도를 이해하고 검토하고 개선하기 쉽게 만드는 과정입니다.</p>
 <p>다음 두 장에서는 <a href="#thinking-flows">편집 가능한 결정·데이터 흐름</a>을 그리고 <a href="#video-workflows">짧은 게임 예고편</a>에 적용합니다.</p>
@@ -747,7 +1305,9 @@ Expected URL: https://YOUR_ACCOUNT.github.io/signal-garden/
 <p>유용한 사고 흐름은 목표 결과, 미지수, 행동과 계획을 바꾸는 증거를 보여 줍니다. 이는 모델의 비공개 추론을 재구성하는 것이 아니라 <strong>관찰 가능한 작업 결정</strong>입니다. 도표는 이 책의 제안이며 Astra와 작업을 논의하고 나중에 검토할 때 사용합니다.</p>
 <h3 id="thinking-flows-part-1">도표 읽고 재사용하기</h3>
 <p>사각형은 행동이나 결과물, 마름모는 결정, 이름 붙인 화살표는 다음으로 이동시키는 조건이나 정보입니다. 반복은 새 증거에 따라 행동을 바꾼다는 뜻이며 무한 반복하라는 뜻은 아닙니다. 완료 조건과 노력 한도를 정하세요.</p>
-<p>실제 <strong>Mermaid</strong> 텍스트 정의를 SVG로 그린 도표입니다. 설명, 복사 버튼, 편집 가능한 <code>.mmd</code>와 렌더링 후 SVG 다운로드가 있습니다. 넓은 그래프는 스크롤하거나 <strong>화면에 맞춤</strong>으로 전체를 보세요. 도표는 과정을 설명하며 직접 실행하지 않습니다. Mermaid 문서에서 삽입과 렌더링을 설명합니다. <a class="citation" href="#source-36" title="Mermaid · Usage" aria-label="출처 36: Mermaid · Usage">[36]</a></p>
+<p>실제 <strong>Mermaid</strong> 텍스트 정의를 SVG로 그린 도표입니다. 설명, 복사 버튼, 편집 가능한 <code>.mmd</code>와 렌더링 후 SVG 다운로드가 있습니다.</p>
+<p>넓은 그래프는 스크롤하거나 <strong>화면에 맞춤</strong>으로 전체를 보세요. 도표는 과정을 설명하며 직접 실행하지 않습니다.</p>
+<p>Mermaid 문서에서 삽입과 렌더링을 설명합니다. <a class="citation" href="#source-36" title="Mermaid · Usage" aria-label="출처 36: Mermaid · Usage">[36]</a></p>
 <h3 id="thinking-flows-part-2">1 · 사고와 결정의 반복</h3>
 <figure class="diagram" id="diagram-thinking-loop"><figcaption><span class="diagram-label">MERMAID · 편집 가능한 흐름도</span><strong>판단과 의사결정의 반복</strong></figcaption><p class="diagram-description">결과를 정하고 중요한 미지수를 조사한 뒤 작은 결과를 만들어 근거로 판단한다. 승인 조건을 충족하면 결정을 기록한다. 예산이 끝나거나 입력이 없으면 부분 결과와 장애물을 남긴다.</p><div class="diagram-canvas" tabindex="0" role="region" aria-label="판단과 의사결정의 반복; 필요하면 가로로 스크롤하세요"><p class="diagram-status">도표를 불러오는 중입니다. 아래에서 설명과 Mermaid 소스를 볼 수 있습니다.</p></div><div class="diagram-actions"><button type="button" class="diagram-copy">Mermaid 복사</button><a href="diagrams/ko/thinking-loop.mmd" download>.mmd 다운로드 ↗</a><a class="diagram-svg" hidden>SVG 다운로드 ↗</a></div><details class="diagram-source"><summary>Mermaid 소스 읽기 또는 편집</summary><pre tabindex="0"><code>flowchart TD
   accTitle: 판단과 의사결정의 반복
@@ -765,7 +1325,8 @@ Expected URL: https://YOUR_ACCOUNT.github.io/signal-garden/
   H --&gt;|아니요| I[&quot;실패 분류&quot;]
   I --&gt; K
   H --&gt;|예| J[&quot;결정 기록 후 완료&quot;]</code></pre></details><noscript><p>도표를 그리려면 JavaScript가 필요합니다. 설명과 소스를 읽거나 소스 파일을 다운로드할 수 있습니다.</p></noscript></figure>
-<p><strong>Signal Garden 예:</strong> “북쪽 화단 뒤에서 로봇이 보이지 않는다”는 유용한 관찰입니다. 그 경로를 재현하고 카메라 조정과 작은 가림 처리를 비교해 로봇을 잘 보이게 하는 최소 변경을 고르세요. 해당 경로와 주변 경로가 되면 멈춥니다. 적을 추가해도 이 문제는 해결되지 않습니다.</p>
+<p><strong>Signal Garden 예:</strong> “북쪽 화단 뒤에서 로봇이 보이지 않는다”는 유용한 관찰입니다. 그 경로를 재현하고 카메라 조정과 작은 가림 처리를 비교해 로봇을 잘 보이게 하는 최소 변경을 고르세요.</p>
+<p>해당 경로와 주변 경로가 되면 멈춥니다. 적을 추가해도 이 문제는 해결되지 않습니다.</p>
 <p>Astra에 <em>무엇이 바뀌었고, 어떤 증거가 있으며, 무엇이 아직 불확실하고, 다음에 무엇을 할지</em> 짧게 기록하도록 하세요. 긴 설명은 플레이 가능한 결과를 대신하지 않습니다. 작은 편집은 가볍게, 전체 게임에 영향을 주는 결정은 더 명확하게 다룹니다.</p>
 <h3 id="thinking-flows-part-3">2 · 프롬프트, 맥락, 스킬과 도구의 데이터 흐름</h3>
 <figure class="diagram" id="diagram-context-data"><figcaption><span class="diagram-label">MERMAID · 편집 가능한 흐름도</span><strong>정보가 전달되는 곳</strong></figcaption><p class="diagram-description">기획서는 의도를, 관련 파일과 문서는 사실을, 선택적 스킬은 절차를 제공한다. 도구가 산출물을 바꾸고 검토 결과가 다음 결정의 근거로 돌아온다.</p><div class="diagram-canvas" tabindex="0" role="region" aria-label="정보가 전달되는 곳; 필요하면 가로로 스크롤하세요"><p class="diagram-status">도표를 불러오는 중입니다. 아래에서 설명과 Mermaid 소스를 볼 수 있습니다.</p></div><div class="diagram-actions"><button type="button" class="diagram-copy">Mermaid 복사</button><a href="diagrams/ko/context-data.mmd" download>.mmd 다운로드 ↗</a><a class="diagram-svg" hidden>SVG 다운로드 ↗</a></div><details class="diagram-source"><summary>Mermaid 소스 읽기 또는 편집</summary><pre tabindex="0"><code>flowchart TD
@@ -779,7 +1340,12 @@ Expected URL: https://YOUR_ACCOUNT.github.io/signal-garden/
   F --&gt; G[&quot;테스트와 사람의 검토&quot;]
   G --&gt;|관찰한 결과| H[&quot;근거와 결정 기록&quot;]
   H --&gt;|다음 변경의 맥락| D</code></pre></details><noscript><p>도표를 그리려면 JavaScript가 필요합니다. 설명과 소스를 읽거나 소스 파일을 다운로드할 수 있습니다.</p></noscript></figure>
-<p>기획서는 원하는 경험을, 저장소 파일은 실제 규칙과 구현을 제공합니다. 적합한 스킬은 재사용 절차를 보완하고 도구는 행동합니다. 결과는 다음 결정의 증거로 돌아옵니다. 좋은 프롬프트가 없는 브라우저 권한을 주지는 않고, API 연결이 모호한 게임 규칙을 정해 주지도 않습니다.</p>
+<ul>
+<li>기획서는 원하는 경험을, 저장소 파일은 실제 규칙과 구현을 제공합니다.</li>
+<li>적합한 스킬은 재사용 절차를 보완하고 도구는 행동합니다.</li>
+<li>결과는 다음 결정의 증거로 돌아옵니다.</li>
+</ul>
+<p>좋은 프롬프트가 없는 브라우저 권한을 주지는 않고, API 연결이 모호한 게임 규칙을 정해 주지도 않습니다.</p>
 <div class="table-wrap" tabindex="0" role="region" aria-label="비교표. 작은 화면에서는 가로로 스크롤하세요"><table><thead><tr><th>층</th><th>역할</th><th>예</th></tr></thead><tbody>
 <tr><td>프롬프트 / 기획</td><td>의도와 수용 조건</td><td>셀 세 개를 모은 뒤 비콘 활성화.</td></tr>
 <tr><td>저장소 맥락</td><td>현재 사실과 규칙</td><td>구현된 상태 머신과 수용 문서.</td></tr>
@@ -805,7 +1371,8 @@ Expected URL: https://YOUR_ACCOUNT.github.io/signal-garden/
   H --&gt;|예| I[&quot;좁은 맞춤 스킬 하나 시험&quot;]
   H --&gt;|아니요| J[&quot;기존 지침 재사용&quot;]
   A --&gt;|반복 이벤트 행동| K[&quot;범위가 좁은 훅 고려&quot;]</code></pre></details><noscript><p>도표를 그리려면 JavaScript가 필요합니다. 설명과 소스를 읽거나 소스 파일을 다운로드할 수 있습니다.</p></noscript></figure>
-<p>새 스킬을 쓰기 전에 실제 기능을 확인하세요. 기존 스킬이 제공되는지, 선택됐는지, 누락된 지식이 있는지 봅니다. <a href="#skills">스킬 장</a>에서 통제 비교를 설명합니다. Astra 안내는 중복 지침을 재평가하면서도 전문 절차의 역할을 인정합니다. <a class="citation" href="#source-17" title="OpenAI · Rethinking skills and prompts for GPT-6 Astra" aria-label="출처 17: OpenAI · Rethinking skills and prompts for GPT-6 Astra">[17]</a></p>
+<p>새 스킬을 쓰기 전에 실제 기능을 확인하세요. 기존 스킬이 제공되는지, 선택됐는지, 누락된 지식이 있는지 봅니다.</p>
+<p><a href="#skills">스킬 장</a>에서 통제 비교를 설명합니다. Astra 안내는 중복 지침을 재평가하면서도 전문 절차의 역할을 인정합니다. <a class="citation" href="#source-17" title="OpenAI · Rethinking skills and prompts for GPT-6 Astra" aria-label="출처 17: OpenAI · Rethinking skills and prompts for GPT-6 Astra">[17]</a></p>
 <p>영상에서는 Remotion 스킬이 구성 규칙을 알려 주고, ComfyUI MCP 도구가 작업을 제출하며, 훅이 변경 파일을 검사합니다. 서로 다른 문제를 풀기 때문에 함께 쓸 수 있지만 세 가지를 모두 설치해야 시작할 수 있는 것은 아닙니다.</p>
 <h3 id="thinking-flows-part-5">4 · 실패의 원인 개선하기</h3>
 <figure class="diagram" id="diagram-improvement-loop"><figcaption><span class="diagram-label">MERMAID · 편집 가능한 흐름도</span><strong>원인을 하나씩 개선</strong></figcaption><p class="diagram-description">기준선과 실패 상황을 보존한다. 원인인 규칙, 코드, 설계, 절차를 고친다. 같은 상황으로 비교하고 검토를 통과한 개선만 유지한다. 예산 한도에서 멈추고 검증된 최선의 기준선을 보존한다.</p><div class="diagram-canvas" tabindex="0" role="region" aria-label="원인을 하나씩 개선; 필요하면 가로로 스크롤하세요"><p class="diagram-status">도표를 불러오는 중입니다. 아래에서 설명과 Mermaid 소스를 볼 수 있습니다.</p></div><div class="diagram-actions"><button type="button" class="diagram-copy">Mermaid 복사</button><a href="diagrams/ko/improvement-loop.mmd" download>.mmd 다운로드 ↗</a><a class="diagram-svg" hidden>SVG 다운로드 ↗</a></div><details class="diagram-source"><summary>Mermaid 소스 읽기 또는 편집</summary><pre tabindex="0"><code>flowchart TD
@@ -826,14 +1393,21 @@ Expected URL: https://YOUR_ACCOUNT.github.io/signal-garden/
   J --&gt; K{&quot;예산이 남고 다음 행동이 가능한가?&quot;}
   K --&gt;|예| A
   K --&gt;|아니요| L[&quot;검증된 최선의 기준선 유지; 미해결 문제 기록&quot;]</code></pre></details><noscript><p>도표를 그리려면 JavaScript가 필요합니다. 설명과 소스를 읽거나 소스 파일을 다운로드할 수 있습니다.</p></noscript></figure>
-<p>실험 전에 기준 리비전과 짧은 재현 방법을 남기세요. 의도한 규칙이 잘못되면 기획을, 코드가 올바른 규칙을 어기면 코드를 수정합니다. 구현된 경험이 지루하면 설계 가설을 시험하세요. 절차를 반복해서 놓치면 지침을 더하기 전에 맥락과 선택을 조사합니다.</p>
+<p>실험 전에 기준 리비전과 짧은 재현 방법을 남기세요.</p>
+<ul>
+<li>의도한 규칙이 잘못되면 기획을, 코드가 올바른 규칙을 어기면 코드를 수정합니다.</li>
+<li>구현된 경험이 지루하면 설계 가설을 시험하세요.</li>
+<li>절차를 반복해서 놓치면 지침을 더하기 전에 맥락과 선택을 조사합니다.</li>
+</ul>
 <div class="exercise"><h3 id="thinking-flows-part-6">재사용할 결정 기록</h3><ul><li><strong>결과:</strong> 플레이어나 시청자가 무엇을 경험해야 하는가?</li><li><strong>근거:</strong> 어떤 경로, 이미지, 클립이나 검사가 문제를 드러내는가?</li><li><strong>변경:</strong> 어떤 원인 하나를 시험하는가?</li><li><strong>비교:</strong> 같은 상황에서 좋아진 것과 회귀한 것은 무엇인가?</li><li><strong>결정:</strong> 유지, 수정, 복원 중 선택하고 결과물과 리비전 연결.</li></ul></div>
-<p>이 기록은 좋은 프롬프트 입력이 됩니다. 관찰된 문제와 검토 조건을 주고 구현 방법은 Astra가 고르게 하세요. 반복된 증거로 유용성이 드러났을 때만 절차를 저장합니다. 다음에는 같은 방식을 <a href="#video-workflows">AI 지원 게임 예고편</a>에 적용합니다.</p>
+<p>이 기록은 좋은 프롬프트 입력이 됩니다. 관찰된 문제와 검토 조건을 주고 구현 방법은 Astra가 고르게 하세요.</p>
+<p>반복된 증거로 유용성이 드러났을 때만 절차를 저장합니다. 다음에는 같은 방식을 <a href="#video-workflows">AI 지원 게임 예고편</a>에 적용합니다.</p>
 
 <details class="chapter-evidence" id="evidence-thinking-flows"><summary>출처 확인 · 이 장의 근거는 무엇인가?</summary><p>2026년 9월 14일 확인. 아래 링크는 명시된 범위를 뒷받침합니다. 이 책의 제안은 문서에 명시된 동작이나 측정 결과와 구분합니다.</p><ul class="evidence-records"><li><span class="evidence-basis">이 책의 제안</span><h4>절차 그림과 제한된 의사결정</h4><p class="evidence-covers"><strong>해당 내용:</strong> <a href="#thinking-flows">들어가며</a> · <a href="#thinking-flows-part-1">도표 읽고 재사용하기</a> · <a href="#thinking-flows-part-2">1 · 사고와 결정의 반복</a></p><p>Mermaid는 텍스트를 SVG로 렌더링한다. 그래프는 관찰 가능한 결정을 설명하며 모델의 비공개 사고나 실행 가능한 자동화가 아니다. 성공, 예산 소진, 진행 차단에 명시적 결과가 있다.</p><p class="evidence-links"><a href="https://mermaid.js.org/config/usage" lang="en">Mermaid · Usage ↗</a> <a class="evidence-note-link" href="#source-36">[36: 출처 노트]</a><br><a href="https://developers.openai.com/blog/how-to-build-games-with-astra" lang="en">OpenAI · Building games with Astra ↗</a> <a class="evidence-note-link" href="#source-04">[04: 출처 노트]</a><br><a href="https://developers.openai.com/blog/rethinking-skills-and-prompts-for-gpt-6-astra" lang="en">OpenAI · Rethinking skills and prompts for GPT-6 Astra ↗</a> <a class="evidence-note-link" href="#source-17">[17: 출처 노트]</a></p></li><li><span class="evidence-basis">문서에 명시된 동작</span><h4>계층 사이에 흐르는 정보</h4><p class="evidence-covers"><strong>해당 내용:</strong> <a href="#thinking-flows-part-3">2 · 프롬프트, 맥락, 스킬과 도구의 데이터 흐름</a></p><p>문서의 역할은 규칙, 선택적 절차, 도구, MCP, 수명주기 훅, 워크플로 노드를 구분한다. 그래프는 단순화된 데이터 모델이며 모든 호스트에 모든 연동이 있다는 주장이 아니다.</p><p class="evidence-links"><a href="https://learn.chatgpt.com/docs/agent-configuration/agents-md" lang="en">OpenAI · Custom instructions with AGENTS.md ↗</a> <a class="evidence-note-link" href="#source-07">[07: 출처 노트]</a><br><a href="https://learn.chatgpt.com/docs/build-skills" lang="en">OpenAI · Build skills ↗</a> <a class="evidence-note-link" href="#source-08">[08: 출처 노트]</a><br><a href="https://modelcontextprotocol.io/docs/2026-07-28/learn/architecture" lang="en">MCP · Architecture, specification 2026-07-28 ↗</a> <a class="evidence-note-link" href="#source-23">[23: 출처 노트]</a><br><a href="https://learn.chatgpt.com/docs/hooks" lang="en">OpenAI · Codex hooks ↗</a> <a class="evidence-note-link" href="#source-24">[24: 출처 노트]</a><br><a href="https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/" lang="en">n8n · HTTP Request node ↗</a> <a class="evidence-note-link" href="#source-34">[34: 출처 노트]</a><br><a href="https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.wait/" lang="en">n8n · Wait node ↗</a> <a class="evidence-note-link" href="#source-35">[35: 출처 노트]</a><br><a href="https://docs.comfy.org/agent-tools/mcp" lang="en">Comfy · MCP server for local and cloud workflows ↗</a> <a class="evidence-note-link" href="#source-37">[37: 출처 노트]</a></p></li><li><span class="evidence-basis">종합 및 해석</span><h4>도움 선택과 원인 개선</h4><p class="evidence-covers"><strong>해당 내용:</strong> <a href="#thinking-flows-part-4">3 · 무엇을 추가할지 결정하기</a> · <a href="#thinking-flows-part-5">4 · 실패의 원인 개선하기</a> · <a href="#thinking-flows-part-6">재사용할 결정 기록</a></p><p>라우팅 질문과 결정 기록은 책의 실무 종합이다. 문서 조회용 MCP 중단과 행동 가능한 MCP는 다른 경우다. 절차를 추가하기 전에 접근 권한, 맥락, 구현 문제를 진단한다.</p><p class="evidence-links"><a href="https://developers.openai.com/blog/rethinking-skills-and-prompts-for-gpt-6-astra" lang="en">OpenAI · Rethinking skills and prompts for GPT-6 Astra ↗</a> <a class="evidence-note-link" href="#source-17">[17: 출처 노트]</a><br><a href="https://www.remotion.dev/docs/ai/mcp" lang="en">Remotion · Documentation MCP deprecation ↗</a> <a class="evidence-note-link" href="#source-27">[27: 출처 노트]</a><br><a href="https://docs.comfy.org/agent-tools/mcp" lang="en">Comfy · MCP server for local and cloud workflows ↗</a> <a class="evidence-note-link" href="#source-37">[37: 출처 노트]</a><br><a href="https://docs.comfy.org/agent-tools/skills" lang="en">Comfy · Skills for agents ↗</a> <a class="evidence-note-link" href="#source-38">[38: 출처 노트]</a></p></li></ul><a class="evidence-method" href="#review-notes">검토 방법과 수정 사항 보기 ↗</a></details></section>
 <section class="chapter" aria-labelledby="video-workflows"><div class="chapter-kicker">장 17</div><h2 id="video-workflows">에이전트와 영상 만들기</h2>
 <p class="lead">영상 과정에 스킬, MCP와 훅이 들어갈 수 있지만, 흐름 자체는 별개의 개념입니다.</p>
-<p>사용자가 본 정확한 페이지를 확인하지 못했으므로 제품명을 단정할 수 없습니다. 모델 노드가 연결된 캔버스는 <strong>ComfyUI</strong>, HTTP 요청·대기·조건이 연결된 캔버스는 <strong>n8n</strong> 같은 도구일 수 있습니다. 에이전트의 미디어 서비스 호출에는 MCP가 쓰일 수 있습니다. 아래에서 확인한 사례와 선택 방법을 설명합니다.</p>
+<p>사용자가 본 정확한 페이지를 확인하지 못했으므로 제품명을 단정할 수 없습니다. 모델 노드가 연결된 캔버스는 <strong>ComfyUI</strong>, HTTP 요청·대기·조건이 연결된 캔버스는 <strong>n8n</strong> 같은 도구일 수 있습니다.</p>
+<p>에이전트의 미디어 서비스 호출에는 MCP가 쓰일 수 있습니다. 아래에서 확인한 사례와 선택 방법을 설명합니다.</p>
 <div class="callout warm"><div class="callout-label">주목할 현재 변화</div><p><strong>2026년 9월 12일</strong> 갱신된 Remotion 문서는 이전 문서 MCP를 폐기 예정으로 표시하고 에이전트 스킬을 권합니다. 문서 통합 하나의 중복 사례이지 모든 MCP나 스킬이 낡았다는 증거는 아닙니다. 실제 영상 작업을 제출하는 MCP는 문서를 제공하는 MCP와 역할이 다릅니다. <a class="citation" href="#source-27" title="Remotion · Documentation MCP deprecation" aria-label="출처 27: Remotion · Documentation MCP deprecation">[27]</a></p></div>
 <h3 id="video-workflows-part-1">1 · 필요한 결과에 따라 경로 선택</h3>
 <figure class="diagram" id="diagram-video-route"><figcaption><span class="diagram-label">MERMAID · 편집 가능한 흐름도</span><strong>영상 작업 방식 선택</strong></figcaption><p class="diagram-description">정확한 글자와 게임플레이에는 실제 녹화와 편집을 사용한다. 상상한 장면에는 생성 모델을 쓴다. 여러 작업에서 반복될 때 오케스트레이션을 더한다.</p><div class="diagram-canvas" tabindex="0" role="region" aria-label="영상 작업 방식 선택; 필요하면 가로로 스크롤하세요"><p class="diagram-status">도표를 불러오는 중입니다. 아래에서 설명과 Mermaid 소스를 볼 수 있습니다.</p></div><div class="diagram-actions"><button type="button" class="diagram-copy">Mermaid 복사</button><a href="diagrams/ko/video-route.mmd" download>.mmd 다운로드 ↗</a><a class="diagram-svg" hidden>SVG 다운로드 ↗</a></div><details class="diagram-source"><summary>Mermaid 소스 읽기 또는 편집</summary><pre tabindex="0"><code>flowchart TD
@@ -858,7 +1432,8 @@ Expected URL: https://YOUR_ACCOUNT.github.io/signal-garden/
 </tbody></table></div>
 <p>현재 문서를 종합한 비교이며 속도나 품질 벤치마크가 아닙니다. ComfyUI에서 분위기 영상을 만들고 Remotion에서 실제 게임 캡처와 합친 뒤, 검증된 반복 과정을 나중에 자동화할 수 있습니다. <a class="citation" href="#source-25" title="Remotion · Create videos with coding agents" aria-label="출처 25: Remotion · Create videos with coding agents">[25]</a> <a class="citation" href="#source-28" title="ComfyUI · LTX-2.5 video workflows" aria-label="출처 28: ComfyUI · LTX-2.5 video workflows">[28]</a> <a class="citation" href="#source-31" title="Runway · SDKs and task handling" aria-label="출처 31: Runway · SDKs and task handling">[31]</a> <a class="citation" href="#source-34" title="n8n · HTTP Request node" aria-label="출처 34: n8n · HTTP Request node">[34]</a></p>
 <h3 id="video-workflows-part-2">2 · 작은 예고편 기획부터</h3>
-<p>첫 Signal Garden 티저는 16:9, 10초, 세 장면으로 제안합니다. 직접 작성한 스토리보드이며 이 책을 위해 생성한 영상은 없습니다. 메커니즘을 시연한다고 주장하는 장면에는 실제 게임 캡처를 사용하세요. 생성 콘셉트 영상은 표시해 상상한 세계와 구현된 게임을 구분합니다.</p>
+<p>첫 Signal Garden 티저는 16:9, 10초, 세 장면으로 제안합니다. 직접 작성한 스토리보드이며 이 책을 위해 생성한 영상은 없습니다.</p>
+<p>메커니즘을 시연한다고 주장하는 장면에는 실제 게임 캡처를 사용하세요. 생성 콘셉트 영상은 표시해 상상한 세계와 구현된 게임을 구분합니다.</p>
 <div class="table-wrap" tabindex="0" role="region" aria-label="비교표. 작은 화면에서는 가로로 스크롤하세요"><table><thead><tr><th>장면</th><th>길이</th><th>목적</th><th>소스와 검토 조건</th></tr></thead><tbody>
 <tr><td>SG-01</td><td>3초</td><td>옥상과 비콘 소개</td><td>게임 캡처 또는 표시된 콘셉트 영상. 공간이 읽혀야 함.</td></tr>
 <tr><td>SG-02</td><td>3초</td><td>수집 목표 제시</td><td>실제 플레이 캡처. 획득과 카운터 일치.</td></tr>
@@ -880,7 +1455,8 @@ Expected URL: https://YOUR_ACCOUNT.github.io/signal-garden/
   I --&gt; J[&quot;전체 출력 시청&quot;]
   F --&gt; J
   J --&gt; K[&quot;최종 파일 저장 후 승인 범위에서 게시&quot;]</code></pre></details><noscript><p>도표를 그리려면 JavaScript가 필요합니다. 설명과 소스를 읽거나 소스 파일을 다운로드할 수 있습니다.</p></noscript></figure>
-<p><strong>샷 매니페스트</strong>에 고정 장면 ID별 목적, 길이, 소스 종류, 참고 파일, 필요한 프롬프트, 출력 경로와 검토 상태를 기록하세요. 서비스가 제공하면 모델·버전, 설정, 작업 ID, 시도 번호와 실제 비용도 남깁니다. 프로젝트 기록이며 공통 제공자 요청 스키마는 아닙니다. 인증정보는 도구의 자격 증명 저장소에 두고 매니페스트와 공개 저장소에 넣지 않습니다.</p>
+<p><strong>샷 매니페스트</strong>에 고정 장면 ID별 목적, 길이, 소스 종류, 참고 파일, 필요한 프롬프트, 출력 경로와 검토 상태를 기록하세요. 서비스가 제공하면 모델·버전, 설정, 작업 ID, 시도 번호와 실제 비용도 남깁니다.</p>
+<p>프로젝트 기록이며 공통 제공자 요청 스키마는 아닙니다. 인증정보는 도구의 자격 증명 저장소에 두고 매니페스트와 공개 저장소에 넣지 않습니다.</p>
 <p>생성 도입 장면의 프롬프트 예: <em>“해 질 무렵 작은 옥상 정원, 중앙의 청록색 비콘 하나, 낮은 화단, 차분한 녹색 콘크리트, 비콘 쪽으로 천천히 다가가는 높은 카메라, 안정된 형태와 조명.”</em> 길이, 비율과 참고 이미지는 지원되는 입력으로 제공합니다. 제목은 편집 단계에서 더하세요. 결과가 아쉽다고 전체 프롬프트를 갈기보다 관련 변화 하나씩 비교합니다.</p>
 <h3 id="video-workflows-part-3">3 · 정확한 구성과 그래픽은 Remotion</h3>
 <p>현재 코딩 에이전트 안내는 프로젝트 생성, 의존성 설치, 구성 미리보기와 스킬 사용을 설명합니다. 별도 영상 프로젝트를 만들 부모 폴더에서 아래 명령을 실행하세요. Node.js와 작동하는 코딩 에이전트가 필요합니다. <a class="citation" href="#source-25" title="Remotion · Create videos with coding agents" aria-label="출처 25: Remotion · Create videos with coding agents">[25]</a></p>
@@ -888,10 +1464,13 @@ Expected URL: https://YOUR_ACCOUNT.github.io/signal-garden/
 cd signal-garden-trailer
 npm install
 npm run dev</code></pre>
-<p>적절한 Remotion 스킬이 이미 있는지 확인하세요. 필요하면 안내의 <code>npx remotion skills add</code>를 사용합니다. 캡처 파일로 스토리보드를 구현하고 미리 본 뒤 설치된 프로젝트의 문서화된 명령으로 렌더하게 하세요. 실제 출력 영상을 검토합니다. 현재 스킬 모음에는 구성, 문서, 미리보기와 렌더 작업이 있습니다. <a class="citation" href="#source-26" title="Remotion · Agent Skills" aria-label="출처 26: Remotion · Agent Skills">[26]</a></p>
+<p>적절한 Remotion 스킬이 이미 있는지 확인하세요. 필요하면 안내의 <code>npx remotion skills add</code>를 사용합니다.</p>
+<p>캡처 파일로 스토리보드를 구현하고 미리 본 뒤 설치된 프로젝트의 문서화된 명령으로 렌더하게 하세요. 실제 출력 영상을 검토합니다.</p>
+<p>현재 스킬 모음에는 구성, 문서, 미리보기와 렌더 작업이 있습니다. <a class="citation" href="#source-26" title="Remotion · Agent Skills" aria-label="출처 26: Remotion · Agent Skills">[26]</a></p>
 <p><a href="https://www.youtube.com/watch?v=5NRAOnKc3c8">Create motion graphics with AI — Simple tutorial for beginners ↗</a>는 공식 안내가 연결하는 5분 영상입니다. <strong>글 안내는 읽었지만 영상 대본은 가져오지 못했습니다.</strong> 발언 근거가 아닌 화면을 따라 볼 자료로 사용하세요. 실습 순서는 <a href="#source-25">노트 25</a>에 요약했습니다.</p>
 <h3 id="video-workflows-part-4">4 · 보이는 생성 그래프는 ComfyUI</h3>
-<p>앱의 <strong>Workflow Templates</strong>에서 모델과 입력 요구를 살펴보세요. 템플릿은 구체적인 출발 그래프를 제공합니다. 검토한 LTX-2.5 안내에는 텍스트·이미지·첫/마지막 프레임 기반 영상과 지원되는 오디오가 있습니다. 모델 접근과 호환 설치가 필요하며 새 모델 이름만으로 그래프가 실행되지는 않습니다. <a class="citation" href="#source-29" title="ComfyUI · Workflow Templates" aria-label="출처 29: ComfyUI · Workflow Templates">[29]</a> <a class="citation" href="#source-28" title="ComfyUI · LTX-2.5 video workflows" aria-label="출처 28: ComfyUI · LTX-2.5 video workflows">[28]</a></p>
+<p>앱의 <strong>Workflow Templates</strong>에서 모델과 입력 요구를 살펴보세요. 템플릿은 구체적인 출발 그래프를 제공합니다.</p>
+<p>검토한 LTX-2.5 안내에는 텍스트·이미지·첫/마지막 프레임 기반 영상과 지원되는 오디오가 있습니다. 모델 접근과 호환 설치가 필요하며 새 모델 이름만으로 그래프가 실행되지는 않습니다. <a class="citation" href="#source-29" title="ComfyUI · Workflow Templates" aria-label="출처 29: ComfyUI · Workflow Templates">[29]</a> <a class="citation" href="#source-28" title="ComfyUI · LTX-2.5 video workflows" aria-label="출처 28: ComfyUI · LTX-2.5 video workflows">[28]</a></p>
 <figure class="diagram" id="diagram-comfy-flow"><figcaption><span class="diagram-label">MERMAID · 편집 가능한 흐름도</span><strong>영상 노드 그래프 내부</strong></figcaption><p class="diagram-description">개념적 단계이며 실제 노드 이름이나 가져올 수 있는 ComfyUI 그래프가 아니다. 호환 모델 구성요소, 텍스트 조건, 선택적 참고 프레임이 생성과 디코딩을 거쳐 영상으로 저장된다.</p><div class="diagram-canvas" tabindex="0" role="region" aria-label="영상 노드 그래프 내부; 필요하면 가로로 스크롤하세요"><p class="diagram-status">도표를 불러오는 중입니다. 아래에서 설명과 Mermaid 소스를 볼 수 있습니다.</p></div><div class="diagram-actions"><button type="button" class="diagram-copy">Mermaid 복사</button><a href="diagrams/ko/comfy-flow.mmd" download>.mmd 다운로드 ↗</a><a class="diagram-svg" hidden>SVG 다운로드 ↗</a></div><details class="diagram-source"><summary>Mermaid 소스 읽기 또는 편집</summary><pre tabindex="0"><code>flowchart TD
   accTitle: 영상 노드 그래프 내부
   accDescr: 개념적 단계이며 실제 노드 이름이나 가져올 수 있는 ComfyUI 그래프가 아니다. 호환 모델 구성요소, 텍스트 조건, 선택적 참고 프레임이 생성과 디코딩을 거쳐 영상으로 저장된다.
@@ -904,17 +1483,21 @@ npm run dev</code></pre>
   G --&gt; H[&quot;움직임과 연속성 검사&quot;]
   H -.-&gt;|관련 입력 변경| A</code></pre></details><noscript><p>도표를 그리려면 JavaScript가 필요합니다. 설명과 소스를 읽거나 소스 파일을 다운로드할 수 있습니다.</p></noscript></figure>
 <p><strong>아래 그림은 개념도입니다.</strong> 가져올 수 있는 ComfyUI JSON이 아니며 상자는 정확한 노드 이름이 아닙니다. 호환되는 공식 템플릿과 필요한 모델 구성요소를 함께 사용하고 프롬프트나 참고 입력을 바꿔 짧은 시도 하나를 실행한 뒤 저장 영상을 확인하세요. 노드가 없으면 임의 교체보다 설치 요구를 먼저 확인합니다.</p>
-<p>LTX-2.5는 이번 검토에서 도달한 현재 LTX 안내이며 명확한 발행일은 없습니다. 접근 승인이 필요한 모델입니다. 계정이나 기기에서 실행할 수 있는 모델과 지원 설정으로 시작하세요. 오래된 튜토리얼의 모델 파일을 무작정 복사하지 마세요. <a class="citation" href="#source-28" title="ComfyUI · LTX-2.5 video workflows" aria-label="출처 28: ComfyUI · LTX-2.5 video workflows">[28]</a></p>
+<p>LTX-2.5는 이번 검토에서 도달한 현재 LTX 안내이며 명확한 발행일은 없습니다. 접근 승인이 필요한 모델입니다.</p>
+<p>계정이나 기기에서 실행할 수 있는 모델과 지원 설정으로 시작하세요. 오래된 튜토리얼의 모델 파일을 무작정 복사하지 마세요. <a class="citation" href="#source-28" title="ComfyUI · LTX-2.5 video workflows" aria-label="출처 28: ComfyUI · LTX-2.5 video workflows">[28]</a></p>
 <p>로컬 LTX 템플릿이 있다고 같은 모델을 Comfy Cloud에서도 쓸 수 있는 것은 아닙니다. 아래 클라우드 경로에서는 계정의 실제 템플릿 목록과 스키마를 확인해야 합니다. 로컬 설치와 클라우드 제공 여부는 별도 검사입니다. <a class="citation" href="#source-29" title="ComfyUI · Workflow Templates" aria-label="출처 29: ComfyUI · Workflow Templates">[29]</a> <a class="citation" href="#source-37" title="Comfy · MCP server for local and cloud workflows" aria-label="출처 37: Comfy · MCP server for local and cloud workflows">[37]</a></p>
 <h4>공식 Comfy MCP로 에이전트 연결</h4>
 <p><strong>공개 베타</strong> 문서는 로컬 연결과 별개인 Codex CLI 클라우드 설정을 제공합니다. 로그인하고 구독과 예산을 확인한 뒤 생성하세요. 이 책에서 실제 실행한 명령은 아닙니다. <a class="citation" href="#source-37" title="Comfy · MCP server for local and cloud workflows" aria-label="출처 37: Comfy · MCP server for local and cloud workflows">[37]</a></p>
 <pre><code>codex mcp add comfy-cloud --url https://cloud.comfy.org/mcp
 codex mcp login comfy-cloud</code></pre>
 <ol><li>등록된 도구를 살펴보고 <code>search_templates</code>로 찾은 템플릿의 <code>get_template_schema</code>를 확인합니다.</li><li>기획을 지원 입력에 맞추고 허용 예산을 확인합니다.</li><li><code>run_template</code>을 사용합니다. 사용자 정의 <code>submit_workflow</code>에는 편집기 JSON과 다른 API 형식 JSON이 필요합니다.</li><li>작업 ID를 보관하고 <code>wait_for_job</code> 등으로 완료를 기다립니다. <code>get_output</code>은 다운로드 안내를 반환하며 로컬 파일을 쓰지 않습니다. 저장 대상을 확인해 안내대로 다운로드하고 파일을 검증한 뒤 클립을 봅니다. <a class="citation" href="#source-37" title="Comfy · MCP server for local and cloud workflows" aria-label="출처 37: Comfy · MCP server for local and cloud workflows">[37]</a></li></ol>
-<p>Comfy는 워크플로와 모델 안내 스킬도 제공합니다. 지식은 MCP의 실행 능력을 보완합니다. 기존의 적절한 스킬을 쓰고 부족할 때만 추가하세요. 호스트별 플러그인 예제가 있으므로 Claude Code 설치 명령이 Codex도 설정한다고 가정하면 안 됩니다. <a class="citation" href="#source-38" title="Comfy · Skills for agents" aria-label="출처 38: Comfy · Skills for agents">[38]</a></p>
+<p>Comfy는 워크플로와 모델 안내 스킬도 제공합니다. 지식은 MCP의 실행 능력을 보완합니다.</p>
+<p>기존의 적절한 스킬을 쓰고 부족할 때만 추가하세요. 호스트별 플러그인 예제가 있으므로 Claude Code 설치 명령이 Codex도 설정한다고 가정하면 안 됩니다. <a class="citation" href="#source-38" title="Comfy · Skills for agents" aria-label="출처 38: Comfy · Skills for agents">[38]</a></p>
 <p><strong>저장소 변경:</strong> 현재 Comfy 저장소는 공식 클라우드 명령을 <code>claude-code/</code>에 두고 기존 <code>skills/</code> 폴더는 동결했습니다. 별도 <code>comfy-cli</code>는 자체 스킬을 포함합니다. 호스트에 맞춰 설치하고 오래된 모델 목록 대신 현재 템플릿을 탐색하세요. <a class="citation" href="#source-55" title="Comfy-Org · Current skill and plugin repository" aria-label="출처 55: Comfy-Org · Current skill and plugin repository">[55]</a></p>
 <h3 id="video-workflows-part-5">5 · 명확한 작업 처리는 API</h3>
-<p>Runway의 <code>2026-06</code> 다중 장면 레시피는 자동 이야기 분할과 사용자 지정 장면 목록을 지원합니다. 예제 스키마는 장면을 생성하며 기존 게임 캡처를 삽입하지 않습니다. 별도로 표시한 <strong>전체 생성 콘셉트 예고편</strong>에 사용하세요. 혼합 스토리보드의 SG-02와 SG-03은 Remotion에서 실제 캡처로 구성합니다. 세 장면 10초 콘셉트 버전은 문서의 길이 옵션에 맞지만 여기서 실행하지 않았습니다. <a class="citation" href="#source-32" title="Runway · Multi-shot video recipe, 2026-06" aria-label="출처 32: Runway · Multi-shot video recipe, 2026-06">[32]</a></p>
+<p>Runway의 <code>2026-06</code> 다중 장면 레시피는 자동 이야기 분할과 사용자 지정 장면 목록을 지원합니다. 예제 스키마는 장면을 생성하며 기존 게임 캡처를 삽입하지 않습니다.</p>
+<p>별도로 표시한 <strong>전체 생성 콘셉트 예고편</strong>에 사용하세요. 혼합 스토리보드의 SG-02와 SG-03은 Remotion에서 실제 캡처로 구성합니다.</p>
+<p>세 장면 10초 콘셉트 버전은 문서의 길이 옵션에 맞지만 여기서 실행하지 않았습니다. <a class="citation" href="#source-32" title="Runway · Multi-shot video recipe, 2026-06" aria-label="출처 32: Runway · Multi-shot video recipe, 2026-06">[32]</a></p>
 <p><code>https://dev.runwayml.com/mcp</code>는 개발 작업과 문서를 제공하고, <code>https://mcp.runwayml.com</code>는 별도의 미디어 생성 통합으로 안내됩니다. 문서 엔드포인트를 연결했다고 생성 도구가 있다고 가정하지 말고 서버의 실제 기능을 확인하세요. <a class="citation" href="#source-30" title="Runway · Developer MCP server" aria-label="출처 30: Runway · Developer MCP server">[30]</a></p>
 <figure class="diagram" id="diagram-video-job"><figcaption><span class="diagram-label">MERMAID · 편집 가능한 흐름도</span><strong>한 번 제출하고 추적한 뒤 출력 검사</strong></figcaption><p class="diagram-description">대기, 실행, 조절 상태에서도 작업 ID를 유지한다. 기한 내에서 일시적 상태 오류를 재시도하고 불확실한 제출을 대조한다. 로컬 시간 초과는 원격 취소가 아니다. 성공 출력을 저장하고 검토한다.</p><div class="diagram-canvas" tabindex="0" role="region" aria-label="한 번 제출하고 추적한 뒤 출력 검사; 필요하면 가로로 스크롤하세요"><p class="diagram-status">도표를 불러오는 중입니다. 아래에서 설명과 Mermaid 소스를 볼 수 있습니다.</p></div><div class="diagram-actions"><button type="button" class="diagram-copy">Mermaid 복사</button><a href="diagrams/ko/video-job.mmd" download>.mmd 다운로드 ↗</a><a class="diagram-svg" hidden>SVG 다운로드 ↗</a></div><details class="diagram-source"><summary>Mermaid 소스 읽기 또는 편집</summary><pre tabindex="0"><code>flowchart TD
   accTitle: 한 번 제출하고 추적한 뒤 출력 검사
@@ -936,14 +1519,20 @@ codex mcp login comfy-cloud</code></pre>
   F --&gt;|성공| J[&quot;출력 파일 조회와 저장&quot;]
   J --&gt;|다운로드 실패| N
   J --&gt; K[&quot;편집 또는 게시 전 검토&quot;]</code></pre></details><noscript><p>도표를 그리려면 JavaScript가 필요합니다. 설명과 소스를 읽거나 소스 파일을 다운로드할 수 있습니다.</p></noscript></figure>
-<p>Runway SDK는 비동기 작업과 폴링을 설명합니다. 현재 간격과 백오프 지침을 따르세요. 수동 폴링 예제는 지터를 포함한 최소 5초를 안내합니다. 로컬 대기 시간 초과는 원격 작업 실패나 취소의 증거가 아닙니다. 새 유료 시도 전에 작업 ID로 기존 결과를 확인하세요. <a class="citation" href="#source-31" title="Runway · SDKs and task handling" aria-label="출처 31: Runway · SDKs and task handling">[31]</a></p>
-<p><code>PENDING</code>, <code>RUNNING</code>, <code>THROTTLED</code>는 비종료 상태입니다. throttled 작업은 접수됐지만 처리 여력을 기다리며 HTTP 429 응답과 다릅니다. 재시도 가능한 상태 요청 오류에는 제한된 백오프와 지터를 씁니다. 치명적 오류, 알 수 없는 상태나 기한 도달 시 중단하고 기록을 보존하세요. 초기 제출 결과가 불확실하고 ID도 없다면 제공자 기록을 대조한 뒤 재제출합니다. 복구 선택은 이 책의 조율 정책 제안입니다. <a class="citation" href="#source-47" title="Runway · Usage tiers and throttled tasks" aria-label="출처 47: Runway · Usage tiers and throttled tasks">[47]</a> <a class="citation" href="#source-48" title="Runway · API errors" aria-label="출처 48: Runway · API errors">[48]</a></p>
+<p>Runway SDK는 비동기 작업과 폴링을 설명합니다. 현재 간격과 백오프 지침을 따르세요.</p>
+<p>수동 폴링 예제는 지터를 포함한 최소 5초를 안내합니다. 로컬 대기 시간 초과는 원격 작업 실패나 취소의 증거가 아닙니다.</p>
+<p>새 유료 시도 전에 작업 ID로 기존 결과를 확인하세요. <a class="citation" href="#source-31" title="Runway · SDKs and task handling" aria-label="출처 31: Runway · SDKs and task handling">[31]</a></p>
+<p><code>PENDING</code>, <code>RUNNING</code>, <code>THROTTLED</code>는 비종료 상태입니다. throttled 작업은 접수됐지만 처리 여력을 기다리며 HTTP 429 응답과 다릅니다. 재시도 가능한 상태 요청 오류에는 제한된 백오프와 지터를 씁니다.</p>
+<p>치명적 오류, 알 수 없는 상태나 기한 도달 시 중단하고 기록을 보존하세요. 초기 제출 결과가 불확실하고 ID도 없다면 제공자 기록을 대조한 뒤 재제출합니다.</p>
+<p>복구 선택은 이 책의 조율 정책 제안입니다. <a class="citation" href="#source-47" title="Runway · Usage tiers and throttled tasks" aria-label="출처 47: Runway · Usage tiers and throttled tasks">[47]</a> <a class="citation" href="#source-48" title="Runway · API errors" aria-label="출처 48: Runway · API errors">[48]</a></p>
 <p>채택한 출력은 관리 가능한 저장소에 보관하세요. Runway 출력 URL은 임시이며 접근 후 보통 24–48시간 안에 만료됩니다. 작업 기록은 원래 작업과 저장한 파일 모두를 가리켜야 다음 편집이 만료 URL에 의존하지 않습니다. <a class="citation" href="#source-33" title="Runway · Generated asset outputs" aria-label="출처 33: Runway · Generated asset outputs">[33]</a></p>
 <h3 id="video-workflows-part-6">6 · 반복 흐름을 n8n으로 구성</h3>
 <p>요청 하나가 성공하면 해당 method, URL, 인증, 헤더와 본문을 <strong>HTTP Request</strong> 노드에 옮깁니다. 노드는 API를 호출하고 제공자가 영상을 생성합니다. 인증에는 n8n credentials를 사용하세요. <a class="citation" href="#source-34" title="n8n · HTTP Request node" aria-label="출처 34: n8n · HTTP Request node">[34]</a></p>
 <ol><li><strong>수동 시작:</strong> 검토한 장면과 허용 시도 예산을 읽습니다.</li><li><strong>제출:</strong> 시도당 생성 요청 한 번, task ID와 shot ID 저장. 불확실하면 기록 대조.</li><li><strong>대기:</strong> 기한 내에서 요구 간격만큼 기다립니다.</li><li><strong>확인:</strong> 같은 작업을 GET하고 pending/running/throttled는 대기로 되돌립니다. 재시도 가능한 HTTP 오류는 제한된 백오프.</li><li><strong>해결:</strong> 성공 출력 저장. 실패·취소·알 수 없는 상태·로컬 시간 초과를 기록합니다. 로컬 시간 초과는 원격 취소가 아닙니다.</li><li><strong>조립:</strong> 검토한 클립으로 편집하고 공개 전에 전체 출력을 봅니다.</li></ol>
-<p><a href="#diagram-video-job">작업 도표</a>를 HTTP Request, Wait와 조건 분기로 구현하세요. Wait는 시간이나 웹훅으로 재개할 수 있습니다. 선택한 제공자가 문서화한 경우에만 콜백을 사용하고 인증을 설정합니다. 웹훅은 들어오는 HTTP 이벤트이며 에이전트 수명 주기 훅과 다릅니다. <a class="citation" href="#source-35" title="n8n · Wait node" aria-label="출처 35: n8n · Wait node">[35]</a></p>
-<p>생성 제출을 상태 폴링 루프 밖에 두세요. 응답이 불확실하면 기존 작업을 대조한 뒤 재시도합니다. 복구가 유료 작업을 조용히 복제하면 안 됩니다. 엔드포인트와 모델이 달라졌을 수 있는 대형 템플릿보다 검토한 작은 흐름을 자동화하는 편이 진단하기 쉽습니다.</p>
+<p><a href="#diagram-video-job">작업 도표</a>를 HTTP Request, Wait와 조건 분기로 구현하세요. Wait는 시간이나 웹훅으로 재개할 수 있습니다.</p>
+<p>선택한 제공자가 문서화한 경우에만 콜백을 사용하고 인증을 설정합니다. 웹훅은 들어오는 HTTP 이벤트이며 에이전트 수명 주기 훅과 다릅니다. <a class="citation" href="#source-35" title="n8n · Wait node" aria-label="출처 35: n8n · Wait node">[35]</a></p>
+<p>생성 제출을 상태 폴링 루프 밖에 두세요. 응답이 불확실하면 기존 작업을 대조한 뒤 재시도합니다.</p>
+<p>복구가 유료 작업을 조용히 복제하면 안 됩니다. 엔드포인트와 모델이 달라졌을 수 있는 대형 템플릿보다 검토한 작은 흐름을 자동화하는 편이 진단하기 쉽습니다.</p>
 <h3 id="video-workflows-part-7">7 · 반복 이벤트 행동에만 훅 추가</h3>
 <figure class="diagram" id="diagram-hook-flow"><figcaption><span class="diagram-label">MERMAID · 편집 가능한 흐름도</span><strong>좁은 로컬 검사에 훅 사용</strong></figcaption><p class="diagram-description">관련 도구 이벤트로 로컬 검증기를 실행할 수 있다. 무관한 이벤트는 바로 끝낸다. 이 제안은 자체적으로 영상을 생성하거나 게시하지 않는다.</p><div class="diagram-canvas" tabindex="0" role="region" aria-label="좁은 로컬 검사에 훅 사용; 필요하면 가로로 스크롤하세요"><p class="diagram-status">도표를 불러오는 중입니다. 아래에서 설명과 Mermaid 소스를 볼 수 있습니다.</p></div><div class="diagram-actions"><button type="button" class="diagram-copy">Mermaid 복사</button><a href="diagrams/ko/hook-flow.mmd" download>.mmd 다운로드 ↗</a><a class="diagram-svg" hidden>SVG 다운로드 ↗</a></div><details class="diagram-source"><summary>Mermaid 소스 읽기 또는 편집</summary><pre tabindex="0"><code>flowchart TD
   accTitle: 좁은 로컬 검사에 훅 사용
@@ -972,21 +1561,50 @@ codex mcp login comfy-cloud</code></pre>
 - 사용 가능한 도구/서비스와 허용 생성 예산: [세부 사항]
 - 공개 대상과 권한이 있다면: [세부 사항]
 
-실제 파일, 설치 도구와 스킬을 확인하세요. API, 모델과 명령이 바뀌었을 수 있으면 공식 문서를 확인합니다. 캡처와 Remotion 편집, 호환 ComfyUI 템플릿, 영상 API 중 가장 작은 적합한 경로를 권하세요. 반복 작업 조율이 필요할 때만 n8n을 추가하며 목표 결과를 기준으로 이유를 짧게 설명합니다.
+실제 파일, 설치 도구와 스킬을 확인하세요.
 
-고정 ID, 의도, 길이, 소스 종류, 입력, 출력 경로와 검토 상태가 있는 매니페스트를 만드세요. 실제 메커니즘은 플레이 캡처로 보여 주고 생성 콘셉트는 표시합니다. 정확한 제목은 편집에서 합성합니다. 전체 생성 다중 장면 레시피는 콘셉트 변형이며 실제 메커니즘을 시연하는 장면을 대체해서는 안 됩니다. 클라우드 템플릿 가용성은 로컬 모델 안내와 별도로 확인하세요.
+API, 모델과 명령이 바뀌었을 수 있으면 공식 문서를 확인합니다.
+
+캡처와 Remotion 편집, 호환 ComfyUI 템플릿, 영상 API 중 가장 작은 적합한 경로를 권하세요.
+
+반복 작업 조율이 필요할 때만 n8n을 추가하며 목표 결과를 기준으로 이유를 짧게 설명합니다.
+
+고정 ID, 의도, 길이, 소스 종류, 입력, 출력 경로와 검토 상태가 있는 매니페스트를 만드세요.
+
+실제 메커니즘은 플레이 캡처로 보여 주고 생성 콘셉트는 표시합니다.
+
+정확한 제목은 편집에서 합성합니다.
+
+전체 생성 다중 장면 레시피는 콘셉트 변형이며 실제 메커니즘을 시연하는 장면을 대체해서는 안 됩니다.
+
+클라우드 템플릿 가용성은 로컬 모델 안내와 별도로 확인하세요.
 
 적절한 기존 스킬을 사용하세요. 반복되는 누락 절차나 유용한 이벤트 행동이 없다면 맞춤 스킬이나 훅을 만들지 않습니다. MCP 연결에는 필요한 도구가 실제로 노출돼야 하므로 등록 기능을 확인하세요.
 
 현재 미디어로 검토 가능한 로컬 구성을 만드세요. 입력이 없으면 분명한 임시 표시를 쓰고 대체할 자료를 정확히 적습니다. 유료 생성 예산이 없으면 요청만 준비하고 제출하지 마세요.
 
-승인된 생성은 실제 스키마 확인, 한 번 제출, task ID·shot ID·모델/버전·입력·시도 번호 저장 순서로 진행합니다. 기한 안에서 지침대로 기다리고 폴링합니다. 시간 초과 뒤에도 ID를 보존하고 재시도 전에 기존 작업을 확인하세요. 모든 비종료 상태(Runway의 THROTTLED 포함), 재시도 가능한 조회 오류의 제한된 백오프와 미지/치명 결과를 처리합니다. 로컬 시간 초과는 원격 취소가 아닙니다. 제출이 불확실하고 ID가 없으면 재제출 전 기록을 대조하세요.
+승인된 생성은 실제 스키마 확인, 한 번 제출, task ID·shot ID·모델/버전·입력·시도 번호 저장 순서로 진행합니다.
+
+기한 안에서 지침대로 기다리고 폴링합니다.
+
+시간 초과 뒤에도 ID를 보존하고 재시도 전에 기존 작업을 확인하세요.
+
+모든 비종료 상태(Runway의 THROTTLED 포함), 재시도 가능한 조회 오류의 제한된 백오프와 미지/치명 결과를 처리합니다.
+
+로컬 시간 초과는 원격 취소가 아닙니다.
+
+제출이 불확실하고 ID가 없으면 재제출 전 기록을 대조하세요.
 
 출력을 지속 가능한 프로젝트 저장소에 저장하세요. 다운로드 안내를 받았다고 파일이 저장된 것은 아닙니다. 파일을 검증하고 가능하면 실제 비용을 기록하며 인증정보는 GitHub에 넣지 마세요.
 
 각 클립과 최종 전체 영상을 보고 타이밍, 연속성, 제목, 소리와 충실한 게임 표현을 확인하세요. 관련 장면이나 층을 고쳐 같은 구간을 전후 비교합니다. 결과 경로, 확인 내용과 한계를 보고하고 제공된 대상과 권한 안에서만 공개하세요. 로컬 미리보기는 유용한 첫 확인점입니다.</code></pre><a class="download-link" href="prompts/ko/video-workflow-prompt.md" download>.md 다운로드 ↗</a></div>
 <h3 id="video-workflows-part-9">결과를 보고 올바른 층 개선하기</h3>
-<p>장면이 잘못된 뜻을 전달하면 의도를, 움직임이 불안정하면 생성 입력이나 소스 클립을 바꾸세요. 오타는 편집에서 텍스트를 합성해 해결합니다. 파일 만료는 저장, 중복 작업은 조율을 고칩니다. 더 긴 스킬 파일이 모든 원인을 해결하지는 않습니다.</p>
+<ul>
+<li>장면이 잘못된 뜻을 전달하면 의도를, 움직임이 불안정하면 생성 입력이나 소스 클립을 바꾸세요.</li>
+<li>오타는 편집에서 텍스트를 합성해 해결합니다.</li>
+<li>파일 만료는 저장, 중복 작업은 조율을 고칩니다.</li>
+</ul>
+<p>더 긴 스킬 파일이 모든 원인을 해결하지는 않습니다.</p>
 <p>스토리보드, 비밀이 아닌 설정, 결정 기록, 구성 코드와 적절한 에셋 참조를 GitHub에 둡니다. Pages는 호스팅 한도 내에서 정적 미디어를 제공하지만 긴 생성 작업이나 비밀 키를 다루는 API 워커는 제공하지 않습니다. 전체 출력과 공개 대상을 확인하세요. <a class="citation" href="#source-46" title="GitHub · What is GitHub Pages?" aria-label="출처 46: GitHub · What is GitHub Pages?">[46]</a></p>
 <div class="exercise"><h3 id="video-workflows-part-10">첫 유용한 실험</h3><p>10초 스토리보드를 준비하고 실제 플레이 장면 하나를 캡처해 미리보기를 만드세요. 캡처로 얻을 수 없는 것을 더하고 비용이 승인됐을 때만 콘셉트 클립 하나를 생성합니다. 모델, 스킬, MCP 서버나 자동화 단계를 더하기 전에 예고편을 무엇이 개선했는지 기록하세요.</p></div>
 

@@ -2,7 +2,9 @@
 <p class="lead">Bản chép lời chỉ hữu ích khi nó thay đổi một quyết định.</p>
 <p>Tìm “prompt AI làm game tốt nhất” sẽ đưa ra màn trình diễn, quảng bá công cụ, suy đoán và lời khuyên kỹ thuật cạnh nhau. Đọc mỗi nguồn với một mục đích: tài liệu engine để xác định API, phần trình diễn của tác giả để học cách làm, bản build của bạn để biết cách đó có hiệu quả trong điều kiện của mình không.</p>
 <h3>Bắt đầu từ bằng chứng hiện hành</h3>
-<p>Bản này ưu tiên tài liệu xuất bản hoặc cập nhật từ <strong>1/3 đến 14/9/2026</strong>. Hai bài OpenAI tháng 9 nói trực tiếp về Astra. Nghiên cứu skill mới hơn thử các mô hình khác, nên chỉ giúp hình thành giả thuyết về Astra. Tài liệu chính thức đang được duy trì vẫn được giữ dù không công bố ngày viết. Ngày truy cập không phải ngày xuất bản.</p>
+<p>Bản này ưu tiên tài liệu xuất bản hoặc cập nhật từ <strong>1/3 đến 14/9/2026</strong>. Hai bài OpenAI tháng 9 nói trực tiếp về Astra.</p>
+<p>Nghiên cứu skill mới hơn thử các mô hình khác, nên chỉ giúp hình thành giả thuyết về Astra. Tài liệu chính thức đang được duy trì vẫn được giữ dù không công bố ngày viết.</p>
+<p>Ngày truy cập không phải ngày xuất bản.</p>
 <p>Về skill, bắt đầu với <a href="#source-17">bài rà soát chỉ dẫn Astra</a>, rồi so sánh <a href="#source-22">SWE-Skills-Bench</a> và <a href="#source-18">bản cập nhật SkillsBench tháng 7</a>. Đọc <a href="#source-19">SkillsInjector</a> về lựa chọn skill và <a href="#source-20">SkillAlchemy</a> về tạo skill dựa trên bằng chứng. Ghi chú nguồn có tóm tắt và giới hạn mô hình thử nghiệm.</p>
 <div class="table-wrap"><table><thead><tr><th>Ý tưởng trước đây</th><th>Đánh giá tháng 9/2026</th><th>Thay đổi trong sách</th></tr></thead><tbody>
 <tr><td>Chia việc dài thành phần có thể phục hồi.</td><td>Vẫn hữu ích; nên đánh giá lại lượng cấu trúc hỗ trợ khi mô hình tiến bộ. {{cite:21}}</td><td>Dùng mốc kết quả, cho phép đổi thứ tự theo phụ thuộc.</td></tr>
@@ -13,18 +15,26 @@
 <tr><td>Làm theo hướng dẫn xuất bản của tutorial.</td><td>Phiên bản và giới hạn lưu trữ vẫn tồn tại dù mô hình tốt hơn. {{cite:11}} {{cite:12}}</td><td>Tra tài liệu engine hiện hành và thử đúng đường dẫn triển khai.</td></tr>
 </tbody></table></div>
 <h3>Vì sao vẫn giữ video cũ?</h3>
-<p>Các video năm 2025 là <strong>ngoại lệ lịch sử</strong>. Đoạn về kiểm chứng trong <em>Software Is Changing (Again)</em> đã được đối chiếu lại; bản chép lời còn lại không truy xuất được trong lần rà soát này. Chúng không phải tài liệu sản phẩm hiện hành hay benchmark Astra. Tìm kiếm video mới chưa đem lại bản chép lời thay thế đã xác minh phù hợp.</p>
+<p>Các video năm 2025 là <strong>ngoại lệ lịch sử</strong>. Đoạn về kiểm chứng trong <em>Software Is Changing (Again)</em> đã được đối chiếu lại; bản chép lời còn lại không truy xuất được trong lần rà soát này.</p>
+<p>Chúng không phải tài liệu sản phẩm hiện hành hay benchmark Astra. Tìm kiếm video mới chưa đem lại bản chép lời thay thế đã xác minh phù hợp.</p>
 <h3>Ghi chú bản chép lời: Software Is Changing (Again)</h3>
 <p>Trong bài nói tại Y Combinator, Andrej Karpathy bàn về vòng lặp AI tạo nội dung và con người kiểm chứng. Yêu cầu cụ thể cùng sản phẩm trung gian dễ kiểm tra giúp vòng lặp hữu ích hơn; một bản diff mã lớn vẫn để lại nhiều việc rà soát. Đây là nhận xét khái niệm, không phải kết quả đo cho sản xuất game. {{cite:02}}</p>
-<p><strong>Áp dụng:</strong> yêu cầu một mốc game chạy được với danh sách hành vi ngắn cần xem. Đặt liên kết build, thay đổi liên quan và bằng chứng cạnh nhau. Người rà soát phải trả lời được “Hết máu có luôn hiện màn hình chơi lại không?” mà không cần đọc lại toàn bộ cuộc trò chuyện.</p>
+<p><strong>Áp dụng:</strong> yêu cầu một mốc game chạy được với danh sách hành vi ngắn cần xem. Đặt liên kết build, thay đổi liên quan và bằng chứng cạnh nhau.</p>
+<p>Người rà soát phải trả lời được “Hết máu có luôn hiện màn hình chơi lại không?” mà không cần đọc lại toàn bộ cuộc trò chuyện.</p>
 <h3>Ghi chú bản chép lời: How I use LLMs</h3>
-<p><strong>Giới hạn truy xuất:</strong> ghi chú ở bản trước dựa vào trang lưu bản chép lời công khai. Trang đó hết thời gian chờ trong lần kiểm tra này; nguồn thay thế chỉ trả về trang video mà không có lời nói. Vì vậy, phần tóm tắt đoạn nói trước đây đã được rút khỏi bằng chứng đã xác minh. Video gốc vẫn là gợi ý xem thêm mang tính lịch sử. {{cite:03}}</p>
+<p><strong>Giới hạn truy xuất:</strong> ghi chú ở bản trước dựa vào trang lưu bản chép lời công khai. Trang đó hết thời gian chờ trong lần kiểm tra này; nguồn thay thế chỉ trả về trang video mà không có lời nói.</p>
+<p>Vì vậy, phần tóm tắt đoạn nói trước đây đã được rút khỏi bằng chứng đã xác minh. Video gốc vẫn là gợi ý xem thêm mang tính lịch sử. {{cite:03}}</p>
 <p><strong>Áp dụng:</strong> đưa lỗi thật, phiên bản engine đã cài, cấu trúc cảnh và trích đoạn tài liệu liên quan vào yêu cầu sửa lỗi. “Nhân vật bị hỏng” cung cấp rất ít thông tin. “Trong Godot phiên bản X, CharacterBody3D này rơi xuyên sàn trong cảnh tối giản này” cho tác nhân một vấn đề có thể điều tra.</p>
 <p>Lời khuyên cung cấp bằng chứng hiện hành, đúng nhiệm vụ được hướng dẫn Astra xác nhận độc lập; nó không phụ thuộc bản chép lời không truy cập được. {{cite:17}}</p>
-<div class="callout"><div class="callout-label">Nguồn gốc bản chép lời</div><p>Nguồn 02 dùng trang sao lưu lời nói gốc; phụ đề tự động có thể sai. Không có mốc thời gian ổn định nên ghi chú cung cấp từ khóa để tìm. Nguồn 03 là gợi ý đọc với bằng chứng bản chép lời chưa truy xuất được. Trang truy cập được hoặc tiêu đề video không xác minh nội dung đã nói.</p></div>
+<div class="callout"><div class="callout-label">Nguồn gốc bản chép lời</div><p>Nguồn 02 dùng trang sao lưu lời nói gốc; phụ đề tự động có thể sai. Không có mốc thời gian ổn định nên ghi chú cung cấp từ khóa để tìm.</p>
+<p>Nguồn 03 là gợi ý đọc với bằng chứng bản chép lời chưa truy xuất được. Trang truy cập được hoặc tiêu đề video không xác minh nội dung đã nói.</p></div>
 <h3>Tutorial game là một dạng bằng chứng khác</h3>
 <p>Khóa Godot 4 dạng bài viết của GDQuest và tutorial game 3D đầu tiên của Godot cung cấp lộ trình học cấu trúc game. Dùng chúng để làm quen engine. Không lấy được bản chép lời video GDQuest đáng tin cậy, nên sách chỉ dùng khóa học dạng bài viết truy cập được. {{cite:09}} {{cite:10}}</p>
-<p>Đừng mang nguyên tutorial sang thiết kế mới. Rút ra một khái niệm, chẳng hạn chuyển động theo camera; tạo ví dụ tối giản với phiên bản đang cài; giải thích nó áp dụng vào game của bạn thế nào và cần đổi gì. Hoàn thành bài tập xác nhận hiểu một phần, không xác nhận toàn bộ game.</p>
+<ol>
+<li>Đừng mang nguyên tutorial sang thiết kế mới.</li>
+<li>Rút ra một khái niệm, chẳng hạn chuyển động theo camera; tạo ví dụ tối giản với phiên bản đang cài; giải thích nó áp dụng vào game của bạn thế nào và cần đổi gì.</li>
+</ol>
+<p>Hoàn thành bài tập xác nhận hiểu một phần, không xác nhận toàn bộ game.</p>
 <h3>Quy trình nghiên cứu có thể lặp lại</h3>
 <ol><li><strong>Bắt đầu bằng câu hỏi.</strong> Ví dụ: “Bản xuất Godot này có chạy trên GitHub Pages mà không cần header phản hồi tùy chỉnh không?”</li><li><strong>Tìm câu trả lời gốc.</strong> Tra tài liệu chính thức đúng phiên bản; mở và đọc giới hạn.</li><li><strong>Tìm ví dụ áp dụng.</strong> Ưu tiên video của tác giả có bản chép lời và kho mã đi kèm.</li><li><strong>Ghi xuất xứ.</strong> Lưu URL, tiêu đề, ngày truy xuất, phiên bản và vị trí đoạn. Ghi rõ khi thiếu phụ đề hoặc kho mã không truy cập được.</li><li><strong>Tách quan sát khỏi suy luận.</strong> “Tutorial dùng nút này” là quan sát. “Nó sẽ đơn giản hóa camera” là giả thuyết.</li><li><strong>Chạy một thử nghiệm nhỏ.</strong> Giữ kết quả và commit tạo ra nó.</li></ol>
 <pre><code>Câu hỏi: Đèn hiệu có còn thấy được sau bồn cây không?

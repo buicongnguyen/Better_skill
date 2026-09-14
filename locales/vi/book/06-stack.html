@@ -9,10 +9,14 @@
 </tbody></table></div>
 <p>Đây là tiêu chí lựa chọn thực dụng, không phải benchmark hay so sánh toàn bộ tính năng. Thử phần rủi ro ít tốn kém nhất trước khi chốt công nghệ. Nếu tác nhân khó kiểm tra editor, bắt đầu bằng cảnh nhỏ và thử xuất bản để phát hiện giới hạn ngay.</p>
 <h3>Mặc định của sách: Three.js, TypeScript và Vite</h3>
-<p>Signal Garden có camera cố định hơi cao, đấu trường phẳng, vật cản hình học đơn giản và ít đối tượng chuyển động. Phạm vi này phù hợp làm ví dụ bằng mã trình duyệt. Bắt đầu với hình va chạm đơn giản và máy trạng thái dễ đọc. Nếu thiết kế sau này cần dốc, vật thể động lực học hay chuyển động nhân vật phức tạp, hãy đánh giá giải pháp vật lý phù hợp trước khi tự chế.</p>
-<p>Dùng phiên bản ổn định tương thích tại thời điểm bắt đầu, commit lockfile và ghi phiên bản vào README. <code>npm ci</code> cài sạch từ lockfile đã commit và khớp package; lệnh sẽ lỗi nếu hai tệp lệch nhau thay vì tự sửa lockfile. Đừng sao chép phiên bản tutorial cũ mà không kiểm tra. Chứng minh renderer đã chọn chạy trên trình duyệt mục tiêu. {{cite:42}}</p>
+<p>Signal Garden có camera cố định hơi cao, đấu trường phẳng, vật cản hình học đơn giản và ít đối tượng chuyển động. Phạm vi này phù hợp làm ví dụ bằng mã trình duyệt.</p>
+<p>Bắt đầu với hình va chạm đơn giản và máy trạng thái dễ đọc. Nếu thiết kế sau này cần dốc, vật thể động lực học hay chuyển động nhân vật phức tạp, hãy đánh giá giải pháp vật lý phù hợp trước khi tự chế.</p>
+<p>Dùng phiên bản ổn định tương thích tại thời điểm bắt đầu, commit lockfile và ghi phiên bản vào README. <code>npm ci</code> cài sạch từ lockfile đã commit và khớp package; lệnh sẽ lỗi nếu hai tệp lệch nhau thay vì tự sửa lockfile.</p>
+<p>Đừng sao chép phiên bản tutorial cũ mà không kiểm tra. Chứng minh renderer đã chọn chạy trên trình duyệt mục tiêu. {{cite:42}}</p>
 <h3>Nếu chọn Godot</h3>
 <p>Để bắt đầu đơn giản trên Pages, thử dự án GDScript dùng Compatibility rendering và xuất web đơn luồng. Tài liệu Godot cho biết bản web dùng WebGL 2, dự án Godot 4 C# hiện chưa xuất web được, và bản đa luồng cần cô lập chéo nguồn. Đây là giới hạn phụ thuộc phiên bản. {{cite:11}}</p>
-<p>Chứng minh cảnh trống đã xuất chạy ở URL dự án cuối cùng trước khi xây cả game. Giữ các tệp xuất cùng nhau. Tệp HTML đầu vào có thể tên <code>index.html</code>; giữ nguyên tên các tệp sinh ra còn lại. Godot cũng mô tả cách dùng service worker của PWA để đáp ứng cô lập, nên đề xuất đơn luồng là đường khởi đầu đơn giản, không chứng minh mọi bản đa luồng trên Pages đều bất khả thi. {{cite:11}}</p>
+<p>Chứng minh cảnh trống đã xuất chạy ở URL dự án cuối cùng trước khi xây cả game. Giữ các tệp xuất cùng nhau.</p>
+<p>Tệp HTML đầu vào có thể tên <code>index.html</code>; giữ nguyên tên các tệp sinh ra còn lại. Godot cũng mô tả cách dùng service worker của PWA để đáp ứng cô lập, nên đề xuất đơn luồng là đường khởi đầu đơn giản, không chứng minh mọi bản đa luồng trên Pages đều bất khả thi. {{cite:11}}</p>
 <p><strong>Tên khi xuất:</strong> chọn <code>index.html</code> ngay trong hộp thoại xuất. Không đổi tên HTML hay tệp đi kèm sau đó; tham chiếu phụ thuộc tên xuất ban đầu. {{cite:11}}</p>
-<div class="exercise"><h3>Kiểm tra khả thi trong 30 phút</h3><p>Trong khoảng thời gian giới hạn, tạo sàn, một vật thể và camera. Làm vật thể di chuyển, build và phục vụ đầu ra dưới đường dẫn con của kho mã. Ghi lại lỗi. Ba mươi phút là gợi ý quản lý thời gian, không phải cam kết hoàn thành.</p></div>
+<div class="exercise"><h3>Kiểm tra khả thi trong 30 phút</h3><p>Trong khoảng thời gian giới hạn, tạo sàn, một vật thể và camera. Làm vật thể di chuyển, build và phục vụ đầu ra dưới đường dẫn con của kho mã.</p>
+<p>Ghi lại lỗi. Ba mươi phút là gợi ý quản lý thời gian, không phải cam kết hoàn thành.</p></div>

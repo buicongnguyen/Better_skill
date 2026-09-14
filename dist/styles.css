@@ -70,3 +70,10 @@ html[data-theme=dark] .diagram,html[data-theme=dark] .diagram-canvas{background:
 .figure-pair{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:24px 0}.book-illustration{margin:0;border:1px solid var(--line);border-radius:6px;overflow:hidden}.book-illustration img{width:100%;height:auto;display:block}.book-illustration figcaption{padding:14px 16px;font-size:13px;line-height:1.7}
 @media(max-width:700px){.figure-pair{grid-template-columns:1fr}.book-links{gap:12px;font-size:12px}}
 @media print{.book-links{display:none}.figure-pair{display:block}.book-illustration{break-inside:avoid;margin:16px 0}}
+
+/* Give each prompt idea room to wrap, while preserving copied newlines. */
+.prompt-block pre{font-size:13px;line-height:1.85;padding:14px 22px 24px}
+.prompt-block pre code{white-space:pre-wrap;word-break:normal}
+.chapter li+li{margin-top:12px}
+@media(max-width:450px){.prompt-block pre{font-size:12px;padding:12px 15px 20px}}
+@media print{.prompt-block pre{font-size:9pt;line-height:1.5}}

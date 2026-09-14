@@ -1,8 +1,11 @@
 <h2 id="research">Learn from the evidence</h2>
 <p class="lead">A transcript becomes useful when it changes a decision.</p>
-<p>Searching for “best AI game prompt” produces demonstrations, tool promotions, speculative claims, and genuine engineering advice side by side. Read each source for a specific purpose. Use engine documentation to establish API behavior. Use a creator’s demonstration to learn a process. Use your own build to find out whether that process works under your constraints.</p>
+<p>Searching for “best AI game prompt” produces demonstrations, tool promotions, speculative claims, and genuine engineering advice side by side. Read each source for a specific purpose.</p>
+<p>Use engine documentation to establish API behavior. Use a creator’s demonstration to learn a process.</p>
+<p>Use your own build to find out whether that process works under your constraints.</p>
 <h3>Start with the current evidence</h3>
-<p>This revision prioritizes material published or updated from <strong>1 March through 14 September 2026</strong>. The two September OpenAI articles directly address Astra; the newer skill studies test other models and therefore inform hypotheses, not claims of Astra performance. Live official documentation is retained even when it exposes no publication date. A page checked today is not necessarily an article written today.</p>
+<p>This revision prioritizes material published or updated from <strong>1 March through 14 September 2026</strong>. The two September OpenAI articles directly address Astra; the newer skill studies test other models and therefore inform hypotheses, not claims of Astra performance.</p>
+<p>Live official documentation is retained even when it exposes no publication date. A page checked today is not necessarily an article written today.</p>
 <p>For the skills question, begin with <a href="#source-17">the Astra instruction audit</a>, then compare <a href="#source-22">SWE-Skills-Bench</a> with <a href="#source-18">SkillsBench’s July update</a>. Read <a href="#source-19">SkillsInjector</a> for selection and <a href="#source-20">SkillAlchemy</a> for evidence-led generation. Each entry below has main-item summaries and tested-model limitations.</p>
 <div class="table-wrap"><table><thead><tr><th>Earlier idea</th><th>September 2026 assessment</th><th>What changes in this book</th></tr></thead><tbody>
 <tr><td>Break long work into recoverable pieces.</td><td>Still a useful project practice; the amount of external scaffolding should be reassessed as models improve. {{cite:21}}</td><td>Use outcome checkpoints, and let implementation order adapt to dependencies.</td></tr>
@@ -13,18 +16,30 @@
 <tr><td>Follow tutorial export instructions.</td><td>Version and hosting constraints remain real despite better models. {{cite:11}} {{cite:12}}</td><td>Check current engine documentation and test the actual deployment path.</td></tr>
 </tbody></table></div>
 <h3>Why keep any older videos?</h3>
-<p>The 2025 videos below are <strong>historical exceptions</strong>. The verification passage in <em>Software Is Changing (Again)</em> was checked again; the other transcript could not be retrieved in this review. Neither is current product documentation or an Astra benchmark. Recent video searches did not yield a verified replacement transcript suitable for these notes.</p>
+<p>The 2025 videos below are <strong>historical exceptions</strong>. The verification passage in <em>Software Is Changing (Again)</em> was checked again; the other transcript could not be retrieved in this review.</p>
+<p>Neither is current product documentation or an Astra benchmark. Recent video searches did not yield a verified replacement transcript suitable for these notes.</p>
 <h3>Transcript notebook: Software Is Changing (Again)</h3>
-<p>In his Y Combinator keynote, Andrej Karpathy discusses the loop between AI generation and human verification. He argues that concrete requests and auditable intermediate artifacts make that loop more useful, and notes that a huge code diff still leaves substantial review work. These are conceptual observations, not measured results for game production. {{cite:02}}</p>
-<p><strong>Our application:</strong> ask for one runnable game milestone with a short list of behaviors to inspect. Put the build link, relevant change, and evidence together. The person reviewing the game should be able to answer a question such as “Does losing all health always show a restart screen?” without first reconstructing the agent’s entire conversation.</p>
+<p>In his Y Combinator keynote, Andrej Karpathy discusses the loop between AI generation and human verification. He argues that concrete requests and auditable intermediate artifacts make that loop more useful, and notes that a huge code diff still leaves substantial review work.</p>
+<p>These are conceptual observations, not measured results for game production. {{cite:02}}</p>
+<p><strong>Our application:</strong> ask for one runnable game milestone with a short list of behaviors to inspect. Put the build link, relevant change, and evidence together.</p>
+<p>The person reviewing the game should be able to answer a question such as “Does losing all health always show a restart screen?” without first reconstructing the agent’s entire conversation.</p>
 <h3>Transcript notebook: How I use LLMs</h3>
-<p><strong>Retrieval limitation:</strong> the previous edition’s note used a public transcript mirror. That mirror timed out during this review, and an alternative returned a video landing page without transcript text. The former passage summary is therefore withdrawn from this edition’s verified evidence. The original video remains a historical reading lead. {{cite:03}}</p>
-<p><strong>Our application:</strong> attach the actual error, installed engine version, current scene structure, and a relevant documentation excerpt to a debugging request. “The player is broken” supplies almost no useful working information. “In Godot version X, this CharacterBody3D falls through the floor in this minimal scene” gives the agent an investigation it can carry out.</p>
+<p><strong>Retrieval limitation:</strong> the previous edition’s note used a public transcript mirror. That mirror timed out during this review, and an alternative returned a video landing page without transcript text.</p>
+<p>The former passage summary is therefore withdrawn from this edition’s verified evidence. The original video remains a historical reading lead. {{cite:03}}</p>
+<p><strong>Our application:</strong> attach the actual error, installed engine version, current scene structure, and a relevant documentation excerpt to a debugging request. “The player is broken” supplies almost no useful working information.</p>
+<p>“In Godot version X, this CharacterBody3D falls through the floor in this minimal scene” gives the agent an investigation it can carry out.</p>
 <p>The recommendation to supply relevant current evidence is supported independently by Astra’s current guidance on loading task-relevant context. It does not depend on the unavailable transcript. {{cite:17}}</p>
-<div class="callout"><div class="callout-label">Transcript provenance</div><p>Source 02 uses a public transcript mirror of the original speech; automatic captions may contain errors. No stable passage timestamps were available, so the note gives a searchable term. Source 03 is a reading lead with unavailable transcript evidence. A reachable page or video title does not verify its spoken content.</p></div>
+<div class="callout"><div class="callout-label">Transcript provenance</div><p>Source 02 uses a public transcript mirror of the original speech; automatic captions may contain errors. No stable passage timestamps were available, so the note gives a searchable term.</p>
+<p>Source 03 is a reading lead with unavailable transcript evidence. A reachable page or video title does not verify its spoken content.</p></div>
 <h3>A game tutorial is a separate kind of evidence</h3>
 <p>GDQuest’s written Godot 4 course and Godot’s own first-3D-game tutorial provide a sequence for learning game structure. Use them to reduce unfamiliarity with the engine. The GDQuest YouTube transcript could not be retrieved reliably during research, so only its accessible written course is used here. {{cite:09}} {{cite:10}}</p>
-<p>Do not carry an entire tutorial into a new design unchanged. Extract one concept, such as movement relative to the camera. Build a minimal reproduction with the installed engine version. Then explain how the concept maps to your game, including what must change. A successful exercise is evidence that you understand one part; it does not validate the whole game.</p>
+<ol>
+<li>Do not carry an entire tutorial into a new design unchanged.</li>
+<li>Extract one concept, such as movement relative to the camera.</li>
+<li>Build a minimal reproduction with the installed engine version.</li>
+<li>Then explain how the concept maps to your game, including what must change.</li>
+</ol>
+<p>A successful exercise is evidence that you understand one part; it does not validate the whole game.</p>
 <h3>A repeatable research procedure</h3>
 <ol><li><strong>Start with a question.</strong> For example: “Can the chosen Godot export run on GitHub Pages without custom response headers?”</li><li><strong>Find the primary answer.</strong> Search official documentation for the installed version; open the page and read the constraints.</li><li><strong>Find an applied example.</strong> Prefer a creator’s video with an accessible transcript and companion repository.</li><li><strong>Record provenance.</strong> Save the URL, title, retrieval date, version, and a passage locator. Mark missing captions or an unavailable repository explicitly.</li><li><strong>Separate observation from inference.</strong> “The tutorial uses this node” is an observation. “This will simplify our camera system” is a hypothesis.</li><li><strong>Run one small experiment.</strong> Keep the result and the code commit that produced it.</li></ol>
 <pre><code>Question: Will the beacon remain visible behind the planter?

@@ -1,8 +1,10 @@
 <h2 id="publish">Publish and close the loop</h2>
 <p class="lead">A release is a working URL and a recoverable revision.</p>
-<p>For the proposed Vite game, GitHub Pages serves built static files. It provides no private server runtime for this game’s API calls. A key placed in published JavaScript is delivered to visitors, so keep service credentials in a separate backend or local tool when needed. Signal Garden’s first release needs neither accounts nor an online service. {{cite:46}}</p>
+<p>For the proposed Vite game, GitHub Pages serves built static files. It provides no private server runtime for this game’s API calls.</p>
+<p>A key placed in published JavaScript is delivered to visitors, so keep service credentials in a separate backend or local tool when needed. Signal Garden’s first release needs neither accounts nor an online service. {{cite:46}}</p>
 <h3>1 · Configure the repository path</h3>
-<p>A project called <code>signal-garden</code> normally appears at <code>https://YOUR_ACCOUNT.github.io/signal-garden/</code>. In Vite, set the base path accordingly. A user site at the domain root uses a different base. The repository name’s case and asset filenames must be correct on the deployed host. {{cite:12}}</p>
+<p>A project called <code>signal-garden</code> normally appears at <code>https://YOUR_ACCOUNT.github.io/signal-garden/</code>. In Vite, set the base path accordingly.</p>
+<p>A user site at the domain root uses a different base. The repository name’s case and asset filenames must be correct on the deployed host. {{cite:12}}</p>
 <pre><code>// vite.config.ts — example for the game repository
 import { defineConfig } from 'vite';
 
@@ -18,9 +20,11 @@ export default defineConfig({
 {{prompt:release-prompt.md}}
 <h3>4 · Verify the public result</h3>
 <ol><li>Confirm the push reached the intended remote and branch.</li><li>Inspect the workflow run for that commit. A queued run is not a successful deployment.</li><li>Open the deployment URL and check the production asset requests.</li><li>Play a win path and a loss path, then restart. Repeat a pause/resume check.</li><li>Record the deployed commit, controls, target browser, and any remaining limitations in the release note.</li></ol>
-<p>If deployment fails, inspect its logs and fix the specific cause. For a missing asset, check the base path and filename case. For a Godot export, check the renderer, exported filenames, and browser requirements. For a permissions error, inspect the Pages source, workflow permissions, and repository settings before changing unrelated code.</p>
+<p>If deployment fails, inspect its logs and fix the specific cause. For a missing asset, check the base path and filename case.</p>
+<p>For a Godot export, check the renderer, exported filenames, and browser requirements. For a permissions error, inspect the Pages source, workflow permissions, and repository settings before changing unrelated code.</p>
 <h3>5 · Keep a path back</h3>
-<p>Record the last verified release revision. If a new release breaks the game, revert the responsible change in a new commit and allow the workflow to publish the repaired state. Check the resulting live URL again. A rollback command is only a step toward restoration.</p>
+<p>Record the last verified release revision. If a new release breaks the game, revert the responsible change in a new commit and allow the workflow to publish the repaired state.</p>
+<p>Check the resulting live URL again. A rollback command is only a step toward restoration.</p>
 <div class="callout"><div class="callout-label">The complete workflow</div><p>Choose a player experience → compare relevant approaches → verify current sources → establish the repository and brief → use available skills when relevant → choose a compact or bootstrap prompt → build playable checkpoints → test the real game → publish → retain only workflow changes that help.</p></div>
 <p>The durable result is more than a game. It is a process that makes your next attempt easier to understand, easier to review, and easier to improve.</p>
 <p>The next two chapters map that process as <a href="#thinking-flows">editable decision and data flows</a>, then apply it to <a href="#video-workflows">creating a short game trailer</a>.</p>

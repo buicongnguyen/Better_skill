@@ -1,6 +1,8 @@
 <h2 id="video-workflows">Làm video với tác nhân AI</h2>
 <p class="lead">Quy trình video có thể chứa skill, MCP và hook. Bản thân luồng công việc là khái niệm riêng.</p>
-<p>Chưa xác định trang bạn đã xem nên không thể chắc tên phần mềm. Một bảng các nút mô hình nối nhau thường là công cụ như <strong>ComfyUI</strong>. Bảng yêu cầu HTTP, bước chờ và điều kiện có thể là <strong>n8n</strong>. Tác nhân gọi dịch vụ media có thể dùng MCP. Dưới đây là ví dụ đã đối chiếu và cách chọn thực dụng.</p>
+<p>Chưa xác định trang bạn đã xem nên không thể chắc tên phần mềm. Một bảng các nút mô hình nối nhau thường là công cụ như <strong>ComfyUI</strong>.</p>
+<p>Bảng yêu cầu HTTP, bước chờ và điều kiện có thể là <strong>n8n</strong>. Tác nhân gọi dịch vụ media có thể dùng MCP.</p>
+<p>Dưới đây là ví dụ đã đối chiếu và cách chọn thực dụng.</p>
 <div class="callout warm"><div class="callout-label">Thay đổi hiện hành đáng chú ý</div><p>Tài liệu Remotion cập nhật <strong>12/9/2026</strong> ngừng khuyến nghị MCP tài liệu cũ và đề xuất agent skill. Đây là một tích hợp tài liệu dư thừa cụ thể, không chứng minh MCP hoặc skill nói chung lỗi thời. MCP gửi job video thật có vai trò khác với MCP cung cấp tài liệu. {{cite:27}}</p></div>
 <h3>1 · Chọn cách làm theo kết quả cần có</h3>
 {{diagram:video-route}}
@@ -12,47 +14,60 @@
 </tbody></table></div>
 <p>Đây là tổng hợp từ tài liệu hiện hành, không phải benchmark tốc độ hay chất lượng. Có thể kết hợp: tạo clip không khí trong ComfyUI, ghép với gameplay thật bằng Remotion, rồi tự động hóa quy trình lặp đã chứng minh hiệu quả. {{cite:25}} {{cite:28}} {{cite:31}} {{cite:34}}</p>
 <h3>2 · Bắt đầu bằng mô tả trailer nhỏ</h3>
-<p>Teaser Signal Garden đầu tiên được đề xuất dài mười giây, tỷ lệ 16:9, ba cảnh. Đây là storyboard do sách thiết kế; chưa tạo video nào cho sách. Dùng quay game thật khi cảnh tuyên bố minh họa cơ chế. Ghi rõ cảnh concept tạo sinh để người xem phân biệt thế giới tưởng tượng với game đã triển khai.</p>
+<p>Teaser Signal Garden đầu tiên được đề xuất dài mười giây, tỷ lệ 16:9, ba cảnh. Đây là storyboard do sách thiết kế; chưa tạo video nào cho sách.</p>
+<p>Dùng quay game thật khi cảnh tuyên bố minh họa cơ chế. Ghi rõ cảnh concept tạo sinh để người xem phân biệt thế giới tưởng tượng với game đã triển khai.</p>
 <div class="table-wrap"><table><thead><tr><th>Cảnh</th><th>Độ dài</th><th>Mục đích</th><th>Nguồn và điều kiện duyệt</th></tr></thead><tbody>
 <tr><td>SG-01</td><td>3 giây</td><td>Giới thiệu mái nhà và đèn hiệu</td><td>Quay game hoặc concept ghi rõ; không gian dễ hiểu.</td></tr>
 <tr><td>SG-02</td><td>3 giây</td><td>Cho thấy mục tiêu thu thập</td><td>Gameplay thật; thao tác nhặt và bộ đếm khớp.</td></tr>
 <tr><td>SG-03</td><td>4 giây</td><td>Đèn hiệu và tiêu đề</td><td>Kích hoạt thật với chữ ghép; chính tả và thời gian chính xác.</td></tr>
 </tbody></table></div>
 {{diagram:video-data}}
-<p>Tạo <strong>shot manifest</strong>: mỗi ID cảnh cố định có mục đích, độ dài, loại nguồn, tệp tham khảo, prompt nếu cần, đường dẫn đầu ra và trạng thái duyệt. Ghi mô hình/phiên bản, cấu hình, task ID, lần thử và chi phí thật khi dịch vụ cho biết. Đây là hồ sơ dự án, không phải schema chung cho mọi nhà cung cấp. Để khóa trong kho thông tin xác thực của công cụ, ngoài manifest và kho công khai.</p>
-<p>Prompt cho cảnh mở đầu tạo sinh có thể là: <em>“Khu vườn nhỏ trên mái lúc chạng vạng, một đèn hiệu xanh ngọc ở giữa, bồn cây thấp, bê tông xanh dịu, camera cao tiến chậm về đèn, hình học và ánh sáng ổn định.”</em> Cung cấp thời lượng, tỷ lệ và ảnh tham khảo bằng trường được dịch vụ hỗ trợ. Thêm chữ khi dựng. So một thay đổi liên quan mỗi lần thay vì thay toàn bộ prompt sau mỗi clip chưa tốt.</p>
+<p>Tạo <strong>shot manifest</strong>: mỗi ID cảnh cố định có mục đích, độ dài, loại nguồn, tệp tham khảo, prompt nếu cần, đường dẫn đầu ra và trạng thái duyệt. Ghi mô hình/phiên bản, cấu hình, task ID, lần thử và chi phí thật khi dịch vụ cho biết.</p>
+<p>Đây là hồ sơ dự án, không phải schema chung cho mọi nhà cung cấp. Để khóa trong kho thông tin xác thực của công cụ, ngoài manifest và kho công khai.</p>
+<p>Prompt cho cảnh mở đầu tạo sinh có thể là: <em>“Khu vườn nhỏ trên mái lúc chạng vạng, một đèn hiệu xanh ngọc ở giữa, bồn cây thấp, bê tông xanh dịu, camera cao tiến chậm về đèn, hình học và ánh sáng ổn định.”</em> Cung cấp thời lượng, tỷ lệ và ảnh tham khảo bằng trường được dịch vụ hỗ trợ. Thêm chữ khi dựng.</p>
+<p>So một thay đổi liên quan mỗi lần thay vì thay toàn bộ prompt sau mỗi clip chưa tốt.</p>
 <h3>3 · Remotion cho bố cục và chữ chính xác</h3>
 <p>Hướng dẫn tác nhân của Remotion tạo dự án, cài dependency, xem trước composition và giới thiệu skill. Chạy các lệnh dưới trong thư mục cha nơi muốn tạo dự án video riêng. Cần Node.js và tác nhân lập trình hoạt động. {{cite:25}}</p>
 <pre><code>npx create-video --yes --blank signal-garden-trailer
 cd signal-garden-trailer
 npm install
 npm run dev</code></pre>
-<p>Xem đã có skill Remotion phù hợp chưa. Nếu cần, hướng dẫn cung cấp <code>npx remotion skills add</code>. Yêu cầu tác nhân dựng storyboard bằng tệp quay của bạn, xem trước rồi render bằng lệnh được tài liệu dự án đã cài hướng dẫn. Xem chính video đã xuất. Bộ skill hiện hành bao gồm composition, tài liệu, preview và render. {{cite:26}}</p>
+<p>Xem đã có skill Remotion phù hợp chưa. Nếu cần, hướng dẫn cung cấp <code>npx remotion skills add</code>.</p>
+<p>Yêu cầu tác nhân dựng storyboard bằng tệp quay của bạn, xem trước rồi render bằng lệnh được tài liệu dự án đã cài hướng dẫn. Xem chính video đã xuất.</p>
+<p>Bộ skill hiện hành bao gồm composition, tài liệu, preview và render. {{cite:26}}</p>
 <p><a href="https://www.youtube.com/watch?v=5NRAOnKc3c8">Create motion graphics with AI — Simple tutorial for beginners ↗</a> là video năm phút được hướng dẫn chính thức liên kết. <strong>Đã đọc hướng dẫn dạng viết; chưa lấy được bản chép lời video.</strong> Dùng như tài liệu xem thao tác, không như bằng chứng từ lời nói. Trình tự thực hành nằm ở <a href="#source-25">ghi chú 25</a>.</p>
 <h3>4 · ComfyUI cho đồ thị tạo sinh nhìn thấy được</h3>
 <p>Bắt đầu từ <strong>Workflow Templates</strong> trong ứng dụng và xem yêu cầu mô hình, đầu vào. Mẫu cho đồ thị cụ thể; hướng dẫn LTX-2.5 đã xem có text-to-video, image-to-video, khung đầu/cuối và âm thanh được hỗ trợ. Cần quyền mô hình và cài đặt tương thích; tên mô hình mới không tự làm đồ thị chạy được. {{cite:29}} {{cite:28}}</p>
 {{diagram:comfy-flow}}
 <p><strong>Hình này là khái niệm.</strong> Nó không phải JSON ComfyUI có thể import, và các hộp không phải tên node chính xác. Dùng mẫu chính thức tương thích, giữ đúng nhóm thành phần mô hình, đổi prompt hoặc ảnh, chạy một lần ngắn và xem video lưu được. Thiếu node thì xem yêu cầu cài đặt trước khi thay tùy tiện.</p>
-<p>LTX-2.5 là hướng dẫn LTX hiện hành tìm được trong lần rà soát; trang không nêu ngày xuất bản rõ. Mô hình có điều kiện truy cập. Chọn mô hình tài khoản hoặc máy chạy được và bắt đầu từ cấu hình hỗ trợ. Đừng chép mù tệp mô hình trong tutorial cũ. {{cite:28}}</p>
+<p>LTX-2.5 là hướng dẫn LTX hiện hành tìm được trong lần rà soát; trang không nêu ngày xuất bản rõ. Mô hình có điều kiện truy cập.</p>
+<p>Chọn mô hình tài khoản hoặc máy chạy được và bắt đầu từ cấu hình hỗ trợ. Đừng chép mù tệp mô hình trong tutorial cũ. {{cite:28}}</p>
 <p>Mẫu LTX cục bộ không xác nhận cùng mô hình có qua Comfy Cloud. Với hướng cloud dưới đây, khám phá danh mục thật của tài khoản và schema trước khi chọn đầu vào. Cài cục bộ và khả dụng cloud là hai phép kiểm tra riêng. {{cite:29}} {{cite:37}}</p>
 <h4>Cho tác nhân thao tác qua Comfy MCP chính thức</h4>
 <p>Tài liệu <strong>public beta</strong> cung cấp thiết lập Codex CLI cho cloud, tách với kết nối cục bộ. Đăng nhập và kiểm tra gói cùng ngân sách trước tạo sinh. Các lệnh này chưa được thực thi cho sách. {{cite:37}}</p>
 <pre><code>codex mcp add comfy-cloud --url https://cloud.comfy.org/mcp
 codex mcp login comfy-cloud</code></pre>
 <ol><li>Xem công cụ đã đăng ký; tìm mẫu bằng <code>search_templates</code> và xem <code>get_template_schema</code>.</li><li>Ánh xạ mô tả sang đầu vào hỗ trợ; xác nhận ngân sách.</li><li>Dùng <code>run_template</code>. <code>submit_workflow</code> tùy chỉnh cần JSON định dạng API, khác JSON editor.</li><li>Giữ job ID và chờ bằng công cụ như <code>wait_for_job</code>. <code>get_output</code> trả hướng dẫn tải, không tự ghi tệp cục bộ: kiểm tra đích, tải theo hướng dẫn, xác nhận tệp rồi xem clip. {{cite:37}}</li></ol>
-<p>Comfy cũng phát hành skill hướng dẫn mô hình và workflow. Kiến thức này bổ trợ khả năng hành động của MCP. Tái dùng skill phù hợp; chỉ thêm khi lấp chỗ thiếu. Tài liệu có ví dụ plugin theo host, nên lệnh cài Claude Code không mặc định cấu hình Codex. {{cite:38}}</p>
+<p>Comfy cũng phát hành skill hướng dẫn mô hình và workflow. Kiến thức này bổ trợ khả năng hành động của MCP.</p>
+<p>Tái dùng skill phù hợp; chỉ thêm khi lấp chỗ thiếu. Tài liệu có ví dụ plugin theo host, nên lệnh cài Claude Code không mặc định cấu hình Codex. {{cite:38}}</p>
 <p><strong>Cập nhật kho nguồn:</strong> kho Comfy hiện đặt lệnh cloud chính trong <code>claude-code/</code>; thư mục <code>skills/</code> cũ đã đóng băng. <code>comfy-cli</code> riêng đi kèm skill của nó. Cài đúng ứng dụng và tra template hiện có, không chép danh sách mô hình cũ. {{cite:55}}</p>
 <h3>5 · API để xử lý job rõ ràng</h3>
-<p>Recipe nhiều cảnh Runway phiên bản <code>2026-06</code> hỗ trợ tự chia câu chuyện hoặc danh sách cảnh tùy chọn. Schema minh họa tạo các cảnh, không chèn gameplay quay sẵn. Dùng cho <strong>trailer concept hoàn toàn tạo sinh</strong> được ghi nhãn riêng. Với storyboard trộn nguồn trên, dựng SG-02 và SG-03 từ quay thật trong Remotion. Biến thể concept ba cảnh mười giây khớp tùy chọn thời gian, nhưng chưa chạy ở đây. {{cite:32}}</p>
+<p>Recipe nhiều cảnh Runway phiên bản <code>2026-06</code> hỗ trợ tự chia câu chuyện hoặc danh sách cảnh tùy chọn. Schema minh họa tạo các cảnh, không chèn gameplay quay sẵn.</p>
+<p>Dùng cho <strong>trailer concept hoàn toàn tạo sinh</strong> được ghi nhãn riêng. Với storyboard trộn nguồn trên, dựng SG-02 và SG-03 từ quay thật trong Remotion.</p>
+<p>Biến thể concept ba cảnh mười giây khớp tùy chọn thời gian, nhưng chưa chạy ở đây. {{cite:32}}</p>
 <p><code>https://dev.runwayml.com/mcp</code> phục vụ tác vụ phát triển và tài liệu; <code>https://mcp.runwayml.com</code> là tích hợp tạo media riêng được tài liệu chỉ ra. Đừng kết nối endpoint tài liệu rồi mặc định có công cụ tạo video. Xem năng lực thật server cung cấp. {{cite:30}}</p>
 {{diagram:video-job}}
-<p>SDK Runway mô tả job bất đồng bộ và polling. Tuân thủ khoảng chờ và backoff hiện hành; ví dụ polling thủ công nêu ít nhất năm giây kèm jitter. Hết thời gian chờ cục bộ không chứng minh job từ xa lỗi hoặc bị hủy. Giữ ID và kiểm tra trước khi tạo lần trả phí mới. {{cite:31}}</p>
-<p><code>PENDING</code>, <code>RUNNING</code>, <code>THROTTLED</code> chưa phải kết thúc. Job throttled đã được nhận và chờ năng lực xử lý, khác phản hồi HTTP 429. Lỗi truy vấn trạng thái có thể thử lại thì dùng backoff và jitter giới hạn. Lỗi nghiêm trọng, trạng thái lạ hoặc hết hạn thì dừng và giữ hồ sơ. Gửi ban đầu không rõ kết quả, không có ID thì đối soát hồ sơ nhà cung cấp trước khi gửi lại. Đây là chính sách điều phối được sách đề xuất. {{cite:47}} {{cite:48}}</p>
+<p>SDK Runway mô tả job bất đồng bộ và polling. Tuân thủ khoảng chờ và backoff hiện hành; ví dụ polling thủ công nêu ít nhất năm giây kèm jitter.</p>
+<p>Hết thời gian chờ cục bộ không chứng minh job từ xa lỗi hoặc bị hủy. Giữ ID và kiểm tra trước khi tạo lần trả phí mới. {{cite:31}}</p>
+<p><code>PENDING</code>, <code>RUNNING</code>, <code>THROTTLED</code> chưa phải kết thúc. Job throttled đã được nhận và chờ năng lực xử lý, khác phản hồi HTTP 429.</p>
+<p>Lỗi truy vấn trạng thái có thể thử lại thì dùng backoff và jitter giới hạn. Lỗi nghiêm trọng, trạng thái lạ hoặc hết hạn thì dừng và giữ hồ sơ.</p>
+<p>Gửi ban đầu không rõ kết quả, không có ID thì đối soát hồ sơ nhà cung cấp trước khi gửi lại. Đây là chính sách điều phối được sách đề xuất. {{cite:47}} {{cite:48}}</p>
 <p>Lưu đầu ra đã chấp nhận ở nơi bạn kiểm soát. URL đầu ra Runway tạm thời, thường hết hạn trong 24–48 giờ từ lúc truy cập. Hồ sơ job cần trỏ cả tệp đã lưu và job gốc để lần dựng sau không phụ thuộc URL hết hạn. {{cite:33}}</p>
 <h3>6 · Xây luồng lặp trong n8n</h3>
 <p>Khi một yêu cầu đã thành công, đưa method, URL, xác thực, header và body đã hoạt động vào nút <strong>HTTP Request</strong>. Nút này gọi API; nhà cung cấp video mới thực hiện tạo sinh. Dùng credentials của n8n cho xác thực. {{cite:34}}</p>
 <ol><li><strong>Kích hoạt thủ công:</strong> nạp một cảnh đã duyệt và ngân sách lần thử.</li><li><strong>Gửi:</strong> một yêu cầu tạo mỗi lần thử; lưu task ID và shot ID. Gửi không rõ kết quả thì đối soát.</li><li><strong>Chờ:</strong> đợi khoảng quy định trong giới hạn thời gian.</li><li><strong>Kiểm tra:</strong> GET đúng job đó; pending/running/throttled quay lại chờ. Lỗi HTTP thử lại được dùng backoff giới hạn.</li><li><strong>Kết thúc:</strong> lưu thành công; ghi lỗi, hủy, trạng thái lạ hoặc timeout để rà soát. Timeout cục bộ không hủy job từ xa.</li><li><strong>Ghép:</strong> đưa clip đã duyệt vào timeline và xem bản xuất đầy đủ trước công bố.</li></ol>
-<p><a href="#diagram-video-job">Sơ đồ job</a> là logic để tái tạo bằng HTTP Request, Wait và nhánh điều kiện. Wait có thể tiếp tục sau thời gian hoặc webhook. Chỉ dùng callback khi nhà cung cấp có tài liệu hỗ trợ và cấu hình xác thực. Webhook là sự kiện HTTP đến, khác hook vòng đời tác nhân. {{cite:35}}</p>
+<p><a href="#diagram-video-job">Sơ đồ job</a> là logic để tái tạo bằng HTTP Request, Wait và nhánh điều kiện. Wait có thể tiếp tục sau thời gian hoặc webhook.</p>
+<p>Chỉ dùng callback khi nhà cung cấp có tài liệu hỗ trợ và cấu hình xác thực. Webhook là sự kiện HTTP đến, khác hook vòng đời tác nhân. {{cite:35}}</p>
 <p>Để bước gửi tạo sinh ngoài vòng polling. Nếu kết quả yêu cầu chưa rõ, đối soát job trước retry; phục hồi workflow không được âm thầm nhân job trả phí. Tự động hóa luồng nhỏ đã rà soát dễ chẩn đoán hơn bắt đầu bằng template lớn có endpoint và mô hình có thể đã đổi.</p>
 <h3>7 · Chỉ thêm hook cho hành động sự kiện lặp lại</h3>
 {{diagram:hook-flow}}
@@ -62,6 +77,13 @@ codex mcp login comfy-cloud</code></pre>
 <p>Prompt tái sử dụng dưới yêu cầu xem năng lực, chọn cách có lý do và chuẩn bị kết quả đầu có thể kiểm tra. Điền đường dẫn thật và ngân sách được phép. Đây là mẫu của sách, không phải benchmark làm video với Astra.</p>
 {{prompt:video-workflow-prompt.md}}
 <h3>Xem kết quả và cải thiện đúng lớp</h3>
-<p>Cảnh truyền sai ý thì sửa ý định. Chuyển động bất ổn thì đổi đầu vào tạo sinh liên quan hoặc chọn clip khác. Chữ sai thì ghép chữ trong bước dựng. Tệp hết hạn thì sửa lưu trữ. Job trùng thì sửa điều phối. Skill dài hơn không giải quyết mọi nguyên nhân.</p>
+<ul>
+<li>Cảnh truyền sai ý thì sửa ý định.</li>
+<li>Chuyển động bất ổn thì đổi đầu vào tạo sinh liên quan hoặc chọn clip khác.</li>
+<li>Chữ sai thì ghép chữ trong bước dựng.</li>
+<li>Tệp hết hạn thì sửa lưu trữ.</li>
+<li>Job trùng thì sửa điều phối.</li>
+</ul>
+<p>Skill dài hơn không giải quyết mọi nguyên nhân.</p>
 <p>Giữ storyboard, cấu hình không bí mật, ghi chú quyết định, mã composition và tham chiếu tài nguyên phù hợp trong GitHub. Pages phục vụ media tĩnh công khai trong giới hạn lưu trữ, không cung cấp worker tạo sinh lâu hoặc API chứa khóa. Xem toàn bộ bản xuất và xác nhận đích công bố. {{cite:46}}</p>
 <div class="exercise"><h3>Thử nghiệm hữu ích đầu tiên</h3><p>Chuẩn bị storyboard mười giây, quay một cảnh gameplay thật và dựng preview. Chỉ tạo một clip concept nếu nó bổ sung điều quay game không có và chi phí đã được cho phép. Ghi điều cải thiện trailer trước khi thêm mô hình, skill, server MCP hoặc bước tự động hóa.</p></div>

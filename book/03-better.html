@@ -1,17 +1,35 @@
 <h2 id="better-loop">The better loop</h2>
 <p class="lead">A better result begins with a smaller uncertainty.</p>
-<p>You ask an AI agent to make a beautiful 3D game. It creates a landscape, a character, a menu, and several hundred lines of code. The screenshot looks promising. Then you press a key: the camera points into a wall, the player slides through a collectible, and nothing explains how to win. The request was easy to begin and difficult to finish because “good” never became something you could observe.</p>
-<p>This book uses one original example, <strong>Signal Garden</strong>: guide a small maintenance robot around an abandoned rooftop garden, collect three energy cells, avoid a patrolling drone, and power a beacon before time runs out. The game is deliberately small. It gives us enough movement, collision, feedback, atmosphere, and state transitions to practice making a complete experience.</p>
+<p>You ask an AI agent to make a beautiful 3D game. It creates a landscape, a character, a menu, and several hundred lines of code.</p>
+<p>The screenshot looks promising. Then you press a key: the camera points into a wall, the player slides through a collectible, and nothing explains how to win.</p>
+<p>The request was easy to begin and difficult to finish because “good” never became something you could observe.</p>
+<p>This book uses one original example, <strong>Signal Garden</strong>: guide a small maintenance robot around an abandoned rooftop garden, collect three energy cells, avoid a patrolling drone, and power a beacon before time runs out. The game is deliberately small.</p>
+<p>It gives us enough movement, collision, feedback, atmosphere, and state transitions to practice making a complete experience.</p>
 <div class="loop"><div><span>01 / INTENT</span><strong>Describe</strong><small>What should a player experience?</small></div><div><span>02 / ACTION</span><strong>Build</strong><small>Make one part playable.</small></div><div><span>03 / EVIDENCE</span><strong>Observe</strong><small>Play it. Capture what happens.</small></div><div><span>04 / LEARNING</span><strong>Refine</strong><small>Change the weakest part.</small></div></div>
 <h3>Give every iteration a question</h3>
-<p>“Can a new player find the beacon?” is a useful question. It suggests a route, a camera angle, a first playtest, and a way to judge the change. “Make the game more professional” leaves the agent to guess among textures, controls, menus, sound, or architecture. The next step is often easier to choose when the current problem is named precisely.</p>
-<p>For this book, <em>better</em> means increasing the quality of the player’s experience while keeping the cost of the next change manageable. The first half needs playtesting. The second needs understandable files, repeatable checks, and recoverable commits. A beautiful frame and a successful build each answer only part of the question.</p>
+<p>“Can a new player find the beacon?” is a useful question.</p>
+<p>It suggests a route, a camera angle, a first playtest, and a way to judge the change. “Make the game more professional” leaves the agent to guess among textures, controls, menus, sound, or architecture.</p>
+<p>The next step is often easier to choose when the current problem is named precisely.</p>
+<p>For this book, <em>better</em> means increasing the quality of the player’s experience while keeping the cost of the next change manageable. The first half needs playtesting.</p>
+<p>The second needs understandable files, repeatable checks, and recoverable commits. A beautiful frame and a successful build each answer only part of the question.</p>
 <h3>A model, an agent, and a workflow</h3>
-<p><strong>GPT-6 Astra</strong> is the requested model. An <strong>agent</strong> is the surrounding software that gives that model access to files, a terminal, documentation, and possibly a browser or game editor. A <strong>workflow</strong> is your agreement about what to build, what evidence to collect, and when to continue. A pasted prompt cannot give an ordinary chat tools it does not have.</p>
-<p>OpenAI’s Astra guidance recommends making autonomy, instruction-file behavior, delegation, and test scope explicit. Use the model name shown by your agent host, and check that the tools needed for the task are available. The game recipe here does not depend on a particular subscription tier or an invented model capability. {{cite:01}}</p>
+<ul>
+<li><strong>GPT-6 Astra</strong> is the requested model.</li>
+<li>An <strong>agent</strong> is the surrounding software that gives that model access to files, a terminal, documentation, and possibly a browser or game editor.</li>
+<li>A <strong>workflow</strong> is your agreement about what to build, what evidence to collect, and when to continue.</li>
+</ul>
+<p>A pasted prompt cannot give an ordinary chat tools it does not have.</p>
+<p>OpenAI’s Astra guidance recommends making autonomy, instruction-file behavior, delegation, and test scope explicit. Use the model name shown by your agent host, and check that the tools needed for the task are available.</p>
+<p>The game recipe here does not depend on a particular subscription tier or an invented model capability. {{cite:01}}</p>
 <div class="callout"><div class="callout-label">The working principle</div><p>Write the smallest instruction that carries the intent, constraints, and evidence needed for the next useful decision.</p></div>
 <h3>How to use this book</h3>
-<p>Read the approach comparison before choosing an engine. Set up the repository and fill the game brief. Use a compact execution prompt when the brief is clear; use the optional meta-prompt to resolve missing design decisions. Review available skills before adding project-specific instructions. Build through useful checkpoints, keep the evidence, and revise the workflow when the model or the task changes.</p>
+<ol>
+<li>Read the approach comparison before choosing an engine.</li>
+<li>Set up the repository and fill the game brief.</li>
+<li>Use a compact execution prompt when the brief is clear; use the optional meta-prompt to resolve missing design decisions.</li>
+<li>Review available skills before adding project-specific instructions.</li>
+<li>Build through useful checkpoints, keep the evidence, and revise the workflow when the model or the task changes.</li>
+</ol>
 <p>The September 2026 revision checks the advice against current Astra guidance and research published or updated since March. Every source has a readable summary, date information, and limits in the <a href="#sources">reading notes</a>. Older videos remain explicitly labeled background.</p>
 <p>For a visual map, use the <a href="#thinking-flows">thinking, decision, and improvement diagrams</a>. The <a href="#video-workflows">video walkthrough</a> extends the same method to a game trailer and explains how node workflows, MCP, skills, and hooks fit together.</p>
 <div class="exercise"><h3>Try this before you prompt</h3><p>Write one sentence for the player’s objective, one action that should feel satisfying, and one observable condition that means the first version is done. If those sentences are unclear, work on the game idea first.</p></div>

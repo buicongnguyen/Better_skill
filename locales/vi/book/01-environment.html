@@ -1,6 +1,8 @@
 <h2 id="environment">Thiết lập môi trường</h2>
 <p class="lead">Từ thư mục trên máy đến game mà người khác có thể mở.</p>
-<p>Lộ trình nhập môn dùng tác nhân lập trình cục bộ, Git, GitHub và game tĩnh TypeScript/Vite/Three.js. Thiết lập trước <a href="#cookbook">mười một prompt trong cẩm nang</a>. Nếu đã có công cụ hoặc tài khoản, kiểm tra và dùng lại. Chương mô tả hành động cho dự án game; đọc sách không tự cài phần mềm hay cấp quyền. Đã kiểm tra hướng dẫn cài và truy cập tài khoản ngày 14/9/2026. {{cite:56}} {{cite:58}}</p>
+<p>Lộ trình nhập môn dùng tác nhân lập trình cục bộ, Git, GitHub và game tĩnh TypeScript/Vite/Three.js. Thiết lập trước <a href="#cookbook">mười một prompt trong cẩm nang</a>.</p>
+<p>Nếu đã có công cụ hoặc tài khoản, kiểm tra và dùng lại. Chương mô tả hành động cho dự án game; đọc sách không tự cài phần mềm hay cấp quyền.</p>
+<p>Đã kiểm tra hướng dẫn cài và truy cập tài khoản ngày 14/9/2026. {{cite:56}} {{cite:58}}</p>
 <h3>1 · Cài công cụ phát triển</h3>
 <ol><li>Cài <a href="https://git-scm.com/install/windows">Git cho Windows</a>; cùng trang có hướng dẫn macOS và Linux. Git lưu lịch sử cục bộ. {{cite:58}}</li><li>Cài <a href="https://nodejs.org/en/download">Node.js LTS còn được hỗ trợ cùng npm</a>, tương thích phiên bản Vite đã chọn. Đây là công cụ build game, không phải điều kiện để cài tác nhân desktop. {{cite:59}}</li><li>Cài <a href="https://cli.github.com/">GitHub CLI</a> để thao tác tài khoản/repo. Đây là chương trình khác Git. Mở lại terminal và tác nhân sau khi cài để nhận đường dẫn mới. {{cite:61}}</li></ol>
 <p>Trong PowerShell trên Windows hoặc terminal trên macOS/Linux, kiểm tra công cụ. Mỗi lệnh phải in phiên bản. Nếu không tìm thấy lệnh, cần xử lý cài đặt hoặc PATH.</p>
@@ -12,19 +14,27 @@ npm --version</code></pre>
 <ol><li>Tạo thư mục độc lập như <code>Documents/signal-garden</code> trong trình quản lý tệp. Tránh đặt game mới trong repo của cuốn sách.</li><li>Theo <a href="https://learn.chatgpt.com/docs/quickstart">hướng dẫn desktop chính thức</a> và <a href="https://learn.chatgpt.com/docs/windows/windows-app">hướng dẫn tải Windows</a>. Tài liệu hiện gọi ứng dụng là ChatGPT desktop; chọn <strong>Codex</strong> để phát triển phần mềm. Bản Codex đã cài có thể dùng điều khiển dự án/thư mục tương ứng.</li><li>Đăng nhập tài khoản ChatGPT, mở thư mục game thành dự án và bắt đầu tác vụ lập trình cục bộ ở đó. Kiểm tra đường dẫn tuyệt đối trước khi sửa. Chọn GPT-6 Astra nếu có trong bộ chọn model; quyền tài khoản và tùy chọn model có thể khác nhau.</li></ol>
 <p>Môi trường cục bộ được chọn phải có công cụ ở bước 1. Phiên WSL hoặc máy từ xa có môi trường riêng, có thể cần công cụ và xác thực riêng. Giữ giới hạn quyền của ứng dụng; cấp quyền cụ thể khi hành động cần thiết yêu cầu. {{cite:56}}</p>
 <h3>3 · Tùy chọn: dùng Claude Code trong ứng dụng desktop</h3>
-<p>Theo <a href="https://code.claude.com/docs/en/desktop-quickstart">hướng dẫn desktop Claude</a>, đăng nhập, chọn <strong>Code → Local → Select folder</strong> rồi chọn thư mục game. Tab Code cần gói đủ điều kiện; tài khoản chat miễn phí không đủ cho lộ trình này. Cần Git cho cách ly worktree và quy trình quản lý phiên bản của sách. Bản ứng dụng Windows cũ còn yêu cầu Git trước mọi phiên cục bộ. Desktop tích hợp Claude Code; chỉ cần cài CLI riêng nếu muốn chạy <code>claude</code> từ terminal. {{cite:57}}</p>
-<p>Dùng một tác nhân tại một thời điểm trên cùng checkout. Để so tác nhân, dùng nhánh/worktree riêng cùng mốc và tác vụ đánh giá. Prompt có thể chia sẻ tài liệu dự án, nhưng chọn model và tìm tệp chỉ dẫn thuộc từng ứng dụng; không mặc định tác nhân nào cũng tự đọc cấu hình của tác nhân khác. <a href="#skills">Xem cách chọn công cụ và skill</a>.</p>
+<p>Theo <a href="https://code.claude.com/docs/en/desktop-quickstart">hướng dẫn desktop Claude</a>, đăng nhập, chọn <strong>Code → Local → Select folder</strong> rồi chọn thư mục game. Tab Code cần gói đủ điều kiện; tài khoản chat miễn phí không đủ cho lộ trình này.</p>
+<p>Cần Git cho cách ly worktree và quy trình quản lý phiên bản của sách. Bản ứng dụng Windows cũ còn yêu cầu Git trước mọi phiên cục bộ.</p>
+<p>Desktop tích hợp Claude Code; chỉ cần cài CLI riêng nếu muốn chạy <code>claude</code> từ terminal. {{cite:57}}</p>
+<p>Dùng một tác nhân tại một thời điểm trên cùng checkout. Để so tác nhân, dùng nhánh/worktree riêng cùng mốc và tác vụ đánh giá.</p>
+<p>Prompt có thể chia sẻ tài liệu dự án, nhưng chọn model và tìm tệp chỉ dẫn thuộc từng ứng dụng; không mặc định tác nhân nào cũng tự đọc cấu hình của tác nhân khác. <a href="#skills">Xem cách chọn công cụ và skill</a>.</p>
 <h3>4 · Tạo quyền truy cập GitHub bằng HTTPS</h3>
 <ol><li><a href="https://github.com/signup">Tạo tài khoản GitHub</a>, xác minh email và thiết lập bảo vệ tài khoản. Bỏ qua nếu đã có tài khoản. {{cite:60}}</li><li>Chạy lệnh đăng nhập dưới trong terminal cục bộ. Tự hoàn thành đăng nhập trình duyệt. Nếu được hỏi xác thực Git bằng thông tin GitHub, chọn Yes. {{cite:61}}</li></ol>
 <pre><code>gh auth login --hostname github.com --git-protocol https --web
 gh auth status</code></pre>
-<p>Chạy kiểm tra trạng thái trong môi trường tác nhân nữa. Đăng nhập Codex độc lập với GitHub. Xác thực GitHub CLI cũng có thể cấu hình thông tin Git HTTPS nên <strong>SSH là tùy chọn</strong>. Không đưa mật khẩu, token hay khóa riêng vào chat hoặc commit. GitHub CLI thường dùng kho thông tin đăng nhập của hệ điều hành; tài liệu nêu sẽ dùng tệp văn bản thuần nếu không có kho hoạt động được. {{cite:61}}</p>
+<p>Chạy kiểm tra trạng thái trong môi trường tác nhân nữa. Đăng nhập Codex độc lập với GitHub.</p>
+<p>Xác thực GitHub CLI cũng có thể cấu hình thông tin Git HTTPS nên <strong>SSH là tùy chọn</strong>. Không đưa mật khẩu, token hay khóa riêng vào chat hoặc commit.</p>
+<p>GitHub CLI thường dùng kho thông tin đăng nhập của hệ điều hành; tài liệu nêu sẽ dùng tệp văn bản thuần nếu không có kho hoạt động được. {{cite:61}}</p>
 <h3>5 · Tùy chọn: chọn SSH</h3>
-<p>Nếu thích SSH, theo <a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent">hướng dẫn khóa và ssh-agent</a> đúng nền tảng. Kiểm tra khóa hiện có trước; không vô tình ghi đè. Có thể tạo khóa mới bằng lệnh dưới sau khi thay nhãn email. Thêm mật khẩu bảo vệ và làm theo hướng dẫn hệ điều hành. {{cite:62}}</p>
+<p>Nếu thích SSH, theo <a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent">hướng dẫn khóa và ssh-agent</a> đúng nền tảng. Kiểm tra khóa hiện có trước; không vô tình ghi đè.</p>
+<p>Có thể tạo khóa mới bằng lệnh dưới sau khi thay nhãn email. Thêm mật khẩu bảo vệ và làm theo hướng dẫn hệ điều hành. {{cite:62}}</p>
 <pre><code>ssh-keygen -t ed25519 -C "your_email@example.com"
 # Sau khi thêm khóa công khai vào GitHub:
 ssh -T git@github.com</code></pre>
-<p>Chỉ thêm khóa <code>.pub</code> tại GitHub Settings → SSH and GPG keys. Trước khi chấp nhận máy chủ mới, so dấu vân tay với danh sách chính thức được GitHub liên kết. Bài kiểm tra phải hiện đúng tên tài khoản; thành công vẫn có thể trả mã 1 vì GitHub không cung cấp shell tương tác. Dùng remote SSH như <code>git@github.com:YOUR_ACCOUNT/signal-garden.git</code>. GitHub CLI vẫn cần đăng nhập riêng để thao tác API như tạo repo. {{cite:62}} {{cite:61}}</p>
+<p>Chỉ thêm khóa <code>.pub</code> tại GitHub Settings → SSH and GPG keys. Trước khi chấp nhận máy chủ mới, so dấu vân tay với danh sách chính thức được GitHub liên kết.</p>
+<p>Bài kiểm tra phải hiện đúng tên tài khoản; thành công vẫn có thể trả mã 1 vì GitHub không cung cấp shell tương tác. Dùng remote SSH như <code>git@github.com:YOUR_ACCOUNT/signal-garden.git</code>.</p>
+<p>GitHub CLI vẫn cần đăng nhập riêng để thao tác API như tạo repo. {{cite:62}} {{cite:61}}</p>
 <h3>6 · Kiểm tra dự án và đặt danh tính commit</h3>
 <p>Dán prompt chỉ đọc này vào chat của dự án đã chọn. Nó kiểm tra mức sẵn sàng trước khi cẩm nang bắt đầu tạo tệp.</p>
 {{prompt:setup-preflight.md}}

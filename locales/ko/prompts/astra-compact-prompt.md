@@ -1,6 +1,17 @@
+## 먼저 수정할 매개변수
+BRIEF_PATH: docs/game-brief.md
+ACCEPTANCE_PATH: docs/acceptance.md
+PROGRESS_PATH: docs/progress.md
+
+이 요청 전체에서 매개변수 블록의 문서 경로를 사용하세요.
+
 # 저장소 기획으로 Signal Garden 구현
 
-이 게임 저장소에서 GPT-6 Astra를 사용하세요. docs/game-brief.md의 데스크톱 웹 게임을 만들고 docs/acceptance.md를 충족합니다. 기획서는 메커니즘의 기준이며 docs/progress.md는 완료 작업과 남은 문제를 기록합니다. 필수 문서가 없으면 대체 설계를 만들기 전에 밝히세요.
+이 게임 저장소에서 GPT-6 Astra를 사용하세요. BRIEF_PATH의 데스크톱 웹 게임을 만들고 ACCEPTANCE_PATH를 충족합니다.
+
+기획서는 메커니즘의 기준이며 PROGRESS_PATH는 완료 작업과 남은 문제를 기록합니다.
+
+필수 문서가 없으면 대체 설계를 만들기 전에 밝히세요.
 
 현재 구현을 확인하고 사용자 작업을 보존하세요. 기획 안에서 일상 기술 결정을 내리며 승인된 범위를 계속 진행합니다. 관련 기존 스킬을 사용하되 시작만을 위해 맞춤 스킬을 만들거나 설치하지 마세요. 중요한 모호함이나 없는 권한에만 질문을 제한합니다.
 

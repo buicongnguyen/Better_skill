@@ -1,17 +1,39 @@
-# Phát hành game đã kiểm tra lên GitHub Pages
+## Sửa các tham số này
+PROJECT_FOLDER: thư mục game đang chọn
+AGENT: Codex
+MODEL: GPT-6 Astra
+GITHUB_OWNER: [YOUR_ACCOUNT]
+REPOSITORY: signal-garden
+PUBLISH: YES
 
-Xuất bản dự án tới tài khoản và kho dưới đây. Tôi cho phép tạo kho công khai nếu chưa có, commit tệp dự định công bố, push commit đã rà soát, cấu hình GitHub Pages cho kho này và triển khai game công khai.
+## Lựa chọn và tính nhất quán
+- AGENT: chọn Codex hoặc Claude Code. Chọn MODEL trong ứng dụng trước khi gửi; dùng mô hình Claude có sẵn với Claude Code. Những dòng này không tự đổi mô hình hay cấp công cụ.
+- Chỉ làm trong PROJECT_FOLDER. Kiểm tra công cụ thực tế và chỉ dẫn dự án liên quan; giải quyết khác biệt quan trọng trước phần việc phụ thuộc.
+- PUBLISH: YES cho phép công khai repo/mã nguồn và triển khai như mô tả bên dưới; NO chỉ chuẩn bị phát hành cục bộ.
+  Điền rõ mọi đích đến trước khi công khai.
+  Tính URL và base path từ GITHUB_OWNER và REPOSITORY.
 
-Account: YOUR_ACCOUNT
-Repository: signal-garden
-Expected URL: https://YOUR_ACCOUNT.github.io/signal-garden/
+## Mục tiêu
+Chuẩn bị hoặc công khai game trên GitHub Pages theo PUBLISH.
 
-Thay YOUR_ACCOUNT bằng tài khoản mong muốn thật trước khi thực thi. Nếu chưa xác định, hỏi tài khoản trong khi làm phần chuẩn bị độc lập. Không đoán đích.
+## Công việc và ràng buộc
+- Dùng GITHUB_OWNER và REPOSITORY ở đầu; điền rõ chỗ trống trước mọi hành động công khai bên ngoài.
+- Kiểm tra repo, nhánh, remote, diff đúng phạm vi, bí mật đã loại và giấy phép asset. Giữ công việc không liên quan; không thay remote xung đột hay force-push.
+- Giữ engine hiện có.
+  Với Vite/Three.js, kiểm tra lệnh cài/build và đầu ra dist.
+  Với Godot, kiểm tra phiên bản đã cài, khả năng xuất web và thư mục xuất thực tế; giữ tên tệp đã sinh.
+  Chứng minh bản tĩnh chạy được trước khi công khai.
+- Với site dự án, tính URL https://GITHUB_OWNER.github.io/REPOSITORY/ bằng giá trị thực.
+  Đặt Vite base /REPOSITORY/ nếu dùng Vite; với engine khác, kiểm tra asset đã xuất dưới đường dẫn đó.
+- Chuẩn bị workflow GitHub Pages Actions build dự án và chỉ tải lên thư mục tĩnh đã kiểm tra, với quyền Pages cần thiết.
+- Nếu PUBLISH là YES, tôi cho phép tạo repo GitHub công khai đã nêu nếu chưa có, commit và push các tệp game đúng phạm vi đã rà soát, rồi công khai trên host đã chọn.
+  Nếu PUBLISH là NO, dừng sau chuẩn bị cục bộ và báo các bước phát hành còn lại.
+- Với YES, bật Pages từ GitHub Actions nếu có quyền và theo dõi workflow của đúng commit đã push.
+- Mở URL công khai, kiểm tra asset và một vòng đầy đủ bằng điều khiển thật nếu có công cụ; nêu kiểm tra chưa thực hiện.
 
-Xem kho hiện tại, remote, cây làm việc và chỉ dẫn. Giữ sửa đổi không liên quan; không ghi đè kho từ xa đã có. Xác nhận tệp stage dành để công khai và có ghi công tài nguyên. Loại thông tin xác thực, môi trường cục bộ, tài nguyên thiếu phép.
+## Điều kiện hoàn thành
+PUBLISH=NO: gói phát hành cục bộ đã thử và các bước còn lại.
 
-Build và chạy nghiệm thu trong phạm vi. Cấu hình base đúng. Commit workflow Actions build/kiểm tra, chỉ tải đầu ra production công khai và triển khai qua Pages.
+PUBLISH=YES: commit đã rà, triển khai thành công đúng revision, URL công khai và ghi chép kiểm tra thực tế.
 
-Push đúng nhánh, theo dõi run đúng commit, sửa lỗi triển khai có thể xử lý trong phạm vi. Kiểm tra URL và tài nguyên production. Nếu có trình duyệt, thao tác thật với vòng chính; nêu phần còn cần thử tay.
-
-Kết thúc bằng URL game, kho mã, commit, kết quả triển khai và kiểm tra ngắn. Run đang xếp hàng hoặc preview cục bộ chưa phải kết quả xuất bản cuối.
+Nêu trở ngại cụ thể nếu chưa hoàn thành được.

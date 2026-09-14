@@ -1,50 +1,77 @@
 <h2 id="cookbook">Cẩm nang prompt để sao chép</h2>
-<p class="lead">Mỗi bước của <a href="#summary">Tóm tắt nhanh</a> có một prompt minh họa.</p><p>Bắt đầu bằng <a href="#environment">thiết lập môi trường</a>. Ví dụ gốc này theo <a href="#brief">luật Signal Garden</a>. Dán <strong>từng prompt một</strong> vào chat gắn với thư mục game, xem kết quả rồi tiếp tục. Khi điều chỉnh, giữ yêu cầu riêng đã thống nhất. Đây là quy trình đề xuất, không phải benchmark hay lời hứa một prompt sẽ làm xong game.</p><p>Chatbot không có công cụ repo và thực thi có thể giúp soạn mô tả hoặc prompt; nó không thể đọc mã cục bộ, chạy kiểm tra hay xuất bản. Các bước đó cần tác nhân lập trình có thư mục và công cụ phù hợp. Trong Claude Code, dùng model Claude có sẵn; viết “Astra” trong prompt không đổi model. Tệp dự án là nguồn thông tin thống nhất để tiếp tục. {{cite:56}} {{cite:57}}</p>
+<p class="lead">Mỗi bước của <a href="#summary">Tóm tắt nhanh</a> có một prompt minh họa.</p>
+<p>Bắt đầu bằng <a href="#environment">thiết lập môi trường</a>. Ví dụ gốc này theo <a href="#brief">luật Signal Garden</a>.</p>
+<p>Dán <strong>từng prompt một</strong> vào chat gắn với thư mục game, xem kết quả rồi tiếp tục. Khi điều chỉnh, giữ yêu cầu riêng đã thống nhất.</p>
+<p>Đây là quy trình đề xuất, không phải benchmark hay lời hứa một prompt sẽ làm xong game.</p>
+<p>Chatbot không có công cụ repo và thực thi có thể giúp soạn mô tả hoặc prompt; nó không thể đọc mã cục bộ, chạy kiểm tra hay xuất bản. Các bước đó cần tác nhân lập trình có thư mục và công cụ phù hợp.</p>
+<p>Trong Claude Code, dùng model Claude có sẵn; viết “Astra” trong prompt không đổi model. Tệp dự án là nguồn thông tin thống nhất để tiếp tục. {{cite:56}} {{cite:57}}</p>
+<h4>Sửa khối ngắn ở đầu, giữ hướng dẫn chi tiết</h4>
+<ol>
+<li>Sao chép toàn bộ prompt vào bản nháp chat chưa gửi. Sau đó sửa khối mở đầu; giữ tiêu đề và xuống dòng.</li>
+<li><strong>Sửa tham số mở đầu.</strong> Chọn một tác nhân và, khi có lựa chọn, một engine hoặc công cụ video. Giữ mặc định khác nếu phù hợp dự án.</li>
+<li><strong>Khớp môi trường thật.</strong> Chọn mô hình trong ứng dụng và mở đúng thư mục. Gõ tên mô hình hay công cụ không tự kích hoạt nó.</li>
+<li><strong>Giữ một nguồn luật chuẩn.</strong> Ghi thay đổi thiết kế vào <code>RULE_CHANGES</code> khi soạn mô tả; các bước sau dùng tài liệu dự án đã thống nhất. Đổi engine cần đối chiếu với công việc hiện có.</li>
+<li><strong>Kiểm tra rồi mới tiếp tục.</strong> Đối chiếu kết quả với điều kiện hoàn thành. Trong prompt phát hành, <code>PUBLISH: YES</code> cho phép công khai tại đích đã nêu; dùng <code>NO</code> để chỉ chuẩn bị cục bộ.</li>
+</ol>
+<h4>Học gì từ ví dụ kế hoạch RTS</h4>
+<p>Kế hoạch RTS được cung cấp tách phạm vi, nhóm công việc, giá trị tinh chỉnh và kiểm tra hoàn thành. Sách áp dụng cấu trúc đó: <strong>tham số → mục tiêu → công việc và ràng buộc → điều kiện hoàn thành</strong>.</p>
+<p>Đặc tả game đầy đủ thuộc tài liệu dự án. Prompt tiếp theo nên yêu cầu kết quả hữu ích kế tiếp và trỏ đến các tài liệu đó. Ghi rõ luật thiết yếu, để tác nhân chọn chi tiết triển khai thông thường; thêm nhiều mục không tự chứng minh game tốt hơn. {{cite:17}}</p>
 <h3>1 · Xác định game</h3>
 <p>Dùng đầu tiên, khi có thư mục game trống hoặc mô tả hiện tại.</p>
 {{prompt:cookbook-01-brief.md}}
-<p><strong>Đầu ra mong đợi:</strong> Bản mô tả và danh sách nghiệm thu ngắn, luật nhất quán.</p><p>Đọc đầy đủ: <a href="#brief">Thiết kế một game đáng hoàn thành</a> · <a href="#better-loop">Vòng lặp để làm tốt hơn</a>. {{cite:17}}</p>
+<p><strong>Đầu ra mong đợi:</strong> Bản mô tả và danh sách nghiệm thu ngắn, luật nhất quán.</p>
+<p>Đọc đầy đủ: <a href="#brief">Thiết kế một game đáng hoàn thành</a> · <a href="#better-loop">Vòng lặp để làm tốt hơn</a>. {{cite:17}}</p>
 <h3>2 · Chọn cách làm</h3>
 <p>Dùng sau khi xác định phạm vi. Spike trả lời một câu hỏi kỹ thuật rủi ro.</p>
 {{prompt:cookbook-02-approach.md}}
-<p><strong>Đầu ra mong đợi:</strong> Lựa chọn engine được ghi lại và bằng chứng xuất bản thử nếu cần thí nghiệm.</p><p>Đọc đầy đủ: <a href="#approaches">Sáu cách xây dựng</a> · <a href="#stack">Chọn môi trường phù hợp</a>. {{cite:09}} {{cite:11}} {{cite:12}}</p>
+<p><strong>Đầu ra mong đợi:</strong> Lựa chọn engine được ghi lại và bằng chứng xuất bản thử nếu cần thí nghiệm.</p>
+<p>Đọc đầy đủ: <a href="#approaches">Sáu cách xây dựng</a> · <a href="#stack">Chọn môi trường phù hợp</a>. {{cite:09}} {{cite:11}} {{cite:12}}</p>
 <h3>3 · Kiểm tra bằng chứng mới</h3>
 <p>Dùng trước lời khuyên về phiên bản, model hay skill. Cần duyệt web để xác minh mới.</p>
 {{prompt:cookbook-03-evidence.md}}
-<p><strong>Đầu ra mong đợi:</strong> Ghi chú nguồn tách sự thật đã kiểm tra khỏi giả thuyết.</p><p>Đọc đầy đủ: <a href="#research">Học từ bằng chứng</a>. {{cite:17}} {{cite:52}}</p>
+<p><strong>Đầu ra mong đợi:</strong> Ghi chú nguồn tách sự thật đã kiểm tra khỏi giả thuyết.</p>
+<p>Đọc đầy đủ: <a href="#research">Học từ bằng chứng</a>. {{cite:17}} {{cite:52}}</p>
 <h3>4 · Lưu bộ nhớ dự án</h3>
 <p>Dùng khi mô tả và cách làm đã thống nhất. Cần cấu hình tác giả Git trước khi commit.</p>
 {{prompt:cookbook-04-memory.md}}
-<p><strong>Đầu ra mong đợi:</strong> Tài liệu đã rà và commit mốc cục bộ; chưa xuất bản.</p><p>Đọc đầy đủ: <a href="#github">Cho công việc một bộ nhớ</a>. {{cite:07}} {{cite:39}} {{cite:58}}</p>
+<p><strong>Đầu ra mong đợi:</strong> Tài liệu đã rà và commit mốc cục bộ; chưa xuất bản.</p>
+<p>Đọc đầy đủ: <a href="#github">Cho công việc một bộ nhớ</a>. {{cite:07}} {{cite:39}} {{cite:58}}</p>
 <h3>5 · Chọn skill hữu ích</h3>
 <p>Dùng cho tác vụ cụ thể tiếp theo, không phải yêu cầu cài mọi skill nổi tiếng.</p>
 {{prompt:cookbook-05-skills.md}}
-<p><strong>Đầu ra mong đợi:</strong> Lựa chọn có lý do: công cụ hiện tại, skill có sẵn hoặc khả năng còn thiếu cụ thể.</p><p>Đọc đầy đủ: <a href="#skills">Skill có thực sự thêm giá trị?</a> · <a href="#thinking-flows">Suy xét, quyết định, cải thiện</a>. {{cite:08}} {{cite:17}}</p>
+<p><strong>Đầu ra mong đợi:</strong> Lựa chọn có lý do: công cụ hiện tại, skill có sẵn hoặc khả năng còn thiếu cụ thể.</p>
+<p>Đọc đầy đủ: <a href="#skills">Skill có thực sự thêm giá trị?</a> · <a href="#thinking-flows">Suy xét, quyết định, cải thiện</a>. {{cite:08}} {{cite:17}}</p>
 <h3>6 · Bắt đầu xây dựng tập trung</h3>
 <p>Gửi cho tác nhân lập trình sau bước 1–5. Chọn GPT-6 Astra trong Codex nếu tài khoản có.</p>
 {{prompt:cookbook-06-start.md}}
-<p><strong>Đầu ra mong đợi:</strong> Lát cắt di chuyển chạy được và ghi chép kiểm tra trung thực. Bản khởi tạo dài hơn ở liên kết dưới.</p><p>Đọc đầy đủ: <a href="#master-prompt">Prompt thực thi cho Astra</a> · <a href="#meta-prompt">Viết prompt để tạo prompt</a>. {{cite:04}} {{cite:17}}</p>
+<p><strong>Đầu ra mong đợi:</strong> Lát cắt di chuyển chạy được và ghi chép kiểm tra trung thực. Bản khởi tạo dài hơn ở liên kết dưới.</p>
+<p>Đọc đầy đủ: <a href="#master-prompt">Prompt thực thi cho Astra</a> · <a href="#meta-prompt">Viết prompt để tạo prompt</a>. {{cite:04}} {{cite:17}}</p>
 <h3>7 · Tiếp tục một mốc</h3>
 <p>Lặp sau khi xem mỗi mốc. Đọc lại tệp tiến độ trong phiên mới.</p>
 {{prompt:cookbook-07-next.md}}
-<p><strong>Đầu ra mong đợi:</strong> Thêm một mốc chơi được, kiểm tra tương ứng và commit đã rà.</p><p>Đọc đầy đủ: <a href="#milestones">Từ thư mục trống đến trò chơi</a>. {{cite:04}} {{cite:05}}</p>
+<p><strong>Đầu ra mong đợi:</strong> Thêm một mốc chơi được, kiểm tra tương ứng và commit đã rà.</p>
+<p>Đọc đầy đủ: <a href="#milestones">Từ thư mục trống đến trò chơi</a>. {{cite:04}} {{cite:05}}</p>
 <h3>8 · Kiểm tra chơi thật</h3>
 <p>Dùng trên bản production. Phần quan sát con người do bạn hoặc người chơi khác thực hiện.</p>
 {{prompt:cookbook-08-playtest.md}}
-<p><strong>Đầu ra mong đợi:</strong> Lỗi tái hiện được và danh sách rõ các kiểm tra còn chờ.</p><p>Đọc đầy đủ: <a href="#verify">Kiểm tra game thực sự chơi được</a>. {{cite:43}} {{cite:44}} {{cite:45}}</p>
+<p><strong>Đầu ra mong đợi:</strong> Lỗi tái hiện được và danh sách rõ các kiểm tra còn chờ.</p>
+<p>Đọc đầy đủ: <a href="#verify">Kiểm tra game thực sự chơi được</a>. {{cite:43}} {{cite:44}} {{cite:45}}</p>
 <h3>9 · Sửa và cải thiện prompt sau</h3>
 <p>Dùng cùng bằng chứng lỗi thật. Lưu kết quả với prompt; không dán cả hội thoại vào chỉ dẫn sau.</p>
 {{prompt:cookbook-09-refine.md}}
-<p><strong>Đầu ra mong đợi:</strong> Bản sửa đã thử và prompt ứng viên gọn, kèm kế hoạch so công bằng.</p><p>Đọc đầy đủ: <a href="#refine">Cải thiện ý tưởng và cách làm</a>. {{cite:39}} {{cite:52}}</p>
+<p><strong>Đầu ra mong đợi:</strong> Bản sửa đã thử và prompt ứng viên gọn, kèm kế hoạch so công bằng.</p>
+<p>Đọc đầy đủ: <a href="#refine">Cải thiện ý tưởng và cách làm</a>. {{cite:39}} {{cite:52}}</p>
 <h3>10 · Xuất bản lên một đích</h3>
 <p>Chọn một prompt dưới và điền tài khoản. Các prompt này cho phép rõ việc công khai mã nguồn và bản game. Kiểm tra đích trước khi gửi.</p>
 <h4>GitHub Pages · game tĩnh công khai</h4>
 {{prompt:cookbook-10-pages.md}}
 <h4>Vercel Hobby · game cá nhân, phi thương mại</h4>
 {{prompt:cookbook-10-vercel.md}}
-<p><strong>Đầu ra mong đợi:</strong> Commit, triển khai thành công đúng revision, URL game công khai và ghi chép kiểm tra chơi.</p><p>Đọc đầy đủ: <a href="#environment">Thiết lập môi trường</a> · <a href="#publish">Phát hành và khép vòng học hỏi</a>. {{cite:12}} {{cite:13}} {{cite:40}} {{cite:46}} {{cite:63}} {{cite:64}}</p>
+<p><strong>Đầu ra mong đợi:</strong> Commit, triển khai thành công đúng revision, URL game công khai và ghi chép kiểm tra chơi.</p>
+<p>Đọc đầy đủ: <a href="#environment">Thiết lập môi trường</a> · <a href="#publish">Phát hành và khép vòng học hỏi</a>. {{cite:12}} {{cite:13}} {{cite:40}} {{cite:46}} {{cite:63}} {{cite:64}}</p>
 <h3>11 · Tùy chọn: giới thiệu game</h3>
 <p>Dùng khi có gameplay thật. Nếu thiếu footage hoặc công cụ quay, đầu ra đúng là kế hoạch quay.</p>
 {{prompt:cookbook-11-trailer.md}}
-<p><strong>Đầu ra mong đợi:</strong> Kế hoạch cảnh 20 giây, danh sách media đã kiểm tra và bản video nháp đã rà khi khả thi.</p><p>Đọc đầy đủ: <a href="#video-workflows">Làm video với tác nhân AI</a>. {{cite:26}} {{cite:27}} {{cite:47}}</p>
+<p><strong>Đầu ra mong đợi:</strong> Kế hoạch cảnh 20 giây, danh sách media đã kiểm tra và bản video nháp đã rà khi khả thi.</p>
+<p>Đọc đầy đủ: <a href="#video-workflows">Làm video với tác nhân AI</a>. {{cite:26}} {{cite:27}} {{cite:47}}</p>
 <p><a href="#summary">Về các bước ngắn gọn →</a></p>

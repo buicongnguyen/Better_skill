@@ -130,15 +130,29 @@ def build(lang,ui):
             table.setStyle(TableStyle([('BACKGROUND',(0,0),(-1,0),colors.HexColor('#e4ebdf')),('ROWBACKGROUNDS',(0,1),(-1,-1),[colors.white,PAPER]),('VALIGN',(0,0),(-1,-1),'TOP'),('TOPPADDING',(0,0),(-1,-1),8),('BOTTOMPADDING',(0,0),(-1,-1),8),('LEFTPADDING',(0,0),(-1,-1),8),('RIGHTPADDING',(0,0),(-1,-1),8),('LINEBELOW',(0,0),(-1,0),.6,ACCENT)]))
             story.extend([table,Spacer(1,12)]);return
         if name=='figure' and 'diagram' in classes:
+            # Carry an immediately preceding heading/paragraph onto the figure
+            # page. Otherwise a forced figure break can strand a heading, a
+            # final text line, or even just the zero-height anchor on a page.
+            figure_anchor=story.pop() if a else None
+            intro=[]
+            previous=node.find_previous_sibling()
+            if previous is not None and previous.name in ['h3','h4','p'] and story and isinstance(story[-1],Paragraph):
+                intro.insert(0,story.pop())
+                if previous.get('id') and story and isinstance(story[-1],Anchor):intro.insert(0,story.pop())
             ident=node['id'].removeprefix('diagram-');p=ROOT/'illustrations/diagrams'/lang/(ident+'.png')
             if not p.exists():raise FileNotFoundError(f'Render diagram first: {p}')
             with PILImage.open(p) as im:w,h=im.size
             wide=w>h*1.4
             max_w,max_h=(HEIGHT-96,WIDTH-225) if wide else (CONTENT,HEIGHT-235)
+            def intro_height(width):
+                return sum(item.wrap(width,2000)[1]+item.getSpaceBefore()+item.getSpaceAfter() for item in intro if isinstance(item,Paragraph))
+            max_h-=intro_height(max_w)
             # Mermaid's 18px text is exported at 3x. Keep print labels >=9pt.
             foldout=54*min(max_w/w,max_h/h)<9
-            if foldout:max_w,max_h=A3[0]-96,A3[1]-235
+            if foldout:max_w,max_h=A3[0]-96,A3[1]-235-intro_height(A3[0]-96)
             story.extend([NextPageTemplate('foldout' if foldout else ('landscape' if wide else 'portrait')),PageBreak()])
+            if figure_anchor:story.append(figure_anchor)
+            story.extend(intro)
             story.append(para(html.escape(node.find('figcaption').get_text(' ',strip=True)),'h3'))
             desc=node.find('p',class_='diagram-description')
             if desc:story.append(para(inline(desc),'small'))
@@ -169,7 +183,9 @@ def build(lang,ui):
         if name=='span':
             if 'source-number' in classes:story.append(para(ui['source']+' '+inline(node),'kicker'))
             return
-        if name=='a' and node.get_text(strip=True):story.append(para(inline(node),'small'));return
+        if name=='a' and node.get_text(strip=True):
+            if 'evidence-method' in classes and story and isinstance(story[-1],Paragraph):story[-1].keepWithNext=True
+            story.append(para(inline(node),'small'));return
         for child in node.children:walk(child)
 
     story.extend([Anchor('cover'),Spacer(1,24),para('FIELD BOOK 01 · 2026 / '+lang.upper(),'kicker'),para(html.escape(ui['bookTitle']),'h2'),para(inline(soup.select_one('.cover-deck')),'lead'),Spacer(1,16),add_image(ROOT/'illustrations/signal-garden-concept.png',CONTENT,355),Spacer(1,16),para(html.escape(ui['coverImage']),'small'),para('14 September 2026 · '+html.escape(ui['language']),'small'),para(f'<link href="{BASE}{ui["file"]}">Web edition</link> · <link href="https://github.com/buicongnguyen/Better_skill">GitHub</link>','small'),PageBreak()])

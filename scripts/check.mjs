@@ -106,6 +106,21 @@ for (const lang of ['en','vi','ko']) {
   for(let step=1;step<=11;step++) assert(summary.includes(`href="#cookbook-part-${step}"`),`Summary recipe missing: ${lang}/${step}`);
   const cookbook=edition.match(/<section class="chapter" aria-labelledby="cookbook">([\s\S]*?)<\/section>/)?.[1];
   assert.equal((cookbook?.match(/class="copy-button"/g)||[]).length,12,`Eleven recipes and two release alternatives: ${lang}`);
+  const headings={en:['Edit these parameters','Goal','Tasks and constraints','Completion check'],vi:['Sửa các tham số này','Mục tiêu','Công việc và ràng buộc','Điều kiện hoàn thành'],ko:['먼저 수정할 매개변수','목표','작업과 제약','완료 조건']}[lang];
+  for(const file of promptFiles){
+    const folder=lang==='en'?'prompts':`locales/${lang}/prompts`;
+    const prompt=await readFile(path.resolve(root,'..',folder,file),'utf8');
+    const download=path.join(root,'prompts',...(lang==='en'?[]:[lang]),file);
+    assert(edition.includes(escapeHtml(prompt.trim())),`Copyable prompt differs from source: ${lang}/${file}`);
+    assert.equal(await readFile(download,'utf8'),prompt,`Downloaded prompt differs from source: ${lang}/${file}`);
+    if(file.startsWith('cookbook-')||file==='setup-preflight.md'){
+      assert(prompt.startsWith(`## ${headings[0]}\n`),`Editable parameters must come first: ${lang}/${file}`);
+      for(const heading of headings)assert(prompt.includes(`## ${heading}\n`),`Missing prompt section: ${lang}/${file}/${heading}`);
+      assert(prompt.includes('\nPROJECT_FOLDER: ')&&prompt.includes('\nAGENT: ')&&prompt.includes('\nMODEL: '),`Missing environment parameters: ${lang}/${file}`);
+      if(file.includes('10-'))assert(prompt.includes('GITHUB_OWNER: ')&&prompt.includes('REPOSITORY: ')&&prompt.includes('PUBLISH: YES')&&prompt.includes('PUBLISH=NO'),`Release parameters must control both modes: ${lang}/${file}`);
+      if(file.includes('11-trailer'))assert(prompt.includes('DURATION_SECONDS: 20')&&!/20-second|20 giây|20초/.test(prompt),`Video duration must use its parameter: ${lang}/${file}`);
+    }
+  }
   if(lang==='en')continue;
   const localeRoot=path.resolve(root,`../locales/${lang}`);
   for(const file of chapterFiles) {

@@ -1,6 +1,8 @@
 <h2 id="brief">Design a game worth finishing</h2>
 <p class="lead">A small world can still have a clear identity.</p>
-<p>Signal Garden is an original teaching design. You are a maintenance robot on a forgotten rooftop at dusk. Three dormant cells can bring a garden’s beacon back to life. A patrolling drone and a short countdown make the route a decision. The desired feeling is calm exploration interrupted by readable moments of pressure.</p>
+<p>Signal Garden is an original teaching design. You are a maintenance robot on a forgotten rooftop at dusk.</p>
+<p>Three dormant cells can bring a garden’s beacon back to life. A patrolling drone and a short countdown make the route a decision.</p>
+<p>The desired feeling is calm exploration interrupted by readable moments of pressure.</p>
 <p>The following values are <strong>initial design targets</strong>. They have not been measured in a completed game. They exist to make the brief concrete enough to build and then revise.</p>
 <div class="table-wrap"><table><thead><tr><th>Design dimension</th><th>First-version decision</th><th>Observable check</th></tr></thead><tbody>
 <tr><td>Player objective</td><td>Collect three cells, return to the beacon, and activate it.</td><td>A first-time player can explain the objective after reading the start screen.</td></tr>
@@ -13,25 +15,48 @@
 <tr><td>First release</td><td>Desktop browser with keyboard input, responsive menus, static GitHub Pages hosting.</td><td>The production URL loads, plays, ends, and restarts. Touch gameplay is a later scope decision.</td></tr>
 </tbody></table></div>
 <h3>Define the core loop in verbs</h3>
-<p><strong>Observe → choose a route → move → collect → evade → return → activate.</strong> Each verb should have a visible consequence. A cell disappears once, the counter increases once, and the beacon’s appearance changes when it is ready. A hit has clear feedback and a short recovery period. Losing gives an immediate route back into play.</p>
+<p><strong>Observe → choose a route → move → collect → evade → return → activate.</strong> Each verb should have a visible consequence. A cell disappears once, the counter increases once, and the beacon’s appearance changes when it is ready.</p>
+<p>A hit has clear feedback and a short recovery period. Losing gives an immediate route back into play.</p>
 <h3>Decide the edge cases before they become bugs</h3>
-<p>For the first implementation, check loss conditions before allowing beacon activation in each simulation step. If the timer reaches zero in that step, the result is a loss. E should act on a fresh key press, and activation requires the player to be within two units of the beacon. After a terminal result, movement, collection, damage, and the timer stop until restart.</p>
-<p>Restart is available from <code>paused</code>, <code>won</code>, and <code>lost</code>. It resets the player, cells, health, timer, drone progress, cooldowns, effects, and held input, then starts a fresh <code>playing</code> round. Losing window focus clears input and pauses an active round; returning focus requires an explicit Resume action. These are our chosen rules, shared by the prompts and acceptance checks.</p>
-<p>Pick a single convention for coordinates and units. In the proposed Three.js game, use Y as up and move on the X/Z plane. Keep character speed in units per second. Decide these once in the brief so movement, camera, collision, and tests do not silently use different assumptions.</p>
+<ul>
+<li>For the first implementation, check loss conditions before allowing beacon activation in each simulation step.</li>
+<li>If the timer reaches zero in that step, the result is a loss.</li>
+<li>E should act on a fresh key press, and activation requires the player to be within two units of the beacon.</li>
+<li>After a terminal result, movement, collection, damage, and the timer stop until restart.</li>
+</ul>
+<ul>
+<li>Restart is available from <code>paused</code>, <code>won</code>, and <code>lost</code>.</li>
+<li>It resets the player, cells, health, timer, drone progress, cooldowns, effects, and held input, then starts a fresh <code>playing</code> round.</li>
+<li>Losing window focus clears input and pauses an active round; returning focus requires an explicit Resume action.</li>
+</ul>
+<p>These are our chosen rules, shared by the prompts and acceptance checks.</p>
+<p>Pick a single convention for coordinates and units. In the proposed Three.js game, use Y as up and move on the X/Z plane.</p>
+<p>Keep character speed in units per second. Decide these once in the brief so movement, camera, collision, and tests do not silently use different assumptions.</p>
 <h3>Give visual references a job</h3>
 <p>Collect or create references you have permission to use. Describe what each reference contributes: palette, camera height, silhouette, lighting, or UI density. Treat a reference as a design constraint, not an instruction to copy another game’s characters, brand, or proprietary assets.</p>
 <p>For Signal Garden, ask for a greybox image first, then a visual pass that keeps the same camera and geometry. Comparing like-for-like views makes the effect of lighting and material changes easier to judge. A more elaborate scene is not automatically a better scene.</p>
 <div class="exercise"><h3>Write the exclusions</h3><p>For the first release, exclude multiplayer, procedural worlds, inventory systems, dialogue trees, and multiple levels. Add one only when it strengthens a playtested core loop enough to justify the extra work.</p></div>
 <h3>Check the mathematics behind the rules</h3>
-<p>For keyboard input <code>(x,z)</code>, each component is -1, 0, or 1. Its length is <code>sqrt(x*x + z*z)</code>. A diagonal <code>(1,1)</code> has length <code>sqrt(2)</code>, so unnormalized diagonal motion is about 41% faster. Divide a nonzero vector by its length, then multiply by speed in metres/second and simulation time in seconds. Zero input must stay zero. This is an elementary derivation, not a benchmark.</p>
+<p>For keyboard input <code>(x,z)</code>, each component is -1, 0, or 1. Its length is <code>sqrt(x*x + z*z)</code>.</p>
+<p>A diagonal <code>(1,1)</code> has length <code>sqrt(2)</code>, so unnormalized diagonal motion is about 41% faster. Divide a nonzero vector by its length, then multiply by speed in metres/second and simulation time in seconds.</p>
+<p>Zero input must stay zero. This is an elementary derivation, not a benchmark.</p>
 <pre><code>n = Math.hypot(x, z)
 dx = n === 0 ? 0 : (x / n) * speed * dtSeconds
 dz = n === 0 ? 0 : (z / n) * speed * dtSeconds
 // At 4 m/s and 0.25 s: total displacement = 1 m.
 // Diagonal components are each about 0.7071 m.</code></pre>
-<p>This formula is for digital keyboard input. A future analog stick should preserve partial deflection, typically clamping length to at most 1 after a dead zone instead of normalizing every nonzero input. Collision resolution is a separate step: a large displacement can cross a thin obstacle. Use suitable bounded simulation steps or swept collision checks and test the relevant speeds; elapsed-time scaling alone does not prevent tunneling.</p>
-<p>For this design, “within two units” means ground-plane <strong>centre-to-centre distance ≤ 2</strong>; the equivalent squared-distance check is <code>dx*dx + dz*dz &lt;= 4</code>. Use simulation time for damage cooldown and the round timer so pause freezes both. Process damage and elapsed time, settle loss, and only then allow activation if still playing. A single phase value plus centralized transition checks prevents contradictory terminal screens. These are explicit implementation rules for our original design.</p>
+<p>This formula is for digital keyboard input. A future analog stick should preserve partial deflection, typically clamping length to at most 1 after a dead zone instead of normalizing every nonzero input.</p>
+<p>Collision resolution is a separate step: a large displacement can cross a thin obstacle. Use suitable bounded simulation steps or swept collision checks and test the relevant speeds; elapsed-time scaling alone does not prevent tunneling.</p>
+<ol>
+<li>For this design, “within two units” means ground-plane <strong>centre-to-centre distance ≤ 2</strong>; the equivalent squared-distance check is <code>dx*dx + dz*dz &lt;= 4</code>.</li>
+<li>Use simulation time for damage cooldown and the round timer so pause freezes both.</li>
+<li>Process damage and elapsed time, settle loss, and only then allow activation if still playing.</li>
+<li>A single phase value plus centralized transition checks prevents contradictory terminal screens.</li>
+</ol>
+<p>These are explicit implementation rules for our original design.</p>
 <h3>Blender study: compare the same scene</h3>
 <div class="figure-pair"><figure class="book-illustration"><img src="illustrations/signal-garden-greybox.png" width="1500" height="1100" loading="lazy" alt="Neutral greybox of the 24 by 24 arena, robot, three cells, drone and central beacon"><figcaption><strong>A · Geometry first.</strong> Check routes, scale, and silhouettes.</figcaption></figure><figure class="book-illustration"><img src="illustrations/signal-garden-concept.png" width="1500" height="1100" loading="lazy" alt="The identical scene with sage planters, amber cells, teal beacon and terracotta drone"><figcaption><strong>B · Material study.</strong> Camera, geometry and lights are unchanged; only object materials differ.</figcaption></figure></div>
-<p>These original stills were rendered in Blender 4.5.3 LTS using the shared tool from the neighboring <code>3d_astra</code> project. They are <strong>concept illustrations</strong>, not screenshots of a completed game. The neutral lighting makes the material comparison readable; final dusk lighting remains a separate experiment. The dark floor dashes indicate an illustrative patrol guide, not an implemented route.</p>
-<p>Rebuild with <code>node scripts/render-illustrations.mjs --blender PATH_TO_BLENDER</code>. The script maps game coordinates <code>(x,y,z)</code> to Blender <code>(x,-z,y)</code>, preserving our Y-up convention. <a href="illustrations/signal-garden.blend" download>Download the editable Blender scene</a> or read <a href="https://github.com/buicongnguyen/Better_skill/blob/main/scripts/render-illustrations.py">the generation script</a>. Blender documents background rendering and argument order. {{cite:54}}</p>
+<p>These original stills were rendered in Blender 4.5.3 LTS using the shared tool from the neighboring <code>3d_astra</code> project. They are <strong>concept illustrations</strong>, not screenshots of a completed game.</p>
+<p>The neutral lighting makes the material comparison readable; final dusk lighting remains a separate experiment. The dark floor dashes indicate an illustrative patrol guide, not an implemented route.</p>
+<p>Rebuild with <code>node scripts/render-illustrations.mjs --blender PATH_TO_BLENDER</code>. The script maps game coordinates <code>(x,y,z)</code> to Blender <code>(x,-z,y)</code>, preserving our Y-up convention.</p>
+<p><a href="illustrations/signal-garden.blend" download>Download the editable Blender scene</a> or read <a href="https://github.com/buicongnguyen/Better_skill/blob/main/scripts/render-illustrations.py">the generation script</a>. Blender documents background rendering and argument order. {{cite:54}}</p>

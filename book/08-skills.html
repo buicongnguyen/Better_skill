@@ -1,12 +1,15 @@
 <h2 id="skills">Decide whether a skill adds value</h2>
 <p class="lead">Start with what the agent already has. Add what the task is missing.</p>
-<p>The claim that project skills can be redundant is <strong>partly supported</strong>. A skill that repeats general coding advice may contribute little, while a specific workflow can supply knowledge the agent lacks. Automatic skill selection is a capability to use and evaluate; it is not evidence that the agent always selects correctly or produces a better game.</p>
+<p>The claim that project skills can be redundant is <strong>partly supported</strong>. A skill that repeats general coding advice may contribute little, while a specific workflow can supply knowledge the agent lacks.</p>
+<p>Automatic skill selection is a capability to use and evaluate; it is not evidence that the agent always selects correctly or produces a better game.</p>
 <p>For visual guidance, see the <a href="#diagram-choose-help">decision graph for choosing tools, skills, and hooks</a>. The <a href="#video-workflows">video chapter</a> adds a current example: Remotion has deprecated its older documentation MCP in favor of skills, while Comfy exposes MCP tools that execute media workflows. {{cite:27}} {{cite:37}}</p>
-<div class="callout"><div class="callout-label">Astra update · 11 September 2026</div><p>OpenAI recommends reassessing accumulated instructions for Astra. Overspecified procedures and overlapping skill descriptions can impede useful work. The practical change here is to make custom skills optional, with a specific reason to exist. This is guidance, not a measured Astra skill benchmark. {{cite:17}}</p></div>
+<div class="callout"><div class="callout-label">Astra update · 11 September 2026</div><p>OpenAI recommends reassessing accumulated instructions for Astra. Overspecified procedures and overlapping skill descriptions can impede useful work.</p>
+<p>The practical change here is to make custom skills optional, with a specific reason to exist. This is guidance, not a measured Astra skill benchmark. {{cite:17}}</p></div>
 <h3>Four different things people call “adding a skill”</h3>
 <ol><li><strong>Make a skill available.</strong> Install or expose it to the agent’s host. A file elsewhere on the internet is not automatically available.</li><li><strong>Let the agent select it.</strong> Codex supports implicit matching between a task and an available skill’s description. Explicit selection is also supported. {{cite:08}}</li><li><strong>Write a new skill.</strong> Package a missing reusable procedure, references, or scripts. This is a separate decision from invoking an existing one.</li><li><strong>Write repository instructions.</strong> AGENTS.md supplies scoped conventions; it is not an on-demand skill selector. {{cite:07}}</li></ol>
 <h3>Check the claims, one by one</h3>
-<p>Implicit selection also depends on host configuration. In Codex, <code>allow_implicit_invocation: false</code> disables automatic invocation for that skill. A crowded initial catalog can shorten or omit entries under its context budget. Check availability, eligibility, and what was actually invoked before attributing a result to skill quality. {{cite:08}}</p>
+<p>Implicit selection also depends on host configuration. In Codex, <code>allow_implicit_invocation: false</code> disables automatic invocation for that skill.</p>
+<p>A crowded initial catalog can shorten or omit entries under its context budget. Check availability, eligibility, and what was actually invoked before attributing a result to skill quality. {{cite:08}}</p>
 <div class="table-wrap"><table><thead><tr><th>Claim</th><th>Evidence-based verdict</th><th>Decision for Signal Garden</th></tr></thead><tbody>
 <tr><td>Every project needs a custom skill.</td><td>Not established. Software-task results show that many tested skills added no benefit. {{cite:22}}</td><td>Begin with the brief, working tools, and existing available skills.</td></tr>
 <tr><td>The agent can call the correct skill itself.</td><td>Implicit selection is documented; reliable selection on every task is not guaranteed. {{cite:08}}</td><td>Check whether the relevant skill was available and actually used when diagnosing a failure.</td></tr>
@@ -16,10 +19,23 @@
 <tr><td>AI-generated skills never help.</td><td>Too broad. SkillAlchemy reports gains from an evidence-led generation method on other models. {{cite:20}}</td><td>Validate a generated procedure before adopting it; do not assume it improves Astra.</td></tr>
 </tbody></table></div>
 <h3>Why the studies seem to disagree</h3>
-<p><strong>SWE-Skills-Bench</strong> found little average benefit from public software skills using Haiku 4.5. <strong>SkillsBench</strong> reports larger gains for curated skills across a broader task mix. Those are different interventions, tasks, and agent configurations. They can both be true. Neither answers whether this particular game-review skill helps Astra. {{cite:22}} {{cite:18}}</p>
-<p><strong>Our recommendation:</strong> do not create a new skill merely because a tutorial includes that step. First let Astra attempt a bounded task with the information already available. If it misses an existing procedure, inspect selection. If it lacks a recurring piece of project knowledge, supply that knowledge. A prompt correction, a documentation update, or a small script may be sufficient.</p>
+<p><strong>SWE-Skills-Bench</strong> found little average benefit from public software skills using Haiku 4.5. <strong>SkillsBench</strong> reports larger gains for curated skills across a broader task mix.</p>
+<p>Those are different interventions, tasks, and agent configurations. They can both be true.</p>
+<p>Neither answers whether this particular game-review skill helps Astra. {{cite:22}} {{cite:18}}</p>
+<p><strong>Our recommendation:</strong> do not create a new skill merely because a tutorial includes that step.</p>
+<ol>
+<li>First let Astra attempt a bounded task with the information already available.</li>
+<li>If it misses an existing procedure, inspect selection.</li>
+<li>If it lacks a recurring piece of project knowledge, supply that knowledge.</li>
+</ol>
+<p>A prompt correction, a documentation update, or a small script may be sufficient.</p>
 <h3>A compact AGENTS.md for the example game</h3>
-<p>The task prompt names the immediate outcome. The game brief owns the game rules. AGENTS.md can map recurring decisions to the relevant documents and commands. Keeping each fact in one place makes later changes easier to maintain.</p>
+<ul>
+<li>The task prompt names the immediate outcome.</li>
+<li>The game brief owns the game rules.</li>
+<li>AGENTS.md can map recurring decisions to the relevant documents and commands.</li>
+</ul>
+<p>Keeping each fact in one place makes later changes easier to maintain.</p>
 {{prompt:agents-example.md}}
 <p>Adapt this sample only after its commands and paths exist. It points to documents by purpose instead of demanding that every edit reread every file. A typo correction and a change to round-state logic need different context.</p>
 <h3>An optional skill with project knowledge</h3>
@@ -27,9 +43,11 @@
 {{prompt:game-review-skill.md}}
 <p>To try it, save the sample as <code>.agents/skills/signal-garden-round-review/SKILL.md</code> in the <em>game</em> repository and verify that your host lists it. Keep the referenced acceptance document current. A skill supplies guidance, not browser access; actual tools must also be available.</p>
 <h3>A small experiment for your Astra setup</h3>
-<p>This is a proposed experiment, <strong>not a result measured for this book</strong>. Use the same starting revision, Astra configuration, tool access, game brief, acceptance checks, and effort budget. Keep required policies in place. Try these conditions in separate clean runs:</p>
+<p>This is a proposed experiment, <strong>not a result measured for this book</strong>. Use the same starting revision, Astra configuration, tool access, game brief, acceptance checks, and effort budget.</p>
+<p>Keep required policies in place. Try these conditions in separate clean runs:</p>
 <ol><li><strong>Baseline:</strong> current available skills, with no extra project skill and no forced skill selection.</li><li><strong>Selection check:</strong> explicitly select the existing relevant skill. This tests whether routing contributed to the problem.</li><li><strong>Content check:</strong> keep that same existing skill selected and add one explicitly selected, narrow custom skill. Compare against the existing-skill condition to test the additional information.</li></ol>
-<p>For each run, record skill availability and invocation if observable, accepted behaviors, regressions, manual interventions, elapsed time, and token cost when available. Score the same playable routes without knowing the condition if possible. Repeat several runs; retain the extra instructions only if their observed benefit justifies their cost. Once content helps, separately test whether its description allows reliable implicit selection.</p>
+<p>For each run, record skill availability and invocation if observable, accepted behaviors, regressions, manual interventions, elapsed time, and token cost when available. Score the same playable routes without knowing the condition if possible.</p>
+<p>Repeat several runs; retain the extra instructions only if their observed benefit justifies their cost. Once content helps, separately test whether its description allows reliable implicit selection.</p>
 <div class="callout warm"><div class="callout-label">An instruction audit</div><p>For an optional instruction, ask: which observed failure does it prevent, which fact does it add, and where is the evidence? Shorten, update, or remove it when those answers disappear. If an instruction causes a pause or conflict, identify its exact file and rule before changing it.</p></div>
 <h3>GitHub examples: choose by activity</h3>
 <p>These are <strong>source-inspected candidates</strong>, not installed or benchmarked winners. Match scope, dependencies, instructions, and actual results; stars do not measure suitability.</p>
@@ -39,5 +57,14 @@
 <tr><td>Unclear video story: community Video Director {{cite:51}}</td><td>Audience and creative framing.</td><td>Optional. Its mandatory interview can obstruct an already sufficient brief.</td></tr>
 <tr><td>Generated video: Comfy-Org/comfy-skills {{cite:55}}</td><td>Cloud commands and live template discovery.</td><td>Its cloud plugin targets Claude Code. The old skills folder is frozen; use Codex’s documented MCP setup instead of copying that folder.</td></tr>
 </tbody></table></div>
-<p><strong>A practical trial:</strong> inspect the repository at a recorded revision, read the selected skill and its dependencies, then use the supported installer in the intended game or trailer project. Remotion documents <code>npx skills add remotion-dev/skills</code>. Check the installer's selected host, scope, and skills before applying it. Verify that the host lists the skill and invoke one relevant entry for one bounded job. Record what was actually loaded and the output. Keep it only if that trial helps. A skill file that references <code>../../references/</code> needs the corresponding directory structure; copying one Markdown file is incomplete.</p>
-<p>For the first trailer, a focused request is enough: “Using the available Remotion composition guidance, assemble my three approved capture files into the ten-second storyboard, add readable captions, preview, render, and report any missing inputs.” See <a href="#video-workflows">the complete video workflow</a>. These examples have not been executed for the book.</p>
+<ol>
+<li><strong>A practical trial:</strong> inspect the repository at a recorded revision, read the selected skill and its dependencies, then use the supported installer in the intended game or trailer project.</li>
+<li>Remotion documents <code>npx skills add remotion-dev/skills</code>.</li>
+<li>Check the installer's selected host, scope, and skills before applying it.</li>
+<li>Verify that the host lists the skill and invoke one relevant entry for one bounded job.</li>
+<li>Record what was actually loaded and the output.</li>
+<li>Keep it only if that trial helps.</li>
+</ol>
+<p>A skill file that references <code>../../references/</code> needs the corresponding directory structure; copying one Markdown file is incomplete.</p>
+<p>For the first trailer, a focused request is enough: “Using the available Remotion composition guidance, assemble my three approved capture files into the ten-second storyboard, add readable captions, preview, render, and report any missing inputs.” See <a href="#video-workflows">the complete video workflow</a>.</p>
+<p>These examples have not been executed for the book.</p>

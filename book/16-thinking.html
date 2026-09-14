@@ -1,16 +1,28 @@
 <h2 id="thinking-flows">Think, decide, improve</h2>
 <p class="lead">Make the next decision visible.</p>
-<p>A useful thinking flow shows the outcome, the uncertainty, the action, and the evidence that changes the plan. These are <strong>observable working decisions</strong>, not a reconstruction of a model’s private reasoning. The diagrams below are original proposals for this book. Use them to discuss work with Astra and to review what happened afterward.</p>
+<p>A useful thinking flow shows the outcome, the uncertainty, the action, and the evidence that changes the plan. These are <strong>observable working decisions</strong>, not a reconstruction of a model’s private reasoning.</p>
+<p>The diagrams below are original proposals for this book. Use them to discuss work with Astra and to review what happened afterward.</p>
 <h3>Read and reuse the diagrams</h3>
-<p>Rectangles name actions or artifacts; diamonds name decisions; labeled arrows show the condition or information that moves work forward. A loop means that new evidence may change the next action. It does not mean “repeat forever.” Set a completion condition and an effort limit for an experiment.</p>
-<p>These are real <strong>Mermaid</strong> diagrams: text definitions rendered as SVG. Each includes a readable description, a copy button, the editable <code>.mmd</code> source, and an SVG download after rendering. Scroll across wide graphs, or select <strong>Fit diagram</strong> for an overview. A diagram explains a process; it does not execute it. Mermaid documents how to embed and render definitions. {{cite:36}}</p>
+<p>Rectangles name actions or artifacts; diamonds name decisions; labeled arrows show the condition or information that moves work forward. A loop means that new evidence may change the next action.</p>
+<p>It does not mean “repeat forever.” Set a completion condition and an effort limit for an experiment.</p>
+<p>These are real <strong>Mermaid</strong> diagrams: text definitions rendered as SVG. Each includes a readable description, a copy button, the editable <code>.mmd</code> source, and an SVG download after rendering.</p>
+<p>Scroll across wide graphs, or select <strong>Fit diagram</strong> for an overview. A diagram explains a process; it does not execute it.</p>
+<p>Mermaid documents how to embed and render definitions. {{cite:36}}</p>
 <h3>1 · The thinking and decision loop</h3>
 {{diagram:thinking-loop}}
-<p><strong>Signal Garden example:</strong> “The player loses sight of the robot behind the north planter” is a useful observation. First reproduce that route. Compare a camera adjustment with a small occlusion treatment, then choose the smallest change that keeps the robot readable. Stop when the named route and nearby routes work; adding enemies does not resolve this uncertainty.</p>
+<p><strong>Signal Garden example:</strong> “The player loses sight of the robot behind the north planter” is a useful observation. First reproduce that route.</p>
+<p>Compare a camera adjustment with a small occlusion treatment, then choose the smallest change that keeps the robot readable. Stop when the named route and nearby routes work; adding enemies does not resolve this uncertainty.</p>
 <p>Ask Astra for a concise decision record: <em>what changed, what evidence supports it, which uncertainty remains, and what happens next</em>. A lengthy explanation is not a substitute for a playable result. The process can be lightweight for a small edit and more explicit when a decision affects the whole game.</p>
 <h3>2 · The data flow: prompts, context, skills, and tools</h3>
 {{diagram:context-data}}
-<p>The brief supplies the desired experience. Repository files supply actual rules and implementation. A relevant skill may supply a reusable procedure. A tool performs an action. Results return as evidence for another decision. This separation helps diagnose failures: a better prompt cannot grant missing browser access, and adding an API connection does not settle an ambiguous game rule.</p>
+<ul>
+<li>The brief supplies the desired experience.</li>
+<li>Repository files supply actual rules and implementation.</li>
+<li>A relevant skill may supply a reusable procedure.</li>
+<li>A tool performs an action.</li>
+<li>Results return as evidence for another decision.</li>
+</ul>
+<p>This separation helps diagnose failures: a better prompt cannot grant missing browser access, and adding an API connection does not settle an ambiguous game rule.</p>
 <div class="table-wrap"><table><thead><tr><th>Layer</th><th>What it contributes</th><th>Example</th></tr></thead><tbody>
 <tr><td>Prompt / brief</td><td>Intent and acceptance conditions</td><td>Collect three cells, then activate the beacon.</td></tr>
 <tr><td>Repository context</td><td>Current facts and conventions</td><td>The implemented state machine and its acceptance document.</td></tr>
@@ -23,10 +35,25 @@
 <p>MCP standardizes context exchange; it does not prescribe the agent’s planning strategy or make a server’s tools automatically available everywhere. Hooks depend on the host’s supported events and configuration. {{cite:23}} {{cite:24}}</p>
 <h3>3 · Decide what to add</h3>
 {{diagram:choose-help}}
-<p>Before writing a new skill, inspect the agent’s actual capabilities. Is the existing skill available? Was it selected? Does it contain the missing knowledge? The <a href="#skills">skills chapter</a> explains a controlled comparison. Astra’s current guidance supports reassessing overlapping instructions, while leaving room for specialized procedures. {{cite:17}}</p>
-<p>For video work, this question becomes concrete. A Remotion skill can teach composition conventions. A ComfyUI MCP tool can submit a workflow. A hook can check a changed file. They may work together because they solve different problems; installing all three is not a prerequisite.</p>
+<p>Before writing a new skill, inspect the agent’s actual capabilities. Is the existing skill available?</p>
+<p>Was it selected? Does it contain the missing knowledge?</p>
+<p>The <a href="#skills">skills chapter</a> explains a controlled comparison. Astra’s current guidance supports reassessing overlapping instructions, while leaving room for specialized procedures. {{cite:17}}</p>
+<p>For video work, this question becomes concrete.</p>
+<ul>
+<li>A Remotion skill can teach composition conventions.</li>
+<li>A ComfyUI MCP tool can submit a workflow.</li>
+<li>A hook can check a changed file.</li>
+</ul>
+<p>They may work together because they solve different problems; installing all three is not a prerequisite.</p>
 <h3>4 · Improve the cause of the failure</h3>
 {{diagram:improvement-loop}}
-<p>Keep the baseline revision and a short reproduction before experimenting. If the intended rule is wrong, revise the brief. If the code violates a sound rule, repair the code. If the implemented experience is dull, test a design hypothesis. If an agent repeatedly misses a procedure, investigate context and selection before adding instructions.</p>
+<p>Keep the baseline revision and a short reproduction before experimenting.</p>
+<ul>
+<li>If the intended rule is wrong, revise the brief.</li>
+<li>If the code violates a sound rule, repair the code.</li>
+<li>If the implemented experience is dull, test a design hypothesis.</li>
+<li>If an agent repeatedly misses a procedure, investigate context and selection before adding instructions.</li>
+</ul>
 <div class="exercise"><h3>A decision record you can reuse</h3><ul><li><strong>Outcome:</strong> what should the player or viewer experience?</li><li><strong>Evidence:</strong> which route, screenshot, clip, or check exposes the problem?</li><li><strong>Change:</strong> what single cause are we testing?</li><li><strong>Comparison:</strong> what improved, and what regressed, under the same scenario?</li><li><strong>Decision:</strong> retain, revise, or restore; link the artifact and revision.</li></ul></div>
-<p>This record is also a good prompt input. Give Astra the observed problem and the review conditions, then let it choose appropriate implementation details. Save a reusable procedure only after repeated evidence shows that it helps. Next, apply the same approach to an <a href="#video-workflows">AI-assisted game trailer</a>.</p>
+<p>This record is also a good prompt input. Give Astra the observed problem and the review conditions, then let it choose appropriate implementation details.</p>
+<p>Save a reusable procedure only after repeated evidence shows that it helps. Next, apply the same approach to an <a href="#video-workflows">AI-assisted game trailer</a>.</p>

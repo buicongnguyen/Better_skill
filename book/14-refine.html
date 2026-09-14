@@ -1,7 +1,13 @@
 <h2 id="refine">Refine the idea and the process</h2>
 <p class="lead">Improve the weakest link, then keep what you learned.</p>
 <p>Use the <a href="#diagram-improvement-loop">Mermaid improvement loop</a> and <a href="#thinking-flows">decision record</a> to make the cause, experiment, and result visible.</p>
-<p>When a first build disappoints, resist adding five new features. Decide what kind of failure you have. A wrong mechanic needs a clearer rule. A correctly implemented but dull mechanic needs a design experiment. A broken control needs a reproduction. A forgotten convention needs better repository context.</p>
+<p>When a first build disappoints, resist adding five new features. Decide what kind of failure you have.</p>
+<ul>
+<li>A wrong mechanic needs a clearer rule.</li>
+<li>A correctly implemented but dull mechanic needs a design experiment.</li>
+<li>A broken control needs a reproduction.</li>
+<li>A forgotten convention needs better repository context.</li>
+</ul>
 <h3>A worked prompt refinement</h3>
 <p>The examples below are illustrative revisions, not measured test results.</p>
 <div class="table-wrap"><table><thead><tr><th>Version</th><th>Instruction</th><th>Why it improves the next decision</th></tr></thead><tbody>
@@ -15,15 +21,26 @@
 <ul><li><strong>Clarity:</strong> the player understands the goal and current state.</li><li><strong>Control:</strong> movement responds consistently and the camera supports it.</li><li><strong>Completion:</strong> the core loop includes win, loss, pause, and reliable restart.</li><li><strong>Feedback:</strong> collection, damage, and beacon readiness are perceivable.</li><li><strong>Challenge:</strong> the route and hazard produce a readable decision.</li><li><strong>Coherence:</strong> visuals, sound, and UI support the same mood.</li><li><strong>Reliability:</strong> the deployed build performs acceptably on the named target.</li><li><strong>Maintainability:</strong> a new session can reproduce the build and find the next change.</li></ul>
 <h3>Compare approaches with a fair experiment</h3>
 <p>If you want to know whether your meta-prompt helps, compare it against a direct prompt from the same clean starting revision. Keep the game brief, model, tools, target platform, and effort budget the same. Record which prompt was used and the actual cost, elapsed time, manual interventions, accepted milestones, and regressions.</p>
-<p>Judge the playable outputs without looking at which prompt produced them if possible. Repeat more than once before trusting a difference; agent runs can vary. Do not use a single lucky output to declare a universal winner. If one approach uses extra agents or a much larger budget, report that difference instead of attributing the result entirely to wording.</p>
+<p>Judge the playable outputs without looking at which prompt produced them if possible. Repeat more than once before trusting a difference; agent runs can vary.</p>
+<p>Do not use a single lucky output to declare a universal winner. If one approach uses extra agents or a much larger budget, report that difference instead of attributing the result entirely to wording.</p>
 <h3>Keep only improvements that still help</h3>
-<p>A repeated project convention may belong in AGENTS.md. A recurring procedure may merit a skill when existing tools and documentation do not already cover it. Keep a one-off fix in the task’s notes. Update the game brief when playtesting changes the design. Avoid copying the same rule into several layers by default.</p>
-<p>For example, loss-before-activation at the same simulation step belongs in the authoritative acceptance document. A review skill can point to it if the agent repeatedly misses that boundary. “Move this planter two units east” belongs in the current design change. Reevaluate optional guidance after changing the model: a workaround that helped yesterday may be unnecessary today.</p>
+<ul>
+<li>A repeated project convention may belong in AGENTS.md.</li>
+<li>A recurring procedure may merit a skill when existing tools and documentation do not already cover it.</li>
+<li>Keep a one-off fix in the task’s notes.</li>
+<li>Update the game brief when playtesting changes the design.</li>
+<li>Avoid copying the same rule into several layers by default.</li>
+</ul>
+<p>For example, loss-before-activation at the same simulation step belongs in the authoritative acceptance document. A review skill can point to it if the agent repeatedly misses that boundary.</p>
+<p>“Move this planter two units east” belongs in the current design change. Reevaluate optional guidance after changing the model: a workaround that helped yesterday may be unnecessary today.</p>
 <div class="exercise"><h3>The retrospective</h3><p>After a release, write three sentences: which instruction helped most, which failure cost the most rework, and which single change to the workflow you will test next time. Connect each sentence to an actual observation.</p></div>
 <h3>Improve game versions and prompt versions separately</h3>
-<p>Your proposed loop is useful: build V1, fix it, learn from the prompts, then attempt V2. The correction is to retain <strong>prompts plus observed outcomes</strong>, not concatenate the conversation. V2 also inherits better code, assets, and human decisions. Its improvement alone cannot establish that prompt P2 beats P1. A prompt revision changes supplied instructions; it does not update Astra’s model weights.</p>
+<p>Your proposed loop is useful: build V1, fix it, learn from the prompts, then attempt V2. The correction is to retain <strong>prompts plus observed outcomes</strong>, not concatenate the conversation.</p>
+<p>V2 also inherits better code, assets, and human decisions. Its improvement alone cannot establish that prompt P2 beats P1.</p>
+<p>A prompt revision changes supplied instructions; it does not update Astra’s model weights.</p>
 <ol><li><strong>Save a baseline.</strong> Record commit, prompt version, model settings, tools and skills, and acceptance conditions.</li><li><strong>Build and diagnose.</strong> Keep failures, successful repairs, evidence, and intervention count.</li><li><strong>Extract verified lessons.</strong> Separate facts from guesses; drop failed advice and obsolete requirements.</li><li><strong>Store each lesson once.</strong> Rules go in the brief; regressions in tests; conventions in AGENTS.md; a repeatedly useful procedure may become a skill.</li><li><strong>Draft P2.</strong> Reference those files and state the next outcome. A shorter prompt can be better.</li><li><strong>Compare when the question matters.</strong> Give P1 and P2 the same starting commit, files, model, tools, and budget in separate clean runs. Repeat promising comparisons and include a scenario not used to revise P2. Keep main-game development incremental.</li></ol>
-<p>For example, a failed restart should produce a regression check and an acceptance rule, then P2 can say “Implement the next milestone and preserve the acceptance rules.” If P2 receives corrected documents that P1 did not, you have tested an improved <em>instruction package</em>, not wording alone. Decide which comparison you want before running it. This is our experimental design, informed by task-specific evaluation guidance. {{cite:52}}</p>
+<p>For example, a failed restart should produce a regression check and an acceptance rule, then P2 can say “Implement the next milestone and preserve the acceptance rules.” If P2 receives corrected documents that P1 did not, you have tested an improved <em>instruction package</em>, not wording alone.</p>
+<p>Decide which comparison you want before running it. This is our experimental design, informed by task-specific evaluation guidance. {{cite:52}}</p>
 {{diagram:prompt-learning}}
 <pre><code>Run ID / baseline commit / prompt version:
 Model settings / tools / available and invoked skills:
@@ -32,4 +49,5 @@ Observed failure / verified repair / remaining uncertainty:
 Lesson to retain / authoritative file / supporting evidence:
 Held-out scenario / regressions / decision: keep, revise, or stop</code></pre>
 <p>A hypothetical change from 6/10 to 8/10 successful runs is <strong>20 percentage points</strong>, or about 33% relative improvement. It is not “20% better,” and ten runs do not establish a general success rate. Report counts, failed cases, costs, and uncertainty; avoid ranking prompts by a single attractive output.</p>
-<p>The dataset-backed OpenAI prompt optimizer illustrates feedback-based revision, but its documentation now schedules legacy Evals read-only access for 31 October 2026 and shutdown for 30 November 2026. The repository-based method above needs neither service. Optimization can regress on some inputs; verify the candidate before adopting it. {{cite:53}}</p>
+<p>The dataset-backed OpenAI prompt optimizer illustrates feedback-based revision, but its documentation now schedules legacy Evals read-only access for 31 October 2026 and shutdown for 30 November 2026. The repository-based method above needs neither service.</p>
+<p>Optimization can regress on some inputs; verify the candidate before adopting it. {{cite:53}}</p>
