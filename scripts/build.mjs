@@ -1,9 +1,11 @@
 import { mkdir, readFile, writeFile, readdir, cp } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 import path from 'node:path';
+import { createHash } from 'node:crypto';
 
 const root = fileURLToPath(new URL('../', import.meta.url));
 const read = file => readFile(path.join(root, file), 'utf8');
+const styleVersion = createHash('sha256').update((await read('site/styles.css')).replaceAll('\r\n', '\n')).digest('hex').slice(0, 12);
 const esc = text => text.replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;').replaceAll('"', '&quot;');
 const files = (await readdir(path.join(root, 'book'))).filter(f => f.endsWith('.html')).sort();
 const allUi = JSON.parse(await read('locales/ui.json'));
@@ -88,6 +90,7 @@ const links = `<nav class="book-links" aria-label="${ui.bookLinks}"><a class="pd
 template = template.replace('{{bookLinks}}', links);
 template = template.replace(/(class="sidebar-bottom"[\s\S]*?)(<\/div>\s*<\/aside>)/, `$1<a class="sidebar-pdf" href="pdf/how-to-do-better-${lang}.pdf" download>↓ ${ui.pdfDownload}</a>$2`);
 template = template.replace(/<figure class="cover-art"[\s\S]*?<\/figure>/, `<figure class="cover-art"><img src="illustrations/signal-garden-concept.png" width="1500" height="1100" alt="${esc(ui.coverImage)}"><figcaption>${esc(ui.coverImage)}</figcaption></figure>`);
+template = template.replace('href="styles.css"', `href="styles.css?v=${styleVersion}"`);
 template = template.replace('{{readingControls}}', controls).replace('{{readerMessages}}', JSON.stringify(ui).replaceAll('<','\\u003c')).replace('{{lang}}',lang).replace('{{localeUrl}}',lang === 'en' ? '' : ui.file);
 template = template.replaceAll('{{chapterCount}}', String(chapters.filter(c => c.number > 0).length)).replace('{{nav}}', nav).replace('{{chapters}}', chapters.map(c => `<section class="chapter" aria-labelledby="${c.id}"><div class="chapter-kicker">${c.number === 0 ? ui.quickRead : `${ui.chapter} ${String(c.number).padStart(2, '0')}`}</div>${c.body}</section>`).join('\n')).replace('{{sources}}', refs);
 await writeFile(path.join(root, `dist/${ui.file}`), template);
