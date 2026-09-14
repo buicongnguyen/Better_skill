@@ -16,7 +16,7 @@ for (const [, raw] of html.matchAll(/(?:href|src)="([^"]+)"/g)) {
 }
 const promptFiles = (await readdir(path.join(root, 'prompts'))).filter(f => f.endsWith('.md') && f !== 'README.md');
 assert.equal(promptFiles.length, 8, 'The eight promised prompt downloads must exist');
-assert.equal((html.match(/class="chapter"/g) || []).length, 15, 'The book must have 15 chapters');
+assert.equal((html.match(/class="chapter"/g) || []).length, 16, 'The book must have a quick summary and 15 full chapters');
 assert.equal((html.match(/class="copy-button"/g) || []).length, 8, 'Each template needs a copy control');
 const sources = JSON.parse(await readFile(path.resolve(root, '../book/sources.json'), 'utf8'));
 assert.equal(sources.length, 48, 'The 48 source records must be present');
@@ -76,7 +76,7 @@ for (const lang of ['en','vi','ko']) {
   assert(edition.includes(`<html lang="${lang}">`), `Wrong document language: ${lang}`);
   assert.deepEqual(editionIds.slice().sort(),ids.slice().sort(),`Anchor parity: ${lang}`);
   assert(!/\{\{[a-zA-Z]|\bundefined\b/.test(edition),`Unresolved content: ${lang}`);
-  assert.equal((edition.match(/class="chapter-evidence"/g)||[]).length,15);
+  assert.equal((edition.match(/class="chapter-evidence"/g)||[]).length,chapterFiles.length);
   assert.equal((edition.match(/class="source-summary"/g)||[]).length,48);
   assert.equal((edition.match(/class="copy-button"/g)||[]).length,8);
   assert.equal((edition.match(/class="diagram"/g)||[]).length,9);
@@ -89,6 +89,15 @@ for (const lang of ['en','vi','ko']) {
     }
   }
   for (const target of ['en','vi','ko']) assert(edition.includes(`href="${ui[target].file}?lang=${target}"`),`Explicit language link missing: ${lang}/${target}`);
+  const summary=edition.match(/<section class="chapter" aria-labelledby="summary">([\s\S]*?)<\/section>/)?.[1];
+  assert(summary, `Missing quick summary: ${lang}`);
+  assert(edition.indexOf('aria-labelledby="summary"')<edition.indexOf('aria-labelledby="better-loop"'),`Summary must precede the full book: ${lang}`);
+  for(const file of chapterFiles.filter(file=>!file.startsWith('00-'))) {
+    const original=await readFile(path.resolve(root,'../book',file),'utf8');
+    const id=original.match(/<h2 id="([^"]+)"/)[1];
+    assert(summary.includes(`href="#${id}"`),`Summary omits full reading link: ${lang}/${id}`);
+    assert(edition.includes(`aria-labelledby="${id}"><div class="chapter-kicker">${ui[lang].chapter} ${file.slice(0,2)}</div>`),`Existing chapter number changed: ${lang}/${id}`);
+  }
   if(lang==='en')continue;
   const localeRoot=path.resolve(root,`../locales/${lang}`);
   for(const file of chapterFiles) {
@@ -128,4 +137,4 @@ for (const lang of ['en','vi','ko']) {
   }
 }
 console.log('Passed: English, Vietnamese and Korean edition/anchor parity, translated summaries and evidence, 24 prompt copies, 27 diagrams with identical graph logic, and all local links/assets.');
-console.log(`Passed: unique anchors, local links/assets, 15 chapters, ${coveredSections} introductions/subsections with evidence coverage, 8 prompts, 9 diagram sources, 48 source records with verification metadata (${manuscript.split(' ').length} words including templates and sources). Browser rendering is checked separately.`);
+console.log(`Passed: unique anchors, local links/assets, quick summary linking all 15 full chapters with stable numbers, ${coveredSections} introductions/subsections with evidence coverage, 8 prompts, 9 diagram sources, 48 source records with verification metadata (${manuscript.split(' ').length} words including templates and sources). Browser rendering is checked separately.`);

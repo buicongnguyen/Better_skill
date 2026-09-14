@@ -67,7 +67,8 @@
       "Since March 2026": "Since March 2026",
       "Version since March 2026": "Version since March 2026",
       "Current documentation": "Current documentation"
-    }
+    },
+    "quickRead": "QUICK READ"
   },
   "vi": {
     "language": "Tiếng Việt",
@@ -137,7 +138,8 @@
       "Since March 2026": "Từ tháng 3/2026",
       "Version since March 2026": "Phiên bản từ tháng 3/2026",
       "Current documentation": "Tài liệu hiện hành"
-    }
+    },
+    "quickRead": "ĐỌC NHANH"
   },
   "ko": {
     "language": "한국어",
@@ -207,6 +209,7 @@
       "Since March 2026": "2026년 3월 이후",
       "Version since March 2026": "2026년 3월 이후 버전",
       "Current documentation": "현재 문서"
-    }
+    },
+    "quickRead": "빠르게 읽기"
   }
 }

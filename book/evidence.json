@@ -1,4 +1,8 @@
 [
+  {"chapter":"summary","records":[
+    {"label":"Main points and scope","note":"This summary condenses the existing book. Small scope and evidence-led iteration are our recommendations, informed by the Astra game case study and instruction guidance. Skill availability does not establish selection accuracy or measured game improvement.","sections":[0],"basis":"Synthesis","sources":["04","17","08"]},
+    {"label":"The short route through the full chapters","note":"Each step links to the chapter containing its detailed rules, procedures, and evidence limits. The sequence, game, and optional trailer are worked proposals. Documentation supports the cited capabilities and deployment pattern; this summary adds no experiment or benchmark result.","sections":[1],"basis":"Synthesis","sources":["04","17","13","25","28"]}
+  ]},
   {"chapter":"better-loop","records":[
     {"label":"The worked example and iteration method","sections":[0,1,3,4],"basis":"Original proposal","sources":["04","17"],"note":"The broken-game opening is an illustrative scenario. Signal Garden, the four-step loop, and the exercises are our teaching design. The sources motivate inspectable results and focused guidance; they do not validate this particular game."},
     {"label":"Model, agent, and working agreements","sections":[2],"basis":"Documented behavior","sources":["01","23"],"note":"Astra guidance covers initiative, instructions, delegation, and verification. MCP architecture distinguishes the host and exposed tools; a prompt alone cannot supply missing tool access."}

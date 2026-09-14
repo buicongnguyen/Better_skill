@@ -4,11 +4,13 @@ A practical, researched book about making a 3D game with an AI agent: prompts, G
 
 **Read the book:** https://buicongnguyen.github.io/Better_skill/
 
-Use the reading toolbar to choose **English**, **Tiếng Việt**, or **한국어**, and toggle **Dark mode**. Each edition includes all 15 chapters, 48 reading notes, evidence panels, eight prompt downloads, and nine translated diagrams. Source titles and passage-search terms retain their original English; the separate audit-record download is labeled as English.
+Use the reading toolbar to choose **English**, **Tiếng Việt**, or **한국어**, and toggle **Dark mode**. Each edition includes a quick summary, all 15 full chapters, 48 reading notes, evidence panels, eight prompt downloads, and nine translated diagrams. Source titles and passage-search terms retain their original English; the separate audit-record download is labeled as English.
 
 Language switching keeps the nearest chapter or subsection. The site remembers language and theme locally in the browser, with system light/dark preference as the initial default. Explicit language links override the saved language. No translation service or account is required. Without JavaScript, the three editions and their language links remain readable.
 
 ## Contents
+
+Start with the [quick summary](https://buicongnguyen.github.io/Better_skill/#summary): three main points and eleven concise steps, each linked to the full reading. It appears before chapter 1 and in the contents; existing chapter numbers and links remain unchanged. The final step covers the optional trailer.
 
 15 chapters compare game workflows and engine choices, draw on 48 source records, and develop the original Signal Garden design into an implementation plan. Every introduction and subsection has a source check record with direct links and a statement of what the evidence supports. Original proposals are labeled separately from documented behavior and research findings.
 
@@ -37,7 +39,7 @@ Open http://127.0.0.1:4173/Better_skill/ . The server deliberately supports the 
 
 ## Editing
 
-- `book/*.html`: chapter manuscripts, ordered by filename. Each needs an `h2` with a unique ID.
+- `book/*.html`: chapter manuscripts, ordered and numbered by their two-digit filename prefix. `00-summary.html` is the unnumbered quick read; chapters 01–15 retain their numbers. Each needs an `h2` with a unique ID.
 - `book/sources.json`: source URLs, types, dates, three main items, applications, and evidence limits. IDs remain stable while reading order prioritizes recent research.
 - `book/evidence.json`: coverage of every chapter introduction and subsection, with source IDs, basis, and scope of support. Section 0 is the introduction; subsequent numbers follow the chapter's `h3` order.
 - `research/`: downloadable content-review record and disclosed retrieval limits.

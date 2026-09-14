@@ -1,5 +1,18 @@
 [
   {
+    "chapter": "summary",
+    "records": [
+      {
+        "label": "Ý chính và phạm vi",
+        "note": "Phần này tóm tắt nội dung sách hiện có. Phạm vi nhỏ và cải thiện theo bằng chứng là khuyến nghị của sách, tham khảo ví dụ trò chơi Astra và hướng dẫn chỉ dẫn. Kỹ năng có sẵn không xác lập độ chính xác khi chọn hay mức cải thiện trò chơi đã đo."
+      },
+      {
+        "label": "Lộ trình ngắn qua các chương đầy đủ",
+        "note": "Mỗi bước liên kết tới chương có luật, quy trình và giới hạn bằng chứng chi tiết. Trình tự, trò chơi và trailer tùy chọn là đề xuất minh họa. Tài liệu hỗ trợ khả năng và mẫu triển khai được dẫn; phần tóm tắt không bổ sung kết quả thử nghiệm hay kiểm chuẩn."
+      }
+    ]
+  },
+  {
     "chapter": "better-loop",
     "records": [
       {

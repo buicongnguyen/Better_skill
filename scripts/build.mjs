@@ -67,14 +67,14 @@ for (const file of files) {
     return `<li><span class="evidence-basis">${esc(ui.basis[record.basis])}</span><h4>${esc(record.label)}</h4><p class="evidence-covers"><strong>${ui.covers}</strong> ${sections}</p><p>${esc(record.note)}</p><p class="evidence-links">${record.sources.length ? sourceLinks(record.sources) : ui.originalDesign}</p></li>`;
   }).join('');
   body += `\n<details class="chapter-evidence" id="evidence-${id}"><summary>${ui.sourceCheck}</summary><p>${ui.checkedIntro}</p><ul class="evidence-records">${coverage}</ul><a class="evidence-method" href="#review-notes">${ui.reviewMethod}</a></details>`;
-  chapters.push({ id, title, body });
+  chapters.push({ id, title, body, number: Number(file.slice(0, 2)) });
 }
 const sourceNote = value => esc(value).replace(/\[(\d{2})\]/g, (_, id) => {
   if (!sources.some(s => s.id === id)) throw new Error(`Unknown source cross-reference ${id}`);
   return `<a href="#source-${id}">[${id}]</a>`;
 });
 const refs = sources.map(s => `<li id="source-${s.id}"><span class="source-number">${s.id}</span><div class="source-body"><span class="source-type">${esc(s.type)}</span><h3><a href="${esc(s.url)}" lang="en">${esc(s.title)} ↗</a></h3><div class="source-meta"><span class="source-badge${s.freshness === 'Historical exception' ? ' historical' : ''}">${esc(ui.freshness[s.freshness])}</span><span>${esc(s.date)}</span></div><h4 class="source-summary-label">${s.verification.status === 'Transcript unavailable' ? ui.readingStatus : ui.mainItems}</h4><ul class="source-summary">${s.summary.map(item => `<li>${esc(item)}</li>`).join('')}</ul><p class="source-application"><strong>${ui.application}</strong> ${sourceNote(s.application)}</p><p class="source-limit"><strong>${ui.limits}</strong> ${sourceNote(s.limits)}</p><div class="source-verification"><p><strong>${esc(ui.status[s.verification.status])} · ${esc(s.verification.checked)}</strong></p><p><strong>${ui.locator}</strong> <a href="${esc(s.verification.url || s.url)}" lang="en">${esc(s.verification.locator)} ↗</a></p>${s.verification.note ? `<p>${esc(s.verification.note)}</p>` : ''}${s.related ? `<p><strong>${ui.related}</strong><br>${s.related.map(r => `<a href="${esc(r.url)}" lang="en">${esc(r.title)} ↗</a>`).join('<br>')}</p>` : ''}</div>${s.video ? `<p class="source-extra"><a href="${esc(s.video)}">${ui.video}</a> · ${esc(s.videoNote || ui.transcriptNote)}</p>` : ''}</div></li>`).join('');
-const nav = chapters.map((c, i) => `<a href="#${c.id}"><span>${String(i + 1).padStart(2, '0')}</span>${c.title}</a>`).join('');
+const nav = chapters.map(c => `<a href="#${c.id}"><span>${c.number === 0 ? '↳' : String(c.number).padStart(2, '0')}</span>${c.title}</a>`).join('');
 let template = await read('site/template.html');
 if (lang !== 'en') {
   const shell = JSON.parse(await read(`locales/${lang}/shell.json`));
@@ -85,7 +85,7 @@ if (lang !== 'en') {
 }
 const controls = `<div class="reader-controls" role="group" aria-label="${ui.readingOptions}"><nav class="language-switch" aria-label="${ui.chooseLanguage}">${Object.entries(allUi).map(([key, item]) => `<a href="${item.file}?lang=${key}" lang="${key}" hreflang="${key}" data-language="${key}"${key === lang ? ' aria-current="true"' : ''}>${item.language}</a>`).join('')}</nav><button class="theme-toggle" type="button" aria-pressed="false" aria-label="${ui.darkMode}" title="${ui.themeHint}"><span aria-hidden="true">◐</span><span>${ui.darkMode}</span></button></div>`;
 template = template.replace('{{readingControls}}', controls).replace('{{readerMessages}}', JSON.stringify(ui).replaceAll('<','\\u003c')).replace('{{lang}}',lang).replace('{{localeUrl}}',lang === 'en' ? '' : ui.file);
-template = template.replaceAll('{{chapterCount}}', String(chapters.length)).replace('{{nav}}', nav).replace('{{chapters}}', chapters.map((c, i) => `<section class="chapter" aria-labelledby="${c.id}"><div class="chapter-kicker">${ui.chapter} ${String(i + 1).padStart(2, '0')}</div>${c.body}</section>`).join('\n')).replace('{{sources}}', refs);
+template = template.replaceAll('{{chapterCount}}', String(chapters.filter(c => c.number > 0).length)).replace('{{nav}}', nav).replace('{{chapters}}', chapters.map(c => `<section class="chapter" aria-labelledby="${c.id}"><div class="chapter-kicker">${c.number === 0 ? ui.quickRead : `${ui.chapter} ${String(c.number).padStart(2, '0')}`}</div>${c.body}</section>`).join('\n')).replace('{{sources}}', refs);
 await writeFile(path.join(root, `dist/${ui.file}`), template);
 if (lang !== 'en') {
   await cp(path.join(root, `locales/${lang}/prompts`), path.join(root, `dist/prompts/${lang}`), {recursive:true});
