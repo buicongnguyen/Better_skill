@@ -6,8 +6,9 @@
   "type": "module",
   "scripts": {
     "build": "node scripts/build.mjs",
-    "check": "node scripts/check.mjs",
-    "start": "node scripts/serve.mjs"
+    "check": "node scripts/check.mjs && node scripts/pdf-integrity.mjs",
+    "start": "node scripts/serve.mjs",
+    "artwork": "node scripts/render-illustrations.mjs"
   },
   "engines": {
     "node": ">=22"

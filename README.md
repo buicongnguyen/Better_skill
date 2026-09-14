@@ -4,7 +4,7 @@ A practical, researched book about making a 3D game with an AI agent: prompts, G
 
 **Read the book:** https://buicongnguyen.github.io/Better_skill/
 
-Use the reading toolbar to choose **English**, **Tiếng Việt**, or **한국어**, and toggle **Dark mode**. Each edition includes a quick summary, all 15 full chapters, 48 reading notes, evidence panels, eight prompt downloads, and nine translated diagrams. Source titles and passage-search terms retain their original English; the separate audit-record download is labeled as English.
+Use the reading toolbar to choose **English**, **Tiếng Việt**, or **한국어**, and toggle **Dark mode**. Each edition includes a quick summary, all 15 full chapters, 55 reading notes, evidence panels, eight prompt downloads, and ten translated diagrams. Source titles and passage-search terms retain their original English; the separate audit-record download is labeled as English.
 
 Language switching keeps the nearest chapter or subsection. The site remembers language and theme locally in the browser, with system light/dark preference as the initial default. Explicit language links override the saved language. No translation service or account is required. Without JavaScript, the three editions and their language links remain readable.
 
@@ -12,13 +12,13 @@ Language switching keeps the nearest chapter or subsection. The site remembers l
 
 Start with the [quick summary](https://buicongnguyen.github.io/Better_skill/#summary): three main points and eleven concise steps, each linked to the full reading. It appears before chapter 1 and in the contents; existing chapter numbers and links remain unchanged. The final step covers the optional trailer.
 
-15 chapters compare game workflows and engine choices, draw on 48 source records, and develop the original Signal Garden design into an implementation plan. Every introduction and subsection has a source check record with direct links and a statement of what the evidence supports. Original proposals are labeled separately from documented behavior and research findings.
+15 chapters compare game workflows and engine choices, draw on 55 source records, and develop the original Signal Garden design into an implementation plan. Every introduction and subsection has a source check record with direct links and a statement of what the evidence supports. Original proposals are labeled separately from documented behavior and research findings.
 
-47 entries have checked source content; one historical video remains a reading lead because its transcript was unavailable in this review. Its earlier passage summary was withdrawn. Verified reading notes include main items, date information, application, limits, and passage locators. See the [content review](research/review-2026-09-14.md).
+54 entries have checked source content; one historical video remains a reading lead because its transcript was unavailable in this review. Its earlier passage summary was withdrawn. Verified reading notes include main items, date information, application, limits, and passage locators. See the [content review](research/review-2026-09-14.md).
 
 Eight copyable and downloadable templates cover repository instructions, an optional game review skill, a prompt-generating prompt, compact and bootstrap Astra prompts, targeted repair, release, and a video workflow brief.
 
-Nine original Mermaid diagrams map observable decisions, context/data flow, improvement, video route selection, shot assets, a conceptual ComfyUI graph, asynchronous job handling, and a narrowly scoped hook. Readers can copy the definitions or download `.mmd` and rendered SVG files. The video chapter compares Remotion, ComfyUI, a provider API, and n8n, with a Comfy Cloud MCP setup walkthrough. Its Remotion companion video is linked, but its transcript was not retrieved.
+Ten original Mermaid diagrams map observable decisions, context/data flow, improvement, separate game/prompt iteration, video route selection, shot assets, a conceptual ComfyUI graph, asynchronous job handling, and a narrowly scoped hook. Readers can copy the definitions or download `.mmd` and rendered SVG files. The video chapter compares Remotion, ComfyUI, a provider API, and n8n, with a Comfy Cloud MCP setup walkthrough. Its Remotion companion video is linked, but its transcript was not retrieved.
 
 The September revision prioritizes research published or updated since 1 March 2026, including OpenAI’s 11 September Astra instruction guidance. Undated live documentation and explicitly labeled historical exceptions remain. The skills chapter distinguishes availability, automatic selection, explicit invocation, and authoring; it proposes an Astra comparison without claiming to have run it.
 
@@ -63,3 +63,9 @@ Dark mode includes tables, source panels, code, and Mermaid diagrams. Print styl
 GitHub Pages is configured to use GitHub Actions. Pushes to `main` run the static build and checks, upload `dist/`, then deploy through the `github-pages` environment. This follows the GitHub Pages deployment pattern used by neighboring repositories without changing them.
 
 The source files and deployed output belong to this repository. The skill text in `prompts/` is an illustrative game template and is not installed as an active skill for the book project.
+
+## PDF and illustration editions
+
+Download the full book as [English PDF](output/pdf/how-to-do-better-en.pdf), [Vietnamese PDF](output/pdf/how-to-do-better-vi.pdf), or [Korean PDF](output/pdf/how-to-do-better-ko.pdf). The website has matching download and GitHub links. Each edition contains a contents page, all chapters, prompts, diagrams, citations, and reading notes.
+
+Original Blender concept figures include an [editable scene](illustrations/signal-garden.blend) and [reproduction instructions](illustrations/README.md). The shared Blender executable is reused from the neighboring 3d_astra project; it is not needed to read the website. [PDF maintenance instructions](scripts/PDF.md) explain rebuilding and the freshness check that prevents stale downloads.

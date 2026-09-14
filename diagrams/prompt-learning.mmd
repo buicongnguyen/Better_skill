@@ -1,0 +1,8 @@
+flowchart TD
+  accTitle: Two related improvement loops
+  accDescr: Keep the game moving forward; test prompt revisions separately against the same baseline.
+  A["Game V1"] --> B["Play, diagnose, repair"] --> C["Game V2"]
+  B --> D["Prompts + outcomes"] --> E["Verified reusable lessons"] --> F["Candidate P2"]
+  F --> G["Same baseline: P1 versus P2"] --> H{"Better across checked cases?"}
+  H -->|Yes| I["Keep candidate"]
+  H -->|No / unclear| J["Revise or stop"]

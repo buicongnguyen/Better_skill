@@ -1,0 +1,21 @@
+{
+  "date": "2026-09-14",
+  "outputs": [
+    {
+      "file": "how-to-do-better-en.pdf",
+      "pages": 105,
+      "sha256": "328c337bfa72580365f58da5fe97ef9ba89cfdbd7342bbc83f5e5807d75b566b"
+    },
+    {
+      "file": "how-to-do-better-vi.pdf",
+      "pages": 103,
+      "sha256": "688b0b3df213094ca055a5f0083d41a7195ae60aedfa0fffd11b1eb212a2751b"
+    },
+    {
+      "file": "how-to-do-better-ko.pdf",
+      "pages": 100,
+      "sha256": "974217413bebf3f16ffb6cef32a8cd2e53ee05aee645d9f2f9ed30e54aaba33b"
+    }
+  ],
+  "sourceHash": "cb9595e547d90dcc1b889e8edfe03746070ba5a8e0cbf423e095fe00d4969f75"
+}

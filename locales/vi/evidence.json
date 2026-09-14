@@ -107,6 +107,10 @@
       {
         "label": "Kỹ năng đánh giá tùy chọn và so sánh cục bộ",
         "note": "Luật vòng chơi trong kỹ năng thuộc bản mô tả trò chơi do sách tạo. So sánh đề xuất kiểm tra giá trị của hướng dẫn trong môi trường thực tế của bạn; sách chưa chạy thử nghiệm này."
+      },
+      {
+        "label": "Ứng viên GitHub đã đọc",
+        "note": "Đọc chỉ dẫn và cấu trúc kho ở liên kết. Độ phù hợp là đánh giá của sách, không phải benchmark hay xác nhận đã cài."
       }
     ]
   },
@@ -120,6 +124,14 @@
       {
         "label": "Dùng hình ảnh tham khảo",
         "note": "Ví dụ Astra dùng trải nghiệm người chơi và hình ảnh tham khảo. Giao nhiệm vụ cụ thể cho mỗi ảnh và so sánh cùng góc camera là khuyến nghị thực hành của sách, không phải hiệu quả đã đo."
+      },
+      {
+        "label": "Đơn vị, khoảng cách và chuyển trạng thái",
+        "note": "Suy luận vector cơ bản và quy ước thiết kế. Kiểm tra số xác nhận ví dụ, không phải game hoàn chỉnh."
+      },
+      {
+        "label": "Hình Blender tái tạo được",
+        "note": "Hai ảnh kết xuất thật dùng chung hình học, camera và đèn. Có script và cảnh chỉnh sửa; ảnh không triển khai gameplay."
       }
     ]
   },
@@ -188,11 +200,15 @@
     "records": [
       {
         "label": "Phân loại lỗi, sửa lời nhắc và thang chấm",
-        "note": "Ví dụ và thang 0–2 là công cụ so sánh do sách viết. Cần giữ nhận định của con người rõ ràng; chuỗi V0–V3 không phải kết quả thực nghiệm đã đo."
+        "note": "Ví dụ và thang 0–2 là công cụ so sánh do sách viết. Cần giữ nhận định của con người rõ ràng; chuỗi P0–P3 không phải kết quả thực nghiệm đã đo."
       },
       {
         "label": "So sánh công bằng và bỏ hướng dẫn dư thừa",
         "note": "Kết quả khác nhau theo mô hình/tác vụ là lý do kiểm soát phiên bản khởi đầu, công cụ và ngân sách. Lặp lại và ghi can thiệp minh bạch giúp so sánh tốt hơn; sách không báo cáo kiểm chuẩn Astra mới."
+      },
+      {
+        "label": "Học prompt và cải thiện game",
+        "note": "Tách tiến bộ game có nhiều yếu tố khỏi so prompt có kiểm soát. Số đếm và phần trăm là minh họa; chưa chạy so sánh. Lịch ngừng chỉ áp dụng sản phẩm nêu rõ."
       }
     ]
   },

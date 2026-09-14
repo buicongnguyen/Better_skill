@@ -139,7 +139,7 @@
       "Evaluations include GPT-5.5, Opus 4.8, and DeepSeek V4 configurations; none is Astra."
     ],
     "application": "Treat evidence-led skill generation as a candidate worth testing.",
-    "limits": "Preprint results do not show that casually generating a skill for any task will help.",
+    "limits": "Preprint results do not show that casually generating a skill for any task will help. Table 5 mixes PDF-redaction instruction labels with a threejs-to-obj reuse description; we do not treat that table as clean evidence of transfer.",
     "verification": {
       "checked": "2026-09-14",
       "status": "Content checked",
@@ -935,6 +935,153 @@
       "status": "Content checked",
       "locator": "HTTP error table, retry guidance, and exponential backoff with jitter"
     }
+  },
+  {
+    "id": "49",
+    "type": "Primary source · workflow reference",
+    "date": "Content checked 14 September 2026 · no publication date inferred",
+    "summary": [
+      "Separates simulation rules, rendering, input, and browser UI.",
+      "Routes engine selection according to the project rather than using one renderer for every game.",
+      "References shared files outside the skill directory."
+    ],
+    "application": "A candidate for initial browser-game architecture or a structural review.",
+    "limits": "A source inspection, not an Astra benchmark. Preserve its supporting plugin files; a copied SKILL.md alone can break relative references.",
+    "verification": {
+      "note": "Reviewed the named passage; scope and execution limits are stated above.",
+      "status": "Content checked",
+      "checked": "2026-09-14",
+      "locator": "Workflow, engine defaults, anti-patterns, and relative reference paths"
+    },
+    "title": "OpenAI · Web game foundations skill",
+    "url": "https://github.com/openai/plugins/blob/main/plugins/game-studio/skills/web-game-foundations/SKILL.md",
+    "freshness": "Current reference"
+  },
+  {
+    "id": "50",
+    "type": "Primary source · workflow reference",
+    "date": "Content checked 14 September 2026 · no publication date inferred",
+    "summary": [
+      "Provides separate creation, markup, preview, rendering, caption, and documentation skills.",
+      "The README offers npx skills add remotion-dev/skills.",
+      "The broad best-practices skill covers the collection; narrower entries address specific jobs."
+    ],
+    "application": "Use composition and rendering guidance for a trailer assembled from real game capture.",
+    "limits": "Skill availability does not install all runtime dependencies or prove the exported video is correct. Reviewed instructions; no trailer run.",
+    "verification": {
+      "note": "Reviewed the named passage; scope and execution limits are stated above.",
+      "status": "Content checked",
+      "checked": "2026-09-14",
+      "locator": "README: installation and Available skills"
+    },
+    "title": "Remotion · Maintained GitHub skill collection",
+    "url": "https://github.com/remotion-dev/skills",
+    "freshness": "Current reference"
+  },
+  {
+    "id": "51",
+    "type": "Primary source · workflow reference",
+    "date": "Content checked 14 September 2026 · no publication date inferred",
+    "summary": [
+      "Adds audience, message, and creative direction to technical Remotion guidance.",
+      "Requires an interactive discovery phase with successive answers.",
+      "References companion patterns and archetype files."
+    ],
+    "application": "Consider it when the video brief is unclear.",
+    "limits": "Community workflow, not a quality ranking. Its mandatory dialogue can add needless pauses to an already complete brief; inspect host/tool assumptions before adoption.",
+    "verification": {
+      "note": "Reviewed the named passage; scope and execution limits are stated above.",
+      "status": "Content checked",
+      "checked": "2026-09-14",
+      "locator": "Version 2.0.0: Relationship to Official Remotion Skill; Phase 1"
+    },
+    "title": "Community example · Remotion Video Director",
+    "url": "https://github.com/BayramAnnakov/remotion-video-director/blob/main/SKILL.md",
+    "freshness": "Current reference"
+  },
+  {
+    "id": "52",
+    "type": "Primary source · workflow reference",
+    "date": "Content checked 14 September 2026 · no publication date inferred",
+    "summary": [
+      "Use task-specific checks and representative examples.",
+      "Record failures and combine measurable checks with human judgment.",
+      "Compare revisions and add newly discovered cases to the evaluation set."
+    ],
+    "application": "Keep prompt versions, outcomes, and held-out game scenarios in the repository.",
+    "limits": "General evaluation guidance, not a game benchmark. The legacy hosted Evals product is being retired; the method does not require it.",
+    "verification": {
+      "note": "Reviewed the named passage; scope and execution limits are stated above.",
+      "status": "Content checked",
+      "checked": "2026-09-14",
+      "locator": "Define objectives, collect cases, choose metrics, compare; evaluation anti-patterns"
+    },
+    "title": "OpenAI · Evaluation best practices",
+    "url": "https://developers.openai.com/api/docs/guides/evaluation-best-practices",
+    "freshness": "Current reference"
+  },
+  {
+    "id": "53",
+    "type": "Primary source · workflow reference",
+    "date": "Content checked 14 September 2026 · no publication date inferred",
+    "summary": [
+      "Optimization uses responses plus specific critiques or grader results.",
+      "An optimized prompt can perform worse on some inputs; review and evaluate it.",
+      "The page schedules legacy Evals read-only access for 31 October 2026 and shutdown for 30 November 2026."
+    ],
+    "application": "Use the feedback principle; keep this book’s comparison independent of the retiring dashboard.",
+    "limits": "The dates describe the dataset-backed optimizer and Evals platform, not the end of prompt improvement or local evaluation. Recheck the notice before use.",
+    "verification": {
+      "note": "Reviewed the named passage; scope and execution limits are stated above.",
+      "status": "Content checked",
+      "checked": "2026-09-14",
+      "locator": "Deprecation notice; Prepare your data; Optimize your prompt"
+    },
+    "title": "OpenAI · Prompt optimizer and retirement notice",
+    "url": "https://developers.openai.com/api/docs/guides/prompt-optimizer",
+    "freshness": "Current reference"
+  },
+  {
+    "id": "54",
+    "type": "Primary source · workflow reference",
+    "date": "Content checked 14 September 2026 · no publication date inferred",
+    "summary": [
+      "Blender can render without opening its graphical interface.",
+      "Command arguments are processed in order; set output options before rendering.",
+      "A saved scene and an explicit render command support repeatable exports."
+    ],
+    "application": "Reproduce the original concept figures from the included scene-building script.",
+    "limits": "This book used the shared Blender 4.5.3 LTS executable. A rendered illustration proves neither game mechanics nor browser performance.",
+    "verification": {
+      "note": "Reviewed the named passage; scope and execution limits are stated above.",
+      "status": "Content checked",
+      "checked": "2026-09-14",
+      "locator": "Command Line Rendering: background mode and argument ordering"
+    },
+    "title": "Blender · Command line rendering, 4.5 manual",
+    "url": "https://docs.blender.org/manual/en/4.5/advanced/command_line/render.html",
+    "freshness": "Current reference"
+  },
+  {
+    "id": "55",
+    "type": "Primary source · workflow reference",
+    "date": "Content checked 14 September 2026 · no publication date inferred",
+    "summary": [
+      "The canonical cloud package targets Claude Code and bundles MCP with commands.",
+      "The legacy skills folder is frozen; comfy-cli skills now ship with that CLI.",
+      "Instructions should discover live models and templates through tools."
+    ],
+    "application": "Use the supported host setup and discover the available video template at execution time.",
+    "limits": "Do not copy the frozen folder or assume a Claude Code plugin is a Codex installer. Source inspection only; no cloud generation was run.",
+    "verification": {
+      "note": "Reviewed the named passage; scope and execution limits are stated above.",
+      "status": "Content checked",
+      "checked": "2026-09-14",
+      "locator": "README: Install; Repo layout; Authoring rule; Status"
+    },
+    "title": "Comfy-Org · Current skill and plugin repository",
+    "url": "https://github.com/Comfy-Org/comfy-skills",
+    "freshness": "Current reference"
   },
   {
     "id": "05",

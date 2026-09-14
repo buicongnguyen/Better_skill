@@ -58,3 +58,12 @@ html[data-theme=dark] .diagram,html[data-theme=dark] .diagram-canvas{background:
 @media screen{html[data-theme=dark] .diagram-canvas svg .nodeLabel,html[data-theme=dark] .diagram-canvas svg .nodeLabel p,html[data-theme=dark] .diagram-canvas svg .edgeLabel,html[data-theme=dark] .diagram-canvas svg .edgeLabel p{color:#e0ecda!important}html[data-theme=dark] .diagram-canvas svg .edgeLabel,html[data-theme=dark] .diagram-canvas svg .edgeLabel p{background:#17282b!important}}
 @media screen{html[data-theme=dark] .cover-art svg text{fill:#e0ecda}}
 @media print{.reader-controls{display:none!important}html[data-theme=dark]{color-scheme:light;--paper:white;--ink:#111;--muted:#444;--line:#bbb;--accent:#713b24}html[data-theme=dark] .cover-art svg{filter:none}html[data-theme=dark] .chapter,html[data-theme=dark] .chapter-evidence,html[data-theme=dark] .source-verification,html[data-theme=dark] .diagram,html[data-theme=dark] .diagram-canvas,html[data-theme=dark] .prompt-block,html[data-theme=dark] pre,html[data-theme=dark] code,html[data-theme=dark] .callout,html[data-theme=dark] tbody tr:nth-child(even),html[data-theme=dark] th{background:#fff;color:#111}html[data-theme=dark] .chapter p,html[data-theme=dark] .chapter summary,html[data-theme=dark] .chapter span,html[data-theme=dark] .chapter a,html[data-theme=dark] .reader-note p,html[data-theme=dark] .cover-deck{color:#222!important}.chapter-evidence{break-inside:auto}}
+
+/* Portable book downloads and original Blender figure studies. */
+.sidebar-bottom a{display:block;width:fit-content}
+.book-links{display:flex;flex-wrap:wrap;align-items:center;gap:12px 22px;padding:18px 0;border-bottom:1px solid var(--line);font-size:13px}
+.book-links a{font-weight:600}.book-links .pdf-link{padding:8px 15px;border:1px solid var(--accent);border-radius:5px;text-decoration:none}
+.cover-art img{display:block;width:100%;height:auto}.cover-art figcaption{padding:10px 16px;color:#213b32;font-size:11px;line-height:1.5}
+.figure-pair{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:24px 0}.book-illustration{margin:0;border:1px solid var(--line);border-radius:6px;overflow:hidden}.book-illustration img{width:100%;height:auto;display:block}.book-illustration figcaption{padding:14px 16px;font-size:13px;line-height:1.7}
+@media(max-width:700px){.figure-pair{grid-template-columns:1fr}.book-links{gap:12px;font-size:12px}}
+@media print{.book-links{display:none}.figure-pair{display:block}.book-illustration{break-inside:avoid;margin:16px 0}}

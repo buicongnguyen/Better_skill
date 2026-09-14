@@ -84,6 +84,10 @@ if (lang !== 'en') {
   }
 }
 const controls = `<div class="reader-controls" role="group" aria-label="${ui.readingOptions}"><nav class="language-switch" aria-label="${ui.chooseLanguage}">${Object.entries(allUi).map(([key, item]) => `<a href="${item.file}?lang=${key}" lang="${key}" hreflang="${key}" data-language="${key}"${key === lang ? ' aria-current="true"' : ''}>${item.language}</a>`).join('')}</nav><button class="theme-toggle" type="button" aria-pressed="false" aria-label="${ui.darkMode}" title="${ui.themeHint}"><span aria-hidden="true">◐</span><span>${ui.darkMode}</span></button></div>`;
+const links = `<nav class="book-links" aria-label="${ui.bookLinks}"><a class="pdf-link" href="pdf/how-to-do-better-${lang}.pdf" download>↓ ${ui.pdfDownload}</a><a href="https://github.com/buicongnguyen/Better_skill">${ui.githubLink} ↗</a></nav>`;
+template = template.replace('{{bookLinks}}', links);
+template = template.replace(/(class="sidebar-bottom"[\s\S]*?)(<\/div>\s*<\/aside>)/, `$1<a class="sidebar-pdf" href="pdf/how-to-do-better-${lang}.pdf" download>↓ ${ui.pdfDownload}</a>$2`);
+template = template.replace(/<figure class="cover-art"[\s\S]*?<\/figure>/, `<figure class="cover-art"><img src="illustrations/signal-garden-concept.png" width="1500" height="1100" alt="${esc(ui.coverImage)}"><figcaption>${esc(ui.coverImage)}</figcaption></figure>`);
 template = template.replace('{{readingControls}}', controls).replace('{{readerMessages}}', JSON.stringify(ui).replaceAll('<','\\u003c')).replace('{{lang}}',lang).replace('{{localeUrl}}',lang === 'en' ? '' : ui.file);
 template = template.replaceAll('{{chapterCount}}', String(chapters.filter(c => c.number > 0).length)).replace('{{nav}}', nav).replace('{{chapters}}', chapters.map(c => `<section class="chapter" aria-labelledby="${c.id}"><div class="chapter-kicker">${c.number === 0 ? ui.quickRead : `${ui.chapter} ${String(c.number).padStart(2, '0')}`}</div>${c.body}</section>`).join('\n')).replace('{{sources}}', refs);
 await writeFile(path.join(root, `dist/${ui.file}`), template);
@@ -107,3 +111,7 @@ await cp(path.join(root, 'prompts'), path.join(root, 'dist/prompts'), { recursiv
 await cp(path.join(root, 'research'), path.join(root, 'dist/research'), { recursive: true });
 await writeFile(path.join(root, 'dist/.nojekyll'), '');
 console.log('Built three complete language editions into dist/');
+
+await cp(path.join(root, 'illustrations'), path.join(root, 'dist/illustrations'), {recursive:true, filter:source=>!source.endsWith('.blend1')});
+try { await cp(path.join(root, 'output/pdf'), path.join(root, 'dist/pdf'), {recursive:true}); }
+catch(error) { if(error.code !== 'ENOENT') throw error; console.log('PDFs not yet exported; run the PDF build before publication.'); }

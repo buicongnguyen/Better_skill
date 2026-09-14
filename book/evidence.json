@@ -1,77 +1,748 @@
 [
-  {"chapter":"summary","records":[
-    {"label":"Main points and scope","note":"This summary condenses the existing book. Small scope and evidence-led iteration are our recommendations, informed by the Astra game case study and instruction guidance. Skill availability does not establish selection accuracy or measured game improvement.","sections":[0],"basis":"Synthesis","sources":["04","17","08"]},
-    {"label":"The short route through the full chapters","note":"Each step links to the chapter containing its detailed rules, procedures, and evidence limits. The sequence, game, and optional trailer are worked proposals. Documentation supports the cited capabilities and deployment pattern; this summary adds no experiment or benchmark result.","sections":[1],"basis":"Synthesis","sources":["04","17","13","25","28"]}
-  ]},
-  {"chapter":"better-loop","records":[
-    {"label":"The worked example and iteration method","sections":[0,1,3,4],"basis":"Original proposal","sources":["04","17"],"note":"The broken-game opening is an illustrative scenario. Signal Garden, the four-step loop, and the exercises are our teaching design. The sources motivate inspectable results and focused guidance; they do not validate this particular game."},
-    {"label":"Model, agent, and working agreements","sections":[2],"basis":"Documented behavior","sources":["01","23"],"note":"Astra guidance covers initiative, instructions, delegation, and verification. MCP architecture distinguishes the host and exposed tools; a prompt alone cannot supply missing tool access."}
-  ]},
-  {"chapter":"approaches","records":[
-    {"label":"Comparison and route selection","sections":[0,2,3],"basis":"Synthesis","sources":["04","06","21"],"note":"The six-way comparison, integration advice, and recommended combination are editorial judgments for this small game. They are not a measured ranking of prompting styles or single versus multiple agents."},
-    {"label":"What the implementation accounts establish","sections":[1],"basis":"Research finding","sources":["04","05","06","21"],"note":"Spec Kit documents a workflow. The Astra game article and Anthropic accounts describe implementations. The March follow-up simplifies the workflow for a newer model; none supplies a controlled comparison of all six approaches."}
-  ]},
-  {"chapter":"research","records":[
-    {"label":"Current evidence and older material","sections":[0,1,2],"basis":"Synthesis","sources":["17","18","19","20","21","22"],"note":"Dates and tested models determine relevance. Newer non-Astra results justify experiments, not claims about Astra game quality. Live reference pages are distinguished from dated publications."},
-    {"label":"Verified keynote passage","sections":[3],"basis":"Research finding","sources":["02","04"],"note":"The mirrored keynote passage discusses verification workload and inspectable outputs. The runnable-milestone application is our interpretation, with current game practice supplied by the Astra case study."},
-    {"label":"Unavailable second transcript","sections":[4],"basis":"Retrieval limitation","sources":["03","17"],"note":"The prior transcript passage could not be reverified and is withdrawn from the evidence. Current context advice is supported independently by source 17. No timecodes or video-only claims are invented."},
-    {"label":"Learning Godot and recording evidence","sections":[5,6],"basis":"Synthesis","sources":["09","10","11"],"note":"The written tutorials establish the learning sequence; current export docs establish deployment constraints. The research worksheet and experiment procedure are original tools for checking transfer to your project."}
-  ]},
-  {"chapter":"stack","records":[
-    {"label":"Stack features and teaching choice","sections":[0,1],"basis":"Synthesis","sources":["04","12","14","15","16","42"],"note":"Official sources establish rendering, engine, hosting, and lockfile behavior. Choosing a browser codebase and simple collision for Signal Garden is an editorial scope decision, not a performance benchmark."},
-    {"label":"Godot export constraints","sections":[2],"basis":"Documented behavior","sources":["11"],"note":"Checked WebGL 2 Compatibility rendering, Godot 4 C# restrictions, threading/isolation, PWA workaround, and the HTML entry-name exception. Test the installed version and actual host."},
-    {"label":"Feasibility exercise","sections":[3],"basis":"Original proposal","sources":["11","12"],"note":"A tiny export tests the documented deployment constraints in your environment. Thirty minutes is a suggested investigation budget, not a supported completion estimate."}
-  ]},
-  {"chapter":"github","records":[
-    {"label":"Git, remote repository, and Pages setup","sections":[0,1],"basis":"Documented behavior","sources":["39","40","46"],"note":"Git references support initialization, complete staging, and reviewing staged content. GitHub CLI documents remote creation. Pages is a separate static publication step. Example commands require actual scaffold files and authenticated tools."},
-    {"label":"Repository layout and handoff","sections":[2,4],"basis":"Synthesis","sources":["05","07","08","39"],"note":"Scoped instructions and skill discovery have documented locations; the rest of the directory layout is a proposal. Progress artifacts come from the long-running-agent account. Revert records an undo, but conflicts and dependent changes still need review."},
-    {"label":"The fixed-camera experiment and PR","sections":[3],"basis":"Synthesis","sources":["39","41"],"note":"Branch and PR options are documented. The paths and camera change are illustrative and must match actual files. The body file must be written before gh pr create reads it."}
-  ]},
-  {"chapter":"skills","records":[
-    {"label":"Availability, invocation, and repository instructions","sections":[0,1,4],"basis":"Documented behavior","sources":["07","08","17","27","37"],"note":"Codex supports eligible implicit matching and explicit selection, with a budgeted catalog. Repository conventions and skills have different roles. Remotion replaces a documentation integration; Comfy exposes action tools. These do not prove universal redundancy."},
-    {"label":"Evidence for conditional skill value","sections":[2,3],"basis":"Research finding","sources":["17","18","19","20","21","22"],"note":"Benchmarks differ in tasks, models, skill construction, and discovery. Their findings cannot be pooled into an Astra performance claim. OpenAI’s Astra instruction audit is first-party guidance, not an independent gain measurement."},
-    {"label":"Optional game review skill and local comparison","sections":[5,6],"basis":"Original proposal","sources":["08","17","18","22"],"note":"The skill’s round rules belong to the original game brief. The proposed comparison tests whether guidance adds value in your actual setup; it has not been run for this book."}
-  ]},
-  {"chapter":"brief","records":[
-    {"label":"Player promise, mechanics, and boundaries","sections":[0,1,2,4],"basis":"Original proposal","sources":[],"note":"All game values, rules, loss precedence, pause/restart transitions, and exclusions are authored design targets. No external source establishes that three cells, 90 seconds, or this arena will be enjoyable. Verify implementation against this brief, then evaluate it through playtesting."},
-    {"label":"Using visual references","sections":[3],"basis":"Synthesis","sources":["04"],"note":"The Astra case study uses player experience and visual references. Assigning each reference a specific job and comparing a consistent camera view are our practical recommendations, not measured effects."}
-  ]},
-  {"chapter":"meta-prompt","records":[
-    {"label":"Input packet and prompt designer","sections":[0,1,2],"basis":"Original proposal","sources":["01","17","04"],"note":"The downloadable meta-prompt is authored for Signal Garden. Current guidance motivates explicit intent and relevant context. No reviewed experiment proves a meta-prompt beats a direct request on Astra."},
-    {"label":"Reviewing and refining a generated prompt","sections":[3,4,5],"basis":"Synthesis","sources":["17","21"],"note":"The review questions, one-pass exercise, and versioning procedure are proposed safeguards against contradictions and excess process. Source accounts motivate revisiting scaffolding; they do not prescribe this exact checklist."}
-  ]},
-  {"chapter":"master-prompt","records":[
-    {"label":"Compact and bootstrap execution prompts","sections":[0,1,2],"basis":"Original proposal","sources":["01","17"],"note":"Both templates are manually authored and unbenchmarked. The compact prompt relies on existing accurate project files; the bootstrap carries the original game rules because those files do not yet exist."},
-    {"label":"Working agreements and evidence-based repair","sections":[3,4],"basis":"Synthesis","sources":["01","04","17"],"note":"Astra documentation supports initiative and proportionate testing; the game case study supports observable state and real controls. The coordinate rules, milestone order, and repair template remain project choices."}
-  ]},
-  {"chapter":"milestones","records":[
-    {"label":"Reproducible setup and stable motion","sections":[0,1,2],"basis":"Synthesis","sources":["04","42","43"],"note":"A committed lockfile and elapsed-time animation have documented behavior. M0–M1 define proposed checkpoints, including explicit pause/resume policy for background time."},
-    {"label":"Playable win slice, then complete loss rules","sections":[3,4],"basis":"Original proposal","sources":[],"note":"M2 is deliberately incomplete: it establishes the win loop, timer display, and restart. M3 adds drone/health pressure and both loss conditions. Compare the final implementation with chapter 7’s single authoritative rules."},
-    {"label":"Art, audio, motion, and release","sections":[5,6],"basis":"Synthesis","sources":["04","44","45","12","13"],"note":"Browser docs support autoplay handling and reduced-motion detection; Pages/Vite docs support the release path. Visual targets, human playtesting, and milestone acceptance are our design recommendations."}
-  ]},
-  {"chapter":"verify","records":[
-    {"label":"Rules, real controls, and visible state","sections":[0,1,2],"basis":"Synthesis","sources":["04"],"note":"The Astra example distinguishes deterministic setup from real-control journeys. The table and snapshot are original acceptance tools for the chapter 7 design, not evidence of a game already tested."},
-    {"label":"Performance observation","sections":[3],"basis":"Synthesis","sources":["43"],"note":"MDN establishes callback timing and background behavior. The 95th percentile, 33 ms target, and 60-second sample are proposed choices. Callback intervals must not be reported as GPU duration."},
-    {"label":"Human playtest worksheet","sections":[4],"basis":"Original proposal","sources":["04","21"],"note":"The worksheet asks for observed experience and evidence. Implementation accounts motivate evaluation, but a small playtest does not establish population success rates or an objective fun score."}
-  ]},
-  {"chapter":"refine","records":[
-    {"label":"Failure classification, prompt revisions, and rubric","sections":[0,1,2],"basis":"Original proposal","sources":["04","21"],"note":"The examples and 0–2 rubric are authored comparison aids. Human judgments should remain visible; no measured experiment produced the V0–V3 sequence."},
-    {"label":"Fair comparisons and retiring redundant guidance","sections":[3,4,5],"basis":"Synthesis","sources":["17","18","19","20","21","22"],"note":"Varying model/task findings justify controlling the starting revision, tools, and budget. Repetition and transparent intervention records improve the comparison; the book reports no new Astra benchmark."}
-  ]},
-  {"chapter":"publish","records":[
-    {"label":"Static hosting, repository base, and workflow","sections":[0,1,2],"basis":"Documented behavior","sources":["46","12","13","42"],"note":"Checked Pages’ static role, Vite project base, lockfile install, and artifact/deploy requirements. The linked book workflow is the actual implementation; the game snippet is an example."},
-    {"label":"Publication and public verification","sections":[3,4],"basis":"Synthesis","sources":["13","11","12"],"note":"The release prompt and full-play sequence are original verification procedures. Successful CI alone does not demonstrate gameplay; the expected revision and its assets must be checked at the public URL."},
-    {"label":"Recovery","sections":[5],"basis":"Synthesis","sources":["39","13"],"note":"Git revert records an undo and the workflow publishes another artifact. Restoration still requires a successful deployment and a check of the repaired public result."}
-  ]},
-  {"chapter":"thinking-flows","records":[
-    {"label":"Process diagrams and bounded decisions","sections":[0,1,2],"basis":"Original proposal","sources":["36","04","17"],"note":"Mermaid documents text-to-SVG rendering. The graphs describe observable decisions, not private model reasoning or executable automation. Success, effort limits, and blocked progress all have explicit outcomes."},
-    {"label":"What flows between the layers","sections":[3],"basis":"Documented behavior","sources":["07","08","23","24","34","35","37"],"note":"The documented roles distinguish conventions, optional procedures, tools, MCP, lifecycle hooks, and workflow nodes. Our graph is a simplified data model, not a claim that every host exposes every integration."},
-    {"label":"Choose help and improve the cause","sections":[4,5,6],"basis":"Synthesis","sources":["17","27","37","38"],"note":"The routing questions and decision record are our practical synthesis. Documentation-only MCP deprecation and action-capable MCP are different cases. Diagnose access, context, or implementation before adding procedures."}
-  ]},
-  {"chapter":"video-workflows","records":[
-    {"label":"Route comparison and storyboard","sections":[0,1,2],"basis":"Synthesis","sources":["25","27","28","31","34"],"note":"The unidentified page cannot be named with certainty. Product capabilities are documented; the comparison, shot manifest, and 3/3/4-second storyboard are original proposals. No video has been generated for this book."},
-    {"label":"Remotion composition and Comfy generation","sections":[3,4],"basis":"Documented behavior","sources":["25","26","28","29","37","38"],"note":"Checked scaffolding commands, skills, template requirements, cloud MCP setup, API-format JSON, and output download behavior. The Comfy drawing is conceptual; cloud template availability must be discovered. The Remotion video transcript was not retrieved."},
-    {"label":"Runway jobs and n8n orchestration","sections":[5,6],"basis":"Synthesis","sources":["30","31","32","33","34","35","47","48"],"note":"Checked endpoint roles, asynchronous states, polling/error guidance, output expiry, and HTTP/Wait node behavior. The bounded recovery flow is proposed, not an executed n8n export. Multi-shot generation is separate from composing real gameplay capture."},
-    {"label":"Hooks, execution prompt, and final review","sections":[7,8,9,10],"basis":"Synthesis","sources":["24","17","46"],"note":"PostToolUse happens after the tool and cannot reverse its action. The validator, prompt, and review exercise are original. Pages serves static results; no hook, paid job, or video pipeline was run for this book."}
-  ]}
+  {
+    "chapter": "summary",
+    "records": [
+      {
+        "label": "Main points and scope",
+        "note": "This summary condenses the existing book. Small scope and evidence-led iteration are our recommendations, informed by the Astra game case study and instruction guidance. Skill availability does not establish selection accuracy or measured game improvement.",
+        "sections": [
+          0
+        ],
+        "basis": "Synthesis",
+        "sources": [
+          "04",
+          "17",
+          "08"
+        ]
+      },
+      {
+        "label": "The short route through the full chapters",
+        "note": "Each step links to the chapter containing its detailed rules, procedures, and evidence limits. The sequence, game, and optional trailer are worked proposals. Documentation supports the cited capabilities and deployment pattern; this summary adds no experiment or benchmark result.",
+        "sections": [
+          1
+        ],
+        "basis": "Synthesis",
+        "sources": [
+          "04",
+          "17",
+          "13",
+          "25",
+          "28",
+          "52"
+        ]
+      }
+    ]
+  },
+  {
+    "chapter": "better-loop",
+    "records": [
+      {
+        "label": "The worked example and iteration method",
+        "sections": [
+          0,
+          1,
+          3,
+          4
+        ],
+        "basis": "Original proposal",
+        "sources": [
+          "04",
+          "17"
+        ],
+        "note": "The broken-game opening is an illustrative scenario. Signal Garden, the four-step loop, and the exercises are our teaching design. The sources motivate inspectable results and focused guidance; they do not validate this particular game."
+      },
+      {
+        "label": "Model, agent, and working agreements",
+        "sections": [
+          2
+        ],
+        "basis": "Documented behavior",
+        "sources": [
+          "01",
+          "23"
+        ],
+        "note": "Astra guidance covers initiative, instructions, delegation, and verification. MCP architecture distinguishes the host and exposed tools; a prompt alone cannot supply missing tool access."
+      }
+    ]
+  },
+  {
+    "chapter": "approaches",
+    "records": [
+      {
+        "label": "Comparison and route selection",
+        "sections": [
+          0,
+          2,
+          3
+        ],
+        "basis": "Synthesis",
+        "sources": [
+          "04",
+          "06",
+          "21"
+        ],
+        "note": "The six-way comparison, integration advice, and recommended combination are editorial judgments for this small game. They are not a measured ranking of prompting styles or single versus multiple agents."
+      },
+      {
+        "label": "What the implementation accounts establish",
+        "sections": [
+          1
+        ],
+        "basis": "Research finding",
+        "sources": [
+          "04",
+          "05",
+          "06",
+          "21"
+        ],
+        "note": "Spec Kit documents a workflow. The Astra game article and Anthropic accounts describe implementations. The March follow-up simplifies the workflow for a newer model; none supplies a controlled comparison of all six approaches."
+      }
+    ]
+  },
+  {
+    "chapter": "research",
+    "records": [
+      {
+        "label": "Current evidence and older material",
+        "sections": [
+          0,
+          1,
+          2
+        ],
+        "basis": "Synthesis",
+        "sources": [
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22"
+        ],
+        "note": "Dates and tested models determine relevance. Newer non-Astra results justify experiments, not claims about Astra game quality. Live reference pages are distinguished from dated publications."
+      },
+      {
+        "label": "Verified keynote passage",
+        "sections": [
+          3
+        ],
+        "basis": "Research finding",
+        "sources": [
+          "02",
+          "04"
+        ],
+        "note": "The mirrored keynote passage discusses verification workload and inspectable outputs. The runnable-milestone application is our interpretation, with current game practice supplied by the Astra case study."
+      },
+      {
+        "label": "Unavailable second transcript",
+        "sections": [
+          4
+        ],
+        "basis": "Retrieval limitation",
+        "sources": [
+          "03",
+          "17"
+        ],
+        "note": "The prior transcript passage could not be reverified and is withdrawn from the evidence. Current context advice is supported independently by source 17. No timecodes or video-only claims are invented."
+      },
+      {
+        "label": "Learning Godot and recording evidence",
+        "sections": [
+          5,
+          6
+        ],
+        "basis": "Synthesis",
+        "sources": [
+          "09",
+          "10",
+          "11"
+        ],
+        "note": "The written tutorials establish the learning sequence; current export docs establish deployment constraints. The research worksheet and experiment procedure are original tools for checking transfer to your project."
+      }
+    ]
+  },
+  {
+    "chapter": "stack",
+    "records": [
+      {
+        "label": "Stack features and teaching choice",
+        "sections": [
+          0,
+          1
+        ],
+        "basis": "Synthesis",
+        "sources": [
+          "04",
+          "12",
+          "14",
+          "15",
+          "16",
+          "42"
+        ],
+        "note": "Official sources establish rendering, engine, hosting, and lockfile behavior. Choosing a browser codebase and simple collision for Signal Garden is an editorial scope decision, not a performance benchmark."
+      },
+      {
+        "label": "Godot export constraints",
+        "sections": [
+          2
+        ],
+        "basis": "Documented behavior",
+        "sources": [
+          "11"
+        ],
+        "note": "Checked WebGL 2 Compatibility rendering, Godot 4 C# restrictions, threading/isolation, PWA workaround, and the HTML entry-name exception. Test the installed version and actual host."
+      },
+      {
+        "label": "Feasibility exercise",
+        "sections": [
+          3
+        ],
+        "basis": "Original proposal",
+        "sources": [
+          "11",
+          "12"
+        ],
+        "note": "A tiny export tests the documented deployment constraints in your environment. Thirty minutes is a suggested investigation budget, not a supported completion estimate."
+      }
+    ]
+  },
+  {
+    "chapter": "github",
+    "records": [
+      {
+        "label": "Git, remote repository, and Pages setup",
+        "sections": [
+          0,
+          1
+        ],
+        "basis": "Documented behavior",
+        "sources": [
+          "39",
+          "40",
+          "46"
+        ],
+        "note": "Git references support initialization, complete staging, and reviewing staged content. GitHub CLI documents remote creation. Pages is a separate static publication step. Example commands require actual scaffold files and authenticated tools."
+      },
+      {
+        "label": "Repository layout and handoff",
+        "sections": [
+          2,
+          4
+        ],
+        "basis": "Synthesis",
+        "sources": [
+          "05",
+          "07",
+          "08",
+          "39"
+        ],
+        "note": "Scoped instructions and skill discovery have documented locations; the rest of the directory layout is a proposal. Progress artifacts come from the long-running-agent account. Revert records an undo, but conflicts and dependent changes still need review."
+      },
+      {
+        "label": "The fixed-camera experiment and PR",
+        "sections": [
+          3
+        ],
+        "basis": "Synthesis",
+        "sources": [
+          "39",
+          "41"
+        ],
+        "note": "Branch and PR options are documented. The paths and camera change are illustrative and must match actual files. The body file must be written before gh pr create reads it."
+      }
+    ]
+  },
+  {
+    "chapter": "skills",
+    "records": [
+      {
+        "label": "Availability, invocation, and repository instructions",
+        "sections": [
+          0,
+          1,
+          4
+        ],
+        "basis": "Documented behavior",
+        "sources": [
+          "07",
+          "08",
+          "17",
+          "27",
+          "37"
+        ],
+        "note": "Codex supports eligible implicit matching and explicit selection, with a budgeted catalog. Repository conventions and skills have different roles. Remotion replaces a documentation integration; Comfy exposes action tools. These do not prove universal redundancy."
+      },
+      {
+        "label": "Evidence for conditional skill value",
+        "sections": [
+          2,
+          3
+        ],
+        "basis": "Research finding",
+        "sources": [
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22"
+        ],
+        "note": "Benchmarks differ in tasks, models, skill construction, and discovery. Their findings cannot be pooled into an Astra performance claim. OpenAI’s Astra instruction audit is first-party guidance, not an independent gain measurement."
+      },
+      {
+        "label": "Optional game review skill and local comparison",
+        "sections": [
+          5,
+          6
+        ],
+        "basis": "Original proposal",
+        "sources": [
+          "08",
+          "17",
+          "18",
+          "22"
+        ],
+        "note": "The skill’s round rules belong to the original game brief. The proposed comparison tests whether guidance adds value in your actual setup; it has not been run for this book."
+      },
+      {
+        "label": "Inspected GitHub candidates",
+        "note": "Reviewed the linked source instructions and repository layout. Suitability judgments are our assessment, not executed benchmarks or installation claims.",
+        "sections": [
+          7
+        ],
+        "basis": "Synthesis",
+        "sources": [
+          "49",
+          "50",
+          "51",
+          "55"
+        ]
+      }
+    ]
+  },
+  {
+    "chapter": "brief",
+    "records": [
+      {
+        "label": "Player promise, mechanics, and boundaries",
+        "sections": [
+          0,
+          1,
+          2,
+          4
+        ],
+        "basis": "Original proposal",
+        "sources": [],
+        "note": "All game values, rules, loss precedence, pause/restart transitions, and exclusions are authored design targets. No external source establishes that three cells, 90 seconds, or this arena will be enjoyable. Verify implementation against this brief, then evaluate it through playtesting."
+      },
+      {
+        "label": "Using visual references",
+        "sections": [
+          3
+        ],
+        "basis": "Synthesis",
+        "sources": [
+          "04"
+        ],
+        "note": "The Astra case study uses player experience and visual references. Assigning each reference a specific job and comparing a consistent camera view are our practical recommendations, not measured effects."
+      },
+      {
+        "label": "Units, distance and transition mathematics",
+        "note": "Elementary vector derivation and explicit design conventions. Numerical checks verify the examples, not a completed game.",
+        "sections": [
+          5
+        ],
+        "basis": "Original proposal",
+        "sources": []
+      },
+      {
+        "label": "Reproducible Blender illustrations",
+        "note": "Two actual renders share scene geometry, camera and lighting. The script and editable scene are supplied; gameplay is not implemented by these images.",
+        "sections": [
+          6
+        ],
+        "basis": "Original proposal",
+        "sources": [
+          "54"
+        ]
+      }
+    ]
+  },
+  {
+    "chapter": "meta-prompt",
+    "records": [
+      {
+        "label": "Input packet and prompt designer",
+        "sections": [
+          0,
+          1,
+          2
+        ],
+        "basis": "Original proposal",
+        "sources": [
+          "01",
+          "17",
+          "04"
+        ],
+        "note": "The downloadable meta-prompt is authored for Signal Garden. Current guidance motivates explicit intent and relevant context. No reviewed experiment proves a meta-prompt beats a direct request on Astra."
+      },
+      {
+        "label": "Reviewing and refining a generated prompt",
+        "sections": [
+          3,
+          4,
+          5
+        ],
+        "basis": "Synthesis",
+        "sources": [
+          "17",
+          "21"
+        ],
+        "note": "The review questions, one-pass exercise, and versioning procedure are proposed safeguards against contradictions and excess process. Source accounts motivate revisiting scaffolding; they do not prescribe this exact checklist."
+      }
+    ]
+  },
+  {
+    "chapter": "master-prompt",
+    "records": [
+      {
+        "label": "Compact and bootstrap execution prompts",
+        "sections": [
+          0,
+          1,
+          2
+        ],
+        "basis": "Original proposal",
+        "sources": [
+          "01",
+          "17"
+        ],
+        "note": "Both templates are manually authored and unbenchmarked. The compact prompt relies on existing accurate project files; the bootstrap carries the original game rules because those files do not yet exist."
+      },
+      {
+        "label": "Working agreements and evidence-based repair",
+        "sections": [
+          3,
+          4
+        ],
+        "basis": "Synthesis",
+        "sources": [
+          "01",
+          "04",
+          "17"
+        ],
+        "note": "Astra documentation supports initiative and proportionate testing; the game case study supports observable state and real controls. The coordinate rules, milestone order, and repair template remain project choices."
+      }
+    ]
+  },
+  {
+    "chapter": "milestones",
+    "records": [
+      {
+        "label": "Reproducible setup and stable motion",
+        "sections": [
+          0,
+          1,
+          2
+        ],
+        "basis": "Synthesis",
+        "sources": [
+          "04",
+          "42",
+          "43"
+        ],
+        "note": "A committed lockfile and elapsed-time animation have documented behavior. M0–M1 define proposed checkpoints, including explicit pause/resume policy for background time."
+      },
+      {
+        "label": "Playable win slice, then complete loss rules",
+        "sections": [
+          3,
+          4
+        ],
+        "basis": "Original proposal",
+        "sources": [],
+        "note": "M2 is deliberately incomplete: it establishes the win loop, timer display, and restart. M3 adds drone/health pressure and both loss conditions. Compare the final implementation with chapter 7’s single authoritative rules."
+      },
+      {
+        "label": "Art, audio, motion, and release",
+        "sections": [
+          5,
+          6
+        ],
+        "basis": "Synthesis",
+        "sources": [
+          "04",
+          "44",
+          "45",
+          "12",
+          "13"
+        ],
+        "note": "Browser docs support autoplay handling and reduced-motion detection; Pages/Vite docs support the release path. Visual targets, human playtesting, and milestone acceptance are our design recommendations."
+      }
+    ]
+  },
+  {
+    "chapter": "verify",
+    "records": [
+      {
+        "label": "Rules, real controls, and visible state",
+        "sections": [
+          0,
+          1,
+          2
+        ],
+        "basis": "Synthesis",
+        "sources": [
+          "04"
+        ],
+        "note": "The Astra example distinguishes deterministic setup from real-control journeys. The table and snapshot are original acceptance tools for the chapter 7 design, not evidence of a game already tested."
+      },
+      {
+        "label": "Performance observation",
+        "sections": [
+          3
+        ],
+        "basis": "Synthesis",
+        "sources": [
+          "43"
+        ],
+        "note": "MDN establishes callback timing and background behavior. The 95th percentile, 33 ms target, and 60-second sample are proposed choices. Callback intervals must not be reported as GPU duration."
+      },
+      {
+        "label": "Human playtest worksheet",
+        "sections": [
+          4
+        ],
+        "basis": "Original proposal",
+        "sources": [
+          "04",
+          "21"
+        ],
+        "note": "The worksheet asks for observed experience and evidence. Implementation accounts motivate evaluation, but a small playtest does not establish population success rates or an objective fun score."
+      }
+    ]
+  },
+  {
+    "chapter": "refine",
+    "records": [
+      {
+        "label": "Failure classification, prompt revisions, and rubric",
+        "sections": [
+          0,
+          1,
+          2
+        ],
+        "basis": "Original proposal",
+        "sources": [
+          "04",
+          "21"
+        ],
+        "note": "The examples and 0–2 rubric are authored comparison aids. Human judgments should remain visible; no measured experiment produced the P0–P3 sequence."
+      },
+      {
+        "label": "Fair comparisons and retiring redundant guidance",
+        "sections": [
+          3,
+          4,
+          5
+        ],
+        "basis": "Synthesis",
+        "sources": [
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22"
+        ],
+        "note": "Varying model/task findings justify controlling the starting revision, tools, and budget. Repetition and transparent intervention records improve the comparison; the book reports no new Astra benchmark."
+      },
+      {
+        "label": "Prompt learning versus game improvement",
+        "note": "Separates confounded game progress from controlled prompt comparisons. Counts and percentage calculations are illustrative; no comparison was executed. The optimizer retirement notice is product-specific.",
+        "sections": [
+          6
+        ],
+        "basis": "Synthesis",
+        "sources": [
+          "52",
+          "53"
+        ]
+      }
+    ]
+  },
+  {
+    "chapter": "publish",
+    "records": [
+      {
+        "label": "Static hosting, repository base, and workflow",
+        "sections": [
+          0,
+          1,
+          2
+        ],
+        "basis": "Documented behavior",
+        "sources": [
+          "46",
+          "12",
+          "13",
+          "42"
+        ],
+        "note": "Checked Pages’ static role, Vite project base, lockfile install, and artifact/deploy requirements. The linked book workflow is the actual implementation; the game snippet is an example."
+      },
+      {
+        "label": "Publication and public verification",
+        "sections": [
+          3,
+          4
+        ],
+        "basis": "Synthesis",
+        "sources": [
+          "13",
+          "11",
+          "12"
+        ],
+        "note": "The release prompt and full-play sequence are original verification procedures. Successful CI alone does not demonstrate gameplay; the expected revision and its assets must be checked at the public URL."
+      },
+      {
+        "label": "Recovery",
+        "sections": [
+          5
+        ],
+        "basis": "Synthesis",
+        "sources": [
+          "39",
+          "13"
+        ],
+        "note": "Git revert records an undo and the workflow publishes another artifact. Restoration still requires a successful deployment and a check of the repaired public result."
+      }
+    ]
+  },
+  {
+    "chapter": "thinking-flows",
+    "records": [
+      {
+        "label": "Process diagrams and bounded decisions",
+        "sections": [
+          0,
+          1,
+          2
+        ],
+        "basis": "Original proposal",
+        "sources": [
+          "36",
+          "04",
+          "17"
+        ],
+        "note": "Mermaid documents text-to-SVG rendering. The graphs describe observable decisions, not private model reasoning or executable automation. Success, effort limits, and blocked progress all have explicit outcomes."
+      },
+      {
+        "label": "What flows between the layers",
+        "sections": [
+          3
+        ],
+        "basis": "Documented behavior",
+        "sources": [
+          "07",
+          "08",
+          "23",
+          "24",
+          "34",
+          "35",
+          "37"
+        ],
+        "note": "The documented roles distinguish conventions, optional procedures, tools, MCP, lifecycle hooks, and workflow nodes. Our graph is a simplified data model, not a claim that every host exposes every integration."
+      },
+      {
+        "label": "Choose help and improve the cause",
+        "sections": [
+          4,
+          5,
+          6
+        ],
+        "basis": "Synthesis",
+        "sources": [
+          "17",
+          "27",
+          "37",
+          "38"
+        ],
+        "note": "The routing questions and decision record are our practical synthesis. Documentation-only MCP deprecation and action-capable MCP are different cases. Diagnose access, context, or implementation before adding procedures."
+      }
+    ]
+  },
+  {
+    "chapter": "video-workflows",
+    "records": [
+      {
+        "label": "Route comparison and storyboard",
+        "sections": [
+          0,
+          1,
+          2
+        ],
+        "basis": "Synthesis",
+        "sources": [
+          "25",
+          "27",
+          "28",
+          "31",
+          "34"
+        ],
+        "note": "The unidentified page cannot be named with certainty. Product capabilities are documented; the comparison, shot manifest, and 3/3/4-second storyboard are original proposals. No video has been generated for this book."
+      },
+      {
+        "label": "Remotion composition and Comfy generation",
+        "sections": [
+          3,
+          4
+        ],
+        "basis": "Documented behavior",
+        "sources": [
+          "25",
+          "26",
+          "28",
+          "29",
+          "37",
+          "38",
+          "55"
+        ],
+        "note": "Checked scaffolding commands, skills, template requirements, cloud MCP setup, API-format JSON, and output download behavior. The Comfy drawing is conceptual; cloud template availability must be discovered. The Remotion video transcript was not retrieved."
+      },
+      {
+        "label": "Runway jobs and n8n orchestration",
+        "sections": [
+          5,
+          6
+        ],
+        "basis": "Synthesis",
+        "sources": [
+          "30",
+          "31",
+          "32",
+          "33",
+          "34",
+          "35",
+          "47",
+          "48"
+        ],
+        "note": "Checked endpoint roles, asynchronous states, polling/error guidance, output expiry, and HTTP/Wait node behavior. The bounded recovery flow is proposed, not an executed n8n export. Multi-shot generation is separate from composing real gameplay capture."
+      },
+      {
+        "label": "Hooks, execution prompt, and final review",
+        "sections": [
+          7,
+          8,
+          9,
+          10
+        ],
+        "basis": "Synthesis",
+        "sources": [
+          "24",
+          "17",
+          "46"
+        ],
+        "note": "PostToolUse happens after the tool and cannot reverse its action. The validator, prompt, and review exercise are original. Pages serves static results; no hook, paid job, or video pipeline was run for this book."
+      }
+    ]
+  }
 ]

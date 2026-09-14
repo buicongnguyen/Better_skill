@@ -97,7 +97,7 @@
       "Thử nghiệm gồm GPT-5.5, Opus 4.8 và DeepSeek V4; không có Astra."
     ],
     "application": "Xem cách tạo kỹ năng dựa trên bằng chứng là một phương án đáng thử.",
-    "limits": "Kết quả bản thảo chưa chứng minh rằng tùy ý tạo kỹ năng cho bất kỳ tác vụ nào cũng hữu ích.",
+    "limits": "Kết quả bản thảo chưa chứng minh rằng tùy ý tạo kỹ năng cho bất kỳ tác vụ nào cũng hữu ích. Bảng 5 trộn nhãn chỉ dẫn xóa dữ liệu PDF với mô tả tái dùng threejs-to-obj; sách không dùng bảng đó làm bằng chứng rõ ràng về khả năng chuyển giao.",
     "verification": {
       "note": "Các cấu hình thử nghiệm không bao gồm Astra."
     }
@@ -629,6 +629,111 @@
     ],
     "application": "Giới hạn thử lại truy vấn trạng thái và đối soát các lần gửi tạo chưa rõ kết quả.",
     "limits": "Khuyến nghị thử lại không bảo đảm gửi tạo đúng một lần. Chính sách dừng và đối soát là thiết kế ứng dụng do sách đề xuất."
+  },
+  {
+    "id": "49",
+    "type": "Nguồn chính · tham khảo quy trình",
+    "date": "Đọc nội dung ngày 14/9/2026 · không suy ra ngày xuất bản",
+    "summary": [
+      "Tách luật mô phỏng, kết xuất, đầu vào và UI trình duyệt.",
+      "Chọn engine theo dự án thay vì dùng một bộ kết xuất cho mọi game.",
+      "Tham chiếu các tệp dùng chung bên ngoài thư mục skill."
+    ],
+    "application": "Có thể dùng khi thiết kế cấu trúc game web hoặc rà soát cấu trúc.",
+    "limits": "Chỉ đọc mã nguồn, không phải benchmark Astra. Giữ các tệp hỗ trợ của plugin; chỉ chép SKILL.md có thể làm hỏng đường dẫn tương đối.",
+    "verification": {
+      "note": "Đã đọc đoạn nêu trên; phạm vi và giới hạn thực thi ghi ở trên."
+    }
+  },
+  {
+    "id": "50",
+    "type": "Nguồn chính · tham khảo quy trình",
+    "date": "Đọc nội dung ngày 14/9/2026 · không suy ra ngày xuất bản",
+    "summary": [
+      "Có các skill riêng cho tạo dự án, markup, xem trước, kết xuất, phụ đề và tra cứu.",
+      "README cung cấp lệnh npx skills add remotion-dev/skills.",
+      "Skill best-practices bao quát bộ sưu tập; mục hẹp giải quyết việc cụ thể."
+    ],
+    "application": "Dùng hướng dẫn dựng và xuất video cho trailer từ cảnh chơi thật.",
+    "limits": "Có skill không đồng nghĩa đủ thư viện chạy hoặc video xuất đúng. Đã đọc chỉ dẫn; chưa chạy trailer.",
+    "verification": {
+      "note": "Đã đọc đoạn nêu trên; phạm vi và giới hạn thực thi ghi ở trên."
+    }
+  },
+  {
+    "id": "51",
+    "type": "Nguồn chính · tham khảo quy trình",
+    "date": "Đọc nội dung ngày 14/9/2026 · không suy ra ngày xuất bản",
+    "summary": [
+      "Bổ sung khán giả, thông điệp và định hướng sáng tạo cho Remotion.",
+      "Yêu cầu giai đoạn hỏi đáp lần lượt.",
+      "Tham chiếu các tệp mẫu và kiểu video đi kèm."
+    ],
+    "application": "Cân nhắc khi mô tả video còn mơ hồ.",
+    "limits": "Quy trình cộng đồng, không phải xếp hạng chất lượng. Hỏi đáp bắt buộc có thể làm chậm một mô tả đã đủ; kiểm tra giả định về ứng dụng và công cụ.",
+    "verification": {
+      "note": "Đã đọc đoạn nêu trên; phạm vi và giới hạn thực thi ghi ở trên."
+    }
+  },
+  {
+    "id": "52",
+    "type": "Nguồn chính · tham khảo quy trình",
+    "date": "Đọc nội dung ngày 14/9/2026 · không suy ra ngày xuất bản",
+    "summary": [
+      "Dùng phép kiểm tra theo nhiệm vụ và ví dụ đại diện.",
+      "Ghi lỗi, kết hợp phép đo với đánh giá của người.",
+      "So sánh các bản và thêm trường hợp mới phát hiện."
+    ],
+    "application": "Lưu phiên bản prompt, kết quả và tình huống game chưa dùng để chỉnh prompt trong kho mã.",
+    "limits": "Hướng dẫn đánh giá chung, không phải benchmark game. Dịch vụ Evals cũ đang bị ngừng; phương pháp không phụ thuộc dịch vụ đó.",
+    "verification": {
+      "note": "Đã đọc đoạn nêu trên; phạm vi và giới hạn thực thi ghi ở trên."
+    }
+  },
+  {
+    "id": "53",
+    "type": "Nguồn chính · tham khảo quy trình",
+    "date": "Đọc nội dung ngày 14/9/2026 · không suy ra ngày xuất bản",
+    "summary": [
+      "Tối ưu dùng đầu ra kèm nhận xét cụ thể hoặc kết quả chấm.",
+      "Prompt đã tối ưu vẫn có thể kém hơn ở một số đầu vào; cần đánh giá lại.",
+      "Trang nêu Evals cũ chỉ đọc từ 31/10/2026 và đóng ngày 30/11/2026."
+    ],
+    "application": "Giữ nguyên tắc phản hồi; phép so sánh trong sách không phụ thuộc dashboard sắp đóng.",
+    "limits": "Lịch áp dụng cho bộ tối ưu dựa trên dataset và nền tảng Evals, không phải mọi cách cải thiện prompt hay đánh giá cục bộ. Kiểm tra lại trước khi dùng.",
+    "verification": {
+      "note": "Đã đọc đoạn nêu trên; phạm vi và giới hạn thực thi ghi ở trên."
+    }
+  },
+  {
+    "id": "54",
+    "type": "Nguồn chính · tham khảo quy trình",
+    "date": "Đọc nội dung ngày 14/9/2026 · không suy ra ngày xuất bản",
+    "summary": [
+      "Blender có thể kết xuất mà không mở giao diện đồ họa.",
+      "Đối số xử lý theo thứ tự; đặt tùy chọn đầu ra trước khi kết xuất.",
+      "Cảnh lưu và lệnh rõ ràng giúp tái lập ảnh."
+    ],
+    "application": "Tái tạo hình ý tưởng bằng script dựng cảnh kèm theo.",
+    "limits": "Sách dùng Blender 4.5.3 LTS dùng chung. Ảnh kết xuất không chứng minh cơ chế game hay hiệu năng trình duyệt.",
+    "verification": {
+      "note": "Đã đọc đoạn nêu trên; phạm vi và giới hạn thực thi ghi ở trên."
+    }
+  },
+  {
+    "id": "55",
+    "type": "Nguồn chính · tham khảo quy trình",
+    "date": "Đọc nội dung ngày 14/9/2026 · không suy ra ngày xuất bản",
+    "summary": [
+      "Gói cloud chính dành cho Claude Code, gồm MCP và lệnh.",
+      "Thư mục skills cũ đã đóng băng; skill comfy-cli đi kèm CLI đó.",
+      "Chỉ dẫn nên tra mô hình và template đang có bằng công cụ."
+    ],
+    "application": "Dùng thiết lập đúng ứng dụng và tra template video khi thực thi.",
+    "limits": "Không chép thư mục đã đóng băng hoặc coi plugin Claude Code là bộ cài Codex. Chỉ đọc nguồn; chưa chạy tạo video cloud.",
+    "verification": {
+      "note": "Đã đọc đoạn nêu trên; phạm vi và giới hạn thực thi ghi ở trên."
+    }
   },
   {
     "id": "05",

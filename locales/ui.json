@@ -68,7 +68,11 @@
       "Version since March 2026": "Version since March 2026",
       "Current documentation": "Current documentation"
     },
-    "quickRead": "QUICK READ"
+    "quickRead": "QUICK READ",
+    "pdfDownload": "Download book PDF",
+    "githubLink": "GitHub source",
+    "bookLinks": "Read offline or explore the source",
+    "coverImage": "Blender concept: Signal Garden, an original 24 by 24 arena with three energy cells and one beacon"
   },
   "vi": {
     "language": "Tiếng Việt",
@@ -139,7 +143,11 @@
       "Version since March 2026": "Phiên bản từ tháng 3/2026",
       "Current documentation": "Tài liệu hiện hành"
     },
-    "quickRead": "ĐỌC NHANH"
+    "quickRead": "ĐỌC NHANH",
+    "pdfDownload": "Tải sách PDF",
+    "githubLink": "Mã nguồn GitHub",
+    "bookLinks": "Đọc ngoại tuyến hoặc xem mã nguồn",
+    "coverImage": "Ý tưởng Blender: Signal Garden, sân 24 nhân 24 với ba pin và một đèn hiệu"
   },
   "ko": {
     "language": "한국어",
@@ -210,6 +218,10 @@
       "Version since March 2026": "2026년 3월 이후 버전",
       "Current documentation": "현재 문서"
     },
-    "quickRead": "빠르게 읽기"
+    "quickRead": "빠르게 읽기",
+    "pdfDownload": "책 PDF 다운로드",
+    "githubLink": "GitHub 소스",
+    "bookLinks": "오프라인으로 읽기 또는 소스 보기",
+    "coverImage": "Blender 콘셉트: 전지 세 개와 비콘 하나가 있는 24 곱하기 24 경기장"
   }
 }

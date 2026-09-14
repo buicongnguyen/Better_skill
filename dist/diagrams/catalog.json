@@ -43,5 +43,10 @@
     "id": "hook-flow",
     "title": "Use a hook for a narrow local check",
     "description": "A relevant tool event can trigger a local validator. An irrelevant event exits immediately. This proposed pattern does not generate a video or publish anything by itself."
+  },
+  {
+    "id": "prompt-learning",
+    "title": "Two related improvement loops",
+    "description": "Keep the game moving forward; test prompt revisions separately against the same baseline."
   }
 ]

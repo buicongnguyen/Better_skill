@@ -19,7 +19,7 @@ assert.equal(promptFiles.length, 8, 'The eight promised prompt downloads must ex
 assert.equal((html.match(/class="chapter"/g) || []).length, 16, 'The book must have a quick summary and 15 full chapters');
 assert.equal((html.match(/class="copy-button"/g) || []).length, 8, 'Each template needs a copy control');
 const sources = JSON.parse(await readFile(path.resolve(root, '../book/sources.json'), 'utf8'));
-assert.equal(sources.length, 48, 'The 48 source records must be present');
+assert.equal(sources.length, 55, 'The 55 reviewed source records must be present');
 assert.equal(new Set(sources.map(s => s.id)).size, sources.length, 'Duplicate source IDs');
 assert.equal((html.match(/class="source-summary"/g) || []).length, sources.length, 'Every source needs a rendered summary');
 for (const source of sources) {
@@ -54,7 +54,7 @@ for (const file of chapterFiles) {
   }
 }
 const diagrams = JSON.parse(await readFile(path.join(root, 'diagrams/catalog.json'), 'utf8'));
-assert.equal(diagrams.length, 9, 'The nine promised diagrams must exist');
+assert.equal(diagrams.length, 10, 'The ten promised diagrams must exist');
 assert.equal((html.match(/class="diagram"/g) || []).length, diagrams.length);
 for (const diagram of diagrams) {
   const source = await readFile(path.join(root, `diagrams/${diagram.id}.mmd`), 'utf8');
@@ -77,9 +77,9 @@ for (const lang of ['en','vi','ko']) {
   assert.deepEqual(editionIds.slice().sort(),ids.slice().sort(),`Anchor parity: ${lang}`);
   assert(!/\{\{[a-zA-Z]|\bundefined\b/.test(edition),`Unresolved content: ${lang}`);
   assert.equal((edition.match(/class="chapter-evidence"/g)||[]).length,chapterFiles.length);
-  assert.equal((edition.match(/class="source-summary"/g)||[]).length,48);
+  assert.equal((edition.match(/class="source-summary"/g)||[]).length,sources.length);
   assert.equal((edition.match(/class="copy-button"/g)||[]).length,8);
-  assert.equal((edition.match(/class="diagram"/g)||[]).length,9);
+  assert.equal((edition.match(/class="diagram"/g)||[]).length,diagrams.length);
   for (const [,raw] of edition.matchAll(/(?:href|src)="([^"]+)"/g)) {
     const href=raw.replaceAll('&amp;','&');
     if(href.startsWith('#'))assert(editionIds.includes(href.slice(1)),`Broken ${lang} anchor: ${href}`);
@@ -136,5 +136,5 @@ for (const lang of ['en','vi','ko']) {
     assert.equal(await readFile(path.join(root,'diagrams',lang,`${diagram.id}.mmd`),'utf8'),text);
   }
 }
-console.log('Passed: English, Vietnamese and Korean edition/anchor parity, translated summaries and evidence, 24 prompt copies, 27 diagrams with identical graph logic, and all local links/assets.');
-console.log(`Passed: unique anchors, local links/assets, quick summary linking all 15 full chapters with stable numbers, ${coveredSections} introductions/subsections with evidence coverage, 8 prompts, 9 diagram sources, 48 source records with verification metadata (${manuscript.split(' ').length} words including templates and sources). Browser rendering is checked separately.`);
+console.log('Passed: English, Vietnamese and Korean edition/anchor parity, translated summaries and evidence, 24 prompt copies, 30 diagrams with identical graph logic, and all local links/assets.');
+console.log(`Passed: unique anchors, local links/assets, quick summary linking all 15 full chapters with stable numbers, ${coveredSections} introductions/subsections with evidence coverage, 8 prompts, 10 diagram sources, 55 source records with verification metadata (${manuscript.split(' ').length} words including templates and sources). Browser rendering is checked separately.`);

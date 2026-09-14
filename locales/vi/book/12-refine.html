@@ -5,11 +5,11 @@
 <h3>Ví dụ cải thiện prompt</h3>
 <p>Các bản dưới là minh họa chỉnh sửa, không phải kết quả thử nghiệm đo lường.</p>
 <div class="table-wrap"><table><thead><tr><th>Phiên bản</th><th>Chỉ dẫn</th><th>Vì sao giúp quyết định tiếp</th></tr></thead><tbody>
-<tr><td>V0 · mơ hồ</td><td>Làm game 3D hay có robot.</td><td>Hầu hết thiết kế và tiêu chí xong chưa được xác định.</td></tr>
-<tr><td>V1 · có phạm vi</td><td>Game web trong một sân mái nhà; robot nhặt ba pin rồi về đèn hiệu.</td><td>Định nghĩa thế giới, mục tiêu và vòng tối thiểu.</td></tr>
-<tr><td>V2 · kiểm tra được</td><td>WASD/mũi tên, camera cao cố định, một drone, ba máu, 90 giây. Kiểm tra thắng, thua, tạm dừng, chơi lại.</td><td>Luật cụ thể và nghiệm thu nhìn thấy được.</td></tr>
-<tr><td>V3 · theo tình huống</td><td>Ở commit này bồn cây phía bắc che robot. Giữ luật, đổi camera hoặc xử lý che khuất và so cùng tuyến trước/sau.</td><td>Bằng chứng hiện tại giới hạn đúng thay đổi.</td></tr>
-</tbody></table></div>
+<tr><td>P0 · mơ hồ</td><td>Làm game 3D hay có robot.</td><td>Hầu hết thiết kế và tiêu chí xong chưa được xác định.</td></tr>
+<tr><td>P1 · có phạm vi</td><td>Game web trong một sân mái nhà; robot nhặt ba pin rồi về đèn hiệu.</td><td>Định nghĩa thế giới, mục tiêu và vòng tối thiểu.</td></tr>
+<tr><td>P2 · kiểm tra được</td><td>WASD/mũi tên, camera cao cố định, một drone, ba máu, 90 giây. Kiểm tra thắng, thua, tạm dừng, chơi lại.</td><td>Luật cụ thể và nghiệm thu nhìn thấy được.</td></tr>
+<tr><td>P3 · theo tình huống</td><td>Ở commit này bồn cây phía bắc che robot. Giữ luật, đổi camera hoặc xử lý che khuất và so cùng tuyến trước/sau.</td><td>Bằng chứng hiện tại giới hạn đúng thay đổi.</td></tr>
+</tbody></table></div><p>P0–P2 thêm chi tiết đặc tả; P3 là nhiệm vụ sửa tại commit hiện có, không phải prompt khởi tạo luôn tốt hơn.</p>
 <h3>Dùng thang đánh giá để làm rõ bất đồng</h3>
 <p>Chấm mỗi mặt từ 0 đến 2: <strong>0</strong> thiếu hoặc hỏng, <strong>1</strong> có nhưng không nhất quán, <strong>2</strong> đã thể hiện trong phép thử đã nêu. Kèm ghi chú và bằng chứng. Điểm hỗ trợ trao đổi, không đo khách quan mức vui.</p>
 <ul><li><strong>Rõ ràng:</strong> hiểu mục tiêu và trạng thái.</li><li><strong>Điều khiển:</strong> phản hồi nhất quán, camera hỗ trợ.</li><li><strong>Hoàn chỉnh:</strong> có thắng, thua, tạm dừng, chơi lại đáng tin.</li><li><strong>Phản hồi:</strong> nhận biết thu thập, sát thương, đèn sẵn sàng.</li><li><strong>Thử thách:</strong> tuyến đi và nguy hiểm tạo quyết định dễ hiểu.</li><li><strong>Nhất quán:</strong> hình, âm và UI cùng không khí.</li><li><strong>Đáng tin:</strong> bản triển khai chạy chấp nhận được trên mục tiêu đã nêu.</li><li><strong>Dễ bảo trì:</strong> phiên mới tái lập build và tìm việc tiếp được.</li></ul>
@@ -20,3 +20,16 @@
 <p>Quy ước lặp lại có thể thuộc AGENTS.md. Quy trình lặp lại có thể cần skill nếu công cụ và tài liệu sẵn có chưa bao phủ. Sửa một lần để trong ghi chú nhiệm vụ. Cập nhật mô tả khi chơi thử làm đổi thiết kế. Không mặc định chép cùng luật vào nhiều lớp.</p>
 <p>Ví dụ, thua trước kích hoạt trong cùng bước thuộc tài liệu nghiệm thu chính. Skill rà soát có thể trỏ đến nếu tác nhân hay quên. “Dời bồn cây hai đơn vị về đông” thuộc thay đổi hiện tại. Đánh giá lại chỉ dẫn tùy chọn khi đổi mô hình: cách khắc phục hữu ích hôm qua có thể không còn cần hôm nay.</p>
 <div class="exercise"><h3>Nhìn lại sau phát hành</h3><p>Viết ba câu: chỉ dẫn giúp nhất, lỗi tốn công sửa lại nhất và một thay đổi quy trình sẽ thử lần tới. Nối mỗi câu với quan sát thật.</p></div>
+<h3>Tách phiên bản game khỏi phiên bản prompt</h3>
+<p>Vòng bạn đề xuất hữu ích: làm V1, sửa, học từ prompt rồi làm V2. Cần giữ <strong>prompt cùng kết quả quan sát</strong>, không nối cả hội thoại. V2 còn kế thừa mã, tài nguyên và quyết định tốt hơn; riêng việc V2 tốt hơn không chứng minh P2 hơn P1. Sửa prompt thay đổi chỉ dẫn đầu vào, không cập nhật trọng số Astra.</p>
+<ol><li><strong>Lưu mốc gốc.</strong> Ghi commit, phiên bản prompt, cấu hình mô hình, công cụ, skill và tiêu chí nghiệm thu.</li><li><strong>Làm và chẩn đoán.</strong> Giữ lỗi, bản sửa thành công, bằng chứng và số lần can thiệp.</li><li><strong>Rút bài học đã kiểm chứng.</strong> Tách sự thật khỏi phỏng đoán; bỏ chỉ dẫn sai hoặc lỗi thời.</li><li><strong>Lưu mỗi bài học một chỗ.</strong> Luật vào mô tả; hồi quy vào test; quy ước vào AGENTS.md; quy trình có ích lặp lại có thể thành skill.</li><li><strong>Soạn P2.</strong> Trỏ tới các tệp đó và nêu kết quả tiếp theo. Prompt ngắn hơn vẫn có thể tốt hơn.</li><li><strong>So sánh khi đáng làm.</strong> Chạy P1 và P2 riêng từ cùng commit, tài liệu, mô hình, công cụ và ngân sách. Lặp các so sánh triển vọng và thêm tình huống chưa dùng để chỉnh P2. Vẫn phát triển game chính từng bước.</li></ol>
+<p>Ví dụ, lỗi chơi lại cần thành test hồi quy và luật nghiệm thu. P2 chỉ cần nói “Làm mốc tiếp theo và giữ các luật nghiệm thu.” Nếu P2 nhận tài liệu đã sửa mà P1 không có, bạn đang thử <em>gói chỉ dẫn</em> tốt hơn, không chỉ câu chữ. Chọn điều cần so sánh trước khi chạy. Đây là thiết kế thử nghiệm của sách, dựa trên hướng dẫn đánh giá theo nhiệm vụ. {{cite:52}}</p>
+{{diagram:prompt-learning}}
+<pre><code>Mã lần chạy / commit gốc / phiên bản prompt:
+Cấu hình mô hình / công cụ / skill có và đã dùng:
+Nhiệm vụ / nghiệm thu / ngân sách thời gian và chi phí:
+Lỗi quan sát / bản sửa đã kiểm chứng / điều chưa rõ:
+Bài học giữ lại / tệp chính / bằng chứng:
+Tình huống chưa dùng để chỉnh / hồi quy / giữ, sửa hay dừng</code></pre>
+<p>Ví dụ giả định từ 6/10 lên 8/10 lần thành công là tăng <strong>20 điểm phần trăm</strong>, tương đương khoảng 33% tương đối. Không nên gọi là “tốt hơn 20%”; mười lần chạy chưa xác lập tỷ lệ thành công chung. Báo số lần, lỗi, chi phí và bất định, không xếp hạng bằng một đầu ra đẹp.</p>
+<p>Bộ tối ưu prompt dựa trên dataset của OpenAI minh họa chỉnh theo phản hồi, nhưng tài liệu hiện nêu Evals cũ chỉ đọc từ 31/10/2026 và đóng ngày 30/11/2026. Cách dùng kho mã trên không cần dịch vụ đó. Tối ưu vẫn có thể gây hồi quy ở một số đầu vào; kiểm chứng trước khi áp dụng. {{cite:53}}</p>

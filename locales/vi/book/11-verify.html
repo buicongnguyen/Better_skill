@@ -27,8 +27,9 @@
 }</code></pre>
 <h3>Xác định cách quan sát hiệu năng</h3>
 <p>Nêu thiết bị, trình duyệt, cỡ cửa sổ và mức chất lượng. Thử nghiệm đầu có thể nhắm thời gian khung hình ở phân vị 95 dưới 33 ms trong mẫu chơi bình thường 60 giây sau làm nóng. Đây là mục tiêu đề xuất gần ngân sách 30 fps, không phải kết quả đã đo hay yêu cầu phổ quát. Ghi riêng khựng lúc tải; trung bình mượt có thể che những lần ngắt khó chịu.</p>
-<p>Nêu phép đo thực sự đo gì. Khoảng cách giữa callback <code>requestAnimationFrame</code> mô tả nhịp trình bày quan sát được, không phải thời gian GPU dựng hình. Giữ tab ở tiền cảnh, ghi phương pháp lấy mẫu và tách thời gian dừng ở nền. Điều này quan trọng khi so hai lượt. {{cite:43}}</p>
+<p>Nêu phép đo thực sự đo gì. Khoảng cách giữa callback <code>requestAnimationFrame</code> mô tả nhịp callback trên luồng chính, không phải thời gian GPU dựng hình. Giữ tab ở tiền cảnh, ghi phương pháp lấy mẫu và tách thời gian dừng ở nền. Điều này quan trọng khi so hai lượt. {{cite:43}}</p>
 <p>Nếu chưa đạt, thu bằng chứng trước khi giảm chất lượng hình. So draw call, hình học, bóng, độ phân giải và công việc cập nhật. Đổi một nút thắt có khả năng cao rồi lấy lại cùng mẫu. Mã ngắn hơn chưa chứng minh tối ưu hiệu quả.</p>
+<p><strong>Giới hạn phép đo:</strong> khoảng callback đo nhịp callback luồng chính, không chứng minh mỗi khung kết xuất đã được hiển thị. Nêu cách tính phân vị (ví dụ, mẫu đã sắp xếp tại chỉ số ceil(0.95 × N) − 1), số mẫu và lần khựng dài cùng mục tiêu. Đây là quy ước báo cáo đề xuất.</p>
 <h3>Chơi thử nhỏ với người thật</h3>
 <p>Đưa bản build cho một người chơi mà không hướng dẫn thêm. Quan sát họ có hiểu mục tiêu, điều khiển, sát thương và nút chơi lại không. Hỏi lúc nào họ không chắc và muốn thử gì tiếp. Buổi nhỏ giúp tìm vấn đề cụ thể, không xác lập tỷ lệ thành công của cả quần thể.</p>
 <pre><code>Build / commit:

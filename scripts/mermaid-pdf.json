@@ -1,0 +1,6 @@
+{
+  "theme": "base",
+  "securityLevel": "strict",
+  "flowchart": {"htmlLabels": false, "curve": "basis", "nodeSpacing": 18, "rankSpacing": 24, "padding": 10},
+  "themeVariables": {"fontFamily": "Arial, Malgun Gothic, sans-serif", "fontSize": "18px", "primaryColor": "#e4ecdf", "primaryTextColor": "#203c35", "primaryBorderColor": "#71866d", "lineColor": "#597365", "secondaryColor": "#f1e2ce", "tertiaryColor": "#faf7ef", "edgeLabelBackground": "#ffffff"}
+}

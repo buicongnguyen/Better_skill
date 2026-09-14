@@ -43,5 +43,10 @@
     "id": "hook-flow",
     "title": "Dùng hook cho kiểm tra cục bộ hẹp",
     "description": "Sự kiện công cụ liên quan có thể kích hoạt trình kiểm tra cục bộ. Sự kiện không liên quan thoát ngay. Mẫu đề xuất không tự tạo video hoặc xuất bản."
+  },
+  {
+    "id": "prompt-learning",
+    "title": "Hai vòng cải thiện liên quan",
+    "description": "Phát triển game tiếp; thử prompt riêng từ cùng mốc gốc."
   }
 ]

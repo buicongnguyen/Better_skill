@@ -1,0 +1,4 @@
+# Preserve generated artifact bytes and keep binary files out of text diffs.
+*.pdf binary
+*.png binary
+*.blend binary
