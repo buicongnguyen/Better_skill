@@ -10,7 +10,7 @@ Language switching keeps the nearest chapter or subsection. The site remembers l
 
 ## Contents
 
-Start with the [quick summary](https://buicongnguyen.github.io/Better_skill/#summary): three main points and eleven concise steps, each linked to the full reading. It is followed immediately by chapter 1, [Set up your environment](https://buicongnguyen.github.io/Better_skill/#environment), covering desktop setup, Git/GitHub login, optional SSH and Claude Code, and Pages/Vercel publishing. The earlier full chapters now run from 2 to 16; existing chapter and subsection links remain unchanged. Each summary step also links to its copyable recipe in chapter 17. The final step covers the optional trailer.
+Start with the [quick summary](https://buicongnguyen.github.io/Better_skill/#summary): three main points and eleven concise steps, each linked to the full reading. It is followed immediately by chapter 1, [Set up your environment](https://buicongnguyen.github.io/Better_skill/#environment), covering desktop setup, Git/GitHub login, optional SSH and Claude Code, and Pages/Vercel publishing. Chapter 2 is the [copy-and-paste cookbook](https://buicongnguyen.github.io/Better_skill/#cookbook), with a prompt for each summary step, including the optional trailer. The detailed explanations follow in chapters 3 to 17. Existing chapter and subsection links remain unchanged.
 
 17 chapters compare game workflows and engine choices, draw on 64 source records, and develop the original Signal Garden design into an implementation plan. Every introduction and subsection has a source check record with direct links and a statement of what the evidence supports. Original proposals are labeled separately from documented behavior and research findings.
 
@@ -39,7 +39,7 @@ Open http://127.0.0.1:4173/Better_skill/ . The server deliberately supports the 
 
 ## Editing
 
-- `book/*.html`: chapter manuscripts, ordered and numbered by their two-digit filename prefix. `00-summary.html` is the unnumbered quick read, followed by `01-environment.html`. Each needs an `h2` with a unique, stable ID.
+- `book/*.html`: chapter manuscripts, ordered and numbered by their two-digit filename prefix. `00-summary.html` is the unnumbered quick read, followed by `01-environment.html` and `02-cookbook.html`. Each needs an `h2` with a unique, stable ID.
 - `book/sources.json`: source URLs, types, dates, three main items, applications, and evidence limits. IDs remain stable while reading order prioritizes recent research.
 - `book/evidence.json`: coverage of every chapter introduction and subsection, with source IDs, basis, and scope of support. Section 0 is the introduction; subsequent numbers follow the chapter's `h3` order.
 - `research/`: downloadable content-review record and disclosed retrieval limits.

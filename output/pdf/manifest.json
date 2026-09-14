@@ -4,18 +4,18 @@
     {
       "file": "how-to-do-better-en.pdf",
       "pages": 119,
-      "sha256": "e9a3028e770aa5314b457e5810f91e98f086cd08dbfe9bee790c0efd48d7d78f"
+      "sha256": "f54bbbfd4d4d1e704201b49ab563aabc4bb326d02582dc23a50efe5d092b1710"
     },
     {
       "file": "how-to-do-better-vi.pdf",
       "pages": 118,
-      "sha256": "ffb51477902bdb414690901842b8d69d576970a7601c062020b748909b9276c1"
+      "sha256": "b5f0f78fd4ce5aace4deea750413ecc15dcce2f811cf825eeea65bd6ec24bac6"
     },
     {
       "file": "how-to-do-better-ko.pdf",
       "pages": 115,
-      "sha256": "566a6186600978e2bd78ebaaf7aa5659ff0947484d6c1486f073c09ab99e990e"
+      "sha256": "2b4f7de976e3ca5ef0013d75a53201dfcfbdd6e7176b351875ff73dc9fccd002"
     }
   ],
-  "sourceHash": "50a33bb893ff43b23181f06f8334dc6b3dcddb81d3355260d3abf4d26b49289d"
+  "sourceHash": "0105d18a5fe65597138e7e30b730c01032b207a4ba4805beaf89f08624dc72fa"
 }

@@ -92,7 +92,7 @@ for (const lang of ['en','vi','ko']) {
   const summary=edition.match(/<section class="chapter" aria-labelledby="summary">([\s\S]*?)<\/section>/)?.[1];
   assert(summary, `Missing quick summary: ${lang}`);
   const chapterOrder = [...edition.matchAll(/<section class="chapter" aria-labelledby="([^"]+)"/g)].map(match => match[1]);
-  assert.deepEqual(chapterOrder.slice(0,3), ['summary','environment','better-loop'], `Setup must immediately follow Quick summary: ${lang}`);
+  assert.deepEqual(chapterOrder.slice(0,4), ['summary','environment','cookbook','better-loop'], `Opening order must be summary, setup, cookbook, then the detailed chapters: ${lang}`);
   const nav = edition.match(/<nav class="chapter-nav"[^>]*>([\s\S]*?)<\/nav>/)?.[1];
   assert(nav, `Chapter navigation missing: ${lang}`);
   const navOrder = [...nav.matchAll(/href="#([^"]+)"/g)].map(match => match[1]);
@@ -145,4 +145,4 @@ for (const lang of ['en','vi','ko']) {
   }
 }
 console.log('Passed: English, Vietnamese and Korean edition/anchor parity, translated summaries and evidence, 63 prompt copies, 30 diagrams with identical graph logic, and all local links/assets.');
-console.log(`Passed: unique anchors, local links/assets, setup immediately after summary in reading and contents order, all 17 full chapters linked, ${coveredSections} introductions/subsections with evidence coverage, 21 prompts, 10 diagram sources, 64 source records with verification metadata (${manuscript.split(' ').length} words including templates and sources). Browser rendering is checked separately.`);
+console.log(`Passed: unique anchors, local links/assets, summary followed by setup and cookbook in reading and contents order, all 17 full chapters linked, ${coveredSections} introductions/subsections with evidence coverage, 21 prompts, 10 diagram sources, 64 source records with verification metadata (${manuscript.split(' ').length} words including templates and sources). Browser rendering is checked separately.`);
