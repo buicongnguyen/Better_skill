@@ -91,12 +91,17 @@ for (const lang of ['en','vi','ko']) {
   for (const target of ['en','vi','ko']) assert(edition.includes(`href="${ui[target].file}?lang=${target}"`),`Explicit language link missing: ${lang}/${target}`);
   const summary=edition.match(/<section class="chapter" aria-labelledby="summary">([\s\S]*?)<\/section>/)?.[1];
   assert(summary, `Missing quick summary: ${lang}`);
-  assert(edition.indexOf('aria-labelledby="summary"')<edition.indexOf('aria-labelledby="better-loop"'),`Summary must precede the full book: ${lang}`);
+  const chapterOrder = [...edition.matchAll(/<section class="chapter" aria-labelledby="([^"]+)"/g)].map(match => match[1]);
+  assert.deepEqual(chapterOrder.slice(0,3), ['summary','environment','better-loop'], `Setup must immediately follow Quick summary: ${lang}`);
+  const nav = edition.match(/<nav class="chapter-nav"[^>]*>([\s\S]*?)<\/nav>/)?.[1];
+  assert(nav, `Chapter navigation missing: ${lang}`);
+  const navOrder = [...nav.matchAll(/href="#([^"]+)"/g)].map(match => match[1]);
+  assert.deepEqual(navOrder.slice(0,chapterOrder.length), chapterOrder, `Contents and reading order differ: ${lang}`);
   for(const file of chapterFiles.filter(file=>!file.startsWith('00-'))) {
     const original=await readFile(path.resolve(root,'../book',file),'utf8');
     const id=original.match(/<h2 id="([^"]+)"/)[1];
     assert(summary.includes(`href="#${id}"`),`Summary omits full reading link: ${lang}/${id}`);
-    assert(edition.includes(`aria-labelledby="${id}"><div class="chapter-kicker">${ui[lang].chapter} ${file.slice(0,2)}</div>`),`Existing chapter number changed: ${lang}/${id}`);
+    assert(edition.includes(`aria-labelledby="${id}"><div class="chapter-kicker">${ui[lang].chapter} ${file.slice(0,2)}</div>`),`Chapter number does not match manuscript order: ${lang}/${id}`);
   }
   for(let step=1;step<=11;step++) assert(summary.includes(`href="#cookbook-part-${step}"`),`Summary recipe missing: ${lang}/${step}`);
   const cookbook=edition.match(/<section class="chapter" aria-labelledby="cookbook">([\s\S]*?)<\/section>/)?.[1];
@@ -140,4 +145,4 @@ for (const lang of ['en','vi','ko']) {
   }
 }
 console.log('Passed: English, Vietnamese and Korean edition/anchor parity, translated summaries and evidence, 63 prompt copies, 30 diagrams with identical graph logic, and all local links/assets.');
-console.log(`Passed: unique anchors, local links/assets, quick summary linking all 17 full chapters with stable numbers, ${coveredSections} introductions/subsections with evidence coverage, 21 prompts, 10 diagram sources, 64 source records with verification metadata (${manuscript.split(' ').length} words including templates and sources). Browser rendering is checked separately.`);
+console.log(`Passed: unique anchors, local links/assets, setup immediately after summary in reading and contents order, all 17 full chapters linked, ${coveredSections} introductions/subsections with evidence coverage, 21 prompts, 10 diagram sources, 64 source records with verification metadata (${manuscript.split(' ').length} words including templates and sources). Browser rendering is checked separately.`);

@@ -42,9 +42,10 @@ class BookDoc(BaseDocTemplate):
         self.book_title=title;self.current_chapter='';self.anchor_names=set()
         super().__init__(str(path),pagesize=A4,leftMargin=MARGIN,rightMargin=MARGIN,topMargin=48,bottomMargin=48,title=title,author='The Better Field Notes',pageCompression=1,lang=lang)
         self.addPageTemplates([
-          PageTemplate(id='portrait',frames=[Frame(MARGIN,48,CONTENT,HEIGHT-98,leftPadding=0,rightPadding=0,topPadding=0,bottomPadding=0)],onPage=self.decorate,pagesize=A4),
-          PageTemplate(id='landscape',frames=[Frame(MARGIN,48,HEIGHT-96,WIDTH-98,leftPadding=0,rightPadding=0,topPadding=0,bottomPadding=0)],onPage=self.decorate,pagesize=landscape(A4)),
-          PageTemplate(id='foldout',frames=[Frame(MARGIN,48,A3[0]-96,A3[1]-98,leftPadding=0,rightPadding=0,topPadding=0,bottomPadding=0)],onPage=self.decorate,pagesize=A3)])
+          # Draw running headers after headings have updated the current chapter.
+          PageTemplate(id='portrait',frames=[Frame(MARGIN,48,CONTENT,HEIGHT-98,leftPadding=0,rightPadding=0,topPadding=0,bottomPadding=0)],onPageEnd=self.decorate,pagesize=A4),
+          PageTemplate(id='landscape',frames=[Frame(MARGIN,48,HEIGHT-96,WIDTH-98,leftPadding=0,rightPadding=0,topPadding=0,bottomPadding=0)],onPageEnd=self.decorate,pagesize=landscape(A4)),
+          PageTemplate(id='foldout',frames=[Frame(MARGIN,48,A3[0]-96,A3[1]-98,leftPadding=0,rightPadding=0,topPadding=0,bottomPadding=0)],onPageEnd=self.decorate,pagesize=A3)])
     def beforeDocument(self):self.current_chapter=''
     def decorate(self,c,doc):
         w,h=c._pagesize;c.saveState();c.setStrokeColor(colors.HexColor('#c9d1c5'));c.setLineWidth(.5)

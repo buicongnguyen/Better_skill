@@ -170,7 +170,7 @@
       },
       {
         "label": "Lát cắt thắng chơi được, rồi hoàn thiện luật thua",
-        "note": "M2 cố ý chưa hoàn chỉnh: thiết lập vòng thắng, hiển thị thời gian và khởi động lại. M3 thêm drone, áp lực máu và hai điều kiện thua. Đối chiếu triển khai cuối với bộ luật duy nhất ở chương 7."
+        "note": "M2 cố ý chưa hoàn chỉnh: thiết lập vòng thắng, hiển thị thời gian và khởi động lại. M3 thêm drone, áp lực máu và hai điều kiện thua. Đối chiếu triển khai cuối với bộ luật duy nhất trong bản mô tả trò chơi."
       },
       {
         "label": "Hình ảnh, âm thanh, chuyển động và phát hành",
@@ -183,7 +183,7 @@
     "records": [
       {
         "label": "Luật, điều khiển thật và trạng thái thấy được",
-        "note": "Ví dụ Astra phân biệt thiết lập xác định với hành trình điều khiển thật. Bảng và ảnh chụp trạng thái là công cụ nghiệm thu riêng cho thiết kế chương 7, không phải bằng chứng trò chơi đã được kiểm thử."
+        "note": "Ví dụ Astra phân biệt thiết lập xác định với hành trình điều khiển thật. Bảng và ảnh chụp trạng thái là công cụ nghiệm thu riêng cho thiết kế trong bản mô tả trò chơi, không phải bằng chứng trò chơi đã được kiểm thử."
       },
       {
         "label": "Quan sát hiệu suất",

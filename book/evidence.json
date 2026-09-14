@@ -464,7 +464,7 @@
         ],
         "basis": "Original proposal",
         "sources": [],
-        "note": "M2 is deliberately incomplete: it establishes the win loop, timer display, and restart. M3 adds drone/health pressure and both loss conditions. Compare the final implementation with chapter 7’s single authoritative rules."
+        "note": "M2 is deliberately incomplete: it establishes the win loop, timer display, and restart. M3 adds drone/health pressure and both loss conditions. Compare the final implementation with the game brief’s single authoritative rules."
       },
       {
         "label": "Art, audio, motion, and release",
@@ -498,7 +498,7 @@
         "sources": [
           "04"
         ],
-        "note": "The Astra example distinguishes deterministic setup from real-control journeys. The table and snapshot are original acceptance tools for the chapter 7 design, not evidence of a game already tested."
+        "note": "The Astra example distinguishes deterministic setup from real-control journeys. The table and snapshot are original acceptance tools for the game brief’s design, not evidence of a game already tested."
       },
       {
         "label": "Performance observation",

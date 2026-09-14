@@ -3,7 +3,7 @@
 <p>This is an original worked execution prompt for the Signal Garden brief. It is a manually authored example of the output the previous chapter asks for, <strong>not a transcript of an experiment or a benchmarked best prompt</strong>. Use it in a coding-agent session with the intended game folder open and GPT-6 Astra selected.</p>
 <p>Before pasting, confirm the agent can edit the folder, run the package manager, and inspect a browser if you expect automated playtesting. The prompt allows reasonable local implementation choices and asks the agent to continue through the scoped milestones. Publication is handled separately in the deployment chapter so the destination can be explicit.</p>
 <h3>Option A · the brief already exists</h3>
-<p>This is the default to try when <code>docs/game-brief.md</code> and <code>docs/acceptance.md</code> accurately describe the game. It keeps the request short by referring to those files. It has not been benchmarked against the longer version; compare them using the experiment in chapter 12.</p>
+<p>This is the default to try when <code>docs/game-brief.md</code> and <code>docs/acceptance.md</code> accurately describe the game. It keeps the request short by referring to those files. It has not been benchmarked against the longer version; compare them using the <a href="#refine">refinement experiment</a>.</p>
 {{prompt:astra-compact-prompt.md}}
 <h3>Option B · start from an empty folder</h3>
 <p>The longer bootstrap prompt below includes the rules because the agent has no project brief yet. Its length comes mainly from the game specification. After the agent records those rules in files, use focused requests rather than repeatedly pasting the complete bootstrap text.</p>
