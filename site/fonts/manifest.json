@@ -1,0 +1,33 @@
+{
+  "family": "Noto Serif",
+  "version": "Google Fonts v33",
+  "retrieved": "2026-09-14",
+  "source": "https://github.com/google/fonts/tree/main/ofl/notoserif",
+  "license": "OFL-NotoSerif.txt",
+  "files": [
+    {
+      "file": "noto-serif-italic-vietnamese.woff2",
+      "url": "https://fonts.gstatic.com/s/notoserif/v33/ga6faw1J5X9T9RW6j9bNfFIMZhhWnFTyNZIQD1-_P3Dct-FG.woff2",
+      "bytes": 18348,
+      "sha256": "7b88e337afea323d51a3ec524b4da220f4913646eb590cab048feda319364390"
+    },
+    {
+      "file": "noto-serif-italic-latin.woff2",
+      "url": "https://fonts.gstatic.com/s/notoserif/v33/ga6faw1J5X9T9RW6j9bNfFIMZhhWnFTyNZIQD1-_P3_ctw.woff2",
+      "bytes": 47936,
+      "sha256": "a1a6ebee6d69b2628ac102f55cb447135643a5401ae92eb77f4e2c6888dfce22"
+    },
+    {
+      "file": "noto-serif-normal-vietnamese.woff2",
+      "url": "https://fonts.gstatic.com/s/notoserif/v33/ga6daw1J5X9T9RW6j9bNVls-hfgvz8JcMofYTYf1D33Esw.woff2",
+      "bytes": 14704,
+      "sha256": "fb6a5ed734c2fbe39794a1e11ea075c70676ed82b8e8cd57c175ebbb4af805c1"
+    },
+    {
+      "file": "noto-serif-normal-latin.woff2",
+      "url": "https://fonts.gstatic.com/s/notoserif/v33/ga6daw1J5X9T9RW6j9bNVls-hfgvz8JcMofYTYf6D30.woff2",
+      "bytes": 36756,
+      "sha256": "46281456234014ceb2a79bff447245de0f76b8d803be0738972ed374c3206c5b"
+    }
+  ]
+}

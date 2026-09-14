@@ -99,6 +99,7 @@ console.log(`Built ${lang}: ${chapters.length} chapters and ${sources.length} so
 }
 for (const language of Object.keys(allUi)) await buildLanguage(language);
 await cp(path.join(root, 'site/styles.css'), path.join(root, 'dist/styles.css'));
+await cp(path.join(root, 'site/fonts'), path.join(root, 'dist/fonts'), {recursive:true});
 await cp(path.join(root, 'site/preferences.js'), path.join(root, 'dist/preferences.js'));
 await cp(path.join(root, 'site/book.js'), path.join(root, 'dist/book.js'));
 await cp(path.join(root, 'site/diagrams.js'), path.join(root, 'dist/diagrams.js'));
