@@ -3,19 +3,19 @@
   "outputs": [
     {
       "file": "how-to-do-better-en.pdf",
-      "pages": 133,
-      "sha256": "471d811f24368c2d153c9f453aada79994f88d746ffea0b2cebd9af93f0d59b2"
+      "pages": 135,
+      "sha256": "5b3cc4d4a314e25509a742e272788bbd3c49cbeb8fb5d663c4ba901c2f4573e6"
     },
     {
       "file": "how-to-do-better-vi.pdf",
-      "pages": 130,
-      "sha256": "85b4cf4e5d949199f2655785f7993a2b11c787a112257bec605ca4634a0e1fcf"
+      "pages": 132,
+      "sha256": "4929915dd6ef4da83f70c0642338a5c41dd3fd2aa19ca91aa7919c47ff6ff7b9"
     },
     {
       "file": "how-to-do-better-ko.pdf",
-      "pages": 128,
-      "sha256": "b144648f7b07b3ef23f3080a75c4128e141198ec68a00b8a748cc05f8b92b058"
+      "pages": 130,
+      "sha256": "73b075fc64f6a48ee92535b59e9137426a9f19624be8cbc0d58fe4f8d7957ba3"
     }
   ],
-  "sourceHash": "3c84e27d94aef64c70cc8f3f0fba0155b720393ee2c280fe1e62d364a9052ca5"
+  "sourceHash": "25d7d72d4fe88c2f948f21775c892bc3ac363711c09aebf0ef4f1aedfb33955d"
 }

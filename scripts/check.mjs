@@ -15,9 +15,9 @@ for (const [, raw] of html.matchAll(/(?:href|src)="([^"]+)"/g)) {
   }
 }
 const promptFiles = (await readdir(path.join(root, 'prompts'))).filter(f => f.endsWith('.md') && f !== 'README.md');
-assert.equal(promptFiles.length, 21, 'The 21 promised prompt downloads must exist');
+assert.equal(promptFiles.length, 22, 'The 22 promised prompt downloads must exist');
 assert.equal((html.match(/class="chapter"/g) || []).length, 18, 'The book must have a quick summary and 17 full chapters');
-assert.equal((html.match(/class="copy-button"/g) || []).length, 21, 'Each template needs a copy control');
+assert.equal((html.match(/class="copy-button"/g) || []).length, 22, 'Each template needs a copy control');
 const sources = JSON.parse(await readFile(path.resolve(root, '../book/sources.json'), 'utf8'));
 assert.equal(sources.length, 64, 'The 64 reviewed source records must be present');
 assert.equal(new Set(sources.map(s => s.id)).size, sources.length, 'Duplicate source IDs');
@@ -78,7 +78,7 @@ for (const lang of ['en','vi','ko']) {
   assert(!/\{\{[a-zA-Z]|\bundefined\b/.test(edition),`Unresolved content: ${lang}`);
   assert.equal((edition.match(/class="chapter-evidence"/g)||[]).length,chapterFiles.length);
   assert.equal((edition.match(/class="source-summary"/g)||[]).length,sources.length);
-  assert.equal((edition.match(/class="copy-button"/g)||[]).length,21);
+  assert.equal((edition.match(/class="copy-button"/g)||[]).length,22);
   assert.equal((edition.match(/class="diagram"/g)||[]).length,diagrams.length);
   for (const [,raw] of edition.matchAll(/(?:href|src)="([^"]+)"/g)) {
     const href=raw.replaceAll('&amp;','&');
@@ -105,7 +105,7 @@ for (const lang of ['en','vi','ko']) {
   }
   for(let step=1;step<=11;step++) assert(summary.includes(`href="#cookbook-part-${step}"`),`Summary recipe missing: ${lang}/${step}`);
   const cookbook=edition.match(/<section class="chapter" aria-labelledby="cookbook">([\s\S]*?)<\/section>/)?.[1];
-  assert.equal((cookbook?.match(/class="copy-button"/g)||[]).length,12,`Eleven recipes and two release alternatives: ${lang}`);
+  assert.equal((cookbook?.match(/class="copy-button"/g)||[]).length,13,`Eleven recipes, two release alternatives and a plan generator: ${lang}`);
   const headings={en:['Edit these parameters','Goal','Tasks and constraints','Completion check'],vi:['Sửa các tham số này','Mục tiêu','Công việc và ràng buộc','Điều kiện hoàn thành'],ko:['먼저 수정할 매개변수','목표','작업과 제약','완료 조건']}[lang];
   for(const file of promptFiles){
     const folder=lang==='en'?'prompts':`locales/${lang}/prompts`;
@@ -159,5 +159,5 @@ for (const lang of ['en','vi','ko']) {
     assert.equal(await readFile(path.join(root,'diagrams',lang,`${diagram.id}.mmd`),'utf8'),text);
   }
 }
-console.log('Passed: English, Vietnamese and Korean edition/anchor parity, translated summaries and evidence, 63 prompt copies, 30 diagrams with identical graph logic, and all local links/assets.');
-console.log(`Passed: unique anchors, local links/assets, summary followed by setup and cookbook in reading and contents order, all 17 full chapters linked, ${coveredSections} introductions/subsections with evidence coverage, 21 prompts, 10 diagram sources, 64 source records with verification metadata (${manuscript.split(' ').length} words including templates and sources). Browser rendering is checked separately.`);
+console.log('Passed: English, Vietnamese and Korean edition/anchor parity, translated summaries and evidence, 66 prompt copies, 30 diagrams with identical graph logic, and all local links/assets.');
+console.log(`Passed: unique anchors, local links/assets, summary followed by setup and cookbook in reading and contents order, all 17 full chapters linked, ${coveredSections} introductions/subsections with evidence coverage, 22 prompts, 10 diagram sources, 64 source records with verification metadata (${manuscript.split(' ').length} words including templates and sources). Browser rendering is checked separately.`);

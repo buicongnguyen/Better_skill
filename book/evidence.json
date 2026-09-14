@@ -862,7 +862,7 @@
           "64"
         ],
         "label": "Original recipes with documented boundaries",
-        "note": "The eleven steps, defaults and expected outputs are original worked prompts, not measured results. Section citations point to supporting mechanics; current setup sources cover local access and publishing. Tool availability, human playtesting and destination fields remain explicit."
+        "note": "The eleven steps and optional PLAN.md generator are original templates, not measured model results. The plan recipe adds parameter checks, requirement-to-check links and a reader-run comparison; no independent model trial or game build validates it. Citations support instruction guidance, evaluation and the documented tool/publication boundaries."
       }
     ]
   }

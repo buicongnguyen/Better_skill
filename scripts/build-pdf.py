@@ -118,6 +118,15 @@ def build(lang,ui):
         if name=='p':story.append(para(inline(node),'lead' if 'lead' in classes else 'body'));return
         if name=='pre':
             text=clean(node.get_text());expected_text.append(text)
+            # The plan recipe has long sections. Keep each Markdown heading
+            # with the following text instead of stranding it at a page end.
+            if node.parent and 'plan-generator.md' in node.parent.get_text():
+                for section in re.split(r'\n\n(?=## )',text):
+                    heading,_,body=section.partition('\n')
+                    style=ParagraphStyle('plan-code-heading',parent=styles['code'],fontName=bold,keepWithNext=True,spaceAfter=0)
+                    story.append(Paragraph(html.escape(heading),style))
+                    if body:story.append(para(html.escape(body).replace('\n','<br/>'),'code'))
+                return
             # Paragraph lines can split across pages, unlike a single preformatted block.
             story.append(para(html.escape(text).replace('\n','<br/>'),'code'));return
         if name=='table':

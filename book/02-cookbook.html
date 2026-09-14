@@ -16,6 +16,22 @@
 <h4>What the RTS planning example teaches</h4>
 <p>The supplied RTS plan separates scope, grouped tasks, tuning values and completion checks. This book adopts that structure: <strong>parameters → goal → tasks and constraints → completion check</strong>.</p>
 <p>A full game specification belongs in the project documents. A follow-up prompt should request the next useful outcome and reference those documents. Keep essential game rules explicit while letting the agent choose routine implementation details; more sections alone do not prove a better game. {{cite:17}}</p>
+<h4 id="plan-generator">Optional: one prompt that creates PLAN.md</h4>
+<p><strong>The idea is useful:</strong> ask for a planning document like the RTS example, then inspect it before asking an agent to build. The existing <a href="#meta-prompt">prompt designer</a> creates an execution prompt; this recipe creates the plan itself.</p>
+<p>The improvement is to separate a small playable V1 from later ambitions, label assumptions and tuning values, and connect each essential requirement to a check. A polished outline or the model's own approval does not establish feasibility or a fun game. Our format is an original proposal; the current Astra guidance supports focused instructions and clear completion boundaries, not a measured advantage for this template. {{cite:17}} {{cite:52}}</p>
+<p><strong>Try the defaults:</strong> copy the whole block into a fresh, unsent chat draft. It describes a small RTS and requires no access to the private reference file. Choose the model in the app, edit the opening values, and send. <code>OUTPUT_MODE: CHAT</code> works for a chatbot without file tools; save its Markdown as <code>PLAN.md</code>. A coding agent can use <code>FILE</code> in the intended project folder.</p>
+<p>This is a separate RTS exercise. To use it for Signal Garden, replace <code>GAME_IDEA</code>, <code>V1_SCOPE</code> and the other relevant parameters with the <a href="#brief">agreed brief</a>. Reconcile the accepted plan with existing project documents before continuing the recipes below.</p>
+{{prompt:plan-generator.md}}
+<p><strong>Expected output:</strong> a complete Markdown plan with grouped implementation tasks, dependencies, a tuning table, requirement-to-check links, milestones, sources and unresolved risks. Planning stops before implementation.</p>
+<h4>Test the plan yourself</h4>
+<ol>
+<li><strong>Check consistency:</strong> one engine and target, V1 exclusions respected, no reference-file dependency, and no claims that planned work already passed.</li>
+<li><strong>Trace one requirement:</strong> find the relevant task and check. For production, identify when the cost is charged, what cancellation refunds, and what prevents a second refund.</li>
+<li><strong>Try a parameter change:</strong> generate a separate candidate with <code>ASSET_TOOL: PRIMITIVES</code>. Blender must become optional; required imports and milestones must agree. Keep the old plan for comparison.</li>
+<li><strong>Compare if useful:</strong> in separate fresh chats, use the same project facts, model, tools and budget with this template and a short request such as “Write a development plan from these facts.” Judge contradictions, missing dependencies, scope growth and testable checks; repeat before claiming a reliable prompt advantage.</li>
+<li><strong>Test feasibility next:</strong> after accepting the plan, separately authorize its smallest scene/export experiment. Record what actually works and revise the affected assumptions. A document review cannot replace that experiment or human playtesting.</li>
+</ol>
+<p>No independent model trial or game build was run to validate this new recipe. Use <a href="#refine">the refinement chapter</a> to track prompt versions and measured outcomes separately. {{cite:52}}</p>
 <h3>1 · Define the game</h3>
 <p>Use this first, with an empty game folder or an existing brief.</p>
 {{prompt:cookbook-01-brief.md}}

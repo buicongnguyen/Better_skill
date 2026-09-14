@@ -293,7 +293,7 @@
     "records": [
       {
         "label": "Công thức gốc có ranh giới theo tài liệu",
-        "note": "Mười một bước, mặc định và đầu ra là prompt minh họa gốc, không phải kết quả đo. Trích dẫn từng phần hỗ trợ cơ chế; nguồn thiết lập mới hỗ trợ truy cập cục bộ và xuất bản. Công cụ, chơi thử của người và trường đích đều được nêu rõ."
+        "note": "Mười một bước và prompt tạo PLAN.md tùy chọn là mẫu gốc, không phải kết quả đo mô hình. Công thức kế hoạch thêm kiểm tra tham số, liên kết yêu cầu với kiểm tra và so sánh do người đọc chạy; chưa có thử nghiệm mô hình độc lập hay bản game xác nhận nó. Trích dẫn hỗ trợ hướng dẫn chỉ dẫn, đánh giá và ranh giới công cụ/xuất bản theo tài liệu."
       }
     ]
   }

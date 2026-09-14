@@ -28,3 +28,9 @@ Step 10 has separate Pages and Vercel prompts: choose one, replace account field
 Use one recipe at a time in the game folder.
 
 The files are examples, not commands to execute while building this book.
+
+plan-generator.md creates the planning document itself, with small-RTS defaults and no required reference file.
+
+Use CHAT to review Markdown first, or FILE with an agent in the intended project folder.
+
+It stops before implementation and includes requirements, checks, tuning candidates and milestones.

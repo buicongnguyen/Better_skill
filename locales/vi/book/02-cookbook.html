@@ -16,6 +16,22 @@
 <h4>Học gì từ ví dụ kế hoạch RTS</h4>
 <p>Kế hoạch RTS được cung cấp tách phạm vi, nhóm công việc, giá trị tinh chỉnh và kiểm tra hoàn thành. Sách áp dụng cấu trúc đó: <strong>tham số → mục tiêu → công việc và ràng buộc → điều kiện hoàn thành</strong>.</p>
 <p>Đặc tả game đầy đủ thuộc tài liệu dự án. Prompt tiếp theo nên yêu cầu kết quả hữu ích kế tiếp và trỏ đến các tài liệu đó. Ghi rõ luật thiết yếu, để tác nhân chọn chi tiết triển khai thông thường; thêm nhiều mục không tự chứng minh game tốt hơn. {{cite:17}}</p>
+<h4 id="plan-generator">Tùy chọn: một prompt tạo PLAN.md</h4>
+<p><strong>Ý tưởng này hữu ích:</strong> yêu cầu một tài liệu kế hoạch giống ví dụ RTS, rồi xem lại trước khi nhờ agent xây dựng. <a href="#meta-prompt">Bộ thiết kế prompt</a> hiện có tạo prompt thực thi; công thức này tạo thẳng bản kế hoạch.</p>
+<p>Cải tiến là tách V1 nhỏ nhưng chơi trọn vẹn khỏi mục tiêu để sau, ghi rõ giả định và giá trị cần tinh chỉnh, rồi nối mỗi yêu cầu thiết yếu với một kiểm tra. Dàn ý đẹp hay lời tự duyệt của mô hình không chứng minh tính khả thi hoặc game hay. Cấu trúc này là đề xuất gốc; hướng dẫn Astra hiện hành hỗ trợ chỉ dẫn tập trung và ranh giới hoàn thành rõ, không chứng minh mẫu này tốt hơn qua đo lường. {{cite:17}} {{cite:52}}</p>
+<p><strong>Thử mặc định:</strong> sao chép toàn bộ khối vào bản nháp chat mới chưa gửi. Nó mô tả RTS nhỏ và không cần tệp mẫu riêng tư. Chọn mô hình trong ứng dụng, sửa giá trị đầu rồi gửi. <code>OUTPUT_MODE: CHAT</code> dùng được với chatbot không có công cụ tệp; lưu Markdown trả về thành <code>PLAN.md</code>. Agent lập trình có thể dùng <code>FILE</code> trong đúng thư mục dự án.</p>
+<p>Đây là bài tập RTS riêng. Để dùng cho Signal Garden, thay <code>GAME_IDEA</code>, <code>V1_SCOPE</code> và tham số liên quan bằng <a href="#brief">mô tả đã thống nhất</a>. Đồng bộ kế hoạch đã chấp nhận với tài liệu dự án hiện có trước khi tiếp tục các công thức bên dưới.</p>
+{{prompt:plan-generator.md}}
+<p><strong>Đầu ra mong đợi:</strong> kế hoạch Markdown đầy đủ có nhóm việc triển khai, phụ thuộc, bảng tinh chỉnh, liên kết yêu cầu với kiểm tra, mốc, nguồn và rủi ro chưa giải quyết. Dừng ở lập kế hoạch, chưa triển khai.</p>
+<h4>Tự kiểm tra kế hoạch</h4>
+<ol>
+<li><strong>Kiểm tra nhất quán:</strong> một engine và đích, tuân thủ loại trừ của V1, không phụ thuộc tệp mẫu và không báo việc mới lên kế hoạch là đã đạt.</li>
+<li><strong>Lần theo một yêu cầu:</strong> tìm việc và kiểm tra liên quan. Với sản xuất, xác định khi nào trừ phí, hủy hoàn gì và điều gì ngăn hoàn lần hai.</li>
+<li><strong>Thử đổi tham số:</strong> tạo bản ứng viên riêng với <code>ASSET_TOOL: PRIMITIVES</code>. Blender phải thành tùy chọn; yêu cầu nhập asset và mốc phải nhất quán. Giữ bản cũ để so.</li>
+<li><strong>So sánh khi hữu ích:</strong> dùng các chat mới riêng biệt với cùng dữ kiện, mô hình, công cụ và ngân sách để thử mẫu này và yêu cầu ngắn như “Viết kế hoạch phát triển từ những dữ kiện này.” Đánh giá mâu thuẫn, phụ thuộc thiếu, phình phạm vi và kiểm tra quan sát được; lặp lại trước khi kết luận prompt tốt hơn một cách đáng tin.</li>
+<li><strong>Thử tính khả thi tiếp:</strong> sau khi chấp nhận kế hoạch, cho phép riêng thí nghiệm cảnh/xuất nhỏ nhất. Ghi điều chạy được thật và sửa giả định liên quan. Rà tài liệu không thay thế được thí nghiệm hay chơi thử của người.</li>
+</ol>
+<p>Chưa chạy thử mô hình độc lập hay xây game để xác nhận công thức mới này. Dùng <a href="#refine">chương cải tiến</a> để theo dõi riêng phiên bản prompt và kết quả đo. {{cite:52}}</p>
 <h3>1 · Xác định game</h3>
 <p>Dùng đầu tiên, khi có thư mục game trống hoặc mô tả hiện tại.</p>
 {{prompt:cookbook-01-brief.md}}
