@@ -12,7 +12,9 @@ Keep Y as up, movement on X/Z, and speed in world units per second.
 
 Prefer a small clear module over a new abstraction without a present need.
 
-Commands after scaffolding: npm run dev, npm run build, npm test. Keep these scripts accurate in package.json and the README.
+Commands after scaffolding: npm run dev, npm run build, npm test.
+
+Keep these scripts accurate in package.json and the README.
 
 Keep simulation state separate from scene objects where that makes behavior easier to inspect.
 
@@ -24,7 +26,9 @@ Report checks that were not run.
 
 Do not weaken acceptance conditions to hide a failure.
 
-Use original or appropriately licensed assets and record attribution in public/assets/credits.md. Do not commit credentials or local environment files.
+Use original or appropriately licensed assets and record attribution in public/assets/credits.md.
+
+Do not commit credentials or local environment files.
 
 At a completed milestone, update docs/progress.md with the revision, evidence, known issues, and next step.
 

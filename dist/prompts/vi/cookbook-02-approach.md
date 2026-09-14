@@ -5,8 +5,11 @@ MODEL: GPT-6 Astra
 ENGINE: AUTO
 
 ## Lựa chọn và tính nhất quán
-- AGENT: chọn Codex hoặc Claude Code. Chọn MODEL trong ứng dụng trước khi gửi; dùng mô hình Claude có sẵn với Claude Code. Những dòng này không tự đổi mô hình hay cấp công cụ.
-- Chỉ làm trong PROJECT_FOLDER. Kiểm tra công cụ thực tế và chỉ dẫn dự án liên quan; giải quyết khác biệt quan trọng trước phần việc phụ thuộc.
+- AGENT: chọn Codex hoặc Claude Code.
+  Chọn MODEL trong ứng dụng trước khi gửi; dùng mô hình Claude có sẵn với Claude Code.
+  Những dòng này không tự đổi mô hình hay cấp công cụ.
+- Chỉ làm trong PROJECT_FOLDER.
+  Kiểm tra công cụ thực tế và chỉ dẫn dự án liên quan; giải quyết khác biệt quan trọng trước phần việc phụ thuộc.
 - ENGINE: AUTO giữ engine hiện có; nếu chưa có thì so sánh THREE (TypeScript/Vite/Three.js) và GODOT (Godot/GDScript xuất web).
   Chọn một; đổi giá trị không cho phép tự chuyển engine của dự án hiện có.
   KEEP dùng lựa chọn đã ghi trong dự án.
@@ -17,7 +20,8 @@ Chọn một engine khả thi và ghi bằng chứng cho lựa chọn đó.
 
 ## Công việc và ràng buộc
 - Đọc mô tả game và kiểm tra công cụ có sẵn.
-- So TypeScript/Vite/Three.js với Godot xuất web cho game bàn phím nhỏ này: tốc độ lặp, quy trình asset, giới hạn trình duyệt, gỡ lỗi và triển khai.
+- Chỉ khi ENGINE là AUTO và chưa chọn engine, so sánh TypeScript/Vite/Three.js với Godot xuất web cho game bàn phím nhỏ này.
+- Đánh giá tốc độ lặp, quy trình asset, giới hạn trình duyệt, gỡ lỗi và triển khai cho lộ trình đã chọn hoặc các lựa chọn đang so sánh.
 - Giữ engine đã được chọn rõ ràng.
 - Nếu chưa chọn, đề xuất lộ trình đơn giản nhất khả thi; mặc định ví dụ là TypeScript/Vite/Three.js.
 - Kiểm tra nhận định phụ thuộc phiên bản qua tài liệu chính thức và nêu điều chưa biết.

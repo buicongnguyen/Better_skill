@@ -8,7 +8,8 @@ ASSET_TOOL: PRIMITIVES
 - AGENT: choose Codex or Claude Code.
   Select MODEL in that application before sending; use an available Claude model with Claude Code.
   These lines do not switch the actual model or grant tools.
-- Work only in PROJECT_FOLDER. Inspect the actual tools and relevant project instructions; resolve a material mismatch before dependent work.
+- Work only in PROJECT_FOLDER.
+  Inspect the actual tools and relevant project instructions; resolve a material mismatch before dependent work.
 - ASSET_TOOL: PRIMITIVES uses engine geometry; BLENDER uses an available Blender workflow after a small import check.
   Start with placeholders either way; do not install tools just because a name appears here.
 
@@ -27,4 +28,6 @@ Implement and verify the first playable movement checkpoint.
 - Stop at this movement checkpoint so I can inspect it; do not add unrelated features or publish.
 
 ## Completion check
-A runnable movement slice and honest verification record. The longer bootstrap is linked below.
+A runnable movement slice and honest verification record.
+
+The longer bootstrap is linked below.

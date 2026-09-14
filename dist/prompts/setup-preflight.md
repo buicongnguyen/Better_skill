@@ -10,7 +10,8 @@ SHELL: AUTO (PowerShell / bash / zsh)
 - AGENT: choose Codex or Claude Code.
   Select MODEL in that application before sending; use an available Claude model with Claude Code.
   These lines do not switch the actual model or grant tools.
-- Work only in PROJECT_FOLDER. Inspect the actual tools and relevant project instructions; resolve a material mismatch before dependent work.
+- Work only in PROJECT_FOLDER.
+  Inspect the actual tools and relevant project instructions; resolve a material mismatch before dependent work.
 - ENGINE: AUTO preserves an existing engine, otherwise compares THREE (TypeScript/Vite/Three.js) and GODOT (Godot/GDScript web export).
   Choose one; a changed value does not authorize porting existing work.
   KEEP uses the recorded project choice.
@@ -26,7 +27,8 @@ Inspect this selected project folder without modifying it.
 - Report GitHub authentication status without displaying tokens, private keys, or environment values.
 - Distinguish missing tools, missing login, and permission failures.
 - If this is an empty folder, say so; do not invent package scripts.
-- Use the actual OS and shell when their values are AUTO; otherwise verify the requested environment is available. Give the shortest setup steps for the selected engine.
+- Use the actual OS and shell when their values are AUTO; otherwise verify the requested environment is available.
+  Give the shortest setup steps for the selected engine.
 - Do not install, initialize, commit, push, or deploy during this inspection.
 
 ## Completion check

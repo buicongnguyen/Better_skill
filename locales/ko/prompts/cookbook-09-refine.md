@@ -4,8 +4,11 @@ AGENT: Codex
 MODEL: GPT-6 Astra
 
 ## 선택지와 일관성
-- AGENT: Codex 또는 Claude Code를 선택하세요. 전송 전에 해당 앱에서 MODEL을 선택하고 Claude Code에는 사용 가능한 Claude 모델을 쓰세요. 이 줄은 실제 모델을 바꾸거나 도구 권한을 부여하지 않습니다.
-- PROJECT_FOLDER에서만 작업하세요. 실제 도구와 관련 프로젝트 지침을 확인하고 중요한 불일치는 의존 작업 전에 해결하세요.
+- AGENT: Codex 또는 Claude Code를 선택하세요.
+  전송 전에 해당 앱에서 MODEL을 선택하고 Claude Code에는 사용 가능한 Claude 모델을 쓰세요.
+  이 줄은 실제 모델을 바꾸거나 도구 권한을 부여하지 않습니다.
+- PROJECT_FOLDER에서만 작업하세요.
+  실제 도구와 관련 프로젝트 지침을 확인하고 중요한 불일치는 의존 작업 전에 해결하세요.
 
 ## 목표
 근거가 있는 실패 하나를 고치고 정직하게 평가할 프롬프트 개정을 준비하세요.

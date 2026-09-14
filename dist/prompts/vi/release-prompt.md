@@ -7,8 +7,11 @@ REPOSITORY: signal-garden
 PUBLISH: YES
 
 ## Lựa chọn và tính nhất quán
-- AGENT: chọn Codex hoặc Claude Code. Chọn MODEL trong ứng dụng trước khi gửi; dùng mô hình Claude có sẵn với Claude Code. Những dòng này không tự đổi mô hình hay cấp công cụ.
-- Chỉ làm trong PROJECT_FOLDER. Kiểm tra công cụ thực tế và chỉ dẫn dự án liên quan; giải quyết khác biệt quan trọng trước phần việc phụ thuộc.
+- AGENT: chọn Codex hoặc Claude Code.
+  Chọn MODEL trong ứng dụng trước khi gửi; dùng mô hình Claude có sẵn với Claude Code.
+  Những dòng này không tự đổi mô hình hay cấp công cụ.
+- Chỉ làm trong PROJECT_FOLDER.
+  Kiểm tra công cụ thực tế và chỉ dẫn dự án liên quan; giải quyết khác biệt quan trọng trước phần việc phụ thuộc.
 - PUBLISH: YES cho phép công khai repo/mã nguồn và triển khai như mô tả bên dưới; NO chỉ chuẩn bị phát hành cục bộ.
   Điền rõ mọi đích đến trước khi công khai.
   Tính URL và base path từ GITHUB_OWNER và REPOSITORY.
@@ -18,7 +21,8 @@ Chuẩn bị hoặc công khai game trên GitHub Pages theo PUBLISH.
 
 ## Công việc và ràng buộc
 - Dùng GITHUB_OWNER và REPOSITORY ở đầu; điền rõ chỗ trống trước mọi hành động công khai bên ngoài.
-- Kiểm tra repo, nhánh, remote, diff đúng phạm vi, bí mật đã loại và giấy phép asset. Giữ công việc không liên quan; không thay remote xung đột hay force-push.
+- Kiểm tra repo, nhánh, remote, diff đúng phạm vi, bí mật đã loại và giấy phép asset.
+  Giữ công việc không liên quan; không thay remote xung đột hay force-push.
 - Giữ engine hiện có.
   Với Vite/Three.js, kiểm tra lệnh cài/build và đầu ra dist.
   Với Godot, kiểm tra phiên bản đã cài, khả năng xuất web và thư mục xuất thực tế; giữ tên tệp đã sinh.

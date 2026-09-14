@@ -54,7 +54,9 @@ Timeout cục bộ không hủy job từ xa.
 
 Gửi không rõ kết quả, không có ID thì đối soát trước gửi lại.
 
-Lưu đầu ra bền vững trong dự án; nhận hướng dẫn tải chưa chứng minh tệp đã lưu. Kiểm tra tệp, ghi chi phí thật nếu có; không đưa khóa vào GitHub.
+Lưu đầu ra bền vững trong dự án; nhận hướng dẫn tải chưa chứng minh tệp đã lưu.
+
+Kiểm tra tệp, ghi chi phí thật nếu có; không đưa khóa vào GitHub.
 
 Xem từng clip rồi toàn bộ bản xuất: nhịp, liên tục, chữ, âm và gameplay trung thực.
 

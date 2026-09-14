@@ -39,8 +39,10 @@ Collect three energy cells, avoid a patrolling drone, and return to activate the
 The world should feel abandoned but recoverable, with clear routes and warm light from restored machinery.
 
 SCOPE AND RULES
-- One flat 24 by 24 unit arena. Treat one unit as one metre; Y is up, with movement on X/Z.
-- Use a fixed elevated camera with a stable orientation and no pointer lock. Keep the player and routes readable.
+- One flat 24 by 24 unit arena.
+  Treat one unit as one metre; Y is up, with movement on X/Z.
+- Use a fixed elevated camera with a stable orientation and no pointer lock.
+  Keep the player and routes readable.
 - WASD or arrow keys move.
   Normalize diagonal input.
   E activates the beacon on a fresh press within two units, only after all three cells are collected.
@@ -49,7 +51,8 @@ SCOPE AND RULES
 - The player begins with three health points and 90 seconds.
   One drone follows a deterministic visible patrol.
   Contact causes one damage, followed by one second of invulnerability.
-- Each cell can be collected once. Display the cell count, health, remaining time, and beacon readiness.
+- Each cell can be collected once.
+  Display the cell count, health, remaining time, and beacon readiness.
 - Use title, playing, paused, won, and lost states.
   Pause freezes simulation and timer.
   Losing all health or time ends the round.
@@ -106,10 +109,14 @@ Keep menus responsive and keyboard accessible.
 This first version targets desktop keyboard play; do not claim mobile gameplay is supported unless implemented and tested.
 
 OUTCOME CHECKPOINTS
-Use these to track completion. Adapt the implementation order when dependencies or the existing project justify it.
+Use these to track completion.
+
+Adapt the implementation order when dependencies or the existing project justify it.
 M0: Scaffold, document setup, build successfully, and display a minimal scene.
 M1: Make movement, boundaries, camera, and pause reliable.
-M2: Implement cells, beacon activation, HUD, timer display, win, and complete restart from pause or win. Loss remains for M3.
+M2: Implement cells, beacon activation, HUD, timer display, win, and complete restart from pause or win.
+
+Loss remains for M3.
 M3: Implement drone, damage cooldown, timer loss, and health loss.
 M4: Apply coherent art and sound; inspect readability and feedback.
 M5: Test production output under /signal-garden/, fix important failures, and prepare the release workflow.

@@ -11,7 +11,8 @@ RULE_CHANGES: none
 - AGENT: choose Codex or Claude Code.
   Select MODEL in that application before sending; use an available Claude model with Claude Code.
   These lines do not switch the actual model or grant tools.
-- Work only in PROJECT_FOLDER. Inspect the actual tools and relevant project instructions; resolve a material mismatch before dependent work.
+- Work only in PROJECT_FOLDER.
+  Inspect the actual tools and relevant project instructions; resolve a material mismatch before dependent work.
 - ENGINE: AUTO preserves an existing engine, otherwise compares THREE (TypeScript/Vite/Three.js) and GODOT (Godot/GDScript web export).
   Choose one; a changed value does not authorize porting existing work.
   KEEP uses the recorded project choice.

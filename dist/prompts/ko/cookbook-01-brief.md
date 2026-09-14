@@ -8,11 +8,20 @@ ASSET_TOOL: PRIMITIVES
 RULE_CHANGES: 없음
 
 ## 선택지와 일관성
-- AGENT: Codex 또는 Claude Code를 선택하세요. 전송 전에 해당 앱에서 MODEL을 선택하고 Claude Code에는 사용 가능한 Claude 모델을 쓰세요. 이 줄은 실제 모델을 바꾸거나 도구 권한을 부여하지 않습니다.
-- PROJECT_FOLDER에서만 작업하세요. 실제 도구와 관련 프로젝트 지침을 확인하고 중요한 불일치는 의존 작업 전에 해결하세요.
-- ENGINE: AUTO는 기존 엔진을 유지하고, 없으면 THREE(TypeScript/Vite/Three.js)와 GODOT(Godot/GDScript 웹 내보내기)를 비교합니다. 하나만 선택하세요. 값 변경이 기존 프로젝트 이식을 승인하지는 않습니다. KEEP은 기록된 프로젝트 선택을 사용합니다.
-- ASSET_TOOL: PRIMITIVES는 엔진 도형을, BLENDER는 작은 가져오기 검사 후 사용 가능한 Blender 작업 흐름을 씁니다. 어느 쪽이든 임시 도형부터 시작하고 이름이 적혔다고 도구를 설치하지 마세요.
-- PROJECT_NAME은 예제 이름입니다. RULE_CHANGES에 아래 기본 규칙에서 바꿀 내용을 적으세요. 수정 전에 합의한 기존 문서와 조정하고 하나의 기준 규칙을 저장하세요.
+- AGENT: Codex 또는 Claude Code를 선택하세요.
+  전송 전에 해당 앱에서 MODEL을 선택하고 Claude Code에는 사용 가능한 Claude 모델을 쓰세요.
+  이 줄은 실제 모델을 바꾸거나 도구 권한을 부여하지 않습니다.
+- PROJECT_FOLDER에서만 작업하세요.
+  실제 도구와 관련 프로젝트 지침을 확인하고 중요한 불일치는 의존 작업 전에 해결하세요.
+- ENGINE: AUTO는 기존 엔진을 유지하고, 없으면 THREE(TypeScript/Vite/Three.js)와 GODOT(Godot/GDScript 웹 내보내기)를 비교합니다.
+  하나만 선택하세요.
+  값 변경이 기존 프로젝트 이식을 승인하지는 않습니다.
+  KEEP은 기록된 프로젝트 선택을 사용합니다.
+- ASSET_TOOL: PRIMITIVES는 엔진 도형을, BLENDER는 작은 가져오기 검사 후 사용 가능한 Blender 작업 흐름을 씁니다.
+  어느 쪽이든 임시 도형부터 시작하고 이름이 적혔다고 도구를 설치하지 마세요.
+- PROJECT_NAME은 예제 이름입니다.
+  RULE_CHANGES에 아래 기본 규칙에서 바꿀 내용을 적으세요.
+  수정 전에 합의한 기존 문서와 조정하고 하나의 기준 규칙을 저장하세요.
 
 ## 목표
 게임 명세와 관찰 가능한 수용 검사를 작성하거나 일치시키세요.

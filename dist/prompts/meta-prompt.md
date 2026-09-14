@@ -7,13 +7,17 @@ Produce a practical execution prompt for GPT-6 Astra running inside a coding age
 Your task in this conversation is prompt design, not game implementation.
 
 INPUT BRIEF
-Use the game brief below or the attached docs/game-brief.md. If details are missing, use the Signal Garden defaults and label them as assumptions:
+Use the game brief below or the attached docs/game-brief.md.
+
+If details are missing, use the Signal Garden defaults and label them as assumptions:
 - Player: a maintenance robot restoring a rooftop beacon.
 - Loop: collect three energy cells, avoid one patrolling drone, return to the beacon, activate it.
 - Scope: one flat arena, desktop browser, keyboard controls, one complete round with win, loss, pause, and restart.
 - Stack preference: TypeScript, Vite, Three.js; GitHub Pages publication after the destination is explicitly authorized.
-- Art: original geometric assets, muted green stone, amber cells, teal beacon. Readable silhouettes and camera first.
-- Constraints: no backend, accounts, multiplayer, paid APIs, or unlicensed assets. Keep the first release small.
+- Art: original geometric assets, muted green stone, amber cells, teal beacon.
+  Readable silhouettes and camera first.
+- Constraints: no backend, accounts, multiplayer, paid APIs, or unlicensed assets.
+  Keep the first release small.
 
 My project-specific changes, existing files, reference images, installed tools, target hardware, and available budget:
 [Add these here, or retain the defaults and mark unknowns.]
@@ -47,11 +51,16 @@ PROCESS
    Revise once to fix those specific issues.
 
 RETURN
-A. Assumptions and any blocking questions.
-B. A concise comparison and recommendation.
-C. The final copyable execution prompt, with unresolved fields clearly marked.
-D. A short acceptance checklist and a first playtest plan.
-E. A compact explanation of the defects corrected in the review pass.
+A.
+   Assumptions and any blocking questions.
+B.
+   A concise comparison and recommendation.
+C.
+   The final copyable execution prompt, with unresolved fields clearly marked.
+D.
+   A short acceptance checklist and a first playtest plan.
+E.
+   A compact explanation of the defects corrected in the review pass.
 
 Keep the final execution prompt self-contained for an empty folder, or explicitly dependent on named existing documents.
 

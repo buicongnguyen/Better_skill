@@ -4,8 +4,11 @@ AGENT: Codex
 MODEL: GPT-6 Astra
 
 ## Lựa chọn và tính nhất quán
-- AGENT: chọn Codex hoặc Claude Code. Chọn MODEL trong ứng dụng trước khi gửi; dùng mô hình Claude có sẵn với Claude Code. Những dòng này không tự đổi mô hình hay cấp công cụ.
-- Chỉ làm trong PROJECT_FOLDER. Kiểm tra công cụ thực tế và chỉ dẫn dự án liên quan; giải quyết khác biệt quan trọng trước phần việc phụ thuộc.
+- AGENT: chọn Codex hoặc Claude Code.
+  Chọn MODEL trong ứng dụng trước khi gửi; dùng mô hình Claude có sẵn với Claude Code.
+  Những dòng này không tự đổi mô hình hay cấp công cụ.
+- Chỉ làm trong PROJECT_FOLDER.
+  Kiểm tra công cụ thực tế và chỉ dẫn dự án liên quan; giải quyết khác biệt quan trọng trước phần việc phụ thuộc.
 
 ## Mục tiêu
 Xác minh lời khuyên sẽ định hướng dự án game.

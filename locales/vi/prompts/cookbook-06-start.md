@@ -5,8 +5,11 @@ MODEL: GPT-6 Astra
 ASSET_TOOL: PRIMITIVES
 
 ## Lựa chọn và tính nhất quán
-- AGENT: chọn Codex hoặc Claude Code. Chọn MODEL trong ứng dụng trước khi gửi; dùng mô hình Claude có sẵn với Claude Code. Những dòng này không tự đổi mô hình hay cấp công cụ.
-- Chỉ làm trong PROJECT_FOLDER. Kiểm tra công cụ thực tế và chỉ dẫn dự án liên quan; giải quyết khác biệt quan trọng trước phần việc phụ thuộc.
+- AGENT: chọn Codex hoặc Claude Code.
+  Chọn MODEL trong ứng dụng trước khi gửi; dùng mô hình Claude có sẵn với Claude Code.
+  Những dòng này không tự đổi mô hình hay cấp công cụ.
+- Chỉ làm trong PROJECT_FOLDER.
+  Kiểm tra công cụ thực tế và chỉ dẫn dự án liên quan; giải quyết khác biệt quan trọng trước phần việc phụ thuộc.
 - ASSET_TOOL: PRIMITIVES dùng hình học trong engine; BLENDER dùng quy trình Blender có sẵn sau thử nghiệm nhập nhỏ.
   Cả hai đều bắt đầu bằng khối tạm; không cài công cụ chỉ vì thấy tên ở đây.
 
@@ -25,4 +28,6 @@ Triển khai và kiểm tra mốc di chuyển chơi được đầu tiên.
 - Dừng tại mốc di chuyển để tôi xem; không thêm chức năng ngoài phạm vi hay xuất bản.
 
 ## Điều kiện hoàn thành
-Lát cắt di chuyển chạy được và ghi chép kiểm tra trung thực. Bản khởi tạo dài hơn ở liên kết dưới.
+Lát cắt di chuyển chạy được và ghi chép kiểm tra trung thực.
+
+Bản khởi tạo dài hơn ở liên kết dưới.

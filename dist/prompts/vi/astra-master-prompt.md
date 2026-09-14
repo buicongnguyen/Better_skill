@@ -37,14 +37,19 @@ Robot bảo trì khôi phục đèn hiệu: thu ba pin, tránh drone và quay v�
 Thế giới bỏ hoang nhưng có thể hồi sinh, đường rõ, ánh sáng ấm từ máy được phục hồi.
 
 PHẠM VI VÀ LUẬT
-- Đấu trường phẳng 24 × 24 đơn vị. Một đơn vị là một mét; Y lên, chuyển động trên X/Z.
-- Camera cao cố định, hướng ổn định, không khóa con trỏ. Nhân vật và đường đi dễ thấy.
+- Đấu trường phẳng 24 × 24 đơn vị.
+  Một đơn vị là một mét; Y lên, chuyển động trên X/Z.
+- Camera cao cố định, hướng ổn định, không khóa con trỏ.
+  Nhân vật và đường đi dễ thấy.
 - WASD hoặc mũi tên di chuyển; chuẩn hóa hướng chéo.
   E ở lần nhấn mới kích hoạt đèn trong hai đơn vị, chỉ khi đủ ba pin.
   Escape dừng/tiếp tục.
   Có nút bắt đầu, dừng, tiếp tục, chơi lại, tắt tiếng.
-- Bắt đầu ba máu và 90 giây. Một drone tuần tra xác định, thấy được lộ trình. Tiếp xúc mất một máu rồi bất tử một giây.
-- Mỗi pin nhặt một lần. Hiển thị số pin, máu, giờ và đèn sẵn sàng.
+- Bắt đầu ba máu và 90 giây.
+  Một drone tuần tra xác định, thấy được lộ trình.
+  Tiếp xúc mất một máu rồi bất tử một giây.
+- Mỗi pin nhặt một lần.
+  Hiển thị số pin, máu, giờ và đèn sẵn sàng.
 - Trạng thái title, playing, paused, won, lost.
   Tạm dừng đóng băng mô phỏng và giờ.
   Hết máu hoặc giờ kết thúc.
@@ -98,7 +103,9 @@ CÁC MỐC KẾT QUẢ
 Theo dõi hoàn thành; đổi thứ tự khi phụ thuộc hoặc dự án yêu cầu.
 M0: Tạo khung, ghi cách chạy, build đạt và cảnh tối thiểu.
 M1: Chuyển động, biên, camera, tạm dừng đáng tin.
-M2: Pin, kích hoạt, HUD, hiển thị giờ, thắng, chơi lại đầy đủ từ dừng/thắng. Thua còn ở M3.
+M2: Pin, kích hoạt, HUD, hiển thị giờ, thắng, chơi lại đầy đủ từ dừng/thắng.
+
+Thua còn ở M3.
 M3: Drone, hồi sát thương, thua vì giờ và máu.
 M4: Hình/âm nhất quán; xem độ rõ và phản hồi.
 M5: Thử production dưới /signal-garden/, sửa lỗi quan trọng, chuẩn bị workflow phát hành.

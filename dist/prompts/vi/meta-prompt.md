@@ -7,13 +7,17 @@ Tạo prompt thực thi thực dụng cho GPT-6 Astra trong tác nhân lập tr�
 Nhiệm vụ của cuộc trò chuyện này là thiết kế prompt, không triển khai game.
 
 MÔ TẢ ĐẦU VÀO
-Dùng mô tả dưới hoặc docs/game-brief.md đính kèm. Thiếu chi tiết thì dùng mặc định Signal Garden và ghi là giả định:
+Dùng mô tả dưới hoặc docs/game-brief.md đính kèm.
+
+Thiếu chi tiết thì dùng mặc định Signal Garden và ghi là giả định:
 - Người chơi: robot bảo trì khôi phục đèn hiệu mái nhà.
 - Vòng chơi: nhặt ba pin, tránh một drone tuần tra, quay về và kích hoạt đèn.
 - Phạm vi: một đấu trường phẳng, trình duyệt máy tính, bàn phím, vòng chơi có thắng, thua, tạm dừng và chơi lại.
 - Công nghệ ưu tiên: TypeScript, Vite, Three.js; GitHub Pages sau khi đích công bố được cho phép rõ ràng.
-- Hình ảnh: tài nguyên hình học nguyên bản, đá xanh dịu, pin hổ phách, đèn xanh ngọc. Ưu tiên dáng vật thể và camera dễ hiểu.
-- Ràng buộc: không backend, tài khoản, nhiều người chơi, API trả phí hoặc tài nguyên thiếu phép. Giữ bản đầu nhỏ.
+- Hình ảnh: tài nguyên hình học nguyên bản, đá xanh dịu, pin hổ phách, đèn xanh ngọc.
+  Ưu tiên dáng vật thể và camera dễ hiểu.
+- Ràng buộc: không backend, tài khoản, nhiều người chơi, API trả phí hoặc tài nguyên thiếu phép.
+  Giữ bản đầu nhỏ.
 
 Thay đổi riêng, tệp hiện có, ảnh tham khảo, công cụ đã cài, phần cứng mục tiêu và ngân sách của tôi:
 [Điền ở đây hoặc giữ mặc định và ghi điều chưa biết.]
@@ -41,14 +45,20 @@ QUY TRÌNH
 6.
    Chỉ yêu cầu bằng chứng có ích: logic tập trung, tương tác bằng điều khiển thật, xem hình và người chơi thử khi cần đánh giá.
    Không coi build đạt là chứng minh game hoạt động.
-7. Rà soát mâu thuẫn, yêu cầu không có phép thử, phạm vi thêm ngầm, công cụ không có và tính từ mơ hồ. Sửa một lượt để xử lý đúng các vấn đề đó.
+7.
+   Rà soát mâu thuẫn, yêu cầu không có phép thử, phạm vi thêm ngầm, công cụ không có và tính từ mơ hồ.
+   Sửa một lượt để xử lý đúng các vấn đề đó.
 
 TRẢ VỀ
-A. Giả định và câu hỏi chặn việc nếu có.
+A.
+   Giả định và câu hỏi chặn việc nếu có.
 B. So sánh và khuyến nghị ngắn.
-C. Prompt thực thi cuối có thể sao chép, đánh dấu trường chưa giải quyết.
-D. Danh sách nghiệm thu ngắn và kế hoạch chơi thử đầu.
-E. Giải thích ngắn lỗi đã sửa trong lượt rà soát.
+C.
+   Prompt thực thi cuối có thể sao chép, đánh dấu trường chưa giải quyết.
+D.
+   Danh sách nghiệm thu ngắn và kế hoạch chơi thử đầu.
+E.
+   Giải thích ngắn lỗi đã sửa trong lượt rà soát.
 
 Prompt cuối phải đủ dùng cho thư mục trống hoặc nêu rõ phụ thuộc tài liệu đã có.
 

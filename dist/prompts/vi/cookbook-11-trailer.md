@@ -7,8 +7,11 @@ DURATION_SECONDS: 20
 PAID_BUDGET: 0
 
 ## Lựa chọn và tính nhất quán
-- AGENT: chọn Codex hoặc Claude Code. Chọn MODEL trong ứng dụng trước khi gửi; dùng mô hình Claude có sẵn với Claude Code. Những dòng này không tự đổi mô hình hay cấp công cụ.
-- Chỉ làm trong PROJECT_FOLDER. Kiểm tra công cụ thực tế và chỉ dẫn dự án liên quan; giải quyết khác biệt quan trọng trước phần việc phụ thuộc.
+- AGENT: chọn Codex hoặc Claude Code.
+  Chọn MODEL trong ứng dụng trước khi gửi; dùng mô hình Claude có sẵn với Claude Code.
+  Những dòng này không tự đổi mô hình hay cấp công cụ.
+- Chỉ làm trong PROJECT_FOLDER.
+  Kiểm tra công cụ thực tế và chỉ dẫn dự án liên quan; giải quyết khác biệt quan trọng trước phần việc phụ thuộc.
 - VIDEO_TOOL: AUTO chọn trình dựng phù hợp đã cài; REMOTION yêu cầu quy trình Remotion có sẵn.
   Nếu thiếu, báo phần thiếu và chuẩn bị danh sách cảnh.
   Dùng DURATION_SECONDS làm tổng thời lượng; PAID_BUDGET là mức chi sinh nội dung tối đa được cho phép riêng.

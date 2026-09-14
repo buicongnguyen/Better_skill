@@ -113,15 +113,22 @@ OS: AUTO (Windows / macOS / Linux)
 SHELL: AUTO (PowerShell / bash / zsh)
 
 ## 선택지와 일관성
-- AGENT: Codex 또는 Claude Code를 선택하세요. 전송 전에 해당 앱에서 MODEL을 선택하고 Claude Code에는 사용 가능한 Claude 모델을 쓰세요. 이 줄은 실제 모델을 바꾸거나 도구 권한을 부여하지 않습니다.
-- PROJECT_FOLDER에서만 작업하세요. 실제 도구와 관련 프로젝트 지침을 확인하고 중요한 불일치는 의존 작업 전에 해결하세요.
-- ENGINE: AUTO는 기존 엔진을 유지하고, 없으면 THREE(TypeScript/Vite/Three.js)와 GODOT(Godot/GDScript 웹 내보내기) 선택지를 보고합니다. 하나만 선택하세요. 값 변경이 기존 프로젝트 이식을 승인하지는 않습니다.
+- AGENT: Codex 또는 Claude Code를 선택하세요.
+  전송 전에 해당 앱에서 MODEL을 선택하고 Claude Code에는 사용 가능한 Claude 모델을 쓰세요.
+  이 줄은 실제 모델을 바꾸거나 도구 권한을 부여하지 않습니다.
+- PROJECT_FOLDER에서만 작업하세요.
+  실제 도구와 관련 프로젝트 지침을 확인하고 중요한 불일치는 의존 작업 전에 해결하세요.
+- ENGINE: AUTO는 기존 엔진을 유지하고, 없으면 THREE(TypeScript/Vite/Three.js)와 GODOT(Godot/GDScript 웹 내보내기) 선택지를 보고합니다.
+  하나만 선택하세요.
+  값 변경이 기존 프로젝트 이식을 승인하지는 않습니다.
 
 ## 목표
 선택한 프로젝트 폴더를 수정 없이 점검하세요.
 
 ## 작업과 제약
-- ENGINE=THREE이면 Node.js/npm을, GODOT이면 편집기와 웹 내보내기 템플릿을 확인하세요. AUTO는 기존 엔진이나 사용 가능한 선택지를 보고하며 설치하지 않습니다. OS/SHELL이 AUTO이면 실제 환경을 사용하고 모든 설정 단계는 선택한 엔진에 맞추세요.
+- ENGINE=THREE이면 Node.js/npm을, GODOT이면 편집기와 웹 내보내기 템플릿을 확인하세요.
+  AUTO는 기존 엔진이나 사용 가능한 선택지를 보고하며 설치하지 않습니다.
+  OS/SHELL이 AUTO이면 실제 환경을 사용하고 모든 설정 단계는 선택한 엔진에 맞추세요.
 - 절대 경로, 기존 파일, Git 루트/브랜치/상태, 민감 정보를 제거한 원격 URL, Git·GitHub CLI·Node.js·npm 사용 가능 여부를 보고하세요.
 - 런타임을 프로젝트 요구 사항과 대조하세요.
 - 토큰, 개인 키, 환경 변수 값을 표시하지 않고 GitHub 인증 상태를 확인하세요.
@@ -179,11 +186,20 @@ ASSET_TOOL: PRIMITIVES
 RULE_CHANGES: 없음
 
 ## 선택지와 일관성
-- AGENT: Codex 또는 Claude Code를 선택하세요. 전송 전에 해당 앱에서 MODEL을 선택하고 Claude Code에는 사용 가능한 Claude 모델을 쓰세요. 이 줄은 실제 모델을 바꾸거나 도구 권한을 부여하지 않습니다.
-- PROJECT_FOLDER에서만 작업하세요. 실제 도구와 관련 프로젝트 지침을 확인하고 중요한 불일치는 의존 작업 전에 해결하세요.
-- ENGINE: AUTO는 기존 엔진을 유지하고, 없으면 THREE(TypeScript/Vite/Three.js)와 GODOT(Godot/GDScript 웹 내보내기)를 비교합니다. 하나만 선택하세요. 값 변경이 기존 프로젝트 이식을 승인하지는 않습니다. KEEP은 기록된 프로젝트 선택을 사용합니다.
-- ASSET_TOOL: PRIMITIVES는 엔진 도형을, BLENDER는 작은 가져오기 검사 후 사용 가능한 Blender 작업 흐름을 씁니다. 어느 쪽이든 임시 도형부터 시작하고 이름이 적혔다고 도구를 설치하지 마세요.
-- PROJECT_NAME은 예제 이름입니다. RULE_CHANGES에 아래 기본 규칙에서 바꿀 내용을 적으세요. 수정 전에 합의한 기존 문서와 조정하고 하나의 기준 규칙을 저장하세요.
+- AGENT: Codex 또는 Claude Code를 선택하세요.
+  전송 전에 해당 앱에서 MODEL을 선택하고 Claude Code에는 사용 가능한 Claude 모델을 쓰세요.
+  이 줄은 실제 모델을 바꾸거나 도구 권한을 부여하지 않습니다.
+- PROJECT_FOLDER에서만 작업하세요.
+  실제 도구와 관련 프로젝트 지침을 확인하고 중요한 불일치는 의존 작업 전에 해결하세요.
+- ENGINE: AUTO는 기존 엔진을 유지하고, 없으면 THREE(TypeScript/Vite/Three.js)와 GODOT(Godot/GDScript 웹 내보내기)를 비교합니다.
+  하나만 선택하세요.
+  값 변경이 기존 프로젝트 이식을 승인하지는 않습니다.
+  KEEP은 기록된 프로젝트 선택을 사용합니다.
+- ASSET_TOOL: PRIMITIVES는 엔진 도형을, BLENDER는 작은 가져오기 검사 후 사용 가능한 Blender 작업 흐름을 씁니다.
+  어느 쪽이든 임시 도형부터 시작하고 이름이 적혔다고 도구를 설치하지 마세요.
+- PROJECT_NAME은 예제 이름입니다.
+  RULE_CHANGES에 아래 기본 규칙에서 바꿀 내용을 적으세요.
+  수정 전에 합의한 기존 문서와 조정하고 하나의 기준 규칙을 저장하세요.
 
 ## 목표
 게임 명세와 관찰 가능한 수용 검사를 작성하거나 일치시키세요.
@@ -212,9 +228,15 @@ MODEL: GPT-6 Astra
 ENGINE: AUTO
 
 ## 선택지와 일관성
-- AGENT: Codex 또는 Claude Code를 선택하세요. 전송 전에 해당 앱에서 MODEL을 선택하고 Claude Code에는 사용 가능한 Claude 모델을 쓰세요. 이 줄은 실제 모델을 바꾸거나 도구 권한을 부여하지 않습니다.
-- PROJECT_FOLDER에서만 작업하세요. 실제 도구와 관련 프로젝트 지침을 확인하고 중요한 불일치는 의존 작업 전에 해결하세요.
-- ENGINE: AUTO는 기존 엔진을 유지하고, 없으면 THREE(TypeScript/Vite/Three.js)와 GODOT(Godot/GDScript 웹 내보내기)를 비교합니다. 하나만 선택하세요. 값 변경이 기존 프로젝트 이식을 승인하지는 않습니다. KEEP은 기록된 프로젝트 선택을 사용합니다.
+- AGENT: Codex 또는 Claude Code를 선택하세요.
+  전송 전에 해당 앱에서 MODEL을 선택하고 Claude Code에는 사용 가능한 Claude 모델을 쓰세요.
+  이 줄은 실제 모델을 바꾸거나 도구 권한을 부여하지 않습니다.
+- PROJECT_FOLDER에서만 작업하세요.
+  실제 도구와 관련 프로젝트 지침을 확인하고 중요한 불일치는 의존 작업 전에 해결하세요.
+- ENGINE: AUTO는 기존 엔진을 유지하고, 없으면 THREE(TypeScript/Vite/Three.js)와 GODOT(Godot/GDScript 웹 내보내기)를 비교합니다.
+  하나만 선택하세요.
+  값 변경이 기존 프로젝트 이식을 승인하지는 않습니다.
+  KEEP은 기록된 프로젝트 선택을 사용합니다.
 - ENGINE이 명시되면 다른 엔진을 권하기보다 그 경로가 명세에 맞는지 평가하세요.
 
 ## 목표
@@ -222,8 +244,8 @@ ENGINE: AUTO
 
 ## 작업과 제약
 - 게임 명세와 사용 가능한 도구를 확인하세요.
-- 작은 키보드 브라우저 게임에 대해 TypeScript/Vite/Three.js와 Godot 웹 내보내기를 비교하세요.
-- 반복 속도, 에셋 작업, 브라우저 제약, 디버깅, 배포를 다룹니다.
+- ENGINE이 AUTO이고 아직 선택한 엔진이 없을 때만 이 작은 키보드 브라우저 게임에 대해 TypeScript/Vite/Three.js와 Godot 웹 내보내기를 비교하세요.
+- 선택한 경로나 비교 대상의 반복 속도, 에셋 작업, 브라우저 제약, 디버깅, 배포를 평가하세요.
 - 명시적으로 선택한 엔진은 유지하세요.
 - 선택이 없다면 가장 작은 실행 가능한 경로를 추천하고 이 예제의 기본값은 TypeScript/Vite/Three.js로 둡니다.
 - 버전에 민감한 주장은 공식 문서로 확인하고 모르는 점을 명시하세요. docs/decisions.md에 결정 근거를 기록하세요.
@@ -242,8 +264,11 @@ AGENT: Codex
 MODEL: GPT-6 Astra
 
 ## 선택지와 일관성
-- AGENT: Codex 또는 Claude Code를 선택하세요. 전송 전에 해당 앱에서 MODEL을 선택하고 Claude Code에는 사용 가능한 Claude 모델을 쓰세요. 이 줄은 실제 모델을 바꾸거나 도구 권한을 부여하지 않습니다.
-- PROJECT_FOLDER에서만 작업하세요. 실제 도구와 관련 프로젝트 지침을 확인하고 중요한 불일치는 의존 작업 전에 해결하세요.
+- AGENT: Codex 또는 Claude Code를 선택하세요.
+  전송 전에 해당 앱에서 MODEL을 선택하고 Claude Code에는 사용 가능한 Claude 모델을 쓰세요.
+  이 줄은 실제 모델을 바꾸거나 도구 권한을 부여하지 않습니다.
+- PROJECT_FOLDER에서만 작업하세요.
+  실제 도구와 관련 프로젝트 지침을 확인하고 중요한 불일치는 의존 작업 전에 해결하세요.
 
 ## 목표
 게임 프로젝트에 적용할 조언을 검증하세요.
@@ -270,8 +295,11 @@ AGENT: Codex
 MODEL: GPT-6 Astra
 
 ## 선택지와 일관성
-- AGENT: Codex 또는 Claude Code를 선택하세요. 전송 전에 해당 앱에서 MODEL을 선택하고 Claude Code에는 사용 가능한 Claude 모델을 쓰세요. 이 줄은 실제 모델을 바꾸거나 도구 권한을 부여하지 않습니다.
-- PROJECT_FOLDER에서만 작업하세요. 실제 도구와 관련 프로젝트 지침을 확인하고 중요한 불일치는 의존 작업 전에 해결하세요.
+- AGENT: Codex 또는 Claude Code를 선택하세요.
+  전송 전에 해당 앱에서 MODEL을 선택하고 Claude Code에는 사용 가능한 Claude 모델을 쓰세요.
+  이 줄은 실제 모델을 바꾸거나 도구 권한을 부여하지 않습니다.
+- PROJECT_FOLDER에서만 작업하세요.
+  실제 도구와 관련 프로젝트 지침을 확인하고 중요한 불일치는 의존 작업 전에 해결하세요.
 
 ## 목표
 정확한 프로젝트 기억과 검토한 로컬 기준 커밋을 만드세요.
@@ -299,8 +327,11 @@ AGENT: Codex
 MODEL: GPT-6 Astra
 
 ## 선택지와 일관성
-- AGENT: Codex 또는 Claude Code를 선택하세요. 전송 전에 해당 앱에서 MODEL을 선택하고 Claude Code에는 사용 가능한 Claude 모델을 쓰세요. 이 줄은 실제 모델을 바꾸거나 도구 권한을 부여하지 않습니다.
-- PROJECT_FOLDER에서만 작업하세요. 실제 도구와 관련 프로젝트 지침을 확인하고 중요한 불일치는 의존 작업 전에 해결하세요.
+- AGENT: Codex 또는 Claude Code를 선택하세요.
+  전송 전에 해당 앱에서 MODEL을 선택하고 Claude Code에는 사용 가능한 Claude 모델을 쓰세요.
+  이 줄은 실제 모델을 바꾸거나 도구 권한을 부여하지 않습니다.
+- PROJECT_FOLDER에서만 작업하세요.
+  실제 도구와 관련 프로젝트 지침을 확인하고 중요한 불일치는 의존 작업 전에 해결하세요.
 
 ## 목표
 다음 구체적 작업에 스킬이 가치를 더하는지 판단하세요.
@@ -328,9 +359,13 @@ MODEL: GPT-6 Astra
 ASSET_TOOL: PRIMITIVES
 
 ## 선택지와 일관성
-- AGENT: Codex 또는 Claude Code를 선택하세요. 전송 전에 해당 앱에서 MODEL을 선택하고 Claude Code에는 사용 가능한 Claude 모델을 쓰세요. 이 줄은 실제 모델을 바꾸거나 도구 권한을 부여하지 않습니다.
-- PROJECT_FOLDER에서만 작업하세요. 실제 도구와 관련 프로젝트 지침을 확인하고 중요한 불일치는 의존 작업 전에 해결하세요.
-- ASSET_TOOL: PRIMITIVES는 엔진 도형을, BLENDER는 작은 가져오기 검사 후 사용 가능한 Blender 작업 흐름을 씁니다. 어느 쪽이든 임시 도형부터 시작하고 이름이 적혔다고 도구를 설치하지 마세요.
+- AGENT: Codex 또는 Claude Code를 선택하세요.
+  전송 전에 해당 앱에서 MODEL을 선택하고 Claude Code에는 사용 가능한 Claude 모델을 쓰세요.
+  이 줄은 실제 모델을 바꾸거나 도구 권한을 부여하지 않습니다.
+- PROJECT_FOLDER에서만 작업하세요.
+  실제 도구와 관련 프로젝트 지침을 확인하고 중요한 불일치는 의존 작업 전에 해결하세요.
+- ASSET_TOOL: PRIMITIVES는 엔진 도형을, BLENDER는 작은 가져오기 검사 후 사용 가능한 Blender 작업 흐름을 씁니다.
+  어느 쪽이든 임시 도형부터 시작하고 이름이 적혔다고 도구를 설치하지 마세요.
 
 ## 목표
 첫 이동 플레이 체크포인트를 구현하고 검증하세요.
@@ -346,7 +381,9 @@ ASSET_TOOL: PRIMITIVES
 - 제가 확인할 수 있도록 이동 체크포인트에서 멈추고 무관한 기능 추가나 공개는 하지 마세요.
 
 ## 완료 조건
-실행 가능한 이동 구간과 정직한 검증 기록. 더 긴 초기 프롬프트는 아래에 연결했습니다.</code></pre><a class="download-link" href="prompts/ko/cookbook-06-start.md" download>.md 다운로드 ↗</a></div>
+실행 가능한 이동 구간과 정직한 검증 기록.
+
+더 긴 초기 프롬프트는 아래에 연결했습니다.</code></pre><a class="download-link" href="prompts/ko/cookbook-06-start.md" download>.md 다운로드 ↗</a></div>
 <p><strong>예상 결과:</strong> 실행 가능한 이동 구간과 정직한 검증 기록. 더 긴 초기 프롬프트는 아래에 연결했습니다.</p>
 <p>전체 설명: <a href="#master-prompt">Astra 실행 프롬프트</a> · <a href="#meta-prompt">프롬프트를 만드는 프롬프트</a>. <a class="citation" href="#source-04" title="OpenAI · Building games with Astra" aria-label="출처 04: OpenAI · Building games with Astra">[04]</a> <a class="citation" href="#source-17" title="OpenAI · Rethinking skills and prompts for GPT-6 Astra" aria-label="출처 17: OpenAI · Rethinking skills and prompts for GPT-6 Astra">[17]</a></p>
 <h3 id="cookbook-part-7">7 · 마일스톤 하나 진행</h3>
@@ -357,8 +394,11 @@ AGENT: Codex
 MODEL: GPT-6 Astra
 
 ## 선택지와 일관성
-- AGENT: Codex 또는 Claude Code를 선택하세요. 전송 전에 해당 앱에서 MODEL을 선택하고 Claude Code에는 사용 가능한 Claude 모델을 쓰세요. 이 줄은 실제 모델을 바꾸거나 도구 권한을 부여하지 않습니다.
-- PROJECT_FOLDER에서만 작업하세요. 실제 도구와 관련 프로젝트 지침을 확인하고 중요한 불일치는 의존 작업 전에 해결하세요.
+- AGENT: Codex 또는 Claude Code를 선택하세요.
+  전송 전에 해당 앱에서 MODEL을 선택하고 Claude Code에는 사용 가능한 Claude 모델을 쓰세요.
+  이 줄은 실제 모델을 바꾸거나 도구 권한을 부여하지 않습니다.
+- PROJECT_FOLDER에서만 작업하세요.
+  실제 도구와 관련 프로젝트 지침을 확인하고 중요한 불일치는 의존 작업 전에 해결하세요.
 
 ## 목표
 현재 상태에서 다음 플레이 마일스톤 하나를 완료하세요.
@@ -386,8 +426,11 @@ AGENT: Codex
 MODEL: GPT-6 Astra
 
 ## 선택지와 일관성
-- AGENT: Codex 또는 Claude Code를 선택하세요. 전송 전에 해당 앱에서 MODEL을 선택하고 Claude Code에는 사용 가능한 Claude 모델을 쓰세요. 이 줄은 실제 모델을 바꾸거나 도구 권한을 부여하지 않습니다.
-- PROJECT_FOLDER에서만 작업하세요. 실제 도구와 관련 프로젝트 지침을 확인하고 중요한 불일치는 의존 작업 전에 해결하세요.
+- AGENT: Codex 또는 Claude Code를 선택하세요.
+  전송 전에 해당 앱에서 MODEL을 선택하고 Claude Code에는 사용 가능한 Claude 모델을 쓰세요.
+  이 줄은 실제 모델을 바꾸거나 도구 권한을 부여하지 않습니다.
+- PROJECT_FOLDER에서만 작업하세요.
+  실제 도구와 관련 프로젝트 지침을 확인하고 중요한 불일치는 의존 작업 전에 해결하세요.
 
 ## 목표
 규칙, 실제 조작, 사람의 관찰로 프로덕션 게임을 검증하세요.
@@ -415,8 +458,11 @@ AGENT: Codex
 MODEL: GPT-6 Astra
 
 ## 선택지와 일관성
-- AGENT: Codex 또는 Claude Code를 선택하세요. 전송 전에 해당 앱에서 MODEL을 선택하고 Claude Code에는 사용 가능한 Claude 모델을 쓰세요. 이 줄은 실제 모델을 바꾸거나 도구 권한을 부여하지 않습니다.
-- PROJECT_FOLDER에서만 작업하세요. 실제 도구와 관련 프로젝트 지침을 확인하고 중요한 불일치는 의존 작업 전에 해결하세요.
+- AGENT: Codex 또는 Claude Code를 선택하세요.
+  전송 전에 해당 앱에서 MODEL을 선택하고 Claude Code에는 사용 가능한 Claude 모델을 쓰세요.
+  이 줄은 실제 모델을 바꾸거나 도구 권한을 부여하지 않습니다.
+- PROJECT_FOLDER에서만 작업하세요.
+  실제 도구와 관련 프로젝트 지침을 확인하고 중요한 불일치는 의존 작업 전에 해결하세요.
 
 ## 목표
 근거가 있는 실패 하나를 고치고 정직하게 평가할 프롬프트 개정을 준비하세요.
@@ -447,25 +493,40 @@ REPOSITORY: signal-garden
 PUBLISH: YES
 
 ## 선택지와 일관성
-- AGENT: Codex 또는 Claude Code를 선택하세요. 전송 전에 해당 앱에서 MODEL을 선택하고 Claude Code에는 사용 가능한 Claude 모델을 쓰세요. 이 줄은 실제 모델을 바꾸거나 도구 권한을 부여하지 않습니다.
-- PROJECT_FOLDER에서만 작업하세요. 실제 도구와 관련 프로젝트 지침을 확인하고 중요한 불일치는 의존 작업 전에 해결하세요.
-- PUBLISH: YES는 아래 설명한 공개 저장소/소스와 배포를 승인하고, NO는 로컬 출시 준비만 뜻합니다. 공개 전에 모든 대상 자리표시자를 해결하세요. GITHUB_OWNER와 REPOSITORY로 URL과 기준 경로를 계산하세요.
+- AGENT: Codex 또는 Claude Code를 선택하세요.
+  전송 전에 해당 앱에서 MODEL을 선택하고 Claude Code에는 사용 가능한 Claude 모델을 쓰세요.
+  이 줄은 실제 모델을 바꾸거나 도구 권한을 부여하지 않습니다.
+- PROJECT_FOLDER에서만 작업하세요.
+  실제 도구와 관련 프로젝트 지침을 확인하고 중요한 불일치는 의존 작업 전에 해결하세요.
+- PUBLISH: YES는 아래 설명한 공개 저장소/소스와 배포를 승인하고, NO는 로컬 출시 준비만 뜻합니다.
+  공개 전에 모든 대상 자리표시자를 해결하세요.
+  GITHUB_OWNER와 REPOSITORY로 URL과 기준 경로를 계산하세요.
 
 ## 목표
 PUBLISH에 따라 이 게임을 GitHub Pages 출시용으로 준비하거나 공개하세요.
 
 ## 작업과 제약
 - 위 GITHUB_OWNER와 REPOSITORY 값을 사용하고 외부 공개 전에 자리표시자를 해결하세요.
-- 실제 저장소, 브랜치, 원격, 의도한 diff, 비밀 제외, 에셋 라이선스를 확인하세요. 무관한 작업을 보존하고 충돌하는 원격을 교체하거나 강제 푸시하지 마세요.
-- 기존 엔진을 유지하세요. Vite/Three.js는 설치·빌드 명령과 dist 출력을 확인하세요. Godot는 설치 버전, 웹 내보내기 지원, 실제 출력 디렉터리를 확인하고 생성된 파일명을 유지하세요. 공개 전에 정적 빌드가 작동하는지 검증하세요.
-- 프로젝트 사이트 URL은 실제 값으로 https://GITHUB_OWNER.github.io/REPOSITORY/ 를 계산하세요. Vite에서는 base를 /REPOSITORY/ 로 설정하고, 다른 엔진은 해당 경로에서 내보낸 에셋을 검증하세요.
+- 실제 저장소, 브랜치, 원격, 의도한 diff, 비밀 제외, 에셋 라이선스를 확인하세요.
+  무관한 작업을 보존하고 충돌하는 원격을 교체하거나 강제 푸시하지 마세요.
+- 기존 엔진을 유지하세요.
+  Vite/Three.js는 설치·빌드 명령과 dist 출력을 확인하세요.
+  Godot는 설치 버전, 웹 내보내기 지원, 실제 출력 디렉터리를 확인하고 생성된 파일명을 유지하세요.
+  공개 전에 정적 빌드가 작동하는지 검증하세요.
+- 프로젝트 사이트 URL은 실제 값으로 https://GITHUB_OWNER.github.io/REPOSITORY/ 를 계산하세요.
+  Vite에서는 base를 /REPOSITORY/ 로 설정하고, 다른 엔진은 해당 경로에서 내보낸 에셋을 검증하세요.
 - 필요한 Pages 권한으로 프로젝트를 빌드하고 검증된 정적 출력 디렉터리만 업로드하는 GitHub Pages Actions 워크플로를 준비하세요.
-- PUBLISH가 YES이면 명시한 공개 GitHub 저장소가 없을 때 생성하고, 검토한 게임의 의도한 파일을 커밋·푸시하며 선택한 호스트에 공개 배포하도록 승인합니다. PUBLISH가 NO이면 로컬 준비 후 멈추고 남은 출시 단계를 보고하세요.
+- PUBLISH가 YES이면 명시한 공개 GitHub 저장소가 없을 때 생성하고, 검토한 게임의 의도한 파일을 커밋·푸시하며 선택한 호스트에 공개 배포하도록 승인합니다.
+  PUBLISH가 NO이면 로컬 준비 후 멈추고 남은 출시 단계를 보고하세요.
 - YES이면 권한이 허용할 때 GitHub Actions를 Pages 소스로 설정하고 정확히 푸시한 커밋의 워크플로를 확인하세요.
 - 공개 URL을 열고 에셋 및 실제 조작으로 전체 한 판을 도구가 허용할 때 검증하며 실행하지 못한 검사를 명시하세요.
 
 ## 완료 조건
-PUBLISH=NO: 검증한 로컬 출시 패키지와 남은 단계. PUBLISH=YES: 검토한 커밋, 일치하는 성공 배포, 공개 URL, 실제 검증 기록. 완료할 수 없으면 구체적인 차단 요인을 보고하세요.</code></pre><a class="download-link" href="prompts/ko/cookbook-10-pages.md" download>.md 다운로드 ↗</a></div>
+PUBLISH=NO: 검증한 로컬 출시 패키지와 남은 단계.
+
+PUBLISH=YES: 검토한 커밋, 일치하는 성공 배포, 공개 URL, 실제 검증 기록.
+
+완료할 수 없으면 구체적인 차단 요인을 보고하세요.</code></pre><a class="download-link" href="prompts/ko/cookbook-10-pages.md" download>.md 다운로드 ↗</a></div>
 <h4>Vercel Hobby · 개인·비상업적 게임</h4>
 <div class="prompt-block"><div class="prompt-bar"><span>바로 사용하기 · cookbook-10-vercel.md</span><button type="button" class="copy-button" aria-label="프롬프트 복사: cookbook-10-vercel.md">프롬프트 복사</button></div><pre tabindex="0"><code>## 먼저 수정할 매개변수
 PROJECT_FOLDER: 현재 선택한 게임 폴더
@@ -477,26 +538,46 @@ PUBLISH: YES
 VERCEL_SCOPE: [YOUR_VERCEL_SCOPE]
 
 ## 선택지와 일관성
-- AGENT: Codex 또는 Claude Code를 선택하세요. 전송 전에 해당 앱에서 MODEL을 선택하고 Claude Code에는 사용 가능한 Claude 모델을 쓰세요. 이 줄은 실제 모델을 바꾸거나 도구 권한을 부여하지 않습니다.
-- PROJECT_FOLDER에서만 작업하세요. 실제 도구와 관련 프로젝트 지침을 확인하고 중요한 불일치는 의존 작업 전에 해결하세요.
-- PUBLISH: YES는 아래 설명한 공개 저장소/소스와 배포를 승인하고, NO는 로컬 출시 준비만 뜻합니다. 공개 전에 모든 대상 자리표시자를 해결하세요. GITHUB_OWNER와 REPOSITORY로 URL과 기준 경로를 계산하세요.
+- AGENT: Codex 또는 Claude Code를 선택하세요.
+  전송 전에 해당 앱에서 MODEL을 선택하고 Claude Code에는 사용 가능한 Claude 모델을 쓰세요.
+  이 줄은 실제 모델을 바꾸거나 도구 권한을 부여하지 않습니다.
+- PROJECT_FOLDER에서만 작업하세요.
+  실제 도구와 관련 프로젝트 지침을 확인하고 중요한 불일치는 의존 작업 전에 해결하세요.
+- PUBLISH: YES는 아래 설명한 공개 저장소/소스와 배포를 승인하고, NO는 로컬 출시 준비만 뜻합니다.
+  공개 전에 모든 대상 자리표시자를 해결하세요.
+  GITHUB_OWNER와 REPOSITORY는 소스 저장소에 사용하세요.
+  게임 URL과 기준 경로에는 선택한 Vercel 프로젝트의 실제 도메인과 배포 경로를 사용하세요.
 
 ## 목표
 PUBLISH에 따라 이 게임을 Vercel Hobby 출시용으로 준비하거나 공개하세요.
 
 ## 작업과 제약
 - 위 GITHUB_OWNER와 REPOSITORY 값을 사용하고 외부 공개 전에 자리표시자를 해결하세요.
-- 실제 저장소, 브랜치, 원격, 의도한 diff, 비밀 제외, 에셋 라이선스를 확인하세요. 무관한 작업을 보존하고 충돌하는 원격을 교체하거나 강제 푸시하지 마세요.
-- 기존 엔진을 유지하세요. Vite/Three.js는 설치·빌드 명령과 dist 출력을 확인하세요. Godot는 설치 버전, 웹 내보내기 지원, 실제 출력 디렉터리를 확인하고 생성된 파일명을 유지하세요. 공개 전에 정적 빌드가 작동하는지 검증하세요.
-- 프로젝트 연결 전에 VERCEL_SCOPE를 해결하세요. 기존 Vercel 연결을 확인하고 대상 충돌은 덮어쓰지 말고 보고하세요.
+- 실제 저장소, 브랜치, 원격, 의도한 diff, 비밀 제외, 에셋 라이선스를 확인하세요.
+  무관한 작업을 보존하고 충돌하는 원격을 교체하거나 강제 푸시하지 마세요.
+- 기존 엔진을 유지하세요.
+  Vite/Three.js는 설치·빌드 명령과 dist 출력을 확인하세요.
+  Godot는 설치 버전, 웹 내보내기 지원, 실제 출력 디렉터리를 확인하고 생성된 파일명을 유지하세요.
+  공개 전에 정적 빌드가 작동하는지 검증하세요.
+- 프로젝트 연결 전에 VERCEL_SCOPE를 해결하세요.
+  기존 Vercel 연결을 확인하고 대상 충돌은 덮어쓰지 말고 보고하세요.
 - 이 개인·비상업 게임이 현재 제한에서 Hobby에 적합한지 확인하고 서비스 구매나 업그레이드는 하지 마세요.
-- 도메인 루트의 Vite 배포에는 base / 를 쓰세요. 선택한 엔진의 실제 빌드 명령과 출력 디렉터리를 확인하고 모든 엔진이 dist를 쓴다고 가정하지 마세요. Vercel 구성을 준비하세요.
-- PUBLISH가 YES이면 명시한 공개 GitHub 저장소가 없을 때 생성하고, 검토한 게임의 의도한 파일을 커밋·푸시하며 선택한 호스트에 공개 배포하도록 승인합니다. PUBLISH가 NO이면 로컬 준비 후 멈추고 남은 출시 단계를 보고하세요.
-- YES이면 VERCEL_SCOPE에서 인증된 Vercel CLI 또는 Git 가져오기를 쓰세요. 필요하면 브라우저 로그인이나 저장소 접근을 안내하되 채팅으로 비밀을 요청하지 마세요.
-- 배포 리비전과 로그인 없는 공개 플레이를 확인하세요. 실제 할당된 프로덕션 URL과 실행하지 못한 검사를 보고하세요.
+- 도메인 루트의 Vite 배포에는 base / 를 쓰세요.
+  선택한 엔진의 실제 빌드 명령과 출력 디렉터리를 확인하고 모든 엔진이 dist를 쓴다고 가정하지 마세요.
+  Vercel 구성을 준비하세요.
+- PUBLISH가 YES이면 명시한 공개 GitHub 저장소가 없을 때 생성하고, 검토한 게임의 의도한 파일을 커밋·푸시하며 선택한 호스트에 공개 배포하도록 승인합니다.
+  PUBLISH가 NO이면 로컬 준비 후 멈추고 남은 출시 단계를 보고하세요.
+- YES이면 VERCEL_SCOPE에서 인증된 Vercel CLI 또는 Git 가져오기를 쓰세요.
+  필요하면 브라우저 로그인이나 저장소 접근을 안내하되 채팅으로 비밀을 요청하지 마세요.
+- 배포 리비전과 로그인 없는 공개 플레이를 확인하세요.
+  실제 할당된 프로덕션 URL과 실행하지 못한 검사를 보고하세요.
 
 ## 완료 조건
-PUBLISH=NO: 검증한 로컬 출시 패키지와 남은 단계. PUBLISH=YES: 검토한 커밋, 일치하는 성공 배포, 공개 URL, 실제 검증 기록. 완료할 수 없으면 구체적인 차단 요인을 보고하세요.</code></pre><a class="download-link" href="prompts/ko/cookbook-10-vercel.md" download>.md 다운로드 ↗</a></div>
+PUBLISH=NO: 검증한 로컬 출시 패키지와 남은 단계.
+
+PUBLISH=YES: 검토한 커밋, 일치하는 성공 배포, 공개 URL, 실제 검증 기록.
+
+완료할 수 없으면 구체적인 차단 요인을 보고하세요.</code></pre><a class="download-link" href="prompts/ko/cookbook-10-vercel.md" download>.md 다운로드 ↗</a></div>
 <p><strong>예상 결과:</strong> 커밋, 해당 리비전의 성공한 배포, 공개 게임 URL, 플레이 검증 기록.</p>
 <p>전체 설명: <a href="#environment">개발 환경 설정</a> · <a href="#publish">출시하고 학습 루프 마무리하기</a>. <a class="citation" href="#source-12" title="Vite · Deploying a Static Site" aria-label="출처 12: Vite · Deploying a Static Site">[12]</a> <a class="citation" href="#source-13" title="GitHub · Using custom workflows with GitHub Pages" aria-label="출처 13: GitHub · Using custom workflows with GitHub Pages">[13]</a> <a class="citation" href="#source-40" title="GitHub CLI · gh repo create" aria-label="출처 40: GitHub CLI · gh repo create">[40]</a> <a class="citation" href="#source-46" title="GitHub · What is GitHub Pages?" aria-label="출처 46: GitHub · What is GitHub Pages?">[46]</a> <a class="citation" href="#source-63" title="Vercel · Getting started, Git import and Vite" aria-label="출처 63: Vercel · Getting started, Git import and Vite">[63]</a> <a class="citation" href="#source-64" title="Vercel · Hobby plan" aria-label="출처 64: Vercel · Hobby plan">[64]</a></p>
 <h3 id="cookbook-part-11">11 · 선택: 게임 소개</h3>
@@ -510,9 +591,14 @@ DURATION_SECONDS: 20
 PAID_BUDGET: 0
 
 ## 선택지와 일관성
-- AGENT: Codex 또는 Claude Code를 선택하세요. 전송 전에 해당 앱에서 MODEL을 선택하고 Claude Code에는 사용 가능한 Claude 모델을 쓰세요. 이 줄은 실제 모델을 바꾸거나 도구 권한을 부여하지 않습니다.
-- PROJECT_FOLDER에서만 작업하세요. 실제 도구와 관련 프로젝트 지침을 확인하고 중요한 불일치는 의존 작업 전에 해결하세요.
-- VIDEO_TOOL: AUTO는 설치된 적합한 편집기를 고르고 REMOTION은 사용 가능한 Remotion 작업 흐름을 요청합니다. 없으면 누락을 보고하고 샷 계획을 준비하세요. DURATION_SECONDS는 총 길이이며 PAID_BUDGET은 별도로 승인된 생성 비용 상한입니다.
+- AGENT: Codex 또는 Claude Code를 선택하세요.
+  전송 전에 해당 앱에서 MODEL을 선택하고 Claude Code에는 사용 가능한 Claude 모델을 쓰세요.
+  이 줄은 실제 모델을 바꾸거나 도구 권한을 부여하지 않습니다.
+- PROJECT_FOLDER에서만 작업하세요.
+  실제 도구와 관련 프로젝트 지침을 확인하고 중요한 불일치는 의존 작업 전에 해결하세요.
+- VIDEO_TOOL: AUTO는 설치된 적합한 편집기를 고르고 REMOTION은 사용 가능한 Remotion 작업 흐름을 요청합니다.
+  없으면 누락을 보고하고 샷 계획을 준비하세요.
+  DURATION_SECONDS는 총 길이이며 PAID_BUDGET은 별도로 승인된 생성 비용 상한입니다.
 
 ## 목표
 현재 게임 빌드를 소개하는 DURATION_SECONDS초 영상을 준비하세요.
@@ -531,7 +617,7 @@ PAID_BUDGET: 0
 
 ## 완료 조건
 DURATION_SECONDS초 샷 계획, 확인한 미디어 목록, 가능할 때 검토한 영상 초안.</code></pre><a class="download-link" href="prompts/ko/cookbook-11-trailer.md" download>.md 다운로드 ↗</a></div>
-<p><strong>예상 결과:</strong> 20초 샷 계획, 확인한 미디어 목록, 가능할 때 검토한 영상 초안.</p>
+<p><strong>예상 결과:</strong> 선택한 길이의 샷 계획(기본값 20초), 확인한 미디어 목록, 가능할 때 검토한 영상 초안.</p>
 <p>전체 설명: <a href="#video-workflows">에이전트와 영상 만들기</a>. <a class="citation" href="#source-26" title="Remotion · Agent Skills" aria-label="출처 26: Remotion · Agent Skills">[26]</a> <a class="citation" href="#source-27" title="Remotion · Documentation MCP deprecation" aria-label="출처 27: Remotion · Documentation MCP deprecation">[27]</a> <a class="citation" href="#source-47" title="Runway · Usage tiers and throttled tasks" aria-label="출처 47: Runway · Usage tiers and throttled tasks">[47]</a></p>
 <p><a href="#summary">간결한 단계로 돌아가기 →</a></p>
 
@@ -771,19 +857,33 @@ gh pr create --base main --head experiment/camera-readability --title "Improve f
 <p>사실을 한 곳에 유지하면 나중에 바꾸기 쉽습니다.</p>
 <div class="prompt-block"><div class="prompt-bar"><span>바로 사용하기 · agents-example.md</span><button type="button" class="copy-button" aria-label="프롬프트 복사: agents-example.md">프롬프트 복사</button></div><pre tabindex="0"><code># Signal Garden — 프로젝트 지침
 
-docs/game-brief.md는 메커니즘과 범위, docs/acceptance.md는 관찰 가능한 행동, docs/progress.md는 현재 단계와 알려진 문제의 기준입니다. 작업에 관련된 문서를 읽고 기존 사용자 작업을 보존하세요.
+docs/game-brief.md는 메커니즘과 범위, docs/acceptance.md는 관찰 가능한 행동, docs/progress.md는 현재 단계와 알려진 문제의 기준입니다.
 
-커밋된 lockfile과 TypeScript, Vite, Three.js를 사용하세요. Y는 위, 이동은 X/Z, 속도는 초당 월드 단위입니다. 당장 필요 없는 추상화보다 작고 명확한 모듈을 우선합니다.
+작업에 관련된 문서를 읽고 기존 사용자 작업을 보존하세요.
+
+커밋된 lockfile과 TypeScript, Vite, Three.js를 사용하세요.
+
+Y는 위, 이동은 X/Z, 속도는 초당 월드 단위입니다.
+
+당장 필요 없는 추상화보다 작고 명확한 모듈을 우선합니다.
 
 구성 후 명령: npm run dev, npm run build, npm test. package.json과 README에서 정확하게 유지하세요.
 
-행동을 관찰하기 쉬워진다면 시뮬레이션 상태와 장면 객체를 분리합니다. 조정 가능한 게임 상수는 이름 있는 설정 모듈 하나에 둡니다.
+행동을 관찰하기 쉬워진다면 시뮬레이션 상태와 장면 객체를 분리합니다.
 
-문서의 검사와 사용 가능한 도구로 변경된 행동을 검증하세요. 실행하지 않은 검사를 밝히고 실패를 감추려고 수용 기준을 낮추지 마세요.
+조정 가능한 게임 상수는 이름 있는 설정 모듈 하나에 둡니다.
 
-직접 만든 에셋이나 적절한 라이선스를 사용하고 public/assets/credits.md에 출처를 적습니다. 인증정보와 로컬 환경 파일은 커밋하지 마세요.
+문서의 검사와 사용 가능한 도구로 변경된 행동을 검증하세요.
 
-단계를 완료하면 docs/progress.md에 리비전, 증거, 문제와 다음 작업을 적습니다. 커밋·푸시·공개는 사용자가 이미 부여한 권한을 따르며 저장소 지침은 새로운 외부 권한을 부여하지 않습니다.</code></pre><a class="download-link" href="prompts/ko/agents-example.md" download>.md 다운로드 ↗</a></div>
+실행하지 않은 검사를 밝히고 실패를 감추려고 수용 기준을 낮추지 마세요.
+
+직접 만든 에셋이나 적절한 라이선스를 사용하고 public/assets/credits.md에 출처를 적습니다.
+
+인증정보와 로컬 환경 파일은 커밋하지 마세요.
+
+단계를 완료하면 docs/progress.md에 리비전, 증거, 문제와 다음 작업을 적습니다.
+
+커밋·푸시·공개는 사용자가 이미 부여한 권한을 따르며 저장소 지침은 새로운 외부 권한을 부여하지 않습니다.</code></pre><a class="download-link" href="prompts/ko/agents-example.md" download>.md 다운로드 ↗</a></div>
 <p>명령과 경로가 실제로 생긴 뒤 예제를 적용하세요. 매 수정마다 모든 파일을 읽게 하지 않고 목적에 맞는 문서를 가리킵니다. 오타 수정과 라운드 상태 변경에는 다른 맥락이 필요합니다.</p>
 <h3 id="skills-part-5">프로젝트 지식을 담는 선택적 스킬</h3>
 <p>아래 예제는 Signal Garden 특유의 경계 조건을 제공합니다. 반복해서 놓치는 정보가 있거나 묶인 절차가 검토를 더 안정적으로 만들 때만 유용합니다. 수용 기준 문서와 기존 검토 스킬이 이미 충분하면 설치하지 않아도 됩니다.</p>
@@ -794,20 +894,37 @@ description: 비콘 활성화, 피해, 시간, 정지 또는 재시작 변경 �
 
 # Signal Garden 라운드 검토
 
-선택적 예제입니다. 참조 게임 문서가 있고 기존 검토 도구보다 추가 가치가 있을 때만 설치하세요. 범용 게임 개발 스킬이 아닙니다.
+선택적 예제입니다.
 
-현재 규칙과 검사 명령의 기준은 docs/acceptance.md입니다. 아래는 책의 초기 설계이므로 게임 설계가 바뀌면 갱신하세요.
+참조 게임 문서가 있고 기존 검토 도구보다 추가 가치가 있을 때만 설치하세요.
+
+범용 게임 개발 스킬이 아닙니다.
+
+현재 규칙과 검사 명령의 기준은 docs/acceptance.md입니다.
+
+아래는 책의 초기 설계이므로 게임 설계가 바뀌면 갱신하세요.
 
 관련 경계 조건:
 - 같은 시뮬레이션 단계에서 비콘 활성화와 시간 초과 또는 체력 0이 겹치면 패배가 우선합니다.
 - 셀 세 개를 모두 모으고 2단위 이내에서 새 E 입력이 있어야 활성화합니다.
 - 드론 접촉은 체력 1을 감소시키고 피해 쿨다운은 1초입니다.
-- 정지는 라운드 시간과 시뮬레이션을 멈춥니다. 포커스를 잃으면 입력을 지우고 진행 라운드를 정지하며 복귀 후 명시적으로 재개해야 합니다.
+- 정지는 라운드 시간과 시뮬레이션을 멈춥니다.
+  포커스를 잃으면 입력을 지우고 진행 라운드를 정지하며 복귀 후 명시적으로 재개해야 합니다.
 - paused, won, lost에서 재시작하면 셀, 체력, 시간, 로봇 위치, 드론 진행, 쿨다운, 효과와 누른 입력을 초기화하고 playing으로 새 라운드를 시작합니다.
 
-변경에 영향을 받는 경우를 선택하세요. 시간 경계는 결정적 검사로, 관련 플레이 여정은 도구가 있으면 실제 조작으로 확인합니다. 장면 준비 도우미는 조작이 작동한다는 증거가 아닙니다.
+변경에 영향을 받는 경우를 선택하세요.
 
-출력: 리비전, 관련 경우, 재현 단계, 기대/관찰 결과와 증거. 불가능한 검사는 미실행으로 표시합니다. 범위 내 실패를 고치고 영향받은 부분을 다시 확인한 뒤 통과하면 끝냅니다. 단계를 완료했다면 docs/progress.md를 갱신하세요.</code></pre><a class="download-link" href="prompts/ko/game-review-skill.md" download>.md 다운로드 ↗</a></div>
+시간 경계는 결정적 검사로, 관련 플레이 여정은 도구가 있으면 실제 조작으로 확인합니다.
+
+장면 준비 도우미는 조작이 작동한다는 증거가 아닙니다.
+
+출력: 리비전, 관련 경우, 재현 단계, 기대/관찰 결과와 증거.
+
+불가능한 검사는 미실행으로 표시합니다.
+
+범위 내 실패를 고치고 영향받은 부분을 다시 확인한 뒤 통과하면 끝냅니다.
+
+단계를 완료했다면 docs/progress.md를 갱신하세요.</code></pre><a class="download-link" href="prompts/ko/game-review-skill.md" download>.md 다운로드 ↗</a></div>
 <p>시험하려면 <em>게임</em> 저장소의 <code>.agents/skills/signal-garden-round-review/SKILL.md</code>로 저장하고 호스트 목록에 나타나는지 확인하세요. 참조하는 수용 기준도 최신으로 유지합니다. 스킬은 지침이며 브라우저 접근권이 아니므로 실제 도구도 있어야 합니다.</p>
 <h3 id="skills-part-6">내 Astra 환경에서 해볼 작은 실험</h3>
 <p><strong>이 책에서 측정한 결과가 아닌 실험 제안</strong>입니다. 시작 리비전, Astra 설정, 도구, 기획, 검사와 노력 예산을 동일하게 유지하고 필수 정책을 지키세요. 각각 깨끗한 실행에서 비교합니다.</p>
@@ -912,32 +1029,55 @@ dz = n === 0 ? 0 : (z / n) * speed * dtSeconds
 <h3 id="meta-prompt-part-2">프롬프트 설계자</h3>
 <div class="prompt-block"><div class="prompt-bar"><span>바로 사용하기 · meta-prompt.md</span><button type="button" class="copy-button" aria-label="프롬프트 복사: meta-prompt.md">프롬프트 복사</button></div><pre tabindex="0"><code># GPT-6 Astra 실행 프롬프트 설계
 
-게임 설계와 코딩 과정을 편집하는 역할입니다. 코딩 에이전트 안의 GPT-6 Astra를 위한 실용적인 실행 프롬프트를 작성하세요. 이 대화의 작업은 게임 구현이 아니라 프롬프트 설계입니다.
+게임 설계와 코딩 과정을 편집하는 역할입니다.
+
+코딩 에이전트 안의 GPT-6 Astra를 위한 실용적인 실행 프롬프트를 작성하세요.
+
+이 대화의 작업은 게임 구현이 아니라 프롬프트 설계입니다.
 
 입력 기획
-아래 또는 첨부한 docs/game-brief.md를 사용합니다. 정보가 빠지면 Signal Garden 기본값을 가정으로 표시하세요.
+아래 또는 첨부한 docs/game-brief.md를 사용합니다.
+
+정보가 빠지면 Signal Garden 기본값을 가정으로 표시하세요.
 - 플레이어: 옥상 비콘을 복구하는 정비 로봇.
 - 루프: 에너지 셀 세 개 수집, 순찰 드론 회피, 비콘 복귀와 활성화.
 - 범위: 평평한 공간 하나, 데스크톱 웹, 키보드, 승패·정지·재시작이 있는 완전한 라운드.
-- 선호 기술: TypeScript, Vite, Three.js. 대상이 명시적으로 승인되면 GitHub Pages 공개.
-- 아트: 직접 만든 기하 에셋, 차분한 녹색 돌, 호박색 셀, 청록 비콘. 읽기 쉬운 실루엣과 카메라 우선.
-- 제약: 백엔드, 계정, 멀티플레이, 유료 API, 허가 없는 에셋 없음. 첫 출시는 작게.
+- 선호 기술: TypeScript, Vite, Three.js.
+  대상이 명시적으로 승인되면 GitHub Pages 공개.
+- 아트: 직접 만든 기하 에셋, 차분한 녹색 돌, 호박색 셀, 청록 비콘.
+  읽기 쉬운 실루엣과 카메라 우선.
+- 제약: 백엔드, 계정, 멀티플레이, 유료 API, 허가 없는 에셋 없음.
+  첫 출시는 작게.
 
 내 변경 사항, 기존 파일, 참고 이미지, 설치 도구, 목표 하드웨어와 예산:
 [여기에 적거나 기본값을 유지하고 미지수를 표시하세요.]
 
 과정
-1. 필수 조건, 선호, 가정과 실제 진행을 막는 미지수를 나누세요. 잘못된 가정이 결과를 크게 바꿀 때만 최대 세 개의 집중된 질문을 하고 독립적인 초안 작성은 계속합니다.
-2. 이 기획의 결정을 바꿀 수 있는 방식만 비교하세요. 한 번의 프로토타입, 명세 우선, 튜토리얼, 점진 구현, 시각 플레이테스트와 병렬 전문가를 고려할 수 있습니다. 절충을 간결하게 설명하고 벤치마크나 완료 시간 보장은 만들지 마세요.
-3. 실제 도구가 다룰 수 있는 최소 조합과 기술을 권하세요. 명시된 엔진 선택은 유지합니다. 버전 민감한 주장 전에 1차 문서를 확인하고 웹 접근이 없으면 밝힙니다.
+1.
+   필수 조건, 선호, 가정과 실제 진행을 막는 미지수를 나누세요.
+   잘못된 가정이 결과를 크게 바꿀 때만 최대 세 개의 집중된 질문을 하고 독립적인 초안 작성은 계속합니다.
+2.
+   이 기획의 결정을 바꿀 수 있는 방식만 비교하세요.
+   한 번의 프로토타입, 명세 우선, 튜토리얼, 점진 구현, 시각 플레이테스트와 병렬 전문가를 고려할 수 있습니다.
+   절충을 간결하게 설명하고 벤치마크나 완료 시간 보장은 만들지 마세요.
+3.
+   실제 도구가 다룰 수 있는 최소 조합과 기술을 권하세요.
+   명시된 엔진 선택은 유지합니다.
+   버전 민감한 주장 전에 1차 문서를 확인하고 웹 접근이 없으면 밝힙니다.
 4.
    플레이 경험, 조작, 카메라, 세계 규칙, 경계 조건, 에셋 정책, 검증과 완료 조건이 있는 실행 프롬프트를 쓰세요.
    정확한 저장소 문서에 이미 있으면 중복하지 말고 참조합니다.
    단계는 결과 확인점이지 매 수정의 필수 일정이 아닙니다.
    기존 스킬을 우선하고 구체적으로 반복되는 공백에만 새 스킬을 제안합니다.
-5. 편집 전 기존 파일 확인, 사용자 작업 보존, 합리적인 일상 선택과 승인 범위 지속을 명시하세요. 이미 승인되지 않은 외부 공개는 별도 권한 경계입니다.
-6. 필요한 증거만 요구하세요. 집중 논리 검사, 실제 조작, 시각 확인과 판단이 필요한 사람 플레이테스트입니다. 빌드 성공이 게임 작동을 증명한다고 하지 마세요.
-7. 모순, 관찰 검사 없는 요구, 숨은 범위 추가, 없는 도구와 모호한 형용사를 검토하고 그 결함을 한 번 수정하세요.
+5.
+   편집 전 기존 파일 확인, 사용자 작업 보존, 합리적인 일상 선택과 승인 범위 지속을 명시하세요.
+   이미 승인되지 않은 외부 공개는 별도 권한 경계입니다.
+6.
+   필요한 증거만 요구하세요.
+   집중 논리 검사, 실제 조작, 시각 확인과 판단이 필요한 사람 플레이테스트입니다.
+   빌드 성공이 게임 작동을 증명한다고 하지 마세요.
+7.
+   모순, 관찰 검사 없는 요구, 숨은 범위 추가, 없는 도구와 모호한 형용사를 검토하고 그 결함을 한 번 수정하세요.
 
 반환
 A. 가정과 막히는 질문.
@@ -946,9 +1086,17 @@ C. 미해결 필드를 표시한 최종 복사 가능한 실행 프롬프트.
 D. 짧은 수용 목록과 첫 플레이테스트 계획.
 E. 검토에서 수정한 결함의 짧은 설명.
 
-빈 폴더에서는 독립적으로 쓸 수 있게, 기존 문서가 필요하면 이름을 명시하세요. 직접적인 지시와 구체적인 플레이 행동을 사용합니다. GPT-6 Astra를 다른 모델로 바꾸거나 비공개 추론을 요청하거나 자체 품질 점수를 게임 품질의 증거로 제시하지 마세요.
+빈 폴더에서는 독립적으로 쓸 수 있게, 기존 문서가 필요하면 이름을 명시하세요.
 
-최종 프롬프트는 수정할 매개변수 블록, 목표, 작업/제약 묶음, 관찰 가능한 완료 검사 순서로 작성하세요. 엔진/도구 대안은 선택지로 나열하고 하나만 선택하며 상세 지침이 그 선택을 따르게 하세요. 조정값과 요구 사항을 분리하고 매개변수 변경 후 본문에 충돌하는 고정값이 남지 않는지 확인하세요.</code></pre><a class="download-link" href="prompts/ko/meta-prompt.md" download>.md 다운로드 ↗</a></div>
+직접적인 지시와 구체적인 플레이 행동을 사용합니다.
+
+GPT-6 Astra를 다른 모델로 바꾸거나 비공개 추론을 요청하거나 자체 품질 점수를 게임 품질의 증거로 제시하지 마세요.
+
+최종 프롬프트는 수정할 매개변수 블록, 목표, 작업/제약 묶음, 관찰 가능한 완료 검사 순서로 작성하세요.
+
+엔진/도구 대안은 선택지로 나열하고 하나만 선택하며 상세 지침이 그 선택을 따르게 하세요.
+
+조정값과 요구 사항을 분리하고 매개변수 변경 후 본문에 충돌하는 고정값이 남지 않는지 확인하세요.</code></pre><a class="download-link" href="prompts/ko/meta-prompt.md" download>.md 다운로드 ↗</a></div>
 <h3 id="meta-prompt-part-3">실행 전에 결과 검토하기</h3>
 <p>생성 프롬프트가 게임의 실제 정체성을 담는지 확인하세요. 어떤 일반 액션 게임에도 적용된다면 플레이 경험 설명이 더 필요할 수 있습니다. 계정, 온라인 순위표, 유료 서비스, 생성 에셋, 멀티플레이나 요청하지 않은 거대한 프레임워크가 숨어 들어왔는지도 확인합니다.</p>
 <div class="table-wrap" tabindex="0" role="region" aria-label="비교표. 작은 화면에서는 가로로 스크롤하세요"><table><thead><tr><th>질문</th><th>약한 답변</th><th>유용한 답변</th></tr></thead><tbody>
@@ -978,17 +1126,35 @@ PROGRESS_PATH: docs/progress.md
 
 # 저장소 기획으로 Signal Garden 구현
 
-이 게임 저장소에서 GPT-6 Astra를 사용하세요. BRIEF_PATH의 데스크톱 웹 게임을 만들고 ACCEPTANCE_PATH를 충족합니다.
+이 게임 저장소에서 GPT-6 Astra를 사용하세요.
+
+BRIEF_PATH의 데스크톱 웹 게임을 만들고 ACCEPTANCE_PATH를 충족합니다.
 
 기획서는 메커니즘의 기준이며 PROGRESS_PATH는 완료 작업과 남은 문제를 기록합니다.
 
 필수 문서가 없으면 대체 설계를 만들기 전에 밝히세요.
 
-현재 구현을 확인하고 사용자 작업을 보존하세요. 기획 안에서 일상 기술 결정을 내리며 승인된 범위를 계속 진행합니다. 관련 기존 스킬을 사용하되 시작만을 위해 맞춤 스킬을 만들거나 설치하지 마세요. 중요한 모호함이나 없는 권한에만 질문을 제한합니다.
+현재 구현을 확인하고 사용자 작업을 보존하세요.
 
-게임을 완성하고 가능하면 실제 조작으로 실행 결과를 보며 수용 조건의 증거를 모으세요. 범위 내 실패를 해결하고 미검사 항목을 보고합니다. 시각 판단과 사람 플레이테스트는 자동 정확성 검사와 구분하세요.
+기획 안에서 일상 기술 결정을 내리며 승인된 범위를 계속 진행합니다.
 
-작동하는 게임, 재현 가능한 빌드, 짧은 진행 기록과 출시 안내를 전달합니다. 로컬 커밋은 허용됩니다. 기존 푸시·공개 권한을 따르며 없다면 대상을 명시해 검토할 출시 준비를 끝내세요. 리비전, 검사 결과와 한계를 보고합니다.</code></pre><a class="download-link" href="prompts/ko/astra-compact-prompt.md" download>.md 다운로드 ↗</a></div>
+관련 기존 스킬을 사용하되 시작만을 위해 맞춤 스킬을 만들거나 설치하지 마세요.
+
+중요한 모호함이나 없는 권한에만 질문을 제한합니다.
+
+게임을 완성하고 가능하면 실제 조작으로 실행 결과를 보며 수용 조건의 증거를 모으세요.
+
+범위 내 실패를 해결하고 미검사 항목을 보고합니다.
+
+시각 판단과 사람 플레이테스트는 자동 정확성 검사와 구분하세요.
+
+작동하는 게임, 재현 가능한 빌드, 짧은 진행 기록과 출시 안내를 전달합니다.
+
+로컬 커밋은 허용됩니다.
+
+기존 푸시·공개 권한을 따르며 없다면 대상을 명시해 검토할 출시 준비를 끝내세요.
+
+리비전, 검사 결과와 한계를 보고합니다.</code></pre><a class="download-link" href="prompts/ko/astra-compact-prompt.md" download>.md 다운로드 ↗</a></div>
 <h3 id="master-prompt-part-2">선택 B · 빈 폴더에서 시작할 때</h3>
 <p>아래 긴 초기화 프롬프트는 아직 프로젝트 기획이 없어서 규칙을 포함합니다. 길이 대부분은 게임 명세입니다. 에이전트가 규칙을 파일에 기록한 뒤에는 전체를 반복해서 붙이기보다 집중된 요청을 사용하세요.</p>
 <div class="prompt-block"><div class="prompt-bar"><span>바로 사용하기 · astra-master-prompt.md</span><button type="button" class="copy-button" aria-label="프롬프트 복사: astra-master-prompt.md">프롬프트 복사</button></div><pre tabindex="0"><code>## 먼저 수정할 매개변수
@@ -1008,32 +1174,72 @@ PROJECT_FOLDER에서 작업하고 기존 엔진과 사용 가능한 도구를 �
 
 # GPT-6 Astra로 PROJECT_NAME 처음부터 만들기
 
-현재 폴더에서 게임 개발자로 작업하세요. 먼저 폴더, Git 상태, 적용 지침과 도구를 확인하고 기존 사용자 작업을 보존합니다. 빈 폴더라면 아래 완전한 프로젝트를 만드세요.
+현재 폴더에서 게임 개발자로 작업하세요.
 
-작고 일관되며 플레이 가능한 데스크톱 브라우저 3D 게임을 전달하세요. 구현하고 필요한 검사를 실행하며 계획만 제시하고 끝내지 마세요. 일상적인 구현 선택은 합리적으로 결정하고 가정을 기록합니다. 결과를 크게 바꿀 누락 정보나 아직 없는 권한에만 집중된 질문을 하세요.
+먼저 폴더, Git 상태, 적용 지침과 도구를 확인하고 기존 사용자 작업을 보존합니다.
+
+빈 폴더라면 아래 완전한 프로젝트를 만드세요.
+
+작고 일관되며 플레이 가능한 데스크톱 브라우저 3D 게임을 전달하세요.
+
+구현하고 필요한 검사를 실행하며 계획만 제시하고 끝내지 마세요.
+
+일상적인 구현 선택은 합리적으로 결정하고 가정을 기록합니다.
+
+결과를 크게 바꿀 누락 정보나 아직 없는 권한에만 집중된 질문을 하세요.
 
 플레이 경험
-PROJECT_NAME은 해 질 무렵의 조용한 옥상입니다. 정비 로봇이 에너지 셀 세 개를 모아 순찰 드론을 피하고 시간 안에 비콘을 활성화합니다. 버려졌지만 복구할 수 있는 세계, 명확한 경로와 되살아난 기계의 따뜻한 빛을 표현하세요.
+PROJECT_NAME은 해 질 무렵의 조용한 옥상입니다.
+
+정비 로봇이 에너지 셀 세 개를 모아 순찰 드론을 피하고 시간 안에 비콘을 활성화합니다.
+
+버려졌지만 복구할 수 있는 세계, 명확한 경로와 되살아난 기계의 따뜻한 빛을 표현하세요.
 
 범위와 규칙
-- 24 × 24 단위의 평면 공간. 1단위는 1미터, Y는 위, 이동은 X/Z.
-- 방향이 안정된 높은 고정 카메라, 포인터 잠금 없음. 플레이어와 경로가 잘 보여야 합니다.
-- WASD/화살표 이동, 대각 입력 정규화. 셀 세 개를 모은 뒤 2단위 이내에서 새 E 입력으로 비콘 활성화. Escape 정지/재개. 시작, 정지, 재개, 재시작, 음소거 버튼 제공.
-- 초기 체력 3과 시간 90초. 드론 하나가 보이는 결정적 경로를 순찰. 접촉 피해 1 후 1초 무적.
-- 셀은 각각 한 번 수집. 셀 수, 체력, 남은 시간과 비콘 준비 표시.
-- title, playing, paused, won, lost 상태. 정지는 시뮬레이션과 시간을 동결. 체력 또는 시간 소진 시 종료. 같은 단계에서 활성화보다 패배를 먼저 평가해 동시 시간 만료는 패배.
-- 승패 뒤 게임을 동결. paused, won, lost에서 재시작하면 위치, 셀, 체력, 시간, 드론 경로, 쿨다운, 효과와 입력을 초기화하고 새 playing 라운드로 진입. 포커스 상실은 입력 해제와 정지, 복귀는 명시적 재개 필요.
+- 24 × 24 단위의 평면 공간.
+  1단위는 1미터, Y는 위, 이동은 X/Z.
+- 방향이 안정된 높은 고정 카메라, 포인터 잠금 없음.
+  플레이어와 경로가 잘 보여야 합니다.
+- WASD/화살표 이동, 대각 입력 정규화.
+  셀 세 개를 모은 뒤 2단위 이내에서 새 E 입력으로 비콘 활성화.
+  Escape 정지/재개.
+  시작, 정지, 재개, 재시작, 음소거 버튼 제공.
+- 초기 체력 3과 시간 90초.
+  드론 하나가 보이는 결정적 경로를 순찰.
+  접촉 피해 1 후 1초 무적.
+- 셀은 각각 한 번 수집.
+  셀 수, 체력, 남은 시간과 비콘 준비 표시.
+- title, playing, paused, won, lost 상태.
+  정지는 시뮬레이션과 시간을 동결.
+  체력 또는 시간 소진 시 종료.
+  같은 단계에서 활성화보다 패배를 먼저 평가해 동시 시간 만료는 패배.
+- 승패 뒤 게임을 동결. paused, won, lost에서 재시작하면 위치, 셀, 체력, 시간, 드론 경로, 쿨다운, 효과와 입력을 초기화하고 새 playing 라운드로 진입.
+  포커스 상실은 입력 해제와 정지, 복귀는 명시적 재개 필요.
 - 멀티플레이, 계정, 절차 생성 세계, 인벤토리, 대화와 추가 레벨 제외.
 
 기술 방향
-기존 프로젝트가 다른 엔진을 명시하지 않았다면 TypeScript, Vite, Three.js를 우선하세요. 호환되는 안정 패키지와 커밋된 lockfile을 사용하고 실제 버전을 기록합니다. 불확실하거나 버전 민감한 API는 공식 문서를 확인하세요.
+기존 프로젝트가 다른 엔진을 명시하지 않았다면 TypeScript, Vite, Three.js를 우선하세요.
 
-입력, 시뮬레이션/상태, 렌더링/카메라, UI를 구분할 수 있는 작고 읽기 쉬운 구조를 유지하세요. 조정값은 설정 모듈 하나에 둡니다. 평면에 적합한 단순 충돌 형태를 사용하고 물리 의존성이 필요하면 이유를 설명합니다. 경과 시간을 올바르게 사용하고 재개 시 큰 시간 단계를 막으세요.
+호환되는 안정 패키지와 커밋된 lockfile을 사용하고 실제 버전을 기록합니다.
+
+불확실하거나 버전 민감한 API는 공식 문서를 확인하세요.
+
+입력, 시뮬레이션/상태, 렌더링/카메라, UI를 구분할 수 있는 작고 읽기 쉬운 구조를 유지하세요.
+
+조정값은 설정 모듈 하나에 둡니다.
+
+평면에 적합한 단순 충돌 형태를 사용하고 물리 의존성이 필요하면 이유를 설명합니다.
+
+경과 시간을 올바르게 사용하고 재개 시 큰 시간 단계를 막으세요.
 
 dev, build, 필요한 테스트의 정확한 npm 스크립트를 만드세요. docs/game-brief.md, docs/acceptance.md, docs/progress.md와 설정·조작·대상·한계를 담은 README를 작성하고 적절한 ignore 규칙을 추가합니다.
 
 화면과 소리
-읽기 쉬운 회색 블록으로 시작한 뒤 원본 기하 로봇, 차분한 녹색 돌과 화단, 호박색 셀, 청록 비콘과 구분되는 드론을 만듭니다. 경로를 보이게 하고 과한 bloom, 입자와 카메라 흔들림은 피하세요. 형태와 글자는 색 신호를 보완하며 장식과 피격 효과에 모션 감소 설정을 반영합니다.
+읽기 쉬운 회색 블록으로 시작한 뒤 원본 기하 로봇, 차분한 녹색 돌과 화단, 호박색 셀, 청록 비콘과 구분되는 드론을 만듭니다.
+
+경로를 보이게 하고 과한 bloom, 입자와 카메라 흔들림은 피하세요.
+
+형태와 글자는 색 신호를 보완하며 장식과 피격 효과에 모션 감소 설정을 반영합니다.
 
 직접 만들거나 적절히 허가된 에셋을 사용하고 출처를 기록하세요.
 
@@ -1049,12 +1255,18 @@ dev, build, 필요한 테스트의 정확한 npm 스크립트를 만드세요. d
 의존성과 기존 프로젝트에 따라 구현 순서는 조정할 수 있습니다.
 M0: 뼈대, 설정 문서, 성공한 빌드와 최소 장면.
 M1: 안정된 이동, 경계, 카메라와 정지.
-M2: 셀, 비콘, HUD, 시간 표시, 승리, 정지/승리에서 전체 재시작. 패배는 M3에 남음.
+M2: 셀, 비콘, HUD, 시간 표시, 승리, 정지/승리에서 전체 재시작.
+
+패배는 M3에 남음.
 M3: 드론, 피해 쿨다운, 시간·체력 패배.
 M4: 일관된 아트와 소리, 가독성과 피드백 확인.
 M5: /signal-garden/ 프로덕션 검사, 중요한 실패 수정과 출시 워크플로 준비.
 
-각 단계에서 실행 가능한 상태와 진행 기록을 유지하고 diff 검토와 관련 검사 뒤 로컬 커밋을 하세요. 이 프롬프트는 로컬 커밋을 허용합니다. 단계를 확인점으로 보고 불필요한 재승인 없이 다음으로 진행하세요.
+각 단계에서 실행 가능한 상태와 진행 기록을 유지하고 diff 검토와 관련 검사 뒤 로컬 커밋을 하세요.
+
+이 프롬프트는 로컬 커밋을 허용합니다.
+
+단계를 확인점으로 보고 불필요한 재승인 없이 다음으로 진행하세요.
 
 검증
 단일 수집, 이동 정규화, 피해 쿨다운, 정지, 승패 배타성, 경계 시간과 전체 재시작을 필요한 범위에서 검사합니다.
@@ -1065,9 +1277,19 @@ M5: /signal-garden/ 프로덕션 검사, 중요한 실패 수정과 출시 워�
 
 장면 준비 도우미는 실제 입력 여정을 대신할 수 없습니다.
 
-시작, 수집, 승리, 두 패배, 정지/재개와 반복 재시작을 확인하세요. 저장소 하위 경로에서 프로덕션을 빌드하고 시험하며 에셋과 런타임 오류를 봅니다. 실제 브라우저와 기기를 명시합니다. 성능 측정은 기기, 뷰포트, 장면, 워밍업과 표본 시간을 기록하고 프레임률을 지어내지 마세요.
+시작, 수집, 승리, 두 패배, 정지/재개와 반복 재시작을 확인하세요.
 
-도구가 없으면 독립 검사를 수행하고 미실행 항목과 가장 짧은 수동 확인 절차를 남깁니다. 시험하지 않은 조건을 통과로 표시하지 마세요. 수정 뒤에는 변경된 행동에 필요한 검사를 다시 하고 통과한 뒤 불필요한 광범위 반복은 피합니다.
+저장소 하위 경로에서 프로덕션을 빌드하고 시험하며 에셋과 런타임 오류를 봅니다.
+
+실제 브라우저와 기기를 명시합니다.
+
+성능 측정은 기기, 뷰포트, 장면, 워밍업과 표본 시간을 기록하고 프레임률을 지어내지 마세요.
+
+도구가 없으면 독립 검사를 수행하고 미실행 항목과 가장 짧은 수동 확인 절차를 남깁니다.
+
+시험하지 않은 조건을 통과로 표시하지 마세요.
+
+수정 뒤에는 변경된 행동에 필요한 검사를 다시 하고 통과한 뒤 불필요한 광범위 반복은 피합니다.
 
 작업 약속
 짧게 소통하고 변경을 플레이어가 보는 결과에 연결하세요.
@@ -1104,7 +1326,15 @@ M5: /signal-garden/ 프로덕션 검사, 중요한 실패 수정과 출시 워�
 증거: [이미지, 상태, 오류 또는 플레이테스트 기록]
 허용 범위: [변경 가능한 시스템과 유지할 제약]
 
-코드를 바꾸기 전에 재현하세요. 가장 작은 관련 경로를 살펴보고 원인을 짧게 설명한 뒤 집중된 수정을 구현합니다. 관계없는 기능과 재작성은 피하세요. 실패 순서와 영향을 받는 주변 행동을 검증하고 결과 증거와 미실행 검사를 밝힙니다. 진행 기록을 갱신하고 세션의 커밋 권한을 따르세요.</code></pre><a class="download-link" href="prompts/ko/repair-prompt.md" download>.md 다운로드 ↗</a></div>
+코드를 바꾸기 전에 재현하세요.
+
+가장 작은 관련 경로를 살펴보고 원인을 짧게 설명한 뒤 집중된 수정을 구현합니다.
+
+관계없는 기능과 재작성은 피하세요.
+
+실패 순서와 영향을 받는 주변 행동을 검증하고 결과 증거와 미실행 검사를 밝힙니다.
+
+진행 기록을 갱신하고 세션의 커밋 권한을 따르세요.</code></pre><a class="download-link" href="prompts/ko/repair-prompt.md" download>.md 다운로드 ↗</a></div>
 <p>재현하지 못하면 가장 작은 관련 장면을 확인하거나 좁은 관찰 지점을 추가하게 하세요. 광범위한 재작성을 제안하면 국소 수정으로 해결할 수 없는 이유를 설명하고 복구 지점을 만든 뒤 진행하도록 합니다.</p>
 
 <details class="chapter-evidence" id="evidence-master-prompt"><summary>출처 확인 · 이 장의 근거는 무엇인가?</summary><p>2026년 9월 14일 확인. 아래 링크는 명시된 범위를 뒷받침합니다. 이 책의 제안은 문서에 명시된 동작이나 측정 결과와 구분합니다.</p><ul class="evidence-records"><li><span class="evidence-basis">이 책의 제안</span><h4>간결한 실행 프롬프트와 초기 구성 프롬프트</h4><p class="evidence-covers"><strong>해당 내용:</strong> <a href="#master-prompt">들어가며</a> · <a href="#master-prompt-part-1">선택 A · 기획서가 이미 있을 때</a> · <a href="#master-prompt-part-2">선택 B · 빈 폴더에서 시작할 때</a></p><p>두 템플릿 모두 직접 작성했고 벤치마크하지 않았다. 간결한 버전은 정확한 기존 프로젝트 파일에 의존한다. 초기 구성 버전은 파일이 아직 없으므로 게임 규칙을 포함한다.</p><p class="evidence-links"><a href="https://developers.openai.com/api/docs/guides/latest-model" lang="en">OpenAI · GPT-6 Astra prompting best practices ↗</a> <a class="evidence-note-link" href="#source-01">[01: 출처 노트]</a><br><a href="https://developers.openai.com/blog/rethinking-skills-and-prompts-for-gpt-6-astra" lang="en">OpenAI · Rethinking skills and prompts for GPT-6 Astra ↗</a> <a class="evidence-note-link" href="#source-17">[17: 출처 노트]</a></p></li><li><span class="evidence-basis">종합 및 해석</span><h4>작업 합의와 근거에 따른 수정</h4><p class="evidence-covers"><strong>해당 내용:</strong> <a href="#master-prompt-part-3">각 부분이 필요한 이유</a> · <a href="#master-prompt-part-4">증거로 진행 중인 작업 조정하기</a></p><p>Astra 문서는 주도성과 적정한 테스트를, 게임 사례는 관찰 가능한 상태와 실제 조작을 뒷받침한다. 좌표 규칙, 마일스톤 순서, 수정 템플릿은 프로젝트의 선택이다.</p><p class="evidence-links"><a href="https://developers.openai.com/api/docs/guides/latest-model" lang="en">OpenAI · GPT-6 Astra prompting best practices ↗</a> <a class="evidence-note-link" href="#source-01">[01: 출처 노트]</a><br><a href="https://developers.openai.com/blog/how-to-build-games-with-astra" lang="en">OpenAI · Building games with Astra ↗</a> <a class="evidence-note-link" href="#source-04">[04: 출처 노트]</a><br><a href="https://developers.openai.com/blog/rethinking-skills-and-prompts-for-gpt-6-astra" lang="en">OpenAI · Rethinking skills and prompts for GPT-6 Astra ↗</a> <a class="evidence-note-link" href="#source-17">[17: 출처 노트]</a></p></li></ul><a class="evidence-method" href="#review-notes">검토 방법과 수정 사항 보기 ↗</a></details></section>
@@ -1270,25 +1500,40 @@ REPOSITORY: signal-garden
 PUBLISH: YES
 
 ## 선택지와 일관성
-- AGENT: Codex 또는 Claude Code를 선택하세요. 전송 전에 해당 앱에서 MODEL을 선택하고 Claude Code에는 사용 가능한 Claude 모델을 쓰세요. 이 줄은 실제 모델을 바꾸거나 도구 권한을 부여하지 않습니다.
-- PROJECT_FOLDER에서만 작업하세요. 실제 도구와 관련 프로젝트 지침을 확인하고 중요한 불일치는 의존 작업 전에 해결하세요.
-- PUBLISH: YES는 아래 설명한 공개 저장소/소스와 배포를 승인하고, NO는 로컬 출시 준비만 뜻합니다. 공개 전에 모든 대상 자리표시자를 해결하세요. GITHUB_OWNER와 REPOSITORY로 URL과 기준 경로를 계산하세요.
+- AGENT: Codex 또는 Claude Code를 선택하세요.
+  전송 전에 해당 앱에서 MODEL을 선택하고 Claude Code에는 사용 가능한 Claude 모델을 쓰세요.
+  이 줄은 실제 모델을 바꾸거나 도구 권한을 부여하지 않습니다.
+- PROJECT_FOLDER에서만 작업하세요.
+  실제 도구와 관련 프로젝트 지침을 확인하고 중요한 불일치는 의존 작업 전에 해결하세요.
+- PUBLISH: YES는 아래 설명한 공개 저장소/소스와 배포를 승인하고, NO는 로컬 출시 준비만 뜻합니다.
+  공개 전에 모든 대상 자리표시자를 해결하세요.
+  GITHUB_OWNER와 REPOSITORY로 URL과 기준 경로를 계산하세요.
 
 ## 목표
 PUBLISH에 따라 이 게임을 GitHub Pages 출시용으로 준비하거나 공개하세요.
 
 ## 작업과 제약
 - 위 GITHUB_OWNER와 REPOSITORY 값을 사용하고 외부 공개 전에 자리표시자를 해결하세요.
-- 실제 저장소, 브랜치, 원격, 의도한 diff, 비밀 제외, 에셋 라이선스를 확인하세요. 무관한 작업을 보존하고 충돌하는 원격을 교체하거나 강제 푸시하지 마세요.
-- 기존 엔진을 유지하세요. Vite/Three.js는 설치·빌드 명령과 dist 출력을 확인하세요. Godot는 설치 버전, 웹 내보내기 지원, 실제 출력 디렉터리를 확인하고 생성된 파일명을 유지하세요. 공개 전에 정적 빌드가 작동하는지 검증하세요.
-- 프로젝트 사이트 URL은 실제 값으로 https://GITHUB_OWNER.github.io/REPOSITORY/ 를 계산하세요. Vite에서는 base를 /REPOSITORY/ 로 설정하고, 다른 엔진은 해당 경로에서 내보낸 에셋을 검증하세요.
+- 실제 저장소, 브랜치, 원격, 의도한 diff, 비밀 제외, 에셋 라이선스를 확인하세요.
+  무관한 작업을 보존하고 충돌하는 원격을 교체하거나 강제 푸시하지 마세요.
+- 기존 엔진을 유지하세요.
+  Vite/Three.js는 설치·빌드 명령과 dist 출력을 확인하세요.
+  Godot는 설치 버전, 웹 내보내기 지원, 실제 출력 디렉터리를 확인하고 생성된 파일명을 유지하세요.
+  공개 전에 정적 빌드가 작동하는지 검증하세요.
+- 프로젝트 사이트 URL은 실제 값으로 https://GITHUB_OWNER.github.io/REPOSITORY/ 를 계산하세요.
+  Vite에서는 base를 /REPOSITORY/ 로 설정하고, 다른 엔진은 해당 경로에서 내보낸 에셋을 검증하세요.
 - 필요한 Pages 권한으로 프로젝트를 빌드하고 검증된 정적 출력 디렉터리만 업로드하는 GitHub Pages Actions 워크플로를 준비하세요.
-- PUBLISH가 YES이면 명시한 공개 GitHub 저장소가 없을 때 생성하고, 검토한 게임의 의도한 파일을 커밋·푸시하며 선택한 호스트에 공개 배포하도록 승인합니다. PUBLISH가 NO이면 로컬 준비 후 멈추고 남은 출시 단계를 보고하세요.
+- PUBLISH가 YES이면 명시한 공개 GitHub 저장소가 없을 때 생성하고, 검토한 게임의 의도한 파일을 커밋·푸시하며 선택한 호스트에 공개 배포하도록 승인합니다.
+  PUBLISH가 NO이면 로컬 준비 후 멈추고 남은 출시 단계를 보고하세요.
 - YES이면 권한이 허용할 때 GitHub Actions를 Pages 소스로 설정하고 정확히 푸시한 커밋의 워크플로를 확인하세요.
 - 공개 URL을 열고 에셋 및 실제 조작으로 전체 한 판을 도구가 허용할 때 검증하며 실행하지 못한 검사를 명시하세요.
 
 ## 완료 조건
-PUBLISH=NO: 검증한 로컬 출시 패키지와 남은 단계. PUBLISH=YES: 검토한 커밋, 일치하는 성공 배포, 공개 URL, 실제 검증 기록. 완료할 수 없으면 구체적인 차단 요인을 보고하세요.</code></pre><a class="download-link" href="prompts/ko/release-prompt.md" download>.md 다운로드 ↗</a></div>
+PUBLISH=NO: 검증한 로컬 출시 패키지와 남은 단계.
+
+PUBLISH=YES: 검토한 커밋, 일치하는 성공 배포, 공개 URL, 실제 검증 기록.
+
+완료할 수 없으면 구체적인 차단 요인을 보고하세요.</code></pre><a class="download-link" href="prompts/ko/release-prompt.md" download>.md 다운로드 ↗</a></div>
 <h3 id="publish-part-4">4 · 공개 결과 검증</h3>
 <ol><li>의도한 원격과 브랜치에 푸시됐는지 확인.</li><li>해당 커밋의 워크플로 확인. 대기 중은 성공한 배포가 아님.</li><li>배포 URL을 열고 프로덕션 에셋 요청 확인.</li><li>승리·패배 경로와 재시작을 플레이하고 정지·재개도 반복.</li><li>배포 커밋, 조작, 목표 브라우저와 한계를 출시 기록에 남기기.</li></ol>
 <p>배포가 실패하면 로그에서 구체적인 원인을 고치세요. 에셋 누락은 base와 대소문자, Godot 내보내기는 렌더러·파일명·브라우저 요구를 확인합니다. 권한 오류는 관계없는 코드를 바꾸기 전에 Pages 소스, 워크플로 권한과 저장소 설정을 확인하세요.</p>
@@ -1579,9 +1824,17 @@ API, 모델과 명령이 바뀌었을 수 있으면 공식 문서를 확인합�
 
 클라우드 템플릿 가용성은 로컬 모델 안내와 별도로 확인하세요.
 
-적절한 기존 스킬을 사용하세요. 반복되는 누락 절차나 유용한 이벤트 행동이 없다면 맞춤 스킬이나 훅을 만들지 않습니다. MCP 연결에는 필요한 도구가 실제로 노출돼야 하므로 등록 기능을 확인하세요.
+적절한 기존 스킬을 사용하세요.
 
-현재 미디어로 검토 가능한 로컬 구성을 만드세요. 입력이 없으면 분명한 임시 표시를 쓰고 대체할 자료를 정확히 적습니다. 유료 생성 예산이 없으면 요청만 준비하고 제출하지 마세요.
+반복되는 누락 절차나 유용한 이벤트 행동이 없다면 맞춤 스킬이나 훅을 만들지 않습니다.
+
+MCP 연결에는 필요한 도구가 실제로 노출돼야 하므로 등록 기능을 확인하세요.
+
+현재 미디어로 검토 가능한 로컬 구성을 만드세요.
+
+입력이 없으면 분명한 임시 표시를 쓰고 대체할 자료를 정확히 적습니다.
+
+유료 생성 예산이 없으면 요청만 준비하고 제출하지 마세요.
 
 승인된 생성은 실제 스키마 확인, 한 번 제출, task ID·shot ID·모델/버전·입력·시도 번호 저장 순서로 진행합니다.
 
@@ -1595,9 +1848,19 @@ API, 모델과 명령이 바뀌었을 수 있으면 공식 문서를 확인합�
 
 제출이 불확실하고 ID가 없으면 재제출 전 기록을 대조하세요.
 
-출력을 지속 가능한 프로젝트 저장소에 저장하세요. 다운로드 안내를 받았다고 파일이 저장된 것은 아닙니다. 파일을 검증하고 가능하면 실제 비용을 기록하며 인증정보는 GitHub에 넣지 마세요.
+출력을 지속 가능한 프로젝트 저장소에 저장하세요.
 
-각 클립과 최종 전체 영상을 보고 타이밍, 연속성, 제목, 소리와 충실한 게임 표현을 확인하세요. 관련 장면이나 층을 고쳐 같은 구간을 전후 비교합니다. 결과 경로, 확인 내용과 한계를 보고하고 제공된 대상과 권한 안에서만 공개하세요. 로컬 미리보기는 유용한 첫 확인점입니다.</code></pre><a class="download-link" href="prompts/ko/video-workflow-prompt.md" download>.md 다운로드 ↗</a></div>
+다운로드 안내를 받았다고 파일이 저장된 것은 아닙니다.
+
+파일을 검증하고 가능하면 실제 비용을 기록하며 인증정보는 GitHub에 넣지 마세요.
+
+각 클립과 최종 전체 영상을 보고 타이밍, 연속성, 제목, 소리와 충실한 게임 표현을 확인하세요.
+
+관련 장면이나 층을 고쳐 같은 구간을 전후 비교합니다.
+
+결과 경로, 확인 내용과 한계를 보고하고 제공된 대상과 권한 안에서만 공개하세요.
+
+로컬 미리보기는 유용한 첫 확인점입니다.</code></pre><a class="download-link" href="prompts/ko/video-workflow-prompt.md" download>.md 다운로드 ↗</a></div>
 <h3 id="video-workflows-part-9">결과를 보고 올바른 층 개선하기</h3>
 <ul>
 <li>장면이 잘못된 뜻을 전달하면 의도를, 움직임이 불안정하면 생성 입력이나 소스 클립을 바꾸세요.</li>

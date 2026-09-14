@@ -7,9 +7,14 @@ DURATION_SECONDS: 20
 PAID_BUDGET: 0
 
 ## 선택지와 일관성
-- AGENT: Codex 또는 Claude Code를 선택하세요. 전송 전에 해당 앱에서 MODEL을 선택하고 Claude Code에는 사용 가능한 Claude 모델을 쓰세요. 이 줄은 실제 모델을 바꾸거나 도구 권한을 부여하지 않습니다.
-- PROJECT_FOLDER에서만 작업하세요. 실제 도구와 관련 프로젝트 지침을 확인하고 중요한 불일치는 의존 작업 전에 해결하세요.
-- VIDEO_TOOL: AUTO는 설치된 적합한 편집기를 고르고 REMOTION은 사용 가능한 Remotion 작업 흐름을 요청합니다. 없으면 누락을 보고하고 샷 계획을 준비하세요. DURATION_SECONDS는 총 길이이며 PAID_BUDGET은 별도로 승인된 생성 비용 상한입니다.
+- AGENT: Codex 또는 Claude Code를 선택하세요.
+  전송 전에 해당 앱에서 MODEL을 선택하고 Claude Code에는 사용 가능한 Claude 모델을 쓰세요.
+  이 줄은 실제 모델을 바꾸거나 도구 권한을 부여하지 않습니다.
+- PROJECT_FOLDER에서만 작업하세요.
+  실제 도구와 관련 프로젝트 지침을 확인하고 중요한 불일치는 의존 작업 전에 해결하세요.
+- VIDEO_TOOL: AUTO는 설치된 적합한 편집기를 고르고 REMOTION은 사용 가능한 Remotion 작업 흐름을 요청합니다.
+  없으면 누락을 보고하고 샷 계획을 준비하세요.
+  DURATION_SECONDS는 총 길이이며 PAID_BUDGET은 별도로 승인된 생성 비용 상한입니다.
 
 ## 목표
 현재 게임 빌드를 소개하는 DURATION_SECONDS초 영상을 준비하세요.

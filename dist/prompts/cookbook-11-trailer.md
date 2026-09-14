@@ -10,7 +10,8 @@ PAID_BUDGET: 0
 - AGENT: choose Codex or Claude Code.
   Select MODEL in that application before sending; use an available Claude model with Claude Code.
   These lines do not switch the actual model or grant tools.
-- Work only in PROJECT_FOLDER. Inspect the actual tools and relevant project instructions; resolve a material mismatch before dependent work.
+- Work only in PROJECT_FOLDER.
+  Inspect the actual tools and relevant project instructions; resolve a material mismatch before dependent work.
 - VIDEO_TOOL: AUTO selects a suitable installed editor; REMOTION requests an available Remotion workflow.
   If missing, report the gap and prepare the shot plan.
   Use DURATION_SECONDS for the total runtime; PAID_BUDGET is the maximum separately authorized generation spend.

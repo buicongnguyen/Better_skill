@@ -113,8 +113,11 @@ OS: AUTO (Windows / macOS / Linux)
 SHELL: AUTO (PowerShell / bash / zsh)
 
 ## Lựa chọn và tính nhất quán
-- AGENT: chọn Codex hoặc Claude Code. Chọn MODEL trong ứng dụng trước khi gửi; dùng mô hình Claude có sẵn với Claude Code. Những dòng này không tự đổi mô hình hay cấp công cụ.
-- Chỉ làm trong PROJECT_FOLDER. Kiểm tra công cụ thực tế và chỉ dẫn dự án liên quan; giải quyết khác biệt quan trọng trước phần việc phụ thuộc.
+- AGENT: chọn Codex hoặc Claude Code.
+  Chọn MODEL trong ứng dụng trước khi gửi; dùng mô hình Claude có sẵn với Claude Code.
+  Những dòng này không tự đổi mô hình hay cấp công cụ.
+- Chỉ làm trong PROJECT_FOLDER.
+  Kiểm tra công cụ thực tế và chỉ dẫn dự án liên quan; giải quyết khác biệt quan trọng trước phần việc phụ thuộc.
 - ENGINE: AUTO giữ engine hiện có; nếu chưa có thì báo lựa chọn THREE (TypeScript/Vite/Three.js) và GODOT (Godot/GDScript xuất web).
   Chọn một; đổi giá trị không cho phép tự chuyển engine của dự án hiện có.
 
@@ -180,8 +183,11 @@ ASSET_TOOL: PRIMITIVES
 RULE_CHANGES: không
 
 ## Lựa chọn và tính nhất quán
-- AGENT: chọn Codex hoặc Claude Code. Chọn MODEL trong ứng dụng trước khi gửi; dùng mô hình Claude có sẵn với Claude Code. Những dòng này không tự đổi mô hình hay cấp công cụ.
-- Chỉ làm trong PROJECT_FOLDER. Kiểm tra công cụ thực tế và chỉ dẫn dự án liên quan; giải quyết khác biệt quan trọng trước phần việc phụ thuộc.
+- AGENT: chọn Codex hoặc Claude Code.
+  Chọn MODEL trong ứng dụng trước khi gửi; dùng mô hình Claude có sẵn với Claude Code.
+  Những dòng này không tự đổi mô hình hay cấp công cụ.
+- Chỉ làm trong PROJECT_FOLDER.
+  Kiểm tra công cụ thực tế và chỉ dẫn dự án liên quan; giải quyết khác biệt quan trọng trước phần việc phụ thuộc.
 - ENGINE: AUTO giữ engine hiện có; nếu chưa có thì so sánh THREE (TypeScript/Vite/Three.js) và GODOT (Godot/GDScript xuất web).
   Chọn một; đổi giá trị không cho phép tự chuyển engine của dự án hiện có.
   KEEP dùng lựa chọn đã ghi trong dự án.
@@ -219,8 +225,11 @@ MODEL: GPT-6 Astra
 ENGINE: AUTO
 
 ## Lựa chọn và tính nhất quán
-- AGENT: chọn Codex hoặc Claude Code. Chọn MODEL trong ứng dụng trước khi gửi; dùng mô hình Claude có sẵn với Claude Code. Những dòng này không tự đổi mô hình hay cấp công cụ.
-- Chỉ làm trong PROJECT_FOLDER. Kiểm tra công cụ thực tế và chỉ dẫn dự án liên quan; giải quyết khác biệt quan trọng trước phần việc phụ thuộc.
+- AGENT: chọn Codex hoặc Claude Code.
+  Chọn MODEL trong ứng dụng trước khi gửi; dùng mô hình Claude có sẵn với Claude Code.
+  Những dòng này không tự đổi mô hình hay cấp công cụ.
+- Chỉ làm trong PROJECT_FOLDER.
+  Kiểm tra công cụ thực tế và chỉ dẫn dự án liên quan; giải quyết khác biệt quan trọng trước phần việc phụ thuộc.
 - ENGINE: AUTO giữ engine hiện có; nếu chưa có thì so sánh THREE (TypeScript/Vite/Three.js) và GODOT (Godot/GDScript xuất web).
   Chọn một; đổi giá trị không cho phép tự chuyển engine của dự án hiện có.
   KEEP dùng lựa chọn đã ghi trong dự án.
@@ -231,7 +240,8 @@ Chọn một engine khả thi và ghi bằng chứng cho lựa chọn đó.
 
 ## Công việc và ràng buộc
 - Đọc mô tả game và kiểm tra công cụ có sẵn.
-- So TypeScript/Vite/Three.js với Godot xuất web cho game bàn phím nhỏ này: tốc độ lặp, quy trình asset, giới hạn trình duyệt, gỡ lỗi và triển khai.
+- Chỉ khi ENGINE là AUTO và chưa chọn engine, so sánh TypeScript/Vite/Three.js với Godot xuất web cho game bàn phím nhỏ này.
+- Đánh giá tốc độ lặp, quy trình asset, giới hạn trình duyệt, gỡ lỗi và triển khai cho lộ trình đã chọn hoặc các lựa chọn đang so sánh.
 - Giữ engine đã được chọn rõ ràng.
 - Nếu chưa chọn, đề xuất lộ trình đơn giản nhất khả thi; mặc định ví dụ là TypeScript/Vite/Three.js.
 - Kiểm tra nhận định phụ thuộc phiên bản qua tài liệu chính thức và nêu điều chưa biết.
@@ -251,8 +261,11 @@ AGENT: Codex
 MODEL: GPT-6 Astra
 
 ## Lựa chọn và tính nhất quán
-- AGENT: chọn Codex hoặc Claude Code. Chọn MODEL trong ứng dụng trước khi gửi; dùng mô hình Claude có sẵn với Claude Code. Những dòng này không tự đổi mô hình hay cấp công cụ.
-- Chỉ làm trong PROJECT_FOLDER. Kiểm tra công cụ thực tế và chỉ dẫn dự án liên quan; giải quyết khác biệt quan trọng trước phần việc phụ thuộc.
+- AGENT: chọn Codex hoặc Claude Code.
+  Chọn MODEL trong ứng dụng trước khi gửi; dùng mô hình Claude có sẵn với Claude Code.
+  Những dòng này không tự đổi mô hình hay cấp công cụ.
+- Chỉ làm trong PROJECT_FOLDER.
+  Kiểm tra công cụ thực tế và chỉ dẫn dự án liên quan; giải quyết khác biệt quan trọng trước phần việc phụ thuộc.
 
 ## Mục tiêu
 Xác minh lời khuyên sẽ định hướng dự án game.
@@ -279,8 +292,11 @@ AGENT: Codex
 MODEL: GPT-6 Astra
 
 ## Lựa chọn và tính nhất quán
-- AGENT: chọn Codex hoặc Claude Code. Chọn MODEL trong ứng dụng trước khi gửi; dùng mô hình Claude có sẵn với Claude Code. Những dòng này không tự đổi mô hình hay cấp công cụ.
-- Chỉ làm trong PROJECT_FOLDER. Kiểm tra công cụ thực tế và chỉ dẫn dự án liên quan; giải quyết khác biệt quan trọng trước phần việc phụ thuộc.
+- AGENT: chọn Codex hoặc Claude Code.
+  Chọn MODEL trong ứng dụng trước khi gửi; dùng mô hình Claude có sẵn với Claude Code.
+  Những dòng này không tự đổi mô hình hay cấp công cụ.
+- Chỉ làm trong PROJECT_FOLDER.
+  Kiểm tra công cụ thực tế và chỉ dẫn dự án liên quan; giải quyết khác biệt quan trọng trước phần việc phụ thuộc.
 
 ## Mục tiêu
 Tạo bộ nhớ dự án đúng và mốc Git cục bộ đã rà soát.
@@ -309,8 +325,11 @@ AGENT: Codex
 MODEL: GPT-6 Astra
 
 ## Lựa chọn và tính nhất quán
-- AGENT: chọn Codex hoặc Claude Code. Chọn MODEL trong ứng dụng trước khi gửi; dùng mô hình Claude có sẵn với Claude Code. Những dòng này không tự đổi mô hình hay cấp công cụ.
-- Chỉ làm trong PROJECT_FOLDER. Kiểm tra công cụ thực tế và chỉ dẫn dự án liên quan; giải quyết khác biệt quan trọng trước phần việc phụ thuộc.
+- AGENT: chọn Codex hoặc Claude Code.
+  Chọn MODEL trong ứng dụng trước khi gửi; dùng mô hình Claude có sẵn với Claude Code.
+  Những dòng này không tự đổi mô hình hay cấp công cụ.
+- Chỉ làm trong PROJECT_FOLDER.
+  Kiểm tra công cụ thực tế và chỉ dẫn dự án liên quan; giải quyết khác biệt quan trọng trước phần việc phụ thuộc.
 
 ## Mục tiêu
 Quyết định skill có thêm giá trị cho công việc cụ thể kế tiếp không.
@@ -338,8 +357,11 @@ MODEL: GPT-6 Astra
 ASSET_TOOL: PRIMITIVES
 
 ## Lựa chọn và tính nhất quán
-- AGENT: chọn Codex hoặc Claude Code. Chọn MODEL trong ứng dụng trước khi gửi; dùng mô hình Claude có sẵn với Claude Code. Những dòng này không tự đổi mô hình hay cấp công cụ.
-- Chỉ làm trong PROJECT_FOLDER. Kiểm tra công cụ thực tế và chỉ dẫn dự án liên quan; giải quyết khác biệt quan trọng trước phần việc phụ thuộc.
+- AGENT: chọn Codex hoặc Claude Code.
+  Chọn MODEL trong ứng dụng trước khi gửi; dùng mô hình Claude có sẵn với Claude Code.
+  Những dòng này không tự đổi mô hình hay cấp công cụ.
+- Chỉ làm trong PROJECT_FOLDER.
+  Kiểm tra công cụ thực tế và chỉ dẫn dự án liên quan; giải quyết khác biệt quan trọng trước phần việc phụ thuộc.
 - ASSET_TOOL: PRIMITIVES dùng hình học trong engine; BLENDER dùng quy trình Blender có sẵn sau thử nghiệm nhập nhỏ.
   Cả hai đều bắt đầu bằng khối tạm; không cài công cụ chỉ vì thấy tên ở đây.
 
@@ -358,7 +380,9 @@ Triển khai và kiểm tra mốc di chuyển chơi được đầu tiên.
 - Dừng tại mốc di chuyển để tôi xem; không thêm chức năng ngoài phạm vi hay xuất bản.
 
 ## Điều kiện hoàn thành
-Lát cắt di chuyển chạy được và ghi chép kiểm tra trung thực. Bản khởi tạo dài hơn ở liên kết dưới.</code></pre><a class="download-link" href="prompts/vi/cookbook-06-start.md" download>Tải tệp .md ↗</a></div>
+Lát cắt di chuyển chạy được và ghi chép kiểm tra trung thực.
+
+Bản khởi tạo dài hơn ở liên kết dưới.</code></pre><a class="download-link" href="prompts/vi/cookbook-06-start.md" download>Tải tệp .md ↗</a></div>
 <p><strong>Đầu ra mong đợi:</strong> Lát cắt di chuyển chạy được và ghi chép kiểm tra trung thực. Bản khởi tạo dài hơn ở liên kết dưới.</p>
 <p>Đọc đầy đủ: <a href="#master-prompt">Prompt thực thi cho Astra</a> · <a href="#meta-prompt">Viết prompt để tạo prompt</a>. <a class="citation" href="#source-04" title="OpenAI · Building games with Astra" aria-label="Nguồn 04: OpenAI · Building games with Astra">[04]</a> <a class="citation" href="#source-17" title="OpenAI · Rethinking skills and prompts for GPT-6 Astra" aria-label="Nguồn 17: OpenAI · Rethinking skills and prompts for GPT-6 Astra">[17]</a></p>
 <h3 id="cookbook-part-7">7 · Tiếp tục một mốc</h3>
@@ -369,8 +393,11 @@ AGENT: Codex
 MODEL: GPT-6 Astra
 
 ## Lựa chọn và tính nhất quán
-- AGENT: chọn Codex hoặc Claude Code. Chọn MODEL trong ứng dụng trước khi gửi; dùng mô hình Claude có sẵn với Claude Code. Những dòng này không tự đổi mô hình hay cấp công cụ.
-- Chỉ làm trong PROJECT_FOLDER. Kiểm tra công cụ thực tế và chỉ dẫn dự án liên quan; giải quyết khác biệt quan trọng trước phần việc phụ thuộc.
+- AGENT: chọn Codex hoặc Claude Code.
+  Chọn MODEL trong ứng dụng trước khi gửi; dùng mô hình Claude có sẵn với Claude Code.
+  Những dòng này không tự đổi mô hình hay cấp công cụ.
+- Chỉ làm trong PROJECT_FOLDER.
+  Kiểm tra công cụ thực tế và chỉ dẫn dự án liên quan; giải quyết khác biệt quan trọng trước phần việc phụ thuộc.
 
 ## Mục tiêu
 Hoàn thành một mốc chơi được kế tiếp từ trạng thái hiện tại.
@@ -398,8 +425,11 @@ AGENT: Codex
 MODEL: GPT-6 Astra
 
 ## Lựa chọn và tính nhất quán
-- AGENT: chọn Codex hoặc Claude Code. Chọn MODEL trong ứng dụng trước khi gửi; dùng mô hình Claude có sẵn với Claude Code. Những dòng này không tự đổi mô hình hay cấp công cụ.
-- Chỉ làm trong PROJECT_FOLDER. Kiểm tra công cụ thực tế và chỉ dẫn dự án liên quan; giải quyết khác biệt quan trọng trước phần việc phụ thuộc.
+- AGENT: chọn Codex hoặc Claude Code.
+  Chọn MODEL trong ứng dụng trước khi gửi; dùng mô hình Claude có sẵn với Claude Code.
+  Những dòng này không tự đổi mô hình hay cấp công cụ.
+- Chỉ làm trong PROJECT_FOLDER.
+  Kiểm tra công cụ thực tế và chỉ dẫn dự án liên quan; giải quyết khác biệt quan trọng trước phần việc phụ thuộc.
 
 ## Mục tiêu
 Kiểm tra game production bằng luật, điều khiển thật và quan sát người chơi.
@@ -426,8 +456,11 @@ AGENT: Codex
 MODEL: GPT-6 Astra
 
 ## Lựa chọn và tính nhất quán
-- AGENT: chọn Codex hoặc Claude Code. Chọn MODEL trong ứng dụng trước khi gửi; dùng mô hình Claude có sẵn với Claude Code. Những dòng này không tự đổi mô hình hay cấp công cụ.
-- Chỉ làm trong PROJECT_FOLDER. Kiểm tra công cụ thực tế và chỉ dẫn dự án liên quan; giải quyết khác biệt quan trọng trước phần việc phụ thuộc.
+- AGENT: chọn Codex hoặc Claude Code.
+  Chọn MODEL trong ứng dụng trước khi gửi; dùng mô hình Claude có sẵn với Claude Code.
+  Những dòng này không tự đổi mô hình hay cấp công cụ.
+- Chỉ làm trong PROJECT_FOLDER.
+  Kiểm tra công cụ thực tế và chỉ dẫn dự án liên quan; giải quyết khác biệt quan trọng trước phần việc phụ thuộc.
 
 ## Mục tiêu
 Sửa một lỗi có bằng chứng và chuẩn bị bản prompt được đánh giá trung thực.
@@ -458,8 +491,11 @@ REPOSITORY: signal-garden
 PUBLISH: YES
 
 ## Lựa chọn và tính nhất quán
-- AGENT: chọn Codex hoặc Claude Code. Chọn MODEL trong ứng dụng trước khi gửi; dùng mô hình Claude có sẵn với Claude Code. Những dòng này không tự đổi mô hình hay cấp công cụ.
-- Chỉ làm trong PROJECT_FOLDER. Kiểm tra công cụ thực tế và chỉ dẫn dự án liên quan; giải quyết khác biệt quan trọng trước phần việc phụ thuộc.
+- AGENT: chọn Codex hoặc Claude Code.
+  Chọn MODEL trong ứng dụng trước khi gửi; dùng mô hình Claude có sẵn với Claude Code.
+  Những dòng này không tự đổi mô hình hay cấp công cụ.
+- Chỉ làm trong PROJECT_FOLDER.
+  Kiểm tra công cụ thực tế và chỉ dẫn dự án liên quan; giải quyết khác biệt quan trọng trước phần việc phụ thuộc.
 - PUBLISH: YES cho phép công khai repo/mã nguồn và triển khai như mô tả bên dưới; NO chỉ chuẩn bị phát hành cục bộ.
   Điền rõ mọi đích đến trước khi công khai.
   Tính URL và base path từ GITHUB_OWNER và REPOSITORY.
@@ -469,7 +505,8 @@ Chuẩn bị hoặc công khai game trên GitHub Pages theo PUBLISH.
 
 ## Công việc và ràng buộc
 - Dùng GITHUB_OWNER và REPOSITORY ở đầu; điền rõ chỗ trống trước mọi hành động công khai bên ngoài.
-- Kiểm tra repo, nhánh, remote, diff đúng phạm vi, bí mật đã loại và giấy phép asset. Giữ công việc không liên quan; không thay remote xung đột hay force-push.
+- Kiểm tra repo, nhánh, remote, diff đúng phạm vi, bí mật đã loại và giấy phép asset.
+  Giữ công việc không liên quan; không thay remote xung đột hay force-push.
 - Giữ engine hiện có.
   Với Vite/Three.js, kiểm tra lệnh cài/build và đầu ra dist.
   Với Godot, kiểm tra phiên bản đã cài, khả năng xuất web và thư mục xuất thực tế; giữ tên tệp đã sinh.
@@ -499,31 +536,39 @@ PUBLISH: YES
 VERCEL_SCOPE: [YOUR_VERCEL_SCOPE]
 
 ## Lựa chọn và tính nhất quán
-- AGENT: chọn Codex hoặc Claude Code. Chọn MODEL trong ứng dụng trước khi gửi; dùng mô hình Claude có sẵn với Claude Code. Những dòng này không tự đổi mô hình hay cấp công cụ.
-- Chỉ làm trong PROJECT_FOLDER. Kiểm tra công cụ thực tế và chỉ dẫn dự án liên quan; giải quyết khác biệt quan trọng trước phần việc phụ thuộc.
+- AGENT: chọn Codex hoặc Claude Code.
+  Chọn MODEL trong ứng dụng trước khi gửi; dùng mô hình Claude có sẵn với Claude Code.
+  Những dòng này không tự đổi mô hình hay cấp công cụ.
+- Chỉ làm trong PROJECT_FOLDER.
+  Kiểm tra công cụ thực tế và chỉ dẫn dự án liên quan; giải quyết khác biệt quan trọng trước phần việc phụ thuộc.
 - PUBLISH: YES cho phép công khai repo/mã nguồn và triển khai như mô tả bên dưới; NO chỉ chuẩn bị phát hành cục bộ.
   Điền rõ mọi đích đến trước khi công khai.
-  Tính URL và base path từ GITHUB_OWNER và REPOSITORY.
+  Dùng GITHUB_OWNER và REPOSITORY cho repo mã nguồn.
+  Dùng tên miền thực tế và đường dẫn triển khai của dự án Vercel đã chọn cho URL game và base path.
 
 ## Mục tiêu
 Chuẩn bị hoặc công khai game trên Vercel Hobby theo PUBLISH.
 
 ## Công việc và ràng buộc
 - Dùng GITHUB_OWNER và REPOSITORY ở đầu; điền rõ chỗ trống trước mọi hành động công khai bên ngoài.
-- Kiểm tra repo, nhánh, remote, diff đúng phạm vi, bí mật đã loại và giấy phép asset. Giữ công việc không liên quan; không thay remote xung đột hay force-push.
+- Kiểm tra repo, nhánh, remote, diff đúng phạm vi, bí mật đã loại và giấy phép asset.
+  Giữ công việc không liên quan; không thay remote xung đột hay force-push.
 - Giữ engine hiện có.
   Với Vite/Three.js, kiểm tra lệnh cài/build và đầu ra dist.
   Với Godot, kiểm tra phiên bản đã cài, khả năng xuất web và thư mục xuất thực tế; giữ tên tệp đã sinh.
   Chứng minh bản tĩnh chạy được trước khi công khai.
-- Điền rõ VERCEL_SCOPE trước khi liên kết dự án. Kiểm tra liên kết Vercel hiện có, báo xung đột đích đến thay vì ghi đè.
+- Điền rõ VERCEL_SCOPE trước khi liên kết dự án.
+  Kiểm tra liên kết Vercel hiện có, báo xung đột đích đến thay vì ghi đè.
 - Xác minh game cá nhân, phi thương mại này đủ điều kiện Hobby theo giới hạn hiện hành; không mua dịch vụ hay nâng gói.
 - Dùng Vite base / khi triển khai Vite tại gốc tên miền.
   Kiểm tra lệnh build và thư mục đầu ra thực tế của engine đã chọn; không giả định mọi engine dùng dist.
   Chuẩn bị cấu hình Vercel.
 - Nếu PUBLISH là YES, tôi cho phép tạo repo GitHub công khai đã nêu nếu chưa có, commit và push các tệp game đúng phạm vi đã rà soát, rồi công khai trên host đã chọn.
   Nếu PUBLISH là NO, dừng sau chuẩn bị cục bộ và báo các bước phát hành còn lại.
-- Với YES, dùng Vercel CLI đã đăng nhập hoặc nhập Git trong VERCEL_SCOPE. Hướng dẫn đăng nhập trình duyệt hay quyền repo khi cần; không hỏi bí mật trong chat.
-- Xác minh revision đã triển khai và gameplay công khai không cần đăng nhập. Báo URL production thực tế được cấp và kiểm tra chưa chạy.
+- Với YES, dùng Vercel CLI đã đăng nhập hoặc nhập Git trong VERCEL_SCOPE.
+  Hướng dẫn đăng nhập trình duyệt hay quyền repo khi cần; không hỏi bí mật trong chat.
+- Xác minh revision đã triển khai và gameplay công khai không cần đăng nhập.
+  Báo URL production thực tế được cấp và kiểm tra chưa chạy.
 
 ## Điều kiện hoàn thành
 PUBLISH=NO: gói phát hành cục bộ đã thử và các bước còn lại.
@@ -544,8 +589,11 @@ DURATION_SECONDS: 20
 PAID_BUDGET: 0
 
 ## Lựa chọn và tính nhất quán
-- AGENT: chọn Codex hoặc Claude Code. Chọn MODEL trong ứng dụng trước khi gửi; dùng mô hình Claude có sẵn với Claude Code. Những dòng này không tự đổi mô hình hay cấp công cụ.
-- Chỉ làm trong PROJECT_FOLDER. Kiểm tra công cụ thực tế và chỉ dẫn dự án liên quan; giải quyết khác biệt quan trọng trước phần việc phụ thuộc.
+- AGENT: chọn Codex hoặc Claude Code.
+  Chọn MODEL trong ứng dụng trước khi gửi; dùng mô hình Claude có sẵn với Claude Code.
+  Những dòng này không tự đổi mô hình hay cấp công cụ.
+- Chỉ làm trong PROJECT_FOLDER.
+  Kiểm tra công cụ thực tế và chỉ dẫn dự án liên quan; giải quyết khác biệt quan trọng trước phần việc phụ thuộc.
 - VIDEO_TOOL: AUTO chọn trình dựng phù hợp đã cài; REMOTION yêu cầu quy trình Remotion có sẵn.
   Nếu thiếu, báo phần thiếu và chuẩn bị danh sách cảnh.
   Dùng DURATION_SECONDS làm tổng thời lượng; PAID_BUDGET là mức chi sinh nội dung tối đa được cho phép riêng.
@@ -567,7 +615,7 @@ Chuẩn bị video giới thiệu dài DURATION_SECONDS giây cho bản game hi�
 
 ## Điều kiện hoàn thành
 Kế hoạch cảnh DURATION_SECONDS giây, danh sách media đã kiểm tra và bản video nháp đã rà khi khả thi.</code></pre><a class="download-link" href="prompts/vi/cookbook-11-trailer.md" download>Tải tệp .md ↗</a></div>
-<p><strong>Đầu ra mong đợi:</strong> Kế hoạch cảnh 20 giây, danh sách media đã kiểm tra và bản video nháp đã rà khi khả thi.</p>
+<p><strong>Đầu ra mong đợi:</strong> Kế hoạch cảnh theo thời lượng đã chọn (mặc định 20 giây), danh sách media đã kiểm tra và bản video nháp đã rà khi khả thi.</p>
 <p>Đọc đầy đủ: <a href="#video-workflows">Làm video với tác nhân AI</a>. <a class="citation" href="#source-26" title="Remotion · Agent Skills" aria-label="Nguồn 26: Remotion · Agent Skills">[26]</a> <a class="citation" href="#source-27" title="Remotion · Documentation MCP deprecation" aria-label="Nguồn 27: Remotion · Documentation MCP deprecation">[27]</a> <a class="citation" href="#source-47" title="Runway · Usage tiers and throttled tasks" aria-label="Nguồn 47: Runway · Usage tiers and throttled tasks">[47]</a></p>
 <p><a href="#summary">Về các bước ngắn gọn →</a></p>
 
@@ -823,13 +871,23 @@ Y hướng lên, di chuyển trên X/Z, tốc độ tính bằng đơn vị th�
 
 Ưu tiên module nhỏ, rõ thay vì thêm lớp trừu tượng chưa cần.
 
-Lệnh sau khi tạo dự án: npm run dev, npm run build, npm test. Giữ script đúng trong package.json và README.
+Lệnh sau khi tạo dự án: npm run dev, npm run build, npm test.
 
-Tách trạng thái mô phỏng khỏi đối tượng cảnh khi điều đó giúp kiểm tra hành vi. Đặt hằng số gameplay có thể chỉnh vào một module cấu hình có tên rõ.
+Giữ script đúng trong package.json và README.
 
-Kiểm tra hành vi bị ảnh hưởng bằng phép thử đã ghi và công cụ sẵn có. Báo phần chưa chạy. Không hạ điều kiện nghiệm thu để che lỗi.
+Tách trạng thái mô phỏng khỏi đối tượng cảnh khi điều đó giúp kiểm tra hành vi.
 
-Dùng tài nguyên tự tạo hoặc có giấy phép phù hợp; ghi nguồn trong public/assets/credits.md. Không commit thông tin xác thực hoặc tệp môi trường cục bộ.
+Đặt hằng số gameplay có thể chỉnh vào một module cấu hình có tên rõ.
+
+Kiểm tra hành vi bị ảnh hưởng bằng phép thử đã ghi và công cụ sẵn có.
+
+Báo phần chưa chạy.
+
+Không hạ điều kiện nghiệm thu để che lỗi.
+
+Dùng tài nguyên tự tạo hoặc có giấy phép phù hợp; ghi nguồn trong public/assets/credits.md.
+
+Không commit thông tin xác thực hoặc tệp môi trường cục bộ.
 
 Khi xong mốc, cập nhật docs/progress.md với commit, bằng chứng, vấn đề và bước tiếp.
 
@@ -848,13 +906,16 @@ Ví dụ tùy chọn: chỉ cài sau khi tài liệu game được tham chiếu 
 
 Đây không phải skill phát triển game chung.
 
-Lấy docs/acceptance.md làm nguồn chính cho luật và lệnh kiểm tra hiện tại. Các trường hợp dưới mô tả thiết kế ban đầu của sách; cập nhật khi thiết kế đổi.
+Lấy docs/acceptance.md làm nguồn chính cho luật và lệnh kiểm tra hiện tại.
+
+Các trường hợp dưới mô tả thiết kế ban đầu của sách; cập nhật khi thiết kế đổi.
 
 Các tình huống biên liên quan:
 - Hết giờ hoặc máu về không trong cùng bước mô phỏng kích hoạt đèn thì thua được ưu tiên.
 - Kích hoạt cần lần nhấn E mới, trong hai đơn vị, sau khi thu đủ ba pin.
 - Drone gây mất một máu; thời gian miễn sát thương là một giây.
-- Tạm dừng đóng băng giờ và mô phỏng. Mất tiêu điểm xóa phím giữ và dừng lượt đang chạy; quay lại cần bấm Tiếp tục.
+- Tạm dừng đóng băng giờ và mô phỏng.
+  Mất tiêu điểm xóa phím giữ và dừng lượt đang chạy; quay lại cần bấm Tiếp tục.
 - Chơi lại từ paused, won hoặc lost đặt lại pin, máu, giờ, vị trí robot, tiến độ drone, hồi chiêu, hiệu ứng, phím giữ rồi vào playing cho lượt mới.
 
 Chọn trường hợp bị thay đổi ảnh hưởng.
@@ -978,13 +1039,17 @@ Tạo prompt thực thi thực dụng cho GPT-6 Astra trong tác nhân lập tr�
 Nhiệm vụ của cuộc trò chuyện này là thiết kế prompt, không triển khai game.
 
 MÔ TẢ ĐẦU VÀO
-Dùng mô tả dưới hoặc docs/game-brief.md đính kèm. Thiếu chi tiết thì dùng mặc định Signal Garden và ghi là giả định:
+Dùng mô tả dưới hoặc docs/game-brief.md đính kèm.
+
+Thiếu chi tiết thì dùng mặc định Signal Garden và ghi là giả định:
 - Người chơi: robot bảo trì khôi phục đèn hiệu mái nhà.
 - Vòng chơi: nhặt ba pin, tránh một drone tuần tra, quay về và kích hoạt đèn.
 - Phạm vi: một đấu trường phẳng, trình duyệt máy tính, bàn phím, vòng chơi có thắng, thua, tạm dừng và chơi lại.
 - Công nghệ ưu tiên: TypeScript, Vite, Three.js; GitHub Pages sau khi đích công bố được cho phép rõ ràng.
-- Hình ảnh: tài nguyên hình học nguyên bản, đá xanh dịu, pin hổ phách, đèn xanh ngọc. Ưu tiên dáng vật thể và camera dễ hiểu.
-- Ràng buộc: không backend, tài khoản, nhiều người chơi, API trả phí hoặc tài nguyên thiếu phép. Giữ bản đầu nhỏ.
+- Hình ảnh: tài nguyên hình học nguyên bản, đá xanh dịu, pin hổ phách, đèn xanh ngọc.
+  Ưu tiên dáng vật thể và camera dễ hiểu.
+- Ràng buộc: không backend, tài khoản, nhiều người chơi, API trả phí hoặc tài nguyên thiếu phép.
+  Giữ bản đầu nhỏ.
 
 Thay đổi riêng, tệp hiện có, ảnh tham khảo, công cụ đã cài, phần cứng mục tiêu và ngân sách của tôi:
 [Điền ở đây hoặc giữ mặc định và ghi điều chưa biết.]
@@ -1012,14 +1077,20 @@ QUY TRÌNH
 6.
    Chỉ yêu cầu bằng chứng có ích: logic tập trung, tương tác bằng điều khiển thật, xem hình và người chơi thử khi cần đánh giá.
    Không coi build đạt là chứng minh game hoạt động.
-7. Rà soát mâu thuẫn, yêu cầu không có phép thử, phạm vi thêm ngầm, công cụ không có và tính từ mơ hồ. Sửa một lượt để xử lý đúng các vấn đề đó.
+7.
+   Rà soát mâu thuẫn, yêu cầu không có phép thử, phạm vi thêm ngầm, công cụ không có và tính từ mơ hồ.
+   Sửa một lượt để xử lý đúng các vấn đề đó.
 
 TRẢ VỀ
-A. Giả định và câu hỏi chặn việc nếu có.
+A.
+   Giả định và câu hỏi chặn việc nếu có.
 B. So sánh và khuyến nghị ngắn.
-C. Prompt thực thi cuối có thể sao chép, đánh dấu trường chưa giải quyết.
-D. Danh sách nghiệm thu ngắn và kế hoạch chơi thử đầu.
-E. Giải thích ngắn lỗi đã sửa trong lượt rà soát.
+C.
+   Prompt thực thi cuối có thể sao chép, đánh dấu trường chưa giải quyết.
+D.
+   Danh sách nghiệm thu ngắn và kế hoạch chơi thử đầu.
+E.
+   Giải thích ngắn lỗi đã sửa trong lượt rà soát.
 
 Prompt cuối phải đủ dùng cho thư mục trống hoặc nêu rõ phụ thuộc tài liệu đã có.
 
@@ -1131,14 +1202,19 @@ Robot bảo trì khôi phục đèn hiệu: thu ba pin, tránh drone và quay v�
 Thế giới bỏ hoang nhưng có thể hồi sinh, đường rõ, ánh sáng ấm từ máy được phục hồi.
 
 PHẠM VI VÀ LUẬT
-- Đấu trường phẳng 24 × 24 đơn vị. Một đơn vị là một mét; Y lên, chuyển động trên X/Z.
-- Camera cao cố định, hướng ổn định, không khóa con trỏ. Nhân vật và đường đi dễ thấy.
+- Đấu trường phẳng 24 × 24 đơn vị.
+  Một đơn vị là một mét; Y lên, chuyển động trên X/Z.
+- Camera cao cố định, hướng ổn định, không khóa con trỏ.
+  Nhân vật và đường đi dễ thấy.
 - WASD hoặc mũi tên di chuyển; chuẩn hóa hướng chéo.
   E ở lần nhấn mới kích hoạt đèn trong hai đơn vị, chỉ khi đủ ba pin.
   Escape dừng/tiếp tục.
   Có nút bắt đầu, dừng, tiếp tục, chơi lại, tắt tiếng.
-- Bắt đầu ba máu và 90 giây. Một drone tuần tra xác định, thấy được lộ trình. Tiếp xúc mất một máu rồi bất tử một giây.
-- Mỗi pin nhặt một lần. Hiển thị số pin, máu, giờ và đèn sẵn sàng.
+- Bắt đầu ba máu và 90 giây.
+  Một drone tuần tra xác định, thấy được lộ trình.
+  Tiếp xúc mất một máu rồi bất tử một giây.
+- Mỗi pin nhặt một lần.
+  Hiển thị số pin, máu, giờ và đèn sẵn sàng.
 - Trạng thái title, playing, paused, won, lost.
   Tạm dừng đóng băng mô phỏng và giờ.
   Hết máu hoặc giờ kết thúc.
@@ -1192,7 +1268,9 @@ CÁC MỐC KẾT QUẢ
 Theo dõi hoàn thành; đổi thứ tự khi phụ thuộc hoặc dự án yêu cầu.
 M0: Tạo khung, ghi cách chạy, build đạt và cảnh tối thiểu.
 M1: Chuyển động, biên, camera, tạm dừng đáng tin.
-M2: Pin, kích hoạt, HUD, hiển thị giờ, thắng, chơi lại đầy đủ từ dừng/thắng. Thua còn ở M3.
+M2: Pin, kích hoạt, HUD, hiển thị giờ, thắng, chơi lại đầy đủ từ dừng/thắng.
+
+Thua còn ở M3.
 M3: Drone, hồi sát thương, thua vì giờ và máu.
 M4: Hình/âm nhất quán; xem độ rõ và phản hồi.
 M5: Thử production dưới /signal-garden/, sửa lỗi quan trọng, chuẩn bị workflow phát hành.
@@ -1438,8 +1516,11 @@ REPOSITORY: signal-garden
 PUBLISH: YES
 
 ## Lựa chọn và tính nhất quán
-- AGENT: chọn Codex hoặc Claude Code. Chọn MODEL trong ứng dụng trước khi gửi; dùng mô hình Claude có sẵn với Claude Code. Những dòng này không tự đổi mô hình hay cấp công cụ.
-- Chỉ làm trong PROJECT_FOLDER. Kiểm tra công cụ thực tế và chỉ dẫn dự án liên quan; giải quyết khác biệt quan trọng trước phần việc phụ thuộc.
+- AGENT: chọn Codex hoặc Claude Code.
+  Chọn MODEL trong ứng dụng trước khi gửi; dùng mô hình Claude có sẵn với Claude Code.
+  Những dòng này không tự đổi mô hình hay cấp công cụ.
+- Chỉ làm trong PROJECT_FOLDER.
+  Kiểm tra công cụ thực tế và chỉ dẫn dự án liên quan; giải quyết khác biệt quan trọng trước phần việc phụ thuộc.
 - PUBLISH: YES cho phép công khai repo/mã nguồn và triển khai như mô tả bên dưới; NO chỉ chuẩn bị phát hành cục bộ.
   Điền rõ mọi đích đến trước khi công khai.
   Tính URL và base path từ GITHUB_OWNER và REPOSITORY.
@@ -1449,7 +1530,8 @@ Chuẩn bị hoặc công khai game trên GitHub Pages theo PUBLISH.
 
 ## Công việc và ràng buộc
 - Dùng GITHUB_OWNER và REPOSITORY ở đầu; điền rõ chỗ trống trước mọi hành động công khai bên ngoài.
-- Kiểm tra repo, nhánh, remote, diff đúng phạm vi, bí mật đã loại và giấy phép asset. Giữ công việc không liên quan; không thay remote xung đột hay force-push.
+- Kiểm tra repo, nhánh, remote, diff đúng phạm vi, bí mật đã loại và giấy phép asset.
+  Giữ công việc không liên quan; không thay remote xung đột hay force-push.
 - Giữ engine hiện có.
   Với Vite/Three.js, kiểm tra lệnh cài/build và đầu ra dist.
   Với Godot, kiểm tra phiên bản đã cài, khả năng xuất web và thư mục xuất thực tế; giữ tên tệp đã sinh.
@@ -1786,7 +1868,9 @@ Timeout cục bộ không hủy job từ xa.
 
 Gửi không rõ kết quả, không có ID thì đối soát trước gửi lại.
 
-Lưu đầu ra bền vững trong dự án; nhận hướng dẫn tải chưa chứng minh tệp đã lưu. Kiểm tra tệp, ghi chi phí thật nếu có; không đưa khóa vào GitHub.
+Lưu đầu ra bền vững trong dự án; nhận hướng dẫn tải chưa chứng minh tệp đã lưu.
+
+Kiểm tra tệp, ghi chi phí thật nếu có; không đưa khóa vào GitHub.
 
 Xem từng clip rồi toàn bộ bản xuất: nhịp, liên tục, chữ, âm và gameplay trung thực.
 

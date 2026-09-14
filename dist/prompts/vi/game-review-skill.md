@@ -9,13 +9,16 @@ Ví dụ tùy chọn: chỉ cài sau khi tài liệu game được tham chiếu 
 
 Đây không phải skill phát triển game chung.
 
-Lấy docs/acceptance.md làm nguồn chính cho luật và lệnh kiểm tra hiện tại. Các trường hợp dưới mô tả thiết kế ban đầu của sách; cập nhật khi thiết kế đổi.
+Lấy docs/acceptance.md làm nguồn chính cho luật và lệnh kiểm tra hiện tại.
+
+Các trường hợp dưới mô tả thiết kế ban đầu của sách; cập nhật khi thiết kế đổi.
 
 Các tình huống biên liên quan:
 - Hết giờ hoặc máu về không trong cùng bước mô phỏng kích hoạt đèn thì thua được ưu tiên.
 - Kích hoạt cần lần nhấn E mới, trong hai đơn vị, sau khi thu đủ ba pin.
 - Drone gây mất một máu; thời gian miễn sát thương là một giây.
-- Tạm dừng đóng băng giờ và mô phỏng. Mất tiêu điểm xóa phím giữ và dừng lượt đang chạy; quay lại cần bấm Tiếp tục.
+- Tạm dừng đóng băng giờ và mô phỏng.
+  Mất tiêu điểm xóa phím giữ và dừng lượt đang chạy; quay lại cần bấm Tiếp tục.
 - Chơi lại từ paused, won hoặc lost đặt lại pin, máu, giờ, vị trí robot, tiến độ drone, hồi chiêu, hiệu ứng, phím giữ rồi vào playing cho lượt mới.
 
 Chọn trường hợp bị thay đổi ảnh hưởng.

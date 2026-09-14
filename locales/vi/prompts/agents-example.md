@@ -12,13 +12,23 @@ Y hướng lên, di chuyển trên X/Z, tốc độ tính bằng đơn vị th�
 
 Ưu tiên module nhỏ, rõ thay vì thêm lớp trừu tượng chưa cần.
 
-Lệnh sau khi tạo dự án: npm run dev, npm run build, npm test. Giữ script đúng trong package.json và README.
+Lệnh sau khi tạo dự án: npm run dev, npm run build, npm test.
 
-Tách trạng thái mô phỏng khỏi đối tượng cảnh khi điều đó giúp kiểm tra hành vi. Đặt hằng số gameplay có thể chỉnh vào một module cấu hình có tên rõ.
+Giữ script đúng trong package.json và README.
 
-Kiểm tra hành vi bị ảnh hưởng bằng phép thử đã ghi và công cụ sẵn có. Báo phần chưa chạy. Không hạ điều kiện nghiệm thu để che lỗi.
+Tách trạng thái mô phỏng khỏi đối tượng cảnh khi điều đó giúp kiểm tra hành vi.
 
-Dùng tài nguyên tự tạo hoặc có giấy phép phù hợp; ghi nguồn trong public/assets/credits.md. Không commit thông tin xác thực hoặc tệp môi trường cục bộ.
+Đặt hằng số gameplay có thể chỉnh vào một module cấu hình có tên rõ.
+
+Kiểm tra hành vi bị ảnh hưởng bằng phép thử đã ghi và công cụ sẵn có.
+
+Báo phần chưa chạy.
+
+Không hạ điều kiện nghiệm thu để che lỗi.
+
+Dùng tài nguyên tự tạo hoặc có giấy phép phù hợp; ghi nguồn trong public/assets/credits.md.
+
+Không commit thông tin xác thực hoặc tệp môi trường cục bộ.
 
 Khi xong mốc, cập nhật docs/progress.md với commit, bằng chứng, vấn đề và bước tiếp.
 

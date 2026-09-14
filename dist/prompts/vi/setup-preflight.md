@@ -7,8 +7,11 @@ OS: AUTO (Windows / macOS / Linux)
 SHELL: AUTO (PowerShell / bash / zsh)
 
 ## Lựa chọn và tính nhất quán
-- AGENT: chọn Codex hoặc Claude Code. Chọn MODEL trong ứng dụng trước khi gửi; dùng mô hình Claude có sẵn với Claude Code. Những dòng này không tự đổi mô hình hay cấp công cụ.
-- Chỉ làm trong PROJECT_FOLDER. Kiểm tra công cụ thực tế và chỉ dẫn dự án liên quan; giải quyết khác biệt quan trọng trước phần việc phụ thuộc.
+- AGENT: chọn Codex hoặc Claude Code.
+  Chọn MODEL trong ứng dụng trước khi gửi; dùng mô hình Claude có sẵn với Claude Code.
+  Những dòng này không tự đổi mô hình hay cấp công cụ.
+- Chỉ làm trong PROJECT_FOLDER.
+  Kiểm tra công cụ thực tế và chỉ dẫn dự án liên quan; giải quyết khác biệt quan trọng trước phần việc phụ thuộc.
 - ENGINE: AUTO giữ engine hiện có; nếu chưa có thì báo lựa chọn THREE (TypeScript/Vite/Three.js) và GODOT (Godot/GDScript xuất web).
   Chọn một; đổi giá trị không cho phép tự chuyển engine của dự án hiện có.
 

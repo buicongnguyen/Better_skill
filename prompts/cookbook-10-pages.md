@@ -10,7 +10,8 @@ PUBLISH: YES
 - AGENT: choose Codex or Claude Code.
   Select MODEL in that application before sending; use an available Claude model with Claude Code.
   These lines do not switch the actual model or grant tools.
-- Work only in PROJECT_FOLDER. Inspect the actual tools and relevant project instructions; resolve a material mismatch before dependent work.
+- Work only in PROJECT_FOLDER.
+  Inspect the actual tools and relevant project instructions; resolve a material mismatch before dependent work.
 - PUBLISH: YES authorizes the public repository/source and deployment described below; NO means local release preparation only.
   Resolve all destination placeholders before publication.
   Derive the URL and base path from GITHUB_OWNER and REPOSITORY.
@@ -20,7 +21,8 @@ Prepare or publish this game on GitHub Pages, according to PUBLISH.
 
 ## Tasks and constraints
 - Use the GITHUB_OWNER and REPOSITORY values above; resolve placeholders before any external publication.
-- Inspect the actual repository, branch, remotes, intended diff, excluded secrets and asset licenses. Preserve unrelated work; do not replace a conflicting remote or force-push.
+- Inspect the actual repository, branch, remotes, intended diff, excluded secrets and asset licenses.
+  Preserve unrelated work; do not replace a conflicting remote or force-push.
 - Keep the existing engine.
   For a Vite/Three.js project, verify the install/build commands and dist output.
   For Godot, verify the installed version, web-export support and actual export directory; preserve the generated filenames.
