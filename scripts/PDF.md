@@ -12,7 +12,7 @@ For an editorial update:
 
 1. Update all language editions and run `npm run build`.
 2. If figures changed, run `npm run artwork`. The default launcher reuses
-   the neighboring `3d_astra/.tools/blender-4.5.3-windows-x64/blender.exe`.
+   the shared `C:/tools/blender/blender-5.2.5-windows-x64/blender.exe` (5.2.5 LTS, version-checked).
    Set `BLENDER_BIN` or pass `--blender` elsewhere.
 3. Install the official document renderer into an ignored tools directory:
    `npm install --prefix .qa/mermaid --no-audit --no-fund @mermaid-js/mermaid-cli@11.17.0`.

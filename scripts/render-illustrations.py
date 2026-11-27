@@ -1,4 +1,4 @@
-"""Original Signal Garden concept figures. Run with Blender 4.5 LTS:
+"""Original Signal Garden concept figures. Run with Blender 5.2.5 LTS:
 blender --background --factory-startup --python scripts/render-illustrations.py
 Game coordinates (x, y-up, z) map to Blender (x, -z, y-up).
 The scene is a teaching model, not a screenshot of an implemented game.

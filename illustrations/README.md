@@ -1,8 +1,10 @@
 # Original book illustrations
 
 The two Signal Garden stills were rendered with Blender 4.5.3 LTS using the
-shared executable in the neighboring `3d_astra` repository, also referenced by
-the user's other game projects. Only this book's output files were changed.
+shared executable in the neighboring `3d_astra` repository. Only this book's
+output files were changed. The launcher now pins Blender 5.2.5 LTS from the
+shared install `C:/tools/blender/blender-5.2.5-windows-x64/blender.exe` and
+checks its version.
 
 Run `npm run artwork` in this workspace, or use an explicit portable path:
 
